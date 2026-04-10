@@ -3,6 +3,10 @@ import re
 import pdfplumber
 from sentence_transformers import SentenceTransformer, util
 
+kellegens = Path(
+    "../../data/03.02_Offertes_ontvangen/38.00_gevelschermen/Zonwering industrie/25612.A  IKC Sint Nicolaasga.pdf"
+)
+
 haan = Path(
     "../../data/03.02_Offertes_ontvangen/38.00_gevelschermen/Haan/Offerte 10054419-1 Van Wijnen Gorredijk BV (1).pdf"
 )
@@ -81,7 +85,7 @@ def extract_first_amount(text: str) -> str | None:
     return match.group(0) if match else None
 
 
-lines = extract_lines(haan)
+lines = extract_lines(kellegens)
 windows = make_windows(lines, window_sizes=(1, 2, 3))
 
 # Eerst filteren op relevante kandidaten
