@@ -1,0 +1,7 @@
+Alle files, gecheckt op :
+"totaalprijs",
+"aanneemsom",
+"totaal"
+Files checked:  227
+Offerte:  168
+Has totaalprijs:  114

@@ -1,0 +1,19 @@
+text, post:
+                precision    recall  f1-score   support
+
+   GEEN_POST       0.94      0.89      0.92        37
+        POST       0.88      0.93      0.90        30
+
+    accuracy                           0.91        67
+   macro avg       0.91      0.91      0.91        67
+weighted avg       0.91      0.91      0.91        67
+
+text, post, has_unit, has_amount, page:
+                precision    recall  f1-score   support
+
+   GEEN_POST       0.97      1.00      0.99        37
+        POST       1.00      0.97      0.98        30
+
+    accuracy                           0.99        67
+   macro avg       0.99      0.98      0.98        67
+weighted avg       0.99      0.99      0.99        67

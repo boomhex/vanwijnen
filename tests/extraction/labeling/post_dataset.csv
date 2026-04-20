@@ -1,0 +1,333 @@
+,text,post,page,has_amount,has_unit
+0,Project: Kindcentrum Sint Nicolaasga bladnr: 1/4,False,0,False,False
+1,Calculatie: 003 begroting KC st. Nyk 1 printdatum:,False,0,False,False
+2,Opdrachtgever: 12-11-2025,False,0,False,False
+3,Besteknummer:,False,0,False,False
+4,BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG,False,0,False,False
+5,POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO,False,0,False,False
+6,NUMMER VERPLICHTING IN EURO,False,0,False,False
+7,0 UITGANGSPUNTEN,False,0,False,False
+8,"000010 Complete sloopwerk door derden, terrein bouwrijp opgeleverd",False,0,False,False
+9,000020 GEEN opruimwerk bestaande situatie,False,0,False,False
+10,000030 WEL opnemen tegelbestrating 2e fase tijdeljk schoolplein,False,0,False,False
+11,"000040 Na sloop, 3 weken voor start grondwerk, AP04 onderzoek INSITU",False,0,False,False
+12,"000050 Gehele bouwput ontgraven tot 1,37 minus vloerpeil",False,0,False,True
+13,000060 Ontgraven bouwput vooraf aan boorwerk palen,False,0,False,False
+14,000070 10 cm zand in bouwput vooraf aan boorwerk,False,0,False,True
+15,000080 1 Inrit voor boorstelling in bouwput,False,0,False,False
+16,"000090 Boorder verzamelt boorgrond, ZELF in een depot op werk",False,0,False,False
+17,000100 Na boorwerk egaliseren bouwput vooraf aan fundatiewerk,False,0,False,False
+18,000110 Aanvullen buitenfundering met grond uit ontgraving,False,0,False,False
+19,000120 Tijdens ontgraven bouwput gelijk afvoeren deel van grond,False,0,False,False
+20,000130 Alle af te voeren overtollige grond is LANDBOUW & NATUUR,False,0,False,False
+21,000140 Vrijgekomen ZAND kan hergebruikt in werk,False,0,False,False
+22,"000150 Benodigd zand en grond in werk, in depot op het werkterrein",False,0,False,False
+23,000160 Bestaande zandbanen tpv nieuw tegelwerk blijven gehandhaafd,False,0,False,False
+24,"000200 Voorterrein, brandweerplaats, geheel in menggranulaat",False,0,False,False
+25,"000210 Voorterrein, kan eerst gebruikt worden als bouwplaats",False,0,False,False
+26,"000300 Totaal af te voeren 123 m3 boorgrond, VERREKENBAAR",False,0,False,True
+27,"000400 Buitenriolering vanaf 1 m1 uit gevel, eigen ontwerp",False,0,False,True
+28,"000410 226 m1 Sleuf graven en aanvullen voor installateur, excl. leidingwerk",False,0,False,True
+29,"000600 Tegels 30x30x6 cm in de kleur grijs, standaard",False,0,False,True
+30,000610 Opsluitbanden ivm bochtstukken in 10x20 cm kleur grijs,False,0,False,True
+31,"000620 17 Stuks veegroosters DEJO op tegelbestrating, verlaagd.",False,0,False,True
+32,"000700 ALLEEN Inzaaien van terrein, geen beplanting",False,0,False,False
+33,000710 Wel vakken tegel gevel voor beplanting,False,0,False,False
+34,000800 Strengen drainage in kruipruimte voor drooghouden,False,0,False,False
+35,"000810 2 ELEKTRA Pompen op drainage, duur 6 weken",False,0,False,False
+36,000820 Inrit bouwplaats vanaf weg 10 stuks betonplaten,False,0,False,True
+37,"000830 Aansluiting vuilwater keten op riool, max. 25 m1 lengte",False,0,False,True
+38,"1 VOORBEREIDENDE WERKZAAMHEDEN 3.404,90",True,0,True,False
+39,"10 GRONDONDERZOEK, NA SLOOPWERK 2.000,00",True,0,True,False
+40,"100000 IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk keer 1,00 V 2.000,00 2.000,00",True,0,True,False
+41,15 OPNEMEN 2E FASE TEGELBESTRATING TIJDELIJKE,False,0,False,False
+42,"SCHOOLPLEIN 1.404,90",True,0,True,False
+43,"150000 Opnemen en afvoeren tegelbestrating m2 446,00 V 3,15 1.404,90",True,0,True,True
+44,"3 GRONDWERK 56.860,90",True,0,True,False
+45,"30 GRONDWERK BOUWKUNDIG 18.266,45",True,0,True,False
+46,"300010 Ontgraven bouwkuip hoofdgebouw in oude bouwput m2 821,00 V 1,65 1.354,65",True,0,True,True
+47,"300020 Ontgraven nieuwe bouwkuip tot onderzijde bodemafsluiting m2 1.075,00 V 1,65 1.773,75",True,0,True,True
+48,"300030 Verwerken vrijgekomen grond in oude bouwput m3 71,00 V 1,85 131,35",True,0,True,True
+49,"300040 Verwerken vrijgekomen zand in oude bouwput m3 158,00 V 2,40 379,20",True,0,True,True
+50,"300050 Ontgraven inrit boorstelling bouwkuip m2 50,00 V 3,75 187,50",True,0,True,True
+51,"300070 Leveren en aanbrengen zandlaag in bouwkuip d=100mm m2 1.900,00 V 3,85 7.315,00",True,0,True,True
+52,"300090 Afwerken bouwkuip na boren palen m2 1.900,00 V 2,50 4.750,00",True,0,True,True
+53,"300100 Aanvullen buitenfundering met vrijgekomen zand/grond m2 190,00 V 5,45 1.035,50",True,0,True,True
+54,"300200 Egaliseren rondom bouwput na aanvullen, strook 3 m1 m2 570,00 V 2,35 1.339,50",True,0,True,True
+55,"31 GRONDWERK BUITENTERREIN 22.740,15",True,0,True,False
+56,"310010 Ontgraven cunet nieuwe tegelverharding m2 927,00 V 2,50 2.317,50",True,0,True,True
+57,Project: Kindcentrum Sint Nicolaasga bladnr: 2/4,False,1,False,False
+58,Calculatie: 003 begroting KC st. Nyk 1 printdatum:,False,1,False,False
+59,Opdrachtgever: 12-11-2025,False,1,False,False
+60,Besteknummer:,False,1,False,False
+61,BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG,False,1,False,False
+62,POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO,False,1,False,False
+63,NUMMER VERPLICHTING IN EURO,False,1,False,False
+64,"310020 Ontgraven zand uit vervallen cunetten m2 687,00 V 3,05 2.095,35",True,1,True,True
+65,"310040 Ontgraven grond uit cunet voorterrein brandweer m2 372,00 V 4,20 1.562,40",True,1,False,True
+66,"310100 Aanbrengen zand in nieuwe cunet tegelverharding d=250mm m2 927,00 V 6,50 6.025,50",True,1,True,True
+67,"310110 Op hoogte brengen bestaande zandbanen tegelbestrating m2 670,00 V 1,75 1.172,50",True,1,True,True
+68,"310120 Afwerken vooraf aan aanbrengen puin m2 473,00 V 1,10 520,30",True,1,True,True
+69,"310130 Verwerken vrijgekomen grond in cunetten oud straatwerk m2 687,00 V 3,05 2.095,35",True,1,True,True
+70,"310140 Groen delen terrein op hoogte brengen m2 2.240,00 V 1,15 2.576,00",True,1,True,True
+71,"310200 Lev. en verw. menggranulaat op wegenbouwdoek m2 473,00 V 9,25 4.375,25",True,1,True,True
+72,32 VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN,False,1,False,False
+73,"NATUUR 8.385,30",True,1,True,False
+74,"320000 Op werk in depot rijden her te gebruiken grond m3 396,00 V 2,70 1.069,20",True,1,True,True
+75,"320010 Op werk in depot rijden her te gebruiken zand m3 193,00 V 2,70 521,10",True,1,True,True
+76,"320100 Laden en afvoeren overtollig grond, Landbouw & Natuur m3 1.510,00 V 4,50 6.795,00",True,1,True,True
+77,"34 BOORGROND, BUITEN BOUWPUT DOOR BOORDER 4.305,00",True,1,True,False
+78,"340000 Laden, afvoeren en storten boorgrond uit depot m3 123,00 V 35,00 4.305,00",True,1,True,True
+79,"39 GRONDWERK KABELSLEUF 3.164,00",True,1,True,False
+80,"390000 Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25 m1 226,00 V 14,00 3.164,00",True,1,True,True
+81,"5 RIOLERING, TOT AAN ERFGRENS 17.415,50",True,1,True,False
+82,"50 HWA-RIOLERING DAKWATER 6.579,95",True,1,True,False
+83,"500010 Leveren en aanbrengen PVC-riool diam. 160 mm t/m 200 mm m1 117,00 V 28,75 3.363,75",True,1,True,False
+84,"500020 Leveren en aanbrengen PVC-riool diam. 250 mm m1 10,00 V 38,60 386,00",True,1,True,False
+85,"500030 Maken aansluiting op binnenriolering st 5,00 V 45,60 228,00",True,1,True,True
+86,"500040 Lev. en stellen ontlastputten bij aansluiting diam. 315 mm st 5,00 V 236,10 1.180,50",True,1,True,True
+87,"500050 Lev. en plaatsen insp. put 600 mm op erfgrens st 1,00 V 1.421,70 1.421,70",True,1,True,True
+88,"51 HWA RIOLERING KOLKEN IN TERREIN 8.361,35",True,1,True,False
+89,"510010 Leveren en aanbrengen Straatkolk st 14,00 V 271,45 3.800,30",True,1,True,True
+90,"510020 Leveren en aanbrengen kolkleidingen ø125mm - 160 mm m1 175,00 V 24,05 4.208,75",True,1,True,True
+91,"510030 Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm st 2,00 V 176,15 352,30",True,1,True,True
+92,"52 VWA-RIOLERING 1.074,20",True,1,True,False
+93,"520010 Leveren en aanbrengen PVC-riool diam. 160 mm m1 25,00 V 29,50 737,50",True,1,True,True
+94,"520020 Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm st 2,00 V 168,35 336,70",True,1,True,True
+95,"53 ALGEMEEN 1.400,00",True,1,True,False
+96,"530000 Ontwerptekening aan te leggen riolering st 1,00 V 500,00 500,00",True,1,True,True
+97,"530010 Revisietekening van aangelegde riolering st 1,00 900,00 900,00",True,1,True,True
+98,"6 VERHARDINGEN 64.115,90",True,1,True,False
+99,"60 ELEMENTENVERHARDING 53.091,45",True,1,True,False
+100,"600000 Leveren en aanbrengen straatlaag op gebonden fundering m2 473,00 V 2,75 1.300,75",True,1,True,True
+101,"600010 Profileren zandbaan voor aanbrengen straatlaag m2 1.500,00 V 2,50 3.750,00",True,1,True,True
+102,"600020 Voor straatlaag profileren puinbaan m2 473,00 V 1,40 662,20",True,1,True,True
+103,"600100 Leveren en aanbrengen betontegels 300x300x60 m2 1.970,00 V 24,05 47.378,50",True,1,True,True
+104,"61 KANTOPSLUITING 8.753,25",True,1,True,False
+105,"610000 Leveren en aanbrengen opsluitbanden recht 10x20cm grijs m1 517,00 V 14,25 7.367,25",True,1,True,True
+106,"610010 Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs st 70,00 V 19,80 1.386,00",True,1,True,True
+107,"68 VEEGROOSTERS VOOR DEUREN 2.271,20",True,1,True,False
+108,"680000 Verlagen straatwerk roosters m2 17,00 V 28,60 486,20",True,1,True,True
+109,"680010 Leveren en verwerken veegroosters 100x100 st 17,00 V 105,00 1.785,00",True,1,True,True
+110,Project: Kindcentrum Sint Nicolaasga bladnr: 3/4,False,2,False,False
+111,Calculatie: 003 begroting KC st. Nyk 1 printdatum:,False,2,False,False
+112,Opdrachtgever: 12-11-2025,False,2,False,False
+113,Besteknummer:,False,2,False,False
+114,BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG,False,2,False,False
+115,POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO,False,2,False,False
+116,NUMMER VERPLICHTING IN EURO,False,2,False,False
+117,"7 TERREININRICHTING 60.777,90",True,2,True,False
+118,"70 GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK 4.217,90",True,2,True,False
+119,"700000 Zaaiklaar maken terrein voor inzaaien m2 2.240,00 V 0,80 1.792,00",True,2,True,True
+120,"700010 Inzaaien onverhard terrein met graszaad (1kg/100m2) m2 2.240,00 V 0,80 1.792,00",True,2,True,True
+121,"700100 Grondwerk t.b.v. vakken langs gevel voor beplanting m1 10,00 V 35,70 357,00",True,2,True,True
+122,"700110 Opsluitbanden rond plantvakken gevel m1 13,00 V 21,30 276,90",True,2,True,True
+123,"71 STRAATMEUBILAIR 27.500,00",True,2,True,False
+124,"710000 Leveren en aanbrengen fietsbeugels st 110,00 V 250,00 27.500,00",True,2,True,True
+125,"75 TERREINAFRASTERING 7.060,00",True,2,True,False
+126,"750000 Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk m1 51,00 V 110,00 5.610,00",True,2,True,True
+127,"750010 Leveren en aanbrengen poort, dubbel 125 cm hoog st 1,00 V 1.450,00 1.450,00",True,2,True,True
+128,"76 SCHUTTING 22.000,00",True,2,True,False
+129,"760000 Leveren en plaatsen Noistop Steel Schutting, 1 zijde m1 44,00 V 500,00 22.000,00",True,2,True,True
+130,"8 BOUWPLAATSVOORZIENINGEN 15.285,00",True,2,True,False
+131,"80 DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK 11.200,00",True,2,True,False
+132,"800000 Leveren en aanbrengen drainage bouwkuip m1 400,00 V 12,00 4.800,00",True,2,True,True
+133,"800010 Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip st 2,00 V 500,00 1.000,00",True,2,True,True
+134,"800020 Huur elektrische pomp (6 weken) st 2,00 V 2.700,00 5.400,00",True,2,True,True
+135,"81 INRIT BOUWPLAATS LANGS WEG IN BETONPLATEN 3.200,00",True,2,True,False
+136,"810 Aanbrengen inrit, breedt 10 m1 2.800,00",True,2,True,True
+137,"810000 Grondwerk aan brengen inrit m2 50,00 V 16,00 800,00",True,2,True,True
+138,"810010 Aanbrengen bedrijfsvloerplaten 200x200x16 cm m2 40,00 V 50,00 2.000,00",True,2,True,True
+139,"811 Opruimen inrit na bouw 400,00",True,2,True,False
+140,"811010 Opnemen en afvoeren bedrijfsvloerplaten m2 40,00 V 10,00 400,00",True,2,True,True
+141,"82 KETENPARK 885,00",True,2,True,False
+142,"820000 Aansluiten toiletunit en uitvoeringskeet op riool, max 25 m1 EUR 750,00 V 1,00 750,00",True,2,True,True
+143,"820010 Plaatsen en opnemen aangeleverde watermeterput st 1,00 V 135,00 135,00",True,2,True,True
+144,"Subtotaal 217.860,10",True,2,True,False
+145,Project: Kindcentrum Sint Nicolaasga bladnr: 4/4,False,3,False,False
+146,Calculatie: 003 begroting KC st. Nyk 1 printdatum:,False,3,False,False
+147,Opdrachtgever: 12-11-2025,False,3,False,False
+148,Besteknummer:,False,3,False,False
+149,BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG,False,3,False,False
+150,POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO,False,3,False,False
+151,NUMMER VERPLICHTING IN EURO,False,3,False,False
+152,"Transport subtotaal 217.860,10",True,3,True,False
+153,"33.639,90",False,3,True,False
+154,9 STAARTPOSTEN,False,3,False,False
+155,91 EENMALIGE KOSTEN,False,3,False,False
+156,"910010 Inrichten werkterrein EUR 500,00",True,3,True,False
+157,"910020 Opruimen werkterrein EUR 485,00",True,3,True,False
+158,"910080 Rijplaten op het werk, eigen gebruik grondwerEkUR 1.000,00",True,3,True,True
+159,"910090 Kabels en leidingen, KLIC Melding EUR 100,00",True,3,True,True
+160,"910100 Opruimen bij oplevering, straatpuin EUR 350,00",True,3,True,True
+161,"910130 Aan- en afvoerkosten materieel EUR 1.000,00",True,3,True,True
+162,"910180 V&G deelplan EUR 100,00",True,3,True,True
+163,"910200 Uitzetten werk EUR 1.500,00",True,3,True,True
+164,"918880 Overige eenmalige kosten EUR 4,90",True,3,True,True
+165,"919990 Totaal eenmalige kosten EUR 5.039,90 N 1,00 5.039,90",True,3,True,True
+166,"929990 Uitvoeringskosten EUR 9.000,00 N 1,00 9.000,00",True,3,True,True
+167,"939990 Algemene kosten EUR 19.600,00 N 1,00 19.600,00",True,3,True,True
+168,"949990 Winst en Risico EUR N 1,00",True,3,True,True
+169,"Aannemingssom, de omzetbelasting niet inbegrepen 251.500,00",True,3,True,False
+170,Gedaan te 8451KC HEERENVEEN,False,3,False,False
+171,De 12e november 2025,False,3,False,False
+172,"De inschrijver(s),",False,3,False,False
+173,Lolkema BV Aannemingsbedrijf,False,3,False,False
+174,Van wijnen Gorredijk BV,False,0,False,False
+175,T.a.v. Riemer Westervoort,False,0,False,False
+176,Badweg 42,False,0,False,False
+177,8400 AA Gorredijk,False,0,False,False
+178,"Suwald, 03-11-2025",False,0,False,False
+179,Betreft Prijsopgave metselwerk,False,0,False,False
+180,Offertenummer 25-01506,False,0,False,False
+181,Project Nieuwbouw IKC Sintnicolaasga,False,0,False,False
+182,Behandeld door P. Zuidema,False,0,False,False
+183,Betalingstermijn 14 dagen netto,False,0,False,False
+184,"Geachte heer Westervoort,",False,0,False,False
+185,Nog met dank voor uw uitnodiging aangaande bovenvermeld project. Wij kunnen u de hier onderstaande prijzen,False,0,False,False
+186,aanbieden.,False,0,False,False
+187,Omschrijving prijs eenheid,False,0,False,False
+188,Metselwerk:,False,0,False,False
+189,Vermetselen WF handvorm halfsteens verband € 800.00 dznd,True,0,True,True
+190,Toeslag wildverband € 45.00 dznd,True,0,True,True
+191,Toeslag strengperssteen € 50.00 dznd,True,0,True,True
+192,Toeslag strooisteen € 7.00 M2,True,0,True,True
+193,"Toeslag rond metselwerk, mal door VW geleverd € 30.00 m2",True,0,True,True
+194,Aanbrengen murfor € 3.00 m1,True,0,True,True
+195,Zaagwerk gevelsteen € 1.10 st,True,0,True,True
+196,Toeslag doorstrijk metselwerk 6-8 mm verdiept € 15.00 m2,True,0,True,True
+197,Aanbrengen stalen lateien handzaam exclusief aan elkaar bouten van de delen € 13.00 m1,True,0,True,True
+198,Aanbrengen kantplanken beton max 30 cm hoog of klamplaag onder peilkozijn € 25.00 m1,True,0,True,True
+199,Zaagwerk kantplanken € 12.50 m1,True,0,True,True
+200,Toeslag metselen speigelklamp € 20.00 m1,True,0,True,True
+201,Leveren kruiwagens/kuipen € 300.00 post,True,0,True,True
+202,Verhangen steiger console’s € 5.00 m1,True,0,True,True
+203,"Bouwen tussenslagen t.b.v. opperwerk gevelsteen indien er steigerslagen van 2,5 of € 15.00 m1",True,0,True,True
+204,3.0 meter worden toegepast,True,0,True,False
+205,Inmetselen Vloerventilatiekokers € 5.00 st,True,0,True,True
+206,Inwerken stootvoegroosters € 0.25 st,True,0,True,True
+207,Indraaien HSb ankers € 0.80 st,True,1,True,True
+208,Regiewerk € 52.00 mu,True,1,True,True
+209,Verreiker op bouwplaats € 6000.00 post,True,1,True,True
+210,Bijzonderheden:,False,1,False,False
+211,Bouw voorzien van liften waar 2 kruiwagens op kunnen.,False,1,False,False
+212,Stenen op pallets geleverd.,False,1,False,False
+213,Steigers 60 cm van de muur ivm doorstrijk en werkbare ruimte+,False,1,False,False
+214,Indien betoncasco geen peilen op de profielen maar Bovenkant kozijn van de bgg en de verdieping.,False,1,False,False
+215,Profielen ter hoogte van steigervloeren vast gezet zodat er volledige slagen gemetseld kunnen worden.,False,1,False,False
+216,Opperwerk in overleg d.m.v. kraan of verreiker door hoofdaannemer geleverd,False,1,False,False
+217,Sinds kort beschikken wij oven een eigen ontwikkelde steenzaagmachine waarmee we alle steenstrips voor u,False,1,False,False
+218,"kunnen zagen, neem contact op voor alle mogelijkheden ook voor andere projecten, zeer snelle levertijd",False,1,False,False
+219,"Vertrouwende u hiermee een passende aanbieding te hebben gedaan,",False,1,False,False
+220,"Met vriendelijke groeten,",False,1,False,False
+221,Zuidema Metselwerken BV,False,1,False,False
+222,Pier Zuidema,False,1,False,False
+223,AANNEMER METSELWERK,False,0,False,False
+224,B.Th. Postma B.V.,False,0,False,False
+225,Molier 8 Sinds 1977,False,0,False,False
+226,8521 MD ST. NICOLAASGA,False,0,False,False
+227,Telefoon : 0513 - 431 997,False,0,False,False
+228,ING bank : NL85INGB0678314349,False,0,False,False
+229,Homepage : www.bthpostma.nl,False,0,False,False
+230,Email : kantoor@bthpostma.nl,False,0,False,False
+231,K.v.K. : 010 49584 te Leeuwarden,False,0,False,False
+232,BTW nr : NL.8094.80.621.B03 Van Wijnen Gorredijk BV,False,0,False,False
+233,Postbus 16,False,0,False,False
+234,8400 AA GORREDIJK,False,0,False,False
+235,ter attentie van R. van Westervoort,False,0,False,False
+236,Datum : 13 oktober 2025,False,0,False,False
+237,Betreft : Nieuwbouw IKC Sint Nicolaasga,False,0,False,False
+238,Ons nummer : 2025043,False,0,False,False
+239,Ons kenmerk :,False,0,False,False
+240,Uw referentie :,False,0,False,False
+241,"Geachte heer van Westervoort,",False,0,False,False
+242,"Naar aanleiding van uw verzoek tot prijsopgave voor metselwerk en steigerwerk, doet het",False,0,False,False
+243,ons genoegen u hierbij een aanbieding te kunnen doen.,False,0,False,False
+244,Wij zijn voor het bepalen van de prijs uitgegaan van de door u verstrekte gegevens.,False,0,False,False
+245,In de prijzen is begrepen al hetgeen nodig voor een goede en vakkundige uitvoering van de,False,0,False,False
+246,"overeenkomst, met in acht name van de geldende normen, voorschriften en eisen van goed",False,0,False,False
+247,"vakmansschap, ook al is het een en ander niet uitdrukkelijk genoemd.",False,0,False,False
+248,Gegeven prijzen zijn exclusief BTW.,False,0,False,False
+249,Wij vertrouwen erop u een passende aanbieding te hebben gedaan en zien gaarne uw,False,0,False,False
+250,gewaardeerde opdracht tegemoet.,False,0,False,False
+251,"Hoogachtend,",False,0,False,False
+252,Aannemer Metselwerk B.Th. Postma B.V.,False,0,False,False
+253,H. Lolkema Naam opdrachtgever,False,0,False,False
+254,"Op al onze prijsopgaven, aanbiedingen, uitvoering van werken en leveringen zijn uitsluitend onze Algemene Voorwaarden voor de zakelijke",False,0,False,False
+255,markt Aannemers Vereniging Metselwerken (AVM) of Algemene Consumentenvoorwaarden Aannemers Vereniging Metselwerken (AVM),False,0,False,False
+256,van toepassing. Gedeponeerd bij de Kamer van Koophandel te Amsterdam depotnummer: 4856. Een exemplaar van deze voorwaarden is,False,0,False,False
+257,bijgesloten of wordt u op aanvraag omgaand toegezonden.,False,0,False,False
+258,Aannemer Metselwerk,False,1,False,False
+259,B.Th. Postma B.V.,False,1,False,False
+260,Pagina : 2,False,1,False,False
+261,"Bestemd voor : Van Wijnen Gorredijk BV , GORREDIJK",False,1,False,False
+262,Omschrijving : Nieuwbouw IKC Sint Nicolaasga,False,1,False,False
+263,Ons nummer : 2025043,False,1,False,False
+264,Eenheid,False,1,False,False
+265,"Gevelsteen B3 WF, basis halfsteens verband, vormbaksteen met normale 765,00 per dzd",True,1,True,True
+266,"vochtopname, incl. terugliggende geglazuurde gevelstenen. Start werk Q2",False,1,False,False
+267,"2026, start metselwerk Q3 2026",False,1,False,False
+268,Vooropperen steen op en rondom de steiger met een door de aannemer,False,1,False,False
+269,ter beschikking gestelde spieringskraan.,False,1,False,False
+270,"Alternatief inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/ 70,00 per dzd",True,1,True,True
+271,"mortel op de steiger, incl. aan-afvoer.",False,1,False,False
+272,"Voegwerk, direct doorgestreken/ gepointerd, 14,00 per M2",True,1,True,True
+273,"Toeslag rond werk, uitgevoerd in strekken. 15,00 per M2",True,1,True,True
+274,"Toeslag rollagen, t/m strek, niet in verband gemetseld 22,00 per M1",True,1,True,True
+275,"Toeslag omzetten negges > kop 8,50 per M1",True,1,True,True
+276,"Murfor inmetselen 5,00 per M1",True,1,True,True
+277,"Dilatatie / knipvoeg, gevelm.w.bui.sp 7,50 per M1",True,1,True,True
+278,"Staallateien, handzaam, schoon (zelfdragend) 12,00 per M1",True,1,True,True
+279,"Ankers boren hsb 0,40 per stuk",True,1,False,True
+280,"Kantplank, en/of betondorpels handzaam, per blok aangeleverd. 22,00 per M1",True,1,True,True
+281,"Betonlateien, niet handzaam, vuil 12,00 per M1",True,1,True,True
+282,"Ytong koudebrug, 1 lg hoog, excl.zaagw 15,00 per M1",True,1,True,True
+283,lxh = 600 x 200 dikte 100 mm,False,1,False,False
+284,"Zaagwerk y-tong blokken, zaagsn. 200/100 ,inkl. mach. 10,00 per M1",True,1,True,True
+285,"Zaagwerk stenen zaagdiepte 100, rollagen> kop of <strek worden 1,00 per stuk",True,1,True,True
+286,"gezaagd, scheeftes, eventueel drieklezoren/ t.p.v. omgezette negges i.v.t.",False,1,False,False
+287,"Ventilatierooster inmetselen 9,50 per stuk",True,1,False,True
+288,"Steigerwerk systeemsteiger, dubbel, montage/demontage, bij volledige 19.950,00 totaal",True,1,True,True
+289,"inzet1750m2, incl. aan-afvoer, zie toelichting",False,1,False,False
+290,"Steigerwerk systeemsteiger, huur per week bij volstand 950,00 per week",True,1,True,True
+291,"Steigerwerk systeemsteiger, consoles verplaatsen, per strekkende meter 3.000,00 totaal",True,1,True,True
+292,"steigervloer bij steigerslagen 2,0, totaal 620m1",False,1,False,False
+293,"Steigerwerk, tekening + berekening 1.250,00 totaal",True,1,True,True
+294,"Steigerwerk, 2 weekse keuring steiger, bedrag per keuring. 250,00 per keer",True,1,True,True
+295,"Regiewerk, aanh.sparingen, werkz.h tbv derden 60,00 per uur",True,1,True,True
+296,"volwassen vakbekwame metselaar, vanaf Q1 2026",False,1,False,False
+297,Aanvullende omschrijving gevelmetselwerk:,False,1,False,False
+298,Door opdrachtgever te verzorgen:,False,1,False,False
+299,-Plaatsen leveren/ opstellen lift,False,1,False,False
+300,"-Aanleveren steen op huloformaat (400 steen per pakket)/ wegwerppallets in folie, gelost op vlakke ondergrond.",False,1,False,False
+301,-Vlakke stevige ondergrond met ruim voldoende zand tot tenminste 3m1 uit de gevels.,False,1,False,False
+302,"-Alle voorkomende stelwerkzaamheden, incl. levering mal t.b.v. rond werk.",False,1,False,False
+303,TOELICHTING STEIGERWERK,False,1,False,False
+304,-Systeemsteiger met basisvloer dichtgelegd met hout,False,1,False,False
+305,-Steigervloeren op 2 en 4m1 bij metselwerk tot h= 4.7m1,False,1,False,False
+306,-Extra steigervloeren op 6m1 en 8m1 bij metselwerk tot h= 9.1m1,False,1,False,False
+307,"-T.p.v. ronde hoeken (buitenradius r= 1550), wordt de hoek van de steiger haaks gebouwd, waarbij in de binnenhoek een op",False,1,False,False
+308,maat gemaakte houten plaat wordt gelegd ondersteund door stalen roosters.,False,1,False,False
+309,-Dubbele buiten binnenleuningen.,False,1,False,False
+310,"-Uitwendige trappentoren v.v.bordestrappen, geplaatst voor de steiger aan voorzijde.",False,1,False,False
+311,-Uitwendige versterkte bevoorradingssteiger t.b.v. vooropperen steen en mortel met verreiker.,False,1,False,False
+312,-2x een inwendige stalen trapopgang aan de achterzijde.,False,1,False,False
+313,"-Verankering met ankerogen, patroon om en om vanaf 4m1",False,1,False,False
+314,-Max. vloerbelasting 300 kg/m2.,False,1,False,False
+315,"-Totale inzet volledig rondom, exclusief het betimmerde installatiescherm op h=9m1, bedraagt 1750m2",False,1,False,False
+316,Door opdrachtgever te verzorgen:,False,1,False,False
+317,-Voldoende zand rondom de blokken vlak aangevuld met bovenzijde fundering tot tenminste 3m1 uit de gevels,False,1,False,False
+318,"-Stevige, draagkrachtige ondergrond.",False,1,False,False
+319,Aannemer Metselwerk,False,2,False,False
+320,B.Th. Postma B.V.,False,2,False,False
+321,Pagina : 3,False,2,False,False
+322,"Bestemd voor : Van Wijnen Gorredijk BV , GORREDIJK",False,2,False,False
+323,Omschrijving : Nieuwbouw IKC Sint Nicolaasga,False,2,False,False
+324,Ons nummer : 2025043,False,2,False,False
+325,-Aanbrengen van een noodlaag dakbedekking op het dak van de 1e verdieping met daarover underlayment platen,False,2,False,False
+326,waarop de steiger geplaatst kan worden.,False,2,False,False
+327,-Leveren van ca 14 stuks underlayment platen t.b.v. dichtleggen binnenhoeken bij de ronde gevels.,False,2,False,False
+328,"Op al onze prijsopgaven, aanbiedingen, uitvoering van werken en leveringen zijn uitsluitend onze Algemene Voorwaarden voor de zakelijke",False,2,False,False
+329,markt Aannemers Vereniging Metselwerken (AVM) of Algemene Consumentenvoorwaarden Aannemers Vereniging Metselwerken (AVM),False,2,False,False
+330,van toepassing. Gedeponeerd bij de Kamer van Koophandel te Amsterdam depotnummer: 4856. Een exemplaar van deze voorwaarden is,False,2,False,False
+331,bijgesloten of wordt u op aanvraag omgaand toegezonden.,False,2,False,False
