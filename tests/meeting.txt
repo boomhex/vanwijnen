@@ -1,0 +1,27 @@
+Wat heb ik gedaan
+    - PDF text extractie
+    - OCR
+    - Tests op basis van semantische extractie
+    - Regel gebaseerde extractie
+    - LLM extractie
+    - Data analyse
+
+Aandachtspunten
+    - Betrouwbaarheid creeren
+    - LLM is nodig
+    - Mogelijkheden gebruik LLM
+    - Microsoft oplossing (Azure openAI)
+    - Variatie in documenten blijft een structurele uitdaging
+    - Kosten, performance en schaalbaarheid van AI-oplossingen
+    - Integratie met bestaande processen en systemen
+    - Veiligheid
+
+Oplossingsrichtingen
+    - LLM met Python tool
+    - Azure (Microsoft)
+    - Kopieerbare prompts (Minder gebruikersvriendelijk)
+    - Ook bruikbaar voor vergelijking
+
+Bespreken
+    - Aansluiting Systemen
+    - Welke output is het meest waardevol voor de calculatieafdeling?

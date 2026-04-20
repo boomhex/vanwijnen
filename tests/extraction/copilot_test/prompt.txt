@@ -1,0 +1,21 @@
+Haal de relevante informatie uit deze text:
+- Naam aannemer
+- Totale prijs
+- Korte samenvatting van bijzondere bepalingen
+- Alle offerteposten, met "omschrijving" en prijs
+
+Regels:
+- Geen aantallen gokken
+- Als een waarde niet gevonden kan worden, markeer je deze met "Niet gevonden"
+
+Vul dit json schema in:
+{
+    "Aannemer",
+    "Totale prijs",
+    "Samenvatting",
+    "Offerteposten" : [
+        
+    ]
+}
+
+TEXT:
