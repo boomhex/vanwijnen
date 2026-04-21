@@ -22,7 +22,6 @@ def extract_pdf_text(pdf_path: Path) -> str:
                 parts.append(page_text)
     return "\n\n".join(parts)
 
-
 def main():
     text = extract_pdf_text(PDF_PATH)
 

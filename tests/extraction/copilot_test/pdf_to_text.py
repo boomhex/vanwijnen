@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 pdf_path = Path(
-    "../../../data/03.02_Offertes_ontvangen/44.37_gipsplaatplafonds/Bijstra/Offerte 2025067 Nieuwbouw IKC sint Nicolaasga van Wijnen (2).pdf"
+    "../../../data/03.02_Offertes_ontvangen/42.40.a_gietvloeren_vloercoatings/Facadec/Offerte FBV - Nieuwbouw IKC St Nicolaasga.pdf"
 )
 
 with pdfplumber.open(pdf_path) as pdf:

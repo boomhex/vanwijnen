@@ -25,7 +25,6 @@ def has_totaalprijs(text):
     words = [
         "totaalprijs",
         "aanneemsom",
-        "totaal"
     ]
 
     if word_in_text("offerte", text):
