@@ -1,0 +1,188 @@
+```json
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk",
+    "Totaalprijs": "55.847,08",
+    "Posten": [
+        {
+            "Omschrijving": "Isobouw Airpop PowerKist losse bodemplaat 500 L= 1200 mm 4 st/pak",
+            "Totaalbedrag": "4.972,90",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "11,14"
+        },
+        {
+            "Omschrijving": "Isobouw Airpop PowerKist losse zijwand 800 L= 1200 mm 3 st/pak",
+            "Totaalbedrag": "15.356,16",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "17,20"
+        },
+        {
+            "Omschrijving": "Isobouw Haringen 10 st/bdl",
+            "Totaalbedrag": "262,20",
+            "Eenheid": "BDL",
+            "Eenheidsprijs": "6,90"
+        },
+        {
+            "Omschrijving": "Isobouw Bovenbeugels B 500 10 st/bdl",
+            "Totaalbedrag": "930,24",
+            "Eenheid": "BDL",
+            "Eenheidsprijs": "12,24"
+        },
+        {
+            "Omschrijving": "Vuren klasse c geschaafd 47x75x4800 mm, blijvend op 44x69 mm 70% PEFC",
+            "Totaalbedrag": "1.240,99",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "1,39"
+        },
+        {
+            "Omschrijving": "Vuren klasse c sls geschaafd 38x184x5400 mm 70% PEFC",
+            "Totaalbedrag": "350,46",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "2,95"
+        },
+        {
+            "Omschrijving": "Vuren klasse c geschaafd 50x150x5400 mm FSC Mix 70%",
+            "Totaalbedrag": "281,88",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "2,90"
+        },
+        {
+            "Omschrijving": "Vuren klasse c geegaliseerd zwart 22x50 mm 1 zijde schuin",
+            "Totaalbedrag": "304,20",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "1,30"
+        },
+        {
+            "Omschrijving": "Elliotti Pine multiplex WBP C+/C TG2 2440x1220x18 mm FSC Mix 70%",
+            "Totaalbedrag": "502,34",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "6,75"
+        },
+        {
+            "Omschrijving": "OSB 3 sqe 11mm 2440x1220 mm FSC Mix 70%",
+            "Totaalbedrag": "593,87",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "3,99"
+        },
+        {
+            "Omschrijving": "Knauf Diamond Board AK 2600x1200x12,5 mm 20 st/plt",
+            "Totaalbedrag": "5.008,85",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "6,98"
+        },
+        {
+            "Omschrijving": "Knauf Flexboard, type D AK 3000x900x6,5 mm 66 st/plt",
+            "Totaalbedrag": "966,60",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "8,95"
+        },
+        {
+            "Omschrijving": "Vuren klasse c geschaafd geimpr. zwart 32x50 mm, 1-zijde schuin",
+            "Totaalbedrag": "600,60",
+            "Eenheid": "M1",
+            "Eenheidsprijs": "1,43"
+        },
+        {
+            "Omschrijving": "Ubbink Stootvoegventilatierooster waalformaat grijs 25 st/pak 9 pak/ds 48 ds/plt",
+            "Totaalbedrag": "630,00",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "0,70"
+        },
+        {
+            "Omschrijving": "Ubbink Vloerventilatiekoker (WF) compleet met zwart muurrooster 24 st/ds 9 ds/plt",
+            "Totaalbedrag": "599,85",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "6,45"
+        },
+        {
+            "Omschrijving": "Knauf Naturoll 037 glaswolrol 8200x580x90 mm 2 rol/pak 48 rol/pallet",
+            "Totaalbedrag": "328,16",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "3,45"
+        },
+        {
+            "Omschrijving": "Rockpanel colours standaard 8mm 3050x1200 mm uni kleuren",
+            "Totaalbedrag": "6.222,73",
+            "Eenheid": "m²",
+            "Eenheidsprijs": "85,01"
+        },
+        {
+            "Omschrijving": "Rockpanelschroef T-20 A4/316 std. RAL 4,5x35 mm doos 200 st",
+            "Totaalbedrag": "30,79",
+            "Eenheid": "DS",
+            "Eenheidsprijs": "30,79"
+        },
+        {
+            "Omschrijving": "Rockpanel Kantenlak (Flacon a 500 ml)",
+            "Totaalbedrag": "42,50",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "42,50"
+        },
+        {
+            "Omschrijving": "EPDM Voegband vlak Epdm Voegband Vlak 45mm 5000cm",
+            "Totaalbedrag": "39,50",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "39,50"
+        },
+        {
+            "Omschrijving": "EPDM Voegband vlak Epdm Voegband Vlak 75mm 2500cm",
+            "Totaalbedrag": "39,50",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "39,50"
+        },
+        {
+            "Omschrijving": "EPDM Voegband vlak Epdm Voegband Vlak 100mm 2000cm",
+            "Totaalbedrag": "39,95",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "39,95"
+        },
+        {
+            "Omschrijving": "Horizontaal voegprofiel Kleur : Zwart geanodiseerd Maatvoering: 30 mm x 3000 mm",
+            "Totaalbedrag": "12,30",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "12,30"
+        },
+        {
+            "Omschrijving": "Kooltherm K8 Spouwplaat sponning 10 mm 1200x600x126 mm 4 st/pak",
+            "Totaalbedrag": "1.149,12",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "39,90"
+        },
+        {
+            "Omschrijving": "Kooltherm K8 Spouwplaat sponning 10 mm 1200x600x105 mm 4 st/pak + Rest",
+            "Totaalbedrag": "3.686,26",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "37,10"
+        },
+        {
+            "Omschrijving": "Utherm Wall L-4,05 1200x600x90mm",
+            "Totaalbedrag": "781,20",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "10,85"
+        },
+        {
+            "Omschrijving": "Rockwool Rocksono Base 1200x600x100 mm",
+            "Totaalbedrag": "812,16",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "11,75"
+        },
+        {
+            "Omschrijving": "Zwaluw Compress Band 10 x 10 mm ( 2 ) rol 12,5 m1 30 rol/ds",
+            "Totaalbedrag": "51,80",
+            "Eenheid": "ROL",
+            "Eenheidsprijs": "5,18"
+        },
+        {
+            "Omschrijving": "Lateislabbe 500mm rol 50m1",
+            "Totaalbedrag": "97,50",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "1,95"
+        },
+        {
+            "Omschrijving": "Beton Hunebed 35mm 60x90mm, Afstandhouder Zak a 84st",
+            "Totaalbedrag": "220,00",
+            "Eenheid": "ST",
+            "Eenheidsprijs": "0,22"
+        }
+    ]
+}
+```
