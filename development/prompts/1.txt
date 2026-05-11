@@ -1,6 +1,6 @@
 Je moet de volgende info uit deze text filteren:
 - Naam van de opdrachtgever.
-- Totaalprijs van de offerte.
+- Totaalprijs van de offerte inclusief en exclusief BTW.
 - Per post; omschrijving, totaalbedrag, eenheid en eenheidsprijs.
 Regels:
 - Verzin geen getallen!
@@ -8,7 +8,8 @@ Regels:
 - Reageer ALLEEN met een json in het volgende formaat:
 {
     "Naam opdrachtgever",
-    "Totaalprijs",
+    "Totaalprijs inc. BTW",
+    "Totaalprijs exc. BTW",
     "Posten" : {
         "Omschrijving",
         "Totaalbedrag",

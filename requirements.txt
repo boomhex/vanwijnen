@@ -1,3 +1,4 @@
 pdfplumber
 pdfminer.six
 openai
+nicegui
