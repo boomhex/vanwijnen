@@ -1,52 +1,59 @@
 from pathlib import Path
-
+import pdfplumber
 from nicegui import ui
+import os
 
 RED = '#B00000'
 OVERVIEW_MARKDOWN = Path(__file__).with_name('overzicht.md')
+
+files = {
+    "files" : ""
+}
+
+async def handle_upload(e):
+    await e.file.save(f"./files/{e.file.name}")
+    reload()
+
+def reload():
+    get_files()
 
 def analyse_tab():
     ui.label('Analyse').classes('text-2xl font-bold text-red-900')
     ui.label('Analyse project data and compare findings here.').classes(
         'text-red-800'
     )
+    ui.upload(on_upload=handle_upload)
 
-def overview_tab():
-    ui.markdown(OVERVIEW_MARKDOWN.read_text(encoding='utf-8')).classes(
-        'max-w-4xl text-red-900'
-    )
+def get_files():
+    files.update(files='\n'.join(os.listdir("./files/")))
 
-def report_tab():
-    ui.label('Rapporteer').classes('text-2xl font-bold text-red-900')
-    ui.label('Build or review the final report here.').classes(
-        'text-red-800'
-    )
+def printhello():
+    print('hello')
+
+def file_grid():
+    with ui.list().props('bordered separator'):
+        with ui.item():
+            with ui.item_section():
+                ui.item_label("File 1")
+            with ui.item_section().props('side'):
+                ui.icon('home')
+
 
 @ui.page('/')
 def main_page():
     ui.colors(primary=RED)
 
+    reload()
+
     with ui.header().classes('w-full bg-white text-red-900 shadow-sm px-6 py-3'):
         with ui.row().classes('w-full items-center'):
             ui.label('Project tool').classes('text-xl font-bold')
 
-            with ui.tabs().classes('text-red-900') as tabs:
-                overzicht = ui.tab('Overzicht')
-                analyse = ui.tab('Analyse')
-                rapport = ui.tab('Rapporteer')
-
-    with ui.column().classes('w-full min-h-screen bg-red-50'):
-        with ui.tab_panels(tabs, value=overzicht).classes(
-            'w-full flex-grow bg-red-50'
-        ):
-            with ui.tab_panel(overzicht).classes('p-6'):
-                overview_tab()
-
-            with ui.tab_panel(analyse).classes('p-6'):
-                analyse_tab()
-
-            with ui.tab_panel(rapport).classes('p-6'):
-                report_tab()
+    with ui.row():
+        with ui.column():
+            analyse_tab()
+        with ui.column():
+            file_grid()
 
 
 ui.run()
