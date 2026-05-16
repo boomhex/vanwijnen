@@ -1,0 +1,43 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk BV",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "€ 37.350,00",
+    "Posten": [
+        {
+            "Omschrijving": "Het vervaardigen van betonschroefpalen",
+            "Totaalbedrag": "€ 37.350,00",
+            "Eenheid": "stuks",
+            "Eenheidsprijs": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Het boren en beproeven van betoncilinders",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "stuk",
+            "Eenheidsprijs": "€ 225,00"
+        },
+        {
+            "Omschrijving": "Akoestisch doormeten",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "paal",
+            "Eenheidsprijs": "€ 8,00"
+        },
+        {
+            "Omschrijving": "Akoestisch doormeten per meetfase",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "meetfase",
+            "Eenheidsprijs": "€ 250,00"
+        },
+        {
+            "Omschrijving": "Aardingsstaven ø16 mm'",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m'",
+            "Eenheidsprijs": "€ 3,00"
+        },
+        {
+            "Omschrijving": "Plaatsingskosten aarding",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "paal",
+            "Eenheidsprijs": "€ 25,00"
+        }
+    ]
+}
