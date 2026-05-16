@@ -1,0 +1,35 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk BV",
+    "Totaalprijs inc. BTW": "8470,-",
+    "Totaalprijs exc. BTW": "7000,-",
+    "Posten": [
+        {
+            "Omschrijving": "Klick melding",
+            "Totaalbedrag": "50,-",
+            "Eenheid": "st",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "1"
+        },
+        {
+            "Omschrijving": "Vracht en montage opstartkosten",
+            "Totaalbedrag": "150,-",
+            "Eenheid": "st",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "1"
+        },
+        {
+            "Omschrijving": "Spijlenhekwerk 120 cm hoog",
+            "Totaalbedrag": "5500,-",
+            "Eenheid": "m",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "53"
+        },
+        {
+            "Omschrijving": "Dubbele draaipoort spijlen 200/120",
+            "Totaalbedrag": "1300,-",
+            "Eenheid": "st",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "1"
+        }
+    ]
+}

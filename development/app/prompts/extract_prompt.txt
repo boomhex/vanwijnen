@@ -1,0 +1,22 @@
+Je moet de volgende info uit deze text filteren:
+- Naam van de opdrachtgever.
+- Totaalprijs van de offerte inclusief en exclusief BTW.
+- Per post; omschrijving, totaalbedrag, eenheid, eenheidsprijs en aantal.
+Regels:
+- Verzin geen getallen!
+- Is een veld onbekend, vul "ONBEKEND" in.
+- Reageer ALLEEN met een json in het volgende formaat:
+{
+    "Naam opdrachtgever",
+    "Totaalprijs inc. BTW",
+    "Totaalprijs exc. BTW",
+    "Posten" : {
+        "Omschrijving",
+        "Totaalbedrag",
+        "Eenheid",
+        "Eenheidsprijs",
+        "Aantal"
+    }
+}
+
+TEXT:

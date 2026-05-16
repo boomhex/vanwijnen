@@ -2,6 +2,7 @@ from nicegui import ui, events
 from utils.eva_html import eva_html
 from pathlib import Path
 from dataclasses import dataclass
+from main_page.compare_files import compare_files
 
 PRIMARY_RED = '#B00000'
 SECONDARY_RED = "#F9BFBF"
@@ -30,7 +31,9 @@ class State:
     async def add_file(self, event: events.UploadEventArguments):
         await event.file.save(self._file_path / "files" / event.file.name)
 
+
 state = State(Path("./tmp"))
+
 
 async def handle_upload(e: events.UploadEventArguments):
     await state.add_file(e)
@@ -39,6 +42,7 @@ async def handle_upload(e: events.UploadEventArguments):
 
 def left_drawer():
     file_upload = ui.upload(on_upload=handle_upload, auto_upload=True).classes('w-full')
+    file_list()
 
 
 def open_file(file: Path):
@@ -54,17 +58,39 @@ def refresh_file_list():
         file_list()
 
 
+def process_selected_files(selected_files):
+    checked_files = [
+        item['file']
+        for item in selected_files
+        if item['checkbox'].value
+    ]
+    
+    compare_files(checked_files)
+
+
 def file_list():
+    selected_files = []
+
+    ui.button(
+        'Compare Selected',
+        on_click=lambda: process_selected_files(selected_files)
+    )
     ui.label('Files').classes('text-lg font-bold mb-2')
     files = state.file_list_from_folder()
+
     if not files:
         ui.label('No files uploaded yet').classes('text-gray-500')
         return
+
+
     for file in files:
-        ui.button(
-            file.name,
-            on_click=lambda f=file: open_file(f),
-        )
+        with ui.row().classes('items-center gap-2 w-full'):
+            checkbox = ui.checkbox()
+            selected_files.append({
+                'file': file,
+                'checkbox': checkbox,
+            })
+            ui.label(file.name)
 
 
 def opened_file():
@@ -74,14 +100,7 @@ def opened_file():
 def right_side():
     global file_list_container
 
-    with ui.column().classes('w-full h-screen'):
-        with ui.splitter(limits=(10, 90)).classes('w-full h-full') as splitter:
-            with splitter.before:
-                file_list_container = ui.column().classes('w-full')
-                with file_list_container:
-                    file_list()
-            with splitter.after:
-                opened_file()
+    opened_file()
 
 
 ui.page('/')
