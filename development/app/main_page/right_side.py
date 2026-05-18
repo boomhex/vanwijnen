@@ -1,6 +1,7 @@
 from pathlib import Path
 from urllib.parse import quote
 import json
+from decimal import Decimal, InvalidOperation
 
 from nicegui import run, ui
 
@@ -151,6 +152,7 @@ class RightSide:
 
     def update_comparison_value(self, project: Path, comparison: dict, row_index: int, field: str, value: str) -> None:
         comparison['Posten'][row_index][field] = value
+        comparison.pop('MatchedPosten', None)
         comparison.pop('Matches', None)
         self.folder_handler.save_comparison(project, comparison)
 
@@ -161,6 +163,7 @@ class RightSide:
             'Aantal': '',
             'Eenheid': '',
         })
+        comparison.pop('MatchedPosten', None)
         comparison.pop('Matches', None)
         self.folder_handler.save_comparison(project, comparison)
         self.schedule_refresh()
@@ -172,6 +175,7 @@ class RightSide:
             return
 
         comparison['Posten'].pop(row_index)
+        comparison.pop('MatchedPosten', None)
         comparison.pop('Matches', None)
         self.folder_handler.save_comparison(project, comparison)
         self.schedule_refresh()
@@ -203,25 +207,175 @@ class RightSide:
             {json.dumps(self.project_offer_results(project), ensure_ascii=False, indent=2)}
 
             Maak per vergelijkingsregel en per offertebestand de beste match.
+            Gebruik voor "Aantal" en "Eenheid" de vergelijkingsregel.
+            Neem bij iedere offerte de gematchte "Eenheidsprijs" over uit de offertepost als die beschikbaar is.
             Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
             Reageer ALLEEN met geldige JSON, zonder markdown, in exact dit formaat:
             {{
-            "Matches": [
+            "MatchedPosten": [
                 {{
-                "Vergelijking omschrijving": "...",
-                "Vergelijking aantal": "...",
-                "Vergelijking eenheid": "...",
-                "Offerte": "...",
-                "Gematchte omschrijving": "...",
-                "Gematcht aantal": "...",
-                "Gematchte eenheid": "...",
-                "Totaalbedrag": "...",
-                "Match toelichting": "..."
+                "Omschrijving": "...",
+                "Aantal": "...",
+                "Eenheid": "...",
+                "Offertes": {{
+                    "offerte-bestandsnaam.pdf": {{
+                    "Gematchte omschrijving": "...",
+                    "Gematchte eenheid": "...",
+                    "Eenheidsprijs": "...",
+                    "Totaalbedrag": "...",
+                    "Match toelichting": "..."
+                    }}
+                }}
                 }}
             ]
             }}
         """
         return parse_json_response(ask_llm(prompt))
+
+    @staticmethod
+    def parse_decimal(value: str | int | float | None) -> Decimal | None:
+        if value is None:
+            return None
+
+        text = str(value).strip()
+        if not text or text.upper() == 'ONBEKEND':
+            return None
+
+        cleaned = ''.join(character for character in text if character.isdigit() or character in ',.-')
+        if not cleaned:
+            return None
+
+        if ',' in cleaned and '.' in cleaned:
+            cleaned = cleaned.replace('.', '').replace(',', '.')
+        elif ',' in cleaned:
+            cleaned = cleaned.replace(',', '.')
+        elif cleaned.count('.') > 1:
+            parts = cleaned.split('.')
+            cleaned = ''.join(parts[:-1]) + '.' + parts[-1]
+
+        try:
+            return Decimal(cleaned)
+        except InvalidOperation:
+            return None
+
+    @classmethod
+    def calculate_total(cls, amount: str, unit_price: str, fallback_total: str | None = None) -> str:
+        amount_value = cls.parse_decimal(amount)
+        unit_price_value = cls.parse_decimal(unit_price)
+        if amount_value is None or unit_price_value is None:
+            return fallback_total or 'ONBEKEND'
+
+        return f'{amount_value * unit_price_value:.2f}'
+
+    def normalize_matched_posts(self, project: Path, comparison: dict, match_result: dict) -> list[dict]:
+        offer_results = self.project_offer_results(project)
+        offer_names = [offer['Bestand'] for offer in offer_results]
+        raw_rows = match_result.get('MatchedPosten') or []
+        flat_rows = match_result.get('Matches') or []
+        normalized_rows = []
+
+        for index, comparison_row in enumerate(comparison.get('Posten', [])):
+            raw_row = self.find_matching_raw_row(raw_rows, comparison_row, index)
+            offers = raw_row.get('Offertes', {}) if isinstance(raw_row, dict) else {}
+            normalized_offers = {}
+
+            for offer_name in offer_names:
+                offer_match = offers.get(offer_name, {})
+                if not offer_match:
+                    offer_match = self.find_flat_match(flat_rows, comparison_row, offer_name)
+
+                extracted_post = self.find_extracted_offer_post(offer_results, offer_name, offer_match)
+                unit_price = self.first_known_value(
+                    offer_match.get('Eenheidsprijs'),
+                    extracted_post.get('Eenheidsprijs'),
+                )
+                total = self.calculate_total(
+                    comparison_row.get('Aantal', ''),
+                    unit_price,
+                    self.first_known_value(
+                        offer_match.get('Totaalbedrag'),
+                        extracted_post.get('Totaalbedrag'),
+                    ),
+                )
+                normalized_offers[offer_name] = {
+                    'Gematchte omschrijving': self.first_known_value(
+                        offer_match.get('Gematchte omschrijving'),
+                        extracted_post.get('Omschrijving'),
+                    ),
+                    'Gematchte eenheid': self.first_known_value(
+                        offer_match.get('Gematchte eenheid'),
+                        extracted_post.get('Eenheid'),
+                    ),
+                    'Eenheidsprijs': unit_price,
+                    'Totaalbedrag': total,
+                    'Match toelichting': offer_match.get('Match toelichting', ''),
+                }
+
+            normalized_rows.append({
+                'Omschrijving': comparison_row.get('Omschrijving', ''),
+                'Aantal': comparison_row.get('Aantal', ''),
+                'Eenheid': comparison_row.get('Eenheid', ''),
+                'Offertes': normalized_offers,
+            })
+
+        return normalized_rows
+
+    @staticmethod
+    def first_known_value(*values: str | None) -> str:
+        for value in values:
+            if value is None:
+                continue
+
+            text = str(value).strip()
+            if text and text.upper() != 'ONBEKEND':
+                return text
+
+        return 'ONBEKEND'
+
+    @classmethod
+    def find_extracted_offer_post(cls, offer_results: list[dict], offer_name: str, offer_match: dict) -> dict:
+        matched_description = offer_match.get('Gematchte omschrijving') or offer_match.get('Omschrijving')
+        if not matched_description or str(matched_description).strip().upper() == 'ONBEKEND':
+            return {}
+
+        for offer_result in offer_results:
+            if offer_result.get('Bestand') != offer_name:
+                continue
+
+            for post in offer_result.get('Posten', []):
+                if cls.normalize_text(post.get('Omschrijving')) == cls.normalize_text(matched_description):
+                    return post
+
+        return {}
+
+    @staticmethod
+    def normalize_text(value: str | None) -> str:
+        return ' '.join(str(value or '').casefold().split())
+
+    @staticmethod
+    def find_matching_raw_row(raw_rows: list[dict], comparison_row: dict, index: int) -> dict:
+        if index < len(raw_rows):
+            return raw_rows[index]
+
+        description = comparison_row.get('Omschrijving')
+        for raw_row in raw_rows:
+            if raw_row.get('Omschrijving') == description or raw_row.get('Vergelijking omschrijving') == description:
+                return raw_row
+
+        return {}
+
+    @staticmethod
+    def find_flat_match(flat_rows: list[dict], comparison_row: dict, offer_name: str) -> dict:
+        description = comparison_row.get('Omschrijving')
+        for raw_row in flat_rows:
+            if raw_row.get('Offerte') != offer_name:
+                continue
+
+            raw_description = raw_row.get('Vergelijking omschrijving') or raw_row.get('Omschrijving')
+            if raw_description == description:
+                return raw_row
+
+        return {}
 
     async def match_project_posts(self, project: Path, comparison: dict, button) -> None:
         if not comparison.get('Posten'):
@@ -242,7 +396,8 @@ class RightSide:
             self.notify_safe(f'Could not match posts: {error}')
             return
 
-        comparison['Matches'] = match_result.get('Matches', [])
+        comparison['MatchedPosten'] = self.normalize_matched_posts(project, comparison, match_result)
+        comparison.pop('Matches', None)
         self.folder_handler.save_comparison(project, comparison)
         self.notify_safe('Matched posts')
         self.schedule_refresh_safe()
@@ -271,6 +426,11 @@ class RightSide:
         ui.label(f'{len(result_files)} extracted file(s) available for comparison').classes('text-sm text-gray-600')
 
         comparison = self.folder_handler.load_comparison(project)
+        if 'MatchedPosten' in comparison or 'Matches' in comparison:
+            comparison['MatchedPosten'] = self.normalize_matched_posts(project, comparison, comparison)
+            comparison.pop('Matches', None)
+            self.folder_handler.save_comparison(project, comparison)
+
         comparison_rows = [
             {'id': index, **row}
             for index, row in enumerate(comparison.get('Posten', []))
@@ -293,26 +453,46 @@ class RightSide:
 
             match_button.on('click', request_match)
 
-        match_rows = [
-            {'id': index, **row}
-            for index, row in enumerate(comparison.get('Matches', []))
-        ]
+        match_rows = comparison.get('MatchedPosten', [])
         if not match_rows:
             return
 
         ui.label('Matched posten').classes('text-lg font-bold mt-4')
+        self.render_side_by_side_match_table(project, match_rows)
+
+    def render_side_by_side_match_table(self, project: Path, match_rows: list[dict]) -> None:
+        offer_names = [offer['Bestand'] for offer in self.project_offer_results(project)]
+        columns = [
+            {'name': 'Omschrijving', 'label': 'Omschrijving', 'field': 'Omschrijving'},
+            {'name': 'Aantal', 'label': 'Aantal', 'field': 'Aantal'},
+            {'name': 'Eenheid', 'label': 'Eenheid', 'field': 'Eenheid'},
+        ]
+
+        for offer_name in offer_names:
+            columns.extend([
+                {'name': f'{offer_name} omschrijving', 'label': f'{offer_name} post', 'field': f'{offer_name} omschrijving'},
+                {'name': f'{offer_name} prijs', 'label': f'{offer_name} prijs', 'field': f'{offer_name} prijs'},
+                {'name': f'{offer_name} totaal', 'label': f'{offer_name} totaal', 'field': f'{offer_name} totaal'},
+            ])
+
+        rows = []
+        for index, match_row in enumerate(match_rows):
+            row = {
+                'id': index,
+                'Omschrijving': match_row.get('Omschrijving', ''),
+                'Aantal': match_row.get('Aantal', ''),
+                'Eenheid': match_row.get('Eenheid', ''),
+            }
+            offers = match_row.get('Offertes', {})
+            for offer_name in offer_names:
+                offer = offers.get(offer_name, {})
+                row[f'{offer_name} omschrijving'] = offer.get('Gematchte omschrijving', 'ONBEKEND')
+                row[f'{offer_name} prijs'] = offer.get('Eenheidsprijs', 'ONBEKEND')
+                row[f'{offer_name} totaal'] = offer.get('Totaalbedrag', 'ONBEKEND')
+            rows.append(row)
+
         ui.table(
-            columns=[
-                {'name': 'Vergelijking omschrijving', 'label': 'Vergelijking', 'field': 'Vergelijking omschrijving'},
-                {'name': 'Vergelijking aantal', 'label': 'Aantal', 'field': 'Vergelijking aantal'},
-                {'name': 'Vergelijking eenheid', 'label': 'Eenheid', 'field': 'Vergelijking eenheid'},
-                {'name': 'Offerte', 'label': 'Offerte', 'field': 'Offerte'},
-                {'name': 'Gematchte omschrijving', 'label': 'Gematchte post', 'field': 'Gematchte omschrijving'},
-                {'name': 'Gematcht aantal', 'label': 'Gem. aantal', 'field': 'Gematcht aantal'},
-                {'name': 'Gematchte eenheid', 'label': 'Gem. eenheid', 'field': 'Gematchte eenheid'},
-                {'name': 'Totaalbedrag', 'label': 'Totaal', 'field': 'Totaalbedrag'},
-                {'name': 'Match toelichting', 'label': 'Toelichting', 'field': 'Match toelichting'},
-            ],
-            rows=match_rows,
+            columns=columns,
+            rows=rows,
             row_key='id',
         ).classes('w-full')
