@@ -2,7 +2,8 @@ from nicegui import ui, events, app, run
 from utils.eva_html import eva_html
 from pathlib import Path
 from urllib.parse import quote
-from main_page.editable_table_helper import render_editable_table
+import json
+from main_page.editable_table_helper import render_editable_rows, render_editable_table
 from main_page.folder_handler import FolderHandler
 
 PRIMARY_RED = '#B00000'
@@ -28,7 +29,7 @@ class State:
         self.extract_requested_files: set[Path] = set()
 
 
-folder_handler = FolderHandler(PDF_DIR, RESULTS_DIR)
+folder_handler = FolderHandler(PDF_DIR, RESULTS_DIR, COMPARISON_DIR)
 state = State()
 opened_file_container = None
 file_list_container = None
@@ -119,6 +120,20 @@ def schedule_file_list_refresh():
 
 def schedule_opened_file_refresh():
     ui.timer(0.05, refresh_opened_file, once=True)
+
+
+def notify_safe(message: str):
+    try:
+        ui.notify(message)
+    except RuntimeError:
+        print(message)
+
+
+def schedule_opened_file_refresh_safe():
+    try:
+        schedule_opened_file_refresh()
+    except RuntimeError:
+        pass
 
 
 def refresh_file_list():
@@ -369,6 +384,110 @@ def delete_post_row(file: Path, result: dict, post_index: int):
     refresh_opened_file()
 
 
+def update_comparison_value(project: Path, comparison: dict, row_index: int, field: str, value: str):
+    comparison['Posten'][row_index][field] = value
+    comparison.pop('Matches', None)
+    folder_handler.save_comparison(project, comparison)
+
+
+def add_comparison_row(project: Path, comparison: dict):
+    comparison.setdefault('Posten', [])
+    comparison['Posten'].append({
+        'Omschrijving': '',
+        'Aantal': '',
+        'Eenheid': '',
+    })
+    comparison.pop('Matches', None)
+    folder_handler.save_comparison(project, comparison)
+    schedule_opened_file_refresh()
+
+
+def delete_comparison_row(project: Path, comparison: dict, row_index: int):
+    if 'Posten' not in comparison or row_index >= len(comparison['Posten']):
+        ui.notify('Row no longer exists')
+        refresh_opened_file()
+        return
+
+    comparison['Posten'].pop(row_index)
+    comparison.pop('Matches', None)
+    folder_handler.save_comparison(project, comparison)
+    schedule_opened_file_refresh()
+
+
+def project_offer_results(project: Path) -> list[dict]:
+    offer_results = []
+    for file in folder_handler.project_files(project):
+        result = folder_handler.load_result(file)
+        if result is None:
+            continue
+
+        offer_results.append({
+            'Bestand': file.name,
+            'Posten': result.get('Posten', []),
+        })
+
+    return offer_results
+
+
+def match_comparison_posts(project: Path, comparison: dict) -> dict:
+    from main_page.extract_offer import ask_llm, parse_json_response
+
+    prompt = f"""
+        Je koppelt begrotings-/vergelijkingsregels aan offerteposten.
+
+        Vergelijkingsregels:
+        {json.dumps(comparison.get('Posten', []), ensure_ascii=False, indent=2)}
+
+        Offerteposten per bestand:
+        {json.dumps(project_offer_results(project), ensure_ascii=False, indent=2)}
+
+        Maak per vergelijkingsregel en per offertebestand de beste match.
+        Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
+        Reageer ALLEEN met geldige JSON, zonder markdown, in exact dit formaat:
+        {{
+        "Matches": [
+            {{
+            "Vergelijking omschrijving": "...",
+            "Vergelijking aantal": "...",
+            "Vergelijking eenheid": "...",
+            "Offerte": "...",
+            "Gematchte omschrijving": "...",
+            "Gematcht aantal": "...",
+            "Gematchte eenheid": "...",
+            "Totaalbedrag": "...",
+            "Match toelichting": "..."
+            }}
+        ]
+        }}
+    """
+    return parse_json_response(ask_llm(prompt))
+
+
+async def match_project_posts(project: Path, comparison: dict, button):
+    if not comparison.get('Posten'):
+        ui.notify('Add comparison rows before matching')
+        return
+
+    if not project_offer_results(project):
+        ui.notify('No extracted offer results available for this project')
+        return
+
+    button.set_text('Matching')
+    button.props('loading disable')
+    button.update()
+
+    try:
+        match_result = await run.io_bound(match_comparison_posts, project, comparison)
+    except Exception as error:
+        notify_safe(f'Could not match posts: {error}')
+        return
+
+    comparison['Matches'] = match_result.get('Matches', [])
+    folder_handler.save_comparison(project, comparison)
+    notify_safe('Matched posts')
+    schedule_opened_file_refresh_safe()
+
+
 def opened_file_result():
     if state.opened_file is None:
         return
@@ -417,6 +536,53 @@ def comparison_page():
     ]
 
     ui.label(f'{len(result_files)} extracted file(s) available for comparison').classes('text-sm text-gray-600')
+
+    comparison = folder_handler.load_comparison(project)
+    comparison_rows = [
+        {'id': index, **row}
+        for index, row in enumerate(comparison.get('Posten', []))
+    ]
+
+    ui.label('Comparison rows').classes('text-lg font-bold mt-4')
+    render_editable_rows(
+        comparison_rows,
+        ['Omschrijving', 'Aantal', 'Eenheid'],
+        on_update=lambda index, field, value: update_comparison_value(project, comparison, index, field, value),
+        on_add=lambda: add_comparison_row(project, comparison),
+        on_delete=lambda index: delete_comparison_row(project, comparison, index),
+    )
+
+    with ui.row().classes('items-center gap-2 mt-4'):
+        match_button = ui.button('Match posten', icon='auto_fix_high').props('dense no-caps')
+
+        async def request_match(_event, p=project, data=comparison, button=match_button):
+            await match_project_posts(p, data, button)
+
+        match_button.on('click', request_match)
+
+    match_rows = [
+        {'id': index, **row}
+        for index, row in enumerate(comparison.get('Matches', []))
+    ]
+    if not match_rows:
+        return
+
+    ui.label('Matched posten').classes('text-lg font-bold mt-4')
+    ui.table(
+        columns=[
+            {'name': 'Vergelijking omschrijving', 'label': 'Vergelijking', 'field': 'Vergelijking omschrijving'},
+            {'name': 'Vergelijking aantal', 'label': 'Aantal', 'field': 'Vergelijking aantal'},
+            {'name': 'Vergelijking eenheid', 'label': 'Eenheid', 'field': 'Vergelijking eenheid'},
+            {'name': 'Offerte', 'label': 'Offerte', 'field': 'Offerte'},
+            {'name': 'Gematchte omschrijving', 'label': 'Gematchte post', 'field': 'Gematchte omschrijving'},
+            {'name': 'Gematcht aantal', 'label': 'Gem. aantal', 'field': 'Gematcht aantal'},
+            {'name': 'Gematchte eenheid', 'label': 'Gem. eenheid', 'field': 'Gematchte eenheid'},
+            {'name': 'Totaalbedrag', 'label': 'Totaal', 'field': 'Totaalbedrag'},
+            {'name': 'Match toelichting', 'label': 'Toelichting', 'field': 'Match toelichting'},
+        ],
+        rows=match_rows,
+        row_key='id',
+    ).classes('w-full')
 
 
 def show_opened_file():

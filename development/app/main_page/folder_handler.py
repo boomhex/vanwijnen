@@ -5,11 +5,15 @@ import json
 
 
 class FolderHandler:
-    def __init__(self, pdf_dir: Path, results_dir: Path) -> None:
+
+    def __init__(self, pdf_dir: Path, results_dir: Path, comparison_dir: Path | None = None) -> None:
         self.pdf_dir = pdf_dir
         self.results_dir = results_dir
+        self.comparison_dir = comparison_dir
         self.pdf_dir.mkdir(parents=True, exist_ok=True)
         self.results_dir.mkdir(parents=True, exist_ok=True)
+        if self.comparison_dir is not None:
+            self.comparison_dir.mkdir(parents=True, exist_ok=True)
 
     def files_in_folder(self, folder: Path) -> list[Path]:
         return sorted(folder.glob('*.pdf'), key=lambda file: file.name.lower())
@@ -121,6 +125,26 @@ class FolderHandler:
         result_path.parent.mkdir(parents=True, exist_ok=True)
         with result_path.open('w') as result_file:
             json.dump(result, result_file, ensure_ascii=False, indent=4)
+
+    def load_comparison(self, project: Path) -> dict[str, Any]:
+        comparison_path = self.comparison_path_for_project(project)
+        if not comparison_path.exists():
+            return {'Posten': []}
+
+        with comparison_path.open('r') as comparison_file:
+            return json.load(comparison_file)
+
+    def save_comparison(self, project: Path, comparison: dict[str, Any]) -> None:
+        comparison_path = self.comparison_path_for_project(project)
+        comparison_path.parent.mkdir(parents=True, exist_ok=True)
+        with comparison_path.open('w') as comparison_file:
+            json.dump(comparison, comparison_file, ensure_ascii=False, indent=4)
+
+    def comparison_path_for_project(self, project: Path) -> Path:
+        if self.comparison_dir is None:
+            raise ValueError('Comparison directory is not configured')
+
+        return self.comparison_dir / f'{project.name}.json'
 
     @staticmethod
     def clean_name(name: str | None, *, kind: str) -> str:

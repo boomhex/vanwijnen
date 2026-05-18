@@ -1,0 +1,222 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "vermetselen gevelsteen wildverband",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
+        },
+        {
+            "Omschrijving": "toeslag wildverband",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
+        },
+        {
+            "Omschrijving": "toeslag strooisteen",
+            "Aantal": "1112,00",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/mortel op de steiger, incl. aan-afvoer.",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
+        },
+        {
+            "Omschrijving": "toeslag gebogen metselwerk",
+            "Aantal": "178",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "vermetselen accentsteen 20mm verdiept",
+            "Aantal": "3716,00",
+            "Eenheid": "incl"
+        },
+        {
+            "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
+        },
+        {
+            "Omschrijving": "voegwerk doorstrijken",
+            "Aantal": "1112,00",
+            "Eenheid": "dzd"
+        }
+    ],
+    "Matches": [
+        {
+            "Vergelijking omschrijving": "vermetselen gevelsteen wildverband",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "Gevelsteen B3 WF, basis halfsteens verband, vormbaksteen met normale vochtopname, incl. terugliggende geglazuurde gevelstenen.",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "per dzd",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Dit is de hoofdpost voor het metselwerk van de gevelstenen."
+        },
+        {
+            "Vergelijking omschrijving": "vermetselen gevelsteen wildverband",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Vermetselen WF handvorm halfsteens verband",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "dznd",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Dit is de hoofdpost voor het metselwerk van de gevelstenen."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag wildverband",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "ONBEKEND",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "ONBEKEND",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Geen specifieke toeslag voor wildverband gevonden in deze offerte."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag wildverband",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Toeslag wildverband",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "dznd",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Directe match voor de toeslag op het verband."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag strooisteen",
+            "Vergelijking aantal": "1112,00",
+            "Vergelijking eenheid": "m2",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "ONBEKEND",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "ONBEKEND",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Geen post gevonden voor strooisteen in deze offerte."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag strooisteen",
+            "Vergelijking aantal": "1112,00",
+            "Vergelijking eenheid": "m2",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Toeslag strooisteen",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "M2",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Directe match voor de toeslag strooisteen."
+        },
+        {
+            "Vergelijking omschrijving": "inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/mortel op de steiger, incl. aan-afvoer.",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "Alternatief inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/ mortel op de steiger, incl. aan-afvoer.",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "per dzd",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Exacte tekstuele match voor de inzet van de verreiker."
+        },
+        {
+            "Vergelijking omschrijving": "inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/mortel op de steiger, incl. aan-afvoer.",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Verreiker op bouwplaats",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "post",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor de inzet van een verreiker, hoewel de eenheid (post) afwijkt van de begroting."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag gebogen metselwerk",
+            "Vergelijking aantal": "178",
+            "Vergelijking eenheid": "m2",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "Toeslag rond werk, uitgevoerd in strekken.",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "per M2",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor gebogen/rond metselwerk."
+        },
+        {
+            "Vergelijking omschrijving": "toeslag gebogen metselwerk",
+            "Vergelijking aantal": "178",
+            "Vergelijking eenheid": "m2",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Toeslag rond metselwerk, mal door VW geleverd",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "m2",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor gebogen/rond metselwerk."
+        },
+        {
+            "Vergelijking omschrijving": "vermetselen accentsteen 20mm verdiept",
+            "Vergelijking aantal": "3716,00",
+            "Vergelijking eenheid": "incl",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "ONBEKEND",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "ONBEKEND",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Hoewel de hoofdpost 'terugliggende gevelstenen' noemt, is er geen aparte post die matcht met dit aantal/eenheid."
+        },
+        {
+            "Vergelijking omschrijving": "vermetselen accentsteen 20mm verdiept",
+            "Vergelijking aantal": "3716,00",
+            "Vergelijking eenheid": "incl",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "ONBEKEND",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "ONBEKEND",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Geen specifieke post gevonden voor verdiepte accentstenen."
+        },
+        {
+            "Vergelijking omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "Zaagwerk stenen zaagdiepte 100, rollagen> kop of <strek worden gezaagd, scheeftes, eventueel drieklezoren/ t.p.v. omgezette negges i.v.t.",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "per stuk",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor het zagen van stenen, hoewel de eenheid (per stuk) afwijkt van de begroting (dzd)."
+        },
+        {
+            "Vergelijking omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+            "Vergelijking aantal": "86,95",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Zaagwerk gevelsteen",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "st",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor het zagen van stenen."
+        },
+        {
+            "Vergelijking omschrijving": "voegwerk doorstrijken",
+            "Vergelijking aantal": "1112,00",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Postma.pdf",
+            "Gematchte omschrijving": "Voegwerk, direct doorgestreken/ gepointerd",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "per M2",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor het doorstrijkwerk. De eenheid in de begroting (dzd) lijkt een typefout voor m2 gezien het aantal."
+        },
+        {
+            "Vergelijking omschrijving": "voegwerk doorstrijken",
+            "Vergelijking aantal": "1112,00",
+            "Vergelijking eenheid": "dzd",
+            "Offerte": "Zuidema.pdf",
+            "Gematchte omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
+            "Gematcht aantal": "ONBEKEND",
+            "Gematchte eenheid": "m2",
+            "Totaalbedrag": "ONBEKEND",
+            "Match toelichting": "Match voor het doorstrijkwerk."
+        }
+    ]
+}
