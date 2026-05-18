@@ -10,15 +10,19 @@ from main_page.folder_handler import FolderHandler
 from main_page.page_state import MainPageState
 
 
-class RightSide:
-    def __init__(self, *, state: MainPageState, folder_handler: FolderHandler, pdf_dir: Path) -> None:
+class ComparisonPage:
+    pass
+
+class OfferPage:
+    def __init__(self, state: MainPageState, folder_handler: FolderHandler, pdf_dir: Path):
         self.state = state
         self.folder_handler = folder_handler
         self.pdf_dir = pdf_dir
+
         self.container = None
 
     def render(self) -> None:
-        self.container = ui.column().classes('w-full h-full')
+        self.container = ui.row().classes('w-full flex-nowrap')
         with self.container:
             self.show()
 
@@ -30,28 +34,7 @@ class RightSide:
         with self.container:
             self.show()
 
-    def schedule_refresh(self) -> None:
-        ui.timer(0.05, self.refresh, once=True)
-
-    def schedule_refresh_safe(self) -> None:
-        try:
-            self.schedule_refresh()
-        except RuntimeError:
-            pass
-
-    def show(self) -> None:
-        if self.state.current_view == 'comparison':
-            with ui.column().classes('w-full h-full p-4'):
-                self.comparison_page()
-            return
-
-        with ui.row().classes('w-full h-full flex-nowrap'):
-            with ui.column().classes('w-1/2 h-full'):
-                self.opened_file()
-            with ui.column().classes('w-1/2 h-full p-4 overflow-auto'):
-                self.opened_file_result()
-
-    def opened_file(self) -> None:
+    def opened_file(self):
         if self.state.opened_file is None:
             ui.label('No file selected')
             return
@@ -66,7 +49,7 @@ class RightSide:
             ></iframe>
         ''', sanitize=False).classes('w-full h-full')
 
-    def opened_file_result(self) -> None:
+    def opened_file_result(self):
         if self.state.opened_file is None:
             return
 
@@ -96,6 +79,15 @@ class RightSide:
             on_row_add=lambda: self.add_post_row(opened_file, result),
             on_row_delete=lambda index: self.delete_post_row(opened_file, result, index),
         )
+
+    def show(self) -> None:
+        with ui.column().classes('w-1/2 h-full'):
+            self.opened_file()
+
+        with ui.column().classes('w-1/2 h-full'):
+            with ui.scroll_area().classes('w-full h-full'):
+                with ui.column().classes('w-full p-4'):
+                    self.opened_file_result()
 
     def save_result(self, file: Path, result: dict) -> None:
         self.folder_handler.save_result(file, result)
@@ -149,6 +141,52 @@ class RightSide:
         result['Posten'].pop(post_index)
         self.save_result(file, result)
         self.refresh()
+
+
+class RightSide:
+    def __init__(self, *, state: MainPageState, folder_handler: FolderHandler, pdf_dir: Path) -> None:
+        self.state = state
+        self.folder_handler = folder_handler
+        self.pdf_dir = pdf_dir
+        self.container = None
+
+        # self.comparison_page = ComparisonPage()
+        self.offer_page = OfferPage(state, folder_handler, pdf_dir)
+
+    def render(self) -> None:
+        self.container = ui.column().classes('w-full h-screen max-h-screen overflow-hidden')#.style('height: 100vh; max-height: 100vh; overflow: hidden;')
+        with self.container:
+            self.show()
+
+    def refresh(self) -> None:
+        if self.container is None:
+            return
+
+        self.container.clear()
+        with self.container:
+            self.show()
+
+    def schedule_refresh(self) -> None:
+        ui.timer(0.05, self.refresh, once=True)
+
+    def schedule_refresh_safe(self) -> None:
+        try:
+            self.schedule_refresh()
+        except RuntimeError:
+            pass
+
+    def show(self) -> None:
+        if self.state.current_view == 'comparison':
+            with ui.column().classes('w-full h-full p-4'):
+                self.comparison_page()
+            return
+
+        if self.state.current_view == "offer":
+            self.offer_page.render()
+            return
+
+    def save_result(self, file: Path, result: dict) -> None:
+        self.folder_handler.save_result(file, result)
 
     def update_comparison_value(self, project: Path, comparison: dict, row_index: int, field: str, value: str) -> None:
         comparison['Posten'][row_index][field] = value

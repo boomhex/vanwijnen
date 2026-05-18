@@ -1,10 +1,11 @@
 from pathlib import Path
+from dataclasses import dataclass, field
 
 
+@dataclass
 class MainPageState:
-    def __init__(self) -> None:
-        self.opened_file: Path | None = None
-        self.current_view = 'offer'
-        self.comparison_project: Path | None = None
-        self.upload_project: str | None = None
-        self.extract_requested_files: set[Path] = set()
+    opened_file: Path | None = None
+    current_view: str = 'offer'
+    comparison_project: Path | None = None
+    upload_project: str | None = None
+    extract_requested_files: set[Path] = field(default_factory=set)
