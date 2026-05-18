@@ -8,6 +8,7 @@ Regels:
 - Reageer ALLEEN met geldige JSON.
 - Gebruik geen markdown codeblok.
 - Gebruik het volgende formaat:
+- Neem bedragen over ZONDER euroteken.
 {
     "Naam opdrachtgever": "...",
     "Totaalprijs inc. BTW": "...",

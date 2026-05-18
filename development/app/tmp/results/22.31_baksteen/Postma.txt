@@ -4,7 +4,7 @@
     "Totaalprijs exc. BTW": "ONBEKEND",
     "Posten": [
         {
-            "Omschrijving": "Gevelsteen B3 WF, basis halfsteens verband, vormbaksteen met normale vochtopname, incl. terugliggende geglazuurde gevelstenen.",
+            "Omschrijving": "Gevelsteen B3 WF, basis halfsteens verband, vormbaksteen met normale vochtopname, incl. terugliggende geglazuurde gevelstenen. Start werk Q2 2026, start metselwerk Q3 2026",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "per dzd",
             "Eenheidsprijs": "765,00",
@@ -18,7 +18,7 @@
             "Aantal": "ONBEKEND"
         },
         {
-            "Omschrijving": "Voegwerk, direct doorgestreken/ gepointerd",
+            "Omschrijving": "Voegwerk, direct doorgestreken/ gepointerd,",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "per M2",
             "Eenheidsprijs": "14,00",
@@ -116,10 +116,10 @@
             "Aantal": "ONBEKEND"
         },
         {
-            "Omschrijving": "Steigerwerk systeemsteiger, dubbel, montage/demontage, bij volledige inzet1750m2, incl. aan-afvoer",
+            "Omschrijving": "Steigerwerk systeemsteiger, dubbel, montage/demontage, bij volledige inzet1750m2, incl. aan-afvoer, zie toelichting",
             "Totaalbedrag": "19.950,00",
             "Eenheid": "totaal",
-            "Eenheidsprijs": "ONBEKEND",
+            "Eenheidsprijs": "19.950,00",
             "Aantal": "ONBEKEND"
         },
         {
@@ -133,14 +133,14 @@
             "Omschrijving": "Steigerwerk systeemsteiger, consoles verplaatsen, per strekkende meter steigervloer bij steigerslagen 2,0, totaal 620m1",
             "Totaalbedrag": "3.000,00",
             "Eenheid": "totaal",
-            "Eenheidsprijs": "ONBEKEND",
+            "Eenheidsprijs": "3.000,00",
             "Aantal": "ONBEKEND"
         },
         {
             "Omschrijving": "Steigerwerk, tekening + berekening",
             "Totaalbedrag": "1.250,00",
             "Eenheid": "totaal",
-            "Eenheidsprijs": "ONBEKEND",
+            "Eenheidsprijs": "1.250,00",
             "Aantal": "ONBEKEND"
         },
         {
@@ -151,7 +151,7 @@
             "Aantal": "ONBEKEND"
         },
         {
-            "Omschrijving": "Regiewerk, aanh.sparingen, werkz.h tbv derden volwassen vakbekwame metselaar",
+            "Omschrijving": "Regiewerk, aanh.sparingen, werkz.h tbv derden volwassen vakbekwame metselaar, vanaf Q1 2026",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "per uur",
             "Eenheidsprijs": "60,00",
