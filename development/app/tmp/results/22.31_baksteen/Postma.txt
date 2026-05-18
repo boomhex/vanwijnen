@@ -1,0 +1,161 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk BV",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "ONBEKEND",
+    "Posten": [
+        {
+            "Omschrijving": "Gevelsteen B3 WF, basis halfsteens verband, vormbaksteen met normale vochtopname, incl. terugliggende geglazuurde gevelstenen.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per dzd",
+            "Eenheidsprijs": "765,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Alternatief inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/ mortel op de steiger, incl. aan-afvoer.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per dzd",
+            "Eenheidsprijs": "70,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Voegwerk, direct doorgestreken/ gepointerd",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M2",
+            "Eenheidsprijs": "14,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag rond werk, uitgevoerd in strekken.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M2",
+            "Eenheidsprijs": "15,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag rollagen, t/m strek, niet in verband gemetseld",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "22,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag omzetten negges > kop",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "8,50",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Murfor inmetselen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "5,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Dilatatie / knipvoeg, gevelm.w.bui.sp",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "7,50",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Staallateien, handzaam, schoon (zelfdragend)",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "12,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Ankers boren hsb",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per stuk",
+            "Eenheidsprijs": "0,40",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Kantplank, en/of betondorpels handzaam, per blok aangeleverd.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "22,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Betonlateien, niet handzaam, vuil",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "12,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Ytong koudebrug, 1 lg hoog, excl.zaagw lxh = 600 x 200 dikte 100 mm",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "15,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Zaagwerk y-tong blokken, zaagsn. 200/100 ,inkl. mach.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per M1",
+            "Eenheidsprijs": "10,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Zaagwerk stenen zaagdiepte 100, rollagen> kop of <strek worden gezaagd, scheeftes, eventueel drieklezoren/ t.p.v. omgezette negges i.v.t.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per stuk",
+            "Eenheidsprijs": "1,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Ventilatierooster inmetselen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per stuk",
+            "Eenheidsprijs": "9,50",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Steigerwerk systeemsteiger, dubbel, montage/demontage, bij volledige inzet1750m2, incl. aan-afvoer",
+            "Totaalbedrag": "19.950,00",
+            "Eenheid": "totaal",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Steigerwerk systeemsteiger, huur per week bij volstand",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per week",
+            "Eenheidsprijs": "950,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Steigerwerk systeemsteiger, consoles verplaatsen, per strekkende meter steigervloer bij steigerslagen 2,0, totaal 620m1",
+            "Totaalbedrag": "3.000,00",
+            "Eenheid": "totaal",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Steigerwerk, tekening + berekening",
+            "Totaalbedrag": "1.250,00",
+            "Eenheid": "totaal",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Steigerwerk, 2 weekse keuring steiger, bedrag per keuring.",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per keer",
+            "Eenheidsprijs": "250,00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Regiewerk, aanh.sparingen, werkz.h tbv derden volwassen vakbekwame metselaar",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "per uur",
+            "Eenheidsprijs": "60,00",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}

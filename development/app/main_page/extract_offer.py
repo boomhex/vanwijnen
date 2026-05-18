@@ -42,6 +42,7 @@ def ask_llm(prompt: str) -> str:
             print(e.message)
     return response.text
 
+
 def read_pdf(file) -> str:
     with pdfplumber.open(file) as pdf:
         pages = []
@@ -51,6 +52,7 @@ def read_pdf(file) -> str:
                 pages.append(page_text)
     txt = '\n'.join(pages)
     return txt
+
 
 def read_txt(file):
     txt = ""
@@ -172,6 +174,7 @@ def extract_offer(file: Path, results_path: Path):
         json.dump(offer_json, f, ensure_ascii=False, indent=4)
 
     return offer_json
+
 
 def compare_files(files, results_path: Path = Path('./tmp/results')):
     return [extract_offer(file, results_path) for file in files]

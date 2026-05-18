@@ -1,0 +1,14 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk B.V.",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "€ 6.250,-",
+    "Posten": [
+        {
+            "Omschrijving": "Opleveringsschoonmaak (Verwijderen bouwstof, reinigen vloeren, glasbewassing, schoonmaken vensterbanken, kozijnen, deuren en sanitair)",
+            "Totaalbedrag": "€ 6.250,-",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}

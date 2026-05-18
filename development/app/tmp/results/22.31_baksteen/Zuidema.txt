@@ -1,0 +1,147 @@
+{
+    "Naam opdrachtgever": "Van wijnen Gorredijk BV",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "ONBEKEND",
+    "Posten": [
+        {
+            "Omschrijving": "Vermetselen WF handvorm halfsteens verband",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "dznd",
+            "Eenheidsprijs": "€ 800.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag wildverband",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "dznd",
+            "Eenheidsprijs": "€ 45.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag strengperssteen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "dznd",
+            "Eenheidsprijs": "€ 50.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag strooisteen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "M2",
+            "Eenheidsprijs": "€ 7.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag rond metselwerk, mal door VW geleverd",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "€ 30.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Aanbrengen murfor",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 3.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Zaagwerk gevelsteen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "st",
+            "Eenheidsprijs": "€ 1.10",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "€ 15.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Aanbrengen stalen lateien handzaam exclusief aan elkaar bouten van de delen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 13.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Aanbrengen kantplanken beton max 30 cm hoog of klamplaag onder peilkozijn",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 25.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Zaagwerk kantplanken",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 12.50",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Toeslag metselen speigelklamp",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 20.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Leveren kruiwagens/kuipen",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "post",
+            "Eenheidsprijs": "€ 300.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Verhangen steiger console’s",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 5.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Bouwen tussenslagen t.b.v. opperwerk gevelsteen indien er steigerslagen van 2,5 of 3.0 meter worden toegepast",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "€ 15.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Inmetselen Vloerventilatiekokers",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "st",
+            "Eenheidsprijs": "€ 5.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Inwerken stootvoegroosters",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "st",
+            "Eenheidsprijs": "€ 0.25",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Indraaien HSb ankers",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "st",
+            "Eenheidsprijs": "€ 0.80",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Regiewerk",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "mu",
+            "Eenheidsprijs": "€ 52.00",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Verreiker op bouwplaats",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "post",
+            "Eenheidsprijs": "€ 6000.00",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}
