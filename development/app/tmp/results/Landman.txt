@@ -1,0 +1,14 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "€ 5.651,00",
+    "Posten": [
+        {
+            "Omschrijving": "Eindschoonmaak volgens bestek 05.34",
+            "Totaalbedrag": "€ 5.651,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}

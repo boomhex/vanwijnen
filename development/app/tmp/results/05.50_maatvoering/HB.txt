@@ -1,0 +1,70 @@
+{
+    "Naam opdrachtgever": "van Wijnen Gorredijk",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "€ 2.750,00",
+    "Posten": [
+        {
+            "Omschrijving": "Inmeten gemeentepunten en maken meetkundige grondslag",
+            "Totaalbedrag": "€ 240,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Uitzetten 14 punten tbv grondwerk (gecombineerd met maken grondslag)",
+            "Totaalbedrag": "€ 80,00",
+            "Eenheid": "punten",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "14"
+        },
+        {
+            "Omschrijving": "Uitzetten 137 palen dmv 1 cm piketten",
+            "Totaalbedrag": "€ 400,00",
+            "Eenheid": "palen",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "137"
+        },
+        {
+            "Omschrijving": "Inmeten 137 palen tbv afwijkingen",
+            "Totaalbedrag": "€ 160,00",
+            "Eenheid": "palen",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "137"
+        },
+        {
+            "Omschrijving": "Uitzetten 63 punten tbv fundering (gecombineerd met inmeten palen)",
+            "Totaalbedrag": "€ 240,00",
+            "Eenheid": "punten",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "63"
+        },
+        {
+            "Omschrijving": "Uitzetten 102 stuks hart anker tbv staalconstructie (verklikken op kist in 2 werkgangen)",
+            "Totaalbedrag": "€ 640,00",
+            "Eenheid": "stuks",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "102"
+        },
+        {
+            "Omschrijving": "Uitzetten 5 stuks ankers op vloer (diagonaal boorankers)",
+            "Totaalbedrag": "€ 160,00",
+            "Eenheid": "stuks",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "5"
+        },
+        {
+            "Omschrijving": "CAD voorbereiding en verwerking",
+            "Totaalbedrag": "€ 650,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Verbruik kleinmateriaal (piketten, verf, spijkers, plots)",
+            "Totaalbedrag": "€ 180,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk B.V.",
+    "Totaalprijs inc. BTW": "€ 2.384,00",
+    "Totaalprijs exc. BTW": "€ 2.300,00",
+    "Posten": [
+        {
+            "Omschrijving": "Inpassing + grondslag maken en uitz. grondwerk",
+            "Totaalbedrag": "€ 400,00",
+            "Eenheid": "pnt.",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "10"
+        },
+        {
+            "Omschrijving": "Uitzetten heipalen",
+            "Totaalbedrag": "€ 480,00",
+            "Eenheid": "st.",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "137"
+        },
+        {
+            "Omschrijving": "Inmeten + rapporteren positie palen + kraakhoogtes uitzetten",
+            "Totaalbedrag": "€ 390,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "Uitzetten funderingspunten",
+            "Totaalbedrag": "€ 420,00",
+            "Eenheid": "pnt.",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "55"
+        },
+        {
+            "Omschrijving": "Uitzetten ankers",
+            "Totaalbedrag": "€ 610,00",
+            "Eenheid": "pos.",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "70"
+        },
+        {
+            "Omschrijving": "Uitgangspunten / voorwaarden maatvoering",
+            "Totaalbedrag": "€ 0,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "ONBEKEND",
+            "Aantal": "ONBEKEND"
+        }
+    ]
+}
