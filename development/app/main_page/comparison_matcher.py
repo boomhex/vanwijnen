@@ -39,7 +39,7 @@ class ComparisonMatcher:
             Gebruik voor "Aantal" en "Eenheid" de vergelijkingsregel.
             Neem bij iedere offerte de gematchte "Eenheidsprijs" over uit de offertepost als die beschikbaar is.
             Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
-            Reageer ALLEEN met geldige JSON, zonder markdown, in exact dit formaat:
+            Vul niet bij 2 posten dezelde post uit de offerte in.
             {{
             "MatchedPosten": [
                 {{

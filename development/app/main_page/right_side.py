@@ -4,10 +4,11 @@ from collections.abc import Callable
 
 from abc import ABC, abstractmethod
 
+from nicegui_tabulator import tabulator
 from nicegui import run, ui
 
 from main_page.comparison_matcher import ComparisonMatcher
-from main_page.editable_table_helper import render_editable_rows, render_editable_table
+from main_page.editable_table_helper import render_editable_table
 from main_page.folder_handler import FolderHandler
 from main_page.page_state import MainPageState
 
@@ -48,6 +49,168 @@ class SubPage(ABC):
             ui.notify(message)
         except RuntimeError:
             print(message)
+
+
+class TabulatorTable:
+    def __init__(
+        self,
+        *,
+        rows: list[dict],
+        columns: list[dict],
+        layout: str = 'fitColumns',
+        reactive: bool = True,
+    ) -> None:
+        self.rows = rows
+        self.columns = columns
+        self.layout = layout
+        self.reactive = reactive
+
+    def options(self) -> dict:
+        return {
+            'data': self.rows,
+            'layout': self.layout,
+            'reactiveData': self.reactive,
+            'columns': self.columns,
+        }
+
+    @staticmethod
+    def text_column(
+        title: str,
+        field: str,
+        *,
+        editable: bool = False,
+        width: int | None = None,
+    ) -> dict:
+        column = {
+            'title': title,
+            'field': field,
+        }
+        if editable:
+            column['editor'] = 'input'
+        if width is not None:
+            column['width'] = width
+
+        return column
+
+
+class ComparisonRowsTable(TabulatorTable):
+    fields = ['Omschrijving', 'Aantal', 'Eenheid']
+
+    def __init__(self, comparison: dict) -> None:
+        self.comparison = comparison
+        super().__init__(
+            rows=self.rows_from_comparison(),
+            columns=[
+                self.text_column('Omschrijving', 'Omschrijving', editable=True),
+                self.text_column('Aantal', 'Aantal', editable=True, width=120),
+                self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
+                {
+                    'title': '',
+                    'field': '__delete__',
+                    'width': 52,
+                    'headerSort': False,
+                    'hozAlign': 'center',
+                    ':formatter': "function(){ return 'x'; }",
+                },
+            ],
+        )
+
+    def rows_from_comparison(self) -> list[dict]:
+        return [
+            {'id': index, **row}
+            for index, row in enumerate(self.comparison.get('Posten', []))
+        ]
+
+    def add_row(self) -> dict:
+        row = {
+            'id': len(self.comparison.setdefault('Posten', [])),
+            'Omschrijving': '',
+            'Aantal': '',
+            'Eenheid': '',
+        }
+        self.comparison['Posten'].append({field: row[field] for field in self.fields})
+        self.rows.append(row)
+        self.clear_matches()
+        return row
+
+    def update_cell(self, row_id: int | None, field: str | None, value: str) -> None:
+        if field not in self.fields:
+            return
+
+        posten = self.comparison.setdefault('Posten', [])
+        if row_id is None:
+            return
+        if row_id >= len(posten):
+            return
+
+        posten[row_id][field] = value
+        self.clear_matches()
+
+    def delete_row(self, row_id: int | None) -> None:
+        posten = self.comparison.setdefault('Posten', [])
+        if row_id is None:
+            return
+        if row_id >= len(posten):
+            return
+
+        posten.pop(row_id)
+        self.clear_matches()
+        self.rows = self.rows_from_comparison()
+
+    def clear_matches(self) -> None:
+        self.comparison.pop('MatchedPosten', None)
+        self.comparison.pop('Matches', None)
+
+
+class MatchedPostenTable(TabulatorTable):
+    def __init__(self, *, offer_names: list[str], match_rows: list[dict]) -> None:
+        self.offer_names = offer_names
+        super().__init__(
+            rows=self.rows_from_matches(match_rows),
+            columns=self.columns_from_offers(),
+            layout='fitDataStretch',
+            reactive=False,
+        )
+
+    def columns_from_offers(self) -> list[dict]:
+        columns = [
+            self.text_column('Omschrijving', 'Omschrijving', width=260),
+            self.text_column('Aantal', 'Aantal', width=100),
+            self.text_column('Eenheid', 'Eenheid', width=100),
+        ]
+
+        for offer_name in self.offer_names:
+            field_prefix = self.offer_field_prefix(offer_name)
+            columns.extend([
+                self.text_column(f'{offer_name} post', f'{field_prefix}_omschrijving', width=260),
+                self.text_column(f'{offer_name} prijs', f'{field_prefix}_prijs', width=120),
+                self.text_column(f'{offer_name} totaal', f'{field_prefix}_totaal', width=130),
+            ])
+
+        return columns
+
+    def offer_field_prefix(self, offer_name: str) -> str:
+        return f'offer_{self.offer_names.index(offer_name)}'
+
+    def rows_from_matches(self, match_rows: list[dict]) -> list[dict]:
+        rows = []
+        for index, match_row in enumerate(match_rows):
+            row = {
+                'id': index,
+                'Omschrijving': match_row.get('Omschrijving', ''),
+                'Aantal': match_row.get('Aantal', ''),
+                'Eenheid': match_row.get('Eenheid', ''),
+            }
+            offers = match_row.get('Offertes', {})
+            for offer_name in self.offer_names:
+                field_prefix = self.offer_field_prefix(offer_name)
+                offer = offers.get(offer_name, {})
+                row[f'{field_prefix}_omschrijving'] = offer.get('Gematchte omschrijving', 'ONBEKEND')
+                row[f'{field_prefix}_prijs'] = offer.get('Eenheidsprijs', 'ONBEKEND')
+                row[f'{field_prefix}_totaal'] = offer.get('Totaalbedrag', 'ONBEKEND')
+            rows.append(row)
+
+        return rows
 
 
 class ComparisonPage(SubPage):
@@ -104,20 +267,38 @@ class ComparisonPage(SubPage):
             match_button.on('click', request_match)
 
     def input_table(self, project, comparison) -> None:
+        comparison_table = ComparisonRowsTable(comparison)
 
-        comparison_rows = [
-            {'id': index, **row}
-            for index, row in enumerate(comparison.get('Posten', []))
-        ]
+        with ui.row().classes('items-center gap-2 mt-4'):
+            ui.label('Comparison rows').classes('text-lg font-bold')
+            ui.button(
+                'Add row',
+                icon='add',
+                on_click=lambda: self.add_comparison_row(project, comparison, comparison_table),
+            ).props('dense no-caps size=sm')
 
-        ui.label('Comparison rows').classes('text-lg font-bold mt-4')
-        render_editable_rows(
-            comparison_rows,
-            ['Omschrijving', 'Aantal', 'Eenheid'],
-            on_update=lambda index, field, value: self.update_comparison_value(project, comparison, index, field, value),
-            on_add=lambda: self.add_comparison_row(project, comparison),
-            on_delete=lambda index: self.delete_comparison_row(project, comparison, index),
-        )
+        comparison_tabulator = tabulator(comparison_table.options(), row_key='id').classes('w-full')
+
+        def update_cell(event) -> None:
+            cell = event.args.get('cell', {})
+            row = cell.get('row', {})
+            column = cell.get('column', {})
+            comparison_table.update_cell(row.get('id'), column.get('field'), cell.get('value', ''))
+            self.folder_handler.save_comparison(project, comparison)
+
+        def delete_row(event) -> None:
+            cell = event.args.get('cell', {})
+            column = cell.get('column', {})
+            if column.get('field') != '__delete__':
+                return
+
+            row = cell.get('row', {})
+            comparison_table.delete_row(row.get('id'))
+            self.folder_handler.save_comparison(project, comparison)
+            comparison_tabulator.set_data(comparison_table.rows)
+
+        comparison_tabulator.on_event('cellEdited', update_cell)
+        comparison_tabulator.on_event('cellClick', delete_row)
 
     def update_comparison_value(self, project: Path, comparison: dict, row_index: int, field: str, value: str) -> None:
         comparison['Posten'][row_index][field] = value
@@ -125,15 +306,24 @@ class ComparisonPage(SubPage):
         comparison.pop('Matches', None)
         self.folder_handler.save_comparison(project, comparison)
 
-    def add_comparison_row(self, project: Path, comparison: dict) -> None:
-        comparison.setdefault('Posten', [])
-        comparison['Posten'].append({
-            'Omschrijving': '',
-            'Aantal': '',
-            'Eenheid': '',
-        })
-        comparison.pop('MatchedPosten', None)
-        comparison.pop('Matches', None)
+    def add_comparison_row(
+        self,
+        project: Path,
+        comparison: dict,
+        comparison_table: ComparisonRowsTable | None = None,
+    ) -> None:
+        if comparison_table is None:
+            comparison.setdefault('Posten', [])
+            comparison['Posten'].append({
+                'Omschrijving': '',
+                'Aantal': '',
+                'Eenheid': '',
+            })
+            comparison.pop('MatchedPosten', None)
+            comparison.pop('Matches', None)
+        else:
+            comparison_table.add_row()
+
         self.folder_handler.save_comparison(project, comparison)
         self.refresh()
 
@@ -151,40 +341,8 @@ class ComparisonPage(SubPage):
 
     def render_side_by_side_match_table(self, project: Path, match_rows: list[dict]) -> None:
         offer_names = [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
-        columns = [
-            {'name': 'Omschrijving', 'label': 'Omschrijving', 'field': 'Omschrijving'},
-            {'name': 'Aantal', 'label': 'Aantal', 'field': 'Aantal'},
-            {'name': 'Eenheid', 'label': 'Eenheid', 'field': 'Eenheid'},
-        ]
-
-        for offer_name in offer_names:
-            columns.extend([
-                {'name': f'{offer_name} omschrijving', 'label': f'{offer_name} post', 'field': f'{offer_name} omschrijving'},
-                {'name': f'{offer_name} prijs', 'label': f'{offer_name} prijs', 'field': f'{offer_name} prijs'},
-                {'name': f'{offer_name} totaal', 'label': f'{offer_name} totaal', 'field': f'{offer_name} totaal'},
-            ])
-
-        rows = []
-        for index, match_row in enumerate(match_rows):
-            row = {
-                'id': index,
-                'Omschrijving': match_row.get('Omschrijving', ''),
-                'Aantal': match_row.get('Aantal', ''),
-                'Eenheid': match_row.get('Eenheid', ''),
-            }
-            offers = match_row.get('Offertes', {})
-            for offer_name in offer_names:
-                offer = offers.get(offer_name, {})
-                row[f'{offer_name} omschrijving'] = offer.get('Gematchte omschrijving', 'ONBEKEND')
-                row[f'{offer_name} prijs'] = offer.get('Eenheidsprijs', 'ONBEKEND')
-                row[f'{offer_name} totaal'] = offer.get('Totaalbedrag', 'ONBEKEND')
-            rows.append(row)
-
-        ui.table(
-            columns=columns,
-            rows=rows,
-            row_key='id',
-        ).classes('w-full')
+        matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
+        tabulator(matched_table.options(), row_key='id').classes('w-full')
 
     async def match_project_posts(self, project: Path, comparison: dict, button) -> None:
         if not comparison.get('Posten'):
