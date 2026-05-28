@@ -7,10 +7,10 @@ from abc import ABC, abstractmethod
 from nicegui_tabulator import tabulator
 from nicegui import run, ui
 
-from main_page.comparison_matcher import ComparisonMatcher
-from main_page.editable_table_helper import render_editable_table
-from main_page.folder_handler import FolderHandler
-from main_page.page_state import MainPageState
+from services.comparison_matcher import ComparisonMatcher
+from ui.editable_table_helper import render_editable_table
+from services.folder_handler import FolderHandler
+from ui.page_state import MainPageState
 
 
 class SubPage(ABC):
@@ -400,7 +400,7 @@ class OfferPage(SubPage):
             ui.label('No result found for this file').classes('text-gray-500')
             return
 
-        from main_page.extract_offer import validate_offer_json
+        from services.extract_offer import validate_offer_json
 
         ui.label('Result').classes('text-lg font-bold')
         validation_warnings = validate_offer_json(result)

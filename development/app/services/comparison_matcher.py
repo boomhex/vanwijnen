@@ -2,7 +2,7 @@ from decimal import Decimal, InvalidOperation
 from pathlib import Path
 import json
 
-from main_page.folder_handler import FolderHandler
+from services.folder_handler import FolderHandler
 
 
 class ComparisonMatcher:
@@ -24,7 +24,7 @@ class ComparisonMatcher:
         return offer_results
 
     def match_comparison_posts(self, project: Path, comparison: dict) -> dict:
-        from main_page.extract_offer import ask_llm, parse_json_response
+        from services.extract_offer import ask_llm, parse_json_response
 
         prompt = f"""
             Je koppelt begrotings-/vergelijkingsregels aan offerteposten.

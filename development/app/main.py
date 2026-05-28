@@ -1,5 +1,5 @@
 from nicegui import ui
-from main_page.main_page import main_page
+from ui.main_page import main_page
 
 
 ui.run()

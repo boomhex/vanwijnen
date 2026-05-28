@@ -176,5 +176,5 @@ def extract_offer(file: Path, results_path: Path):
     return offer_json
 
 
-def compare_files(files, results_path: Path = Path('./tmp/results')):
+def compare_files(files, results_path: Path = Path('./storage/results')):
     return [extract_offer(file, results_path) for file in files]

@@ -2,20 +2,20 @@ from pathlib import Path
 
 from nicegui import app, ui
 
-from main_page.folder_handler import FolderHandler
-from main_page.left_drawer import LeftDrawer
-from main_page.page_state import MainPageState
-from main_page.right_side import RightSide
+from services.folder_handler import FolderHandler
+from ui.left_drawer import LeftDrawer
+from ui.page_state import MainPageState
+from ui.right_side import RightSide
 from utils.eva_html import eva_html
 
 
 PRIMARY_RED = '#B00000'
 SECONDARY_RED = "#F9BFBF"
 APP_DIR = Path(__file__).resolve().parents[1]
-TMP_DIR = APP_DIR / 'tmp'
-PDF_DIR = TMP_DIR / 'pdfs'
-RESULTS_DIR = TMP_DIR / 'results'
-COMPARISON_DIR = TMP_DIR / 'comparison'
+STORAGE_DIR = APP_DIR / 'storage'
+PDF_DIR = STORAGE_DIR / 'pdfs'
+RESULTS_DIR = STORAGE_DIR / 'results'
+COMPARISON_DIR = STORAGE_DIR / 'comparison'
 
 PDF_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)

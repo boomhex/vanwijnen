@@ -116,7 +116,7 @@ class FolderHandler:
         if not result_path.exists():
             return None
 
-        from main_page.extract_offer import parse_json_response
+        from services.extract_offer import parse_json_response
 
         return parse_json_response(result_path.read_text())
 

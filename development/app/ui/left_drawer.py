@@ -3,8 +3,8 @@ from typing import Callable
 
 from nicegui import events, run, ui
 
-from main_page.folder_handler import FolderHandler
-from main_page.page_state import MainPageState
+from services.folder_handler import FolderHandler
+from ui.page_state import MainPageState
 
 
 class LeftDrawer:
@@ -240,7 +240,7 @@ class LeftDrawer:
         button.props('loading disable')
         button.update()
 
-        from main_page.extract_offer import extract_offer
+        from services.extract_offer import extract_offer
 
         try:
             await run.io_bound(extract_offer, file, self.folder_handler.result_dir_for_file(file))
