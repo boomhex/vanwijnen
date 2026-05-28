@@ -1,6 +1,8 @@
 from pathlib import Path
 from urllib.parse import quote
 from collections.abc import Callable
+from decimal import Decimal
+import json
 
 from abc import ABC, abstractmethod
 
@@ -8,7 +10,7 @@ from nicegui_tabulator import tabulator
 from nicegui import run, ui
 
 from services.comparison_matcher import ComparisonMatcher
-from ui.editable_table_helper import render_editable_table
+from ui.editable_table_helper import render_editable_summary
 from services.folder_handler import FolderHandler
 from ui.page_state import MainPageState
 
@@ -175,16 +177,16 @@ class MatchedPostenTable(TabulatorTable):
     def columns_from_offers(self) -> list[dict]:
         columns = [
             self.text_column('Omschrijving', 'Omschrijving', width=260),
-            self.text_column('Aantal', 'Aantal', width=100),
-            self.text_column('Eenheid', 'Eenheid', width=100),
+            self.text_column('Aantal', 'Aantal', editable=True, width=100),
+            self.text_column('Eenheid', 'Eenheid', editable=True, width=100),
         ]
 
+        # Only show the price and total columns per offer in the UI.
         for offer_name in self.offer_names:
             field_prefix = self.offer_field_prefix(offer_name)
             columns.extend([
-                self.text_column(f'{offer_name} post', f'{field_prefix}_omschrijving', width=260),
-                self.text_column(f'{offer_name} prijs', f'{field_prefix}_prijs', width=120),
-                self.text_column(f'{offer_name} totaal', f'{field_prefix}_totaal', width=130),
+                self.text_column(f'{offer_name} prijs', f'{field_prefix}_prijs', editable=True, width=120),
+                self.text_column(f'{offer_name} totaal', f'{field_prefix}_totaal', editable=True, width=130),
             ])
 
         return columns
@@ -205,12 +207,193 @@ class MatchedPostenTable(TabulatorTable):
             for offer_name in self.offer_names:
                 field_prefix = self.offer_field_prefix(offer_name)
                 offer = offers.get(offer_name, {})
-                row[f'{field_prefix}_omschrijving'] = offer.get('Gematchte omschrijving', 'ONBEKEND')
-                row[f'{field_prefix}_prijs'] = offer.get('Eenheidsprijs', 'ONBEKEND')
-                row[f'{field_prefix}_totaal'] = offer.get('Totaalbedrag', 'ONBEKEND')
+                # Keep the matched description in the data for reference, but do not
+                # show it in the table columns.
+                row[f'{field_prefix}_omschrijving'] = offer.get('Gematchte omschrijving', offer.get('Omschrijving', 'ONBEKEND'))
+
+                # Handle posts that are totals (Eenheid == 'post'). In that case the
+                # supplier put a total price on the post-level. Prefer to show that
+                # value in the totaal column and leave the eenheidsprijs empty.
+                eenheidsprijs = offer.get('Eenheidsprijs') or ''
+                totaalprijs = offer.get('Totaalbedrag') or ''
+                # Prefer the explicitly matched unit, fall back to the offer's own unit
+                gematchte_eenheid = (
+                    (offer.get('Gematchte eenheid') or '')
+                    or (offer.get('Eenheid') or '')
+                ).strip().casefold()
+
+                # If the supplier marked the post as a 'post' unit (i.e. a total
+                # rather than a per-unit price), move the unit price into the
+                # totaal column when a total isn't already provided.
+                if 'post' in gematchte_eenheid and eenheidsprijs and not totaalprijs:
+                    # move the value to totaal
+                    totaalprijs = eenheidsprijs
+                    eenheidsprijs = ''
+
+                row[f'{field_prefix}_prijs'] = eenheidsprijs if eenheidsprijs not in (None, '') else 'ONBEKEND'
+                row[f'{field_prefix}_totaal'] = totaalprijs if totaalprijs not in (None, '') else 'ONBEKEND'
             rows.append(row)
 
+        # Append a totals row which sums the per-offer subtotals.
+        totals_row = {
+            'id': len(rows),
+            'Omschrijving': 'Totaal',
+            'Aantal': '',
+            'Eenheid': '',
+        }
+
+        for offer_name in self.offer_names:
+            field_prefix = self.offer_field_prefix(offer_name)
+            # sum known totals across all rows
+            total_sum = Decimal('0')
+            has_value = False
+            for r in rows:
+                value = ComparisonMatcher.parse_decimal(r.get(f'{field_prefix}_totaal'))
+                if value is None:
+                    # if a row has no totaal, try to compute from aantal * prijs
+                    aantal = ComparisonMatcher.parse_decimal(r.get('Aantal'))
+                    prijs = ComparisonMatcher.parse_decimal(r.get(f'{field_prefix}_prijs'))
+                    if aantal is not None and prijs is not None:
+                        value = aantal * prijs
+
+                if value is None:
+                    continue
+
+                total_sum += value
+                has_value = True
+
+            totals_row[f'{field_prefix}_omschrijving'] = 'Totaal'
+            totals_row[f'{field_prefix}_prijs'] = ''
+            totals_row[f'{field_prefix}_totaal'] = self.format_money(total_sum) if has_value else 'ONBEKEND'
+
+        rows.append(totals_row)
+
         return rows
+
+    def totals_by_offer(self) -> dict[str, str]:
+        totals: dict[str, Decimal] = {}
+
+        for offer_name in self.offer_names:
+            field_prefix = self.offer_field_prefix(offer_name)
+            total = Decimal('0')
+            has_known_value = False
+
+            for row in self.rows:
+                row_total = ComparisonMatcher.parse_decimal(row.get(f'{field_prefix}_totaal'))
+                if row_total is None:
+                    continue
+
+                total += row_total
+                has_known_value = True
+
+            if has_known_value:
+                totals[offer_name] = total
+
+        return {
+            offer_name: self.format_money(total) if offer_name in totals else 'ONBEKEND'
+            for offer_name, total in ((name, totals.get(name)) for name in self.offer_names)
+        }
+
+    @staticmethod
+    def format_money(value: Decimal | None) -> str:
+        if value is None:
+            return 'ONBEKEND'
+
+        rounded = value.quantize(Decimal('0.01'))
+        text = f'{rounded:,.2f}'
+        return f'€ {text.replace(",", "_").replace(".", ",").replace("_", ".")}'
+
+    def to_excel_clipboard_text(self) -> str:
+        export_columns = [
+            column
+            for column in self.columns
+            if column.get('field') and not str(column.get('field')).startswith('__')
+        ]
+        lines = [
+            '\t'.join(self.clean_clipboard_cell(column.get('title', '')) for column in export_columns)
+        ]
+
+        for row in self.rows:
+            lines.append(
+                '\t'.join(
+                    self.clean_clipboard_cell(row.get(column['field'], ''))
+                    for column in export_columns
+                )
+            )
+
+        return '\n'.join(lines)
+
+    @staticmethod
+    def clean_clipboard_cell(value) -> str:
+        return ' '.join(str(value or '').split())
+
+
+class OfferRowsTable(TabulatorTable):
+    fields = ['Omschrijving', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag']
+
+    def __init__(self, result: dict) -> None:
+        self.result = result
+        super().__init__(
+            rows=self.rows_from_result(),
+            columns=[
+                self.text_column('Omschrijving', 'Omschrijving', editable=True),
+                self.text_column('Aantal', 'Aantal', editable=True, width=120),
+                self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
+                self.text_column('Eenheidsprijs', 'Eenheidsprijs', editable=True, width=140),
+                self.text_column('Totaalbedrag', 'Totaalbedrag', editable=True, width=140),
+                {
+                    'title': '',
+                    'field': '__delete__',
+                    'width': 52,
+                    'headerSort': False,
+                    'hozAlign': 'center',
+                    ':formatter': "function(){ return 'x'; }",
+                },
+            ],
+            layout='fitData',
+            reactive=True,
+        )
+
+    def rows_from_result(self) -> list[dict]:
+        return [
+            {'id': index, **row}
+            for index, row in enumerate(self.result.get('Posten', []))
+        ]
+
+    def add_row(self) -> dict:
+        row = {
+            'id': len(self.result.setdefault('Posten', [])),
+            'Omschrijving': '',
+            'Aantal': '',
+            'Eenheid': '',
+            'Eenheidsprijs': '',
+            'Totaalbedrag': '',
+        }
+        self.result['Posten'].append({field: row[field] for field in self.fields})
+        self.rows.append(row)
+        return row
+
+    def update_cell(self, row_id: int | None, field: str | None, value: str) -> None:
+        if field not in self.fields:
+            return
+
+        posten = self.result.setdefault('Posten', [])
+        if row_id is None:
+            return
+        if row_id >= len(posten):
+            return
+
+        posten[row_id][field] = value
+
+    def delete_row(self, row_id: int | None) -> None:
+        posten = self.result.setdefault('Posten', [])
+        if row_id is None:
+            return
+        if row_id >= len(posten):
+            return
+
+        posten.pop(row_id)
+        self.rows = self.rows_from_result()
 
 
 class ComparisonPage(SubPage):
@@ -254,7 +437,7 @@ class ComparisonPage(SubPage):
 
         # Show match table
         ui.label('Matched posten').classes('text-lg font-bold mt-4')
-        self.render_side_by_side_match_table(project, match_rows)
+        self.render_side_by_side_match_table(project, comparison, match_rows)
 
     def match_button(self, project, comparison) -> None:
         with ui.row().classes('items-center gap-2 mt-4'):
@@ -339,10 +522,127 @@ class ComparisonPage(SubPage):
         self.folder_handler.save_comparison(project, comparison)
         self.refresh()
 
-    def render_side_by_side_match_table(self, project: Path, match_rows: list[dict]) -> None:
+    def render_side_by_side_match_table(self, project: Path, comparison: dict, match_rows: list[dict]) -> None:
         offer_names = [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
         matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
-        tabulator(matched_table.options(), row_key='id').classes('w-full')
+        # per-offer decimals for comparison
+        offer_totals_dec: dict[str, Decimal | None] = {}
+        for offer_name in offer_names:
+            field_prefix = matched_table.offer_field_prefix(offer_name)
+            # look at the totals row (last row)
+            if matched_table.rows:
+                last = matched_table.rows[-1]
+                offer_totals_dec[offer_name] = ComparisonMatcher.parse_decimal(last.get(f'{field_prefix}_totaal'))
+            else:
+                offer_totals_dec[offer_name] = None
+
+        comparison_total, comparison_total_label = self.comparison_total_from_json(comparison)
+
+        with ui.row().classes('items-center gap-2 mt-2'):
+            ui.button(
+                'Copy for Excel',
+                icon='content_copy',
+                on_click=lambda table=matched_table: self.copy_match_table_to_clipboard(table),
+            ).props('dense no-caps')
+
+        matched_tab = tabulator(matched_table.options(), row_key='id').classes('w-full')
+
+        def matched_update_cell(event) -> None:
+            cell = event.args.get('cell', {})
+            row = cell.get('row', {})
+            column = cell.get('column', {})
+            field = column.get('field')
+            value = cell.get('value', '')
+
+            row_id = row.get('id')
+            if row_id is None:
+                return
+
+            # Ensure the underlying comparison structure exists
+            comparison.setdefault('MatchedPosten', match_rows)
+            if row_id >= len(match_rows):
+                return
+
+            matched_row = match_rows[row_id]
+
+            # Handle editing of top-level fields
+            if field in ('Aantal', 'Eenheid', 'Omschrijving'):
+                matched_row[field] = value
+            elif isinstance(field, str) and field.startswith('offer_'):
+                parts = field.split('_')
+                if len(parts) < 3:
+                    return
+                try:
+                    offer_index = int(parts[1])
+                except ValueError:
+                    return
+                suffix = parts[2]
+                if offer_index < 0 or offer_index >= len(offer_names):
+                    return
+
+                offer_name = offer_names[offer_index]
+                offers = matched_row.setdefault('Offertes', {})
+                offer_entry = offers.setdefault(offer_name, {})
+
+                if suffix == 'prijs':
+                    offer_entry['Eenheidsprijs'] = value
+                elif suffix == 'totaal':
+                    offer_entry['Totaalbedrag'] = value
+
+            # Persist changes and recompute the displayed rows (including totals row)
+            self.folder_handler.save_comparison(project, comparison)
+            matched_table.rows = matched_table.rows_from_matches(match_rows)
+            try:
+                matched_tab.set_data(matched_table.rows)
+            except Exception:
+                # best-effort: ignore UI refresh errors
+                pass
+
+        matched_tab.on_event('cellEdited', matched_update_cell)
+
+        # If comparison JSON contains an optional total, warn when it does not match
+        # the totals row inside the table for any offer.
+        if comparison_total is not None:
+            mismatched = [
+                name for name, val in offer_totals_dec.items()
+                if val is not None and abs(val - comparison_total) > Decimal('0.02')
+            ]
+
+            if mismatched:
+                ui.label(
+                    'Warning: the summed subtotals do not match the comparison total for '
+                    + ', '.join(mismatched)
+                ).classes('text-xs text-red-700 font-semibold mt-2')
+
+    @staticmethod
+    def comparison_total_from_json(comparison: dict) -> tuple[Decimal | None, str]:
+        for key in ('Totaalprijs exc. BTW', 'Totaalprijs inc. BTW', 'Totaalbedrag', 'Totaal'):
+            if key not in comparison:
+                continue
+
+            total = ComparisonMatcher.parse_decimal(comparison.get(key))
+            if total is not None:
+                return total, key
+
+        return None, 'Totaal'
+
+    def copy_match_table_to_clipboard(self, matched_table: MatchedPostenTable) -> None:
+        clipboard_text = matched_table.to_excel_clipboard_text()
+        ui.run_javascript(f'''
+            navigator.clipboard.writeText({json.dumps(clipboard_text)})
+                .catch(() => {{
+                    const textarea = document.createElement('textarea');
+                    textarea.value = {json.dumps(clipboard_text)};
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.focus();
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }});
+        ''')
+        ui.notify('Copied table for Excel')
 
     async def match_project_posts(self, project: Path, comparison: dict, button) -> None:
         if not comparison.get('Posten'):
@@ -373,8 +673,7 @@ class ComparisonPage(SubPage):
 class OfferPage(SubPage):
 
     def render(self) -> None:
-        with ui.row().classes('w-full h-screen max-h-screen flex-nowrap'):
-            self.show()
+        self.show()
 
     def opened_file(self):
         if self.state.opened_file is None:
@@ -387,9 +686,9 @@ class OfferPage(SubPage):
         ui.html(f'''
             <iframe
                 src="{pdf_url}"
-                style="width: 100%; height: 100vh; border: none;"
+                style="width: 100%; height: 100%; border: none;"
             ></iframe>
-        ''', sanitize=False).classes('w-full h-full')
+        ''', sanitize=False).classes('w-full h-full overflow-hidden')
 
     def opened_file_result(self):
         if self.state.opened_file is None:
@@ -411,32 +710,62 @@ class OfferPage(SubPage):
                     ui.label(warning).classes('text-xs text-yellow-900')
 
         opened_file = self.state.opened_file
-        render_editable_table(
+        render_editable_summary(
             result,
-            row_collection_key='Posten',
-            row_fields=['Omschrijving', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag'],
-            on_summary_update=lambda field, value: self.update_summary_value(opened_file, result, field, value),
-            on_summary_add=lambda field, value: self.add_summary_field(opened_file, result, field, value),
-            on_row_update=lambda index, field, value: self.update_post_value(opened_file, result, index, field, value),
-            on_row_add=lambda: self.add_post_row(opened_file, result),
-            on_row_delete=lambda index: self.delete_post_row(opened_file, result, index),
+            on_update=lambda field, value: self.update_summary_value(opened_file, result, field, value),
+            on_add=lambda field, value: self.add_summary_field(opened_file, result, field, value),
         )
 
-    def show(self) -> None:
-        with ui.column().classes('w-1/2 h-full'):
-            self.opened_file()
+        self.input_table(opened_file, result)
 
-        with ui.column().classes('w-1/2 h-full'):
-            with ui.scroll_area().classes('w-full h-full p-4'):
+    def input_table(self, file: Path, result: dict) -> None:
+        offer_table = OfferRowsTable(result)
+
+        with ui.row().classes('items-center gap-2 mt-4'):
+            ui.label('Posten').classes('text-lg font-bold')
+            ui.button(
+                'Add row',
+                icon='add',
+                on_click=lambda: self.add_post_row(file, result, offer_table),
+            ).props('dense no-caps size=sm')
+
+        offer_tabulator = tabulator(offer_table.options(), row_key='id').classes('w-full')
+
+        def update_cell(event) -> None:
+            cell = event.args.get('cell', {})
+            row = cell.get('row', {})
+            column = cell.get('column', {})
+            offer_table.update_cell(row.get('id'), column.get('field'), cell.get('value', ''))
+            self.folder_handler.save_result(file, result)
+
+        def delete_row(event) -> None:
+            cell = event.args.get('cell', {})
+            column = cell.get('column', {})
+            if column.get('field') != '__delete__':
+                return
+
+            row = cell.get('row', {})
+            offer_table.delete_row(row.get('id'))
+            self.folder_handler.save_result(file, result)
+            offer_tabulator.set_data(offer_table.rows)
+
+        offer_tabulator.on_event('cellEdited', update_cell)
+        offer_tabulator.on_event('cellClick', delete_row)
+
+    def show(self) -> None:
+        with ui.splitter(value=50, limits=(25, 75)).classes('w-full h-screen max-h-screen').props(
+            'before-class=overflow-hidden after-class=overflow-hidden'
+        ) as splitter:
+            with splitter.before:
+                with ui.column().classes('w-full h-full'):
+                    self.opened_file()
+
+            with splitter.after:
+                with ui.scroll_area().classes('w-full h-full p-4'):
                     self.opened_file_result()
 
     def update_summary_value(self, file: Path, result: dict, field: str, value: str) -> None:
         result[field] = value
-        self.save_result(file, result)
-        self.refresh()
-
-    def update_post_value(self, file: Path, result: dict, post_index: int, field: str, value: str) -> None:
-        result['Posten'][post_index][field] = value
         self.save_result(file, result)
         self.refresh()
 
@@ -458,25 +787,19 @@ class OfferPage(SubPage):
         self.save_result(file, result)
         self.refresh()
 
-    def add_post_row(self, file: Path, result: dict) -> None:
-        result.setdefault('Posten', [])
-        result['Posten'].append({
-            'Omschrijving': '',
-            'Aantal': '',
-            'Eenheid': '',
-            'Eenheidsprijs': '',
-            'Totaalbedrag': '',
-        })
-        self.save_result(file, result)
-        self.refresh()
+    def add_post_row(self, file: Path, result: dict, offer_table: OfferRowsTable | None = None) -> None:
+        if offer_table is None:
+            result.setdefault('Posten', [])
+            result['Posten'].append({
+                'Omschrijving': '',
+                'Aantal': '',
+                'Eenheid': '',
+                'Eenheidsprijs': '',
+                'Totaalbedrag': '',
+            })
+        else:
+            offer_table.add_row()
 
-    def delete_post_row(self, file: Path, result: dict, post_index: int) -> None:
-        if 'Posten' not in result or post_index >= len(result['Posten']):
-            ui.notify('Row no longer exists')
-            self.refresh()
-            return
-
-        result['Posten'].pop(post_index)
         self.save_result(file, result)
         self.refresh()
 

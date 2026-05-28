@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import re
 from decimal import Decimal, InvalidOperation
+import time
 
 import os
 from google import genai
@@ -25,7 +26,8 @@ def get_client():
 
 
 def ask_llm(prompt: str) -> str:
-    while True:
+    max_attempts = 8
+    for attempt in range(1, max_attempts + 1):
         try:
             print("Generating Response")
             response = get_client().models.generate_content(
@@ -35,12 +37,28 @@ def ask_llm(prompt: str) -> str:
                     temperature=0.0,
                 ),
             )
-            break
+            if response.text is None:
+                raise RuntimeError('LLM response did not contain text')
+
+            return response.text
         except KeyboardInterrupt:
-            raise KeyboardInterrupt
-        except Exception as e:
-            print(e.message)
-    return response.text
+            raise
+        except Exception as error:
+            error_text = str(error).strip()
+            print(f'LLM request failed: {error_text}')
+
+            lowered = error_text.lower()
+            if any(token in lowered for token in ('quota', 'rate limit', 'too many requests', 'resource exhausted', '429')):
+                raise RuntimeError(
+                    'API limit reached. Try again later or increase your Gemini quota.'
+                ) from error
+
+            if attempt >= max_attempts:
+                raise RuntimeError(f'LLM request failed after {max_attempts} attempts: {error_text}') from error
+
+            time.sleep(2 ** (attempt - 1))
+
+    raise RuntimeError('LLM request failed unexpectedly')
 
 
 def read_pdf(file) -> str:

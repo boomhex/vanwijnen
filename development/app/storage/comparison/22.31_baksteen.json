@@ -37,7 +37,7 @@
         },
         {
             "Omschrijving": "toeslag strooisteen",
-            "Aantal": "1112,0",
+            "Aantal": "1112,00",
             "Eenheid": "m2"
         }
     ],
@@ -52,14 +52,14 @@
                     "Gematchte eenheid": "per dzd",
                     "Eenheidsprijs": "765,00",
                     "Totaalbedrag": "66516.75",
-                    "Match toelichting": "Beste match voor het basis metselwerk, hoewel de offerte uitgaat van halfsteens en de regel van wildverband."
+                    "Match toelichting": "Beste match voor het standaard metselwerk van de gevelstenen."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Vermetselen WF handvorm halfsteens verband",
                     "Gematchte eenheid": "dznd",
                     "Eenheidsprijs": "800.00",
                     "Totaalbedrag": "69560.00",
-                    "Match toelichting": "Beste match voor het basis metselwerk."
+                    "Match toelichting": "Directe match voor het vermetselen van de waalformaat gevelstenen."
                 }
             }
         },
@@ -73,14 +73,14 @@
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen specifieke toeslag voor wildverband gevonden in de offerte."
+                    "Match toelichting": "Geen specifieke toeslag voor wildverband gevonden in de offerte; mogelijk inbegrepen in de basisprijs."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Toeslag wildverband",
                     "Gematchte eenheid": "dznd",
                     "Eenheidsprijs": "45.00",
                     "Totaalbedrag": "3912.75",
-                    "Match toelichting": "Directe match voor de toeslag wildverband."
+                    "Match toelichting": "Directe match voor de toeslag op het verband."
                 }
             }
         },
@@ -94,14 +94,14 @@
                     "Gematchte eenheid": "per dzd",
                     "Eenheidsprijs": "70,00",
                     "Totaalbedrag": "6086.50",
-                    "Match toelichting": "Exacte match qua omschrijving en eenheid."
+                    "Match toelichting": "Exacte tekstuele match voor de inzet van de verreiker."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Verreiker op bouwplaats",
                     "Gematchte eenheid": "post",
                     "Eenheidsprijs": "6000.00",
                     "Totaalbedrag": "521700.00",
-                    "Match toelichting": "Match op basis van materieelinzet, echter hanteert de offerte een vaste postprijs in plaats van een prijs per dzd."
+                    "Match toelichting": "Match op basis van materieelinzet, let op: eenheid in offerte is 'post', berekening volgt gevraagd aantal."
                 }
             }
         },
@@ -115,14 +115,14 @@
                     "Gematchte eenheid": "per M2",
                     "Eenheidsprijs": "15,00",
                     "Totaalbedrag": "2670.00",
-                    "Match toelichting": "Match voor gebogen/rond metselwerk."
+                    "Match toelichting": "Match tussen 'gebogen' en 'rond' metselwerk."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Toeslag rond metselwerk, mal door VW geleverd",
                     "Gematchte eenheid": "m2",
                     "Eenheidsprijs": "30.00",
                     "Totaalbedrag": "5340.00",
-                    "Match toelichting": "Match voor gebogen/rond metselwerk."
+                    "Match toelichting": "Match tussen 'gebogen' en 'rond' metselwerk."
                 }
             }
         },
@@ -136,14 +136,14 @@
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen specifieke post gevonden voor verdiept accentmetselwerk."
+                    "Match toelichting": "Hoewel post 1 'terugliggende stenen' noemt, is deze post al gekoppeld aan het algemene metselwerk."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "ONBEKEND",
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen specifieke post gevonden voor verdiept accentmetselwerk."
+                    "Match toelichting": "Geen specifieke post gevonden voor accentstenen of verdiept metselwerk."
                 }
             }
         },
@@ -157,14 +157,14 @@
                     "Gematchte eenheid": "per stuk",
                     "Eenheidsprijs": "1,00",
                     "Totaalbedrag": "86.95",
-                    "Match toelichting": "Match voor zaagwerk, let op: offerte rekent per stuk, vergelijking per dzd."
+                    "Match toelichting": "Match op zaagwerkzaamheden. Let op: eenheidsprijs is per stuk, aantal is in dzd."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Zaagwerk gevelsteen",
                     "Gematchte eenheid": "st",
                     "Eenheidsprijs": "1.10",
                     "Totaalbedrag": "95.64",
-                    "Match toelichting": "Match voor zaagwerk, let op: offerte rekent per stuk, vergelijking per dzd."
+                    "Match toelichting": "Match op zaagwerkzaamheden. Let op: eenheidsprijs is per stuk, aantal is in dzd."
                 }
             }
         },
@@ -178,20 +178,20 @@
                     "Gematchte eenheid": "per M2",
                     "Eenheidsprijs": "14,00",
                     "Totaalbedrag": "15568.00",
-                    "Match toelichting": "Match voor doorstrijkwerk, let op eenheidsverschil (m2 vs dzd)."
+                    "Match toelichting": "Match op doorstrijkwerk/pointeren. Let op: eenheid in offerte is M2."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
                     "Gematchte eenheid": "m2",
                     "Eenheidsprijs": "15.00",
                     "Totaalbedrag": "16680.00",
-                    "Match toelichting": "Match voor doorstrijkwerk, let op eenheidsverschil (m2 vs dzd)."
+                    "Match toelichting": "Match op doorstrijkwerk. Let op: eenheid in offerte is m2."
                 }
             }
         },
         {
             "Omschrijving": "toeslag strooisteen",
-            "Aantal": "1112,0",
+            "Aantal": "1112,00",
             "Eenheid": "m2",
             "Offertes": {
                 "postma.pdf": {
@@ -199,14 +199,14 @@
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen toeslag voor strooisteen gevonden in de offerte."
+                    "Match toelichting": "Geen toeslag voor strooistenen gevonden in deze offerte."
                 },
                 "zuidema.pdf": {
                     "Gematchte omschrijving": "Toeslag strooisteen",
                     "Gematchte eenheid": "M2",
                     "Eenheidsprijs": "7.00",
                     "Totaalbedrag": "7784.00",
-                    "Match toelichting": "Directe match voor toeslag strooisteen."
+                    "Match toelichting": "Directe match voor de toeslag op strooistenen."
                 }
             }
         }
