@@ -1,153 +1,241 @@
-from pathlib import Path
-from typing import Any
-
 import json
+from pathlib import Path
+from typing import Any, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from services.offer import Offer
+
+
+UNASSIGNED_PROJECT = 'Unassigned'
 
 
 class FolderHandler:
+    """Manages file storage with structure: storage/<project>/<offer>/{document.pdf, extract.json, raw.txt}"""
 
-    def __init__(self, pdf_dir: Path, results_dir: Path, comparison_dir: Path | None = None) -> None:
-        self.pdf_dir = pdf_dir
-        self.results_dir = results_dir
-        self.comparison_dir = comparison_dir
-        self.pdf_dir.mkdir(parents=True, exist_ok=True)
-        self.results_dir.mkdir(parents=True, exist_ok=True)
-        if self.comparison_dir is not None:
-            self.comparison_dir.mkdir(parents=True, exist_ok=True)
-
-    def files_in_folder(self, folder: Path) -> list[Path]:
-        return sorted(folder.glob('*.pdf'), key=lambda file: file.name.lower())
+    def __init__(self, storage_dir: Path) -> None:
+        self.storage_dir = storage_dir
+        self.storage_dir.mkdir(parents=True, exist_ok=True)
 
     def projects(self) -> list[Path]:
-        return sorted(
-            [path for path in self.pdf_dir.iterdir() if path.is_dir()],
-            key=lambda path: path.name.lower(),
-        )
+        """Return all project directories."""
+        project_dirs = [path for path in self.storage_dir.iterdir() if path.is_dir()]
+        return sorted(project_dirs, key=lambda path: path.name.lower())
+
+    def project_path(self, project_name: str | None) -> Path:
+        """Get the path for a project by name."""
+        clean_name = self.clean_name(project_name, kind='project')
+        return self.storage_dir / clean_name
+
+    def project_offers(self, project: Path) -> list[Path]:
+        """Return all offer folders within a project."""
+        if not project.exists():
+            return []
+        offer_dirs = [path for path in project.iterdir() if path.is_dir() and path.name != 'offers']
+        return sorted(offer_dirs, key=lambda path: path.name.lower())
 
     def project_files(self, project: Path) -> list[Path]:
-        return self.files_in_folder(project)
+        """Return list of PDFs from all offers in project (for backward compatibility with sidebar)."""
+        pdfs = []
+        for offer_dir in self.project_offers(project):
+            pdf = offer_dir / 'document.pdf'
+            if pdf.exists():
+                pdfs.append(pdf)
+        return sorted(pdfs, key=lambda f: f.name.lower())
+
+    def offer_from_file(self, file: Path) -> 'Offer':
+        """Create an Offer instance from a file path."""
+        from services.offer import Offer
+        offer_dir = self.offer_dir_for_file(file)
+        return Offer(offer_dir, self)
+
+    def offer_from_path(self, offer_dir: Path) -> 'Offer':
+        """Create an Offer instance from an offer folder path."""
+        from services.offer import Offer
+        return Offer(offer_dir, self)
+
+    def offer_dir_for_file(self, file: Path) -> Path:
+        """Get the offer folder containing a file."""
+        if file.name == 'document.pdf':
+            return file.parent
+        # For any file in an offer folder, return the parent (offer folder)
+        relative = file.relative_to(self.storage_dir)
+        if len(relative.parts) < 2:
+            raise ValueError(f'Cannot resolve offer for file: {file}')
+        return self.storage_dir / relative.parts[0] / relative.parts[1]
+
+    def project_dir_for_file(self, file: Path) -> Path:
+        """Get the project folder containing a file."""
+        relative = file.relative_to(self.storage_dir)
+        if not relative.parts:
+            raise ValueError(f'Cannot resolve project for file outside storage: {file}')
+        return self.storage_dir / relative.parts[0]
+
+    def project_name_for_file(self, file: Path) -> str:
+        """Get the project name for a file."""
+        return self.project_dir_for_file(file).name
+
+    def offer_name_for_file(self, file: Path) -> str:
+        """Get the offer name for a file."""
+        return self.offer_dir_for_file(file).name
+
+    def offer_document_path(self, offer: Path) -> Path:
+        """Get the PDF path for an offer."""
+        return offer / 'document.pdf'
+
+    def offer_extract_path(self, offer: Path) -> Path:
+        """Get the extract.json path for an offer."""
+        return offer / 'extract.json'
+
+    def offer_raw_path(self, offer: Path) -> Path:
+        """Get the raw.txt path for an offer."""
+        return offer / 'raw.txt'
+
+    def project_comparison_path(self, project: Path) -> Path:
+        """Get the comparison.json path for a project."""
+        return project / 'comparison.json'
+
+    def comparison_path_for_file(self, file: Path) -> Path:
+        """Get the comparison.json for the project containing a file."""
+        return self.project_comparison_path(self.project_dir_for_file(file))
+
+    def result_path_for_file(self, file: Path) -> Path:
+        """Get the extract.json path for a file (PDF or extract)."""
+        offer = self.offer_dir_for_file(file)
+        return self.offer_extract_path(offer)
+
+    def raw_path_for_file(self, file: Path) -> Path:
+        """Get the raw.txt path for a file."""
+        offer = self.offer_dir_for_file(file)
+        return self.offer_raw_path(offer)
 
     def upload_folder(self, project_name: str | None) -> Path:
-        if not project_name:
-            return self.pdf_dir
-
-        project_folder = self.pdf_dir / project_name
-        project_folder.mkdir(parents=True, exist_ok=True)
-        return project_folder
+        """Get the upload destination folder for a project."""
+        project = self.project_path(project_name or UNASSIGNED_PROJECT)
+        project.mkdir(parents=True, exist_ok=True)
+        return project
 
     async def add_uploaded_file(self, event, project_name: str | None) -> Path:
-        destination = self.upload_folder(project_name) / event.file.name
+        """Save an uploaded PDF file to a new offer folder."""
+        project = self.upload_folder(project_name)
+        
+        # Create offer folder named after the file
+        offer_name = Path(event.file.name).stem
+        offer_dir = project / offer_name
+        offer_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save PDF as document.pdf
+        destination = offer_dir / 'document.pdf'
+        # If a file with that name already exists, we might need to handle it
+        if destination.exists():
+            raise FileExistsError(f'Offer "{offer_name}" already exists in {project_name or "Unassigned"}')
+        
         await event.file.save(destination)
         return destination
 
     def create_project(self, project_name: str | None) -> Path:
-        clean_name = self.clean_name(project_name, kind='project')
-        project = self.pdf_dir / clean_name
-        project.mkdir(exist_ok=True)
+        """Create a new project."""
+        project = self.project_path(project_name)
+        project.mkdir(parents=True, exist_ok=True)
         return project
 
     def rename_file(self, file: Path, new_name: str | None) -> Path:
+        """Rename a PDF file and its associated data."""
         if not file.exists():
             raise FileNotFoundError(f'{file.name} does not exist')
 
+        if file.name != 'document.pdf':
+            raise ValueError('Can only rename files in offer folders')
+
+        offer_dir = file.parent
         clean_name = self.clean_name(new_name, kind='filename')
-        if Path(clean_name).suffix.lower() != '.pdf':
-            clean_name = f'{clean_name}.pdf'
+        new_offer_name = clean_name
+        new_offer_dir = offer_dir.parent / new_offer_name
 
-        new_file = file.with_name(clean_name)
-        if new_file == file:
-            raise ValueError('Filename is unchanged')
-        if new_file.exists():
-            raise FileExistsError(f'{clean_name} already exists')
+        if new_offer_dir == offer_dir:
+            raise ValueError('Offer name is unchanged')
+        if new_offer_dir.exists():
+            raise FileExistsError(f'Offer "{new_offer_name}" already exists')
 
-        old_result_path = self.result_path_for_file(file)
-        new_result_path = self.result_path_for_file(new_file)
-
-        file.rename(new_file)
-        self.move_result_if_possible(old_result_path, new_result_path)
-        return new_file
+        # Rename the entire offer folder
+        offer_dir.rename(new_offer_dir)
+        return new_offer_dir / 'document.pdf'
 
     def move_file(self, file: Path, target_project: str | None) -> Path:
+        """Move a file to a different project."""
         if not file.exists():
             raise FileNotFoundError(f'{file.name} does not exist')
 
-        target_folder = self.upload_folder(None if target_project == 'Unassigned' else target_project)
-        new_file = target_folder / file.name
-        if new_file == file:
+        if file.name != 'document.pdf':
+            raise ValueError('Can only move files in offer folders')
+
+        offer_dir = file.parent
+        offer_name = offer_dir.name
+        target_project_dir = self.upload_folder(None if target_project == 'Unassigned' else target_project)
+        new_offer_dir = target_project_dir / offer_name
+
+        if new_offer_dir == offer_dir:
             raise ValueError('File is already in this location')
-        if new_file.exists():
-            raise FileExistsError(f'{file.name} already exists in {target_project or "Unassigned"}')
+        if new_offer_dir.exists():
+            raise FileExistsError(f'Offer "{offer_name}" already exists in {target_project or "Unassigned"}')
 
-        old_result_path = self.result_path_for_file(file)
-        new_result_path = self.result_dir_for_file(new_file) / f'{new_file.stem}.txt'
-
-        file.rename(new_file)
-        self.move_result_if_possible(old_result_path, new_result_path)
-        return new_file
+        # Move the entire offer folder
+        import shutil
+        shutil.move(str(offer_dir), str(new_offer_dir))
+        return new_offer_dir / 'document.pdf'
 
     def delete_file(self, file: Path) -> None:
+        """Delete a file and its entire offer folder."""
         if not file.exists():
             raise FileNotFoundError(f'{file.name} does not exist')
 
-        file.unlink()
+        if file.name != 'document.pdf':
+            raise ValueError('Can only delete files in offer folders')
 
-    def result_dir_for_file(self, file: Path) -> Path:
-        relative_parent = file.relative_to(self.pdf_dir).parent
-        if relative_parent == Path('.'):
-            return self.results_dir
-
-        return self.results_dir / relative_parent
-
-    def result_path_for_file(self, file: Path) -> Path:
-        canonical_result_path = self.result_dir_for_file(file) / f'{file.stem}.txt'
-        legacy_result_path = self.results_dir / f'{file.stem}.txt'
-
-        if canonical_result_path.exists() or canonical_result_path == legacy_result_path:
-            return canonical_result_path
-
-        if legacy_result_path.exists():
-            canonical_result_path.parent.mkdir(parents=True, exist_ok=True)
-            legacy_result_path.rename(canonical_result_path)
-
-        return canonical_result_path
+        offer_dir = file.parent
+        import shutil
+        shutil.rmtree(offer_dir)
 
     def load_result(self, file: Path) -> dict[str, Any] | None:
-        result_path = self.result_path_for_file(file)
-        if not result_path.exists():
+        """Load the extract.json for a file."""
+        extract_path = self.result_path_for_file(file)
+        if not extract_path.exists():
             return None
 
-        from services.extract_offer import parse_json_response
-
-        return parse_json_response(result_path.read_text())
+        with extract_path.open('r') as f:
+            return json.load(f)
 
     def save_result(self, file: Path, result: dict[str, Any]) -> None:
-        result_path = self.result_path_for_file(file)
-        result_path.parent.mkdir(parents=True, exist_ok=True)
-        with result_path.open('w') as result_file:
-            json.dump(result, result_file, ensure_ascii=False, indent=4)
+        """Save the extract.json for a file."""
+        extract_path = self.result_path_for_file(file)
+        extract_path.parent.mkdir(parents=True, exist_ok=True)
+        with extract_path.open('w') as f:
+            json.dump(result, f, ensure_ascii=False, indent=4)
 
-    def load_comparison(self, project: Path) -> dict[str, Any]:
-        comparison_path = self.comparison_path_for_project(project)
+    def save_raw_pdf_text(self, file: Path, text: str) -> None:
+        """Save the raw plain-text extraction from PDF."""
+        raw_path = self.raw_path_for_file(file)
+        raw_path.parent.mkdir(parents=True, exist_ok=True)
+        raw_path.write_text(text)
+
+    def load_comparison(self, project_or_file: Path) -> dict[str, Any]:
+        """Load comparison.json for a project or file."""
+        comparison_path = self._comparison_path(project_or_file)
         if not comparison_path.exists():
             return {'Posten': []}
 
-        with comparison_path.open('r') as comparison_file:
-            return json.load(comparison_file)
+        with comparison_path.open('r') as f:
+            return json.load(f)
 
-    def save_comparison(self, project: Path, comparison: dict[str, Any]) -> None:
-        comparison_path = self.comparison_path_for_project(project)
+    def save_comparison(self, project_or_file: Path, comparison: dict[str, Any]) -> None:
+        """Save comparison.json for a project or file."""
+        comparison_path = self._comparison_path(project_or_file)
         comparison_path.parent.mkdir(parents=True, exist_ok=True)
-        with comparison_path.open('w') as comparison_file:
-            json.dump(comparison, comparison_file, ensure_ascii=False, indent=4)
-
-    def comparison_path_for_project(self, project: Path) -> Path:
-        if self.comparison_dir is None:
-            raise ValueError('Comparison directory is not configured')
-
-        return self.comparison_dir / f'{project.name}.json'
+        with comparison_path.open('w') as f:
+            json.dump(comparison, f, ensure_ascii=False, indent=4)
 
     @staticmethod
     def clean_name(name: str | None, *, kind: str) -> str:
+        """Clean and validate a name (project, file, etc)."""
         if not name:
             raise ValueError(f'Enter a {kind}')
 
@@ -157,13 +245,8 @@ class FolderHandler:
 
         return clean_name
 
-    @staticmethod
-    def move_result_if_possible(old_result_path: Path, new_result_path: Path) -> None:
-        if not old_result_path.exists() or old_result_path == new_result_path:
-            return
-
-        new_result_path.parent.mkdir(parents=True, exist_ok=True)
-        if new_result_path.exists():
-            return
-
-        old_result_path.rename(new_result_path)
+    def _comparison_path(self, project_or_file: Path) -> Path:
+        """Get the comparison.json path for a project or file."""
+        if project_or_file.is_dir():
+            return self.project_comparison_path(project_or_file)
+        return self.comparison_path_for_file(project_or_file)

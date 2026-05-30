@@ -73,7 +73,6 @@ def read_pdf(file) -> str:
 
 
 def read_txt(file):
-    txt = ""
     with open(file, 'r') as f:
         txt = f.read()
     return txt
@@ -89,6 +88,23 @@ def parse_json_response(answer: str) -> dict:
 
 
 def parse_money_value(value: str) -> Decimal | None:
+    """Parse a money value string into a Decimal.
+
+    Supports many formats such as:
+      - "1.234,56" (European)
+      - "1,234.56" (US)
+      - "12.000,-" (Dutch for 12000.00)
+      - "€ 1.234,56", "EUR 1,234.56"
+      - "(1.234,56)", "-1.234,56"
+      - "1234", "1234.5", "1,5"
+
+    Heuristics:
+      - If both '.' and ',' are present the rightmost of the two is the
+        decimal separator.
+      - If only one separator is present and the fractional part length is 3
+        then treat it as a thousands separator, otherwise as decimal.
+      - Handles trailing ',-' by converting to ',00' first.
+    """
     if value is None:
         return None
 
@@ -96,21 +112,58 @@ def parse_money_value(value: str) -> Decimal | None:
     if not text or text.upper() == 'ONBEKEND':
         return None
 
-    cleaned = re.sub(r'[^\d,.\-]', '', text)
-    if cleaned.count(',') > 1:
+    s = text
+
+    # Normalize unicode minus
+    s = s.replace('\u2212', '-')
+
+    # Parentheses mean negative: (1.234,56)
+    negative = False
+    if s.startswith('(') and s.endswith(')'):
+        negative = True
+        s = s[1:-1].strip()
+
+    # Remove currency symbols and letters, keep digits, separators and sign
+    s = re.sub(r'[A-Za-z€£$¥¢\s]', '', s)
+
+    # Dutch-style trailing ',-' means zero cents
+    if s.endswith(',-'):
+        s = s[:-2] + ',00'
+
+    has_dot = '.' in s
+    has_comma = ',' in s
+
+    decimal_sep = None
+    if has_dot and has_comma:
+        # the rightmost separator is the decimal separator
+        decimal_sep = '.' if s.rfind('.') > s.rfind(',') else ','
+    elif has_dot:
+        after = s.split('.')[-1]
+        decimal_sep = '.' if len(after) != 3 else None
+    elif has_comma:
+        after = s.split(',')[-1]
+        decimal_sep = ',' if len(after) != 3 else None
+
+    # Remove thousands separators and normalize decimal separator to dot
+    if decimal_sep is None:
+        normalized = s.replace('.', '').replace(',', '')
+    else:
+        thousands = ',' if decimal_sep == '.' else '.'
+        normalized = s.replace(thousands, '')
+        normalized = normalized.replace(decimal_sep, '.')
+
+    if normalized in ('', '-', '+'):
         raise ValueError(f'Invalid money amount: {value}')
 
-    if ',' in cleaned and '.' in cleaned:
-        cleaned = cleaned.replace('.', '').replace(',', '.')
-    elif ',' in cleaned:
-        cleaned = cleaned.replace(',', '.')
-    elif '.' in cleaned:
-        parts = cleaned.split('.')
-        if len(parts[-1]) != 2:
-            cleaned = cleaned.replace('.', '')
+    if negative and not normalized.startswith('-'):
+        normalized = '-' + normalized
+
+    # Only allow digits, optional leading -, and optional decimal point
+    if not re.fullmatch(r'-?\d+(?:\.\d+)?', normalized):
+        raise ValueError(f'Invalid money amount: {value} (normalized: {normalized})')
 
     try:
-        return Decimal(cleaned)
+        return Decimal(normalized)
     except InvalidOperation as error:
         raise ValueError(f'Invalid money amount: {value}') from error
 
@@ -140,7 +193,7 @@ def validate_offer_json(offer_json: dict) -> list[str]:
         try:
             parse_money_value(value)
         except ValueError:
-            warnings.append(f'{label} has an invalid money format: {value}')
+            warnings.append(f'{label} Heeft een ongeldig formaat: {value}')
 
     known_post_totals = []
     for post in posten:
@@ -164,35 +217,96 @@ def validate_offer_json(offer_json: dict) -> list[str]:
     if total_exc is not None and known_post_totals:
         post_sum = sum(known_post_totals, Decimal('0'))
         if abs(post_sum - total_exc) > Decimal('0.02'):
-            warnings.append(f'Sum of post totals ({post_sum}) does not match total excl. BTW ({total_exc})')
+            warnings.append(f'Som van totaalposten ({post_sum}) komt niet overeen met totaal excl. BTW ({total_exc})')
 
     if total_exc is not None and total_inc is not None:
         expected_inc = (total_exc * Decimal('1.21')).quantize(Decimal('0.01'))
         if abs(expected_inc - total_inc) > Decimal('0.02'):
-            warnings.append(f'Total incl. BTW ({total_inc}) does not match 21% BTW over excl. total ({expected_inc})')
+            warnings.append(f'Totaal incl. BTW ({total_inc}) komt niet overeen met 21% BTW excl. over totaal ({expected_inc})')
 
     return warnings
 
 
-def extract_offer(file: Path, results_path: Path):
-    if isinstance(results_path, str):
-        results_path = Path(results_path)
-    elif not isinstance(results_path, Path):
-        raise TypeError(f'Path: {results_path} Invalid')
+def normalize_amounts(offer_json: dict) -> dict:
+    """Normalize all monetary amounts to standard decimal format (e.g., "1234.56").
+    
+    Converts all amount strings to Decimal, then stores as string in standard format.
+    
+    Args:
+        offer_json: The extracted offer dictionary
+    
+    Returns:
+        dict: Offer with normalized amounts
+    """
+    # Top-level amount fields
+    for key in ('Totaalprijs inc. BTW', 'Totaalprijs exc. BTW', 'Totaalbedrag'):
+        if key in offer_json and offer_json[key] is not None:
+            try:
+                decimal_value = parse_money_value(offer_json[key])
+                if decimal_value is not None:
+                    offer_json[key] = str(decimal_value)
+            except ValueError:
+                pass  # Keep original if parsing fails
+
+    # Normalize amounts in Posten array
+    posten = offer_json.get('Posten', [])
+    if isinstance(posten, list):
+        for post in posten:
+            for key in ('Eenheidsprijs', 'Totaalbedrag', 'Aantal'):
+                if key in post and post[key] is not None:
+                    try:
+                        decimal_value = parse_money_value(post[key])
+                        if decimal_value is not None:
+                            post[key] = str(decimal_value)
+                    except ValueError:
+                        pass  # Keep original if parsing fails
+
+    return offer_json
+
+
+def extract_offer(file: Path, folder_handler):
+    """Extract offer from PDF and save result via FolderHandler.
+    
+    Args:
+        file: Path to the PDF file to extract
+        folder_handler: FolderHandler instance for saving results
+    
+    Returns:
+        dict: The extracted offer JSON data
+    """
+    from services.folder_handler import FolderHandler
+    
+    if not isinstance(folder_handler, FolderHandler):
+        raise TypeError(f'folder_handler must be FolderHandler, got {type(folder_handler)}')
 
     prompt = read_txt(Path("./prompts/extract_prompt.txt"))
     offer = read_pdf(file)
+
+    # Save raw PDF text for debugging
+    folder_handler.save_raw_pdf_text(file, offer)
 
     answer = ask_llm('\n'.join([prompt, offer]))
     offer_json = parse_json_response(answer)
     validate_offer_json(offer_json)
 
-    results_path.mkdir(parents=True, exist_ok=True)
-    with open(results_path / f'{file.stem}.txt', 'w') as f:
-        json.dump(offer_json, f, ensure_ascii=False, indent=4)
+    # Normalize all amounts to standard decimal format
+    offer_json = normalize_amounts(offer_json)
+
+    # Save result via FolderHandler
+    folder_handler.save_result(file, offer_json)
 
     return offer_json
 
 
-def compare_files(files, results_path: Path = Path('./storage/results')):
-    return [extract_offer(file, results_path) for file in files]
+def compare_files(files, folder_handler):
+    """Extract offers from multiple files.
+    
+    Args:
+        files: List of PDF file paths to extract
+        folder_handler: FolderHandler instance for saving results
+    
+    Returns:
+        list: List of extracted offer dicts
+    """
+    return [extract_offer(file, folder_handler) for file in files]
+

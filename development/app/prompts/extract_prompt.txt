@@ -9,6 +9,7 @@ Regels:
 - Gebruik geen markdown codeblok.
 - Gebruik het volgende formaat:
 - Neem bedragen over ZONDER euroteken.
+- Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
 {
     "Naam opdrachtgever": "...",
     "Totaalprijs inc. BTW": "...",

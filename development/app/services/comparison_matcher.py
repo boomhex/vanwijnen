@@ -4,20 +4,20 @@ import json
 
 from services.folder_handler import FolderHandler
 
-
 class ComparisonMatcher:
     def __init__(self, folder_handler: FolderHandler) -> None:
         self.folder_handler = folder_handler
 
     def project_offer_results(self, project: Path) -> list[dict]:
         offer_results = []
-        for file in self.folder_handler.project_files(project):
-            result = self.folder_handler.load_result(file)
+        for offer_dir in self.folder_handler.project_offers(project):
+            offer = self.folder_handler.offer_from_path(offer_dir)
+            result = offer.load_data()
             if result is None:
                 continue
 
             offer_results.append({
-                'Bestand': file.name,
+                'Bestand': offer.comparison_key,
                 'Posten': result.get('Posten', []),
             })
 
@@ -123,6 +123,7 @@ class ComparisonMatcher:
         if not text or text.upper() == 'ONBEKEND':
             return None
 
+        # Only include digits or decimal helpers.
         cleaned = ''.join(character for character in text if character.isdigit() or character in ',.-')
         if not cleaned:
             return None
@@ -131,9 +132,11 @@ class ComparisonMatcher:
             cleaned = cleaned.replace('.', '').replace(',', '.')
         elif ',' in cleaned:
             cleaned = cleaned.replace(',', '.')
-        elif cleaned.count('.') > 1:
+        elif cleaned.count('.') > 0:
             parts = cleaned.split('.')
-            cleaned = ''.join(parts[:-1]) + '.' + parts[-1]
+            cleaned = ''.join(parts[:-1]) + \
+                      f"{'.' if len(parts[-1]) <= 2 else ''}"
+            cleaned += parts[-1]
 
         try:
             return Decimal(cleaned)

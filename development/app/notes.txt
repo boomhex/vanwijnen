@@ -1,0 +1,38 @@
+
+- Gedaan
+    - Extractie posten vanuit PDF's werkt
+    - Met aantal waarschuwingen
+        - BTW, bedragformaat
+        - Kunnen jullie meer bedenken
+    - Vergelijking met berekening aantallen
+        - Moet nog onderscheid post en eenheid
+        - Verbeteren tabel
+
+- LLM regelen
+    - Opties:
+        - Google AI studio account
+        - OpenAI Azure
+        - API key
+
+- Hoe toegang
+    - Hoeveel mensen toegang
+    - Mogen deze elkaars bestanden zien?
+    - Host computer hier
+        - Wie kan dit regelen?
+    - Tailscale VPN
+        - Webapp?
+    - Updates en development
+Testfase: Lokale laptop/computer
+
+
+- Focus en scope nu
+    - Belangrijk dat op tijd beginnen met integratie
+    - Eerst vergelijking tot bepaald niveau, dan voorbereiding pilot
+    - Duidelijk maken hoe er het beste gebruik van maken
+
+- Confidence gematchte posten
+- Vergelijkingsregel is belangrijk
+
+Kostenplaatje
+LLM opties
+Lokale computer host
