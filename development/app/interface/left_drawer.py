@@ -5,6 +5,7 @@ from nicegui import events, run, ui
 
 from services.folder_handler import FolderHandler, UNASSIGNED_PROJECT
 from services.offer import Offer
+from services.project import Project
 from interface.page_state import MainPageState
 
 
@@ -79,7 +80,7 @@ class LeftDrawer:
         self.state.upload_project = project.name
         self.schedule_refresh()
 
-    def project_item(self, project: Path) -> None:
+    def project_item(self, project: Project) -> None:
         with ui.expansion(project.name, icon='folder').classes('w-full'):
             with ui.row().classes('items-center justify-between gap-2 w-full no-wrap'):
                 ui.label(project.name).classes('font-medium')
@@ -89,7 +90,7 @@ class LeftDrawer:
                     on_click=lambda selected_project=project: self.open_project_comparison(selected_project),
                 ).props('flat dense no-caps size=sm')
 
-            offers = [self.folder_handler.offer_from_path(offer_dir) for offer_dir in self.folder_handler.project_offers(project)]
+            offers = project.offers()
             if not offers:
                 ui.label('No offers in this project').classes('text-gray-500 pl-8')
                 return
@@ -135,7 +136,7 @@ class LeftDrawer:
         self.refresh_right_side()
         ui.notify(f'Opened {offer.name}')
 
-    def open_project_comparison(self, project: Path) -> None:
+    def open_project_comparison(self, project: Project) -> None:
         self.state.comparison_project = project
         self.state.current_view = 'comparison'
         self.refresh_right_side()

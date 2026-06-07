@@ -12,6 +12,7 @@ from .subpage import SubPage
 
 from services.comparison_matcher import ComparisonMatcher
 from services.folder_handler import FolderHandler
+from services.project import Project
 from .tabulator_table import TabulatorTable
 from interface.page_state import MainPageState
 
@@ -279,7 +280,7 @@ class ComparisonPage(SubPage):
         ui.label(f'Comparison: {project.name}').classes('text-xl font-bold')
 
         # Show invoer
-        comparison = self.folder_handler.load_comparison(project)
+        comparison = project.load_comparison()
         self.input_table(project, comparison)
 
         # Show match button
@@ -294,7 +295,7 @@ class ComparisonPage(SubPage):
         ui.label('Gematchte Posten').classes('text-lg font-bold mt-4')
         self.render_side_by_side_match_table(project, comparison, match_rows)
 
-    def match_button(self, project, comparison) -> None:
+    def match_button(self, project: Project, comparison: dict) -> None:
         with ui.row().classes('items-center gap-2 mt-4'):
             match_button = ui.button('Match Posten', icon='eva-bulb-outline').props('dense no-caps')
 
@@ -304,7 +305,7 @@ class ComparisonPage(SubPage):
 
             match_button.on('click', request_match)
 
-    def input_table(self, project, comparison) -> None:
+    def input_table(self, project: Project, comparison: dict) -> None:
 
         comparison_table = ComparisonRowsTable(comparison)
 
@@ -323,7 +324,7 @@ class ComparisonPage(SubPage):
             row = cell.get('row', {})
             column = cell.get('column', {})
             comparison_table.update_cell(row.get('id'), column.get('field'), cell.get('value', ''))
-            self.folder_handler.save_comparison(project, comparison)
+            project.save_comparison(comparison)
 
         def delete_row(event) -> None:
             cell = event.args.get('cell', {})
@@ -333,21 +334,21 @@ class ComparisonPage(SubPage):
 
             row = cell.get('row', {})
             comparison_table.delete_row(row.get('id'))
-            self.folder_handler.save_comparison(project, comparison)
+            project.save_comparison(comparison)
             comparison_tabulator.set_data(comparison_table.rows)
 
         comparison_tabulator.on_event('cellEdited', update_cell)
         comparison_tabulator.on_event('cellClick', delete_row)
 
-    def update_comparison_value(self, project: Path, comparison: dict, row_index: int, field: str, value: str) -> None:
+    def update_comparison_value(self, project: Project, comparison: dict, row_index: int, field: str, value: str) -> None:
         comparison['Posten'][row_index][field] = value
         comparison.pop('MatchedPosten', None)
         comparison.pop('Matches', None)
-        self.folder_handler.save_comparison(project, comparison)
+        project.save_comparison(comparison)
 
     def add_comparison_row(
         self,
-        project: Path,
+        project: Project,
         comparison: dict,
         comparison_table=None,
     ) -> None:
@@ -363,10 +364,10 @@ class ComparisonPage(SubPage):
         else:
             comparison_table.add_row()
 
-        self.folder_handler.save_comparison(project, comparison)
+        project.save_comparison(comparison)
         self.refresh()
 
-    def delete_comparison_row(self, project: Path, comparison: dict, row_index: int) -> None:
+    def delete_comparison_row(self, project: Project, comparison: dict, row_index: int) -> None:
         if 'Posten' not in comparison or row_index >= len(comparison['Posten']):
             ui.notify('Row no longer exists')
             self.refresh()
@@ -375,10 +376,10 @@ class ComparisonPage(SubPage):
         comparison['Posten'].pop(row_index)
         comparison.pop('MatchedPosten', None)
         comparison.pop('Matches', None)
-        self.folder_handler.save_comparison(project, comparison)
+        project.save_comparison(comparison)
         self.refresh()
 
-    def render_side_by_side_match_table(self, project: Path, comparison: dict, match_rows: list[dict]) -> None:
+    def render_side_by_side_match_table(self, project: Project, comparison: dict, match_rows: list[dict]) -> None:
         offer_names = [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
 
         matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
@@ -447,7 +448,7 @@ class ComparisonPage(SubPage):
                     offer_entry['Totaalbedrag'] = value
 
             # Persist changes and recompute the displayed rows (including totals row)
-            self.folder_handler.save_comparison(project, comparison)
+            project.save_comparison(comparison)
             matched_table.rows = matched_table.rows_from_matches(match_rows)
             try:
                 matched_tab.set_data(matched_table.rows)
@@ -501,7 +502,7 @@ class ComparisonPage(SubPage):
         ''')
         ui.notify('Copied table for Excel')
 
-    async def match_project_posts(self, project: Path, comparison: dict, button) -> None:
+    async def match_project_posts(self, project: Project, comparison: dict, button) -> None:
         if not comparison.get('Posten'):
             ui.notify('Add comparison rows before matching')
             return
@@ -522,7 +523,6 @@ class ComparisonPage(SubPage):
 
         comparison['MatchedPosten'] = self.matcher.normalize_matched_posts(project, comparison, match_result)
         comparison.pop('Matches', None)
-        self.folder_handler.save_comparison(project, comparison)
+        project.save_comparison(comparison)
         self.notify_safe('Matched posts')
         self.refresh()
-

@@ -5,11 +5,13 @@ import them with `from services import FolderHandler, ComparisonMatcher`.
 """
 
 from .folder_handler import FolderHandler
+from .project import Project
 from .comparison_matcher import ComparisonMatcher
 from .extract_offer import ask_llm, parse_json_response, validate_offer_json
 
 __all__ = [
 	'FolderHandler',
+	'Project',
 	'ComparisonMatcher',
 	'ask_llm',
 	'parse_json_response',

@@ -1,9 +1,12 @@
+from __future__ import annotations
+
 import json
 from pathlib import Path
 from typing import Any, TYPE_CHECKING
 
 if TYPE_CHECKING:
     from services.offer import Offer
+    from services.project import Project
 
 
 UNASSIGNED_PROJECT = 'Unassigned'
@@ -16,7 +19,13 @@ class FolderHandler:
         self.storage_dir = storage_dir
         self.storage_dir.mkdir(parents=True, exist_ok=True)
 
-    def projects(self) -> list[Path]:
+    def projects(self) -> list['Project']:
+        """Return all projects."""
+        from services.project import Project
+
+        return [Project(path, self) for path in self.project_paths()]
+
+    def project_paths(self) -> list[Path]:
         """Return all project directories."""
         project_dirs = [path for path in self.storage_dir.iterdir() if path.is_dir()]
         return sorted(project_dirs, key=lambda path: path.name.lower())
@@ -26,17 +35,22 @@ class FolderHandler:
         clean_name = self.clean_name(project_name, kind='project')
         return self.storage_dir / clean_name
 
-    def project_offers(self, project: Path) -> list[Path]:
+    def project_offer_paths(self, project: Path | 'Project') -> list[Path]:
         """Return all offer folders within a project."""
+        project = self._project_path(project)
         if not project.exists():
             return []
         offer_dirs = [path for path in project.iterdir() if path.is_dir() and path.name != 'offers']
         return sorted(offer_dirs, key=lambda path: path.name.lower())
 
-    def project_files(self, project: Path) -> list[Path]:
+    def project_offers(self, project: Path | 'Project') -> list['Offer']:
+        """Return all offers within a project."""
+        return [self.offer_from_path(offer_dir) for offer_dir in self.project_offer_paths(project)]
+
+    def project_files(self, project: Path | 'Project') -> list[Path]:
         """Return list of PDFs from all offers in project (for backward compatibility with sidebar)."""
         pdfs = []
-        for offer_dir in self.project_offers(project):
+        for offer_dir in self.project_offer_paths(project):
             pdf = offer_dir / 'document.pdf'
             if pdf.exists():
                 pdfs.append(pdf)
@@ -132,11 +146,12 @@ class FolderHandler:
         await event.file.save(destination)
         return destination
 
-    def create_project(self, project_name: str | None) -> Path:
+    def create_project(self, project_name: str | None) -> 'Project':
         """Create a new project."""
         project = self.project_path(project_name)
         project.mkdir(parents=True, exist_ok=True)
-        return project
+        from services.project import Project
+        return Project(project, self)
 
     def rename_file(self, file: Path, new_name: str | None) -> Path:
         """Rename a PDF file and its associated data."""
@@ -217,7 +232,7 @@ class FolderHandler:
         raw_path.parent.mkdir(parents=True, exist_ok=True)
         raw_path.write_text(text)
 
-    def load_comparison(self, project_or_file: Path) -> dict[str, Any]:
+    def load_comparison(self, project_or_file: Path | 'Project') -> dict[str, Any]:
         """Load comparison.json for a project or file."""
         comparison_path = self._comparison_path(project_or_file)
         if not comparison_path.exists():
@@ -226,7 +241,7 @@ class FolderHandler:
         with comparison_path.open('r') as f:
             return json.load(f)
 
-    def save_comparison(self, project_or_file: Path, comparison: dict[str, Any]) -> None:
+    def save_comparison(self, project_or_file: Path | 'Project', comparison: dict[str, Any]) -> None:
         """Save comparison.json for a project or file."""
         comparison_path = self._comparison_path(project_or_file)
         comparison_path.parent.mkdir(parents=True, exist_ok=True)
@@ -245,8 +260,16 @@ class FolderHandler:
 
         return clean_name
 
-    def _comparison_path(self, project_or_file: Path) -> Path:
+    def _comparison_path(self, project_or_file: Path | 'Project') -> Path:
         """Get the comparison.json path for a project or file."""
+        project_or_file = self._project_path(project_or_file)
         if project_or_file.is_dir():
             return self.project_comparison_path(project_or_file)
         return self.comparison_path_for_file(project_or_file)
+
+    @staticmethod
+    def _project_path(project_or_path: Path | 'Project') -> Path:
+        if isinstance(project_or_path, Path):
+            return project_or_path
+
+        return project_or_path.path

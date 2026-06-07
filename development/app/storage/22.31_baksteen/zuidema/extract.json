@@ -6,28 +6,28 @@
         {
             "Omschrijving": "Vermetselen WF handvorm halfsteens verband",
             "Totaalbedrag": "ONBEKEND",
-            "Eenheid": "dznd",
+            "Eenheid": "dzd",
             "Eenheidsprijs": "800.00",
             "Aantal": "ONBEKEND"
         },
         {
             "Omschrijving": "Toeslag wildverband",
             "Totaalbedrag": "ONBEKEND",
-            "Eenheid": "dznd",
+            "Eenheid": "dzd",
             "Eenheidsprijs": "45.00",
             "Aantal": "ONBEKEND"
         },
         {
             "Omschrijving": "Toeslag strengperssteen",
             "Totaalbedrag": "ONBEKEND",
-            "Eenheid": "dznd",
+            "Eenheid": "dzd",
             "Eenheidsprijs": "50.00",
             "Aantal": "ONBEKEND"
         },
         {
             "Omschrijving": "Toeslag strooisteen",
             "Totaalbedrag": "ONBEKEND",
-            "Eenheid": "M2",
+            "Eenheid": "m2",
             "Eenheidsprijs": "7.00",
             "Aantal": "ONBEKEND"
         },
@@ -132,7 +132,7 @@
         {
             "Omschrijving": "Regiewerk",
             "Totaalbedrag": "ONBEKEND",
-            "Eenheid": "mu",
+            "Eenheid": "ONBEKEND",
             "Eenheidsprijs": "52.00",
             "Aantal": "ONBEKEND"
         },
