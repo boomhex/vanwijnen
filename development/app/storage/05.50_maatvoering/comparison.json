@@ -1,0 +1,240 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "inmeten gemeentepunten en maken meetkundige grondslag",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "uitzetten punten tbv grondwerk",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "uitzetten palen dmv piketten",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "inmeten palen tbv afwijkingen",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "uitzetten punten tbv fundering",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "uitzetten anker op bekisting (tbv staalconstructie)",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "Uitzetten 5 stuks ankers op vloer (diagonaal boorankers)",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "CAD voorbereiding prikken coördinaten en maken plots",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "verbruik kleinmateriaal (piketten, verf, spijkers, plots)",
+            "Aantal": "1",
+            "Eenheid": "post"
+        }
+    ],
+    "MatchedPosten": [
+        {
+            "Omschrijving": "inmeten gemeentepunten en maken meetkundige grondslag",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "Inpassing + grondslag maken en uitz. grondwerk",
+                    "Gematchte eenheid": "pnt.",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 400,00",
+                    "Overeenkomst": "2"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Inmeten gemeentepunten en maken meetkundige grondslag",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 240,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "uitzetten punten tbv grondwerk",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Uitzetten 14 punten tbv grondwerk (gecombineerd met maken grondslag)",
+                    "Gematchte eenheid": "punten",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 80,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "uitzetten palen dmv piketten",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "Uitzetten heipalen",
+                    "Gematchte eenheid": "st.",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 480,00",
+                    "Overeenkomst": "3"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Uitzetten 137 palen dmv 1 cm piketten",
+                    "Gematchte eenheid": "palen",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 400,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "inmeten palen tbv afwijkingen",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "Inmeten + rapporteren positie palen + kraakhoogtes uitzetten",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 390,00",
+                    "Overeenkomst": "3"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Inmeten 137 palen tbv afwijkingen",
+                    "Gematchte eenheid": "palen",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 160,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "uitzetten punten tbv fundering",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "Uitzetten funderingspunten",
+                    "Gematchte eenheid": "pnt.",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 420,00",
+                    "Overeenkomst": "3"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Uitzetten 63 punten tbv fundering (gecombineerd met inmeten palen)",
+                    "Gematchte eenheid": "punten",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 240,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "uitzetten anker op bekisting (tbv staalconstructie)",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "Uitzetten ankers",
+                    "Gematchte eenheid": "pos.",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 610,00",
+                    "Overeenkomst": "2"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Uitzetten 102 stuks hart anker tbv staalconstructie (verklikken op kist in 2 werkgangen)",
+                    "Gematchte eenheid": "stuks",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 640,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "Uitzetten 5 stuks ankers op vloer (diagonaal boorankers)",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Uitzetten 5 stuks ankers op vloer (diagonaal boorankers)",
+                    "Gematchte eenheid": "stuks",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 160,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "CAD voorbereiding prikken coördinaten en maken plots",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "CAD voorbereiding en verwerking",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 650,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "verbruik kleinmateriaal (piketten, verf, spijkers, plots)",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BDM.pdf": {
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "HB.pdf": {
+                    "Gematchte omschrijving": "Verbruik kleinmateriaal (piketten, verf, spijkers, plots)",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 180,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        }
+    ]
+}

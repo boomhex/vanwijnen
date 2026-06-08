@@ -1,0 +1,200 @@
+Final check on the JSON format.
+Naam opdrachtgever: "Kindcentrum Sint Nicolaasga"
+Totaalprijs inc. BTW: "ONBEKEND"
+Totaalprijs exc. BTW: "251.500,00"
+
+Ready to generate.{
+    "Naam opdrachtgever": "Kindcentrum Sint Nicolaasga",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "251.500,00",
+    "Posten": [
+        {
+            "Omschrijving": "IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk",
+            "Categorie": "GRONDONDERZOEK, NA SLOOPWERK",
+            "Totaalbedrag": "2.000,00",
+            "Eenheid": "post",
+            "Eenheidsprijs": "2.000,00",
+            "Aantal": "1,00"
+        },
+        {
+            "Omschrijving": "Opnemen en afvoeren tegelbestrating",
+            "Categorie": "OPNEMEN 2E FASE TEGELBESTRATING TIJDELIJKE SCHOOLPLEIN",
+            "Totaalbedrag": "1.404,90",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "3,15",
+            "Aantal": "446,00"
+        },
+        {
+            "Omschrijving": "Ontgraven bouwkuip hoofdgebouw in oude bouwput",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "1.354,65",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "1,65",
+            "Aantal": "821,00"
+        },
+        {
+            "Omschrijving": "Ontgraven nieuwe bouwkuip tot onderzijde bodemafsluiting",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "1.773,75",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "1,65",
+            "Aantal": "1.075,00"
+        },
+        {
+            "Omschrijving": "Verwerken vrijgekomen grond in oude bouwput",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "131,35",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "1,85",
+            "Aantal": "71,00"
+        },
+        {
+            "Omschrijving": "Verwerken vrijgekomen zand in oude bouwput",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "379,20",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "2,40",
+            "Aantal": "158,00"
+        },
+        {
+            "Omschrijving": "Ontgraven inrit boorstelling bouwkuip",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "187,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "3,75",
+            "Aantal": "50,00"
+        },
+        {
+            "Omschrijving": "Leveren en aanbrengen zandlaag in bouwkuip d=100mm",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "7.315,00",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "3,85",
+            "Aantal": "1.900,00"
+        },
+        {
+            "Omschrijving": "Afwerken bouwkuip na boren palen",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "4.750,00",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "2,50",
+            "Aantal": "1.900,00"
+        },
+        {
+            "Omschrijving": "Aanvullen buitenfundering met vrijgekomen zand/grond",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "1.035,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "5,45",
+            "Aantal": "190,00"
+        },
+        {
+            "Omschrijving": "Egaliseren rondom bouwput na aanvullen, strook 3 m1",
+            "Categorie": "GRONDWERK BOUWKUNDIG",
+            "Totaalbedrag": "1.339,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "2,35",
+            "Aantal": "570,00"
+        },
+        {
+            "Omschrijving": "Ontgraven cunet nieuwe tegelverharding",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "2.317,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "2,50",
+            "Aantal": "927,00"
+        },
+        {
+            "Omschrijving": "Ontgraven zand uit vervallen cunetten",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "2.095,35",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "3,05",
+            "Aantal": "687,00"
+        },
+        {
+            "Omschrijving": "Ontgraven grond uit cunet voorterrein brandweer",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "1.562,40",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "4,20",
+            "Aantal": "372,00"
+        },
+        {
+            "Omschrijving": "Aanbrengen zand in nieuwe cunet tegelverharding d=250mm",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "6.025,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "6,50",
+            "Aantal": "927,00"
+        },
+        {
+            "Omschrijving": "Op hoogte brengen bestaande zandbanen tegelbestrating",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "1.172,50",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "1,75",
+            "Aantal": "670,00"
+        },
+        {
+            "Omschrijving": "Afwerken vooraf aan aanbrengen puin",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "520,30",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "1,10",
+            "Aantal": "473,00"
+        },
+        {
+            "Omschrijving": "Verwerken vrijgekomen grond in cunetten oud straatwerk",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "2.095,35",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "3,05",
+            "Aantal": "687,00"
+        },
+        {
+            "Omschrijving": "Groen delen terrein op hoogte brengen",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "2.576,00",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "1,15",
+            "Aantal": "2.240,00"
+        },
+        {
+            "Omschrijving": "Lev. en verw. menggranulaat op wegenbouwdoek",
+            "Categorie": "GRONDWERK BUITENTERREIN",
+            "Totaalbedrag": "4.375,25",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "9,25",
+            "Aantal": "473,00"
+        },
+        {
+            "Omschrijving": "Op werk in depot rijden her te gebruiken grond",
+            "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+            "Totaalbedrag": "1.069,20",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "2,70",
+            "Aantal": "396,00"
+        },
+        {
+            "Omschrijving": "Op werk in depot rijden her te gebruiken zand",
+            "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+            "Totaalbedrag": "521,10",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "2,70",
+            "Aantal": "193,00"
+        },
+        {
+            "Omschrijving": "Laden en afvoeren overtollig grond, Landbouw & Natuur",
+            "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+            "Totaalbedrag": "6.795,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "4,50",
+            "Aantal": "1.510,00"
+        },
+        {
+            "Omschrijving": "Laden, afvoeren en storten boorgrond uit depot",
+            "Categorie": "BOORGROND, BUITEN BOUWPUT DOOR BOORDER",
+            "Totaalbedrag": "4.305,00",
+            "Eenheid": "ONBEKEND",
+            "Eenheidsprijs": "

@@ -104,6 +104,10 @@ class FolderHandler:
         """Get the raw.txt path for an offer."""
         return offer / 'raw.txt'
 
+    def offer_llm_response_path(self, offer: Path) -> Path:
+        """Get the llm_response.txt path for an offer."""
+        return offer / 'llm_response.txt'
+
     def project_comparison_path(self, project: Path) -> Path:
         """Get the comparison.json path for a project."""
         return project / 'comparison.json'
@@ -121,6 +125,11 @@ class FolderHandler:
         """Get the raw.txt path for a file."""
         offer = self.offer_dir_for_file(file)
         return self.offer_raw_path(offer)
+
+    def llm_response_path_for_file(self, file: Path) -> Path:
+        """Get the llm_response.txt path for a file."""
+        offer = self.offer_dir_for_file(file)
+        return self.offer_llm_response_path(offer)
 
     def upload_folder(self, project_name: str | None) -> Path:
         """Get the upload destination folder for a project."""
@@ -231,6 +240,12 @@ class FolderHandler:
         raw_path = self.raw_path_for_file(file)
         raw_path.parent.mkdir(parents=True, exist_ok=True)
         raw_path.write_text(text)
+
+    def save_llm_response(self, file: Path, text: str) -> None:
+        """Save the raw LLM response for debugging."""
+        response_path = self.llm_response_path_for_file(file)
+        response_path.parent.mkdir(parents=True, exist_ok=True)
+        response_path.write_text(text)
 
     def load_comparison(self, project_or_file: Path | 'Project') -> dict[str, Any]:
         """Load comparison.json for a project or file."""

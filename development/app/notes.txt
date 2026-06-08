@@ -36,3 +36,5 @@ Testfase: Lokale laptop/computer
 Kostenplaatje
 LLM opties
 Lokale computer host
+
+Berekend totaal?

@@ -10,6 +10,7 @@ if TYPE_CHECKING:
 @dataclass
 class Posten:
     omschrijving: str = ''
+    categorie: str = ''
     aantal: str = ''
     eenheid: str = ''
     eenheidsprijs: str = ''
@@ -19,6 +20,7 @@ class Posten:
     def from_dict(cls, data: dict[str, Any]) -> 'Posten':
         return cls(
             omschrijving=data.get('Omschrijving', '') or '',
+            categorie=data.get('Categorie', '') or '',
             aantal=data.get('Aantal', '') or '',
             eenheid=data.get('Eenheid', '') or '',
             eenheidsprijs=data.get('Eenheidsprijs', '') or '',
@@ -28,6 +30,7 @@ class Posten:
     def to_dict(self) -> dict[str, str]:
         return {
             'Omschrijving': self.omschrijving,
+            'Categorie': self.categorie,
             'Aantal': self.aantal,
             'Eenheid': self.eenheid,
             'Eenheidsprijs': self.eenheidsprijs,
@@ -48,8 +51,11 @@ class Offer:
         """
         self.path = offer_dir
         self.folder_handler = folder_handler
-        self.name = offer_dir.name
         self.project_name = folder_handler.project_name_for_file(self.document)
+
+    @property
+    def name(self) -> str:
+        return self.path.name
 
     @property
     def document(self) -> Path:
@@ -65,6 +71,11 @@ class Offer:
     def raw_path(self) -> Path:
         """Get the raw.txt path."""
         return self.folder_handler.offer_raw_path(self.path)
+
+    @property
+    def llm_response_path(self) -> Path:
+        """Get the llm_response.txt path."""
+        return self.folder_handler.offer_llm_response_path(self.path)
 
     def load_data(self) -> dict[str, Any] | None:
         """Load the extracted offer data."""
@@ -106,7 +117,7 @@ class Offer:
 
     def update_post_row(self, result: dict[str, Any], row_id: int | None, field: str | None, value: str) -> None:
         """Update a post row cell and persist the result."""
-        fields = {'Omschrijving', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag'}
+        fields = {'Omschrijving', 'Categorie', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag'}
         if field not in fields or row_id is None:
             return
 
@@ -144,6 +155,7 @@ class Offer:
     def _field_name(field: str) -> str:
         mapping = {
             'Omschrijving': 'omschrijving',
+            'Categorie': 'categorie',
             'Aantal': 'aantal',
             'Eenheid': 'eenheid',
             'Eenheidsprijs': 'eenheidsprijs',
@@ -189,4 +201,3 @@ class Offer:
 
     def __hash__(self) -> int:
         return hash(self.path)
-

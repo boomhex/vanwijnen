@@ -1,0 +1,174 @@
+Project: Kindcentrum Sint Nicolaasga bladnr: 1/4
+Calculatie: 003 begroting KC st. Nyk 1 printdatum:
+Opdrachtgever: 12-11-2025
+Besteknummer:
+BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG
+POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO
+NUMMER VERPLICHTING IN EURO
+0 UITGANGSPUNTEN
+000010 Complete sloopwerk door derden, terrein bouwrijp opgeleverd
+000020 GEEN opruimwerk bestaande situatie
+000030 WEL opnemen tegelbestrating 2e fase tijdeljk schoolplein
+000040 Na sloop, 3 weken voor start grondwerk, AP04 onderzoek INSITU
+000050 Gehele bouwput ontgraven tot 1,37 minus vloerpeil
+000060 Ontgraven bouwput vooraf aan boorwerk palen
+000070 10 cm zand in bouwput vooraf aan boorwerk
+000080 1 Inrit voor boorstelling in bouwput
+000090 Boorder verzamelt boorgrond, ZELF in een depot op werk
+000100 Na boorwerk egaliseren bouwput vooraf aan fundatiewerk
+000110 Aanvullen buitenfundering met grond uit ontgraving
+000120 Tijdens ontgraven bouwput gelijk afvoeren deel van grond
+000130 Alle af te voeren overtollige grond is LANDBOUW & NATUUR
+000140 Vrijgekomen ZAND kan hergebruikt in werk
+000150 Benodigd zand en grond in werk, in depot op het werkterrein
+000160 Bestaande zandbanen tpv nieuw tegelwerk blijven gehandhaafd
+000200 Voorterrein, brandweerplaats, geheel in menggranulaat
+000210 Voorterrein, kan eerst gebruikt worden als bouwplaats
+000300 Totaal af te voeren 123 m3 boorgrond, VERREKENBAAR
+000400 Buitenriolering vanaf 1 m1 uit gevel, eigen ontwerp
+000410 226 m1 Sleuf graven en aanvullen voor installateur, excl. leidingwerk
+000600 Tegels 30x30x6 cm in de kleur grijs, standaard
+000610 Opsluitbanden ivm bochtstukken in 10x20 cm kleur grijs
+000620 17 Stuks veegroosters DEJO op tegelbestrating, verlaagd.
+000700 ALLEEN Inzaaien van terrein, geen beplanting
+000710 Wel vakken tegel gevel voor beplanting
+000800 Strengen drainage in kruipruimte voor drooghouden
+000810 2 ELEKTRA Pompen op drainage, duur 6 weken
+000820 Inrit bouwplaats vanaf weg 10 stuks betonplaten
+000830 Aansluiting vuilwater keten op riool, max. 25 m1 lengte
+1 VOORBEREIDENDE WERKZAAMHEDEN 3.404,90
+10 GRONDONDERZOEK, NA SLOOPWERK 2.000,00
+100000 IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk keer 1,00 V 2.000,00 2.000,00
+15 OPNEMEN 2E FASE TEGELBESTRATING TIJDELIJKE
+SCHOOLPLEIN 1.404,90
+150000 Opnemen en afvoeren tegelbestrating m2 446,00 V 3,15 1.404,90
+3 GRONDWERK 56.860,90
+30 GRONDWERK BOUWKUNDIG 18.266,45
+300010 Ontgraven bouwkuip hoofdgebouw in oude bouwput m2 821,00 V 1,65 1.354,65
+300020 Ontgraven nieuwe bouwkuip tot onderzijde bodemafsluiting m2 1.075,00 V 1,65 1.773,75
+300030 Verwerken vrijgekomen grond in oude bouwput m3 71,00 V 1,85 131,35
+300040 Verwerken vrijgekomen zand in oude bouwput m3 158,00 V 2,40 379,20
+300050 Ontgraven inrit boorstelling bouwkuip m2 50,00 V 3,75 187,50
+300070 Leveren en aanbrengen zandlaag in bouwkuip d=100mm m2 1.900,00 V 3,85 7.315,00
+300090 Afwerken bouwkuip na boren palen m2 1.900,00 V 2,50 4.750,00
+300100 Aanvullen buitenfundering met vrijgekomen zand/grond m2 190,00 V 5,45 1.035,50
+300200 Egaliseren rondom bouwput na aanvullen, strook 3 m1 m2 570,00 V 2,35 1.339,50
+31 GRONDWERK BUITENTERREIN 22.740,15
+310010 Ontgraven cunet nieuwe tegelverharding m2 927,00 V 2,50 2.317,50
+Project: Kindcentrum Sint Nicolaasga bladnr: 2/4
+Calculatie: 003 begroting KC st. Nyk 1 printdatum:
+Opdrachtgever: 12-11-2025
+Besteknummer:
+BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG
+POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO
+NUMMER VERPLICHTING IN EURO
+310020 Ontgraven zand uit vervallen cunetten m2 687,00 V 3,05 2.095,35
+310040 Ontgraven grond uit cunet voorterrein brandweer m2 372,00 V 4,20 1.562,40
+310100 Aanbrengen zand in nieuwe cunet tegelverharding d=250mm m2 927,00 V 6,50 6.025,50
+310110 Op hoogte brengen bestaande zandbanen tegelbestrating m2 670,00 V 1,75 1.172,50
+310120 Afwerken vooraf aan aanbrengen puin m2 473,00 V 1,10 520,30
+310130 Verwerken vrijgekomen grond in cunetten oud straatwerk m2 687,00 V 3,05 2.095,35
+310140 Groen delen terrein op hoogte brengen m2 2.240,00 V 1,15 2.576,00
+310200 Lev. en verw. menggranulaat op wegenbouwdoek m2 473,00 V 9,25 4.375,25
+32 VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN
+NATUUR 8.385,30
+320000 Op werk in depot rijden her te gebruiken grond m3 396,00 V 2,70 1.069,20
+320010 Op werk in depot rijden her te gebruiken zand m3 193,00 V 2,70 521,10
+320100 Laden en afvoeren overtollig grond, Landbouw & Natuur m3 1.510,00 V 4,50 6.795,00
+34 BOORGROND, BUITEN BOUWPUT DOOR BOORDER 4.305,00
+340000 Laden, afvoeren en storten boorgrond uit depot m3 123,00 V 35,00 4.305,00
+39 GRONDWERK KABELSLEUF 3.164,00
+390000 Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25 m1 226,00 V 14,00 3.164,00
+5 RIOLERING, TOT AAN ERFGRENS 17.415,50
+50 HWA-RIOLERING DAKWATER 6.579,95
+500010 Leveren en aanbrengen PVC-riool diam. 160 mm t/m 200 mm m1 117,00 V 28,75 3.363,75
+500020 Leveren en aanbrengen PVC-riool diam. 250 mm m1 10,00 V 38,60 386,00
+500030 Maken aansluiting op binnenriolering st 5,00 V 45,60 228,00
+500040 Lev. en stellen ontlastputten bij aansluiting diam. 315 mm st 5,00 V 236,10 1.180,50
+500050 Lev. en plaatsen insp. put 600 mm op erfgrens st 1,00 V 1.421,70 1.421,70
+51 HWA RIOLERING KOLKEN IN TERREIN 8.361,35
+510010 Leveren en aanbrengen Straatkolk st 14,00 V 271,45 3.800,30
+510020 Leveren en aanbrengen kolkleidingen ø125mm - 160 mm m1 175,00 V 24,05 4.208,75
+510030 Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm st 2,00 V 176,15 352,30
+52 VWA-RIOLERING 1.074,20
+520010 Leveren en aanbrengen PVC-riool diam. 160 mm m1 25,00 V 29,50 737,50
+520020 Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm st 2,00 V 168,35 336,70
+53 ALGEMEEN 1.400,00
+530000 Ontwerptekening aan te leggen riolering st 1,00 V 500,00 500,00
+530010 Revisietekening van aangelegde riolering st 1,00 900,00 900,00
+6 VERHARDINGEN 64.115,90
+60 ELEMENTENVERHARDING 53.091,45
+600000 Leveren en aanbrengen straatlaag op gebonden fundering m2 473,00 V 2,75 1.300,75
+600010 Profileren zandbaan voor aanbrengen straatlaag m2 1.500,00 V 2,50 3.750,00
+600020 Voor straatlaag profileren puinbaan m2 473,00 V 1,40 662,20
+600100 Leveren en aanbrengen betontegels 300x300x60 m2 1.970,00 V 24,05 47.378,50
+61 KANTOPSLUITING 8.753,25
+610000 Leveren en aanbrengen opsluitbanden recht 10x20cm grijs m1 517,00 V 14,25 7.367,25
+610010 Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs st 70,00 V 19,80 1.386,00
+68 VEEGROOSTERS VOOR DEUREN 2.271,20
+680000 Verlagen straatwerk roosters m2 17,00 V 28,60 486,20
+680010 Leveren en verwerken veegroosters 100x100 st 17,00 V 105,00 1.785,00
+Project: Kindcentrum Sint Nicolaasga bladnr: 3/4
+Calculatie: 003 begroting KC st. Nyk 1 printdatum:
+Opdrachtgever: 12-11-2025
+Besteknummer:
+BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG
+POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO
+NUMMER VERPLICHTING IN EURO
+7 TERREININRICHTING 60.777,90
+70 GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK 4.217,90
+700000 Zaaiklaar maken terrein voor inzaaien m2 2.240,00 V 0,80 1.792,00
+700010 Inzaaien onverhard terrein met graszaad (1kg/100m2) m2 2.240,00 V 0,80 1.792,00
+700100 Grondwerk t.b.v. vakken langs gevel voor beplanting m1 10,00 V 35,70 357,00
+700110 Opsluitbanden rond plantvakken gevel m1 13,00 V 21,30 276,90
+71 STRAATMEUBILAIR 27.500,00
+710000 Leveren en aanbrengen fietsbeugels st 110,00 V 250,00 27.500,00
+75 TERREINAFRASTERING 7.060,00
+750000 Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk m1 51,00 V 110,00 5.610,00
+750010 Leveren en aanbrengen poort, dubbel 125 cm hoog st 1,00 V 1.450,00 1.450,00
+76 SCHUTTING 22.000,00
+760000 Leveren en plaatsen Noistop Steel Schutting, 1 zijde m1 44,00 V 500,00 22.000,00
+8 BOUWPLAATSVOORZIENINGEN 15.285,00
+80 DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK 11.200,00
+800000 Leveren en aanbrengen drainage bouwkuip m1 400,00 V 12,00 4.800,00
+800010 Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip st 2,00 V 500,00 1.000,00
+800020 Huur elektrische pomp (6 weken) st 2,00 V 2.700,00 5.400,00
+81 INRIT BOUWPLAATS LANGS WEG IN BETONPLATEN 3.200,00
+810 Aanbrengen inrit, breedt 10 m1 2.800,00
+810000 Grondwerk aan brengen inrit m2 50,00 V 16,00 800,00
+810010 Aanbrengen bedrijfsvloerplaten 200x200x16 cm m2 40,00 V 50,00 2.000,00
+811 Opruimen inrit na bouw 400,00
+811010 Opnemen en afvoeren bedrijfsvloerplaten m2 40,00 V 10,00 400,00
+82 KETENPARK 885,00
+820000 Aansluiten toiletunit en uitvoeringskeet op riool, max 25 m1 EUR 750,00 V 1,00 750,00
+820010 Plaatsen en opnemen aangeleverde watermeterput st 1,00 V 135,00 135,00
+Subtotaal 217.860,10
+Project: Kindcentrum Sint Nicolaasga bladnr: 4/4
+Calculatie: 003 begroting KC st. Nyk 1 printdatum:
+Opdrachtgever: 12-11-2025
+Besteknummer:
+BESTEKS EEN- HOEVEELHEID PRIJS TOTAAL BEDRAG
+POST- OMSCHRIJVING HEID RESULTAATS- PER EENHEID IN EURO
+NUMMER VERPLICHTING IN EURO
+Transport subtotaal 217.860,10
+33.639,90
+9 STAARTPOSTEN
+91 EENMALIGE KOSTEN
+910010 Inrichten werkterrein EUR 500,00
+910020 Opruimen werkterrein EUR 485,00
+910080 Rijplaten op het werk, eigen gebruik grondwerEkUR 1.000,00
+910090 Kabels en leidingen, KLIC Melding EUR 100,00
+910100 Opruimen bij oplevering, straatpuin EUR 350,00
+910130 Aan- en afvoerkosten materieel EUR 1.000,00
+910180 V&G deelplan EUR 100,00
+910200 Uitzetten werk EUR 1.500,00
+918880 Overige eenmalige kosten EUR 4,90
+919990 Totaal eenmalige kosten EUR 5.039,90 N 1,00 5.039,90
+929990 Uitvoeringskosten EUR 9.000,00 N 1,00 9.000,00
+939990 Algemene kosten EUR 19.600,00 N 1,00 19.600,00
+949990 Winst en Risico EUR N 1,00
+Aannemingssom, de omzetbelasting niet inbegrepen 251.500,00
+Gedaan te 8451KC HEERENVEEN
+De 12e november 2025
+De inschrijver(s),
+Lolkema BV Aannemingsbedrijf

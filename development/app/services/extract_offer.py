@@ -1,4 +1,5 @@
 import json
+from json import JSONDecodeError
 from pathlib import Path
 import re
 from decimal import Decimal, InvalidOperation
@@ -11,6 +12,44 @@ import pdfplumber
 
 
 MODEL_ID = "google/gemma-4-E4B-it"
+
+
+OFFER_RESPONSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'Naam opdrachtgever': {'type': 'string'},
+        'Totaalprijs inc. BTW': {'type': 'string'},
+        'Totaalprijs exc. BTW': {'type': 'string'},
+        'Posten': {
+            'type': 'array',
+            'items': {
+                'type': 'object',
+                'properties': {
+                    'Omschrijving': {'type': 'string'},
+                    'Categorie': {'type': 'string'},
+                    'Totaalbedrag': {'type': 'string'},
+                    'Eenheid': {'type': 'string'},
+                    'Eenheidsprijs': {'type': 'string'},
+                    'Aantal': {'type': 'string'},
+                },
+                'required': [
+                    'Omschrijving',
+                    'Categorie',
+                    'Totaalbedrag',
+                    'Eenheid',
+                    'Eenheidsprijs',
+                    'Aantal',
+                ],
+            },
+        },
+    },
+    'required': [
+        'Naam opdrachtgever',
+        'Totaalprijs inc. BTW',
+        'Totaalprijs exc. BTW',
+        'Posten',
+    ],
+}
 
 
 client = None
@@ -35,6 +74,9 @@ def ask_llm(prompt: str) -> str:
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     temperature=0.0,
+                    max_output_tokens=65536,
+                    response_mime_type='application/json',
+                    response_schema=OFFER_RESPONSE_SCHEMA,
                 ),
             )
             if response.text is None:
@@ -84,7 +126,13 @@ def parse_json_response(answer: str) -> dict:
     if markdown_json:
         cleaned_answer = markdown_json.group(1).strip()
 
-    return json.loads(cleaned_answer)
+    try:
+        return json.loads(cleaned_answer)
+    except JSONDecodeError as error:
+        raise ValueError(
+            f'LLM response was not valid JSON at line {error.lineno}, column {error.colno}. '
+            'The raw response was saved as llm_response.txt.'
+        ) from error
 
 
 def parse_money_value(value: str) -> Decimal | None:
@@ -286,6 +334,7 @@ def extract_offer(file: Path, folder_handler):
     folder_handler.save_raw_pdf_text(file, offer)
 
     answer = ask_llm('\n'.join([prompt, offer]))
+    folder_handler.save_llm_response(file, answer)
     offer_json = parse_json_response(answer)
     validate_offer_json(offer_json)
 
@@ -309,4 +358,3 @@ def compare_files(files, folder_handler):
         list: List of extracted offer dicts
     """
     return [extract_offer(file, folder_handler) for file in files]
-

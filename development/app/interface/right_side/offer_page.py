@@ -8,7 +8,7 @@ from services.comparison_matcher import ComparisonMatcher
 from services.offer import Offer, Posten
 
 class OfferRowsTable(TabulatorTable):
-    fields = ['Omschrijving', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag']
+    fields = ['Omschrijving', 'Categorie', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag']
 
     def __init__(self, posten: list[Posten]) -> None:
         self.posten = posten
@@ -16,6 +16,7 @@ class OfferRowsTable(TabulatorTable):
             rows=self.rows_from_posten(),
             columns=[
                 self.text_column('Omschrijving', 'Omschrijving', editable=True),
+                self.text_column('Categorie', 'Categorie', editable=True, width=180),
                 self.text_column('Aantal', 'Aantal', editable=True, width=120),
                 self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
                 self.text_column('Eenheidsprijs', 'Eenheidsprijs', editable=True, width=140),
@@ -39,6 +40,7 @@ class OfferRowsTable(TabulatorTable):
             formatted_row = {
                 'id': index,
                 'Omschrijving': row.omschrijving,
+                'Categorie': row.categorie,
                 'Aantal': row.aantal,
                 'Eenheid': row.eenheid,
                 'Eenheidsprijs': row.eenheidsprijs,
@@ -62,6 +64,7 @@ class OfferRowsTable(TabulatorTable):
         display_row = {
             'id': len(self.posten) - 1,
             'Omschrijving': row.omschrijving,
+            'Categorie': row.categorie,
             'Aantal': row.aantal,
             'Eenheid': row.eenheid,
             'Eenheidsprijs': row.eenheidsprijs,
@@ -94,6 +97,7 @@ class OfferRowsTable(TabulatorTable):
     def field_to_attr(field: str) -> str:
         return {
             'Omschrijving': 'omschrijving',
+            'Categorie': 'categorie',
             'Aantal': 'aantal',
             'Eenheid': 'eenheid',
             'Eenheidsprijs': 'eenheidsprijs',
@@ -221,4 +225,3 @@ class OfferPage(SubPage):
         if offer_table is not None:
             offer_table.rows = offer_table.rows_from_posten()
         self.refresh()
-

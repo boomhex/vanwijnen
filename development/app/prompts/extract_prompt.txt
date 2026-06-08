@@ -1,7 +1,7 @@
 Je moet de volgende info uit deze text filteren:
 - Naam van de opdrachtgever.
 - Totaalprijs van de offerte inclusief en exclusief BTW.
-- Per post; omschrijving, totaalbedrag, eenheid, eenheidsprijs en aantal.
+- Per post; omschrijving, categorie, totaalbedrag, eenheid, eenheidsprijs en aantal.
 Regels:
 - Verzin geen getallen!
 - Is een veld onbekend, vul "ONBEKEND" in.
@@ -10,6 +10,7 @@ Regels:
 - Gebruik het volgende formaat:
 - Neem bedragen over ZONDER euroteken.
 - Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
+- Voor categorie gebruik je het bovenliggende kopje/hoofdstuk waar de post onder valt. Is er geen duidelijke categorie, vul "ONBEKEND" in.
 {
     "Naam opdrachtgever": "...",
     "Totaalprijs inc. BTW": "...",
@@ -17,6 +18,7 @@ Regels:
     "Posten": [
         {
             "Omschrijving": "...",
+            "Categorie": "...",
             "Totaalbedrag": "...",
             "Eenheid": "...",
             "Eenheidsprijs": "...",

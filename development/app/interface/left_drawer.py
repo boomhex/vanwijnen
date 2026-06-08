@@ -45,6 +45,19 @@ class LeftDrawer:
         with self.file_list_container:
             self.file_list()
 
+    def refresh_safe(self) -> None:
+        try:
+            self.refresh()
+        except RuntimeError:
+            pass
+
+    @staticmethod
+    def notify_safe(message: str) -> None:
+        try:
+            ui.notify(message)
+        except RuntimeError:
+            print(message)
+
     def file_list(self) -> None:
         project_names = [project.name for project in self.folder_handler.projects()]
         upload_options = project_names if project_names else [UNASSIGNED_PROJECT]
@@ -243,7 +256,7 @@ class LeftDrawer:
         try:
             await run.io_bound(extract_offer, offer.document, self.folder_handler)
         except Exception as error:
-            ui.notify(f'Could not extract {offer.name}: {error}')
-            self.state.extract_requested_offers.discard(offer)
+            self.notify_safe(f'Could not extract {offer.name}: {error}')
         finally:
-            self.schedule_refresh()
+            self.state.extract_requested_offers.discard(offer)
+            self.refresh_safe()

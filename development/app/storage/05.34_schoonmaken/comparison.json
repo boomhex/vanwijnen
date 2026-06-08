@@ -1,0 +1,32 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "Opleveringsschoonmaak",
+            "Aantal": "1",
+            "Eenheid": "post"
+        }
+    ],
+    "MatchedPosten": [
+        {
+            "Omschrijving": "Opleveringsschoonmaak",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "Landman.pdf": {
+                    "Gematchte omschrijving": "Eindschoonmaak volgens bestek 05.34",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "€ 5.651,00",
+                    "Overeenkomst": "3"
+                },
+                "Nivo.pdf": {
+                    "Gematchte omschrijving": "Opleveringsschoonmaak (Verwijderen bouwstof, reinigen vloeren, glasbewassing, schoonmaken vensterbanken, kozijnen, deuren en sanitair)",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "6250,00",
+                    "Overeenkomst": "3"
+                }
+            }
+        }
+    ]
+}

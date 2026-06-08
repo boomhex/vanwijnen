@@ -88,7 +88,7 @@ class ComparisonRowsTable(TabulatorTable):
 
 class MatchedPostenTable(TabulatorTable):
     def __init__(self, *, offer_names: list[str], match_rows: list[dict]) -> None:
-        self.offer_names = offer_names
+        self.offer_names = self.offer_names_by_total(offer_names, match_rows)
         self.offer_prefixes = {offer_name: f'offer_{index}' for index, offer_name in enumerate(self.offer_names)}
         super().__init__(
             rows=self.rows_from_matches(match_rows),
@@ -108,14 +108,71 @@ class MatchedPostenTable(TabulatorTable):
         for offer_name in self.offer_names:
             field_prefix = self.offer_field_prefix(offer_name)
             columns.extend([
-                self.text_column(f'{offer_name} prijs', f'{field_prefix}_prijs', editable=True, width=120),
-                self.text_column(f'{offer_name} totaal', f'{field_prefix}_totaal', editable=True, width=130),
+                self.warning_column(f'{offer_name} prijs', f'{field_prefix}_prijs', editable=True, width=120),
+                self.warning_column(f'{offer_name} totaal', f'{field_prefix}_totaal', editable=True, width=130),
+                self.warning_column(f'{offer_name} %', f'{field_prefix}_verschil', width=90),
             ])
+
+        columns.append({
+            'title': '',
+            'field': '__delete__',
+            'width': 52,
+            'headerSort': False,
+            'hozAlign': 'center',
+            ':formatter': "function(cell){ return cell.getRow().getData().Omschrijving === 'Totaal' ? '' : 'x'; }",
+        })
 
         return columns
 
+    def warning_column(
+        self,
+        title: str,
+        field: str,
+        *,
+        editable: bool = False,
+        width: int | None = None,
+    ) -> dict:
+        column = self.text_column(title, field, editable=editable, width=width)
+        warning_field = f'{field}_warning'
+        tooltip_field = f'{field}_tooltip'
+        column[':formatter'] = f"""
+            function(cell) {{
+                const data = cell.getRow().getData();
+                const warning = data[{json.dumps(warning_field)}];
+                const tooltip = data[{json.dumps(tooltip_field)}] || warning || '';
+                const element = cell.getElement();
+
+                element.style.backgroundColor = warning ? '#FEF3C7' : '';
+                element.style.color = warning ? '#92400E' : '';
+                element.style.fontWeight = warning ? '600' : '';
+                element.title = tooltip;
+
+                const value = cell.getValue();
+                return value === null || value === undefined ? '' : value;
+            }}
+        """
+        column[':tooltip'] = f"""
+            function(e, cell) {{
+                const data = cell.getRow().getData();
+                return data[{json.dumps(tooltip_field)}] || data[{json.dumps(warning_field)}] || false;
+            }}
+        """
+        return column
+
     def offer_field_prefix(self, offer_name: str) -> str:
         return self.offer_prefixes[offer_name]
+
+    @classmethod
+    def offer_names_by_total(cls, offer_names: list[str], match_rows: list[dict]) -> list[str]:
+        totals = cls.total_decimals_by_offer(offer_names, match_rows)
+        return sorted(
+            offer_names,
+            key=lambda offer_name: (
+                totals.get(offer_name) is None,
+                totals.get(offer_name, Decimal('0')),
+                offer_name.lower(),
+            ),
+        )
 
     def rows_from_matches(self, match_rows: list[dict]) -> list[dict]:
         rows = []
@@ -138,7 +195,6 @@ class MatchedPostenTable(TabulatorTable):
                 # supplier put a total price on the post-level. Prefer to show that
                 # value in the totaal column and leave the eenheidsprijs empty.
                 eenheidsprijs = offer.get('Eenheidsprijs') or ''
-                totaalprijs = offer.get('Totaalbedrag') or ''
                 # Prefer the explicitly matched unit, fall back to the offer's own unit
                 gematchte_eenheid = (
                     (offer.get('Gematchte eenheid') or '')
@@ -151,8 +207,9 @@ class MatchedPostenTable(TabulatorTable):
                 # Prefer to show totals for 'post' unit types
                 raw_een = offer.get('Eenheidsprijs') or ''
                 raw_tot = offer.get('Totaalbedrag') or ''
-                if 'post' in gematchte_eenheid and raw_een and not raw_tot:
-                    raw_tot = raw_een
+                if 'post' in gematchte_eenheid:
+                    if raw_een and not raw_tot:
+                        raw_tot = raw_een
                     raw_een = ''
 
                 def _fmt_money(val):
@@ -163,6 +220,17 @@ class MatchedPostenTable(TabulatorTable):
 
                 row[f'{field_prefix}_prijs'] = _fmt_money(raw_een) if raw_een not in (None, '') else 'ONBEKEND'
                 row[f'{field_prefix}_totaal'] = _fmt_money(raw_tot) if raw_tot not in (None, '') else 'ONBEKEND'
+                warning = ComparisonMatcher.warning_for_offer(match_row, offer)
+                tooltip = self.tooltip_for_offer(offer, row[f'{field_prefix}_omschrijving'], warning)
+                row[f'{field_prefix}_prijs_warning'] = warning
+                row[f'{field_prefix}_totaal_warning'] = warning
+                row[f'{field_prefix}_verschil_warning'] = warning
+                row[f'{field_prefix}_prijs_tooltip'] = tooltip
+                row[f'{field_prefix}_totaal_tooltip'] = tooltip
+                row[f'{field_prefix}_verschil_tooltip'] = tooltip
+                row[f'{field_prefix}_verschil'] = ''
+
+            self.add_difference_percentages(row, self.offer_names)
             rows.append(row)
 
         # Append a totals row which sums the per-offer subtotals.
@@ -196,10 +264,102 @@ class MatchedPostenTable(TabulatorTable):
             totals_row[f'{field_prefix}_omschrijving'] = 'Totaal'
             totals_row[f'{field_prefix}_prijs'] = ''
             totals_row[f'{field_prefix}_totaal'] = self.format_money(total_sum) if has_value else 'ONBEKEND'
+            totals_row[f'{field_prefix}_verschil'] = ''
+            totals_row[f'{field_prefix}_prijs_tooltip'] = 'Totaal'
+            totals_row[f'{field_prefix}_totaal_tooltip'] = 'Totaal'
+            totals_row[f'{field_prefix}_verschil_tooltip'] = 'Totaal'
 
+        self.add_difference_percentages(totals_row, self.offer_names)
         rows.append(totals_row)
 
         return rows
+
+    @staticmethod
+    def tooltip_for_offer(offer: dict, matched_description: str, warning: str) -> str:
+        matched_posts = ComparisonMatcher.matched_post_descriptions(offer)
+        categories = ComparisonMatcher.matched_categories(offer)
+        if len(matched_posts) > 1:
+            tooltip = 'Gematchte posten:\n' + '\n'.join(f'- {description}' for description in matched_posts)
+        else:
+            tooltip = f'Gematchte omschrijving: {str(matched_description or "ONBEKEND").strip() or "ONBEKEND"}'
+
+        if categories:
+            tooltip += '\nCategorie: ' + ', '.join(categories)
+
+        if warning:
+            tooltip += f'\nWaarschuwing: {warning}'
+
+        return tooltip
+
+    @classmethod
+    def total_decimals_by_offer(cls, offer_names: list[str], match_rows: list[dict]) -> dict[str, Decimal | None]:
+        totals: dict[str, Decimal] = {}
+        has_value: dict[str, bool] = {}
+
+        for offer_name in offer_names:
+            totals[offer_name] = Decimal('0')
+            has_value[offer_name] = False
+
+        for match_row in match_rows:
+            if not isinstance(match_row, dict):
+                continue
+
+            amount = ComparisonMatcher.parse_decimal(match_row.get('Aantal'))
+            offers = match_row.get('Offertes', {})
+            if not isinstance(offers, dict):
+                continue
+
+            for offer_name in offer_names:
+                offer = offers.get(offer_name, {})
+                if not isinstance(offer, dict):
+                    continue
+
+                value = ComparisonMatcher.parse_decimal(offer.get('Totaalbedrag'))
+                if value is None and amount is not None:
+                    unit_price = ComparisonMatcher.parse_decimal(offer.get('Eenheidsprijs'))
+                    if unit_price is not None:
+                        value = amount * unit_price
+
+                if value is None:
+                    continue
+
+                totals[offer_name] += value
+                has_value[offer_name] = True
+
+        return {
+            offer_name: totals[offer_name] if has_value[offer_name] else None
+            for offer_name in offer_names
+        }
+
+    @classmethod
+    def add_difference_percentages(cls, row: dict, offer_names: list[str]) -> None:
+        totals = {
+            index: ComparisonMatcher.parse_decimal(row.get(f'offer_{index}_totaal'))
+            for index, _offer_name in enumerate(offer_names)
+        }
+        known_totals = [total for total in totals.values() if total is not None]
+        if not known_totals:
+            return
+
+        lowest_total = min(known_totals)
+        for index, total in totals.items():
+            field_prefix = f'offer_{index}'
+            if total is None:
+                row[f'{field_prefix}_verschil'] = 'ONBEKEND'
+                continue
+
+            row[f'{field_prefix}_verschil'] = cls.format_percentage_difference(total, lowest_total)
+
+    @staticmethod
+    def format_percentage_difference(total: Decimal, lowest_total: Decimal) -> str:
+        if lowest_total == 0:
+            return '0,0%' if total == 0 else 'ONBEKEND'
+
+        percentage = ((total - lowest_total) / lowest_total * Decimal('100')).quantize(Decimal('0.1'))
+        if percentage == 0:
+            return '0,0%'
+
+        return f'+{str(percentage).replace(".", ",")}%'
 
     def totals_by_offer(self) -> dict[str, str]:
         totals: dict[str, Decimal] = {}
@@ -298,6 +458,17 @@ class ComparisonPage(SubPage):
     def match_button(self, project: Project, comparison: dict) -> None:
         with ui.row().classes('items-center gap-2 mt-4'):
             match_button = ui.button('Match Posten', icon='eva-bulb-outline').props('dense no-caps')
+            recalculate_button = ui.button(
+                'Recalculate',
+                icon='calculate',
+                on_click=lambda selected_project=project, data=comparison: self.recalculate_project_posts(
+                    selected_project,
+                    data,
+                ),
+            ).props('dense no-caps')
+
+            if not comparison.get('MatchedPosten'):
+                recalculate_button.props('disable')
 
             async def request_match(_event, selected_project=project, data=comparison, button=match_button):
                 await self.match_project_posts(selected_project, data, button)
@@ -383,6 +554,7 @@ class ComparisonPage(SubPage):
         offer_names = [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
 
         matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
+        offer_names = matched_table.offer_names
         # per-offer decimals for comparison
         offer_totals_dec: dict[str, Decimal | None] = {}
         for offer_name in offer_names:
@@ -397,6 +569,15 @@ class ComparisonPage(SubPage):
         comparison_total, comparison_total_label = self.comparison_total_from_json(comparison)
 
         with ui.row().classes('items-center gap-2 mt-2'):
+            ui.button(
+                'Add row',
+                icon='add',
+                on_click=lambda selected_project=project, data=comparison, names=offer_names: self.add_matched_post_row(
+                    selected_project,
+                    data,
+                    names,
+                ),
+            ).props('dense no-caps')
             ui.button(
                 'Copy for Excel',
                 icon='content_copy',
@@ -457,6 +638,26 @@ class ComparisonPage(SubPage):
                 pass
 
         matched_tab.on_event('cellEdited', matched_update_cell)
+
+        def matched_delete_row(event) -> None:
+            cell = event.args.get('cell', {})
+            column = cell.get('column', {})
+            if column.get('field') != '__delete__':
+                return
+
+            row = cell.get('row', {})
+            row_id = row.get('id')
+            if row_id is None or row_id >= len(match_rows):
+                return
+
+            match_rows.pop(row_id)
+            comparison['MatchedPosten'] = match_rows
+            comparison.pop('Matches', None)
+            project.save_comparison(comparison)
+            matched_table.rows = matched_table.rows_from_matches(match_rows)
+            matched_tab.set_data(matched_table.rows)
+
+        matched_tab.on_event('cellClick', matched_delete_row)
 
         # If comparison JSON contains an optional total, warn when it does not match
         # the totals row inside the table for any offer.
@@ -525,4 +726,42 @@ class ComparisonPage(SubPage):
         comparison.pop('Matches', None)
         project.save_comparison(comparison)
         self.notify_safe('Matched posts')
+        self.refresh()
+
+    def recalculate_project_posts(self, project: Project, comparison: dict) -> None:
+        if not comparison.get('MatchedPosten'):
+            ui.notify('Match posts before recalculating')
+            return
+
+        comparison['MatchedPosten'] = self.matcher.recalculate_matched_posts(comparison, project)
+        comparison.pop('Matches', None)
+        project.save_comparison(comparison)
+        self.notify_safe('Recalculated posts')
+        self.refresh()
+
+    def add_matched_post_row(self, project: Project, comparison: dict, offer_names: list[str]) -> None:
+        matched_posts = comparison.setdefault('MatchedPosten', [])
+        if not isinstance(matched_posts, list):
+            matched_posts = []
+            comparison['MatchedPosten'] = matched_posts
+
+        matched_posts.append({
+            'Omschrijving': '',
+            'Aantal': '',
+            'Eenheid': '',
+            'Offertes': {
+                offer_name: {
+                    'Match type': 'single',
+                    'Gematchte omschrijving': 'ONBEKEND',
+                    'Gematchte eenheid': 'ONBEKEND',
+                    'Eenheidsprijs': 'ONBEKEND',
+                    'Totaalbedrag': 'ONBEKEND',
+                    'Overeenkomst': '',
+                }
+                for offer_name in offer_names
+            },
+        })
+        comparison.pop('Matches', None)
+        project.save_comparison(comparison)
+        self.notify_safe('Added matched row')
         self.refresh()

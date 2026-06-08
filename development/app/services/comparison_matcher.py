@@ -38,7 +38,9 @@ class ComparisonMatcher:
             {json.dumps(offer_results, ensure_ascii=False, indent=2)}
 
             Maak per vergelijkingsregel en per offertebestand de beste match.
-            Kopieer de gematchte omschrijving letterlijk uit de offerteposten.
+            Gebruik "Match type": "single" als een vergelijkingsregel bij één offertepost hoort.
+            Gebruik "Match type": "group" als een vergelijkingsregel bij meerdere offerteposten samen hoort.
+            Kopieer gematchte omschrijvingen letterlijk uit de offerteposten.
             Geef bij iedere regel bij Overeenkomst aan hoe zeker je bent over de match met een score van 1 tot 3. Met 1 het laagst, en 3 het hoogst.
             Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
             Vul niet bij 2 posten dezelde post uit de offerte in.
@@ -48,7 +50,9 @@ class ComparisonMatcher:
                 "Omschrijving": "...",
                 "Offertes": {{
                     "offerte-bestandsnaam.pdf": {{
+                    "Match type": "single",
                     "Gematchte omschrijving": "...",
+                    "Gematchte posten": ["..."],
                     "Overeenkomst": "..."
                     }}
                 }}
@@ -96,26 +100,11 @@ class ComparisonMatcher:
         return post
     
     def complete_offer_info(self, offer_result: dict, offer_match: dict) -> dict:
-        extracted_post = self.find_extracted_post_by_description(
-            offer_result,
-            offer_match.get('Gematchte omschrijving') or offer_match.get('Omschrijving'),
-        )
-        if not extracted_post:
-            return {
-                'Gematchte omschrijving': 'ONBEKEND',
-                'Gematchte eenheid': 'ONBEKEND',
-                'Eenheidsprijs': 'ONBEKEND',
-                'Totaalbedrag': 'ONBEKEND',
-                'Overeenkomst': offer_match.get('Overeenkomst', ''),
-            }
+        extracted_posts = self.find_extracted_posts_for_match(offer_result, offer_match)
+        if extracted_posts:
+            return self.offer_info_from_extracted_posts(extracted_posts, offer_match)
 
-        return {
-            'Gematchte omschrijving': extracted_post.get('Omschrijving', 'ONBEKEND'),
-            'Gematchte eenheid': extracted_post.get('Eenheid', 'ONBEKEND'),
-            'Eenheidsprijs': extracted_post.get('Eenheidsprijs', 'ONBEKEND'),
-            'Totaalbedrag': extracted_post.get('Totaalbedrag', 'ONBEKEND'),
-            'Overeenkomst': offer_match.get('Overeenkomst', ''),
-        }
+        return self.offer_info_from_match(offer_match)
 
     def normalize_matched_posts(self, project: Project, comparison: dict, match_result: dict) -> list[dict]:
         offer_results = self.project_offer_results(project)
@@ -134,32 +123,14 @@ class ComparisonMatcher:
                 if not offer_match:
                     offer_match = self.find_flat_match(flat_rows, comparison_row, offer_name)
 
-                extracted_post = self.find_extracted_offer_post(offer_results, offer_name, offer_match)
-                unit_price = self.first_known_value(
-                    offer_match.get('Eenheidsprijs'),
-                    extracted_post.get('Eenheidsprijs'),
-                )
-                total = self.calculate_total(
+                offer_result = self.find_offer_result(offer_results, offer_name)
+                normalized_offer = self.complete_offer_info(offer_result, offer_match)
+                normalized_offer['Totaalbedrag'] = self.calculate_offer_total(
                     comparison_row.get('Aantal', ''),
-                    unit_price,
-                    self.first_known_value(
-                        offer_match.get('Totaalbedrag'),
-                        extracted_post.get('Totaalbedrag'),
-                    ),
+                    normalized_offer,
+                    comparison_row.get('Eenheid'),
                 )
-                normalized_offers[offer_name] = {
-                    'Gematchte omschrijving': self.first_known_value(
-                        offer_match.get('Gematchte omschrijving'),
-                        extracted_post.get('Omschrijving'),
-                    ),
-                    'Gematchte eenheid': self.first_known_value(
-                        offer_match.get('Gematchte eenheid'),
-                        extracted_post.get('Eenheid'),
-                    ),
-                    'Eenheidsprijs': unit_price,
-                    'Totaalbedrag': total,
-                    'Overeenkomst': offer_match.get('Overeenkomst', ''),
-                }
+                normalized_offers[offer_name] = normalized_offer
 
             normalized_rows.append({
                 'Omschrijving': comparison_row.get('Omschrijving', ''),
@@ -169,6 +140,237 @@ class ComparisonMatcher:
             })
 
         return normalized_rows
+
+    def recalculate_matched_posts(self, comparison: dict, project: Project | None = None) -> list[dict]:
+        matched_posts = comparison.get('MatchedPosten', [])
+        if not isinstance(matched_posts, list):
+            return []
+
+        offer_results = self.project_offer_results(project) if project is not None else []
+
+        for matched_row in matched_posts:
+            if not isinstance(matched_row, dict):
+                continue
+
+            amount = matched_row.get('Aantal', '')
+            comparison_unit = matched_row.get('Eenheid')
+            offers = matched_row.get('Offertes', {})
+            if not isinstance(offers, dict):
+                continue
+
+            for offer_name, offer in offers.items():
+                if not isinstance(offer, dict):
+                    continue
+
+                self.refresh_offer_match_from_extract(offer_results, offer_name, offer)
+                offer['Totaalbedrag'] = self.calculate_offer_total(amount, offer, comparison_unit)
+
+        return matched_posts
+
+    def refresh_offer_match_from_extract(self, offer_results: list[dict], offer_name: str, offer_match: dict) -> None:
+        offer_result = self.find_offer_result(offer_results, offer_name)
+        extracted_posts = self.find_extracted_posts_for_match(offer_result, offer_match)
+        if not extracted_posts:
+            return
+
+        offer_match.update(self.offer_info_from_extracted_posts(extracted_posts, offer_match))
+
+    @classmethod
+    def calculate_offer_total(cls, amount: str, offer: dict, comparison_unit: str | None = None) -> str:
+        units = [
+            comparison_unit,
+            offer.get('Gematchte eenheid'),
+            offer.get('Eenheid'),
+        ]
+        unit_price = offer.get('Eenheidsprijs')
+        fallback_total = offer.get('Totaalbedrag')
+
+        if cls.match_type_for_offer(offer) == 'group':
+            return cls.first_known_value(fallback_total, unit_price)
+
+        if any('post' in cls.normalize_unit(unit) for unit in units):
+            return cls.first_known_value(fallback_total, unit_price)
+
+        return cls.calculate_total(amount, unit_price, fallback_total)
+
+    @classmethod
+    def offer_info_from_extracted_posts(cls, extracted_posts: list[dict], offer_match: dict) -> dict:
+        if len(extracted_posts) == 1:
+            extracted_post = extracted_posts[0]
+            return {
+                'Match type': 'single',
+                'Gematchte omschrijving': extracted_post.get('Omschrijving', 'ONBEKEND'),
+                'Gematchte categorie': extracted_post.get('Categorie', 'ONBEKEND'),
+                'Gematchte eenheid': extracted_post.get('Eenheid', 'ONBEKEND'),
+                'Eenheidsprijs': extracted_post.get('Eenheidsprijs', 'ONBEKEND'),
+                'Totaalbedrag': extracted_post.get('Totaalbedrag', 'ONBEKEND'),
+                'Overeenkomst': offer_match.get('Overeenkomst', ''),
+            }
+
+        total = cls.sum_extracted_totals(extracted_posts)
+        descriptions = [
+            post.get('Omschrijving', '')
+            for post in extracted_posts
+            if post.get('Omschrijving')
+        ]
+        categories = cls.extracted_categories(extracted_posts)
+        return {
+            'Match type': 'group',
+            'Gematchte omschrijving': f'{len(descriptions)} posten',
+            'Gematchte posten': descriptions,
+            'Gematchte categorie': cls.format_categories(categories),
+            'Gematchte categorieen': categories,
+            'Gematchte eenheid': 'post',
+            'Eenheidsprijs': 'ONBEKEND',
+            'Totaalbedrag': total,
+            'Overeenkomst': offer_match.get('Overeenkomst', ''),
+        }
+
+    @classmethod
+    def offer_info_from_match(cls, offer_match: dict) -> dict:
+        matched_posts = cls.matched_post_descriptions(offer_match)
+        match_type = cls.match_type_for_offer(offer_match)
+        info = {
+            'Match type': match_type,
+            'Gematchte omschrijving': cls.first_known_value(
+                offer_match.get('Gematchte omschrijving'),
+                offer_match.get('Omschrijving'),
+            ),
+            'Gematchte categorie': cls.first_known_value(offer_match.get('Gematchte categorie'), offer_match.get('Categorie')),
+            'Gematchte eenheid': cls.first_known_value(offer_match.get('Gematchte eenheid'), offer_match.get('Eenheid')),
+            'Eenheidsprijs': cls.first_known_value(offer_match.get('Eenheidsprijs')),
+            'Totaalbedrag': cls.first_known_value(offer_match.get('Totaalbedrag')),
+            'Overeenkomst': offer_match.get('Overeenkomst', ''),
+        }
+        if matched_posts:
+            info['Gematchte posten'] = matched_posts
+        categories = cls.matched_categories(offer_match)
+        if categories:
+            info['Gematchte categorieen'] = categories
+        return info
+
+    @staticmethod
+    def extracted_categories(extracted_posts: list[dict]) -> list[str]:
+        categories = []
+        for post in extracted_posts:
+            category = str(post.get('Categorie') or '').strip()
+            if category and category.upper() != 'ONBEKEND' and category not in categories:
+                categories.append(category)
+
+        return categories
+
+    @staticmethod
+    def format_categories(categories: list[str]) -> str:
+        if not categories:
+            return 'ONBEKEND'
+        return ', '.join(categories)
+
+    @staticmethod
+    def matched_categories(offer_match: dict) -> list[str]:
+        raw_categories = offer_match.get('Gematchte categorieen') or offer_match.get('Gematchte categorieën') or []
+        if isinstance(raw_categories, list):
+            return [
+                str(category).strip()
+                for category in raw_categories
+                if str(category or '').strip() and str(category).strip().upper() != 'ONBEKEND'
+            ]
+
+        category = offer_match.get('Gematchte categorie') or offer_match.get('Categorie')
+        if not category or str(category).strip().upper() == 'ONBEKEND':
+            return []
+        return [str(category).strip()]
+
+    @classmethod
+    def sum_extracted_totals(cls, extracted_posts: list[dict]) -> str:
+        total = Decimal('0')
+        has_total = False
+        for post in extracted_posts:
+            amount = cls.parse_decimal(post.get('Totaalbedrag'))
+            if amount is None:
+                continue
+
+            total += amount
+            has_total = True
+
+        return f'{total:.2f}' if has_total else 'ONBEKEND'
+
+    @classmethod
+    def match_type_for_offer(cls, offer_match: dict) -> str:
+        match_type = str(offer_match.get('Match type') or offer_match.get('Match Type') or '').strip().casefold()
+        if match_type == 'group':
+            return 'group'
+        if len(cls.matched_post_descriptions(offer_match)) > 1:
+            return 'group'
+        return 'single'
+
+    @staticmethod
+    def matched_post_descriptions(offer_match: dict) -> list[str]:
+        raw_posts = offer_match.get('Gematchte posten') or offer_match.get('Gematchte Posten') or []
+        if isinstance(raw_posts, list):
+            descriptions = [
+                str(description).strip()
+                for description in raw_posts
+                if str(description or '').strip() and str(description).strip().upper() != 'ONBEKEND'
+            ]
+            if descriptions:
+                return descriptions
+
+        description = offer_match.get('Gematchte omschrijving') or offer_match.get('Omschrijving')
+        if not description or str(description).strip().upper() == 'ONBEKEND':
+            return []
+        return [str(description).strip()]
+
+    @classmethod
+    def warning_for_offer(cls, match_row: dict, offer: dict) -> str:
+        warnings = []
+        comparison_unit = match_row.get('Eenheid', '')
+        matched_unit = (
+            offer.get('Gematchte eenheid')
+            or offer.get('Eenheid')
+            or ''
+        )
+
+        if cls.units_mismatch(comparison_unit, matched_unit) and not cls.post_total_covers_mismatch(
+            comparison_unit,
+            matched_unit,
+            offer,
+        ):
+            warnings.append(f'Eenheid wijkt af: vergelijking {comparison_unit}, offerte {matched_unit}.')
+
+        score = str(offer.get('Overeenkomst', '')).strip()
+        if score in {'1', '2'}:
+            warnings.append(f'Lage overeenkomstscore ({score}). Controleer de match.')
+
+        return ' '.join(warnings)
+
+    @classmethod
+    def units_mismatch(cls, comparison_unit: str | None, matched_unit: str | None) -> bool:
+        comparison = cls.normalize_unit(comparison_unit)
+        matched = cls.normalize_unit(matched_unit)
+        return bool(comparison and matched and comparison != matched)
+
+    @classmethod
+    def post_total_covers_mismatch(cls, comparison_unit: str | None, matched_unit: str | None, offer: dict) -> bool:
+        comparison = cls.normalize_unit(comparison_unit)
+        matched = cls.normalize_unit(matched_unit)
+        if 'post' not in {comparison, matched}:
+            return False
+
+        return cls.parse_decimal(offer.get('Totaalbedrag')) is not None
+
+    @staticmethod
+    def normalize_unit(value: str | None) -> str:
+        text = str(value or '').strip().casefold()
+        if not text or text == 'onbekend':
+            return ''
+
+        return (
+            text
+            .replace('²', '2')
+            .replace('¹', '1')
+            .replace(' ', '')
+            .replace('.', '')
+        )
 
     @staticmethod
     def parse_decimal(value: str | int | float | None) -> Decimal | None:
@@ -232,19 +434,29 @@ class ComparisonMatcher:
 
         return {}
 
-    @classmethod
-    def find_extracted_offer_post(cls, offer_results: list[dict], offer_name: str, offer_match: dict) -> dict:
-        matched_description = offer_match.get('Gematchte omschrijving') or offer_match.get('Omschrijving')
-        if not matched_description or str(matched_description).strip().upper() == 'ONBEKEND':
-            return {}
-
+    @staticmethod
+    def find_offer_result(offer_results: list[dict], offer_name: str) -> dict:
         for offer_result in offer_results:
-            if offer_result.get('Bestand') != offer_name:
-                continue
-
-            return cls.find_extracted_post_by_description(offer_result, matched_description)
+            if offer_result.get('Bestand') == offer_name:
+                return offer_result
 
         return {}
+
+    @classmethod
+    def find_extracted_posts_for_match(cls, offer_result: dict, offer_match: dict) -> list[dict]:
+        extracted_posts = []
+        for description in cls.matched_post_descriptions(offer_match):
+            extracted_post = cls.find_extracted_post_by_description(offer_result, description)
+            if extracted_post:
+                extracted_posts.append(extracted_post)
+
+        return extracted_posts
+
+    @classmethod
+    def find_extracted_offer_post(cls, offer_results: list[dict], offer_name: str, offer_match: dict) -> dict:
+        offer_result = cls.find_offer_result(offer_results, offer_name)
+        extracted_posts = cls.find_extracted_posts_for_match(offer_result, offer_match)
+        return extracted_posts[0] if extracted_posts else {}
 
     @staticmethod
     def normalize_text(value: str | None) -> str:

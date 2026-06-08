@@ -2,179 +2,86 @@
     "Posten": [
         {
             "Omschrijving": "Schilderwerk binnenkozijnen",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "Schilderwerk aftimmeringen",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "Schilderwerk vloerplinten",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "Vloerplinten",
-            "Aantal": "1016,67",
+            "Aantal": "289,32",
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "Scan en sauswerk wanden",
-            "Aantal": "1",
-            "Eenheid": "post"
+            "Omschrijving": "Schilderwerk vloerplinten",
+            "Aantal": "1016,67",
+            "Eenheid": "m1"
         },
         {
-            "Omschrijving": "dagkant afwerking 290x12mm multiplex",
+            "Omschrijving": "Schilderwerk dagkantafwerking buitenkozijnen",
             "Aantal": "151,92",
             "Eenheid": "m2"
         },
         {
             "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
             "Aantal": "3.195,92",
-            "Eenheid": "m2"
-        },
-        {
-            "Omschrijving": "Dagkant afwerking buitenkozijnen",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "GRONDVERF DAGKANTAFWERKING TPV BUITENKOZIJNEN",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "GRONDVERF DAGKANTAFWERKING TPV BUITENKOZIJNEN",
-            "Aantal": "503,05",
             "Eenheid": "m2"
         }
     ],
     "MatchedPosten": [
         {
             "Omschrijving": "Schilderwerk binnenkozijnen",
-            "Aantal": "1",
-            "Eenheid": "post",
+            "Aantal": "289,32",
+            "Eenheid": "m2",
             "Offertes": {
                 "Coenen.pdf": {
                     "Gematchte omschrijving": "46.31.11-b Schilderwerk binnenkozijnen",
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "8762",
-                    "Match toelichting": "Directe tekstuele match op schilderwerk van binnenkozijnen."
+                    "Overeenkomst": "3"
                 },
                 "Schildersgilde.pdf": {
                     "Gematchte omschrijving": "Binnenkozijnen",
-                    "Gematchte eenheid": "m¹",
-                    "Eenheidsprijs": "9,25",
-                    "Totaalbedrag": "9.25",
-                    "Match toelichting": "Match op basis van omschrijving 'Binnenkozijnen'."
-                }
-            }
-        },
-        {
-            "Omschrijving": "Schilderwerk aftimmeringen",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "Schilderwerk aftimmeringen",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "1082",
-                    "Match toelichting": "Exacte tekstuele match."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen specifieke post voor algemene aftimmeringen gevonden."
+                    "Gematchte eenheid": "m1",
+                    "Eenheidsprijs": "9.25",
+                    "Totaalbedrag": "2676.21",
+                    "Overeenkomst": "3"
                 }
             }
         },
         {
             "Omschrijving": "Schilderwerk vloerplinten",
-            "Aantal": "1",
-            "Eenheid": "post",
+            "Aantal": "1016,67",
+            "Eenheid": "m1",
             "Offertes": {
                 "Coenen.pdf": {
                     "Gematchte omschrijving": "Schilderwerk vloerplinten",
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "5871",
-                    "Match toelichting": "Exacte tekstuele match."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Post 'Plinten' is reeds gekoppeld aan de materiaal/hoeveelheid regel."
-                }
-            }
-        },
-        {
-            "Omschrijving": "Vloerplinten",
-            "Aantal": "1016,67",
-            "Eenheid": "m2",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Coenen biedt enkel het schilderwerk aan, geen levering/aanbrengen van plinten als aparte post."
+                    "Overeenkomst": "3"
                 },
                 "Schildersgilde.pdf": {
                     "Gematchte omschrijving": "Plinten",
-                    "Gematchte eenheid": "m¹",
-                    "Eenheidsprijs": "8,55",
+                    "Gematchte eenheid": "m1",
+                    "Eenheidsprijs": "8.55",
                     "Totaalbedrag": "8692.53",
-                    "Match toelichting": "Match op basis van omschrijving en hoeveelheid (1120 m1 vs 1016 m2 in begroting)."
+                    "Overeenkomst": "3"
                 }
             }
         },
         {
-            "Omschrijving": "Scan en sauswerk wanden",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "46.38.59-e Scan en sauswerk wanden",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "48934",
-                    "Match toelichting": "Exacte tekstuele match."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Wandafwerking bij Schildersgilde is gekoppeld aan de m2 regel voor glasweefsel."
-                }
-            }
-        },
-        {
-            "Omschrijving": "dagkant afwerking 290x12mm multiplex",
+            "Omschrijving": "Schilderwerk dagkantafwerking buitenkozijnen",
             "Aantal": "151,92",
             "Eenheid": "m2",
             "Offertes": {
                 "Coenen.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte omschrijving": "Schilderwerk aftimmeringen buitenkozijnen",
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen levering van multiplex dagkanten gevonden in offerte."
+                    "Totaalbedrag": "3918",
+                    "Overeenkomst": "3"
                 },
                 "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen levering van multiplex dagkanten gevonden in offerte."
+                    "Gematchte omschrijving": "Dagkanten binnenzijde buitenkozijnen",
+                    "Gematchte eenheid": "m1",
+                    "Eenheidsprijs": "8.65",
+                    "Totaalbedrag": "1314.11",
+                    "Overeenkomst": "3"
                 }
             }
         },
@@ -184,81 +91,18 @@
             "Eenheid": "m2",
             "Offertes": {
                 "Coenen.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte omschrijving": "46.38.59-e Scan en sauswerk wanden",
                     "Gematchte eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Reeds gekoppeld aan de 'Scan en sauswerk' post."
+                    "Totaalbedrag": "48934",
+                    "Overeenkomst": "3"
                 },
                 "Schildersgilde.pdf": {
                     "Gematchte omschrijving": "Basiskleur",
-                    "Gematchte eenheid": "m²",
-                    "Eenheidsprijs": "18,50",
+                    "Gematchte eenheid": "m2",
+                    "Eenheidsprijs": "18.50",
                     "Totaalbedrag": "59124.52",
-                    "Match toelichting": "Match op basis van de grootste post voor wandafwerking en vergelijkbare m2 (3411 m2 vs 3195 m2)."
-                }
-            }
-        },
-        {
-            "Omschrijving": "Dagkant afwerking buitenkozijnen",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "Schilderwerk aftimmeringen buitenkozijnen",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "3918",
-                    "Match toelichting": "Match op basis van schilderwerk aan aftimmeringen/dagkanten bij buitenkozijnen."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "Dagkanten binnenzijde buitenkozijnen",
-                    "Gematchte eenheid": "m¹",
-                    "Eenheidsprijs": "8,65",
-                    "Totaalbedrag": "8.65",
-                    "Match toelichting": "Directe match op dagkanten bij buitenkozijnen."
-                }
-            }
-        },
-        {
-            "Omschrijving": "GRONDVERF DAGKANTAFWERKING TPV BUITENKOZIJNEN",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen aparte post voor grondverf gevonden."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen aparte post voor grondverf gevonden."
-                }
-            }
-        },
-        {
-            "Omschrijving": "GRONDVERF DAGKANTAFWERKING TPV BUITENKOZIJNEN",
-            "Aantal": "503,05",
-            "Eenheid": "m2",
-            "Offertes": {
-                "Coenen.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen aparte post voor grondverf gevonden."
-                },
-                "Schildersgilde.pdf": {
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Match toelichting": "Geen aparte post voor grondverf gevonden."
+                    "Overeenkomst": "2"
                 }
             }
         }
