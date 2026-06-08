@@ -128,21 +128,6 @@
     ],
     "MatchedPosten": [
         {
-            "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Lolkema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Leveren en aanbrengen drainage bouwkuip",
-                    "Gematchte eenheid": "m1",
-                    "Eenheidsprijs": "12.00",
-                    "Totaalbedrag": "4800.00",
-                    "Overeenkomst": "3"
-                }
-            }
-        },
-        {
             "Omschrijving": "Leveren en aanbrengen pomp t.b.v. drooghouden bouwkuip",
             "Aantal": "1",
             "Eenheid": "post",

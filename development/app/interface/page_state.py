@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from services.offer import Offer
+from domain.offer import Offer
 from services.project import Project
 
 

@@ -8,6 +8,10 @@ import json
 from nicegui import ui, run
 from nicegui_tabulator import tabulator
 
+from application.comparison_service import ComparisonService
+from domain.comparison_checks import warning_for_offer
+from domain.money import parse_decimal
+from matching.match_fields import matched_categories, matched_post_descriptions
 from .subpage import SubPage
 
 from services.comparison_matcher import ComparisonMatcher
@@ -25,7 +29,7 @@ class ComparisonRowsTable(TabulatorTable):
         super().__init__(
             rows=self.rows_from_comparison(),
             columns=[
-                self.text_column('Omschrijving', 'Omschrijving', editable=True),
+                self.text_column('Omschrijving', 'Omschrijving', editable=True, width=320, multiline=True),
                 self.text_column('Aantal', 'Aantal', editable=True, width=120),
                 self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
                 {
@@ -37,6 +41,7 @@ class ComparisonRowsTable(TabulatorTable):
                     ':formatter': "function(){ return 'x'; }",
                 },
             ],
+            height='32vh',
         )
 
     def rows_from_comparison(self) -> list[dict]:
@@ -95,11 +100,12 @@ class MatchedPostenTable(TabulatorTable):
             columns=self.columns_from_offers(),
             layout='fitDataStretch',
             reactive=False,
+            height='68vh',
         )
 
     def columns_from_offers(self) -> list[dict]:
         columns = [
-            self.text_column('Omschrijving', 'Omschrijving', width=260),
+            self.text_column('Omschrijving', 'Omschrijving', width=220, multiline=True),
             self.text_column('Aantal', 'Aantal', editable=True, width=100),
             self.text_column('Eenheid', 'Eenheid', editable=True, width=100),
         ]
@@ -213,14 +219,14 @@ class MatchedPostenTable(TabulatorTable):
                     raw_een = ''
 
                 def _fmt_money(val):
-                    dec = ComparisonMatcher.parse_decimal(val)
+                    dec = parse_decimal(val)
                     if dec is None:
                         return 'ONBEKEND'
                     return self.format_money(dec)
 
                 row[f'{field_prefix}_prijs'] = _fmt_money(raw_een) if raw_een not in (None, '') else 'ONBEKEND'
                 row[f'{field_prefix}_totaal'] = _fmt_money(raw_tot) if raw_tot not in (None, '') else 'ONBEKEND'
-                warning = ComparisonMatcher.warning_for_offer(match_row, offer)
+                warning = warning_for_offer(match_row, offer)
                 tooltip = self.tooltip_for_offer(offer, row[f'{field_prefix}_omschrijving'], warning)
                 row[f'{field_prefix}_prijs_warning'] = warning
                 row[f'{field_prefix}_totaal_warning'] = warning
@@ -247,11 +253,11 @@ class MatchedPostenTable(TabulatorTable):
             total_sum = Decimal('0')
             has_value = False
             for r in rows:
-                value = ComparisonMatcher.parse_decimal(r.get(f'{field_prefix}_totaal'))
+                value = parse_decimal(r.get(f'{field_prefix}_totaal'))
                 if value is None:
                     # if a row has no totaal, try to compute from aantal * prijs
-                    aantal = ComparisonMatcher.parse_decimal(r.get('Aantal'))
-                    prijs = ComparisonMatcher.parse_decimal(r.get(f'{field_prefix}_prijs'))
+                    aantal = parse_decimal(r.get('Aantal'))
+                    prijs = parse_decimal(r.get(f'{field_prefix}_prijs'))
                     if aantal is not None and prijs is not None:
                         value = aantal * prijs
 
@@ -276,8 +282,8 @@ class MatchedPostenTable(TabulatorTable):
 
     @staticmethod
     def tooltip_for_offer(offer: dict, matched_description: str, warning: str) -> str:
-        matched_posts = ComparisonMatcher.matched_post_descriptions(offer)
-        categories = ComparisonMatcher.matched_categories(offer)
+        matched_posts = matched_post_descriptions(offer)
+        categories = matched_categories(offer)
         if len(matched_posts) > 1:
             tooltip = 'Gematchte posten:\n' + '\n'.join(f'- {description}' for description in matched_posts)
         else:
@@ -304,7 +310,7 @@ class MatchedPostenTable(TabulatorTable):
             if not isinstance(match_row, dict):
                 continue
 
-            amount = ComparisonMatcher.parse_decimal(match_row.get('Aantal'))
+            amount = parse_decimal(match_row.get('Aantal'))
             offers = match_row.get('Offertes', {})
             if not isinstance(offers, dict):
                 continue
@@ -314,9 +320,9 @@ class MatchedPostenTable(TabulatorTable):
                 if not isinstance(offer, dict):
                     continue
 
-                value = ComparisonMatcher.parse_decimal(offer.get('Totaalbedrag'))
+                value = parse_decimal(offer.get('Totaalbedrag'))
                 if value is None and amount is not None:
-                    unit_price = ComparisonMatcher.parse_decimal(offer.get('Eenheidsprijs'))
+                    unit_price = parse_decimal(offer.get('Eenheidsprijs'))
                     if unit_price is not None:
                         value = amount * unit_price
 
@@ -334,7 +340,7 @@ class MatchedPostenTable(TabulatorTable):
     @classmethod
     def add_difference_percentages(cls, row: dict, offer_names: list[str]) -> None:
         totals = {
-            index: ComparisonMatcher.parse_decimal(row.get(f'offer_{index}_totaal'))
+            index: parse_decimal(row.get(f'offer_{index}_totaal'))
             for index, _offer_name in enumerate(offer_names)
         }
         known_totals = [total for total in totals.values() if total is not None]
@@ -370,7 +376,7 @@ class MatchedPostenTable(TabulatorTable):
             has_known_value = False
 
             for row in self.rows:
-                row_total = ComparisonMatcher.parse_decimal(row.get(f'{field_prefix}_totaal'))
+                row_total = parse_decimal(row.get(f'{field_prefix}_totaal'))
                 if row_total is None:
                     continue
 
@@ -423,6 +429,7 @@ class ComparisonPage(SubPage):
     ) -> None:
         super().__init__(state, folder_handler, projects_dir, refresh)
         self.matcher = matcher or ComparisonMatcher(folder_handler)
+        self.comparison_service = ComparisonService(folder_handler, self.matcher)
 
     def render(self):
         with ui.column().classes('w-full h-full'):
@@ -440,7 +447,7 @@ class ComparisonPage(SubPage):
         ui.label(f'Comparison: {project.name}').classes('text-xl font-bold')
 
         # Show invoer
-        comparison = project.load_comparison()
+        comparison = self.comparison_service.load_comparison(project)
         self.input_table(project, comparison)
 
         # Show match button
@@ -472,7 +479,6 @@ class ComparisonPage(SubPage):
 
             async def request_match(_event, selected_project=project, data=comparison, button=match_button):
                 await self.match_project_posts(selected_project, data, button)
-                self.refresh()
 
             match_button.on('click', request_match)
 
@@ -495,7 +501,7 @@ class ComparisonPage(SubPage):
             row = cell.get('row', {})
             column = cell.get('column', {})
             comparison_table.update_cell(row.get('id'), column.get('field'), cell.get('value', ''))
-            project.save_comparison(comparison)
+            self.comparison_service.save_comparison(project, comparison)
 
         def delete_row(event) -> None:
             cell = event.args.get('cell', {})
@@ -505,17 +511,14 @@ class ComparisonPage(SubPage):
 
             row = cell.get('row', {})
             comparison_table.delete_row(row.get('id'))
-            project.save_comparison(comparison)
+            self.comparison_service.save_comparison(project, comparison)
             comparison_tabulator.set_data(comparison_table.rows)
 
         comparison_tabulator.on_event('cellEdited', update_cell)
         comparison_tabulator.on_event('cellClick', delete_row)
 
     def update_comparison_value(self, project: Project, comparison: dict, row_index: int, field: str, value: str) -> None:
-        comparison['Posten'][row_index][field] = value
-        comparison.pop('MatchedPosten', None)
-        comparison.pop('Matches', None)
-        project.save_comparison(comparison)
+        self.comparison_service.update_comparison_row(project, comparison, row_index, field, value)
 
     def add_comparison_row(
         self,
@@ -524,34 +527,22 @@ class ComparisonPage(SubPage):
         comparison_table=None,
     ) -> None:
         if comparison_table is None:
-            comparison.setdefault('Posten', [])
-            comparison['Posten'].append({
-                'Omschrijving': '',
-                'Aantal': '',
-                'Eenheid': '',
-            })
-            comparison.pop('MatchedPosten', None)
-            comparison.pop('Matches', None)
+            self.comparison_service.add_comparison_row(project, comparison)
         else:
             comparison_table.add_row()
-
-        project.save_comparison(comparison)
+            self.comparison_service.save_comparison(project, comparison)
         self.refresh()
 
     def delete_comparison_row(self, project: Project, comparison: dict, row_index: int) -> None:
-        if 'Posten' not in comparison or row_index >= len(comparison['Posten']):
+        if not self.comparison_service.delete_comparison_row(project, comparison, row_index):
             ui.notify('Row no longer exists')
             self.refresh()
             return
 
-        comparison['Posten'].pop(row_index)
-        comparison.pop('MatchedPosten', None)
-        comparison.pop('Matches', None)
-        project.save_comparison(comparison)
         self.refresh()
 
     def render_side_by_side_match_table(self, project: Project, comparison: dict, match_rows: list[dict]) -> None:
-        offer_names = [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
+        offer_names = self.comparison_service.offer_names(project)
 
         matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
         offer_names = matched_table.offer_names
@@ -562,11 +553,11 @@ class ComparisonPage(SubPage):
             # look at the totals row (last row)
             if matched_table.rows:
                 last = matched_table.rows[-1]
-                offer_totals_dec[offer_name] = ComparisonMatcher.parse_decimal(last.get(f'{field_prefix}_totaal'))
+                offer_totals_dec[offer_name] = parse_decimal(last.get(f'{field_prefix}_totaal'))
             else:
                 offer_totals_dec[offer_name] = None
 
-        comparison_total, comparison_total_label = self.comparison_total_from_json(comparison)
+        comparison_total, comparison_total_label = self.comparison_service.comparison_total_from_json(comparison)
 
         with ui.row().classes('items-center gap-2 mt-2'):
             ui.button(
@@ -597,39 +588,17 @@ class ComparisonPage(SubPage):
             if row_id is None:
                 return
 
-            # Ensure the underlying comparison structure exists
-            comparison.setdefault('MatchedPosten', match_rows)
-            if row_id >= len(match_rows):
+            if not self.comparison_service.update_matched_cell(
+                project,
+                comparison,
+                match_rows,
+                row_id,
+                field,
+                value,
+                offer_names,
+            ):
                 return
 
-            matched_row = match_rows[row_id]
-
-            # Handle editing of top-level fields
-            if field in ('Aantal', 'Eenheid', 'Omschrijving'):
-                matched_row[field] = value
-            elif isinstance(field, str) and field.startswith('offer_'):
-                parts = field.split('_')
-                if len(parts) < 3:
-                    return
-                try:
-                    offer_index = int(parts[1])
-                except ValueError:
-                    return
-                suffix = parts[2]
-                if offer_index < 0 or offer_index >= len(offer_names):
-                    return
-
-                offer_name = offer_names[offer_index]
-                offers = matched_row.setdefault('Offertes', {})
-                offer_entry = offers.setdefault(offer_name, {})
-
-                if suffix == 'prijs':
-                    offer_entry['Eenheidsprijs'] = value
-                elif suffix == 'totaal':
-                    offer_entry['Totaalbedrag'] = value
-
-            # Persist changes and recompute the displayed rows (including totals row)
-            project.save_comparison(comparison)
             matched_table.rows = matched_table.rows_from_matches(match_rows)
             try:
                 matched_tab.set_data(matched_table.rows)
@@ -647,13 +616,9 @@ class ComparisonPage(SubPage):
 
             row = cell.get('row', {})
             row_id = row.get('id')
-            if row_id is None or row_id >= len(match_rows):
+            if not self.comparison_service.delete_matched_post_row(project, comparison, match_rows, row_id):
                 return
 
-            match_rows.pop(row_id)
-            comparison['MatchedPosten'] = match_rows
-            comparison.pop('Matches', None)
-            project.save_comparison(comparison)
             matched_table.rows = matched_table.rows_from_matches(match_rows)
             matched_tab.set_data(matched_table.rows)
 
@@ -672,18 +637,6 @@ class ComparisonPage(SubPage):
                     'Warning: the summed subtotals do not match the comparison total for '
                     + ', '.join(mismatched)
                 ).classes('text-xs text-red-700 font-semibold mt-2')
-
-    @staticmethod
-    def comparison_total_from_json(comparison: dict) -> tuple[Decimal | None, str]:
-        for key in ('Totaalprijs exc. BTW', 'Totaalprijs inc. BTW', 'Totaalbedrag', 'Totaal'):
-            if key not in comparison:
-                continue
-
-            total = ComparisonMatcher.parse_decimal(comparison.get(key))
-            if total is not None:
-                return total, key
-
-        return None, 'Totaal'
 
     def copy_match_table_to_clipboard(self, matched_table) -> None:
         clipboard_text = matched_table.to_excel_clipboard_text()
@@ -708,7 +661,7 @@ class ComparisonPage(SubPage):
             ui.notify('Add comparison rows before matching')
             return
 
-        if not self.matcher.project_offer_results(project):
+        if not self.comparison_service.has_offer_results(project):
             ui.notify('No extracted offer results available for this project')
             return
 
@@ -717,14 +670,11 @@ class ComparisonPage(SubPage):
         button.update()
 
         try:
-            match_result = await run.io_bound(self.matcher.match_comparison_posts, project, comparison)
+            await run.io_bound(self.comparison_service.match_project_posts, project, comparison)
         except Exception as error:
             self.notify_safe(f'Could not match posts: {error}')
             return
 
-        comparison['MatchedPosten'] = self.matcher.normalize_matched_posts(project, comparison, match_result)
-        comparison.pop('Matches', None)
-        project.save_comparison(comparison)
         self.notify_safe('Matched posts')
         self.refresh()
 
@@ -733,35 +683,11 @@ class ComparisonPage(SubPage):
             ui.notify('Match posts before recalculating')
             return
 
-        comparison['MatchedPosten'] = self.matcher.recalculate_matched_posts(comparison, project)
-        comparison.pop('Matches', None)
-        project.save_comparison(comparison)
+        self.comparison_service.recalculate_project_posts(project, comparison)
         self.notify_safe('Recalculated posts')
         self.refresh()
 
     def add_matched_post_row(self, project: Project, comparison: dict, offer_names: list[str]) -> None:
-        matched_posts = comparison.setdefault('MatchedPosten', [])
-        if not isinstance(matched_posts, list):
-            matched_posts = []
-            comparison['MatchedPosten'] = matched_posts
-
-        matched_posts.append({
-            'Omschrijving': '',
-            'Aantal': '',
-            'Eenheid': '',
-            'Offertes': {
-                offer_name: {
-                    'Match type': 'single',
-                    'Gematchte omschrijving': 'ONBEKEND',
-                    'Gematchte eenheid': 'ONBEKEND',
-                    'Eenheidsprijs': 'ONBEKEND',
-                    'Totaalbedrag': 'ONBEKEND',
-                    'Overeenkomst': '',
-                }
-                for offer_name in offer_names
-            },
-        })
-        comparison.pop('Matches', None)
-        project.save_comparison(comparison)
+        self.comparison_service.add_matched_post_row(project, comparison, offer_names)
         self.notify_safe('Added matched row')
         self.refresh()

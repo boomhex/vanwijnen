@@ -1,22 +1,26 @@
 from decimal import Decimal
 
+from domain.comparison_checks import warning_for_offer
+from domain.money import calculate_total, parse_decimal
+from domain.units import units_mismatch
+from matching.match_calculation import calculate_offer_total
 from services.comparison_matcher import ComparisonMatcher
 
 
 def test_parse_decimal():
-    assert ComparisonMatcher.parse_decimal('1.234,56') == Decimal('1234.56')
-    assert ComparisonMatcher.parse_decimal('1234.56') == Decimal('1234.56')
-    assert ComparisonMatcher.parse_decimal('ONBEKEND') is None
-    assert ComparisonMatcher.parse_decimal('') is None
+    assert parse_decimal('1.234,56') == Decimal('1234.56')
+    assert parse_decimal('1234.56') == Decimal('1234.56')
+    assert parse_decimal('ONBEKEND') is None
+    assert parse_decimal('') is None
 
 
 def test_calculate_total():
     # amount * unit_price
-    assert ComparisonMatcher.calculate_total('2', '3.50') == '7.00'
+    assert calculate_total('2', '3.50') == '7.00'
     # missing values returns fallback
-    assert ComparisonMatcher.calculate_total('ONBEKEND', '3.50', '42') == '42'
+    assert calculate_total('ONBEKEND', '3.50', '42') == '42'
     # decimals with commas
-    assert ComparisonMatcher.calculate_total('2,5', '2') == '5.00'
+    assert calculate_total('2,5', '2') == '5.00'
 
 
 def test_recalculate_matched_posts():
@@ -161,7 +165,7 @@ def test_recalculate_matched_posts_sums_group_matches_from_extract():
 
 
 def test_calculate_offer_total_uses_total_when_comparison_unit_is_post():
-    assert ComparisonMatcher.calculate_offer_total(
+    assert calculate_offer_total(
         '1',
         {
             'Gematchte eenheid': 'm1',
@@ -173,14 +177,14 @@ def test_calculate_offer_total_uses_total_when_comparison_unit_is_post():
 
 
 def test_units_mismatch_normalizes_common_unit_spellings():
-    assert ComparisonMatcher.units_mismatch('m2', 'm²') is False
-    assert ComparisonMatcher.units_mismatch('m1', 'm¹') is False
-    assert ComparisonMatcher.units_mismatch('dzd', 'st') is True
-    assert ComparisonMatcher.units_mismatch('dzd', 'ONBEKEND') is False
+    assert units_mismatch('m2', 'm²') is False
+    assert units_mismatch('m1', 'm¹') is False
+    assert units_mismatch('dzd', 'st') is True
+    assert units_mismatch('dzd', 'ONBEKEND') is False
 
 
 def test_warning_for_offer():
-    warning = ComparisonMatcher.warning_for_offer(
+    warning = warning_for_offer(
         {'Eenheid': 'dzd'},
         {'Gematchte eenheid': 'st', 'Overeenkomst': '1'},
     )
@@ -188,7 +192,7 @@ def test_warning_for_offer():
     assert 'Eenheid wijkt af' in warning
     assert 'Lage overeenkomstscore' in warning
 
-    warning = ComparisonMatcher.warning_for_offer(
+    warning = warning_for_offer(
         {'Eenheid': 'dzd'},
         {'Gematchte eenheid': 'dzd', 'Overeenkomst': '2'},
     )
@@ -197,7 +201,7 @@ def test_warning_for_offer():
 
 
 def test_warning_for_offer_allows_post_mismatch_with_total():
-    warning = ComparisonMatcher.warning_for_offer(
+    warning = warning_for_offer(
         {'Eenheid': 'post'},
         {
             'Gematchte eenheid': 'm1',
@@ -210,7 +214,7 @@ def test_warning_for_offer_allows_post_mismatch_with_total():
 
 
 def test_warning_for_offer_keeps_post_mismatch_without_total():
-    warning = ComparisonMatcher.warning_for_offer(
+    warning = warning_for_offer(
         {'Eenheid': 'post'},
         {
             'Gematchte eenheid': 'm1',

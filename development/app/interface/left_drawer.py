@@ -3,6 +3,7 @@ from typing import Callable
 
 from nicegui import events, run, ui
 
+from application.offer_service import OfferService
 from services.folder_handler import FolderHandler, UNASSIGNED_PROJECT
 from services.offer import Offer
 from services.project import Project
@@ -20,6 +21,7 @@ class LeftDrawer:
     ) -> None:
         self.state = state
         self.folder_handler = folder_handler
+        self.offer_service = OfferService(folder_handler)
         self.projects_dir = projects_dir
         self.refresh_right_side = refresh_right_side
         self.file_list_container = None
@@ -58,13 +60,34 @@ class LeftDrawer:
         except RuntimeError:
             print(message)
 
+    @staticmethod
+    def compact_name(name: str, max_length: int = 32, *, mode: str = 'middle') -> str:
+        if len(name) <= max_length:
+            return name
+
+        if max_length <= 3:
+            return name[:max_length]
+
+        if mode == 'end':
+            return f'{name[:max_length - 3]}...'
+
+        keep = max_length - 3
+        left = keep // 2
+        right = keep - left
+        return f'{name[:left]}...{name[-right:]}'
+
+    @staticmethod
+    def add_name_tooltip(displayed_name: str, full_name: str) -> None:
+        if displayed_name != full_name:
+            ui.tooltip(full_name)
+
     def file_list(self) -> None:
         project_names = [project.name for project in self.folder_handler.projects()]
         upload_options = project_names if project_names else [UNASSIGNED_PROJECT]
 
         with ui.row().classes('items-end gap-2 w-full no-wrap'):
             project_input = ui.input('New project').classes('grow')
-            ui.button('Add', on_click=lambda: self.create_project(project_input.value)).props('dense')
+            ui.button(icon='eva-folder-add-outline', on_click=lambda: self.create_project(project_input.value))
 
         ui.select(
             upload_options,
@@ -94,14 +117,22 @@ class LeftDrawer:
         self.schedule_refresh()
 
     def project_item(self, project: Project) -> None:
-        with ui.expansion(project.name, icon='folder').classes('w-full'):
+        project_label = self.compact_name(project.name, max_length=24, mode='end')
+        expansion = ui.expansion(project_label, icon='folder').classes('w-full')
+        if project_label != project.name:
+            expansion.tooltip(project.name)
+
+        with expansion:
             with ui.row().classes('items-center justify-between gap-2 w-full no-wrap'):
-                ui.label(project.name).classes('font-medium')
-                ui.button(
-                    'Compare',
-                    icon='compare_arrows',
-                    on_click=lambda selected_project=project: self.open_project_comparison(selected_project),
-                ).props('flat dense no-caps size=sm')
+                displayed_project_name = self.compact_name(project.name, max_length=22, mode='end')
+                ui.label(displayed_project_name).classes('font-medium min-w-0')
+                with ui.row().classes('items-center gap-1 no-wrap'):
+                    ui.button(
+                        'Compare',
+                        icon='compare_arrows',
+                        on_click=lambda selected_project=project: self.open_project_comparison(selected_project),
+                    ).props('flat dense no-caps size=sm')
+                    self.rename_project_button(project)
 
             offers = project.offers()
             if not offers:
@@ -119,8 +150,12 @@ class LeftDrawer:
             with ui.row().classes('items-start gap-2 w-full no-wrap'):
                 ui.icon('description').classes('text-gray-600 mt-1 text-sm')
                 with ui.column().classes('gap-0 grow min-w-0'):
-                    ui.label(offer.name).classes('font-medium text-sm break-all')
-                    ui.label(offer.project_name).classes('text-xs text-gray-500')
+                    displayed_offer_name = self.compact_name(offer.name, max_length=34)
+                    ui.label(displayed_offer_name).classes('font-medium text-sm')
+                    self.add_name_tooltip(displayed_offer_name, offer.name)
+                    displayed_project_name = self.compact_name(offer.project_name, max_length=30)
+                    ui.label(displayed_project_name).classes('text-xs text-gray-500')
+                    self.add_name_tooltip(displayed_project_name, offer.project_name)
                 if result_exists:
                     ui.icon('check_circle').classes('text-green-700 mt-1 text-sm')
                 elif extract_requested:
@@ -156,7 +191,7 @@ class LeftDrawer:
 
     def delete_file(self, offer: Offer) -> None:
         try:
-            offer.delete()
+            self.offer_service.delete(offer)
         except FileNotFoundError as error:
             ui.notify(str(error))
             self.schedule_refresh()
@@ -171,7 +206,7 @@ class LeftDrawer:
 
     def rename_file(self, offer: Offer, new_name: str | None) -> bool:
         try:
-            new_offer = offer.rename(new_name)
+            new_offer = self.offer_service.rename(offer, new_name)
         except (FileExistsError, FileNotFoundError, OSError, ValueError) as error:
             ui.notify(str(error))
             return False
@@ -184,9 +219,42 @@ class LeftDrawer:
         self.schedule_refresh()
         return True
 
+    def rename_project(self, project: Project, new_name: str | None) -> bool:
+        old_name = project.name
+
+        try:
+            new_project = project.rename(new_name)
+        except (FileExistsError, FileNotFoundError, OSError, ValueError) as error:
+            ui.notify(str(error))
+            return False
+
+        if self.state.upload_project == old_name:
+            self.state.upload_project = new_project.name
+
+        if self.state.comparison_project == project:
+            self.state.comparison_project = new_project
+            self.schedule_right_side_refresh()
+
+        if self.state.opened_offer is not None and self.state.opened_offer.project_name == old_name:
+            new_offer_path = new_project.path / self.state.opened_offer.name
+            self.state.opened_offer = self.folder_handler.offer_from_path(new_offer_path)
+            self.schedule_right_side_refresh()
+
+        updated_requested_offers = set()
+        for offer in self.state.extract_requested_offers:
+            if offer.project_name == old_name:
+                updated_requested_offers.add(self.folder_handler.offer_from_path(new_project.path / offer.name))
+            else:
+                updated_requested_offers.add(offer)
+        self.state.extract_requested_offers = updated_requested_offers
+
+        ui.notify(f'Renamed {old_name} to {new_project.name}')
+        self.schedule_refresh()
+        return True
+
     def move_file(self, offer: Offer, target_project: str | None) -> bool:
         try:
-            new_offer = offer.move_to_project(target_project)
+            new_offer = self.offer_service.move_to_project(offer, target_project)
         except (FileExistsError, FileNotFoundError, OSError, ValueError) as error:
             ui.notify(str(error))
             return False
@@ -220,6 +288,21 @@ class LeftDrawer:
                 ui.button('Save', on_click=save).props('dense no-caps size=sm')
 
         ui.button('Rename', icon='edit', on_click=dialog.open).props('flat dense no-caps size=sm')
+
+    def rename_project_button(self, project: Project) -> None:
+        with ui.dialog() as dialog, ui.card():
+            ui.label(f'Rename {project.name}').classes('font-medium')
+            name_input = ui.input('Project folder', value=project.name).classes('w-80')
+
+            def save():
+                if self.rename_project(project, name_input.value):
+                    dialog.close()
+
+            with ui.row().classes('justify-end w-full'):
+                ui.button('Cancel', on_click=dialog.close).props('flat dense no-caps size=sm')
+                ui.button('Save', on_click=save).props('dense no-caps size=sm')
+
+        ui.button('Rename', icon='drive_file_rename_outline', on_click=dialog.open).props('flat dense no-caps size=sm')
 
     def move_button(self, offer: Offer) -> None:
         project_options = [project.name for project in self.folder_handler.projects()]

@@ -4,8 +4,9 @@ from nicegui import ui
 from interface.editable_table_helper import render_editable_summary
 from nicegui_tabulator import tabulator
 from .tabulator_table import TabulatorTable
-from services.comparison_matcher import ComparisonMatcher
-from services.offer import Offer, Posten
+from application.offer_service import OfferService
+from domain.money import parse_decimal
+from domain.offer import Offer, Posten
 
 class OfferRowsTable(TabulatorTable):
     fields = ['Omschrijving', 'Categorie', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag']
@@ -15,7 +16,7 @@ class OfferRowsTable(TabulatorTable):
         super().__init__(
             rows=self.rows_from_posten(),
             columns=[
-                self.text_column('Omschrijving', 'Omschrijving', editable=True),
+                self.text_column('Omschrijving', 'Omschrijving', editable=True, width=320, multiline=True),
                 self.text_column('Categorie', 'Categorie', editable=True, width=180),
                 self.text_column('Aantal', 'Aantal', editable=True, width=120),
                 self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
@@ -32,6 +33,7 @@ class OfferRowsTable(TabulatorTable):
             ],
             layout='fitData',
             reactive=True,
+            height='52vh',
         )
 
     def rows_from_posten(self) -> list[dict]:
@@ -50,7 +52,7 @@ class OfferRowsTable(TabulatorTable):
             for field in ('Eenheidsprijs', 'Totaalbedrag'):
                 if field in formatted_row and formatted_row[field]:
                     try:
-                        decimal_val = ComparisonMatcher.parse_decimal(formatted_row[field])
+                        decimal_val = parse_decimal(formatted_row[field])
                         if decimal_val is not None:
                             formatted_row[field] = self.format_money(decimal_val)
                     except (ValueError, AttributeError):
@@ -106,6 +108,9 @@ class OfferRowsTable(TabulatorTable):
 
 
 class OfferPage(SubPage):
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+        self.offer_service = OfferService(self.folder_handler)
 
     def render(self) -> None:
         self.show()
@@ -128,7 +133,7 @@ class OfferPage(SubPage):
         if self.state.opened_offer is None:
             return
 
-        result = self.state.opened_offer.load_data()
+        result = self.offer_service.load_data(self.state.opened_offer)
         if result is None:
             ui.label('No result found for this file').classes('text-gray-500')
             return
@@ -153,7 +158,7 @@ class OfferPage(SubPage):
         self.input_table(opened_offer, result)
 
     def input_table(self, offer: 'Offer', result: dict) -> None:
-        posten = offer.posten_list(result)
+        posten = self.offer_service.posten_list(result)
         offer_table = OfferRowsTable(posten)
 
         with ui.row().classes('items-center gap-2 mt-4'):
@@ -170,7 +175,7 @@ class OfferPage(SubPage):
             cell = event.args.get('cell', {})
             row = cell.get('row', {})
             column = cell.get('column', {})
-            offer.update_post_row(result, row.get('id'), column.get('field'), cell.get('value', ''))
+            self.offer_service.update_post_row(offer, result, row.get('id'), column.get('field'), cell.get('value', ''))
             offer_tabulator.set_data(offer_table.rows)
 
         def delete_row(event) -> None:
@@ -180,7 +185,8 @@ class OfferPage(SubPage):
                 return
 
             row = cell.get('row', {})
-            offer.delete_post_row(result, row.get('id'))
+            self.offer_service.delete_post_row(offer, result, row.get('id'))
+            offer_table.posten = self.offer_service.posten_list(result)
             offer_table.rows = offer_table.rows_from_posten()
             offer_tabulator.set_data(offer_table.rows)
 
@@ -200,7 +206,7 @@ class OfferPage(SubPage):
                     self.opened_file_result()
 
     def update_summary_value(self, offer: 'Offer', result: dict, field: str, value: str) -> None:
-        offer.update_summary_value(result, field, value)
+        self.offer_service.update_summary_value(offer, result, field, value)
         self.refresh()
 
     def add_summary_field(self, offer: 'Offer', result: dict, field: str | None, value: str | None) -> None:
@@ -217,11 +223,12 @@ class OfferPage(SubPage):
             ui.notify(f'{clean_field} already exists')
             return
 
-        offer.add_summary_field(result, clean_field, value)
+        self.offer_service.add_summary_field(offer, result, clean_field, value)
         self.refresh()
 
     def add_post_row(self, offer: 'Offer', result: dict, offer_table: OfferRowsTable | None = None) -> None:
-        offer.add_post_row(result)
+        self.offer_service.add_post_row(offer, result)
         if offer_table is not None:
+            offer_table.posten = self.offer_service.posten_list(result)
             offer_table.rows = offer_table.rows_from_posten()
         self.refresh()

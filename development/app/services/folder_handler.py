@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from services.offer import Offer
+    from domain.offer import Offer
     from services.project import Project
 
 
@@ -58,14 +58,14 @@ class FolderHandler:
 
     def offer_from_file(self, file: Path) -> 'Offer':
         """Create an Offer instance from a file path."""
-        from services.offer import Offer
+        from domain.offer import Offer
         offer_dir = self.offer_dir_for_file(file)
-        return Offer(offer_dir, self)
+        return Offer(offer_dir)
 
     def offer_from_path(self, offer_dir: Path) -> 'Offer':
         """Create an Offer instance from an offer folder path."""
-        from services.offer import Offer
-        return Offer(offer_dir, self)
+        from domain.offer import Offer
+        return Offer(offer_dir)
 
     def offer_dir_for_file(self, file: Path) -> Path:
         """Get the offer folder containing a file."""
@@ -161,6 +161,24 @@ class FolderHandler:
         project.mkdir(parents=True, exist_ok=True)
         from services.project import Project
         return Project(project, self)
+
+    def rename_project(self, project: Path | 'Project', new_name: str | None) -> 'Project':
+        """Rename a project folder."""
+        project_path = self._project_path(project)
+        if not project_path.exists():
+            raise FileNotFoundError(f'Project "{project_path.name}" does not exist')
+
+        clean_name = self.clean_name(new_name, kind='project')
+        new_project_path = self.storage_dir / clean_name
+
+        if new_project_path == project_path:
+            raise ValueError('Project name is unchanged')
+        if new_project_path.exists():
+            raise FileExistsError(f'Project "{clean_name}" already exists')
+
+        project_path.rename(new_project_path)
+        from services.project import Project
+        return Project(new_project_path, self)
 
     def rename_file(self, file: Path, new_name: str | None) -> Path:
         """Rename a PDF file and its associated data."""

@@ -1,0 +1,30 @@
+Je koppelt begrotings-/vergelijkingsregels aan offerteposten.
+
+Vergelijkingsregels:
+{comparison_posts}
+
+Offerteposten per bestand:
+{offer_results}
+
+Maak per vergelijkingsregel en per offertebestand de beste match.
+Gebruik "Match type": "single" als een vergelijkingsregel bij één offertepost hoort.
+Gebruik "Match type": "group" als een vergelijkingsregel bij meerdere offerteposten samen hoort.
+Kopieer gematchte omschrijvingen letterlijk uit de offerteposten.
+Geef bij iedere regel bij Overeenkomst aan hoe zeker je bent over de match met een score van 1 tot 3. Met 1 het laagst, en 3 het hoogst.
+Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
+Vul niet bij 2 posten dezelde post uit de offerte in.
+{{
+  "MatchedPosten": [
+    {{
+      "Omschrijving": "...",
+      "Offertes": {{
+        "offerte-bestandsnaam.pdf": {{
+          "Match type": "single",
+          "Gematchte omschrijving": "...",
+          "Gematchte posten": ["..."],
+          "Overeenkomst": "..."
+        }}
+      }}
+    }}
+  ]
+}}
