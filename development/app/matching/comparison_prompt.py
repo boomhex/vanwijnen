@@ -3,6 +3,27 @@ import json
 from matching.prompt_loader import load_prompt
 
 
+MATCH_RESPONSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'MatchedPosten': {
+            'type': 'array',
+            'items': {
+                'type': 'object',
+                'properties': {
+                    'Omschrijving': {'type': 'string'},
+                    'Offertes': {
+                        'type': 'object',
+                    },
+                },
+                'required': ['Omschrijving', 'Offertes'],
+            },
+        },
+    },
+    'required': ['MatchedPosten'],
+}
+
+
 def build_comparison_match_prompt(comparison: dict, offer_results: list[dict]) -> str:
     template = load_prompt('comparison_match_prompt.txt')
     return template.format(

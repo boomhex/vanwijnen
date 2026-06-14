@@ -1,0 +1,17 @@
+Je moet alleen de samenvatting uit deze offerte tekst halen:
+- Naam van de opdrachtgever.
+- Totaalprijs van de offerte inclusief en exclusief BTW.
+Regels:
+- Verzin geen getallen.
+- Is een veld onbekend, vul "ONBEKEND" in.
+- Reageer ALLEEN met geldige JSON.
+- Gebruik geen markdown codeblok.
+- Neem bedragen over ZONDER euroteken.
+- Gebruik het volgende formaat:
+{
+    "Naam opdrachtgever": "...",
+    "Totaalprijs inc. BTW": "...",
+    "Totaalprijs exc. BTW": "..."
+}
+
+TEXT:

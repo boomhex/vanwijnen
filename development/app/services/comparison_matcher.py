@@ -1,5 +1,5 @@
 from application.offer_service import OfferService
-from matching.comparison_prompt import build_comparison_match_prompt
+from matching.comparison_prompt import MATCH_RESPONSE_SCHEMA, build_comparison_match_prompt
 from matching.match_calculation import calculate_offer_total
 from matching.match_normalizer import (
     complete_response,
@@ -44,7 +44,7 @@ class ComparisonMatcher:
         comparison = comparison or project.load_comparison()
         offer_results = self.project_offer_results(project)
         prompt = build_comparison_match_prompt(comparison, offer_results)
-        json_response = parse_json_response(ask_llm(prompt))
+        json_response = parse_json_response(ask_llm(prompt, response_schema=MATCH_RESPONSE_SCHEMA))
         return complete_response(json_response, offer_results)
 
     def normalize_matched_posts(self, project: Project, comparison: dict, match_result: dict) -> list[dict]:

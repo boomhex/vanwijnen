@@ -11,7 +11,7 @@ from google.genai import types
 import pdfplumber
 
 
-MODEL_ID = "google/gemma-4-E4B-it"
+MODEL_ID = os.environ.get('GEMINI_MODEL', 'gemini-3-flash-preview')
 
 
 OFFER_RESPONSE_SCHEMA = {
@@ -52,6 +52,34 @@ OFFER_RESPONSE_SCHEMA = {
 }
 
 
+OFFER_SUMMARY_RESPONSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'Naam opdrachtgever': {'type': 'string'},
+        'Totaalprijs inc. BTW': {'type': 'string'},
+        'Totaalprijs exc. BTW': {'type': 'string'},
+    },
+    'required': [
+        'Naam opdrachtgever',
+        'Totaalprijs inc. BTW',
+        'Totaalprijs exc. BTW',
+    ],
+}
+
+
+OFFER_POSTS_RESPONSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'Posten': OFFER_RESPONSE_SCHEMA['properties']['Posten'],
+    },
+    'required': ['Posten'],
+}
+
+
+CHUNKED_EXTRACTION_THRESHOLD = int(os.environ.get('EXTRACT_CHUNKED_THRESHOLD_CHARS', '7000'))
+POST_CHUNK_SIZE = int(os.environ.get('EXTRACT_POST_CHUNK_CHARS', '4500'))
+
+
 client = None
 
 
@@ -59,25 +87,36 @@ def get_client():
     global client
     if client is None:
         api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            raise RuntimeError('GEMINI_API_KEY is not set')
         client = genai.Client(api_key=api_key)
 
     return client
 
 
-def ask_llm(prompt: str) -> str:
+def ask_llm(
+    prompt: str,
+    *,
+    response_schema: dict | None = None,
+    max_output_tokens: int = 65536,
+    model: str = MODEL_ID,
+) -> str:
     max_attempts = 8
     for attempt in range(1, max_attempts + 1):
         try:
             print("Generating Response")
+            config_kwargs = {
+                'temperature': 0.0,
+                'max_output_tokens': max_output_tokens,
+                'response_mime_type': 'application/json',
+            }
+            if response_schema is not None:
+                config_kwargs['response_schema'] = response_schema
+
             response = get_client().models.generate_content(
-                model="gemini-3-flash-preview",
+                model=model,
                 contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=0.0,
-                    max_output_tokens=65536,
-                    response_mime_type='application/json',
-                    response_schema=OFFER_RESPONSE_SCHEMA,
-                ),
+                config=types.GenerateContentConfig(**config_kwargs),
             )
             if response.text is None:
                 raise RuntimeError('LLM response did not contain text')
@@ -90,7 +129,7 @@ def ask_llm(prompt: str) -> str:
             print(f'LLM request failed: {error_text}')
 
             lowered = error_text.lower()
-            if any(token in lowered for token in ('quota', 'rate limit', 'too many requests', 'resource exhausted', '429')):
+            if any(token in lowered for token in ('quota', 'resource exhausted')):
                 raise RuntimeError(
                     'API limit reached. Try again later or increase your Gemini quota.'
                 ) from error
@@ -98,7 +137,7 @@ def ask_llm(prompt: str) -> str:
             if attempt >= max_attempts:
                 raise RuntimeError(f'LLM request failed after {max_attempts} attempts: {error_text}') from error
 
-            time.sleep(2 ** (attempt - 1))
+            time.sleep(min(2 ** (attempt - 1), 30))
 
     raise RuntimeError('LLM request failed unexpectedly')
 
@@ -118,6 +157,74 @@ def read_txt(file):
     with open(file, 'r') as f:
         txt = f.read()
     return txt
+
+
+def split_text_chunks(text: str, max_chars: int = POST_CHUNK_SIZE) -> list[str]:
+    chunks = []
+    current_lines = []
+    current_size = 0
+
+    for line in text.splitlines():
+        line_size = len(line) + 1
+        if current_lines and current_size + line_size > max_chars:
+            chunks.append('\n'.join(current_lines))
+            current_lines = []
+            current_size = 0
+
+        if line_size > max_chars:
+            for start in range(0, len(line), max_chars):
+                part = line[start:start + max_chars]
+                if current_lines:
+                    chunks.append('\n'.join(current_lines))
+                    current_lines = []
+                    current_size = 0
+                chunks.append(part)
+            continue
+
+        current_lines.append(line)
+        current_size += line_size
+
+    if current_lines:
+        chunks.append('\n'.join(current_lines))
+
+    return [chunk for chunk in chunks if chunk.strip()]
+
+
+def post_identity(post: dict) -> tuple[str, str, str, str, str, str]:
+    return (
+        str(post.get('Omschrijving', '')).strip().casefold(),
+        str(post.get('Categorie', '')).strip().casefold(),
+        str(post.get('Aantal', '')).strip(),
+        str(post.get('Eenheid', '')).strip().casefold(),
+        str(post.get('Eenheidsprijs', '')).strip(),
+        str(post.get('Totaalbedrag', '')).strip(),
+    )
+
+
+def merge_post_chunks(post_chunks: list[list[dict]]) -> list[dict]:
+    merged = []
+    seen = set()
+
+    for posts in post_chunks:
+        for post in posts:
+            if not isinstance(post, dict):
+                continue
+
+            identity = post_identity(post)
+            if identity in seen:
+                continue
+
+            seen.add(identity)
+            merged.append(post)
+
+    return merged
+
+
+def format_chunked_llm_response(summary_answer: str, post_answers: list[str]) -> str:
+    sections = ['=== summary ===', summary_answer]
+    for index, answer in enumerate(post_answers, start=1):
+        sections.extend([f'=== posts chunk {index} ===', answer])
+    return '\n\n'.join(sections)
 
 
 def parse_json_response(answer: str) -> dict:
@@ -312,6 +419,45 @@ def normalize_amounts(offer_json: dict) -> dict:
     return offer_json
 
 
+def extract_offer_one_shot(prompt: str, offer_text: str) -> tuple[dict, str]:
+    answer = ask_llm('\n'.join([prompt, offer_text]), response_schema=OFFER_RESPONSE_SCHEMA)
+    return parse_json_response(answer), answer
+
+
+def extract_offer_chunked(offer_text: str) -> tuple[dict, str]:
+    summary_prompt = read_txt(Path('./prompts/extract_summary_prompt.txt'))
+    posts_prompt = read_txt(Path('./prompts/extract_posts_chunk_prompt.txt'))
+
+    summary_answer = ask_llm(
+        '\n'.join([summary_prompt, offer_text]),
+        response_schema=OFFER_SUMMARY_RESPONSE_SCHEMA,
+        max_output_tokens=4096,
+    )
+    summary_json = parse_json_response(summary_answer)
+
+    post_answers = []
+    post_chunks = []
+    chunks = split_text_chunks(offer_text)
+    for index, chunk in enumerate(chunks, start=1):
+        chunk_answer = ask_llm(
+            '\n'.join([posts_prompt, f'Deel {index} van {len(chunks)}:', chunk]),
+            response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
+            max_output_tokens=16384,
+        )
+        post_answers.append(chunk_answer)
+        chunk_json = parse_json_response(chunk_answer)
+        posts = chunk_json.get('Posten', [])
+        post_chunks.append(posts if isinstance(posts, list) else [])
+
+    offer_json = {
+        'Naam opdrachtgever': summary_json.get('Naam opdrachtgever', 'ONBEKEND'),
+        'Totaalprijs inc. BTW': summary_json.get('Totaalprijs inc. BTW', 'ONBEKEND'),
+        'Totaalprijs exc. BTW': summary_json.get('Totaalprijs exc. BTW', 'ONBEKEND'),
+        'Posten': merge_post_chunks(post_chunks),
+    }
+    return offer_json, format_chunked_llm_response(summary_answer, post_answers)
+
+
 def extract_offer(file: Path, folder_handler):
     """Extract offer from PDF and save result via FolderHandler.
     
@@ -323,7 +469,7 @@ def extract_offer(file: Path, folder_handler):
         dict: The extracted offer JSON data
     """
     from services.folder_handler import FolderHandler
-    
+
     if not isinstance(folder_handler, FolderHandler):
         raise TypeError(f'folder_handler must be FolderHandler, got {type(folder_handler)}')
 
@@ -333,9 +479,12 @@ def extract_offer(file: Path, folder_handler):
     # Save raw PDF text for debugging
     folder_handler.save_raw_pdf_text(file, offer)
 
-    answer = ask_llm('\n'.join([prompt, offer]))
+    if len(offer) > CHUNKED_EXTRACTION_THRESHOLD:
+        offer_json, answer = extract_offer_chunked(offer)
+    else:
+        offer_json, answer = extract_offer_one_shot(prompt, offer)
+
     folder_handler.save_llm_response(file, answer)
-    offer_json = parse_json_response(answer)
     validate_offer_json(offer_json)
 
     # Normalize all amounts to standard decimal format

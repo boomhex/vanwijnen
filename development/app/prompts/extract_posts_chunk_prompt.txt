@@ -1,0 +1,26 @@
+Je moet alleen de posten uit dit deel van een offerte tekst halen.
+Regels:
+- Verzin geen posten en geen getallen.
+- Haal alleen posten uit dit tekstdeel die een bedrag/aantal/eenheidsprijs bevatten.
+- Sla kopjes/subtotalen zonder echte postregel over.
+- Is een veld onbekend, vul "ONBEKEND" in.
+- Reageer ALLEEN met geldige JSON.
+- Gebruik geen markdown codeblok.
+- Neem bedragen over ZONDER euroteken.
+- Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
+- Voor categorie gebruik je het bovenliggende kopje/hoofdstuk waar de post onder valt. Is er geen duidelijke categorie, vul "ONBEKEND" in.
+- Gebruik het volgende formaat:
+{
+    "Posten": [
+        {
+            "Omschrijving": "...",
+            "Categorie": "...",
+            "Totaalbedrag": "...",
+            "Eenheid": "...",
+            "Eenheidsprijs": "...",
+            "Aantal": "..."
+        }
+    ]
+}
+
+TEXTDEEL:
