@@ -5,11 +5,12 @@ from interface.editable_table_helper import render_editable_summary
 from nicegui_tabulator import tabulator
 from .tabulator_table import TabulatorTable
 from application.offer_service import OfferService
+from domain.fields import FIELD_TO_ATTR, OFFER_FIELDS
 from domain.money import parse_decimal
 from domain.offer import Offer, Posten
 
 class OfferRowsTable(TabulatorTable):
-    fields = ['Omschrijving', 'Categorie', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag']
+    fields = OFFER_FIELDS
 
     def __init__(self, posten: list[Posten]) -> None:
         self.posten = posten
@@ -97,14 +98,7 @@ class OfferRowsTable(TabulatorTable):
 
     @staticmethod
     def field_to_attr(field: str) -> str:
-        return {
-            'Omschrijving': 'omschrijving',
-            'Categorie': 'categorie',
-            'Aantal': 'aantal',
-            'Eenheid': 'eenheid',
-            'Eenheidsprijs': 'eenheidsprijs',
-            'Totaalbedrag': 'totaalbedrag',
-        }[field]
+        return FIELD_TO_ATTR[field]
 
 
 class OfferPage(SubPage):

@@ -1,4 +1,7 @@
 import json
+import logging
+from collections.abc import Callable
+from datetime import datetime, timezone
 from json import JSONDecodeError
 from pathlib import Path
 import re
@@ -9,6 +12,10 @@ import os
 from google import genai
 from google.genai import types
 import pdfplumber
+
+from domain.money import UNKNOWN
+
+logger = logging.getLogger(__name__)
 
 
 MODEL_ID = os.environ.get('GEMINI_MODEL', 'gemini-3-flash-preview')
@@ -81,6 +88,44 @@ POST_CHUNK_SIZE = int(os.environ.get('EXTRACT_POST_CHUNK_CHARS', '4500'))
 
 
 client = None
+StatusCallback = Callable[[str, str | None], None]
+ResponseCallback = Callable[[str, str], None]
+
+
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def update_extraction_status(
+    folder_handler,
+    file: Path,
+    *,
+    status: str,
+    step: str,
+    message: str | None = None,
+    error: str | None = None,
+    started_at: str | None = None,
+) -> None:
+    payload = {
+        'status': status,
+        'step': step,
+        'updated_at': utc_now_iso(),
+    }
+    if started_at is not None:
+        payload['started_at'] = started_at
+    if message:
+        payload['message'] = message
+    if error:
+        payload['error'] = error
+
+    folder_handler.save_extraction_status(file, payload)
+    logger.info(
+        'Extraction status for %s: %s/%s%s',
+        file,
+        status,
+        step,
+        f' - {message}' if message else '',
+    )
 
 
 def get_client():
@@ -104,7 +149,7 @@ def ask_llm(
     max_attempts = 8
     for attempt in range(1, max_attempts + 1):
         try:
-            print("Generating Response")
+            logger.debug("Generating LLM response")
             config_kwargs = {
                 'temperature': 0.0,
                 'max_output_tokens': max_output_tokens,
@@ -126,7 +171,7 @@ def ask_llm(
             raise
         except Exception as error:
             error_text = str(error).strip()
-            print(f'LLM request failed: {error_text}')
+            logger.warning("LLM request failed: %s", error_text)
 
             lowered = error_text.lower()
             if any(token in lowered for token in ('quota', 'resource exhausted')):
@@ -264,7 +309,7 @@ def parse_money_value(value: str) -> Decimal | None:
         return None
 
     text = str(value).strip()
-    if not text or text.upper() == 'ONBEKEND':
+    if not text or text.upper() == UNKNOWN:
         return None
 
     s = text
@@ -419,40 +464,65 @@ def normalize_amounts(offer_json: dict) -> dict:
     return offer_json
 
 
-def extract_offer_one_shot(prompt: str, offer_text: str) -> tuple[dict, str]:
+def extract_offer_one_shot(
+    prompt: str,
+    offer_text: str,
+    response_callback: ResponseCallback | None = None,
+) -> tuple[dict, str]:
     answer = ask_llm('\n'.join([prompt, offer_text]), response_schema=OFFER_RESPONSE_SCHEMA)
+    if response_callback is not None:
+        response_callback('llm_response.txt', answer)
     return parse_json_response(answer), answer
 
 
-def extract_offer_chunked(offer_text: str) -> tuple[dict, str]:
+def extract_offer_chunked(
+    offer_text: str,
+    status_callback: StatusCallback | None = None,
+    response_callback: ResponseCallback | None = None,
+) -> tuple[dict, str]:
     summary_prompt = read_txt(Path('./prompts/extract_summary_prompt.txt'))
     posts_prompt = read_txt(Path('./prompts/extract_posts_chunk_prompt.txt'))
+
+    if status_callback is not None:
+        status_callback('extracting_summary', 'Extracting offer summary')
 
     summary_answer = ask_llm(
         '\n'.join([summary_prompt, offer_text]),
         response_schema=OFFER_SUMMARY_RESPONSE_SCHEMA,
         max_output_tokens=4096,
     )
+    if response_callback is not None:
+        response_callback('llm_summary_response.txt', summary_answer)
+        response_callback('llm_response.txt', format_chunked_llm_response(summary_answer, []))
     summary_json = parse_json_response(summary_answer)
 
     post_answers = []
     post_chunks = []
     chunks = split_text_chunks(offer_text)
     for index, chunk in enumerate(chunks, start=1):
+        if status_callback is not None:
+            status_callback(
+                f'extracting_posts_chunk_{index}_of_{len(chunks)}',
+                f'Extracting posts chunk {index} of {len(chunks)}',
+            )
+
         chunk_answer = ask_llm(
             '\n'.join([posts_prompt, f'Deel {index} van {len(chunks)}:', chunk]),
             response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
             max_output_tokens=16384,
         )
         post_answers.append(chunk_answer)
+        if response_callback is not None:
+            response_callback(f'llm_posts_chunk_{index}_response.txt', chunk_answer)
+            response_callback('llm_response.txt', format_chunked_llm_response(summary_answer, post_answers))
         chunk_json = parse_json_response(chunk_answer)
         posts = chunk_json.get('Posten', [])
         post_chunks.append(posts if isinstance(posts, list) else [])
 
     offer_json = {
-        'Naam opdrachtgever': summary_json.get('Naam opdrachtgever', 'ONBEKEND'),
-        'Totaalprijs inc. BTW': summary_json.get('Totaalprijs inc. BTW', 'ONBEKEND'),
-        'Totaalprijs exc. BTW': summary_json.get('Totaalprijs exc. BTW', 'ONBEKEND'),
+        'Naam opdrachtgever': summary_json.get('Naam opdrachtgever', UNKNOWN),
+        'Totaalprijs inc. BTW': summary_json.get('Totaalprijs inc. BTW', UNKNOWN),
+        'Totaalprijs exc. BTW': summary_json.get('Totaalprijs exc. BTW', UNKNOWN),
         'Posten': merge_post_chunks(post_chunks),
     }
     return offer_json, format_chunked_llm_response(summary_answer, post_answers)
@@ -473,27 +543,73 @@ def extract_offer(file: Path, folder_handler):
     if not isinstance(folder_handler, FolderHandler):
         raise TypeError(f'folder_handler must be FolderHandler, got {type(folder_handler)}')
 
-    prompt = read_txt(Path("./prompts/extract_prompt.txt"))
-    offer = read_pdf(file)
+    started_at = utc_now_iso()
 
-    # Save raw PDF text for debugging
-    folder_handler.save_raw_pdf_text(file, offer)
+    def set_status(step: str, message: str | None = None, *, status: str = 'running') -> None:
+        update_extraction_status(
+            folder_handler,
+            file,
+            status=status,
+            step=step,
+            message=message,
+            started_at=started_at,
+        )
 
-    if len(offer) > CHUNKED_EXTRACTION_THRESHOLD:
-        offer_json, answer = extract_offer_chunked(offer)
-    else:
-        offer_json, answer = extract_offer_one_shot(prompt, offer)
+    def save_response(name: str, answer: str) -> None:
+        if name == 'llm_response.txt':
+            folder_handler.save_llm_response(file, answer)
+            return
 
-    folder_handler.save_llm_response(file, answer)
-    validate_offer_json(offer_json)
+        folder_handler.save_named_llm_response(file, name, answer)
 
-    # Normalize all amounts to standard decimal format
-    offer_json = normalize_amounts(offer_json)
+    try:
+        set_status('reading_pdf', 'Reading PDF text')
+        prompt = read_txt(Path("./prompts/extract_prompt.txt"))
+        offer = read_pdf(file)
 
-    # Save result via FolderHandler
-    folder_handler.save_result(file, offer_json)
+        set_status('saving_raw_text', 'Saving raw PDF text')
+        folder_handler.save_raw_pdf_text(file, offer)
 
-    return offer_json
+        if len(offer) > CHUNKED_EXTRACTION_THRESHOLD:
+            set_status('extracting_chunked', 'Extracting long PDF in chunks')
+            offer_json, answer = extract_offer_chunked(offer, set_status, save_response)
+        else:
+            set_status('calling_llm', 'Calling LLM')
+            offer_json, answer = extract_offer_one_shot(prompt, offer, save_response)
+
+        set_status('saving_llm_response', 'Saving raw LLM response')
+        save_response('llm_response.txt', answer)
+
+        set_status('validating_json', 'Validating extracted JSON')
+        validate_offer_json(offer_json)
+
+        set_status('normalizing_amounts', 'Normalizing amounts')
+        offer_json = normalize_amounts(offer_json)
+
+        set_status('saving_extract', 'Saving extract.json')
+        folder_handler.save_result(file, offer_json)
+
+        update_extraction_status(
+            folder_handler,
+            file,
+            status='done',
+            step='done',
+            message='Extraction completed',
+            started_at=started_at,
+        )
+
+        return offer_json
+    except Exception as error:
+        update_extraction_status(
+            folder_handler,
+            file,
+            status='failed',
+            step='failed',
+            message='Extraction failed',
+            error=str(error),
+            started_at=started_at,
+        )
+        raise
 
 
 def compare_files(files, folder_handler):

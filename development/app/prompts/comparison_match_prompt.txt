@@ -13,18 +13,20 @@ Kopieer gematchte omschrijvingen letterlijk uit de offerteposten.
 Geef bij iedere regel bij Overeenkomst aan hoe zeker je bent over de match met een score van 1 tot 3. Met 1 het laagst, en 3 het hoogst.
 Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
 Vul niet bij 2 posten dezelde post uit de offerte in.
+Gebruik voor Offertes een lijst. Zet de offertebestandsnaam altijd in het veld "Bestand"; gebruik geen dynamische bestandsnamen als JSON keys.
 {{
   "MatchedPosten": [
     {{
       "Omschrijving": "...",
-      "Offertes": {{
-        "offerte-bestandsnaam.pdf": {{
+      "Offertes": [
+        {{
+          "Bestand": "offerte-bestandsnaam.pdf",
           "Match type": "single",
           "Gematchte omschrijving": "...",
           "Gematchte posten": ["..."],
           "Overeenkomst": "..."
         }}
-      }}
+      ]
     }}
   ]
 }}

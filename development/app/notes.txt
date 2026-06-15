@@ -38,3 +38,15 @@ LLM opties
 Lokale computer host
 
 Berekend totaal?
+
+
+Eenheidsvergelijking:
+40 stucwerk
+44 stutwanden
+48 vloerbedekking
+    Op merk en type
+
+Eigen hoeveelheid bij eenheid en totaal
+vd Ploeg
+Prioriteit aan eenheidsprijs
+Grote verschillen hoeveelheden (Waarschuwing bij grote hoeveelheidverschil)

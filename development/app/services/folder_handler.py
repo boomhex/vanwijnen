@@ -108,9 +108,21 @@ class FolderHandler:
         """Get the llm_response.txt path for an offer."""
         return offer / 'llm_response.txt'
 
+    def offer_status_path(self, offer: Path) -> Path:
+        """Get the extraction status path for an offer."""
+        return offer / 'status.json'
+
     def project_comparison_path(self, project: Path) -> Path:
         """Get the comparison.json path for a project."""
         return project / 'comparison.json'
+
+    def project_comparison_status_path(self, project: Path) -> Path:
+        """Get the comparison_status.json path for a project."""
+        return project / 'comparison_status.json'
+
+    def project_comparison_llm_response_path(self, project: Path) -> Path:
+        """Get the raw comparison matching LLM response path for a project."""
+        return project / 'comparison_llm_response.txt'
 
     def comparison_path_for_file(self, file: Path) -> Path:
         """Get the comparison.json for the project containing a file."""
@@ -130,6 +142,19 @@ class FolderHandler:
         """Get the llm_response.txt path for a file."""
         offer = self.offer_dir_for_file(file)
         return self.offer_llm_response_path(offer)
+
+    def named_llm_response_path_for_file(self, file: Path, name: str) -> Path:
+        """Get a named LLM response path for a file."""
+        safe_name = self.clean_name(name, kind='response name')
+        if not safe_name.endswith('.txt'):
+            safe_name = f'{safe_name}.txt'
+        offer = self.offer_dir_for_file(file)
+        return offer / safe_name
+
+    def status_path_for_file(self, file: Path) -> Path:
+        """Get the status.json path for a file."""
+        offer = self.offer_dir_for_file(file)
+        return self.offer_status_path(offer)
 
     def upload_folder(self, project_name: str | None) -> Path:
         """Get the upload destination folder for a project."""
@@ -179,6 +204,17 @@ class FolderHandler:
         project_path.rename(new_project_path)
         from services.project import Project
         return Project(new_project_path, self)
+
+    def delete_project(self, project: Path | 'Project') -> None:
+        """Delete a project folder and all offers inside it."""
+        project_path = self._project_path(project)
+        if not project_path.exists():
+            raise FileNotFoundError(f'Project "{project_path.name}" does not exist')
+        if project_path.parent != self.storage_dir:
+            raise ValueError('Can only delete project folders inside storage')
+
+        import shutil
+        shutil.rmtree(project_path)
 
     def rename_file(self, file: Path, new_name: str | None) -> Path:
         """Rename a PDF file and its associated data."""
@@ -265,6 +301,33 @@ class FolderHandler:
         response_path.parent.mkdir(parents=True, exist_ok=True)
         response_path.write_text(text)
 
+    def save_named_llm_response(self, file: Path, name: str, text: str) -> None:
+        """Save a named raw LLM response for debugging."""
+        response_path = self.named_llm_response_path_for_file(file, name)
+        response_path.parent.mkdir(parents=True, exist_ok=True)
+        response_path.write_text(text)
+
+    def load_extraction_status(self, file: Path) -> dict[str, Any] | None:
+        """Load the extraction status for a file."""
+        status_path = self.status_path_for_file(file)
+        if not status_path.exists():
+            return None
+
+        try:
+            with status_path.open('r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            return None
+
+    def save_extraction_status(self, file: Path, status: dict[str, Any]) -> None:
+        """Save the extraction status for a file."""
+        status_path = self.status_path_for_file(file)
+        status_path.parent.mkdir(parents=True, exist_ok=True)
+        temporary_path = status_path.with_suffix('.json.tmp')
+        with temporary_path.open('w') as f:
+            json.dump(status, f, ensure_ascii=False, indent=4)
+        temporary_path.replace(status_path)
+
     def load_comparison(self, project_or_file: Path | 'Project') -> dict[str, Any]:
         """Load comparison.json for a project or file."""
         comparison_path = self._comparison_path(project_or_file)
@@ -280,6 +343,33 @@ class FolderHandler:
         comparison_path.parent.mkdir(parents=True, exist_ok=True)
         with comparison_path.open('w') as f:
             json.dump(comparison, f, ensure_ascii=False, indent=4)
+
+    def load_comparison_status(self, project: Path | 'Project') -> dict[str, Any] | None:
+        """Load the comparison/matching status for a project."""
+        status_path = self.project_comparison_status_path(self._project_path(project))
+        if not status_path.exists():
+            return None
+
+        try:
+            with status_path.open('r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            return None
+
+    def save_comparison_status(self, project: Path | 'Project', status: dict[str, Any]) -> None:
+        """Save the comparison/matching status for a project."""
+        status_path = self.project_comparison_status_path(self._project_path(project))
+        status_path.parent.mkdir(parents=True, exist_ok=True)
+        temporary_path = status_path.with_suffix('.json.tmp')
+        with temporary_path.open('w') as f:
+            json.dump(status, f, ensure_ascii=False, indent=4)
+        temporary_path.replace(status_path)
+
+    def save_comparison_llm_response(self, project: Path | 'Project', text: str) -> None:
+        """Save the raw LLM response for comparison matching."""
+        response_path = self.project_comparison_llm_response_path(self._project_path(project))
+        response_path.parent.mkdir(parents=True, exist_ok=True)
+        response_path.write_text(text)
 
     @staticmethod
     def clean_name(name: str | None, *, kind: str) -> str:

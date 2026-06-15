@@ -8,7 +8,7 @@ from nicegui import run, ui
 
 from services.comparison_matcher import ComparisonMatcher
 from services.folder_handler import FolderHandler
-from interface.page_state import MainPageState
+from interface.page_state import MainPageState, View
 from .subpage import SubPage
 from .comparison_page import ComparisonPage
 from .offer_page import OfferPage
@@ -31,7 +31,7 @@ class RightSide(SubPage):
             self.show()
 
     def refresh(self) -> None:
-        if self.container is None:
+        if not self.container_is_live():
             return
 
         self.container.clear()
@@ -39,6 +39,9 @@ class RightSide(SubPage):
             self.show()
 
     def schedule_refresh(self) -> None:
+        if not self.container_is_live():
+            return
+
         ui.timer(0.05, self.refresh, once=True)
 
     def schedule_refresh_safe(self) -> None:
@@ -47,11 +50,23 @@ class RightSide(SubPage):
         except RuntimeError:
             pass
 
+    def container_is_live(self) -> bool:
+        if self.container is None:
+            return False
+        if getattr(self.container, 'is_deleted', False):
+            return False
+
+        client = getattr(self.container, 'client', None)
+        if client is None:
+            return False
+
+        return not getattr(client, '_deleted', False)
+
     def show(self) -> None:
-        if self.state.current_view == 'comparison':
+        if self.state.current_view == View.COMPARISON:
             self.comparison_page.render()
             return
 
-        if self.state.current_view == "offer":
+        if self.state.current_view == View.OFFER:
             self.offer_page.render()
             return

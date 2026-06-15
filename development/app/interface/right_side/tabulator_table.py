@@ -1,5 +1,8 @@
 from decimal import Decimal
 
+from domain.money import format_money as _format_money
+
+
 class TabulatorTable:
     def __init__(
         self,
@@ -63,13 +66,4 @@ class TabulatorTable:
 
     @staticmethod
     def format_money(value: Decimal | None) -> str:
-        """Format decimal value as European format (1.234,56 without euro sign)."""
-        if value is None:
-            return 'ONBEKEND'
-
-        rounded = value.quantize(Decimal('0.01'))
-        # Format with thousands separator (US style: 1,234.56)
-        us_format = f'{rounded:,.2f}'
-        # Convert to European style (1.234,56)
-        european_format = '€' + us_format.replace(',', '\x00').replace('.', ',').replace('\x00', '.')
-        return european_format
+        return _format_money(value)

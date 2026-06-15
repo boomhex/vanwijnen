@@ -66,6 +66,10 @@ class Offer:
         return self.path / 'llm_response.txt'
 
     @property
+    def status_path(self) -> Path:
+        return self.path / 'status.json'
+
+    @property
     def comparison_key(self) -> str:
         return f'{self.name}.pdf'
 

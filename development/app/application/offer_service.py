@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
+from domain.fields import FIELD_TO_ATTR, OFFER_FIELDS
 from domain.offer import Offer, Posten
 
 if TYPE_CHECKING:
@@ -14,7 +15,7 @@ class OfferService:
     filesystem mutations through FolderHandler.
     """
 
-    fields = {'Omschrijving', 'Categorie', 'Aantal', 'Eenheid', 'Eenheidsprijs', 'Totaalbedrag'}
+    fields = set(OFFER_FIELDS)
 
     def __init__(self, folder_handler: 'FolderHandler') -> None:
         self.folder_handler = folder_handler
@@ -99,11 +100,4 @@ class OfferService:
 
     @staticmethod
     def field_name(field: str) -> str:
-        return {
-            'Omschrijving': 'omschrijving',
-            'Categorie': 'categorie',
-            'Aantal': 'aantal',
-            'Eenheid': 'eenheid',
-            'Eenheidsprijs': 'eenheidsprijs',
-            'Totaalbedrag': 'totaalbedrag',
-        }[field]
+        return FIELD_TO_ATTR[field]

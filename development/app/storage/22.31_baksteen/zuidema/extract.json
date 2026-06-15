@@ -5,6 +5,7 @@
     "Posten": [
         {
             "Omschrijving": "Vermetselen WF handvorm halfsteens verband",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "dzd",
             "Eenheidsprijs": "800.00",
@@ -12,6 +13,7 @@
         },
         {
             "Omschrijving": "Toeslag wildverband",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "dzd",
             "Eenheidsprijs": "45.00",
@@ -19,6 +21,7 @@
         },
         {
             "Omschrijving": "Toeslag strengperssteen",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "dzd",
             "Eenheidsprijs": "50.00",
@@ -26,6 +29,7 @@
         },
         {
             "Omschrijving": "Toeslag strooisteen",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
             "Eenheidsprijs": "7.00",
@@ -33,6 +37,7 @@
         },
         {
             "Omschrijving": "Toeslag rond metselwerk, mal door VW geleverd",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
             "Eenheidsprijs": "30.00",
@@ -40,6 +45,7 @@
         },
         {
             "Omschrijving": "Aanbrengen murfor",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "3.00",
@@ -47,6 +53,7 @@
         },
         {
             "Omschrijving": "Zaagwerk gevelsteen",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "st",
             "Eenheidsprijs": "1.10",
@@ -54,6 +61,7 @@
         },
         {
             "Omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
             "Eenheidsprijs": "15.00",
@@ -61,6 +69,7 @@
         },
         {
             "Omschrijving": "Aanbrengen stalen lateien handzaam exclusief aan elkaar bouten van de delen",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "13.00",
@@ -68,6 +77,7 @@
         },
         {
             "Omschrijving": "Aanbrengen kantplanken beton max 30 cm hoog of klamplaag onder peilkozijn",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "25.00",
@@ -75,6 +85,7 @@
         },
         {
             "Omschrijving": "Zaagwerk kantplanken",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "12.50",
@@ -82,6 +93,7 @@
         },
         {
             "Omschrijving": "Toeslag metselen speigelklamp",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "20.00",
@@ -89,6 +101,7 @@
         },
         {
             "Omschrijving": "Leveren kruiwagens/kuipen",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "post",
             "Eenheidsprijs": "300.00",
@@ -96,6 +109,7 @@
         },
         {
             "Omschrijving": "Verhangen steiger console’s",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "5.00",
@@ -103,6 +117,7 @@
         },
         {
             "Omschrijving": "Bouwen tussenslagen t.b.v. opperwerk gevelsteen indien er steigerslagen van 2,5 of 3.0 meter worden toegepast",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m1",
             "Eenheidsprijs": "15.00",
@@ -110,6 +125,7 @@
         },
         {
             "Omschrijving": "Inmetselen Vloerventilatiekokers",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "st",
             "Eenheidsprijs": "5.00",
@@ -117,6 +133,7 @@
         },
         {
             "Omschrijving": "Inwerken stootvoegroosters",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "st",
             "Eenheidsprijs": "0.25",
@@ -124,6 +141,7 @@
         },
         {
             "Omschrijving": "Indraaien HSb ankers",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "st",
             "Eenheidsprijs": "0.80",
@@ -131,6 +149,7 @@
         },
         {
             "Omschrijving": "Regiewerk",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "ONBEKEND",
             "Eenheidsprijs": "52.00",
@@ -138,6 +157,7 @@
         },
         {
             "Omschrijving": "Verreiker op bouwplaats",
+            "Categorie": "Metselwerk",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "post",
             "Eenheidsprijs": "6000.00",

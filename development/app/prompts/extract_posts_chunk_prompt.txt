@@ -2,6 +2,9 @@ Je moet alleen de posten uit dit deel van een offerte tekst halen.
 Regels:
 - Verzin geen posten en geen getallen.
 - Haal alleen posten uit dit tekstdeel die een bedrag/aantal/eenheidsprijs bevatten.
+- Haal alleen posten uit dit tekstdeel die volledig in dit tekstdeel staan.
+- Als een post aan het begin of einde van dit tekstdeel lijkt door te lopen in een ander tekstdeel, sla die post over.
+- Neem geen halve omschrijvingen of posten over.
 - Sla kopjes/subtotalen zonder echte postregel over.
 - Is een veld onbekend, vul "ONBEKEND" in.
 - Reageer ALLEEN met geldige JSON.

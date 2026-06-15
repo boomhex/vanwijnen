@@ -1,3 +1,4 @@
+from domain.money import UNKNOWN
 from matching.match_fields import matched_post_descriptions
 
 
@@ -5,16 +6,21 @@ def normalize_text(value: str | None) -> str:
     return ' '.join(str(value or '').casefold().split())
 
 
+def build_post_index(offer_result: dict) -> dict[str, dict]:
+    """Build a normalized-description → post dict for O(1) lookups."""
+    index: dict[str, dict] = {}
+    for post in offer_result.get('Posten', []):
+        key = normalize_text(post.get('Omschrijving'))
+        if key:
+            index[key] = post
+    return index
+
+
 def find_extracted_post_by_description(offer_result: dict, description: str | None) -> dict:
-    if not description or str(description).strip().upper() == 'ONBEKEND':
+    if not description or str(description).strip().upper() == UNKNOWN:
         return {}
 
-    normalized_description = normalize_text(description)
-    for post in offer_result.get('Posten', []):
-        if normalize_text(post.get('Omschrijving')) == normalized_description:
-            return post
-
-    return {}
+    return build_post_index(offer_result).get(normalize_text(description), {})
 
 
 def find_offer_result(offer_results: list[dict], offer_name: str) -> dict:
@@ -26,12 +32,14 @@ def find_offer_result(offer_results: list[dict], offer_name: str) -> dict:
 
 
 def find_extracted_posts_for_match(offer_result: dict, offer_match: dict) -> list[dict]:
+    post_index = build_post_index(offer_result)
     extracted_posts = []
     for description in matched_post_descriptions(offer_match):
-        extracted_post = find_extracted_post_by_description(offer_result, description)
-        if extracted_post:
-            extracted_posts.append(extracted_post)
-
+        if not description or str(description).strip().upper() == UNKNOWN:
+            continue
+        post = post_index.get(normalize_text(description))
+        if post:
+            extracted_posts.append(post)
     return extracted_posts
 
 

@@ -13,7 +13,27 @@ MATCH_RESPONSE_SCHEMA = {
                 'properties': {
                     'Omschrijving': {'type': 'string'},
                     'Offertes': {
-                        'type': 'object',
+                        'type': 'array',
+                        'items': {
+                            'type': 'object',
+                            'properties': {
+                                'Bestand': {'type': 'string'},
+                                'Match type': {'type': 'string'},
+                                'Gematchte omschrijving': {'type': 'string'},
+                                'Gematchte posten': {
+                                    'type': 'array',
+                                    'items': {'type': 'string'},
+                                },
+                                'Overeenkomst': {'type': 'string'},
+                            },
+                            'required': [
+                                'Bestand',
+                                'Match type',
+                                'Gematchte omschrijving',
+                                'Gematchte posten',
+                                'Overeenkomst',
+                            ],
+                        },
                     },
                 },
                 'required': ['Omschrijving', 'Offertes'],

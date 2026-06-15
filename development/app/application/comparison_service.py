@@ -1,10 +1,16 @@
+import logging
+from datetime import datetime, timezone
 from decimal import Decimal
 from typing import Any
 
-from domain.money import parse_decimal
+from domain.fields import COMPARISON_FIELDS
+from domain.money import parse_decimal, UNKNOWN
 from services.comparison_matcher import ComparisonMatcher
 from services.folder_handler import FolderHandler
 from services.project import Project
+
+
+logger = logging.getLogger(__name__)
 
 
 class ComparisonService:
@@ -14,7 +20,7 @@ class ComparisonService:
     mutations that used to live in the NiceGUI page.
     """
 
-    comparison_fields = {'Omschrijving', 'Aantal', 'Eenheid'}
+    comparison_fields = set(COMPARISON_FIELDS)
 
     def __init__(self, folder_handler: FolderHandler, matcher: ComparisonMatcher | None = None) -> None:
         self.folder_handler = folder_handler
@@ -31,6 +37,44 @@ class ComparisonService:
 
     def has_offer_results(self, project: Project) -> bool:
         return bool(self.matcher.project_offer_results(project))
+
+    def load_status(self, project: Project) -> dict[str, Any] | None:
+        return self.folder_handler.load_comparison_status(project)
+
+    def save_status(
+        self,
+        project: Project,
+        *,
+        status: str,
+        step: str,
+        message: str | None = None,
+        error: str | None = None,
+        started_at: str | None = None,
+    ) -> None:
+        payload = {
+            'status': status,
+            'step': step,
+            'updated_at': self.utc_now_iso(),
+        }
+        if started_at is not None:
+            payload['started_at'] = started_at
+        if message:
+            payload['message'] = message
+        if error:
+            payload['error'] = error
+
+        self.folder_handler.save_comparison_status(project, payload)
+        logger.info(
+            'Comparison status for %s: %s/%s%s',
+            project.name,
+            status,
+            step,
+            f' - {message}' if message else '',
+        )
+
+    @staticmethod
+    def utc_now_iso() -> str:
+        return datetime.now(timezone.utc).isoformat()
 
     def add_comparison_row(self, project: Project, comparison: dict[str, Any]) -> None:
         comparison.setdefault('Posten', []).append({
@@ -165,10 +209,10 @@ class ComparisonService:
             'Offertes': {
                 offer_name: {
                     'Match type': 'single',
-                    'Gematchte omschrijving': 'ONBEKEND',
-                    'Gematchte eenheid': 'ONBEKEND',
-                    'Eenheidsprijs': 'ONBEKEND',
-                    'Totaalbedrag': 'ONBEKEND',
+                    'Gematchte omschrijving': UNKNOWN,
+                    'Gematchte eenheid': UNKNOWN,
+                    'Eenheidsprijs': UNKNOWN,
+                    'Totaalbedrag': UNKNOWN,
                     'Overeenkomst': '',
                 }
                 for offer_name in offer_names
@@ -177,18 +221,95 @@ class ComparisonService:
         comparison.pop('Matches', None)
         self.save_comparison(project, comparison)
 
-    def match_project_posts(self, project: Project, comparison: dict[str, Any]) -> dict[str, Any]:
-        match_result = self.matcher.match_comparison_posts(project, comparison)
-        comparison['MatchedPosten'] = self.matcher.normalize_matched_posts(project, comparison, match_result)
-        comparison.pop('Matches', None)
+    def toggle_warning(
+        self,
+        project: Project,
+        comparison: dict[str, Any],
+        warning_id: str,
+        checked: bool,
+    ) -> None:
+        acknowledged = set(comparison.get('AfgevinkteWaarschuwingen', []))
+        if checked:
+            acknowledged.add(warning_id)
+        else:
+            acknowledged.discard(warning_id)
+
+        comparison['AfgevinkteWaarschuwingen'] = sorted(acknowledged)
         self.save_comparison(project, comparison)
-        return comparison
+
+    def match_project_posts(self, project: Project, comparison: dict[str, Any]) -> dict[str, Any]:
+        started_at = self.utc_now_iso()
+        self.save_status(
+            project,
+            status='running',
+            step='matching_posts',
+            message='Matching comparison posts',
+            started_at=started_at,
+        )
+
+        try:
+            match_result = self.matcher.match_comparison_posts(project, comparison)
+            self.save_status(
+                project,
+                status='running',
+                step='normalizing_matches',
+                message='Normalizing matched posts',
+                started_at=started_at,
+            )
+            comparison['MatchedPosten'] = self.matcher.normalize_matched_posts(project, comparison, match_result)
+            comparison.pop('Matches', None)
+            self.save_comparison(project, comparison)
+            self.save_status(
+                project,
+                status='done',
+                step='done',
+                message='Matching completed',
+                started_at=started_at,
+            )
+            return comparison
+        except Exception as error:
+            self.save_status(
+                project,
+                status='failed',
+                step='failed',
+                message='Matching failed',
+                error=str(error),
+                started_at=started_at,
+            )
+            raise
 
     def recalculate_project_posts(self, project: Project, comparison: dict[str, Any]) -> dict[str, Any]:
-        comparison['MatchedPosten'] = self.matcher.recalculate_matched_posts(comparison, project)
-        comparison.pop('Matches', None)
-        self.save_comparison(project, comparison)
-        return comparison
+        started_at = self.utc_now_iso()
+        self.save_status(
+            project,
+            status='running',
+            step='recalculating_posts',
+            message='Recalculating matched posts',
+            started_at=started_at,
+        )
+
+        try:
+            comparison['MatchedPosten'] = self.matcher.recalculate_matched_posts(comparison, project)
+            comparison.pop('Matches', None)
+            self.save_comparison(project, comparison)
+            self.save_status(
+                project,
+                status='done',
+                step='done',
+                message='Recalculation completed',
+                started_at=started_at,
+            )
+            return comparison
+        except Exception as error:
+            self.save_status(
+                project,
+                status='failed',
+                step='failed',
+                message='Recalculation failed',
+                error=str(error),
+                started_at=started_at,
+            )
+            raise
 
     @staticmethod
     def comparison_total_from_json(comparison: dict[str, Any]) -> tuple[Decimal | None, str]:

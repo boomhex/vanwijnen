@@ -1,0 +1,56 @@
+{
+"Posten": [
+{
+"Omschrijving": "Cementdekvloeren kw. Cw20, dik 50 mm",
+"Categorie": "CEMENTDEKVLOEREN",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "11,00",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "Cementdekvloeren kw. Cw20, dik 70 mm",
+"Categorie": "CEMENTDEKVLOEREN",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "13,60",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "Cementdekvloeren kw. Cw20 meerdikte",
+"Categorie": "CEMENTDEKVLOEREN",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "1,30",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "> 200 m2 zandcementvloer, per dag",
+"Categorie": "CEMENTDEKVLOEREN",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "11,00",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "Cementgebonden Gietvloer Eco2floor, kw. Cw20, dik 50mm",
+"Categorie": "CEMENTGEBONDEN GIETVLOER",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "14,75",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "Cementgebonden Gietvloer Eco2floor, kw. Cw20, dik 70mm",
+"Categorie": "CEMENTGEBONDEN GIETVLOER",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "m2",
+"Eenheidsprijs": "19,25",
+"Aantal": "ONBEKEND"
+},
+{
+"Omschrijving": "Eventueel meerverbruik",
+"Categorie": "CEMENTGEBONDEN GIETVLOER",
+"Totaalbedrag": "ONBEKEND",
+"Eenheid": "ONBEKEND",
+"Eenheidsprijs": "235,0

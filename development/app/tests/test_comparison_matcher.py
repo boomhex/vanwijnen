@@ -1,9 +1,10 @@
 from decimal import Decimal
 
 from domain.comparison_checks import warning_for_offer
-from domain.money import calculate_total, parse_decimal
+from domain.money import calculate_total, calculate_unit_price, parse_decimal
 from domain.units import units_mismatch
 from matching.match_calculation import calculate_offer_total
+from matching.match_normalizer import complete_response, normalize_matched_posts
 from services.comparison_matcher import ComparisonMatcher
 
 
@@ -21,6 +22,12 @@ def test_calculate_total():
     assert calculate_total('ONBEKEND', '3.50', '42') == '42'
     # decimals with commas
     assert calculate_total('2,5', '2') == '5.00'
+
+
+def test_calculate_unit_price_from_total_and_amount():
+    assert calculate_unit_price('1200', '3') == '400.00'
+    assert calculate_unit_price('1200', '3', '250') == '250'
+    assert calculate_unit_price('1200', '0') == 'ONBEKEND'
 
 
 def test_recalculate_matched_posts():
@@ -110,6 +117,46 @@ def test_recalculate_matched_posts_refreshes_from_extract():
     assert result[0]['Offertes']['lolkema.pdf']['Gematchte categorie'] == 'Bouwplaatskosten'
 
 
+def test_recalculate_matched_posts_derives_unit_price_from_extract_total_and_amount():
+    comparison = {
+        'MatchedPosten': [
+            {
+                'Omschrijving': 'Vloerwerk',
+                'Aantal': '4',
+                'Eenheid': 'm2',
+                'Offertes': {
+                    'solitas.pdf': {
+                        'Gematchte omschrijving': 'PVC stroken',
+                    },
+                },
+            },
+        ],
+    }
+    offer_results = [
+        {
+            'Bestand': 'solitas.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'PVC stroken',
+                    'Categorie': 'PVC',
+                    'Aantal': '10',
+                    'Eenheid': 'm2',
+                    'Eenheidsprijs': 'ONBEKEND',
+                    'Totaalbedrag': '250.00',
+                },
+            ],
+        },
+    ]
+    matcher = ComparisonMatcher(folder_handler=None)
+    matcher.project_offer_results = lambda _project: offer_results
+
+    result = matcher.recalculate_matched_posts(comparison, project=object())
+    offer = result[0]['Offertes']['solitas.pdf']
+
+    assert offer['Eenheidsprijs'] == '25.00'
+    assert offer['Totaalbedrag'] == '100.00'
+
+
 def test_recalculate_matched_posts_sums_group_matches_from_extract():
     comparison = {
         'MatchedPosten': [
@@ -162,6 +209,99 @@ def test_recalculate_matched_posts_sums_group_matches_from_extract():
     assert offer['Gematchte categorie'] == 'Grondwerk bouwkuip'
     assert offer['Gematchte categorieen'] == ['Grondwerk bouwkuip']
     assert offer['Totaalbedrag'] == '4000.00'
+
+
+def test_group_match_sums_amount_when_units_are_equal():
+    comparison = {
+        'Posten': [
+            {
+                'Omschrijving': 'Vloerwerk',
+                'Aantal': '30',
+                'Eenheid': 'm2',
+            },
+        ],
+    }
+    response = {
+        'MatchedPosten': [
+            {
+                'Omschrijving': 'Vloerwerk',
+                'Offertes': {
+                    'solitas.pdf': {
+                        'Match type': 'group',
+                        'Gematchte posten': ['PVC 1', 'PVC 2'],
+                    },
+                },
+            },
+        ],
+    }
+    offer_results = [
+        {
+            'Bestand': 'solitas.pdf',
+            'Posten': [
+                {'Omschrijving': 'PVC 1', 'Aantal': '10', 'Eenheid': 'm2', 'Totaalbedrag': '100'},
+                {'Omschrijving': 'PVC 2', 'Aantal': '20', 'Eenheid': 'm2', 'Totaalbedrag': '200'},
+            ],
+        },
+    ]
+
+    completed = complete_response(response, offer_results)
+    normalized = normalize_matched_posts(comparison, completed, offer_results)
+    offer = normalized[0]['Offertes']['solitas.pdf']
+
+    assert offer['Aantal'] == '30.00'
+    assert offer['Gematchte hoeveelheid eenheid'] == 'm2'
+
+
+def test_match_response_accepts_offer_list_shape():
+    offer_results = [
+        {
+            'Bestand': 'postma.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'Gevelsteen basis halfsteens verband',
+                    'Categorie': 'Metselwerk',
+                    'Eenheid': 'dzd',
+                    'Eenheidsprijs': '765.00',
+                    'Totaalbedrag': 'ONBEKEND',
+                },
+            ],
+        },
+    ]
+    response = {
+        'MatchedPosten': [
+            {
+                'Omschrijving': 'Vermetselen gevelsteen wildverband',
+                'Offertes': [
+                    {
+                        'Bestand': 'postma.pdf',
+                        'Match type': 'single',
+                        'Gematchte omschrijving': 'Gevelsteen basis halfsteens verband',
+                        'Gematchte posten': ['Gevelsteen basis halfsteens verband'],
+                        'Overeenkomst': '2',
+                    },
+                ],
+            },
+        ],
+    }
+    comparison = {
+        'Posten': [
+            {
+                'Omschrijving': 'Vermetselen gevelsteen wildverband',
+                'Aantal': '86,95',
+                'Eenheid': 'dzd',
+            },
+        ],
+    }
+
+    completed = complete_response(response, offer_results)
+    normalized = normalize_matched_posts(comparison, completed, offer_results)
+
+    offer = normalized[0]['Offertes']['postma.pdf']
+    assert offer['Gematchte omschrijving'] == 'Gevelsteen basis halfsteens verband'
+    assert offer['Gematchte categorie'] == 'Metselwerk'
+    assert offer['Gematchte eenheid'] == 'dzd'
+    assert offer['Eenheidsprijs'] == '765.00'
+    assert offer['Overeenkomst'] == '2'
 
 
 def test_calculate_offer_total_uses_total_when_comparison_unit_is_post():
@@ -224,3 +364,21 @@ def test_warning_for_offer_keeps_post_mismatch_without_total():
     )
 
     assert 'Eenheid wijkt af' in warning
+
+
+def test_warning_for_offer_warns_for_quantity_difference():
+    warning = warning_for_offer(
+        {'Aantal': '100', 'Eenheid': 'm2'},
+        {'Aantal': '120', 'Gematchte eenheid': 'm2', 'Overeenkomst': '3'},
+    )
+
+    assert 'Hoeveelheid wijkt af' in warning
+
+
+def test_warning_for_offer_allows_small_quantity_difference():
+    warning = warning_for_offer(
+        {'Aantal': '100', 'Eenheid': 'm2'},
+        {'Aantal': '104', 'Gematchte eenheid': 'm2', 'Overeenkomst': '3'},
+    )
+
+    assert 'Hoeveelheid wijkt af' not in warning

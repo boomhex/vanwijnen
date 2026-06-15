@@ -2,6 +2,7 @@ from pathlib import Path
 
 from nicegui import app, ui
 
+from application.extraction_job_service import ExtractionJobService
 from services.folder_handler import FolderHandler
 from interface.left_drawer import LeftDrawer
 from interface.page_state import MainPageState
@@ -21,10 +22,12 @@ app.add_static_files('/storage', PROJECTS_DIR)
 
 state = MainPageState()
 folder_handler = FolderHandler(PROJECTS_DIR)
+extraction_job_service = ExtractionJobService(folder_handler)
 right_side_component = RightSide(state=state, folder_handler=folder_handler, projects_dir=PROJECTS_DIR)
 left_drawer_component = LeftDrawer(
     state=state,
     folder_handler=folder_handler,
+    extraction_job_service=extraction_job_service,
     projects_dir=PROJECTS_DIR,
     refresh_right_side=right_side_component.refresh,
 )

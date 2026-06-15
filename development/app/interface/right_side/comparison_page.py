@@ -9,8 +9,10 @@ from nicegui import ui, run
 from nicegui_tabulator import tabulator
 
 from application.comparison_service import ComparisonService
-from domain.comparison_checks import warning_for_offer
-from domain.money import parse_decimal
+from domain.comparison_checks import warnings_for_offer
+from domain.fields import COMPARISON_FIELDS
+from domain.money import parse_decimal, UNKNOWN
+from domain.status import is_active_running, is_stale_running
 from matching.match_fields import matched_categories, matched_post_descriptions
 from .subpage import SubPage
 
@@ -22,7 +24,7 @@ from interface.page_state import MainPageState
 
 
 class ComparisonRowsTable(TabulatorTable):
-    fields = ['Omschrijving', 'Aantal', 'Eenheid']
+    fields = COMPARISON_FIELDS
 
     def __init__(self, comparison: dict) -> None:
         self.comparison = comparison
@@ -92,9 +94,16 @@ class ComparisonRowsTable(TabulatorTable):
 
 
 class MatchedPostenTable(TabulatorTable):
-    def __init__(self, *, offer_names: list[str], match_rows: list[dict]) -> None:
+    def __init__(
+        self,
+        *,
+        offer_names: list[str],
+        match_rows: list[dict],
+        acknowledged_warnings: set[str] | None = None,
+    ) -> None:
         self.offer_names = self.offer_names_by_total(offer_names, match_rows)
         self.offer_prefixes = {offer_name: f'offer_{index}' for index, offer_name in enumerate(self.offer_names)}
+        self.acknowledged_warnings = acknowledged_warnings or set()
         super().__init__(
             rows=self.rows_from_matches(match_rows),
             columns=self.columns_from_offers(),
@@ -195,7 +204,7 @@ class MatchedPostenTable(TabulatorTable):
                 offer = offers.get(offer_name, {})
                 # Keep the matched description in the data for reference, but do not
                 # show it in the table columns.
-                row[f'{field_prefix}_omschrijving'] = offer.get('Gematchte omschrijving', offer.get('Omschrijving', 'ONBEKEND'))
+                row[f'{field_prefix}_omschrijving'] = offer.get('Gematchte omschrijving', offer.get('Omschrijving', UNKNOWN))
 
                 # Handle posts that are totals (Eenheid == 'post'). In that case the
                 # supplier put a total price on the post-level. Prefer to show that
@@ -221,12 +230,22 @@ class MatchedPostenTable(TabulatorTable):
                 def _fmt_money(val):
                     dec = parse_decimal(val)
                     if dec is None:
-                        return 'ONBEKEND'
+                        return UNKNOWN
                     return self.format_money(dec)
 
-                row[f'{field_prefix}_prijs'] = _fmt_money(raw_een) if raw_een not in (None, '') else 'ONBEKEND'
-                row[f'{field_prefix}_totaal'] = _fmt_money(raw_tot) if raw_tot not in (None, '') else 'ONBEKEND'
-                warning = warning_for_offer(match_row, offer)
+                row[f'{field_prefix}_prijs'] = _fmt_money(raw_een) if raw_een not in (None, '') else UNKNOWN
+                row[f'{field_prefix}_totaal'] = _fmt_money(raw_tot) if raw_tot not in (None, '') else UNKNOWN
+                warnings = warnings_for_offer(match_row, offer)
+                warning_ids = [
+                    self.warning_id(index, offer_name, warning)
+                    for warning in warnings
+                ]
+                active_warnings = [
+                    warning
+                    for warning, warning_id in zip(warnings, warning_ids, strict=False)
+                    if warning_id not in self.acknowledged_warnings
+                ]
+                warning = ' '.join(active_warnings)
                 tooltip = self.tooltip_for_offer(offer, row[f'{field_prefix}_omschrijving'], warning)
                 row[f'{field_prefix}_prijs_warning'] = warning
                 row[f'{field_prefix}_totaal_warning'] = warning
@@ -269,7 +288,7 @@ class MatchedPostenTable(TabulatorTable):
 
             totals_row[f'{field_prefix}_omschrijving'] = 'Totaal'
             totals_row[f'{field_prefix}_prijs'] = ''
-            totals_row[f'{field_prefix}_totaal'] = self.format_money(total_sum) if has_value else 'ONBEKEND'
+            totals_row[f'{field_prefix}_totaal'] = self.format_money(total_sum) if has_value else UNKNOWN
             totals_row[f'{field_prefix}_verschil'] = ''
             totals_row[f'{field_prefix}_prijs_tooltip'] = 'Totaal'
             totals_row[f'{field_prefix}_totaal_tooltip'] = 'Totaal'
@@ -281,13 +300,17 @@ class MatchedPostenTable(TabulatorTable):
         return rows
 
     @staticmethod
+    def warning_id(row_index: int, offer_name: str, warning: str) -> str:
+        return f'{row_index}|{offer_name}|{warning}'
+
+    @staticmethod
     def tooltip_for_offer(offer: dict, matched_description: str, warning: str) -> str:
         matched_posts = matched_post_descriptions(offer)
         categories = matched_categories(offer)
         if len(matched_posts) > 1:
             tooltip = 'Gematchte posten:\n' + '\n'.join(f'- {description}' for description in matched_posts)
         else:
-            tooltip = f'Gematchte omschrijving: {str(matched_description or "ONBEKEND").strip() or "ONBEKEND"}'
+            tooltip = f'Gematchte omschrijving: {str(matched_description or UNKNOWN).strip() or UNKNOWN}'
 
         if categories:
             tooltip += '\nCategorie: ' + ', '.join(categories)
@@ -351,7 +374,7 @@ class MatchedPostenTable(TabulatorTable):
         for index, total in totals.items():
             field_prefix = f'offer_{index}'
             if total is None:
-                row[f'{field_prefix}_verschil'] = 'ONBEKEND'
+                row[f'{field_prefix}_verschil'] = UNKNOWN
                 continue
 
             row[f'{field_prefix}_verschil'] = cls.format_percentage_difference(total, lowest_total)
@@ -359,7 +382,7 @@ class MatchedPostenTable(TabulatorTable):
     @staticmethod
     def format_percentage_difference(total: Decimal, lowest_total: Decimal) -> str:
         if lowest_total == 0:
-            return '0,0%' if total == 0 else 'ONBEKEND'
+            return '0,0%' if total == 0 else UNKNOWN
 
         percentage = ((total - lowest_total) / lowest_total * Decimal('100')).quantize(Decimal('0.1'))
         if percentage == 0:
@@ -387,7 +410,7 @@ class MatchedPostenTable(TabulatorTable):
                 totals[offer_name] = total
 
         return {
-            offer_name: self.format_money(total) if offer_name in totals else 'ONBEKEND'
+            offer_name: self.format_money(total) if offer_name in totals else UNKNOWN
             for offer_name, total in ((name, totals.get(name)) for name in self.offer_names)
         }
 
@@ -464,9 +487,20 @@ class ComparisonPage(SubPage):
 
     def match_button(self, project: Project, comparison: dict) -> None:
         with ui.row().classes('items-center gap-2 mt-4'):
-            match_button = ui.button('Match Posten', icon='eva-bulb-outline').props('dense no-caps')
+            status = self.comparison_service.load_status(project)
+            is_running = is_active_running(status)
+            is_stale = is_stale_running(status)
+            failed = bool(status and status.get('status') == 'failed')
+            status_message = status.get('message') if status else None
+            status_step = status.get('step') if status else None
+            status_error = status.get('error') if status else None
+
+            match_button = ui.button(
+                'Matching' if is_running else 'Match Posten',
+                icon='eva-bulb-outline',
+            ).props('dense no-caps')
             recalculate_button = ui.button(
-                'Recalculate',
+                'Recalculating' if is_running and status_step == 'recalculating_posts' else 'Recalculate',
                 icon='calculate',
                 on_click=lambda selected_project=project, data=comparison: self.recalculate_project_posts(
                     selected_project,
@@ -477,10 +511,25 @@ class ComparisonPage(SubPage):
             if not comparison.get('MatchedPosten'):
                 recalculate_button.props('disable')
 
+            if is_running:
+                match_button.props('loading disable')
+                recalculate_button.props('loading disable')
+                if status_message or status_step:
+                    match_button.tooltip(status_message or status_step)
+                    recalculate_button.tooltip(status_message or status_step)
+
+            if failed:
+                warning_icon = ui.icon('warning').classes('text-red-700')
+                warning_icon.tooltip(status_error or status_message or 'Comparison failed')
+            elif is_stale:
+                warning_icon = ui.icon('warning').classes('text-orange-700')
+                warning_icon.tooltip('Comparison status is stale. You can retry matching or recalculating.')
+
             async def request_match(_event, selected_project=project, data=comparison, button=match_button):
                 await self.match_project_posts(selected_project, data, button)
 
-            match_button.on('click', request_match)
+            if not is_running:
+                match_button.on('click', request_match)
 
     def input_table(self, project: Project, comparison: dict) -> None:
 
@@ -543,8 +592,13 @@ class ComparisonPage(SubPage):
 
     def render_side_by_side_match_table(self, project: Project, comparison: dict, match_rows: list[dict]) -> None:
         offer_names = self.comparison_service.offer_names(project)
+        acknowledged_warnings = set(comparison.get('AfgevinkteWaarschuwingen', []))
 
-        matched_table = MatchedPostenTable(offer_names=offer_names, match_rows=match_rows)
+        matched_table = MatchedPostenTable(
+            offer_names=offer_names,
+            match_rows=match_rows,
+            acknowledged_warnings=acknowledged_warnings,
+        )
         offer_names = matched_table.offer_names
         # per-offer decimals for comparison
         offer_totals_dec: dict[str, Decimal | None] = {}
@@ -576,6 +630,7 @@ class ComparisonPage(SubPage):
             ).props('dense no-caps')
 
         matched_tab = tabulator(matched_table.options(), row_key='id').classes('w-full')
+        self.render_warning_checklist(project, comparison, match_rows, offer_names)
 
         def matched_update_cell(event) -> None:
             cell = event.args.get('cell', {})
@@ -638,6 +693,67 @@ class ComparisonPage(SubPage):
                     + ', '.join(mismatched)
                 ).classes('text-xs text-red-700 font-semibold mt-2')
 
+    def render_warning_checklist(
+        self,
+        project: Project,
+        comparison: dict,
+        match_rows: list[dict],
+        offer_names: list[str],
+    ) -> None:
+        warning_items = self.warning_checklist_items(comparison, match_rows, offer_names)
+        if not warning_items:
+            return
+
+        with ui.expansion('Warnings checklist', icon='fact_check').classes('w-full mt-2'):
+            with ui.column().classes('gap-1 w-full'):
+                for item in warning_items:
+                    checkbox = ui.checkbox(
+                        item['label'],
+                        value=item['checked'],
+                        on_change=lambda event, warning_id=item['id']: self.toggle_warning(
+                            project,
+                            comparison,
+                            warning_id,
+                            bool(event.value),
+                        ),
+                    ).classes('text-sm')
+                    checkbox.tooltip(item['tooltip'])
+
+    def warning_checklist_items(
+        self,
+        comparison: dict,
+        match_rows: list[dict],
+        offer_names: list[str],
+    ) -> list[dict]:
+        acknowledged = set(comparison.get('AfgevinkteWaarschuwingen', []))
+        items = []
+
+        for row_index, match_row in enumerate(match_rows):
+            offers = match_row.get('Offertes', {})
+            if not isinstance(offers, dict):
+                continue
+
+            row_description = match_row.get('Omschrijving', f'Rij {row_index + 1}')
+            for offer_name in offer_names:
+                offer = offers.get(offer_name, {})
+                if not isinstance(offer, dict):
+                    continue
+
+                for warning in warnings_for_offer(match_row, offer):
+                    warning_id = MatchedPostenTable.warning_id(row_index, offer_name, warning)
+                    items.append({
+                        'id': warning_id,
+                        'checked': warning_id in acknowledged,
+                        'label': f'{row_description} | {offer_name}: {warning}',
+                        'tooltip': warning,
+                    })
+
+        return items
+
+    def toggle_warning(self, project: Project, comparison: dict, warning_id: str, checked: bool) -> None:
+        self.comparison_service.toggle_warning(project, comparison, warning_id, checked)
+        self.refresh()
+
     def copy_match_table_to_clipboard(self, matched_table) -> None:
         clipboard_text = matched_table.to_excel_clipboard_text()
         ui.run_javascript(f'''
@@ -673,6 +789,7 @@ class ComparisonPage(SubPage):
             await run.io_bound(self.comparison_service.match_project_posts, project, comparison)
         except Exception as error:
             self.notify_safe(f'Could not match posts: {error}')
+            self.refresh()
             return
 
         self.notify_safe('Matched posts')

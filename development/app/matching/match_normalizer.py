@@ -23,9 +23,7 @@ def complete_response(json_response: dict, offer_results: list[dict]) -> dict:
 
 
 def complete_all_offers(post: dict, offer_results: list[dict]) -> dict:
-    raw_offers = post.get('Offertes', {})
-    if not isinstance(raw_offers, dict):
-        raw_offers = {}
+    raw_offers = normalize_offer_matches(post.get('Offertes'))
 
     completed_offers = {}
     for offer_result in offer_results:
@@ -41,6 +39,30 @@ def complete_all_offers(post: dict, offer_results: list[dict]) -> dict:
 
     post['Offertes'] = completed_offers
     return post
+
+
+def normalize_offer_matches(raw_offers) -> dict:
+    if isinstance(raw_offers, dict):
+        return raw_offers
+
+    if not isinstance(raw_offers, list):
+        return {}
+
+    normalized = {}
+    for raw_offer in raw_offers:
+        if not isinstance(raw_offer, dict):
+            continue
+
+        offer_name = raw_offer.get('Bestand') or raw_offer.get('Offerte')
+        if not offer_name:
+            continue
+
+        offer_match = dict(raw_offer)
+        offer_match.pop('Bestand', None)
+        offer_match.pop('Offerte', None)
+        normalized[offer_name] = offer_match
+
+    return normalized
 
 
 def complete_offer_info(offer_result: dict, offer_match: dict) -> dict:
@@ -59,7 +81,7 @@ def normalize_matched_posts(comparison: dict, match_result: dict, offer_results:
 
     for index, comparison_row in enumerate(comparison.get('Posten', [])):
         raw_row = find_matching_raw_row(raw_rows, comparison_row, index)
-        offers = raw_row.get('Offertes', {}) if isinstance(raw_row, dict) else {}
+        offers = normalize_offer_matches(raw_row.get('Offertes')) if isinstance(raw_row, dict) else {}
         normalized_offers = {}
 
         for offer_name in offer_names:

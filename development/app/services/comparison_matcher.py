@@ -1,4 +1,5 @@
 from application.offer_service import OfferService
+from domain.money import calculate_unit_price
 from matching.comparison_prompt import MATCH_RESPONSE_SCHEMA, build_comparison_match_prompt
 from matching.match_calculation import calculate_offer_total
 from matching.match_normalizer import (
@@ -44,7 +45,11 @@ class ComparisonMatcher:
         comparison = comparison or project.load_comparison()
         offer_results = self.project_offer_results(project)
         prompt = build_comparison_match_prompt(comparison, offer_results)
-        json_response = parse_json_response(ask_llm(prompt, response_schema=MATCH_RESPONSE_SCHEMA))
+        answer = ask_llm(prompt, response_schema=MATCH_RESPONSE_SCHEMA)
+        if self.folder_handler is not None:
+            self.folder_handler.save_comparison_llm_response(project, answer)
+
+        json_response = parse_json_response(answer)
         return complete_response(json_response, offer_results)
 
     def normalize_matched_posts(self, project: Project, comparison: dict, match_result: dict) -> list[dict]:
@@ -73,6 +78,11 @@ class ComparisonMatcher:
                     continue
 
                 refresh_offer_match_from_extract(offer_results, offer_name, offer)
+                offer['Eenheidsprijs'] = calculate_unit_price(
+                    offer.get('Totaalbedrag'),
+                    offer.get('Aantal'),
+                    offer.get('Eenheidsprijs'),
+                )
                 offer['Totaalbedrag'] = calculate_offer_total(amount, offer, comparison_unit)
 
         return matched_posts

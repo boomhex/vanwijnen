@@ -1,9 +1,9 @@
-from domain.money import parse_decimal
+from domain.money import parse_decimal, UNKNOWN
 
 
 def normalize_unit(value: str | None) -> str:
     text = str(value or '').strip().casefold()
-    if not text or text == 'onbekend':
+    if not text or text == UNKNOWN.casefold():
         return ''
 
     return (

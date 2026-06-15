@@ -41,5 +41,8 @@ class Project(DomainProject):
     def rename(self, new_name: str | None) -> 'Project':
         return self.folder_handler.rename_project(self, new_name)
 
+    def delete(self) -> None:
+        self.folder_handler.delete_project(self)
+
     def __repr__(self) -> str:
         return f'Project({self.name})'
