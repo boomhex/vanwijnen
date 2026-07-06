@@ -1,0 +1,40 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage",
+      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm) Vuren kanthout zwart 34x18x3000 mm Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit Rockfon Blanka A15/A24 600x600x20 mm Inclusief: Horizontaal transport Bevestigingsmateriaal Montage 24mm systeem en inlegplaten 600x600mm Montage toeslag plafonds bouwkundige hoogte",
+      "Categorie": "PLAFONDS",
+      "Totaalbedrag": "69.287,48",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "44,02",
+      "Aantal": "1.574,00"
+    },
+    {
+      "Omschrijving": "02.) 44.31.10-b Rockfon Boxer 1200x1200x40mm balvast plafond Klasse 1A met Olympia Plus systeem",
+      "Beschrijving": "De door u opgegeven hoeveelheden. Opmerkingen: Let op! In dit plafond kunnen geen armaturen geplaatst worden i.v.m. de balvastheid. Verlichting kan worden gecreëerd door middel van opbouwarmaturen of lichtlijnen. Opbouw: Nonius bovendeel 540 mm Nonius onderdeel voor Bandraster 50 Nonius borgpen / splitpen 100st/ds Chicago Metallic L-muurprofiel versterkt 1470 H L=3050 30x30 001-wit CM Bandraster 3050 50mm Hoofdprofiel L=3600 gesleufd 001-wit CM Bandraster 3050 50mm Dwarsprofiel L=1150 ongesleufd 001-wit CM Bandraster 3050 50mm Lengtekoppeling CM Bandraster 3050 50mm Kruiskoppeling CM Bandraster 3050 50mm Muurbevestiging Rockfon Boxer 1A AEX vlak inleg 1166x1166x40mm CM Hold-down Verankeringsprofiel 18x45x18mm L=1168,6 mm CM Hold-down Verankeringsprofiel 18x45x18mm L=555 mm Gebogen verbindingsstuk Olympia Plus 1A Recht verbindingsstuk Olympia Plus 1A Inclusief: Horizontaal transport Bevestigingsmateriaal Montage balvast systeem (dubbel) klasse 1A 1200x1200mm Montage toeslag plafonds bouwkundige hoogte",
+      "Categorie": "PLAFONDS",
+      "Totaalbedrag": "8.618,90",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "109,10",
+      "Aantal": "79,00"
+    },
+    {
+      "Omschrijving": "03.) 44.31.10-c Rockfon Color-All Linen A24 600x600x20mm voor inlegmontage",
+      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm) Vuren kanthout zwart 34x18x3000 mm Chicago Metallic L-muurprofiel 1420 L=3050 24x24 Linen Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 Linen Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 Linen Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 Linen Rockfon Color-all Linen A15/24 vlak inleg 600x600x25mm Inclusief: Horizontaal transport Bevestigingsmateriaal Montage 24mm systeem en inlegplaten 600x600mm Montage toeslag plafonds bouwkundige hoogte",
+      "Categorie": "PLAFONDS",
+      "Totaalbedrag": "9.479,21",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "56,09",
+      "Aantal": "169,00"
+    },
+    {
+      "Omschrijving": "04.) 44.31.20-a Rockfon Cleanspace PRO A24 600x600x20mm voor inlegmontage",
+      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm) Vuren kanthout zwart 34x18x3000 mm Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit Rockfon Cleanspace Pro A24 vlak inleg 600x600x20mm Inclusief: Horizontaal transport Bevestigingsmateriaal Montage 24mm systeem en inlegplaten 600x600mm Montage toeslag systeemplafonds sanitaire ruimte Montage toeslag plafonds bouwkundige hoogte",
+      "Categorie": "PLAFONDS",
+      "Totaalbedrag": "6.475,04",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "73,58",
+      "Aantal": "88,00"
+    }
+  ]
+}

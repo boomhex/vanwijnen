@@ -1,0 +1,139 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "METALSTUD HANGWAND 125MM",
+      "Beschrijving": "Het leveren en monteren van een nieuwe metalstud hangwand volgens onderstaande specificaties: Type: MS 125/2.75.2.A Profielen: 1x C/U 75 mm stijlen hoh 600mm Isolatie: Steenwol 60mm, min. 50kg/m3 Beplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Kopsezijde: voorzien van 1 strook zetwerk Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "6.882,12",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "196,63",
+      "Aantal": "35,00"
+    },
+    {
+      "Omschrijving": "STELLEN EN MONTEREN DEURKOZIJNEN",
+      "Beschrijving": "Het uitsparen of het meebouwen van de deurkozijnen in de nieuwe metalstud wanden. Niet in onze prijs is opgenomen: Toepassen verzwaarde stijlen t.b.v. kozijnen Horizontaal of verticaal transport kozijnen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "9.326,30",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "30,98",
+      "Aantal": "301,00"
+    },
+    {
+      "Omschrijving": "TOESLAG VERZWAARDE STIJLEN",
+      "Beschrijving": "Het toepassen van verzwaarde stijlen van 2mm dik t.p.v. de nieuwe kozijnen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3.760,74",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,59",
+      "Aantal": "438,00"
+    },
+    {
+      "Omschrijving": "SANITAIRE VOORZETWAND",
+      "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties: Type: MS 100V/75.2 Profielen: 1x C/U 75 mm Isolatie: N.v.t. Beplating 1-zijdig: 1x Gipskartonlaat Ak 12,5mm 1x Gipsvezelplaat AK 12,5mm Kitwerk: N.v.t. Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3.579,53",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "35,80",
+      "Aantal": "100,00"
+    },
+    {
+      "Omschrijving": "TOESLAG HANGTOILET",
+      "Beschrijving": "Sparingen en achterhout t.b.v. een hangtoilet.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1.184,20",
+      "Eenheid": "st",
+      "Eenheidsprijs": "107,65",
+      "Aantal": "11,00"
+    },
+    {
+      "Omschrijving": "TOESLAG MIVA TOILET",
+      "Beschrijving": "Verstevigingen, sparingen ,achterhout en hout t.p.v. beugels t.b.v. een mivatoilet.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "195,68",
+      "Eenheid": "st",
+      "Eenheidsprijs": "195,68",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "ACHTERHOUT URINOIR",
+      "Beschrijving": "Achterhout t.b.v. een urinior.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "209,74",
+      "Eenheid": "st",
+      "Eenheidsprijs": "16,13",
+      "Aantal": "13,00"
+    },
+    {
+      "Omschrijving": "INBOUWEN BRANDSLANGHASPELKAST",
+      "Beschrijving": "INBOUWEN BRANDSLANGHASPELKAST",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "465,05",
+      "Eenheid": "st",
+      "Eenheidsprijs": "77,51",
+      "Aantal": "6,00"
+    },
+    {
+      "Omschrijving": "RONDE METSTUDWANDEN",
+      "Beschrijving": "Leveren en monteren van ronde metalstudwanden uitgevoerd d.m.v. buigbare profielen en 8 laag buiggips van 6mm dik per wandzijde.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.726,37",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "90,88",
+      "Aantal": "30,00"
+    },
+    {
+      "Omschrijving": "OPEN WANDEINDE",
+      "Beschrijving": "Het afwerken van een open wandeinde d.m.v. 1x een gipsstrook. De hoeken worden afgewerkt d.m.v. flexcorner.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "777,27",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "38,86",
+      "Aantal": "20,00"
+    },
+    {
+      "Omschrijving": "SPARINGEN MS WANDEN",
+      "Beschrijving": "Stelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "6.671,07",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,95",
+      "Aantal": "2.265,00"
+    },
+    {
+      "Omschrijving": "AFWERKEN WANDEN",
+      "Beschrijving": "Het fwerken van de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "57.213,95",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "13,84",
+      "Aantal": "4.133,00"
+    },
+    {
+      "Omschrijving": "AFWERKEN HOEKEN",
+      "Beschrijving": "Het afwerken van de hoeken t.p.v. de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1.495,07",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "13,84",
+      "Aantal": "108,00"
+    },
+    {
+      "Omschrijving": "ENKELE VOLGLASWAND",
+      "Beschrijving": "Leveren en monteren van een volglaswand onder hangwanden volgens onderstaande omschrijving. Enkele volglaswand (hoogte 3 meter) Enkel glas gelaagd helder 66.2SI Profielen in witte kleur De glaswanden, type volglaswand, bestaande uit een enkele beglazing van blank gelaagd glas welke wordt geplaatst in een kader van aluminium Uprofielen v.z.v. zwart rubberprofiel. De verticale aansluiting van de glasruiten onderling word gerealiseerd door middel van een doorzichtige polycarbonaatstrip.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "9.466,80",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "215,15",
+      "Aantal": "44,00"
+    },
+    {
+      "Omschrijving": "DUBBELE VOLGLASWAND",
+      "Beschrijving": "Leveren en monteren van een dubbele volglaswand onder hangwanden volgens onderstaande omschrijving. Dubbele volglaswand (hoogte 3 meter) Gelaagd glas 6.6.2 en 6.6.A2 Profielen in witte kleur",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1.802,85",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "450,71",
+      "Aantal": "4,00"
+    }
+  ]
+}
