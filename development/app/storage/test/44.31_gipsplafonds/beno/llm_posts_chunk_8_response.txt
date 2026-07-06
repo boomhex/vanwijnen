@@ -1,0 +1,58 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
+      "Beschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "110,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "110,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Raveling maken, per stijl onderbreking",
+      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen)",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "14,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "14,50",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 75mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen)",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "3,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "4,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "5,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,50",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen",
+      "Beschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating)",
+      "Categorie": "Wanden",
+      "Totaalbedrag": "5,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "1,00"
+    }
+  ]
+}

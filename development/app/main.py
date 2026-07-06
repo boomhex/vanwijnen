@@ -14,6 +14,15 @@ from interface.auth_middleware import AuthMiddleware
 from interface.main_page import main_page  # noqa: F401  registers /
 
 APP_DIR = Path(__file__).resolve().parent
+RELOAD_DIRS = [
+    APP_DIR / 'application',
+    APP_DIR / 'domain',
+    APP_DIR / 'interface',
+    APP_DIR / 'matching',
+    APP_DIR / 'prompts',
+    APP_DIR / 'services',
+    APP_DIR / 'utils',
+]
 
 app.add_middleware(AuthMiddleware)
 
@@ -37,4 +46,7 @@ ui.run(
     storage_secret=storage_secret(),
     port=int(os.environ.get('PORT', '8080')),
     show=False,  # served over the network; don't pop a browser on the host
+    uvicorn_reload_dirs=','.join(str(path) for path in RELOAD_DIRS),
+    uvicorn_reload_includes='*.py,*.txt',
+    uvicorn_reload_excludes='.*, .py[cod], .sw.*, ~*, __pycache__/*',
 )
