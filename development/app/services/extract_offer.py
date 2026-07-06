@@ -18,6 +18,9 @@ from domain.money import UNKNOWN
 
 logger = logging.getLogger(__name__)
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 MODEL_ID = os.environ.get('GEMINI_MODEL', 'gemini-2.5-flash-lite')
 EXTRACTION_MODEL_ID = os.environ.get('EXTRACT_OFFER_MODEL', 'gemini-3.5-flash')

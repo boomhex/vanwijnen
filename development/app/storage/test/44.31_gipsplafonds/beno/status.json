@@ -1,8 +1,7 @@
 {
-    "status": "failed",
-    "step": "failed",
-    "updated_at": "2026-07-06T07:51:01.914717+00:00",
-    "started_at": "2026-07-06T07:41:26.596766+00:00",
-    "message": "Extraction failed",
-    "error": "LLM request failed after 8 attempts: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    "status": "running",
+    "step": "extracting_summary",
+    "updated_at": "2026-07-06T10:43:16.303148+00:00",
+    "started_at": "2026-07-06T10:43:14.147442+00:00",
+    "message": "Extracting offer summary"
 }
