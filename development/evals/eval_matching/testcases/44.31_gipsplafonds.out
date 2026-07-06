@@ -1,0 +1,78 @@
+{
+  "ExpectedMatches": [
+    {
+      "Omschrijving": "Panelenplafond leveren en monteren systeemplafond algemene ruimtes",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Gematchte posten": [
+            "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage"
+          ]
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Gematchte posten": [
+            "SYSTEEMPLAFONDS ALGEMEEN"
+          ]
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Gematchte posten": [
+            "Rockfon Blanka systeemplafond"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Transport materiaal panelenplafond",
+      "Offertes": [
+        {
+          "Bestand": "bosma.pdf",
+          "Gematchte posten": [
+            "HORIZONTAAL TRANSPORT"
+          ]
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Gematchte posten": [
+            "Logistiek plafond Blanka"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag ronding systeemplafond",
+      "Offertes": [
+        {
+          "Bestand": "bosma.pdf",
+          "Gematchte posten": [
+            "SYSTEEMPLAFOND AANSLUITING RONDE WAND"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "panelenplafond koofconstructie tbv hoogteverschil plafonds eerste verdieping",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Gematchte posten": [
+            "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm"
+          ]
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Gematchte posten": [
+            "GIPSKOOF"
+          ]
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Gematchte posten": [
+            "Koofconstructie HSB (38x89)"
+          ]
+        }
+      ]
+    }
+  ]
+}

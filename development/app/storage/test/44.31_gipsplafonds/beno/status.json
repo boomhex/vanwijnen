@@ -1,7 +1,7 @@
 {
     "status": "running",
-    "step": "extracting_summary",
-    "updated_at": "2026-07-06T10:43:16.303148+00:00",
-    "started_at": "2026-07-06T10:43:14.147442+00:00",
-    "message": "Extracting offer summary"
+    "step": "extracting_posts_chunk_1_of_14",
+    "updated_at": "2026-07-06T13:20:07.108184+00:00",
+    "started_at": "2026-07-06T13:19:57.827662+00:00",
+    "message": "Extracting posts chunk 1 of 14"
 }

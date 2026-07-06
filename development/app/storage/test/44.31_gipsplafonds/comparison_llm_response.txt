@@ -1,0 +1,134 @@
+{
+  "MatchedPosten": [
+    {
+      "Omschrijving": "Panelenplafond leveren en monteren systeemplafond algemene ruimtes",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage",
+          "Gematchte posten": ["01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "SYSTEEMPLAFONDS ALGEMEEN",
+          "Gematchte posten": ["SYSTEEMPLAFONDS ALGEMEEN"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Rockfon Blanka systeemplafond",
+          "Gematchte posten": ["Rockfon Blanka systeemplafond"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Transport materiaal panelenplafond",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "HORIZONTAAL TRANSPORT",
+          "Gematchte posten": ["HORIZONTAAL TRANSPORT"],
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Logistiek plafond Blanka",
+          "Gematchte posten": ["Logistiek plafond Blanka"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag ronding systeemplafond",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "SYSTEEMPLAFOND AANSLUITING RONDE WAND",
+          "Gematchte posten": ["SYSTEEMPLAFOND AANSLUITING RONDE WAND"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "panelenplafond koofconstructie tbv hoogteverschil plafonds eerste verdieping",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm",
+          "Gematchte posten": ["31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm"],
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "GIPSKOOF",
+          "Gematchte posten": ["GIPSKOOF"],
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Koofconstructie HSB (38x89)",
+          "Gematchte posten": ["Koofconstructie HSB (38x89)"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag vastzetten plafonds in ruimtes onder 5m2",
+      "Offertes": [
+        {
+          "Bestand": "beno.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "bosma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "unipe.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        }
+      ]
+    }
+  ]
+}

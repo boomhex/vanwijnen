@@ -9,6 +9,7 @@ from services.extract_offer import (
     recover_json_string_field,
     split_text_chunks,
 )
+from domain.offer import Posten
 from domain.money import format_money
 from decimal import Decimal
 
@@ -29,6 +30,25 @@ def test_parse_posts_response_valid_json():
 
     assert posts == [{'Omschrijving': 'A'}]
     assert recovered is False
+
+
+def test_posten_preserves_extra_matching_fields():
+    post = Posten.from_dict({
+        'Omschrijving': 'Vermetselen WF handvorm halfsteens verband',
+        'Beschrijving': 'Basis halfsteens verband',
+        'Categorie': 'Metselwerk',
+        'Aantal': 'ONBEKEND',
+        'Eenheid': 'dzd',
+        'Eenheidsprijs': '800.00',
+        'Totaalbedrag': 'ONBEKEND',
+        'PostType': 'unit_rate',
+        'Werksoort': 'metselwerk',
+        'MatchHints': ['WF', 'halfsteens verband'],
+    })
+
+    assert post.to_dict()['PostType'] == 'unit_rate'
+    assert post.to_dict()['Werksoort'] == 'metselwerk'
+    assert post.to_dict()['MatchHints'] == ['WF', 'halfsteens verband']
 
 
 def test_recover_complete_posts_from_truncated_json():

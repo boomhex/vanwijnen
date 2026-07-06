@@ -1,7 +1,7 @@
 {
-    "status": "running",
-    "step": "calling_llm",
-    "updated_at": "2026-07-06T10:31:05.471054+00:00",
-    "started_at": "2026-07-06T10:31:05.284933+00:00",
-    "message": "Calling LLM"
+    "status": "done",
+    "step": "done",
+    "updated_at": "2026-07-06T13:00:58.280892+00:00",
+    "started_at": "2026-07-06T13:00:08.606207+00:00",
+    "message": "Extraction completed"
 }

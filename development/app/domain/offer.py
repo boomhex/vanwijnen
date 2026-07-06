@@ -13,9 +13,19 @@ class Posten:
     eenheid: str = ''
     eenheidsprijs: str = ''
     totaalbedrag: str = ''
+    extra: dict[str, Any] | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> 'Posten':
+        known_fields = {
+            'Omschrijving',
+            'Beschrijving',
+            'Categorie',
+            'Aantal',
+            'Eenheid',
+            'Eenheidsprijs',
+            'Totaalbedrag',
+        }
         return cls(
             omschrijving=data.get('Omschrijving', '') or '',
             beschrijving=data.get('Beschrijving', '') or '',
@@ -24,10 +34,12 @@ class Posten:
             eenheid=data.get('Eenheid', '') or '',
             eenheidsprijs=data.get('Eenheidsprijs', '') or '',
             totaalbedrag=data.get('Totaalbedrag', '') or '',
+            extra={key: value for key, value in data.items() if key not in known_fields},
         )
 
-    def to_dict(self) -> dict[str, str]:
-        return {
+    def to_dict(self) -> dict[str, Any]:
+        post = dict(self.extra or {})
+        post.update({
             'Omschrijving': self.omschrijving,
             'Beschrijving': self.beschrijving,
             'Categorie': self.categorie,
@@ -35,7 +47,8 @@ class Posten:
             'Eenheid': self.eenheid,
             'Eenheidsprijs': self.eenheidsprijs,
             'Totaalbedrag': self.totaalbedrag,
-        }
+        })
+        return post
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,49 @@
+{
+  "ExpectedMatches": [
+    {
+      "Omschrijving": "cementdekvloer Cw20 dik 50mm",
+      "Offertes": [
+        {
+          "Bestand": "rikkert.pdf",
+          "Gematchte posten": ["Cementdekvloeren kw. Cw20, dik 50 mm"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "cementgebonden gietvloer Eco2floor dik 70mm",
+      "Offertes": [
+        {
+          "Bestand": "rikkert.pdf",
+          "Gematchte posten": ["Cementgebonden Gietvloer Eco2floor, kw. Cw20, dik 70mm"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "fermacell platen afwerken groep 3",
+      "Offertes": [
+        {
+          "Bestand": "rikkert.pdf",
+          "Gematchte posten": ["Fermacell platen afwerken op gipsbasis o.b.v. groep 3"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "gipsplaatwanden naden en schroefgaten niveau C",
+      "Offertes": [
+        {
+          "Bestand": "rikkert.pdf",
+          "Gematchte posten": ["Gipsplaatwanden, naden en schroefgaten dichten op gipsbasis en aanbrengen gaas t.p.v. naad (type AK 120 cm)"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen kantstroken",
+      "Offertes": [
+        {
+          "Bestand": "rikkert.pdf",
+          "Gematchte posten": ["Leveren en aanbrengen kantstroken (excl. verwijderen restanten)"]
+        }
+      ]
+    }
+  ]
+}

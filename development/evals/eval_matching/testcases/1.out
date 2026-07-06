@@ -1,0 +1,87 @@
+{
+  "ExpectedMatches": [
+    {
+      "Omschrijving": "Vermetselen gevelsteen halfsteens verband",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Gematchte posten": ["Gevelsteen B3 WF"]
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Vermetselen WF handvorm halfsteens verband"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag wilverband",
+      "Offertes": [
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Toeslag wildverband"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag strooisteen",
+      "Offertes": [
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Toeslag strooisteen"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "inzet verreiker",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Gematchte posten": ["Alternatief inzet verreiker JCB 13.5m1 star"]
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Verreiker op bouwplaats"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag gebogen metselwerk",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Gematchte posten": ["Toeslag rond werk"]
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Toeslag rond metselwerk"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Gematchte posten": ["Zaagwerk stenen"]
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Zaagwerk gevelsteen"]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "voegwerk doorstrijken",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Gematchte posten": ["Voegwerk"]
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Gematchte posten": ["Toeslag doorstrijk metselwerk 6-8 mm verdiept"]
+        }
+      ]
+    }
+  ]
+}

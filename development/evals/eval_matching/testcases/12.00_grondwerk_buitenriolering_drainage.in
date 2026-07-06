@@ -1,0 +1,120 @@
+{
+  "OfferRoot": "app/storage/12.00_grondwerk_buitenriolering_drainage",
+  "Posten": [
+    {
+      "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen pomp t.b.v. drooghouden bouwkuip",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Huur elektrische pomp (6 weken)",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Uitvoeringskosten ontgraven van grond",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "partijkeuring vrijkomende grond, 3 week voor start werk",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "opnemen en afvoeren tegelbestrating schoolplein",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "uitvoeren van benodigde grondwerk bouwkundig",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "uitvoeren van benodigde grondwerk buitenterrein",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "vervoer en afvoer grond / zand klasse landbouw en natuur",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "laden, afvoeren en storten boorgrond uit depot",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "grondwerk kabelsleuf",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "hwa-riolering dakwater",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "hwa riolering kolken in terrein",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "ontwerptekening aan te leggen riolering",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "revisietekening van aangelegde riolering",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "kantopsluitingen bij tegelbestrating",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen betontegels 300x300x60",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Groenvoorziening",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "leveren aanleunbeugels voor fietsen in de betontegelverharding",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen van schutting",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk. Incl. poort",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "Vloerroosters",
+      "Aantal": "1",
+      "Eenheid": "post"
+    },
+    {
+      "Omschrijving": "terrein voorzien van menggranulaat 0/31,5 200mm dik, als draagkrachtige onderlaag voor opslag materiaal / opstelplaats mobiele kraan / keten / parkeren",
+      "Aantal": "1220",
+      "Eenheid": "m2"
+    }
+  ]
+}

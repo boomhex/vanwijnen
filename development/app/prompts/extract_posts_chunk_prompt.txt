@@ -19,8 +19,20 @@ Regels:
 - Neem bedragen over ZONDER euroteken.
 - Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
 - Voor categorie gebruik je het bovenliggende kopje/hoofdstuk waar de post onder valt. Is er geen duidelijke categorie, vul "ONBEKEND" in.
+- Voor PostType gebruik je een van: {line_total, unit_rate, surcharge, discount, alternative, option, subtotal, total, regie, note, unknown}.
+- Gebruik "unit_rate" voor tariefregels zonder offertehoeveelheid/totaal, zoals "765,00 per dzd" of "€ 30,00 m2".
+- Gebruik "surcharge" voor toeslagen/meerprijzen, "alternative" voor alternatieven, "option" voor opties, "regie" voor regiewerk/uurtarieven.
+- Voor Status gebruik je een van: {included, optional, alternative, excluded, unknown}.
+- Voor Code gebruik je een bestek-/postcode zoals "44.31.10-a" of "500010"; anders "ONBEKEND".
+- Voor Regelnummer gebruik je een zichtbaar postnummer zoals "01" of "04a"; anders "ONBEKEND".
+- Voor Subcategorie gebruik je een specifieker kopje onder Categorie, bijvoorbeeld "Systeemplafonds"; anders "ONBEKEND".
+- Voor Werksoort gebruik je een korte normalisatie van het werk, bijvoorbeeld "metselwerk", "voegwerk", "zaagwerk", "systeemplafond", "steigerwerk", "regiewerk".
+- Voor Prijsbasis beschrijf je de prijsvorm compact, bijvoorbeeld "per dzd", "per m2", "per week", "totaal", "post", of "ONBEKEND".
 - Voor omschrijving gebruik je een korte posttitel/regelnaam: compact, herkenbaar en geschikt om op te matchen.
 - Voor beschrijving gebruik je de uitgebreidere toelichting/specificatie van dezelfde post. Neem extra regels of voorwaarden op die inhoudelijk bij de post horen. Is er geen extra toelichting, vul dezelfde korte tekst als omschrijving in.
+- Voor Inclusief, Exclusief, Voorwaarden, DoorOpdrachtgever en MatchHints gebruik je arrays met strings. Gebruik [] als er niets bekend is.
+- Zet in MatchHints korte termen die matching helpen, zoals producttype, merk, formaat, verband, uitvoering, code, synoniemen uit de post.
+- Zet in Brontekst de relevante ruwe offertepassage van deze post compact over, inclusief prijsregel.
 - Gebruik het volgende formaat:
 {
     "Posten": [
@@ -31,7 +43,20 @@ Regels:
             "Totaalbedrag": "...",
             "Eenheid": "...",
             "Eenheidsprijs": "...",
-            "Aantal": "..."
+            "Aantal": "...",
+            "PostType": "...",
+            "Status": "...",
+            "Code": "...",
+            "Regelnummer": "...",
+            "Subcategorie": "...",
+            "Werksoort": "...",
+            "Prijsbasis": "...",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [],
+            "Brontekst": "..."
         }
     ]
 }

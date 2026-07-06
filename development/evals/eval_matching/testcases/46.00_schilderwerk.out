@@ -1,0 +1,72 @@
+{
+  "ExpectedMatches": [
+    {
+      "Omschrijving": "Schilderwerk binnenkozijnen",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Gematchte posten": [
+            "34.--.-- Leveren en plaatsen glas binnenkozijnen"
+          ]
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Gematchte posten": [
+            "Binnenkozijnen"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Schilderwerk vloerplinten",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Gematchte posten": [
+            "Schilderwerk vloerplinten"
+          ]
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Gematchte posten": [
+            "Plinten"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Schilderwerk dagkantafwerking buitenkozijnen",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Gematchte posten": [
+            "Schilderwerk aftimmeringen"
+          ]
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Gematchte posten": [
+            "Dagkanten binnenzijde buitenkozijnen"
+          ]
+        }
+      ]
+    },
+    {
+      "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Gematchte posten": [
+            "46.38.59-e Scan en sauswerk wanden"
+          ]
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Gematchte posten": [
+            "Basiskleur"
+          ]
+        }
+      ]
+    }
+  ]
+}

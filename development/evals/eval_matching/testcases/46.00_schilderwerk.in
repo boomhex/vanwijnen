@@ -1,0 +1,25 @@
+{
+  "OfferRoot": "app/storage/test/46.00_schilderwerk",
+  "Posten": [
+    {
+      "Omschrijving": "Schilderwerk binnenkozijnen",
+      "Aantal": "289,32",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "Schilderwerk vloerplinten",
+      "Aantal": "1016,67",
+      "Eenheid": "m1"
+    },
+    {
+      "Omschrijving": "Schilderwerk dagkantafwerking buitenkozijnen",
+      "Aantal": "151,92",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
+      "Aantal": "3.195,92",
+      "Eenheid": "m2"
+    }
+  ]
+}

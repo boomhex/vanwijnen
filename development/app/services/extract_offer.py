@@ -30,6 +30,53 @@ POST_CHUNK_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_POST_CHUNK_MAX_OUTPUT
 SUMMARY_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_SUMMARY_MAX_OUTPUT_TOKENS', '4096'))
 
 
+POST_FIELD_PROPERTIES = {
+    'Omschrijving': {'type': 'string'},
+    'Beschrijving': {'type': 'string'},
+    'Categorie': {'type': 'string'},
+    'Totaalbedrag': {'type': 'string'},
+    'Eenheid': {'type': 'string'},
+    'Eenheidsprijs': {'type': 'string'},
+    'Aantal': {'type': 'string'},
+    'PostType': {'type': 'string'},
+    'Status': {'type': 'string'},
+    'Code': {'type': 'string'},
+    'Regelnummer': {'type': 'string'},
+    'Subcategorie': {'type': 'string'},
+    'Werksoort': {'type': 'string'},
+    'Prijsbasis': {'type': 'string'},
+    'Inclusief': {'type': 'array', 'items': {'type': 'string'}},
+    'Exclusief': {'type': 'array', 'items': {'type': 'string'}},
+    'Voorwaarden': {'type': 'array', 'items': {'type': 'string'}},
+    'DoorOpdrachtgever': {'type': 'array', 'items': {'type': 'string'}},
+    'MatchHints': {'type': 'array', 'items': {'type': 'string'}},
+    'Brontekst': {'type': 'string'},
+}
+
+POST_REQUIRED_FIELDS = [
+    'Omschrijving',
+    'Beschrijving',
+    'Categorie',
+    'Totaalbedrag',
+    'Eenheid',
+    'Eenheidsprijs',
+    'Aantal',
+    'PostType',
+    'Status',
+    'Code',
+    'Regelnummer',
+    'Subcategorie',
+    'Werksoort',
+    'Prijsbasis',
+    'Inclusief',
+    'Exclusief',
+    'Voorwaarden',
+    'DoorOpdrachtgever',
+    'MatchHints',
+    'Brontekst',
+]
+
+
 OFFER_RESPONSE_SCHEMA = {
     'type': 'object',
     'properties': {
@@ -40,24 +87,8 @@ OFFER_RESPONSE_SCHEMA = {
             'type': 'array',
             'items': {
                 'type': 'object',
-                'properties': {
-                    'Omschrijving': {'type': 'string'},
-                    'Beschrijving': {'type': 'string'},
-                    'Categorie': {'type': 'string'},
-                    'Totaalbedrag': {'type': 'string'},
-                    'Eenheid': {'type': 'string'},
-                    'Eenheidsprijs': {'type': 'string'},
-                    'Aantal': {'type': 'string'},
-                },
-                'required': [
-                    'Omschrijving',
-                    'Beschrijving',
-                    'Categorie',
-                    'Totaalbedrag',
-                    'Eenheid',
-                    'Eenheidsprijs',
-                    'Aantal',
-                ],
+                'properties': POST_FIELD_PROPERTIES,
+                'required': POST_REQUIRED_FIELDS,
             },
         },
     },
@@ -352,7 +383,7 @@ def merge_duplicate_posts(first: dict, second: dict) -> dict:
     primary, fallback = (second, first) if post_completeness_score(second) > post_completeness_score(first) else (first, second)
     merged = dict(primary)
 
-    for field in ('Omschrijving', 'Beschrijving', 'Categorie', 'Totaalbedrag', 'Eenheid', 'Eenheidsprijs', 'Aantal'):
+    for field in POST_REQUIRED_FIELDS:
         if not has_known_value(merged.get(field)) and has_known_value(fallback.get(field)):
             merged[field] = fallback[field]
 
@@ -368,7 +399,7 @@ def merge_duplicate_posts(first: dict, second: dict) -> dict:
 
 def post_completeness_score(post: dict) -> int:
     score = 0
-    for field in ('Omschrijving', 'Beschrijving', 'Categorie', 'Totaalbedrag', 'Eenheid', 'Eenheidsprijs', 'Aantal'):
+    for field in POST_REQUIRED_FIELDS:
         if has_known_value(post.get(field)):
             score += 100
 
@@ -436,6 +467,8 @@ def normalize_field_value(value) -> str:
 
 
 def has_known_value(value) -> bool:
+    if isinstance(value, list):
+        return any(has_known_value(item) for item in value)
     text = str(value or '').strip()
     return bool(text) and text.upper() != UNKNOWN
 

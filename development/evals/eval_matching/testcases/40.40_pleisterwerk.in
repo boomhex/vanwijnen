@@ -1,0 +1,30 @@
+{
+  "OfferRoot": "app/storage/test/40.40_pleisterwerk",
+  "Posten": [
+    {
+      "Omschrijving": "cementdekvloer Cw20 dik 50mm",
+      "Aantal": "100",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "cementgebonden gietvloer Eco2floor dik 70mm",
+      "Aantal": "100",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "fermacell platen afwerken groep 3",
+      "Aantal": "100",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "gipsplaatwanden naden en schroefgaten niveau C",
+      "Aantal": "100",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen kantstroken",
+      "Aantal": "100",
+      "Eenheid": "m1"
+    }
+  ]
+}

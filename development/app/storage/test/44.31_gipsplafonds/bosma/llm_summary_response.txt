@@ -1,1 +1,0 @@
-{"Naam aannemer": "Bosma B.V.", "Totaalprijs inc. BTW": "ONBEKEND", "Totaalprijs exc. BTW": "449.425,75"}

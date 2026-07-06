@@ -1,0 +1,30 @@
+{
+  "OfferRoot": "app/storage/test/44.31_gipsplafonds",
+  "Posten": [
+    {
+      "Omschrijving": "Panelenplafond leveren en monteren systeemplafond algemene ruimtes",
+      "Aantal": "1573.29",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "Transport materiaal panelenplafond",
+      "Aantal": "1573.29",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "toeslag ronding systeemplafond",
+      "Aantal": "28.14",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "panelenplafond koofconstructie tbv hoogteverschil plafonds eerste verdieping",
+      "Aantal": "3",
+      "Eenheid": "m2"
+    },
+    {
+      "Omschrijving": "toeslag vastzetten plafonds in ruimtes onder 5m2",
+      "Aantal": "2.61",
+      "Eenheid": "m2"
+    }
+  ]
+}

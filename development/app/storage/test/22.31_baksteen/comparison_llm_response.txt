@@ -27,7 +27,7 @@
           "Match type": "single",
           "Gematchte omschrijving": "ONBEKEND",
           "Gematchte posten": [],
-          "Overeenkomst": "1"
+          "Overeenkomst": "ONBEKEND"
         },
         {
           "Bestand": "zuidema.pdf",
@@ -46,7 +46,7 @@
           "Match type": "single",
           "Gematchte omschrijving": "ONBEKEND",
           "Gematchte posten": [],
-          "Overeenkomst": "1"
+          "Overeenkomst": "ONBEKEND"
         },
         {
           "Bestand": "zuidema.pdf",
@@ -63,8 +63,8 @@
         {
           "Bestand": "postma.pdf",
           "Match type": "single",
-          "Gematchte omschrijving": "Alternatief inzet verreiker",
-          "Gematchte posten": ["Alternatief inzet verreiker"],
+          "Gematchte omschrijving": "Alternatief inzet verreiker JCB 13.5m1 star",
+          "Gematchte posten": ["Alternatief inzet verreiker JCB 13.5m1 star"],
           "Overeenkomst": "3"
         },
         {
@@ -103,14 +103,14 @@
           "Match type": "single",
           "Gematchte omschrijving": "ONBEKEND",
           "Gematchte posten": [],
-          "Overeenkomst": "1"
+          "Overeenkomst": "ONBEKEND"
         },
         {
           "Bestand": "zuidema.pdf",
           "Match type": "single",
           "Gematchte omschrijving": "ONBEKEND",
           "Gematchte posten": [],
-          "Overeenkomst": "1"
+          "Overeenkomst": "ONBEKEND"
         }
       ]
     },
@@ -146,9 +146,9 @@
         {
           "Bestand": "zuidema.pdf",
           "Match type": "single",
-          "Gematchte omschrijving": "Toeslag doorstrijk metselwerk",
-          "Gematchte posten": ["Toeslag doorstrijk metselwerk"],
-          "Overeenkomst": "3"
+          "Gematchte omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
+          "Gematchte posten": ["Toeslag doorstrijk metselwerk 6-8 mm verdiept"],
+          "Overeenkomst": "2"
         }
       ]
     }

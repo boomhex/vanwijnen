@@ -1,0 +1,216 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "Panelenplafond leveren en monteren systeemplafond algemene ruimtes",
+            "Aantal": "1573.29",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "Transport materiaal panelenplafond",
+            "Aantal": "1573.29",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "toeslag ronding systeemplafond",
+            "Aantal": "28.14",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "panelenplafond koofconstructie tbv hoogteverschil plafonds eerste verdieping",
+            "Aantal": "3",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "toeslag vastzetten plafonds in ruimtes onder 5m2",
+            "Aantal": "2.61",
+            "Eenheid": "m2"
+        }
+    ],
+    "MatchedPosten": [
+        {
+            "Omschrijving": "Panelenplafond leveren en monteren systeemplafond algemene ruimtes",
+            "Aantal": "1573.29",
+            "Eenheid": "m2",
+            "Offertes": {
+                "beno.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage",
+                    "Gematchte categorie": "PLAFONDS",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "1574.00",
+                    "Eenheidsprijs": "44.02",
+                    "Totaalbedrag": "69256.23",
+                    "Overeenkomst": "3"
+                },
+                "bosma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "SYSTEEMPLAFONDS ALGEMEEN",
+                    "Gematchte categorie": "NIEUWB. IKC",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "1571.00",
+                    "Eenheidsprijs": "38.91",
+                    "Totaalbedrag": "61216.71",
+                    "Overeenkomst": "3"
+                },
+                "unipe.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Rockfon Blanka systeemplafond",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "1573.3",
+                    "Eenheidsprijs": "38.80",
+                    "Totaalbedrag": "61043.65",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "Transport materiaal panelenplafond",
+            "Aantal": "1573.29",
+            "Eenheid": "m2",
+            "Offertes": {
+                "beno.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "bosma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "HORIZONTAAL TRANSPORT",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "9112.75",
+                    "Totaalbedrag": "9112.75",
+                    "Overeenkomst": "2"
+                },
+                "unipe.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Logistiek plafond Blanka",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "1573",
+                    "Eenheidsprijs": "1.50",
+                    "Totaalbedrag": "2359.94",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "toeslag ronding systeemplafond",
+            "Aantal": "28.14",
+            "Eenheid": "m2",
+            "Offertes": {
+                "beno.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "bosma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "SYSTEEMPLAFOND AANSLUITING RONDE WAND",
+                    "Gematchte categorie": "NIEUWB. IKC",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "35.00",
+                    "Eenheidsprijs": "11.15",
+                    "Totaalbedrag": "313.76",
+                    "Overeenkomst": "3"
+                },
+                "unipe.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                }
+            }
+        },
+        {
+            "Omschrijving": "panelenplafond koofconstructie tbv hoogteverschil plafonds eerste verdieping",
+            "Aantal": "3",
+            "Eenheid": "m2",
+            "Offertes": {
+                "beno.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm",
+                    "Gematchte categorie": "Betimmeringen",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "3.00",
+                    "Eenheidsprijs": "42.40",
+                    "Totaalbedrag": "127.20",
+                    "Overeenkomst": "2"
+                },
+                "bosma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "GIPSKOOF",
+                    "Gematchte categorie": "NIEUWB. IKC",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "16.00",
+                    "Eenheidsprijs": "127.23",
+                    "Totaalbedrag": "381.69",
+                    "Overeenkomst": "2"
+                },
+                "unipe.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Koofconstructie HSB (38x89)",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "3",
+                    "Eenheidsprijs": "105.00",
+                    "Totaalbedrag": "315.00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
+            "Omschrijving": "toeslag vastzetten plafonds in ruimtes onder 5m2",
+            "Aantal": "2.61",
+            "Eenheid": "m2",
+            "Offertes": {
+                "beno.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "bosma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                },
+                "unipe.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1"
+                }
+            }
+        }
+    ]
+}
