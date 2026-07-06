@@ -1,4 +1,9 @@
 Je moet alleen de posten uit dit deel van een offerte tekst halen.
+Belangrijk over chunking:
+- Dit tekstdeel is technisch opgeknipt voor verwerking. De chunking is GEEN onderdeel van de offerte.
+- Gebruik teksten zoals "Deel 1 van 3", "TEXTDEEL", "VORIGE GEACCEPTEERDE POST" of andere chunk-/promptlabels NOOIT als omschrijving, categorie of postinformatie.
+- Gebruik alleen kopjes/categorieën die letterlijk uit de offerte zelf komen.
+- Als er geen duidelijke categorie in de offerte zelf staat, vul "ONBEKEND" in.
 Regels:
 - Verzin geen posten en geen getallen.
 - Haal alleen posten uit dit tekstdeel die een bedrag/aantal/eenheidsprijs bevatten.
@@ -6,17 +11,22 @@ Regels:
 - Als een post aan het begin of einde van dit tekstdeel lijkt door te lopen in een ander tekstdeel, sla die post over.
 - Neem geen halve omschrijvingen of posten over.
 - Sla kopjes/subtotalen zonder echte postregel over.
+- Sla bepalingen, algemene voorwaarden, uitgangspunten, garantie-, betaling-, ARBO- en geldigheidsregels over.
+- Sla toelichtende zinnen over die alleen zeggen dat iets "op aanvraag", "op regiebasis", "wordt verrekend" of "zal worden berekend" zonder concreet bedrag.
 - Is een veld onbekend, vul "ONBEKEND" in.
 - Reageer ALLEEN met geldige JSON.
 - Gebruik geen markdown codeblok.
 - Neem bedragen over ZONDER euroteken.
 - Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
 - Voor categorie gebruik je het bovenliggende kopje/hoofdstuk waar de post onder valt. Is er geen duidelijke categorie, vul "ONBEKEND" in.
+- Voor omschrijving gebruik je een korte posttitel/regelnaam: compact, herkenbaar en geschikt om op te matchen.
+- Voor beschrijving gebruik je de uitgebreidere toelichting/specificatie van dezelfde post. Neem extra regels of voorwaarden op die inhoudelijk bij de post horen. Is er geen extra toelichting, vul dezelfde korte tekst als omschrijving in.
 - Gebruik het volgende formaat:
 {
     "Posten": [
         {
             "Omschrijving": "...",
+            "Beschrijving": "...",
             "Categorie": "...",
             "Totaalbedrag": "...",
             "Eenheid": "...",

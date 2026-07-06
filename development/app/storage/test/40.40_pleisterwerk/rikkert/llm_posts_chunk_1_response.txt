@@ -1,0 +1,172 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Cementdekvloeren kw. Cw20, dik 50 mm",
+      "Categorie": "CEMENTDEKVLOEREN",
+      "Totaalbedrag": "11,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "11,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Cementdekvloeren kw. Cw20, dik 70 mm",
+      "Categorie": "CEMENTDEKVLOEREN",
+      "Totaalbedrag": "13,60",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "13,60",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Cementdekvloeren kw. Cw20 meerdikte",
+      "Categorie": "CEMENTDEKVLOEREN",
+      "Totaalbedrag": "1,30",
+      "Eenheid": "m2/cm",
+      "Eenheidsprijs": "1,30",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "zandcementvloer, per dag",
+      "Categorie": "CEMENTDEKVLOEREN",
+      "Totaalbedrag": "11,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "11,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Cementgebonden Gietvloer Eco2floor, kw. Cw20, dik 50mm",
+      "Categorie": "CEMENTGEBONDEN GIETVLOER",
+      "Totaalbedrag": "14,75",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "14,75",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Cementgebonden Gietvloer Eco2floor, kw. Cw20, dik 70mm",
+      "Categorie": "CEMENTGEBONDEN GIETVLOER",
+      "Totaalbedrag": "19,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "19,25",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Eventueel meerverbruik",
+      "Categorie": "CEMENTGEBONDEN GIETVLOER",
+      "Totaalbedrag": "235,00",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "235,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Eventueel minderverbruik",
+      "Categorie": "CEMENTGEBONDEN GIETVLOER",
+      "Totaalbedrag": "225,00",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "225,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen isolatie EPS 045, dik 20mm met rasterfolie zgn. tackerplaat t.b.v. vloerverwarming, incl. aftapen naden en incl. leveren en aanbrengen kantstroken (excl. verwijderen restanten)",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "7,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,25",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen krimpnetwapening ø 2-50 gegalvaniseerd",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "5,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "5,50",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen kunststofvezels",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "0,35",
+      "Eenheid": "m2/cm",
+      "Eenheidsprijs": "0,35",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen 0,2 mm dampremmende folie met kantstroken",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "2,45",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,45",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen kantstroken (excl. verwijderen restanten)",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "1,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "1,75",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen slijtvaste laag, toeslag",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "4,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,25",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Aanbrengen vloerverwarming vloeistof, exclusief levering, toeslag",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "0,35",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "0,35",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Toeslag vloeren badkamer (6-8m²) onder afschot (plasvorming toegestaan)",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "65,00",
+      "Eenheid": "badkamer",
+      "Eenheidsprijs": "65,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Minder dikte onder de 5cm zal worden verrekend o.b.v.",
+      "Categorie": "Algemene uitgangspunten vloeren",
+      "Totaalbedrag": "0,50",
+      "Eenheid": "m2/cm",
+      "Eenheidsprijs": "0,50",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Vloermatomranding plaatsen",
+      "Categorie": "Algemene uitgangspunten vloeren",
+      "Totaalbedrag": "45,00",
+      "Eenheid": "stuk",
+      "Eenheidsprijs": "45,00",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Fermacell platen afwerken op gipsbasis o.b.v. groep 3",
+      "Categorie": "STUKADOORSWERK",
+      "Totaalbedrag": "7,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,25",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Fermacell platen afwerken op gipsbasis o.b.v. groep 2",
+      "Categorie": "STUKADOORSWERK",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Fermacell platen afwerken op gipsbasis o.b.v. groep 1",
+      "Categorie": "STUKADOORSWERK",
+      "Totaalbedrag": "16,95",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "16,95",
+      "Aantal": "ONBEKEND"
+    }
+  ]
+}

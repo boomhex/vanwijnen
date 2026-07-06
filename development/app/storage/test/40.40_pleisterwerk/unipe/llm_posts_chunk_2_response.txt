@@ -1,0 +1,148 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "moduulmaat aangeleverd voor toepassing in een standaard T-24 systeem (bij voorkeur zwart). Inclusief akoestische isolatie Nofisol black, dik 20mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "10870.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "210.25",
+      "Aantal": "51.7"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Plagyp-D plafondconstructie bestaande uit Metal Stud PU 27/27- en PC 60/27 profielen h.o.h. 400 mm en h.o.h. 800 mm. Het frame werk wordt d.m.v. nonius hangers aan bovenliggende constructie gemonteerd. Tegen dit framewerk word een laag Gyproc Rigitone 12-20-35 Activ Air beplating dik 12,5mm geschroefd. Inclusief SLS frame werk.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "18000.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "102.75",
+      "Aantal": "175.3"
+    },
+    {
+      "Omschrijving": "Afwerking akoestisch plafond.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3060.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "17.50",
+      "Aantal": "175"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MSVoorzetwand, dik 100 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan één zijde van het frame m.b.v. schroeven wordt één laag Standaard AK gipskarton dik 12,5 mm en één laag LaDura/ Duragyp gipsvezelbeplating dik 12,5mm aangebracht. In de spouw Rockwool Rock Sono base dik 60mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "MSV 100 / 75.2.A",
+      "Totaalbedrag": "39100.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "60.10",
+      "Aantal": "651.2"
+    },
+    {
+      "Omschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "775.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125.00",
+      "Aantal": "6.2"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "85.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "Logistiek MSV",
+      "Totaalbedrag": "2560.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2.00",
+      "Aantal": "1280"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "afkoop Sparingen & achterhout in MS wanden",
+      "Totaalbedrag": "4800.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7.50",
+      "Aantal": "640"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3450.00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5.75",
+      "Aantal": "600"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Totaalbedrag": "535.00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3.85",
+      "Aantal": "139"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.",
+      "Categorie": "Stijlverzwaring deurkozijn",
+      "Totaalbedrag": "55.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "55.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "Gyproc No-coat ultra flexcorner 325",
+      "Totaalbedrag": "447.50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.95",
+      "Aantal": "50"
+    },
+    {
+      "Omschrijving": "Wandafwerking op beide zijdes in niveau B (behang klaar)",
+      "Categorie": "MS wanden afwerken",
+      "Totaalbedrag": "5900.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "9.25",
+      "Aantal": "639"
+    },
+    {
+      "Omschrijving": "Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.",
+      "Categorie": "Stellen deurkozijn in MS Wand",
+      "Totaalbedrag": "65.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "65.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "MS 125 / 2.75.2.A",
+      "Totaalbedrag": "155950.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "84.75",
+      "Aantal": "1840.3"
+    },
+    {
+      "Omschrijving": "Meerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.",
+      "Categorie": "Toeslag WR (Hydro) beplating",
+      "Totaalbedrag": "190.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4.35",
+      "Aantal": "43.3"
+    },
+    {
+      "Omschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "Toeslag ronding",
+      "Totaalbedrag": "2665.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125.00",
+      "Aantal": "21.3"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "Toeslag inbouw brandslanghaspel in MS Wand",
+      "Totaalbedrag": "510.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85.00",
+      "Aantal": "6"
+    }
+  ]
+}

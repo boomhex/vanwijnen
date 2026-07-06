@@ -1,0 +1,5 @@
+{
+  "Naam aannemer": "Bijstra Afbouw BV",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "ONBEKEND"
+}

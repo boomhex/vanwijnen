@@ -3,6 +3,7 @@ from typing import TYPE_CHECKING, Any
 
 from domain.fields import FIELD_TO_ATTR, OFFER_FIELDS
 from domain.offer import Offer, Posten
+from utils.app_logging import logged_action
 
 if TYPE_CHECKING:
     from services.folder_handler import FolderHandler
@@ -26,14 +27,17 @@ class OfferService:
     def save_data(self, offer: Offer, data: dict[str, Any]) -> None:
         self.folder_handler.save_result(offer.document, data)
 
+    @logged_action
     def update_summary_value(self, offer: Offer, result: dict[str, Any], field: str, value: str) -> None:
         result[field] = value
         self.save_data(offer, result)
 
+    @logged_action
     def add_summary_field(self, offer: Offer, result: dict[str, Any], field: str, value: str | None) -> None:
         result[field] = value or ''
         self.save_data(offer, result)
 
+    @logged_action
     def add_post_row(self, offer: Offer, result: dict[str, Any]) -> Posten:
         row = Posten()
         posten = self.posten_list(result)
@@ -41,6 +45,7 @@ class OfferService:
         self.save_posten_list(offer, result, posten)
         return row
 
+    @logged_action
     def update_post_row(
         self,
         offer: Offer,
@@ -59,6 +64,7 @@ class OfferService:
         setattr(posten[row_id], self.field_name(field), value)
         self.save_posten_list(offer, result, posten)
 
+    @logged_action
     def delete_post_row(self, offer: Offer, result: dict[str, Any], row_id: int | None) -> None:
         if row_id is None:
             return
@@ -94,6 +100,12 @@ class OfferService:
 
     def delete(self, offer: Offer) -> None:
         self.folder_handler.delete_file(offer.document)
+
+    def clear_extraction(self, offer: Offer, *, include_raw_text: bool = False) -> int:
+        return self.folder_handler.clear_extraction_artifacts(
+            offer.document,
+            include_raw_text=include_raw_text,
+        )
 
     def offer_from_path(self, path: Path) -> Offer:
         return self.folder_handler.offer_from_path(path)

@@ -1,0 +1,52 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Voor transport van gipsplaten en plafondplaten naar werkplek hanteren wij onderstaande prijs per m² gipsplaat en plafondplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "54"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "80,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "14"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "170,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85,00",
+      "Aantal": "2"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "14"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "25,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "7"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Systeemwand IM 1000 TC 1.75.1a (Rw 44dB). Gerekend met een bruto m² wandoppervlakte.",
+      "Categorie": "O.G. => Omega Systeemwand IM 1000 TC ~ H:2600mm (Intermontage)",
+      "Totaalbedrag": "22.300,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "235,00",
+      "Aantal": "94,99"
+    }
+  ]
+}

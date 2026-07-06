@@ -273,6 +273,30 @@ class FolderHandler:
         import shutil
         shutil.rmtree(offer_dir)
 
+    def clear_extraction_artifacts(self, file: Path, *, include_raw_text: bool = False) -> int:
+        """Remove saved extraction output for an offer while keeping the PDF."""
+        if not file.exists():
+            raise FileNotFoundError(f'{file.name} does not exist')
+        if file.name != 'document.pdf':
+            raise ValueError('Can only clear extraction artifacts for files in offer folders')
+
+        artifact_paths = [
+            self.result_path_for_file(file),
+            self.llm_response_path_for_file(file),
+            self.status_path_for_file(file),
+        ]
+        artifact_paths.extend(self.offer_dir_for_file(file).glob('llm_*_response.txt'))
+        if include_raw_text:
+            artifact_paths.append(self.raw_path_for_file(file))
+
+        removed = 0
+        for artifact_path in dict.fromkeys(artifact_paths):
+            if artifact_path.exists() and artifact_path.is_file():
+                artifact_path.unlink()
+                removed += 1
+
+        return removed
+
     def load_result(self, file: Path) -> dict[str, Any] | None:
         """Load the extract.json for a file."""
         extract_path = self.result_path_for_file(file)

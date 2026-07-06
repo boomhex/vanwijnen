@@ -2,6 +2,7 @@ import json
 import logging
 from collections.abc import Callable
 from datetime import datetime, timezone
+from difflib import SequenceMatcher
 from json import JSONDecodeError
 from pathlib import Path
 import re
@@ -18,13 +19,18 @@ from domain.money import UNKNOWN
 logger = logging.getLogger(__name__)
 
 
-MODEL_ID = os.environ.get('GEMINI_MODEL', 'gemini-3-flash-preview')
+MODEL_ID = os.environ.get('GEMINI_MODEL', 'gemini-2.5-flash-lite')
+EXTRACTION_MODEL_ID = os.environ.get('EXTRACT_OFFER_MODEL', 'gemini-3.5-flash')
+EXTRACTION_MODE = os.environ.get('EXTRACT_MODE', 'auto').strip().casefold()
+EXTRACTION_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_MAX_OUTPUT_TOKENS', '65536'))
+POST_CHUNK_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_POST_CHUNK_MAX_OUTPUT_TOKENS', '16384'))
+SUMMARY_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_SUMMARY_MAX_OUTPUT_TOKENS', '4096'))
 
 
 OFFER_RESPONSE_SCHEMA = {
     'type': 'object',
     'properties': {
-        'Naam opdrachtgever': {'type': 'string'},
+        'Naam aannemer': {'type': 'string'},
         'Totaalprijs inc. BTW': {'type': 'string'},
         'Totaalprijs exc. BTW': {'type': 'string'},
         'Posten': {
@@ -33,6 +39,7 @@ OFFER_RESPONSE_SCHEMA = {
                 'type': 'object',
                 'properties': {
                     'Omschrijving': {'type': 'string'},
+                    'Beschrijving': {'type': 'string'},
                     'Categorie': {'type': 'string'},
                     'Totaalbedrag': {'type': 'string'},
                     'Eenheid': {'type': 'string'},
@@ -41,6 +48,7 @@ OFFER_RESPONSE_SCHEMA = {
                 },
                 'required': [
                     'Omschrijving',
+                    'Beschrijving',
                     'Categorie',
                     'Totaalbedrag',
                     'Eenheid',
@@ -51,7 +59,7 @@ OFFER_RESPONSE_SCHEMA = {
         },
     },
     'required': [
-        'Naam opdrachtgever',
+        'Naam aannemer',
         'Totaalprijs inc. BTW',
         'Totaalprijs exc. BTW',
         'Posten',
@@ -62,12 +70,12 @@ OFFER_RESPONSE_SCHEMA = {
 OFFER_SUMMARY_RESPONSE_SCHEMA = {
     'type': 'object',
     'properties': {
-        'Naam opdrachtgever': {'type': 'string'},
+        'Naam aannemer': {'type': 'string'},
         'Totaalprijs inc. BTW': {'type': 'string'},
         'Totaalprijs exc. BTW': {'type': 'string'},
     },
     'required': [
-        'Naam opdrachtgever',
+        'Naam aannemer',
         'Totaalprijs inc. BTW',
         'Totaalprijs exc. BTW',
     ],
@@ -85,6 +93,8 @@ OFFER_POSTS_RESPONSE_SCHEMA = {
 
 CHUNKED_EXTRACTION_THRESHOLD = int(os.environ.get('EXTRACT_CHUNKED_THRESHOLD_CHARS', '7000'))
 POST_CHUNK_SIZE = int(os.environ.get('EXTRACT_POST_CHUNK_CHARS', '4500'))
+POST_CHUNK_OVERLAP_LINES = int(os.environ.get('EXTRACT_CHUNK_OVERLAP_LINES', '15'))
+VALID_EXTRACTION_MODES = {'auto', 'chunked', 'one_shot'}
 
 
 client = None
@@ -145,11 +155,21 @@ def ask_llm(
     response_schema: dict | None = None,
     max_output_tokens: int = 65536,
     model: str = MODEL_ID,
+    label: str = 'llm_call',
 ) -> str:
     max_attempts = 8
     for attempt in range(1, max_attempts + 1):
         try:
-            logger.debug("Generating LLM response")
+            logger.info(
+                'LLM call started: label=%s model=%s attempt=%s/%s prompt_chars=%s max_output_tokens=%s schema=%s',
+                label,
+                model,
+                attempt,
+                max_attempts,
+                len(prompt),
+                max_output_tokens,
+                response_schema is not None,
+            )
             config_kwargs = {
                 'temperature': 0.0,
                 'max_output_tokens': max_output_tokens,
@@ -166,12 +186,24 @@ def ask_llm(
             if response.text is None:
                 raise RuntimeError('LLM response did not contain text')
 
+            logger.info(
+                'LLM response received: label=%s attempt=%s response_chars=%s',
+                label,
+                attempt,
+                len(response.text),
+            )
             return response.text
         except KeyboardInterrupt:
             raise
         except Exception as error:
             error_text = str(error).strip()
-            logger.warning("LLM request failed: %s", error_text)
+            logger.warning(
+                'LLM request failed: label=%s attempt=%s/%s error=%s',
+                label,
+                attempt,
+                max_attempts,
+                error_text,
+            )
 
             lowered = error_text.lower()
             if any(token in lowered for token in ('quota', 'resource exhausted')):
@@ -182,7 +214,9 @@ def ask_llm(
             if attempt >= max_attempts:
                 raise RuntimeError(f'LLM request failed after {max_attempts} attempts: {error_text}') from error
 
-            time.sleep(min(2 ** (attempt - 1), 30))
+            sleep_seconds = min(2 ** (attempt - 1), 30)
+            logger.info('LLM retry scheduled: label=%s sleep_seconds=%s', label, sleep_seconds)
+            time.sleep(sleep_seconds)
 
     raise RuntimeError('LLM request failed unexpectedly')
 
@@ -204,33 +238,46 @@ def read_txt(file):
     return txt
 
 
-def split_text_chunks(text: str, max_chars: int = POST_CHUNK_SIZE) -> list[str]:
+def split_text_chunks(
+    text: str,
+    max_chars: int = POST_CHUNK_SIZE,
+    overlap_lines: int = POST_CHUNK_OVERLAP_LINES,
+) -> list[str]:
+    lines = text.splitlines()
+    if not lines:
+        return []
+
     chunks = []
-    current_lines = []
-    current_size = 0
+    start = 0
+    while start < len(lines):
+        chunk_lines = []
+        chunk_size = 0
+        index = start
 
-    for line in text.splitlines():
-        line_size = len(line) + 1
-        if current_lines and current_size + line_size > max_chars:
-            chunks.append('\n'.join(current_lines))
-            current_lines = []
-            current_size = 0
+        while index < len(lines):
+            line = lines[index]
+            line_size = len(line) + 1
+            if chunk_lines and chunk_size + line_size > max_chars:
+                break
 
-        if line_size > max_chars:
-            for start in range(0, len(line), max_chars):
-                part = line[start:start + max_chars]
-                if current_lines:
-                    chunks.append('\n'.join(current_lines))
-                    current_lines = []
-                    current_size = 0
-                chunks.append(part)
-            continue
+            if not chunk_lines and line_size > max_chars:
+                chunk_lines.append(line[:max_chars])
+                index += 1
+                break
 
-        current_lines.append(line)
-        current_size += line_size
+            chunk_lines.append(line)
+            chunk_size += line_size
+            index += 1
 
-    if current_lines:
-        chunks.append('\n'.join(current_lines))
+        if not chunk_lines:
+            break
+
+        chunks.append('\n'.join(chunk_lines))
+        if index >= len(lines):
+            break
+
+        next_start = max(index - overlap_lines, start + 1)
+        start = next_start
 
     return [chunk for chunk in chunks if chunk.strip()]
 
@@ -248,21 +295,224 @@ def post_identity(post: dict) -> tuple[str, str, str, str, str, str]:
 
 def merge_post_chunks(post_chunks: list[list[dict]]) -> list[dict]:
     merged = []
-    seen = set()
 
     for posts in post_chunks:
         for post in posts:
             if not isinstance(post, dict):
                 continue
 
-            identity = post_identity(post)
-            if identity in seen:
+            duplicate_index = find_duplicate_post_index(merged, post)
+            if duplicate_index is not None:
+                merged[duplicate_index] = merge_duplicate_posts(merged[duplicate_index], post)
                 continue
 
-            seen.add(identity)
             merged.append(post)
 
     return merged
+
+
+def find_duplicate_post_index(posts: list[dict], candidate: dict) -> int | None:
+    for index, post in enumerate(posts):
+        if are_duplicate_posts(post, candidate):
+            return index
+
+    return None
+
+
+def are_duplicate_posts(first: dict, second: dict) -> bool:
+    if post_identity(first) == post_identity(second):
+        return True
+
+    first_code = post_code(first)
+    second_code = post_code(second)
+    if first_code and first_code == second_code:
+        return True
+
+    if not descriptions_similar(first.get('Omschrijving'), second.get('Omschrijving')):
+        return False
+
+    if not compatible_text_values(first.get('Categorie'), second.get('Categorie')):
+        return False
+
+    descriptions_match = normalized_post_text(first.get('Omschrijving')) == normalized_post_text(second.get('Omschrijving'))
+    totals_match = exact_known_match(first, second, 'Totaalbedrag')
+    amounts_match = exact_known_match(first, second, 'Aantal') and compatible_text_values(first.get('Eenheid'), second.get('Eenheid'))
+    unit_prices_match = exact_known_match(first, second, 'Eenheidsprijs') and compatible_text_values(first.get('Eenheid'), second.get('Eenheid'))
+
+    if descriptions_match:
+        return totals_match or amounts_match or unit_prices_match
+
+    return (totals_match and amounts_match) or (totals_match and unit_prices_match) or (amounts_match and unit_prices_match)
+
+
+def merge_duplicate_posts(first: dict, second: dict) -> dict:
+    primary, fallback = (second, first) if post_completeness_score(second) > post_completeness_score(first) else (first, second)
+    merged = dict(primary)
+
+    for field in ('Omschrijving', 'Beschrijving', 'Categorie', 'Totaalbedrag', 'Eenheid', 'Eenheidsprijs', 'Aantal'):
+        if not has_known_value(merged.get(field)) and has_known_value(fallback.get(field)):
+            merged[field] = fallback[field]
+
+    first_description = str(first.get('Omschrijving', '') or '')
+    second_description = str(second.get('Omschrijving', '') or '')
+    if normalized_post_text(first_description) in normalized_post_text(second_description):
+        merged['Omschrijving'] = second_description
+    elif normalized_post_text(second_description) in normalized_post_text(first_description):
+        merged['Omschrijving'] = first_description
+
+    return merged
+
+
+def post_completeness_score(post: dict) -> int:
+    score = 0
+    for field in ('Omschrijving', 'Beschrijving', 'Categorie', 'Totaalbedrag', 'Eenheid', 'Eenheidsprijs', 'Aantal'):
+        if has_known_value(post.get(field)):
+            score += 100
+
+    score += min(len(str(post.get('Omschrijving', '') or '')), 200)
+    return score
+
+
+def post_code(post: dict) -> str | None:
+    match = re.match(r'\s*(\d{4,6})\b', str(post.get('Omschrijving', '') or ''))
+    return match.group(1) if match else None
+
+
+def descriptions_similar(first, second) -> bool:
+    first_text = normalized_post_text(first)
+    second_text = normalized_post_text(second)
+    if not first_text or not second_text:
+        return False
+    if first_text == second_text:
+        return True
+    if min(len(first_text), len(second_text)) >= 24 and (first_text in second_text or second_text in first_text):
+        return True
+
+    ratio = SequenceMatcher(None, first_text, second_text).ratio()
+    if ratio >= 0.86:
+        return True
+
+    first_tokens = set(first_text.split())
+    second_tokens = set(second_text.split())
+    shared_tokens = first_tokens & second_tokens
+    if len(shared_tokens) < 4:
+        return False
+
+    return len(shared_tokens) / min(len(first_tokens), len(second_tokens)) >= 0.75
+
+
+def normalized_post_text(value) -> str:
+    text = str(value or '').casefold()
+    text = re.sub(r'^\s*\d{4,6}\s+', '', text)
+    text = re.sub(r'[^0-9a-z]+', ' ', text)
+    return ' '.join(text.split())
+
+
+def compatible_text_values(first, second) -> bool:
+    if not has_known_value(first) or not has_known_value(second):
+        return True
+
+    return normalized_post_text(first) == normalized_post_text(second)
+
+
+def exact_known_match(first: dict, second: dict, field: str) -> bool:
+    first_value = first.get(field)
+    second_value = second.get(field)
+    if not has_known_value(first_value) or not has_known_value(second_value):
+        return False
+
+    return normalize_field_value(first_value) == normalize_field_value(second_value)
+
+
+def normalize_field_value(value) -> str:
+    parsed_value = parse_money_value_safely(value)
+    if parsed_value is not None:
+        return str(parsed_value)
+
+    return normalized_post_text(value)
+
+
+def has_known_value(value) -> bool:
+    text = str(value or '').strip()
+    return bool(text) and text.upper() != UNKNOWN
+
+
+EXCLUDED_CONTEXT_TERMS = (
+    'algemene voorwaarden',
+    'voorwaarden',
+    'bepaling',
+    'bepalingen',
+    'uitgangspunt',
+    'uitgangspunten',
+    'garantie',
+    'betaling',
+    'betalingstermijn',
+    'offerte geldig',
+    'arbo',
+    'krediet',
+    'coface',
+)
+
+EXCLUDED_DESCRIPTION_TERMS = (
+    'op aanvraag',
+    'op regiebasis',
+    'zal worden berekend',
+    'zullen wij hier een toeslag voor berekenen',
+    'wordt verrekend',
+    'worden verrekend',
+    'wordt berekend',
+    'worden berekend',
+    'geen garantie',
+)
+
+
+def filter_non_price_posts(posts: list[dict]) -> list[dict]:
+    filtered_posts = []
+    removed_count = 0
+    for post in posts:
+        if should_exclude_post(post):
+            removed_count += 1
+            logger.info('Filtered non-price/bepalingen post: %s', post.get('Omschrijving'))
+            continue
+
+        filtered_posts.append(post)
+
+    if removed_count:
+        logger.info('Filtered %s non-price/bepalingen posts', removed_count)
+
+    return filtered_posts
+
+
+def should_exclude_post(post: dict) -> bool:
+    if has_concrete_price_data(post):
+        return False
+
+    description = normalize_filter_text(post.get('Omschrijving'))
+    detailed_description = normalize_filter_text(post.get('Beschrijving'))
+    category = normalize_filter_text(post.get('Categorie'))
+    combined = f'{category} {description} {detailed_description}'
+
+    return any(term in combined for term in EXCLUDED_CONTEXT_TERMS) or any(
+        term in f'{description} {detailed_description}' for term in EXCLUDED_DESCRIPTION_TERMS
+    )
+
+
+def has_concrete_price_data(post: dict) -> bool:
+    return any(
+        parse_money_value_safely(post.get(field)) is not None
+        for field in ('Totaalbedrag', 'Eenheidsprijs', 'Aantal')
+    )
+
+
+def parse_money_value_safely(value) -> Decimal | None:
+    try:
+        return parse_money_value(value)
+    except ValueError:
+        return None
+
+
+def normalize_filter_text(value) -> str:
+    return ' '.join(str(value or '').casefold().split())
 
 
 def format_chunked_llm_response(summary_answer: str, post_answers: list[str]) -> str:
@@ -285,6 +535,93 @@ def parse_json_response(answer: str) -> dict:
             f'LLM response was not valid JSON at line {error.lineno}, column {error.colno}. '
             'The raw response was saved as llm_response.txt.'
         ) from error
+
+
+def parse_posts_response(answer: str) -> tuple[list[dict], bool]:
+    """Parse a posts chunk response.
+
+    Returns (posts, recovered). If the JSON is truncated, recover complete
+    objects from the Posten array and ignore the incomplete tail. This avoids an
+    extra LLM retry and keeps already extracted rows.
+    """
+    try:
+        parsed = parse_json_response(answer)
+    except ValueError:
+        recovered_posts = recover_complete_posts(answer)
+        if recovered_posts:
+            return recovered_posts, True
+        raise
+
+    posts = parsed.get('Posten', [])
+    return (posts if isinstance(posts, list) else []), False
+
+
+def parse_offer_response(answer: str) -> tuple[dict, bool]:
+    try:
+        return parse_json_response(answer), False
+    except ValueError:
+        recovered_posts = recover_complete_posts(answer)
+        if not recovered_posts:
+            raise
+
+        return {
+            'Naam aannemer': recover_json_string_field(answer, 'Naam aannemer') or UNKNOWN,
+            'Totaalprijs inc. BTW': recover_json_string_field(answer, 'Totaalprijs inc. BTW') or UNKNOWN,
+            'Totaalprijs exc. BTW': recover_json_string_field(answer, 'Totaalprijs exc. BTW') or UNKNOWN,
+            'Posten': recovered_posts,
+            'Extractie waarschuwingen': [
+                'De one-shot LLM response had ongeldige of afgekorte JSON; complete posten zijn behouden en de incomplete staart is overgeslagen.',
+            ],
+        }, True
+
+
+def recover_json_string_field(answer: str, field: str) -> str | None:
+    pattern = rf'"{re.escape(field)}"\s*:\s*"((?:\\.|[^"\\])*)"'
+    match = re.search(pattern, answer)
+    if not match:
+        return None
+
+    try:
+        return json.loads(f'"{match.group(1)}"')
+    except JSONDecodeError:
+        return match.group(1)
+
+
+def recover_complete_posts(answer: str) -> list[dict]:
+    array_start = find_posts_array_start(answer)
+    if array_start is None:
+        return []
+
+    decoder = json.JSONDecoder()
+    posts = []
+    index = array_start
+    while index < len(answer):
+        while index < len(answer) and answer[index] in ' \t\r\n,':
+            index += 1
+
+        if index >= len(answer) or answer[index] == ']':
+            break
+        if answer[index] != '{':
+            index += 1
+            continue
+
+        try:
+            value, next_index = decoder.raw_decode(answer, index)
+        except JSONDecodeError:
+            break
+
+        if isinstance(value, dict):
+            posts.append(value)
+        index = next_index
+
+    return posts
+
+
+def find_posts_array_start(answer: str) -> int | None:
+    match = re.search(r'"Posten"\s*:\s*\[', answer)
+    if not match:
+        return None
+    return match.end()
 
 
 def parse_money_value(value: str) -> Decimal | None:
@@ -370,7 +707,7 @@ def parse_money_value(value: str) -> Decimal | None:
 
 def validate_offer_json(offer_json: dict) -> list[str]:
     warnings = []
-    required_keys = ['Naam opdrachtgever', 'Totaalprijs inc. BTW', 'Totaalprijs exc. BTW', 'Posten']
+    required_keys = ['Naam aannemer', 'Totaalprijs inc. BTW', 'Totaalprijs exc. BTW', 'Posten']
 
     for key in required_keys:
         if key not in offer_json:
@@ -464,15 +801,67 @@ def normalize_amounts(offer_json: dict) -> dict:
     return offer_json
 
 
+def should_use_chunked_extraction(offer_text: str) -> bool:
+    if EXTRACTION_MODE not in VALID_EXTRACTION_MODES:
+        raise ValueError(f'Invalid EXTRACT_MODE "{EXTRACTION_MODE}". Use one of: {", ".join(sorted(VALID_EXTRACTION_MODES))}')
+    if EXTRACTION_MODE == 'chunked':
+        return True
+    if EXTRACTION_MODE == 'one_shot':
+        return False
+
+    return len(offer_text) > CHUNKED_EXTRACTION_THRESHOLD
+
+
+def build_posts_chunk_prompt(
+    posts_prompt: str,
+    chunk: str,
+    *,
+    index: int,
+    total_chunks: int,
+    previous_post: dict | None = None,
+) -> str:
+    previous_post_text = (
+        json.dumps(previous_post, ensure_ascii=False, indent=2)
+        if isinstance(previous_post, dict)
+        else 'GEEN'
+    )
+    return '\n'.join([
+        posts_prompt,
+        'VORIGE GEACCEPTEERDE POST:',
+        previous_post_text,
+        'INSTRUCTIE VOOR OVERLAP:',
+        '- De chunking is technisch en is GEEN onderdeel van de offerte.',
+        '- Gebruik labels zoals "Deel", "VORIGE GEACCEPTEERDE POST" of "INSTRUCTIE VOOR OVERLAP" nooit als omschrijving, categorie of postinformatie.',
+        '- Gebruik alleen categorieën/kopjes die letterlijk in de offerte zelf staan.',
+        '- Begin met extraheren NA de vorige geaccepteerde post.',
+        '- Neem de vorige geaccepteerde post niet opnieuw op.',
+        '- Als het begin van dit tekstdeel alleen een vervolg/toelichting is op de vorige post, gebruik dit als context maar output geen post daarvoor.',
+        '- Output alleen nieuwe volledige posten uit dit tekstdeel.',
+        f'Deel {index} van {total_chunks}:',
+        chunk,
+    ])
+
+
 def extract_offer_one_shot(
     prompt: str,
     offer_text: str,
     response_callback: ResponseCallback | None = None,
 ) -> tuple[dict, str]:
-    answer = ask_llm('\n'.join([prompt, offer_text]), response_schema=OFFER_RESPONSE_SCHEMA)
+    answer = ask_llm(
+        '\n'.join([prompt, offer_text]),
+        response_schema=OFFER_RESPONSE_SCHEMA,
+        max_output_tokens=EXTRACTION_MAX_OUTPUT_TOKENS,
+        model=EXTRACTION_MODEL_ID,
+        label='offer_one_shot',
+    )
     if response_callback is not None:
         response_callback('llm_response.txt', answer)
-    return parse_json_response(answer), answer
+    logger.info('Parsing one-shot extraction response')
+    offer_json, recovered = parse_offer_response(answer)
+    if recovered:
+        logger.warning('Recovered complete posts from truncated one-shot extraction response')
+
+    return offer_json, answer
 
 
 def extract_offer_chunked(
@@ -489,16 +878,27 @@ def extract_offer_chunked(
     summary_answer = ask_llm(
         '\n'.join([summary_prompt, offer_text]),
         response_schema=OFFER_SUMMARY_RESPONSE_SCHEMA,
-        max_output_tokens=4096,
+        max_output_tokens=SUMMARY_MAX_OUTPUT_TOKENS,
+        model=EXTRACTION_MODEL_ID,
+        label='offer_summary',
     )
     if response_callback is not None:
         response_callback('llm_summary_response.txt', summary_answer)
         response_callback('llm_response.txt', format_chunked_llm_response(summary_answer, []))
+    logger.info('Parsing extraction summary response')
     summary_json = parse_json_response(summary_answer)
 
     post_answers = []
     post_chunks = []
+    recovered_chunks = []
+    previous_post = None
     chunks = split_text_chunks(offer_text)
+    logger.info(
+        'Chunked post extraction started: chunks=%s overlap_lines=%s chunk_chars=%s',
+        len(chunks),
+        POST_CHUNK_OVERLAP_LINES,
+        [len(chunk) for chunk in chunks],
+    )
     for index, chunk in enumerate(chunks, start=1):
         if status_callback is not None:
             status_callback(
@@ -506,25 +906,62 @@ def extract_offer_chunked(
                 f'Extracting posts chunk {index} of {len(chunks)}',
             )
 
+        logger.info(
+            'Post chunk LLM call preparing: chunk=%s/%s chunk_chars=%s chunk_lines=%s',
+            index,
+            len(chunks),
+            len(chunk),
+            len(chunk.splitlines()),
+        )
         chunk_answer = ask_llm(
-            '\n'.join([posts_prompt, f'Deel {index} van {len(chunks)}:', chunk]),
+            build_posts_chunk_prompt(
+                posts_prompt,
+                chunk,
+                index=index,
+                total_chunks=len(chunks),
+                previous_post=previous_post,
+            ),
             response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
-            max_output_tokens=16384,
+            max_output_tokens=POST_CHUNK_MAX_OUTPUT_TOKENS,
+            model=EXTRACTION_MODEL_ID,
+            label=f'offer_posts_chunk_{index}_of_{len(chunks)}',
         )
         post_answers.append(chunk_answer)
         if response_callback is not None:
             response_callback(f'llm_posts_chunk_{index}_response.txt', chunk_answer)
             response_callback('llm_response.txt', format_chunked_llm_response(summary_answer, post_answers))
-        chunk_json = parse_json_response(chunk_answer)
-        posts = chunk_json.get('Posten', [])
-        post_chunks.append(posts if isinstance(posts, list) else [])
+        logger.info('Parsing posts chunk response: chunk=%s/%s', index, len(chunks))
+        posts, recovered = parse_posts_response(chunk_answer)
+        if recovered:
+            recovered_chunks.append(index)
+            logger.warning(
+                'Recovered %s complete posts from truncated chunk %s',
+                len(posts),
+                index,
+            )
+        logger.info(
+            'Posts chunk parsed: chunk=%s/%s posts=%s recovered=%s',
+            index,
+            len(chunks),
+            len(posts),
+            recovered,
+        )
+        post_chunks.append(posts)
+        if posts:
+            previous_post = posts[-1]
 
     offer_json = {
-        'Naam opdrachtgever': summary_json.get('Naam opdrachtgever', UNKNOWN),
+        'Naam aannemer': summary_json.get('Naam aannemer', UNKNOWN),
         'Totaalprijs inc. BTW': summary_json.get('Totaalprijs inc. BTW', UNKNOWN),
         'Totaalprijs exc. BTW': summary_json.get('Totaalprijs exc. BTW', UNKNOWN),
         'Posten': merge_post_chunks(post_chunks),
     }
+    if recovered_chunks:
+        offer_json['Extractie waarschuwingen'] = [
+            'Een of meer chunks hadden ongeldige JSON; complete posten zijn behouden en de incomplete staart is overgeslagen.',
+            f'Herstelde chunks: {", ".join(str(index) for index in recovered_chunks)}.',
+        ]
+
     return offer_json, format_chunked_llm_response(summary_answer, post_answers)
 
 
@@ -566,28 +1003,53 @@ def extract_offer(file: Path, folder_handler):
         set_status('reading_pdf', 'Reading PDF text')
         prompt = read_txt(Path("./prompts/extract_prompt.txt"))
         offer = read_pdf(file)
+        logger.info('PDF text read: file=%s chars=%s lines=%s', file, len(offer), len(offer.splitlines()))
 
         set_status('saving_raw_text', 'Saving raw PDF text')
         folder_handler.save_raw_pdf_text(file, offer)
+        logger.info('Raw PDF text saved: file=%s', file)
 
-        if len(offer) > CHUNKED_EXTRACTION_THRESHOLD:
+        use_chunked = should_use_chunked_extraction(offer)
+        if use_chunked:
             set_status('extracting_chunked', 'Extracting long PDF in chunks')
+            logger.info(
+                'Extraction mode selected: file=%s mode=chunked configured_mode=%s model=%s threshold_chars=%s',
+                file,
+                EXTRACTION_MODE,
+                EXTRACTION_MODEL_ID,
+                CHUNKED_EXTRACTION_THRESHOLD,
+            )
             offer_json, answer = extract_offer_chunked(offer, set_status, save_response)
         else:
             set_status('calling_llm', 'Calling LLM')
+            logger.info(
+                'Extraction mode selected: file=%s mode=one_shot configured_mode=%s model=%s threshold_chars=%s',
+                file,
+                EXTRACTION_MODE,
+                EXTRACTION_MODEL_ID,
+                CHUNKED_EXTRACTION_THRESHOLD,
+            )
             offer_json, answer = extract_offer_one_shot(prompt, offer, save_response)
 
         set_status('saving_llm_response', 'Saving raw LLM response')
         save_response('llm_response.txt', answer)
+        logger.info('Combined LLM response saved: file=%s response_chars=%s', file, len(answer))
 
         set_status('validating_json', 'Validating extracted JSON')
-        validate_offer_json(offer_json)
+        if isinstance(offer_json.get('Posten'), list):
+            offer_json['Posten'] = filter_non_price_posts(offer_json['Posten'])
+
+        validation_warnings = validate_offer_json(offer_json)
+        logger.info('Offer JSON validated: file=%s warnings=%s', file, len(validation_warnings))
+        for warning in validation_warnings:
+            logger.warning('Offer validation warning: file=%s warning=%s', file, warning)
 
         set_status('normalizing_amounts', 'Normalizing amounts')
         offer_json = normalize_amounts(offer_json)
 
         set_status('saving_extract', 'Saving extract.json')
         folder_handler.save_result(file, offer_json)
+        logger.info('Extract saved: file=%s posts=%s', file, len(offer_json.get('Posten', [])))
 
         update_extraction_status(
             folder_handler,
@@ -600,6 +1062,7 @@ def extract_offer(file: Path, folder_handler):
 
         return offer_json
     except Exception as error:
+        logger.exception('Extraction failed: file=%s', file)
         update_extraction_status(
             folder_handler,
             file,

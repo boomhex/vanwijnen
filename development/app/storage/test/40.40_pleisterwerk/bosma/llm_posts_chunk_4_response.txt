@@ -1,0 +1,40 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "KADERDEUR",
+      "Beschrijving": "Deur en kozijn Vulling: aluminium omkaderd met 33.2SI glas Uitvoering: Standaard, incl. valdorpel Kozijn: Aluminium in witte kleur Afmeting: 930mm x 2400 mm Hang en sluitwerk Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot Cilinder: Exclusief. Kruk/rozet: L-model, RVS",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "7.345,29",
+      "Eenheid": "st",
+      "Eenheidsprijs": "1.224,22",
+      "Aantal": "6,00"
+    },
+    {
+      "Omschrijving": "HORIZONTAAL TRANSPORT",
+      "Beschrijving": "Horizontaal transport van het nieuwe materiaal. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend. Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "9.112,75",
+      "Eenheid": "post",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "VERTICAAL TRANSPORT",
+      "Beschrijving": "Verticaal transport d.m.v. verreiker. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.337,54",
+      "Eenheid": "post",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "STEIGER/SCHAARHOOGWERKER",
+      "Beschrijving": "De huur van een schaarhoogwerker per week verrekenbaar.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "168,71",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "168,71",
+      "Aantal": "1,00"
+    }
+  ]
+}

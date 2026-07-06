@@ -1,0 +1,148 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "12300,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "6197"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4875,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "650"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met een brandwerende kit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "6575,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,95",
+      "Aantal": "827"
+    },
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2880,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "750"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van verzwaring door een vuren 50x70 toe te passen in de C-75 stijlen bij de deurkozijnen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "55,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "55,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "675,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "75,4"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS Hangwand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono base isolatie dik 60 mm.\nGerekend met een wandhoogte van 1200mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4450,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "102,50",
+      "Aantal": "43,6"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "348,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "174"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "440,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "77"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "330,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "44"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 145mm, opgebouwd uit een dubbel verspringend verzinkt stalen stijl -en regelwerk (C-45 en U-45 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven worden er één laag standaard AK gipskarton en één laag Ladura/Duragyp gipsvezelbeplating dik 12,5 mm aangebracht. In de spouw 2x Rockwool Sono base isolatie dik 40mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "18675,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "104,75",
+      "Aantal": "178,3"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1400,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "703"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1320,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "176"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met een brandwerende kit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "975,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,95",
+      "Aantal": "123"
+    },
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "365,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "95,5"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "35,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "4"
+    },
+    {
+      "Omschrijving": "Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "65,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "65,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 150 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-150 en U-150 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag Duragyp/LaDura gipsvezelbeplating dik 12,5 mm aangebracht. In de spouw Rockwool Sono Base dik 120 mm.\nEr is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1450,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "108,35",
+      "Aantal": "13,4"
+    }
+  ]
+}

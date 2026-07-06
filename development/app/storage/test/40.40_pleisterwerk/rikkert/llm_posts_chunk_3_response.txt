@@ -1,0 +1,36 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Stucwerk aanbrengen rondom opbouw leidingwerk / ventilatie kanalen, sparingen etc. zullen op regiebasis worden uitgevoerd.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Indien wij stucstopprofielen moeten toepassen, moeten wij minimaal een laagdikte van 5mm stukadoren. Hiervoor zullen wij een toeslag berekenen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Indien wij genoodzaakt zijn dikker stucwerk aan te brengen door een grote hoeveelheid sparingen ramen, en/of stucstopprofielen te plaatsen enz. Zullen wij hier een toeslag voor berekenen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    },
+    {
+      "Omschrijving": "Toeslag wand / plafondhoogte, boven 2,80 m¹ op aanvraag.",
+      "Categorie": "Algemene uitgangspunten algemeen",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND"
+    }
+  ]
+}

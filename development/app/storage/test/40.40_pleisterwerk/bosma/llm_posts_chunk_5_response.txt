@@ -1,0 +1,13 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Regie-uurloon",
+      "Beschrijving": "Regie uurloon bedraagt € 57,50 per uur.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "57,50",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "57,50",
+      "Aantal": "1"
+    }
+  ]
+}

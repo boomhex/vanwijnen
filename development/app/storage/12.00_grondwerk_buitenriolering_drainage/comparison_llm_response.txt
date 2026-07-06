@@ -1,0 +1,327 @@
+{
+  "MatchedPosten": [
+    {
+      "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+          "Gematchte posten": ["Leveren en aanbrengen drainage bouwkuip"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen pomp t.b.v. drooghouden bouwkuip",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip",
+          "Gematchte posten": ["Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Huur elektrische pomp (6 weken)",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Huur elektrische pomp (6 weken)",
+          "Gematchte posten": ["Huur elektrische pomp (6 weken)"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Uitvoeringskosten ontgraven van grond",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "ONBEKEND"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "partijkeuring vrijkomende grond, 3 week voor start werk",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk keer",
+          "Gematchte posten": ["IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk keer"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "opnemen en afvoeren tegelbestrating schoolplein",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Opnemen en afvoeren tegelbestrating",
+          "Gematchte posten": ["Opnemen en afvoeren tegelbestrating"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "uitvoeren van benodigde grondwerk bouwkundig",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Ontgraven bouwkuip hoofdgebouw in oude bouwput; Ontgraven nieuwe bouwkuip tot onderzijde bodemafsluiting; Verwerken vrijgekomen grond in oude bouwput; Verwerken vrijgekomen zand in oude bouwput; Ontgraven inrit boorstelling bouwkuip; Leveren en aanbrengen zandlaag in bouwkuip d=100mm; Afwerken bouwkuip na boren palen; Aanvullen buitenfundering met vrijgekomen zand/grond; Egaliseren rondom bouwput na aanvullen, strook 3 m1",
+          "Gematchte posten": [
+            "Ontgraven bouwkuip hoofdgebouw in oude bouwput",
+            "Ontgraven nieuwe bouwkuip tot onderzijde bodemafsluiting",
+            "Verwerken vrijgekomen grond in oude bouwput",
+            "Verwerken vrijgekomen zand in oude bouwput",
+            "Ontgraven inrit boorstelling bouwkuip",
+            "Leveren en aanbrengen zandlaag in bouwkuip d=100mm",
+            "Afwerken bouwkuip na boren palen",
+            "Aanvullen buitenfundering met vrijgekomen zand/grond",
+            "Egaliseren rondom bouwput na aanvullen, strook 3 m1"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "uitvoeren van benodigde grondwerk buitenterrein",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Ontgraven cunet nieuwe tegelverharding; Ontgraven zand uit vervallen cunetten; Ontgraven grond uit cunet voorterrein brandweer; Aanbrengen zand in nieuwe cunet tegelverharding d=250mm; Op hoogte brengen bestaande zandbanen tegelbestrating; Afwerken vooraf aan aanbrengen puin; Verwerken vrijgekomen grond in cunetten oud straatwerk; Groen delen terrein op hoogte brengen",
+          "Gematchte posten": [
+            "Ontgraven cunet nieuwe tegelverharding",
+            "Ontgraven zand uit vervallen cunetten",
+            "Ontgraven grond uit cunet voorterrein brandweer",
+            "Aanbrengen zand in nieuwe cunet tegelverharding d=250mm",
+            "Op hoogte brengen bestaande zandbanen tegelbestrating",
+            "Afwerken vooraf aan aanbrengen puin",
+            "Verwerken vrijgekomen grond in cunetten oud straatwerk",
+            "Groen delen terrein op hoogte brengen"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "vervoer en afvoer grond / zand klasse landbouw en natuur",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Op werk in depot rijden her te gebruiken grond; Op werk in depot rijden her te gebruiken zand; Laden en afvoeren overtollig grond, Landbouw & Natuur",
+          "Gematchte posten": [
+            "Op werk in depot rijden her te gebruiken grond",
+            "Op werk in depot rijden her te gebruiken zand",
+            "Laden en afvoeren overtollig grond, Landbouw & Natuur"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "laden, afvoeren en storten boorgrond uit depot",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Laden, afvoeren en storten boorgrond uit depot",
+          "Gematchte posten": ["Laden, afvoeren en storten boorgrond uit depot"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "grondwerk kabelsleuf",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25",
+          "Gematchte posten": ["Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "hwa-riolering dakwater",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Leveren en aanbrengen PVC-riool diam. 160 mm t/m 200 mm; Leveren en aanbrengen PVC-riool diam. 250 mm; Maken aansluiting op binnenriolering; Lev. en stellen ontlastputten bij aansluiting diam. 315 mm; Lev. en plaatsen insp. put 600 mm op erfgrens",
+          "Gematchte posten": [
+            "Leveren en aanbrengen PVC-riool diam. 160 mm t/m 200 mm",
+            "Leveren en aanbrengen PVC-riool diam. 250 mm",
+            "Maken aansluiting op binnenriolering",
+            "Lev. en stellen ontlastputten bij aansluiting diam. 315 mm",
+            "Lev. en plaatsen insp. put 600 mm op erfgrens"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "hwa riolering kolken in terrein",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Leveren en aanbrengen Straatkolk; Leveren en aanbrengen kolkleidingen ø125mm - 160 mm; Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm",
+          "Gematchte posten": [
+            "Leveren en aanbrengen Straatkolk",
+            "Leveren en aanbrengen kolkleidingen ø125mm - 160 mm",
+            "Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "ontwerptekening aan te leggen riolering",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Ontwerptekening aan te leggen riolering",
+          "Gematchte posten": ["Ontwerptekening aan te leggen riolering"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "revisietekening van aangelegde riolering",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Revisietekening van aangelegde riolering",
+          "Gematchte posten": ["Revisietekening van aangelegde riolering"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "kantopsluitingen bij tegelbestrating",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Leveren en aanbrengen opsluitbanden recht 10x20cm grijs; Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs",
+          "Gematchte posten": [
+            "Leveren en aanbrengen opsluitbanden recht 10x20cm grijs",
+            "Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen betontegels 300x300x60",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Leveren en aanbrengen betontegels 300x300x60",
+          "Gematchte posten": ["Leveren en aanbrengen betontegels 300x300x60"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Groenvoorziening",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Zaaiklaar maken terrein voor inzaaien; Inzaaien onverhard terrein met graszaad (1kg/100m2); Grondwerk t.b.v. vakken langs gevel voor beplanting; Opsluitbanden rond plantvakken gevel",
+          "Gematchte posten": [
+            "Zaaiklaar maken terrein voor inzaaien",
+            "Inzaaien onverhard terrein met graszaad (1kg/100m2)",
+            "Grondwerk t.b.v. vakken langs gevel voor beplanting",
+            "Opsluitbanden rond plantvakken gevel"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "leveren aanleunbeugels voor fietsen in de betontegelverharding",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Leveren en aanbrengen fietsbeugels",
+          "Gematchte posten": ["Leveren en aanbrengen fietsbeugels"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "leveren en aanbrengen van schutting",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Leveren en plaatsen Noistop Steel Schutting, 1 zijde",
+          "Gematchte posten": ["Leveren en plaatsen Noistop Steel Schutting, 1 zijde"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk. Incl. poort",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk; Leveren en aanbrengen poort, dubbel 125 cm hoog",
+          "Gematchte posten": [
+            "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
+            "Leveren en aanbrengen poort, dubbel 125 cm hoog"
+          ],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Vloerroosters",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "group",
+          "Gematchte omschrijving": "Verlagen straatwerk roosters; Leveren en verwerken veegroosters 100x100",
+          "Gematchte posten": [
+            "Verlagen straatwerk roosters",
+            "Leveren en verwerken veegroosters 100x100"
+          ],
+          "Overeenkomst": "2"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "terrein voorzien van menggranulaat 0/31,5 200mm dik, als draagkrachtige onderlaag voor opslag materiaal / opstelplaats mobiele kraan / keten / parkeren",
+      "Offertes": [
+        {
+          "Bestand": "Lolkema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Lev. en verw. menggranulaat op wegenbouwdoek",
+          "Gematchte posten": ["Lev. en verw. menggranulaat op wegenbouwdoek"],
+          "Overeenkomst": "3"
+        }
+      ]
+    }
+  ]
+}

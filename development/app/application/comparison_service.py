@@ -1,13 +1,18 @@
 import logging
+import json
 from datetime import datetime, timezone
 from decimal import Decimal
 from typing import Any
 
 from domain.fields import COMPARISON_FIELDS
 from domain.money import parse_decimal, UNKNOWN
+from matching.match_calculation import calculate_offer_total
+from matching.match_fields import offer_info_from_extracted_posts
+from matching.match_lookup import find_extracted_post_by_description, find_offer_result
 from services.comparison_matcher import ComparisonMatcher
 from services.folder_handler import FolderHandler
 from services.project import Project
+from utils.app_logging import logged_action
 
 
 logger = logging.getLogger(__name__)
@@ -34,6 +39,26 @@ class ComparisonService:
 
     def offer_names(self, project: Project) -> list[str]:
         return [offer['Bestand'] for offer in self.matcher.project_offer_results(project)]
+
+    def offer_post_descriptions(self, project: Project) -> dict[str, list[str]]:
+        descriptions_by_offer = {}
+        for offer_result in self.matcher.project_offer_results(project):
+            offer_name = offer_result.get('Bestand')
+            if not offer_name:
+                continue
+
+            descriptions = []
+            for post in offer_result.get('Posten', []):
+                if not isinstance(post, dict):
+                    continue
+
+                description = str(post.get('Omschrijving') or '').strip()
+                if description and description.upper() != UNKNOWN:
+                    descriptions.append(description)
+
+            descriptions_by_offer[offer_name] = descriptions
+
+        return descriptions_by_offer
 
     def has_offer_results(self, project: Project) -> bool:
         return bool(self.matcher.project_offer_results(project))
@@ -76,6 +101,7 @@ class ComparisonService:
     def utc_now_iso() -> str:
         return datetime.now(timezone.utc).isoformat()
 
+    @logged_action
     def add_comparison_row(self, project: Project, comparison: dict[str, Any]) -> None:
         comparison.setdefault('Posten', []).append({
             'Omschrijving': '',
@@ -85,6 +111,7 @@ class ComparisonService:
         self.clear_matches(comparison)
         self.save_comparison(project, comparison)
 
+    @logged_action
     def update_comparison_row(
         self,
         project: Project,
@@ -105,6 +132,7 @@ class ComparisonService:
         self.save_comparison(project, comparison)
         return True
 
+    @logged_action
     def delete_comparison_row(self, project: Project, comparison: dict[str, Any], row_index: int | None) -> bool:
         posten = comparison.setdefault('Posten', [])
         if row_index is None or row_index < 0 or row_index >= len(posten):
@@ -115,6 +143,7 @@ class ComparisonService:
         self.save_comparison(project, comparison)
         return True
 
+    @logged_action
     def update_matched_cell(
         self,
         project: Project,
@@ -122,7 +151,7 @@ class ComparisonService:
         match_rows: list[dict],
         row_id: int | None,
         field: str | None,
-        value: str,
+        value: Any,
         offer_names: list[str],
     ) -> bool:
         if row_id is None or row_id < 0 or row_id >= len(match_rows):
@@ -133,7 +162,7 @@ class ComparisonService:
         if field in self.comparison_fields:
             matched_row[field] = value
         elif isinstance(field, str) and field.startswith('offer_'):
-            if not self.update_matched_offer_cell(matched_row, field, value, offer_names):
+            if not self.update_matched_offer_cell(project, matched_row, field, value, offer_names):
                 return False
         else:
             return False
@@ -143,11 +172,12 @@ class ComparisonService:
         self.save_comparison(project, comparison)
         return True
 
-    @staticmethod
     def update_matched_offer_cell(
+        self,
+        project: Project,
         matched_row: dict[str, Any],
         field: str,
-        value: str,
+        value: Any,
         offer_names: list[str],
     ) -> bool:
         parts = field.split('_')
@@ -166,6 +196,9 @@ class ComparisonService:
         offer_name = offer_names[offer_index]
         offer_entry = matched_row.setdefault('Offertes', {}).setdefault(offer_name, {})
 
+        if suffix == 'omschrijving':
+            self.update_matched_offer_description(project, matched_row, offer_name, offer_entry, value)
+            return True
         if suffix == 'prijs':
             offer_entry['Eenheidsprijs'] = value
             return True
@@ -175,6 +208,75 @@ class ComparisonService:
 
         return False
 
+    def update_matched_offer_description(
+        self,
+        project: Project,
+        matched_row: dict[str, Any],
+        offer_name: str,
+        offer_entry: dict[str, Any],
+        description: Any,
+    ) -> None:
+        clean_descriptions = self.selected_descriptions(description)
+        if not clean_descriptions:
+            offer_entry.update({
+                'Match type': 'single',
+                'Gematchte omschrijving': UNKNOWN,
+                'Gematchte posten': [],
+                'Gematchte categorie': UNKNOWN,
+                'Gematchte eenheid': UNKNOWN,
+                'Aantal': UNKNOWN,
+                'Eenheidsprijs': UNKNOWN,
+                'Totaalbedrag': UNKNOWN,
+                'Overeenkomst': '',
+            })
+            return
+
+        offer_results = self.matcher.project_offer_results(project)
+        offer_result = find_offer_result(offer_results, offer_name)
+        extracted_posts = [
+            find_extracted_post_by_description(offer_result, clean_description)
+            for clean_description in clean_descriptions
+        ]
+        if any(extracted_post is None for extracted_post in extracted_posts):
+            offer_entry['Match type'] = 'group' if len(clean_descriptions) > 1 else 'single'
+            offer_entry['Gematchte omschrijving'] = (
+                f'{len(clean_descriptions)} posten'
+                if len(clean_descriptions) > 1
+                else clean_descriptions[0]
+            )
+            offer_entry['Gematchte posten'] = clean_descriptions
+            return
+
+        offer_entry.update(offer_info_from_extracted_posts(extracted_posts, offer_entry))
+        offer_entry['Gematchte posten'] = clean_descriptions
+        if len(extracted_posts) == 1:
+            offer_entry['Totaalbedrag'] = calculate_offer_total(
+                matched_row.get('Aantal', ''),
+                offer_entry,
+                matched_row.get('Eenheid'),
+            )
+
+    @staticmethod
+    def selected_descriptions(value: Any) -> list[str]:
+        if isinstance(value, str):
+            stripped_value = value.strip()
+            if stripped_value.startswith('['):
+                try:
+                    parsed_value = json.loads(stripped_value)
+                except json.JSONDecodeError:
+                    parsed_value = value
+                else:
+                    if isinstance(parsed_value, list):
+                        value = parsed_value
+
+        values = value if isinstance(value, list) else [value]
+        return [
+            text
+            for item in values
+            if (text := str(item or '').strip()) and text.upper() != UNKNOWN
+        ]
+
+    @logged_action
     def delete_matched_post_row(
         self,
         project: Project,
@@ -191,6 +293,7 @@ class ComparisonService:
         self.save_comparison(project, comparison)
         return True
 
+    @logged_action
     def add_matched_post_row(
         self,
         project: Project,
@@ -221,6 +324,7 @@ class ComparisonService:
         comparison.pop('Matches', None)
         self.save_comparison(project, comparison)
 
+    @logged_action
     def toggle_warning(
         self,
         project: Project,

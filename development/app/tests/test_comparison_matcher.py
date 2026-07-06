@@ -3,6 +3,9 @@ from decimal import Decimal
 from domain.comparison_checks import warning_for_offer
 from domain.money import calculate_total, calculate_unit_price, parse_decimal
 from domain.units import units_mismatch
+from application.comparison_service import ComparisonService
+from interface.right_side.comparison_page import MatchedPostenTable
+from matching.comparison_prompt import match_prompt_offer_results
 from matching.match_calculation import calculate_offer_total
 from matching.match_normalizer import complete_response, normalize_matched_posts
 from services.comparison_matcher import ComparisonMatcher
@@ -28,6 +31,38 @@ def test_calculate_unit_price_from_total_and_amount():
     assert calculate_unit_price('1200', '3') == '400.00'
     assert calculate_unit_price('1200', '3', '250') == '250'
     assert calculate_unit_price('1200', '0') == 'ONBEKEND'
+
+
+def test_match_prompt_offer_results_keeps_only_matching_context_fields():
+    assert match_prompt_offer_results([
+        {
+            'Bestand': 'offer.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'Post A',
+                    'Beschrijving': 'Uitgebreide toelichting',
+                    'Categorie': 'Cat',
+                    'Aantal': '10',
+                    'Eenheid': 'm2',
+                    'Eenheidsprijs': '20',
+                    'Totaalbedrag': '200',
+                },
+            ],
+        },
+    ]) == [
+        {
+            'Bestand': 'offer.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'Post A',
+                    'Beschrijving': 'Uitgebreide toelichting',
+                    'Categorie': 'Cat',
+                    'Aantal': '10',
+                    'Eenheid': 'm2',
+                },
+            ],
+        },
+    ]
 
 
 def test_recalculate_matched_posts():
@@ -382,3 +417,151 @@ def test_warning_for_offer_allows_small_quantity_difference():
     )
 
     assert 'Hoeveelheid wijkt af' not in warning
+
+
+def test_matched_post_options_exclude_posts_selected_in_other_rows():
+    match_rows = [
+        {
+            'Omschrijving': 'Rij 1',
+            'Offertes': {
+                'offer.pdf': {'Gematchte omschrijving': 'Post A'},
+            },
+        },
+        {
+            'Omschrijving': 'Rij 2',
+            'Offertes': {
+                'offer.pdf': {'Gematchte omschrijving': 'Post B'},
+            },
+        },
+    ]
+    table = MatchedPostenTable(
+        offer_names=['offer.pdf'],
+        match_rows=match_rows,
+        offer_post_descriptions={'offer.pdf': ['Post A', 'Post B', 'Post C']},
+    )
+
+    options = table.rows[0]['offer_0_omschrijving_options']
+
+    assert 'Post A' in options
+    assert 'Post B' not in options
+    assert 'Post C' in options
+
+
+def test_update_matched_cell_selects_extracted_offer_post():
+    class FakeMatcher:
+        def project_offer_results(self, _project):
+            return [
+                {
+                    'Bestand': 'offer.pdf',
+                    'Posten': [
+                        {
+                            'Omschrijving': 'Post A',
+                            'Categorie': 'Cat',
+                            'Aantal': '5',
+                            'Eenheid': 'm2',
+                            'Eenheidsprijs': 'ONBEKEND',
+                            'Totaalbedrag': '100',
+                        },
+                    ],
+                },
+            ]
+
+    class FakeProject:
+        def save_comparison(self, comparison):
+            self.saved_comparison = comparison
+
+    service = ComparisonService(folder_handler=None, matcher=FakeMatcher())
+    project = FakeProject()
+    comparison = {}
+    match_rows = [
+        {
+            'Omschrijving': 'Vergelijking',
+            'Aantal': '2',
+            'Eenheid': 'm2',
+            'Offertes': {'offer.pdf': {}},
+        },
+    ]
+
+    assert service.update_matched_cell(
+        project,
+        comparison,
+        match_rows,
+        0,
+        'offer_0_omschrijving',
+        'Post A',
+        ['offer.pdf'],
+    )
+
+    offer = match_rows[0]['Offertes']['offer.pdf']
+    assert offer['Gematchte omschrijving'] == 'Post A'
+    assert offer['Gematchte categorie'] == 'Cat'
+    assert offer['Gematchte eenheid'] == 'm2'
+    assert offer['Eenheidsprijs'] == '20.00'
+    assert offer['Totaalbedrag'] == '40.00'
+
+
+def test_update_matched_cell_selects_multiple_extracted_offer_posts_as_group():
+    class FakeMatcher:
+        def project_offer_results(self, _project):
+            return [
+                {
+                    'Bestand': 'offer.pdf',
+                    'Posten': [
+                        {
+                            'Omschrijving': 'Post A',
+                            'Categorie': 'Cat',
+                            'Aantal': '5',
+                            'Eenheid': 'm2',
+                            'Eenheidsprijs': '20',
+                            'Totaalbedrag': '100',
+                        },
+                        {
+                            'Omschrijving': 'Post B',
+                            'Categorie': 'Cat',
+                            'Aantal': '10',
+                            'Eenheid': 'm2',
+                            'Eenheidsprijs': '20',
+                            'Totaalbedrag': '200',
+                        },
+                    ],
+                },
+            ]
+
+    class FakeProject:
+        def save_comparison(self, comparison):
+            self.saved_comparison = comparison
+
+    service = ComparisonService(folder_handler=None, matcher=FakeMatcher())
+    project = FakeProject()
+    comparison = {}
+    match_rows = [
+        {
+            'Omschrijving': 'Vergelijking',
+            'Aantal': '1',
+            'Eenheid': 'post',
+            'Offertes': {'offer.pdf': {}},
+        },
+    ]
+
+    assert service.update_matched_cell(
+        project,
+        comparison,
+        match_rows,
+        0,
+        'offer_0_omschrijving',
+        ['Post A', 'Post B'],
+        ['offer.pdf'],
+    )
+
+    offer = match_rows[0]['Offertes']['offer.pdf']
+    assert offer['Match type'] == 'group'
+    assert offer['Gematchte omschrijving'] == '2 posten'
+    assert offer['Gematchte posten'] == ['Post A', 'Post B']
+    assert offer['Gematchte categorie'] == 'Cat'
+    assert offer['Gematchte categorieen'] == ['Cat']
+    assert offer['Gematchte eenheid'] == 'post'
+    assert offer['Totaalbedrag'] == '300.00'
+
+
+def test_selected_descriptions_accepts_json_array_string():
+    assert ComparisonService.selected_descriptions('["Post A", "Post B"]') == ['Post A', 'Post B']

@@ -1,0 +1,92 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Blanka type inleg systeemplafond. Afmeting 600x600x20mm gemonteerd in een zichtbaar wit T-24mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan de bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "61000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "38,80",
+      "Aantal": "1573,3"
+    },
+    {
+      "Omschrijving": "Aanbrengen van desgewenste sparingen op de door de installateur aangewezen plek.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "1995,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,75",
+      "Aantal": "420"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "2350,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "1573"
+    },
+    {
+      "Omschrijving": "Multiplex koof dikte 18 mm wit gegrond.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "315,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "105,00",
+      "Aantal": "3"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Boxer type inleg systeemplafond, afmeting 600x1200x40mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Inclusief HoldDown clips en een post achterhout + sparingen.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "6060,60",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "77,05",
+      "Aantal": "78,69"
+    },
+    {
+      "Omschrijving": "Huren van één elektrische hoogwerker. Inclusief transport",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "300,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "155,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "79"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon color-all 22 LINEN type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. inclusief sparingen & achterhout.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "9000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "53,45",
+      "Aantal": "168,5"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "250,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "169"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Cleanspace Pro type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Inclusief sparingen & achterhout.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "6000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "68,75",
+      "Aantal": "87,9"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "130,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "88"
+    }
+  ]
+}

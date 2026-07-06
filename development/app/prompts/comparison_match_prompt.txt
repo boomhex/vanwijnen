@@ -9,10 +9,14 @@ Offerteposten per bestand:
 Maak per vergelijkingsregel en per offertebestand de beste match.
 Gebruik "Match type": "single" als een vergelijkingsregel bij één offertepost hoort.
 Gebruik "Match type": "group" als een vergelijkingsregel bij meerdere offerteposten samen hoort.
-Kopieer gematchte omschrijvingen letterlijk uit de offerteposten.
+Gebruik "Omschrijving", "Beschrijving" en "Categorie" samen om de inhoudelijke match te bepalen.
+Gebruik "Aantal" en "Eenheid" als extra controle wanneer meerdere posten inhoudelijk lijken te passen.
+Match nooit alleen op hoeveelheid, eenheid, prijs of totaalbedrag; de werkzaamheden moeten inhoudelijk overeenkomen.
+Kopieer gematchte omschrijvingen letterlijk uit het veld "Omschrijving" van de offerteposten.
 Geef bij iedere regel bij Overeenkomst aan hoe zeker je bent over de match met een score van 1 tot 3. Met 1 het laagst, en 3 het hoogst.
 Als er geen goede match is, vul dan "ONBEKEND" in voor de gematchte velden.
 Vul niet bij 2 posten dezelde post uit de offerte in.
+Neem in een group match alleen de offerteposten op die inhoudelijk direct betrekking hebben op de vergelijkingsregel. Voeg niet automatisch alle posten uit dezelfde categorie toe — een gedeelde categorie is geen reden om een post mee te nemen. Beoordeel elke kandidaatpost afzonderlijk: beschrijft deze post hetzelfde werk als de vergelijkingsregel?
 Gebruik voor Offertes een lijst. Zet de offertebestandsnaam altijd in het veld "Bestand"; gebruik geen dynamische bestandsnamen als JSON keys.
 {{
   "MatchedPosten": [

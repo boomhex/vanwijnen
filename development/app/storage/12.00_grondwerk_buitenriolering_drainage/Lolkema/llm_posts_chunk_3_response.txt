@@ -1,0 +1,236 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Zaaiklaar maken terrein voor inzaaien",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "1.792,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "0,80",
+      "Aantal": "2.240,00"
+    },
+    {
+      "Omschrijving": "Inzaaien onverhard terrein met graszaad (1kg/100m2)",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "1.792,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "0,80",
+      "Aantal": "2.240,00"
+    },
+    {
+      "Omschrijving": "Grondwerk t.b.v. vakken langs gevel voor beplanting",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "357,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "35,70",
+      "Aantal": "10,00"
+    },
+    {
+      "Omschrijving": "Opsluitbanden rond plantvakken gevel",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "276,90",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "21,30",
+      "Aantal": "13,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen fietsbeugels",
+      "Categorie": "STRAATMEUBILAIR",
+      "Totaalbedrag": "27.500,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "250,00",
+      "Aantal": "110,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
+      "Categorie": "TERREINAFRASTERING",
+      "Totaalbedrag": "5.610,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "110,00",
+      "Aantal": "51,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen poort, dubbel 125 cm hoog",
+      "Categorie": "TERREINAFRASTERING",
+      "Totaalbedrag": "1.450,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "1.450,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Leveren en plaatsen Noistop Steel Schutting, 1 zijde",
+      "Categorie": "SCHUTTING",
+      "Totaalbedrag": "22.000,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "500,00",
+      "Aantal": "44,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+      "Categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
+      "Totaalbedrag": "4.800,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "12,00",
+      "Aantal": "400,00"
+    },
+    {
+      "Omschrijving": "Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip",
+      "Categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
+      "Totaalbedrag": "1.000,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "500,00",
+      "Aantal": "2,00"
+    },
+    {
+      "Omschrijving": "Huur elektrische pomp (6 weken)",
+      "Categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
+      "Totaalbedrag": "5.400,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "2.700,00",
+      "Aantal": "2,00"
+    },
+    {
+      "Omschrijving": "Grondwerk aan brengen inrit",
+      "Categorie": "INRIT BOUWPLAATS LANGS WEG IN BETONPLATEN",
+      "Totaalbedrag": "800,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "16,00",
+      "Aantal": "50,00"
+    },
+    {
+      "Omschrijving": "Aanbrengen bedrijfsvloerplaten 200x200x16 cm",
+      "Categorie": "INRIT BOUWPLAATS LANGS WEG IN BETONPLATEN",
+      "Totaalbedrag": "2.000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "50,00",
+      "Aantal": "40,00"
+    },
+    {
+      "Omschrijving": "Opnemen en afvoeren bedrijfsvloerplaten",
+      "Categorie": "INRIT BOUWPLAATS LANGS WEG IN BETONPLATEN",
+      "Totaalbedrag": "400,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "40,00"
+    },
+    {
+      "Omschrijving": "Aansluiten toiletunit en uitvoeringskeet op riool, max 25 m1",
+      "Categorie": "KETENPARK",
+      "Totaalbedrag": "750,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "1,00",
+      "Aantal": "750,00"
+    },
+    {
+      "Omschrijving": "Plaatsen en opnemen aangeleverde watermeterput",
+      "Categorie": "KETENPARK",
+      "Totaalbedrag": "135,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "135,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Inrichten werkterrein",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "500,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "500,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Opruimen werkterrein",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "485,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "485,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Rijplaten op het werk, eigen gebruik grondwerk",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "1.000,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "1.000,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Kabels en leidingen, KLIC Melding",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "100,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Opruimen bij oplevering, straatpuin",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "350,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "350,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Aan- en afvoerkosten materieel",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "1.000,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "1.000,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "V&G deelplan",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "100,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Uitzetten werk",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "1.500,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "1.500,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Overige eenmalige kosten",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "5.039,90",
+      "Eenheid": "post",
+      "Eenheidsprijs": "4,90",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Totaal eenmalige kosten",
+      "Categorie": "EENMALIGE KOSTEN",
+      "Totaalbedrag": "5.039,90",
+      "Eenheid": "post",
+      "Eenheidsprijs": "5.039,90",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Uitvoeringskosten",
+      "Categorie": "STAARTPOSTEN",
+      "Totaalbedrag": "9.000,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "9.000,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Algemene kosten",
+      "Categorie": "STAARTPOSTEN",
+      "Totaalbedrag": "19.600,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "19.600,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Winst en Risico",
+      "Categorie": "STAARTPOSTEN",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "post",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1,00"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import asyncio
 from pathlib import Path
 from collections.abc import Callable
 from decimal import Decimal
@@ -41,14 +42,14 @@ class RightSide(SubPage):
     def schedule_refresh(self) -> None:
         if not self.container_is_live():
             return
+        asyncio.ensure_future(self._deferred_refresh())
 
-        ui.timer(0.05, self.refresh, once=True)
+    async def _deferred_refresh(self) -> None:
+        await asyncio.sleep(0.05)
+        self.refresh()
 
     def schedule_refresh_safe(self) -> None:
-        try:
-            self.schedule_refresh()
-        except RuntimeError:
-            pass
+        self.schedule_refresh()
 
     def container_is_live(self) -> bool:
         if self.container is None:

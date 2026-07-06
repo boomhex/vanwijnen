@@ -1,0 +1,236 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Sparing Wandcontactdozen",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "3,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 000 t/m 100 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "6,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "6,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 200 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "7,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 201 t/m 400 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 401 t/m 600 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "13,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "13,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 1200 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "16,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "16,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing Wandcontactdozen",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "3,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 000 t/m 100 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "7,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 200 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "9,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 201 t/m 400 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "13,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "13,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 401 t/m 600 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "17,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "17,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 1200 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "21,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "21,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 00 t/m 50 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "5,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 51 t/m 100 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "10,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 300 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "14,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "14,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 301 t/m 600 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "20,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "20,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 800 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "27,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 200 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "8,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "8,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 300 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 400 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 600 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "18,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "18,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 1200 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "21,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "21,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 2400 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "32,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "32,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparingen voor spotjes, brandmelders incl. achterhout",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "8,95",
+      "Eenheid": "st",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparingen voor spotjes, brandmelders",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "4,95",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing voor TL armatuur, passend in het systeem",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "4,85",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,85",
+      "Aantal": "1"
+    }
+  ]
+}

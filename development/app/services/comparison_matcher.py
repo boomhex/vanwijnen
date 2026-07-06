@@ -1,4 +1,6 @@
 from application.offer_service import OfferService
+
+MATCHER_MODEL_ID = 'gemini-2.5-flash'
 from domain.money import calculate_unit_price
 from matching.comparison_prompt import MATCH_RESPONSE_SCHEMA, build_comparison_match_prompt
 from matching.match_calculation import calculate_offer_total
@@ -45,7 +47,7 @@ class ComparisonMatcher:
         comparison = comparison or project.load_comparison()
         offer_results = self.project_offer_results(project)
         prompt = build_comparison_match_prompt(comparison, offer_results)
-        answer = ask_llm(prompt, response_schema=MATCH_RESPONSE_SCHEMA)
+        answer = ask_llm(prompt, response_schema=MATCH_RESPONSE_SCHEMA, model=MATCHER_MODEL_ID)
         if self.folder_handler is not None:
             self.folder_handler.save_comparison_llm_response(project, answer)
 

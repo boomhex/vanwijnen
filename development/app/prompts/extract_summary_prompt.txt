@@ -1,5 +1,5 @@
 Je moet alleen de samenvatting uit deze offerte tekst halen:
-- Naam van de opdrachtgever.
+- Naam van de aannemer/aanbieder die de offerte uitbrengt.
 - Totaalprijs van de offerte inclusief en exclusief BTW.
 Regels:
 - Verzin geen getallen.
@@ -9,7 +9,7 @@ Regels:
 - Neem bedragen over ZONDER euroteken.
 - Gebruik het volgende formaat:
 {
-    "Naam opdrachtgever": "...",
+    "Naam aannemer": "...",
     "Totaalprijs inc. BTW": "...",
     "Totaalprijs exc. BTW": "..."
 }

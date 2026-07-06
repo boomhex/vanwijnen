@@ -1,4 +1,5 @@
 from matching.match_calculation import calculate_offer_total
+from matching.match_deduplicator import deduplicate_offer_matches
 from matching.match_fields import offer_info_from_extracted_posts, offer_info_from_match
 from matching.match_lookup import (
     find_extracted_posts_for_match,
@@ -105,6 +106,7 @@ def normalize_matched_posts(comparison: dict, match_result: dict, offer_results:
             'Offertes': normalized_offers,
         })
 
+    deduplicate_offer_matches(normalized_rows, offer_results)
     return normalized_rows
 
 
@@ -115,3 +117,4 @@ def refresh_offer_match_from_extract(offer_results: list[dict], offer_name: str,
         return
 
     offer_match.update(offer_info_from_extracted_posts(extracted_posts, offer_match))
+

@@ -1,0 +1,5 @@
+{
+    "Naam opdrachtgever": "Lolkema BV Aannemingsbedrijf",
+    "Totaalprijs inc. BTW": "251500,00",
+    "Totaalprijs exc. BTW": "251500,00"
+}

@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 
 from domain.offer import Offer
+from utils.app_logging import log_action
 
 logger = logging.getLogger(__name__)
 
@@ -36,12 +37,18 @@ class ExtractionJobService:
 
     def _finish(self, offer_path: Path, task: asyncio.Task) -> None:
         self._tasks.pop(offer_path, None)
+        offer_label = f'{offer_path.parent.name}/{offer_path.name}'
 
         if task.cancelled():
             logger.info('Extraction job cancelled for %s', offer_path)
+            log_action('extraction_cancelled', offer=offer_label)
             return
 
         try:
             task.result()
         except Exception:
             logger.exception('Extraction job failed for %s', offer_path)
+            log_action('extraction_failed', offer=offer_label)
+            return
+
+        log_action('extraction_finished', offer=offer_label)

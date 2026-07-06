@@ -7,6 +7,7 @@ from urllib.parse import quote
 @dataclass
 class Posten:
     omschrijving: str = ''
+    beschrijving: str = ''
     categorie: str = ''
     aantal: str = ''
     eenheid: str = ''
@@ -17,6 +18,7 @@ class Posten:
     def from_dict(cls, data: dict[str, Any]) -> 'Posten':
         return cls(
             omschrijving=data.get('Omschrijving', '') or '',
+            beschrijving=data.get('Beschrijving', '') or '',
             categorie=data.get('Categorie', '') or '',
             aantal=data.get('Aantal', '') or '',
             eenheid=data.get('Eenheid', '') or '',
@@ -27,6 +29,7 @@ class Posten:
     def to_dict(self) -> dict[str, str]:
         return {
             'Omschrijving': self.omschrijving,
+            'Beschrijving': self.beschrijving,
             'Categorie': self.categorie,
             'Aantal': self.aantal,
             'Eenheid': self.eenheid,

@@ -1,0 +1,698 @@
+=== summary ===
+
+{
+    "Naam opdrachtgever": "Van Wijnen Gorredijk B.V.",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "ONBEKEND"
+}
+
+=== posts chunk 1 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Blanka type inleg systeemplafond. Afmeting 600x600x20mm gemonteerd in een zichtbaar wit T-24mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan de bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "61000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "38,80",
+      "Aantal": "1573,3"
+    },
+    {
+      "Omschrijving": "Aanbrengen van desgewenste sparingen op de door de installateur aangewezen plek.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "1995,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,75",
+      "Aantal": "420"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "2350,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "1573"
+    },
+    {
+      "Omschrijving": "Multiplex koof dikte 18 mm wit gegrond.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "315,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "105,00",
+      "Aantal": "3"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Boxer type inleg systeemplafond, afmeting 600x1200x40mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Inclusief HoldDown clips en een post achterhout + sparingen.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "6060,60",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "77,05",
+      "Aantal": "78,69"
+    },
+    {
+      "Omschrijving": "Huren van één elektrische hoogwerker. Inclusief transport",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "300,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "155,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "79"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon color-all 22 LINEN type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. inclusief sparingen & achterhout.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "9000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "53,45",
+      "Aantal": "168,5"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "250,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "169"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Rockfon Cleanspace Pro type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Inclusief sparingen & achterhout.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "6000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "68,75",
+      "Aantal": "87,9"
+    },
+    {
+      "Omschrijving": "Voor transport van plafondplaten naar werkplek hanteren wij onderstaande prijs per m² plafondplaten en additieven.",
+      "Categorie": "Algemeen",
+      "Totaalbedrag": "130,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,50",
+      "Aantal": "88"
+    }
+  ]
+}
+
+=== posts chunk 2 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "moduulmaat aangeleverd voor toepassing in een standaard T-24 systeem (bij voorkeur zwart). Inclusief akoestische isolatie Nofisol black, dik 20mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "10870.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "210.25",
+      "Aantal": "51.7"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Plagyp-D plafondconstructie bestaande uit Metal Stud PU 27/27- en PC 60/27 profielen h.o.h. 400 mm en h.o.h. 800 mm. Het frame werk wordt d.m.v. nonius hangers aan bovenliggende constructie gemonteerd. Tegen dit framewerk word een laag Gyproc Rigitone 12-20-35 Activ Air beplating dik 12,5mm geschroefd. Inclusief SLS frame werk.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "18000.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "102.75",
+      "Aantal": "175.3"
+    },
+    {
+      "Omschrijving": "Afwerking akoestisch plafond.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3060.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "17.50",
+      "Aantal": "175"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MSVoorzetwand, dik 100 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan één zijde van het frame m.b.v. schroeven wordt één laag Standaard AK gipskarton dik 12,5 mm en één laag LaDura/ Duragyp gipsvezelbeplating dik 12,5mm aangebracht. In de spouw Rockwool Rock Sono base dik 60mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "MSV 100 / 75.2.A",
+      "Totaalbedrag": "39100.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "60.10",
+      "Aantal": "651.2"
+    },
+    {
+      "Omschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "775.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125.00",
+      "Aantal": "6.2"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "85.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "Logistiek MSV",
+      "Totaalbedrag": "2560.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2.00",
+      "Aantal": "1280"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "afkoop Sparingen & achterhout in MS wanden",
+      "Totaalbedrag": "4800.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7.50",
+      "Aantal": "640"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3450.00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5.75",
+      "Aantal": "600"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Totaalbedrag": "535.00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3.85",
+      "Aantal": "139"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.",
+      "Categorie": "Stijlverzwaring deurkozijn",
+      "Totaalbedrag": "55.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "55.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "Gyproc No-coat ultra flexcorner 325",
+      "Totaalbedrag": "447.50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.95",
+      "Aantal": "50"
+    },
+    {
+      "Omschrijving": "Wandafwerking op beide zijdes in niveau B (behang klaar)",
+      "Categorie": "MS wanden afwerken",
+      "Totaalbedrag": "5900.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "9.25",
+      "Aantal": "639"
+    },
+    {
+      "Omschrijving": "Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.",
+      "Categorie": "Stellen deurkozijn in MS Wand",
+      "Totaalbedrag": "65.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "65.00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "MS 125 / 2.75.2.A",
+      "Totaalbedrag": "155950.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "84.75",
+      "Aantal": "1840.3"
+    },
+    {
+      "Omschrijving": "Meerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.",
+      "Categorie": "Toeslag WR (Hydro) beplating",
+      "Totaalbedrag": "190.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4.35",
+      "Aantal": "43.3"
+    },
+    {
+      "Omschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "Toeslag ronding",
+      "Totaalbedrag": "2665.00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125.00",
+      "Aantal": "21.3"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "Toeslag inbouw brandslanghaspel in MS Wand",
+      "Totaalbedrag": "510.00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85.00",
+      "Aantal": "6"
+    }
+  ]
+}
+
+=== posts chunk 3 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "12300,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "6197"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4875,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "650"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met een brandwerende kit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "6575,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,95",
+      "Aantal": "827"
+    },
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2880,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "750"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van verzwaring door een vuren 50x70 toe te passen in de C-75 stijlen bij de deurkozijnen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "55,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "55,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "675,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "75,4"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS Hangwand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono base isolatie dik 60 mm.\nGerekend met een wandhoogte van 1200mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4450,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "102,50",
+      "Aantal": "43,6"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "348,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "174"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "440,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "77"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "330,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "44"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 145mm, opgebouwd uit een dubbel verspringend verzinkt stalen stijl -en regelwerk (C-45 en U-45 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven worden er één laag standaard AK gipskarton en één laag Ladura/Duragyp gipsvezelbeplating dik 12,5 mm aangebracht. In de spouw 2x Rockwool Sono base isolatie dik 40mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "18675,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "104,75",
+      "Aantal": "178,3"
+    },
+    {
+      "Omschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1400,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "703"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1320,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "176"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met een brandwerende kit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "975,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,95",
+      "Aantal": "123"
+    },
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "365,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "95,5"
+    },
+    {
+      "Omschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "35,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "4"
+    },
+    {
+      "Omschrijving": "Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "65,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "65,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een MS wand, dik 150 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-150 en U-150 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag Duragyp/LaDura gipsvezelbeplating dik 12,5 mm aangebracht. In de spouw Rockwool Sono Base dik 120 mm.\nEr is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1450,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "108,35",
+      "Aantal": "13,4"
+    }
+  ]
+}
+
+=== posts chunk 4 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Voor transport van gipsplaten en plafondplaten naar werkplek hanteren wij onderstaande prijs per m² gipsplaat en plafondplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "54"
+    },
+    {
+      "Omschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "80,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "14"
+    },
+    {
+      "Omschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "170,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85,00",
+      "Aantal": "2"
+    },
+    {
+      "Omschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "100,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "14"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "25,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "7"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen van een Systeemwand IM 1000 TC 1.75.1a (Rw 44dB). Gerekend met een bruto m² wandoppervlakte.",
+      "Categorie": "O.G. => Omega Systeemwand IM 1000 TC ~ H:2600mm (Intermontage)",
+      "Totaalbedrag": "22.300,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "235,00",
+      "Aantal": "94,99"
+    }
+  ]
+}
+
+=== posts chunk 5 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Sparing Wandcontactdozen",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "3,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 000 t/m 100 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "6,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "6,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 200 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "7,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 201 t/m 400 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 401 t/m 600 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "13,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "13,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 1200 mm",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "16,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "16,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in MS wanden exclusief afdichten en exclusief maatvoering.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing Wandcontactdozen",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "3,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 000 t/m 100 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "7,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 200 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "9,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 201 t/m 400 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "13,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "13,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 401 t/m 600 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "17,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "17,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 1200 mm",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "21,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "21,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type A. Type B.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 00 t/m 50 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "5,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 51 t/m 100 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "10,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 101 t/m 300 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "14,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "14,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 301 t/m 600 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "20,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "20,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing 601 t/m 800 mm",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "27,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
+      "Categorie": "Sparingen in gipsplafonds exclusief afdichten en maatvoering.",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "stijl",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 200 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "8,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "8,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 300 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 400 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 600 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "18,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "18,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 1200 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "21,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "21,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Achterhout (OSB) 2400 x 595/395/295 x 18mm",
+      "Categorie": "Meerprijzen achterhout:",
+      "Totaalbedrag": "32,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "32,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparingen voor spotjes, brandmelders incl. achterhout",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "8,95",
+      "Eenheid": "st",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparingen voor spotjes, brandmelders",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "4,95",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Sparing voor TL armatuur, passend in het systeem",
+      "Categorie": "Overige plafonds",
+      "Totaalbedrag": "4,85",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,85",
+      "Aantal": "1"
+    }
+  ]
+}

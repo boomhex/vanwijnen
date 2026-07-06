@@ -1,104 +1,10 @@
-from pathlib import Path
+import json
+
 from .subpage import SubPage
 from nicegui import ui
 from interface.editable_table_helper import render_editable_summary
-from nicegui_tabulator import tabulator
-from .tabulator_table import TabulatorTable
 from application.offer_service import OfferService
-from domain.fields import FIELD_TO_ATTR, OFFER_FIELDS
-from domain.money import parse_decimal
 from domain.offer import Offer, Posten
-
-class OfferRowsTable(TabulatorTable):
-    fields = OFFER_FIELDS
-
-    def __init__(self, posten: list[Posten]) -> None:
-        self.posten = posten
-        super().__init__(
-            rows=self.rows_from_posten(),
-            columns=[
-                self.text_column('Omschrijving', 'Omschrijving', editable=True, width=320, multiline=True),
-                self.text_column('Categorie', 'Categorie', editable=True, width=180),
-                self.text_column('Aantal', 'Aantal', editable=True, width=120),
-                self.text_column('Eenheid', 'Eenheid', editable=True, width=120),
-                self.text_column('Eenheidsprijs', 'Eenheidsprijs', editable=True, width=140),
-                self.text_column('Totaalbedrag', 'Totaalbedrag', editable=True, width=140),
-                {
-                    'title': '',
-                    'field': '__delete__',
-                    'width': 52,
-                    'headerSort': False,
-                    'hozAlign': 'center',
-                    ':formatter': "function(){ return 'x'; }",
-                },
-            ],
-            layout='fitData',
-            reactive=True,
-            height='52vh',
-        )
-
-    def rows_from_posten(self) -> list[dict]:
-        rows = []
-        for index, row in enumerate(self.posten):
-            formatted_row = {
-                'id': index,
-                'Omschrijving': row.omschrijving,
-                'Categorie': row.categorie,
-                'Aantal': row.aantal,
-                'Eenheid': row.eenheid,
-                'Eenheidsprijs': row.eenheidsprijs,
-                'Totaalbedrag': row.totaalbedrag,
-            }
-            # Format monetary fields for display
-            for field in ('Eenheidsprijs', 'Totaalbedrag'):
-                if field in formatted_row and formatted_row[field]:
-                    try:
-                        decimal_val = parse_decimal(formatted_row[field])
-                        if decimal_val is not None:
-                            formatted_row[field] = self.format_money(decimal_val)
-                    except (ValueError, AttributeError):
-                        pass  # Keep original if formatting fails
-            rows.append(formatted_row)
-        return rows
-
-    def add_row(self) -> dict:
-        row = Posten()
-        self.posten.append(row)
-        display_row = {
-            'id': len(self.posten) - 1,
-            'Omschrijving': row.omschrijving,
-            'Categorie': row.categorie,
-            'Aantal': row.aantal,
-            'Eenheid': row.eenheid,
-            'Eenheidsprijs': row.eenheidsprijs,
-            'Totaalbedrag': row.totaalbedrag,
-        }
-        self.rows.append(display_row)
-        return display_row
-
-    def update_cell(self, row_id: int | None, field: str | None, value: str) -> None:
-        if field not in self.fields:
-            return
-
-        if row_id is None:
-            return
-        if row_id >= len(self.posten):
-            return
-
-        setattr(self.posten[row_id], self.field_to_attr(field), value)
-
-    def delete_row(self, row_id: int | None) -> None:
-        if row_id is None:
-            return
-        if row_id >= len(self.posten):
-            return
-
-        self.posten.pop(row_id)
-        self.rows = self.rows_from_posten()
-
-    @staticmethod
-    def field_to_attr(field: str) -> str:
-        return FIELD_TO_ATTR[field]
 
 
 class OfferPage(SubPage):
@@ -115,13 +21,13 @@ class OfferPage(SubPage):
             return
 
         pdf_url = self.state.opened_offer.pdf_url(self.projects_dir)
-
-        ui.html(f'''
-            <iframe
-                src="{pdf_url}"
-                style="width: 100%; height: 100%; border: none;"
-            ></iframe>
-        ''', sanitize=False).classes('w-full h-full overflow-hidden')
+        ui.button(
+            'Open PDF',
+            icon='picture_as_pdf',
+            on_click=lambda url=pdf_url: ui.run_javascript(
+                f'window.open({json.dumps(url)}, "_blank", "noopener,noreferrer")'
+            ),
+        ).props('no-caps color=primary')
 
     def opened_file_result(self):
         if self.state.opened_offer is None:
@@ -149,55 +55,91 @@ class OfferPage(SubPage):
             on_add=lambda field, value: self.add_summary_field(opened_offer, result, field, value),
         )
 
-        self.input_table(opened_offer, result)
+        self.render_post_cards(opened_offer, result)
 
-    def input_table(self, offer: 'Offer', result: dict) -> None:
+    def render_post_cards(self, offer: 'Offer', result: dict) -> None:
         posten = self.offer_service.posten_list(result)
-        offer_table = OfferRowsTable(posten)
 
         with ui.row().classes('items-center gap-2 mt-4'):
             ui.label('Posten').classes('text-lg font-bold')
             ui.button(
-                'Add row',
+                'Add post',
                 icon='add',
-                on_click=lambda: self.add_post_row(offer, result, offer_table),
+                on_click=lambda: self.add_post_row(offer, result),
             ).props('dense no-caps size=sm')
 
-        offer_tabulator = tabulator(offer_table.options(), row_key='id').classes('w-full')
+        if not posten:
+            ui.label('No posts found').classes('text-gray-500')
+            return
 
-        def update_cell(event) -> None:
-            cell = event.args.get('cell', {})
-            row = cell.get('row', {})
-            column = cell.get('column', {})
-            self.offer_service.update_post_row(offer, result, row.get('id'), column.get('field'), cell.get('value', ''))
-            offer_tabulator.set_data(offer_table.rows)
+        with ui.column().classes('w-full gap-3'):
+            for index, post in enumerate(posten):
+                self.render_post_card(offer, result, index, post)
 
-        def delete_row(event) -> None:
-            cell = event.args.get('cell', {})
-            column = cell.get('column', {})
-            if column.get('field') != '__delete__':
-                return
+    def render_post_card(self, offer: 'Offer', result: dict, index: int, post: Posten) -> None:
+        with ui.card().classes('w-full p-3 gap-3 rounded-lg border border-gray-200 shadow-none'):
+            with ui.row().classes('w-full items-start justify-between gap-3 no-wrap'):
+                ui.label(f'Post {index + 1}').classes('text-sm font-semibold text-gray-600')
+                ui.button(
+                    icon='delete',
+                    on_click=lambda row_id=index: self.delete_post_row(offer, result, row_id),
+                ).props('flat dense round color=negative size=sm')
 
-            row = cell.get('row', {})
-            self.offer_service.delete_post_row(offer, result, row.get('id'))
-            offer_table.posten = self.offer_service.posten_list(result)
-            offer_table.rows = offer_table.rows_from_posten()
-            offer_tabulator.set_data(offer_table.rows)
+            self.post_textarea(offer, result, index, 'Omschrijving', post.omschrijving, min_rows=1)
+            self.post_textarea(offer, result, index, 'Beschrijving', post.beschrijving, min_rows=2)
 
-        offer_tabulator.on_event('cellEdited', update_cell)
-        offer_tabulator.on_event('cellClick', delete_row)
+            with ui.element('div').classes('grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-2 w-full'):
+                self.post_input(offer, result, index, 'Categorie', post.categorie)
+                self.post_input(offer, result, index, 'Aantal', post.aantal)
+                self.post_input(offer, result, index, 'Eenheid', post.eenheid)
+                self.post_input(offer, result, index, 'Eenheidsprijs', post.eenheidsprijs)
+                self.post_input(offer, result, index, 'Totaalbedrag', post.totaalbedrag)
+
+    def post_input(self, offer: 'Offer', result: dict, index: int, field: str, value: str) -> None:
+        input_field = ui.input(field, value=str(value)).props('dense outlined').classes('w-full')
+        self.commit_on_blur_and_enter(
+            input_field,
+            lambda field_input=input_field, row_id=index, key=field: self.offer_service.update_post_row(
+                offer,
+                result,
+                row_id,
+                key,
+                field_input.value,
+            ),
+        )
+
+    def post_textarea(
+        self,
+        offer: 'Offer',
+        result: dict,
+        index: int,
+        field: str,
+        value: str,
+        *,
+        min_rows: int,
+    ) -> None:
+        input_field = ui.textarea(field, value=str(value)).props(f'outlined autogrow rows={min_rows}').classes('w-full')
+        self.commit_on_blur_and_enter(
+            input_field,
+            lambda field_input=input_field, row_id=index, key=field: self.offer_service.update_post_row(
+                offer,
+                result,
+                row_id,
+                key,
+                field_input.value,
+            ),
+        )
+
+    @staticmethod
+    def commit_on_blur_and_enter(input_field, on_commit) -> None:
+        input_field.on('blur', lambda _event: on_commit())
+        input_field.on('keydown.enter', lambda _event: on_commit())
 
     def show(self) -> None:
-        with ui.splitter(value=50, limits=(25, 75)).classes('w-full h-screen max-h-screen').props(
-            'before-class=overflow-hidden after-class=overflow-hidden'
-        ) as splitter:
-            with splitter.before:
-                with ui.column().classes('w-full h-full'):
-                    self.opened_file()
-
-            with splitter.after:
-                with ui.scroll_area().classes('w-full h-full p-4'):
-                    self.opened_file_result()
+        with ui.scroll_area().classes('w-full h-screen p-4'):
+            with ui.column().classes('w-full gap-4'):
+                self.opened_file()
+                self.opened_file_result()
 
     def update_summary_value(self, offer: 'Offer', result: dict, field: str, value: str) -> None:
         self.offer_service.update_summary_value(offer, result, field, value)
@@ -220,9 +162,10 @@ class OfferPage(SubPage):
         self.offer_service.add_summary_field(offer, result, clean_field, value)
         self.refresh()
 
-    def add_post_row(self, offer: 'Offer', result: dict, offer_table: OfferRowsTable | None = None) -> None:
+    def add_post_row(self, offer: 'Offer', result: dict) -> None:
         self.offer_service.add_post_row(offer, result)
-        if offer_table is not None:
-            offer_table.posten = self.offer_service.posten_list(result)
-            offer_table.rows = offer_table.rows_from_posten()
+        self.refresh()
+
+    def delete_post_row(self, offer: 'Offer', result: dict, row_id: int) -> None:
+        self.offer_service.delete_post_row(offer, result, row_id)
         self.refresh()

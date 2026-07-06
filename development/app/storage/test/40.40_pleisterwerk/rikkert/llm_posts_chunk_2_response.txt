@@ -1,0 +1,236 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Gipsplaatwanden, naden en schroefgaten dichten op gipsbasis en aanbrengen gaas t.p.v. naad (type AK 120 cm)",
+      "Categorie": "Gipsplaatwanden: (niveau C)",
+      "Totaalbedrag": "7,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,25",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatwanden, naden en schroefgaten dichten op gipsbasis inclusief aanbrengen gaas t.p.v. naad (type AK 120 cm) en naden afpleisteren en naden schuren",
+      "Categorie": "Gipsplaatwanden: (niveau B)",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatwanden, naden en schroefgaten dichten op gipsbasis inclusief aanbrengen gaas t.p.v. naad (type AK 120cm) en nadien geheel afpleisteren en schuren op gipsbasis",
+      "Categorie": "Gipsplaatwanden: (niveau A)",
+      "Totaalbedrag": "16,95",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "16,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatplafonds uitrepareren op gipsbasis, naden in het zicht, spuitgereed niveau C/D (type RK 120cm)",
+      "Categorie": "Gipsplaatplafonds",
+      "Totaalbedrag": "5,95",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "5,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatplafonds uitrepareren op gipsbasis, naden en schroefgaten dichten, spuitgereed niveau C/D (type AK 120cm)",
+      "Categorie": "Gipsplaatplafonds",
+      "Totaalbedrag": "7,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,25",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatplafonds, naden en schroefgaten dichten en afwerken op gipsbasis o.b.v. niveau B (type AK 120cm)",
+      "Categorie": "Gipsplaatplafonds",
+      "Totaalbedrag": "21,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "21,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Gipsplaatplafonds, naden en schroefgaten dichten en geheel overzetten op gipsbasis o.b.v. niveau A (type AK 120cm)",
+      "Categorie": "Gipsplaatplafonds",
+      "Totaalbedrag": "33,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "33,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "V-naden betonplafonds dichten, excl. uitvlakken plafonds",
+      "Categorie": "Betonplafonds",
+      "Totaalbedrag": "3,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "3,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Betonplafonds, 2x messen met spack, excl. uitvlakwerk en excl. V-naden dichten",
+      "Categorie": "Betonplafonds",
+      "Totaalbedrag": "21,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "21,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Betonplafonds geheel overzetten op gipsbasis, max. 4mm dikte (groep 1)",
+      "Categorie": "Betonplafonds",
+      "Totaalbedrag": "35,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "35,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen aluzink hoekbeschermers",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "5,65",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,65",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Toeslag geen smeerlat aanwezig t.p.v. deuren in wanden dikker dan 100mm",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "-5,65",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-5,65",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Aanwerken vensterbanken tot max. 10 mm dikte, incl. leveren en aanbrengen aluzink hoekbeschermers",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "-11,25",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-11,25",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Stucstop profielen ( aluzink) plaatsen bij einde stucwerk",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "-7,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-7,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Wapeningsgaas 5 cm breed",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "-3,15",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-3,15",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Wapeningsgaas 10 cm breed",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "-4,55",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-4,55",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Toeslag badkamer afwerken d.m.v. sneldrogende mortel",
+      "Categorie": "Overige prijzen",
+      "Totaalbedrag": "25,95",
+      "Eenheid": "woning",
+      "Eenheidsprijs": "25,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Kantelaven tot 15 cm breedte",
+      "Categorie": "Kantelaven",
+      "Totaalbedrag": "5,65",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,65",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Kantelaven vanaf 15 cm tot 22,5 cm breedte",
+      "Categorie": "Kantelaven",
+      "Totaalbedrag": "-6,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-6,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Kantelaven vanaf 22,5 cm tot 30 cm breedte",
+      "Categorie": "Kantelaven",
+      "Totaalbedrag": "-8,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-8,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Voorbehandelen stoffige / snel zuigende wanden ondergronden draagkrachtig maken d.m.v. Diepgrondeer",
+      "Categorie": "Voorbehandelen ondergronden (indien van toepassing)",
+      "Totaalbedrag": "4,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,25",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Kopse zijde breedplaat vloeren uitvlakken tot max. 8mm op gipsbasis",
+      "Categorie": "Diversen: (indien van toepassing)",
+      "Totaalbedrag": "16,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "16,75",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Raveelijzer; sponning uitvlakken en voorzien van hechtlaag",
+      "Categorie": "Diversen: (indien van toepassing)",
+      "Totaalbedrag": "-13,95",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-13,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Trapgat overgangen t.p.v. bouwmuren uitvlakken op gipsbasis ( max. 5mm )",
+      "Categorie": "Diversen: (indien van toepassing)",
+      "Totaalbedrag": "-15,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "-15,50",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Stukadoorswerk aanheel- en herstel werkzaamheden op regiebasis",
+      "Categorie": "Diversen: (indien van toepassing)",
+      "Totaalbedrag": "475,00",
+      "Eenheid": "dag",
+      "Eenheidsprijs": "475,00",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Neggekant breedte tot max. 15 cm toeslag",
+      "Categorie": "Algemene uitgangspunten stukadoorswerk",
+      "Totaalbedrag": "3,65",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,65",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Neggekant breedte vanaf 15 tot 22,5cm toeslag",
+      "Categorie": "Algemene uitgangspunten stukadoorswerk",
+      "Totaalbedrag": "5,95",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,95",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Neggekant breedte vanaf 22,5 tot 30cm toeslag",
+      "Categorie": "Algemene uitgangspunten stukadoorswerk",
+      "Totaalbedrag": "8,25",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,25",
+      "Aantal": "1"
+    },
+    {
+      "Omschrijving": "Toeslag op bovenstaande prijzen, toeslag van",
+      "Categorie": "Algemene uitgangspunten stukadoorswerk",
+      "Totaalbedrag": "1,65",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,65",
+      "Aantal": "1"
+    }
+  ]
+}

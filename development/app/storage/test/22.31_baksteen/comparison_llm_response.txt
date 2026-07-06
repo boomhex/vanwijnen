@@ -1,0 +1,156 @@
+{
+  "MatchedPosten": [
+    {
+      "Omschrijving": "Vermetselen gevelsteen halfsteens verband",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Gevelsteen B3 WF",
+          "Gematchte posten": ["Gevelsteen B3 WF"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Vermetselen WF handvorm halfsteens verband",
+          "Gematchte posten": ["Vermetselen WF handvorm halfsteens verband"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag wilverband",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag wildverband",
+          "Gematchte posten": ["Toeslag wildverband"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag strooisteen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag strooisteen",
+          "Gematchte posten": ["Toeslag strooisteen"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "inzet verreiker",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Alternatief inzet verreiker",
+          "Gematchte posten": ["Alternatief inzet verreiker"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Verreiker op bouwplaats",
+          "Gematchte posten": ["Verreiker op bouwplaats"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "toeslag gebogen metselwerk",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag rond werk",
+          "Gematchte posten": ["Toeslag rond werk"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag rond metselwerk",
+          "Gematchte posten": ["Toeslag rond metselwerk"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "vermetselen accentsteen 20mm verdiept",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Overeenkomst": "1"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Zaagwerk stenen",
+          "Gematchte posten": ["Zaagwerk stenen"],
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Zaagwerk gevelsteen",
+          "Gematchte posten": ["Zaagwerk gevelsteen"],
+          "Overeenkomst": "2"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "voegwerk doorstrijken",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Voegwerk",
+          "Gematchte posten": ["Voegwerk"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "zuidema.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag doorstrijk metselwerk",
+          "Gematchte posten": ["Toeslag doorstrijk metselwerk"],
+          "Overeenkomst": "3"
+        }
+      ]
+    }
+  ]
+}

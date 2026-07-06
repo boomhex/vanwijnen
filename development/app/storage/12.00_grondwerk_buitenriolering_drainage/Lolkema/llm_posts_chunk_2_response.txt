@@ -1,0 +1,340 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Ontgraven zand uit vervallen cunetten",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.095,35",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "3,05",
+      "Aantal": "687,00"
+    },
+    {
+      "Omschrijving": "Ontgraven grond uit cunet voorterrein brandweer",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1.562,40",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,20",
+      "Aantal": "372,00"
+    },
+    {
+      "Omschrijving": "Aanbrengen zand in nieuwe cunet tegelverharding d=250mm",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "6.025,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "6,50",
+      "Aantal": "927,00"
+    },
+    {
+      "Omschrijving": "Op hoogte brengen bestaande zandbanen tegelbestrating",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1.172,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,75",
+      "Aantal": "670,00"
+    },
+    {
+      "Omschrijving": "Afwerken vooraf aan aanbrengen puin",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "520,30",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,10",
+      "Aantal": "473,00"
+    },
+    {
+      "Omschrijving": "Verwerken vrijgekomen grond in cunetten oud straatwerk",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.095,35",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "3,05",
+      "Aantal": "687,00"
+    },
+    {
+      "Omschrijving": "Groen delen terrein op hoogte brengen",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.576,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,15",
+      "Aantal": "2.240,00"
+    },
+    {
+      "Omschrijving": "Lev. en verw. menggranulaat op wegenbouwdoek",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.375,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "9,25",
+      "Aantal": "473,00"
+    },
+    {
+      "Omschrijving": "Op werk in depot rijden her te gebruiken grond",
+      "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+      "Totaalbedrag": "1.069,20",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "2,70",
+      "Aantal": "396,00"
+    },
+    {
+      "Omschrijving": "Op werk in depot rijden her te gebruiken zand",
+      "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+      "Totaalbedrag": "521,10",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "2,70",
+      "Aantal": "193,00"
+    },
+    {
+      "Omschrijving": "Laden en afvoeren overtollig grond, Landbouw & Natuur",
+      "Categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+      "Totaalbedrag": "6.795,00",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "4,50",
+      "Aantal": "1.510,00"
+    },
+    {
+      "Omschrijving": "Laden, afvoeren en storten boorgrond uit depot",
+      "Categorie": "BOORGROND, BUITEN BOUWPUT DOOR BOORDER",
+      "Totaalbedrag": "4.305,00",
+      "Eenheid": "m3",
+      "Eenheidsprijs": "35,00",
+      "Aantal": "123,00"
+    },
+    {
+      "Omschrijving": "Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25",
+      "Categorie": "GRONDWERK KABELSLEUF",
+      "Totaalbedrag": "3.164,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "14,00",
+      "Aantal": "226,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen PVC-riool diam. 160 mm t/m 200 mm",
+      "Categorie": "HWA-RIOLERING DAKWATER",
+      "Totaalbedrag": "3.363,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "28,75",
+      "Aantal": "117,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen PVC-riool diam. 250 mm",
+      "Categorie": "HWA-RIOLERING DAKWATER",
+      "Totaalbedrag": "386,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "38,60",
+      "Aantal": "10,00"
+    },
+    {
+      "Omschrijving": "Maken aansluiting op binnenriolering",
+      "Categorie": "HWA-RIOLERING DAKWATER",
+      "Totaalbedrag": "228,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "45,60",
+      "Aantal": "5,00"
+    },
+    {
+      "Omschrijving": "Lev. en stellen ontlastputten bij aansluiting diam. 315 mm",
+      "Categorie": "HWA-RIOLERING DAKWATER",
+      "Totaalbedrag": "1.180,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "236,10",
+      "Aantal": "5,00"
+    },
+    {
+      "Omschrijving": "Lev. en plaatsen insp. put 600 mm op erfgrens",
+      "Categorie": "HWA-RIOLERING DAKWATER",
+      "Totaalbedrag": "1.421,70",
+      "Eenheid": "st",
+      "Eenheidsprijs": "1.421,70",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen Straatkolk",
+      "Categorie": "HWA RIOLERING KOLKEN IN TERREIN",
+      "Totaalbedrag": "3.800,30",
+      "Eenheid": "st",
+      "Eenheidsprijs": "271,45",
+      "Aantal": "14,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen kolkleidingen ø125mm - 160 mm",
+      "Categorie": "HWA RIOLERING KOLKEN IN TERREIN",
+      "Totaalbedrag": "4.208,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "24,05",
+      "Aantal": "175,00"
+    },
+    {
+      "Omschrijving": "Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm",
+      "Categorie": "HWA RIOLERING KOLKEN IN TERREIN",
+      "Totaalbedrag": "352,30",
+      "Eenheid": "st",
+      "Eenheidsprijs": "176,15",
+      "Aantal": "2,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen PVC-riool diam. 160 mm",
+      "Categorie": "VWA-RIOLERING",
+      "Totaalbedrag": "737,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "29,50",
+      "Aantal": "25,00"
+    },
+    {
+      "Omschrijving": "Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm",
+      "Categorie": "VWA-RIOLERING",
+      "Totaalbedrag": "336,70",
+      "Eenheid": "st",
+      "Eenheidsprijs": "168,35",
+      "Aantal": "2,00"
+    },
+    {
+      "Omschrijving": "Ontwerptekening aan te leggen riolering",
+      "Categorie": "ALGEMEEN",
+      "Totaalbedrag": "500,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "500,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Revisietekening van aangelegde riolering",
+      "Categorie": "ALGEMEEN",
+      "Totaalbedrag": "900,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "900,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen straatlaag op gebonden fundering",
+      "Categorie": "ELEMENTENVERHARDING",
+      "Totaalbedrag": "1.300,75",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,75",
+      "Aantal": "473,00"
+    },
+    {
+      "Omschrijving": "Profileren zandbaan voor aanbrengen straatlaag",
+      "Categorie": "ELEMENTENVERHARDING",
+      "Totaalbedrag": "3.750,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,50",
+      "Aantal": "1.500,00"
+    },
+    {
+      "Omschrijving": "Voor straatlaag profileren puinbaan",
+      "Categorie": "ELEMENTENVERHARDING",
+      "Totaalbedrag": "662,20",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "1,40",
+      "Aantal": "473,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen betontegels 300x300x60",
+      "Categorie": "ELEMENTENVERHARDING",
+      "Totaalbedrag": "47.378,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "24,05",
+      "Aantal": "1.970,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen opsluitbanden recht 10x20cm grijs",
+      "Categorie": "KANTOPSLUITING",
+      "Totaalbedrag": "7.367,25",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "14,25",
+      "Aantal": "517,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs",
+      "Categorie": "KANTOPSLUITING",
+      "Totaalbedrag": "1.386,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "19,80",
+      "Aantal": "70,00"
+    },
+    {
+      "Omschrijving": "Verlagen straatwerk roosters",
+      "Categorie": "VEEGROOSTERS VOOR DEUREN",
+      "Totaalbedrag": "486,20",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "28,60",
+      "Aantal": "17,00"
+    },
+    {
+      "Omschrijving": "Leveren en verwerken veegroosters 100x100",
+      "Categorie": "VEEGROOSTERS VOOR DEUREN",
+      "Totaalbedrag": "1.785,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "105,00",
+      "Aantal": "17,00"
+    },
+    {
+      "Omschrijving": "Zaaiklaar maken terrein voor inzaaien",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "1.792,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "0,80",
+      "Aantal": "2.240,00"
+    },
+    {
+      "Omschrijving": "Inzaaien onverhard terrein met graszaad (1kg/100m2)",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "1.792,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "0,80",
+      "Aantal": "2.240,00"
+    },
+    {
+      "Omschrijving": "Grondwerk t.b.v. vakken langs gevel voor beplanting",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "357,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "35,70",
+      "Aantal": "10,00"
+    },
+    {
+      "Omschrijving": "Opsluitbanden rond plantvakken gevel",
+      "Categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+      "Totaalbedrag": "276,90",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "21,30",
+      "Aantal": "13,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen fietsbeugels",
+      "Categorie": "STRAATMEUBILAIR",
+      "Totaalbedrag": "27.500,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "250,00",
+      "Aantal": "110,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
+      "Categorie": "TERREINAFRASTERING",
+      "Totaalbedrag": "5.610,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "110,00",
+      "Aantal": "51,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen poort, dubbel 125 cm hoog",
+      "Categorie": "TERREINAFRASTERING",
+      "Totaalbedrag": "1.450,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "1.450,00",
+      "Aantal": "1,00"
+    },
+    {
+      "Omschrijving": "Leveren en plaatsen Noistop Steel Schutting, 1 zijde",
+      "Categorie": "SCHUTTING",
+      "Totaalbedrag": "22.000,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "500,00",
+      "Aantal": "44,00"
+    },
+    {
+      "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+      "Categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
+      "Totaalbedrag": "4.800,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "12,00",
+      "Aantal": "400,00"
+    }
+  ]
+}

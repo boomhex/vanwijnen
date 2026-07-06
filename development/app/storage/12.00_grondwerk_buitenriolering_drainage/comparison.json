@@ -66,11 +66,6 @@
             "Eenheid": "post"
         },
         {
-            "Omschrijving": "hwa riolering kolken in terrein",
-            "Aantal": "1",
-            "Eenheid": "post"
-        },
-        {
             "Omschrijving": "ontwerptekening aan te leggen riolering",
             "Aantal": "1",
             "Eenheid": "post"
@@ -79,11 +74,6 @@
             "Omschrijving": "revisietekening van aangelegde riolering",
             "Aantal": "1",
             "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "aansluiten riolering op gemeente riool",
-            "Aantal": "1",
-            "Eenheid": "stuk"
         },
         {
             "Omschrijving": "kantopsluitingen bij tegelbestrating",
@@ -96,7 +86,7 @@
             "Eenheid": "post"
         },
         {
-            "Omschrijving": "onverharde oppervlaktes voorzien van graszaad",
+            "Omschrijving": "Groenvoorziening",
             "Aantal": "1",
             "Eenheid": "post"
         },
@@ -106,17 +96,17 @@
             "Eenheid": "post"
         },
         {
-            "Omschrijving": "leveren en aanbrengen van aanvulling kokowall schutting 2m hoog + 1m hoog zoals aangegeven op situatie tekening TO100",
+            "Omschrijving": "leveren en aanbrengen van schutting",
             "Aantal": "1",
             "Eenheid": "post"
         },
         {
-            "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
+            "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk. Incl. poort",
             "Aantal": "1",
             "Eenheid": "post"
         },
         {
-            "Omschrijving": "dejo roosters bij alle buitendeuren op begane grond cf 2e nota",
+            "Omschrijving": "Vloerroosters",
             "Aantal": "1",
             "Eenheid": "post"
         },
@@ -128,6 +118,23 @@
     ],
     "MatchedPosten": [
         {
+            "Omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "Lolkema.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Leveren en aanbrengen drainage bouwkuip",
+                    "Gematchte categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "400.00",
+                    "Eenheidsprijs": "12.00",
+                    "Totaalbedrag": "4800.00",
+                    "Overeenkomst": "3"
+                }
+            }
+        },
+        {
             "Omschrijving": "Leveren en aanbrengen pomp t.b.v. drooghouden bouwkuip",
             "Aantal": "1",
             "Eenheid": "post",
@@ -135,7 +142,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Leveren en aansluiten pomp t.b.v. drooghouden bouwkuip",
+                    "Gematchte categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
                     "Gematchte eenheid": "st",
+                    "Aantal": "2.00",
                     "Eenheidsprijs": "500.00",
                     "Totaalbedrag": "1000.00",
                     "Overeenkomst": "3"
@@ -150,7 +159,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Huur elektrische pomp (6 weken)",
+                    "Gematchte categorie": "DRAINAGE EN BEMALING IN BOUWPUT TIJDENS WERK",
                     "Gematchte eenheid": "st",
+                    "Aantal": "2.00",
                     "Eenheidsprijs": "2700.00",
                     "Totaalbedrag": "5400.00",
                     "Overeenkomst": "3"
@@ -164,11 +175,13 @@
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Uitvoeringskosten",
-                    "Gematchte eenheid": "post",
-                    "Eenheidsprijs": "1.00",
-                    "Totaalbedrag": "9000.00",
-                    "Overeenkomst": "2"
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "ONBEKEND"
                 }
             }
         },
@@ -179,8 +192,10 @@
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk",
-                    "Gematchte eenheid": "ONBEKEND",
+                    "Gematchte omschrijving": "IN-SITU partijkeuring vrijkomende grond, 3 week voor start werk keer",
+                    "Gematchte categorie": "GRONDONDERZOEK, NA SLOOPWERK",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "1.00",
                     "Eenheidsprijs": "2000.00",
                     "Totaalbedrag": "2000.00",
                     "Overeenkomst": "3"
@@ -195,7 +210,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Opnemen en afvoeren tegelbestrating",
+                    "Gematchte categorie": "OPNEMEN 2E FASE TEGELBESTRATING TIJDELIJKE SCHOOLPLEIN",
                     "Gematchte eenheid": "m2",
+                    "Aantal": "446.00",
                     "Eenheidsprijs": "3.15",
                     "Totaalbedrag": "1404.90",
                     "Overeenkomst": "3"
@@ -221,7 +238,13 @@
                         "Aanvullen buitenfundering met vrijgekomen zand/grond",
                         "Egaliseren rondom bouwput na aanvullen, strook 3 m1"
                     ],
+                    "Gematchte categorie": "GRONDWERK BOUWKUNDIG",
+                    "Gematchte categorieen": [
+                        "GRONDWERK BOUWKUNDIG"
+                    ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "18266.45",
                     "Overeenkomst": "3"
@@ -235,7 +258,7 @@
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "group",
-                    "Gematchte omschrijving": "11 posten",
+                    "Gematchte omschrijving": "8 posten",
                     "Gematchte posten": [
                         "Ontgraven cunet nieuwe tegelverharding",
                         "Ontgraven zand uit vervallen cunetten",
@@ -244,14 +267,17 @@
                         "Op hoogte brengen bestaande zandbanen tegelbestrating",
                         "Afwerken vooraf aan aanbrengen puin",
                         "Verwerken vrijgekomen grond in cunetten oud straatwerk",
-                        "Groen delen terrein op hoogte brengen",
-                        "Op werk in depot rijden her te gebruiken grond",
-                        "Op werk in depot rijden her te gebruiken zand",
-                        "Grondwerk aan brengen inrit"
+                        "Groen delen terrein op hoogte brengen"
+                    ],
+                    "Gematchte categorie": "GRONDWERK BUITENTERREIN",
+                    "Gematchte categorieen": [
+                        "GRONDWERK BUITENTERREIN"
                     ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "6983.00",
+                    "Gematchte hoeveelheid eenheid": "m2",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "20755.20",
+                    "Totaalbedrag": "18364.90",
                     "Overeenkomst": "3"
                 }
             }
@@ -262,11 +288,22 @@
             "Eenheid": "post",
             "Offertes": {
                 "Lolkema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Laden en afvoeren overtollig grond, Landbouw & Natuur",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "4.50",
-                    "Totaalbedrag": "6795.00",
+                    "Match type": "group",
+                    "Gematchte omschrijving": "3 posten",
+                    "Gematchte posten": [
+                        "Op werk in depot rijden her te gebruiken grond",
+                        "Op werk in depot rijden her te gebruiken zand",
+                        "Laden en afvoeren overtollig grond, Landbouw & Natuur"
+                    ],
+                    "Gematchte categorie": "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR",
+                    "Gematchte categorieen": [
+                        "VERVOER EN AFVOER GROND / ZAND KLASSE LANDBOUW EN NATUUR"
+                    ],
+                    "Gematchte eenheid": "post",
+                    "Aantal": "2099.00",
+                    "Gematchte hoeveelheid eenheid": "m3",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "8385.30",
                     "Overeenkomst": "3"
                 }
             }
@@ -279,7 +316,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Laden, afvoeren en storten boorgrond uit depot",
-                    "Gematchte eenheid": "ONBEKEND",
+                    "Gematchte categorie": "BOORGROND, BUITEN BOUWPUT DOOR BOORDER",
+                    "Gematchte eenheid": "m3",
+                    "Aantal": "123.00",
                     "Eenheidsprijs": "35.00",
                     "Totaalbedrag": "4305.00",
                     "Overeenkomst": "3"
@@ -294,7 +333,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Ontgraven en aanvullen sleuf als op tek. BE-ELt-ter. 01-09-25",
+                    "Gematchte categorie": "GRONDWERK KABELSLEUF",
                     "Gematchte eenheid": "m1",
+                    "Aantal": "226.00",
                     "Eenheidsprijs": "14.00",
                     "Totaalbedrag": "3164.00",
                     "Overeenkomst": "3"
@@ -316,28 +357,15 @@
                         "Lev. en stellen ontlastputten bij aansluiting diam. 315 mm",
                         "Lev. en plaatsen insp. put 600 mm op erfgrens"
                     ],
-                    "Gematchte eenheid": "post",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "6579.95",
-                    "Overeenkomst": "2"
-                }
-            }
-        },
-        {
-            "Omschrijving": "hwa riolering kolken in terrein",
-            "Aantal": "1",
-            "Eenheid": "post",
-            "Offertes": {
-                "Lolkema.pdf": {
-                    "Match type": "group",
-                    "Gematchte omschrijving": "2 posten",
-                    "Gematchte posten": [
-                        "Leveren en aanbrengen Straatkolk",
-                        "Leveren en aanbrengen kolkleidingen ø125mm - 160 mm"
+                    "Gematchte categorie": "HWA-RIOLERING DAKWATER",
+                    "Gematchte categorieen": [
+                        "HWA-RIOLERING DAKWATER"
                     ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "8009.05",
+                    "Totaalbedrag": "6579.95",
                     "Overeenkomst": "3"
                 }
             }
@@ -351,14 +379,21 @@
                     "Match type": "group",
                     "Gematchte omschrijving": "3 posten",
                     "Gematchte posten": [
-                        "Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm",
-                        "Leveren en aanbrengen PVC-riool diam. 160 mm",
+                        "Leveren en aanbrengen Straatkolk",
+                        "Leveren en aanbrengen kolkleidingen ø125mm - 160 mm",
                         "Leveren en stellen erfscheidingsput op erfgrens diam. 315 mm"
                     ],
+                    "Gematchte categorie": "HWA RIOLERING KOLKEN IN TERREIN, VWA-RIOLERING",
+                    "Gematchte categorieen": [
+                        "HWA RIOLERING KOLKEN IN TERREIN",
+                        "VWA-RIOLERING"
+                    ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "1442.10",
-                    "Overeenkomst": "2"
+                    "Totaalbedrag": "8345.75",
+                    "Overeenkomst": "3"
                 }
             }
         },
@@ -370,7 +405,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Ontwerptekening aan te leggen riolering",
+                    "Gematchte categorie": "ALGEMEEN",
                     "Gematchte eenheid": "st",
+                    "Aantal": "1.00",
                     "Eenheidsprijs": "500.00",
                     "Totaalbedrag": "500.00",
                     "Overeenkomst": "3"
@@ -385,25 +422,12 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Revisietekening van aangelegde riolering",
+                    "Gematchte categorie": "ALGEMEEN",
                     "Gematchte eenheid": "st",
+                    "Aantal": "1.00",
                     "Eenheidsprijs": "900.00",
                     "Totaalbedrag": "900.00",
                     "Overeenkomst": "3"
-                }
-            }
-        },
-        {
-            "Omschrijving": "aansluiten riolering op gemeente riool",
-            "Aantal": "1",
-            "Eenheid": "stuk",
-            "Offertes": {
-                "Lolkema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1"
                 }
             }
         },
@@ -414,15 +438,20 @@
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "group",
-                    "Gematchte omschrijving": "3 posten",
+                    "Gematchte omschrijving": "2 posten",
                     "Gematchte posten": [
                         "Leveren en aanbrengen opsluitbanden recht 10x20cm grijs",
-                        "Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs",
-                        "Opsluitbanden rond plantvakken gevel"
+                        "Leveren en aanbrengen opsluitbanden bocht 10x20 cm grijs"
+                    ],
+                    "Gematchte categorie": "KANTOPSLUITING",
+                    "Gematchte categorieen": [
+                        "KANTOPSLUITING"
                     ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "9030.15",
+                    "Totaalbedrag": "8753.25",
                     "Overeenkomst": "3"
                 }
             }
@@ -433,36 +462,40 @@
             "Eenheid": "post",
             "Offertes": {
                 "Lolkema.pdf": {
-                    "Match type": "group",
-                    "Gematchte omschrijving": "4 posten",
-                    "Gematchte posten": [
-                        "Leveren en aanbrengen betontegels 300x300x60",
-                        "Leveren en aanbrengen straatlaag op gebonden fundering",
-                        "Profileren zandbaan voor aanbrengen straatlaag",
-                        "Voor straatlaag profileren puinbaan"
-                    ],
-                    "Gematchte eenheid": "post",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "53091.45",
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Leveren en aanbrengen betontegels 300x300x60",
+                    "Gematchte categorie": "ELEMENTENVERHARDING",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "1970.00",
+                    "Eenheidsprijs": "24.05",
+                    "Totaalbedrag": "47378.50",
                     "Overeenkomst": "3"
                 }
             }
         },
         {
-            "Omschrijving": "onverharde oppervlaktes voorzien van graszaad",
+            "Omschrijving": "Groenvoorziening",
             "Aantal": "1",
             "Eenheid": "post",
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "group",
-                    "Gematchte omschrijving": "2 posten",
+                    "Gematchte omschrijving": "4 posten",
                     "Gematchte posten": [
                         "Zaaiklaar maken terrein voor inzaaien",
-                        "Inzaaien onverhard terrein met graszaad (1kg/100m2)"
+                        "Inzaaien onverhard terrein met graszaad (1kg/100m2)",
+                        "Grondwerk t.b.v. vakken langs gevel voor beplanting",
+                        "Opsluitbanden rond plantvakken gevel"
+                    ],
+                    "Gematchte categorie": "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK",
+                    "Gematchte categorieen": [
+                        "GROENINRICHTING, EXCL. BEPLANTING GEVEL EN DAK"
                     ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "3584.00",
+                    "Totaalbedrag": "4217.90",
                     "Overeenkomst": "3"
                 }
             }
@@ -475,7 +508,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Leveren en aanbrengen fietsbeugels",
+                    "Gematchte categorie": "STRAATMEUBILAIR",
                     "Gematchte eenheid": "st",
+                    "Aantal": "110.00",
                     "Eenheidsprijs": "250.00",
                     "Totaalbedrag": "27500.00",
                     "Overeenkomst": "3"
@@ -483,22 +518,24 @@
             }
         },
         {
-            "Omschrijving": "leveren en aanbrengen van aanvulling kokowall schutting 2m hoog + 1m hoog zoals aangegeven op situatie tekening TO100",
+            "Omschrijving": "leveren en aanbrengen van schutting",
             "Aantal": "1",
             "Eenheid": "post",
             "Offertes": {
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Leveren en plaatsen Noistop Steel Schutting, 1 zijde",
+                    "Gematchte categorie": "SCHUTTING",
                     "Gematchte eenheid": "m1",
+                    "Aantal": "44.00",
                     "Eenheidsprijs": "500.00",
                     "Totaalbedrag": "22000.00",
-                    "Overeenkomst": "2"
+                    "Overeenkomst": "3"
                 }
             }
         },
         {
-            "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
+            "Omschrijving": "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk. Incl. poort",
             "Aantal": "1",
             "Eenheid": "post",
             "Offertes": {
@@ -509,7 +546,13 @@
                         "Leveren en aanbrengen hekwerk, spijlen KDV Hekwerk",
                         "Leveren en aanbrengen poort, dubbel 125 cm hoog"
                     ],
+                    "Gematchte categorie": "TERREINAFRASTERING",
+                    "Gematchte categorieen": [
+                        "TERREINAFRASTERING"
+                    ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "7060.00",
                     "Overeenkomst": "3"
@@ -517,7 +560,7 @@
             }
         },
         {
-            "Omschrijving": "dejo roosters bij alle buitendeuren op begane grond cf 2e nota",
+            "Omschrijving": "Vloerroosters",
             "Aantal": "1",
             "Eenheid": "post",
             "Offertes": {
@@ -528,10 +571,16 @@
                         "Verlagen straatwerk roosters",
                         "Leveren en verwerken veegroosters 100x100"
                     ],
+                    "Gematchte categorie": "VEEGROOSTERS VOOR DEUREN",
+                    "Gematchte categorieen": [
+                        "VEEGROOSTERS VOOR DEUREN"
+                    ],
                     "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "2271.20",
-                    "Overeenkomst": "3"
+                    "Overeenkomst": "2"
                 }
             }
         },
@@ -543,7 +592,9 @@
                 "Lolkema.pdf": {
                     "Match type": "single",
                     "Gematchte omschrijving": "Lev. en verw. menggranulaat op wegenbouwdoek",
+                    "Gematchte categorie": "ONBEKEND",
                     "Gematchte eenheid": "m2",
+                    "Aantal": "473.00",
                     "Eenheidsprijs": "9.25",
                     "Totaalbedrag": "11285.00",
                     "Overeenkomst": "3"

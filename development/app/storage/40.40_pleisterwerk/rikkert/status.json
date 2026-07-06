@@ -1,8 +1,0 @@
-{
-    "status": "failed",
-    "step": "failed",
-    "updated_at": "2026-06-15T08:58:16.576684+00:00",
-    "started_at": "2026-06-15T08:57:16.872801+00:00",
-    "message": "Extraction failed",
-    "error": "LLM response was not valid JSON at line 56, column 18. The raw response was saved as llm_response.txt."
-}

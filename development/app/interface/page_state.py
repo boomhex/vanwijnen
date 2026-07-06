@@ -15,5 +15,8 @@ class MainPageState:
     opened_offer: Offer | None = None
     current_view: View = View.OFFER
     comparison_project: Project | None = None
+    selected_offer: Offer | None = None
+    selected_project: Project | None = None
     upload_project: str | None = None
     extract_requested_offers: set[Offer] = field(default_factory=set)
+    expanded_project_names: set[str] = field(default_factory=set)

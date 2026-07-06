@@ -1,0 +1,80 @@
+{
+  "MatchedPosten": [
+    {
+      "Omschrijving": "Schilderwerk binnenkozijnen",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "46.31.11-b Schilderwerk binnenkozijnen",
+          "Gematchte posten": ["46.31.11-b Schilderwerk binnenkozijnen"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Binnenkozijnen",
+          "Gematchte posten": ["Binnenkozijnen"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Schilderwerk vloerplinten",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Schilderwerk vloerplinten",
+          "Gematchte posten": ["Schilderwerk vloerplinten"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Plinten",
+          "Gematchte posten": ["Plinten"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Schilderwerk dagkantafwerking buitenkozijnen",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Schilderwerk aftimmeringen buitenkozijnen",
+          "Gematchte posten": ["Schilderwerk aftimmeringen buitenkozijnen"],
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Dagkanten binnenzijde buitenkozijnen",
+          "Gematchte posten": ["Dagkanten binnenzijde buitenkozijnen"],
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
+      "Offertes": [
+        {
+          "Bestand": "Coenen.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "46.38.59-e Scan en sauswerk wanden",
+          "Gematchte posten": ["46.38.59-e Scan en sauswerk wanden"],
+          "Overeenkomst": "3"
+        },
+        {
+          "Bestand": "Schildersgilde.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Basiskleur",
+          "Gematchte posten": ["Basiskleur"],
+          "Overeenkomst": "2"
+        }
+      ]
+    }
+  ]
+}
