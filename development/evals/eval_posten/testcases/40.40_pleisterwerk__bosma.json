@@ -1,0 +1,316 @@
+{
+  "ExtractPath": "app/storage/test/40.40_pleisterwerk/bosma/extract.json",
+  "Expected": {
+    "Naam aannemer": "Bosma B.V.",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "449425.75",
+    "Posten": [
+      {
+        "Omschrijving": "SYSTEEMPLAFONDS ALGEMEEN",
+        "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Blanka inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit. Afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur wit. Kanthout 18x38mm kleur zwart. Alternatief: Toepassen van de Rockfon Pallas i.p.v. Rockfon Blanka levert een minderprijs op van € 9,30 per m2. Niet in onze prijs is opgenomen: Sparingen en/ of voorzieningen installaties, Achterhout, koven e.d., Kit en/of pur werkzaamheden.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "61127.51",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "38.91",
+        "Aantal": "1571.00"
+      },
+      {
+        "Omschrijving": "SYSTEEMPLAFONDS SANITAIR",
+        "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Cleanspace Pro inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit. Afgehangen d.m.v. snelhangers. Clips: HDC clips. Randafwerking: Hoeklijn 24x24mm, kleur wit. Kanthout 18x38mm kleur zwart. Niet in onze prijs is opgenomen: Sparingen en/ of voorzieningen installaties, Achterhout, koven e.d., Kit en/of pur werkzaamheden.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "5983.47",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "67.23",
+        "Aantal": "89.00"
+      },
+      {
+        "Omschrijving": "HOUTEN LATTENPLAFOND",
+        "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Shiluvit 7-555. Houtsoort: American Yellow Pine 3-zijdig Eikenlook. Afmeting: 20x55-55 mm. Plafondraster: 24mm breed met crosslock. Afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur zwart. Kanthout 18x38mm kleur zwart. Meerprijs: Toepassen van een steenwolpaneel op deze plafonds, levert een meerprijs op van € 15,60 per m2. Niet in onze prijs is opgenomen: Sparingen en/ of voorzieningen installaties, Achterhout, koven e.d., Kit en/of pur werkzaamheden.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "49187.73",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "226.67",
+        "Aantal": "217.00"
+      },
+      {
+        "Omschrijving": "SPORTPLAFOND",
+        "Beschrijving": "Het leveren en monteren van een nieuw sportplafond e.e.a. volgens onderstand specificaties. Type: Rockfon Olympia sportplafond. Afmeting: 1166 x 1166 x 40 mm. Plafondraster: 50mm breed, kleur wit. Afgehangen d.m.v. noniushangers. Randafwerking: Hoeklijn 30x30mm, kleur wit. Kanthout 18x38mm kleur zwart. Niet in onze prijs is opgenomen: Sparingen en/ of voorzieningen installaties, Achterhout, koven e.d., Kit en/of pur werkzaamheden.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "9722.19",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "123.07",
+        "Aantal": "79.00"
+      },
+      {
+        "Omschrijving": "SYSTEEMPLAFOND AANSLUITING RONDE WAND",
+        "Beschrijving": "Toeslag voor het aansluiten van het systeemplafond op een ronde wand d.m.v. buigbaar kanthout en buigbaar hoeklijn.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "390.32",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "11.15",
+        "Aantal": "35.00"
+      },
+      {
+        "Omschrijving": "AKOESTISCH GIPSPLAFOND",
+        "Beschrijving": "Het leveren en monteren van een nieuw geperforeerd gipsplafond volgens onderstaande specificaties: Type: PD 68P/55.1. Profielen: 2x C 60/27. Isolatie: N.v.t. Beplating 1- laags: 1x geperforeerd gips 12-20-35. Kitwerk: N.v.t. Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout, Brand en geluidwerende sparingen afdichtingen, Plinten en/ of aftimmerlatten.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "11187.18",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "51.55",
+        "Aantal": "217.00"
+      },
+      {
+        "Omschrijving": "AFWERKEN GIPSPLAFOND",
+        "Beschrijving": "Afwerken van de geperforeerde gipsplafonds.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "3504.64",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "16.15",
+        "Aantal": "217.00"
+      },
+      {
+        "Omschrijving": "TOESLAG LICHTKOEPELS IN GIPSPLAFOND",
+        "Beschrijving": "Toeslag voor het aansluiten van het geperforeerde gipsplafond tegen de ronde lichtkoepels.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "515.52",
+        "Eenheid": "st",
+        "Eenheidsprijs": "103.10",
+        "Aantal": "5.00"
+      },
+      {
+        "Omschrijving": "GIPSKOOF",
+        "Beschrijving": "Leveren en monteren van een gipskoof, e.e.a. volgens detail 25. Gips is afgewerkt klasse A en de hoeken afgewerkt met flexcorner.",
+        "Categorie": "NIEUWB. IKC",
+        "Totaalbedrag": "2035.72",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "127.23",
+        "Aantal": "16.00"
+      },
+      {
+        "Omschrijving": "SPARINGEN/ACHTERHOUT PLAFONDS",
+        "Beschrijving": "Stelpost sparingen en achterhout in de nieuwe plafonds.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "3116.17",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "1.49",
+        "Aantal": "2094.00"
+      },
+      {
+        "Omschrijving": "METALSTUD SCHEIDINGSWAND 125MM",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties: Type: MS 125/2.75.2.A Profielen: 1x C/U 75 mm stijlen hoh 600mm Isolatie: Steenwol 60mm, min. 50kg/m3 Beplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Minderprijs: Toepassen van glaswol i.p.v. steenwol 4,80 per m2 Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "127783.39",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "78.20",
+        "Aantal": "1634.00"
+      },
+      {
+        "Omschrijving": "METALSTUD SCHEIDINGSWAND 145MM",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties: Type: MS 145/2.45*45.2.A Profielen: 2x C/U 45 mm stijlen hoh 600mm Isolatie: Steenwol 40mm, min. 50kg/m3 Beplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Minderprijs: Toepassen van glaswol i.p.v. steenwol 2,40 per m2 Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "35522.88",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "96.01",
+        "Aantal": "370.00"
+      },
+      {
+        "Omschrijving": "METALSTUD SCHEIDINGSWAND 200MM",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties: Type: MS 200/2.150.2.A Profielen: 1x C/U 150 mm stijlen hoh 600mm Isolatie: Steenwol 100mm, min. 50kg/m3 Beplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Minderprijs: Toepassen van glaswol i.p.v. steenwol 6,20 per m2 Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "666.92",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "83.37",
+        "Aantal": "8.00"
+      },
+      {
+        "Omschrijving": "METALSTUD VOORZETWAND 100MM",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties: Type: MS 100V/75.2.A Profielen: 1x C/U 75 mm stijlen hoh 600mm Isolatie: Steenwol 60mm, min. 50kg/m3 Beplating 1-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Minderprijs: Toepassen van glaswol i.p.v. steenwol 4,80 per m2 Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "8413.49",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "54.99",
+        "Aantal": "153.00"
+      },
+      {
+        "Omschrijving": "METALSTUD VOORZETWAND 30 MIN. BRANDWEREND",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties: Type: MS 100V/75.2.A Profielen: 1x C/U 75 mm stijlen hoh 600mm Isolatie: Steenwol 60mm, min. 50kg/m3 Beplating 1-zijdig: 2x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Minderprijs: Toepassen van glaswol i.p.v. steenwol 4,80 per m2 Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "3430.03",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "61.25",
+        "Aantal": "56.00"
+      },
+      {
+        "Omschrijving": "METALSTUD HANGWAND 125MM",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud hangwand volgens onderstaande specificaties: Type: MS 125/2.75.2.A Profielen: 1x C/U 75 mm stijlen hoh 600mm Isolatie: Steenwol 60mm, min. 50kg/m3 Beplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm 1x gipsvezelplaat Ak 12,5mm Kitwerk: incl. Kopsezijde: voorzien van 1 strook zetwerk Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "6882.12",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "196.63",
+        "Aantal": "35.00"
+      },
+      {
+        "Omschrijving": "STELLEN EN MONTEREN DEURKOZIJNEN",
+        "Beschrijving": "Het uitsparen of het meebouwen van de deurkozijnen in de nieuwe metalstud wanden. Niet in onze prijs is opgenomen: Toepassen verzwaarde stijlen t.b.v. kozijnen Horizontaal of verticaal transport kozijnen.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "9326.30",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "30.98",
+        "Aantal": "301.00"
+      },
+      {
+        "Omschrijving": "TOESLAG VERZWAARDE STIJLEN",
+        "Beschrijving": "Het toepassen van verzwaarde stijlen van 2mm dik t.p.v. de nieuwe kozijnen.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "3760.74",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "8.59",
+        "Aantal": "438.00"
+      },
+      {
+        "Omschrijving": "SANITAIRE VOORZETWAND",
+        "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties: Type: MS 100V/75.2 Profielen: 1x C/U 75 mm Isolatie: N.v.t. Beplating 1-zijdig: 1x Gipskartonlaat Ak 12,5mm 1x Gipsvezelplaat AK 12,5mm Kitwerk: N.v.t. Niet in onze prijs is opgenomen: Sparingen, voorzieningen installaties en/ of achterhout Brand en geluidwerende sparingen afdichtingen Plinten en/ of aftimmerlatten",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "3579.53",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "35.80",
+        "Aantal": "100.00"
+      },
+      {
+        "Omschrijving": "TOESLAG HANGTOILET",
+        "Beschrijving": "Sparingen en achterhout t.b.v. een hangtoilet.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "1184.20",
+        "Eenheid": "st",
+        "Eenheidsprijs": "107.65",
+        "Aantal": "11.00"
+      },
+      {
+        "Omschrijving": "TOESLAG MIVA TOILET",
+        "Beschrijving": "Verstevigingen, sparingen ,achterhout en hout t.p.v. beugels t.b.v. een mivatoilet.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "195.68",
+        "Eenheid": "st",
+        "Eenheidsprijs": "195.68",
+        "Aantal": "1.00"
+      },
+      {
+        "Omschrijving": "ACHTERHOUT URINOIR",
+        "Beschrijving": "Achterhout t.b.v. een urinior.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "209.74",
+        "Eenheid": "st",
+        "Eenheidsprijs": "16.13",
+        "Aantal": "13.00"
+      },
+      {
+        "Omschrijving": "INBOUWEN BRANDSLANGHASPELKAST",
+        "Beschrijving": "INBOUWEN BRANDSLANGHASPELKAST",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "465.05",
+        "Eenheid": "st",
+        "Eenheidsprijs": "77.51",
+        "Aantal": "6.00"
+      },
+      {
+        "Omschrijving": "RONDE METSTUDWANDEN",
+        "Beschrijving": "Leveren en monteren van ronde metalstudwanden uitgevoerd d.m.v. buigbare profielen en 8 laag buiggips van 6mm dik per wandzijde.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "2726.37",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "90.88",
+        "Aantal": "30.00"
+      },
+      {
+        "Omschrijving": "OPEN WANDEINDE",
+        "Beschrijving": "Het afwerken van een open wandeinde d.m.v. 1x een gipsstrook. De hoeken worden afgewerkt d.m.v. flexcorner.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "777.27",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "38.86",
+        "Aantal": "20.00"
+      },
+      {
+        "Omschrijving": "SPARINGEN MS WANDEN",
+        "Beschrijving": "Stelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "6671.07",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "2.95",
+        "Aantal": "2265.00"
+      },
+      {
+        "Omschrijving": "AFWERKEN WANDEN",
+        "Beschrijving": "Het fwerken van de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "57213.95",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "13.84",
+        "Aantal": "4133.00"
+      },
+      {
+        "Omschrijving": "AFWERKEN HOEKEN",
+        "Beschrijving": "Het afwerken van de hoeken t.p.v. de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "1495.07",
+        "Eenheid": "m1",
+        "Eenheidsprijs": "13.84",
+        "Aantal": "108.00"
+      },
+      {
+        "Omschrijving": "ENKELE VOLGLASWAND",
+        "Beschrijving": "Leveren en monteren van een volglaswand onder hangwanden volgens onderstaande omschrijving. Enkele volglaswand (hoogte 3 meter) Enkel glas gelaagd helder 66.2SI Profielen in witte kleur De glaswanden, type volglaswand, bestaande uit een enkele beglazing van blank gelaagd glas welke wordt geplaatst in een kader van aluminium U-profielen v.z.v. zwart rubberprofiel. De verticale aansluiting van de glasruiten onderling word gerealiseerd door middel van een doorzichtige polycarbonaatstrip.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "9466.80",
+        "Eenheid": "m2",
+        "Eenheidsprijs": "215.15",
+        "Aantal": "44.00"
+      },
+      {
+        "Omschrijving": "KADERDEUR",
+        "Beschrijving": "Deur en kozijn Vulling: aluminium omkaderd met 33.2SI glas Uitvoering: Standaard, incl. valdorpel Kozijn: Aluminium in witte kleur Afmeting: 930mm x 2400 mm Hang en sluitwerk Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot Cilinder: Exclusief. Kruk/rozet: L-model, RVS",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "7345.29",
+        "Eenheid": "st",
+        "Eenheidsprijs": "1224.22",
+        "Aantal": "6.00"
+      },
+      {
+        "Omschrijving": "HORIZONTAAL TRANSPORT",
+        "Beschrijving": "Horizontaal transport van het nieuwe materiaal. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend. Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "9112.75",
+        "Eenheid": "post",
+        "Eenheidsprijs": "ONBEKEND",
+        "Aantal": "ONBEKEND"
+      },
+      {
+        "Omschrijving": "VERTICAAL TRANSPORT",
+        "Beschrijving": "Verticaal transport d.m.v. verreiker. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "4337.54",
+        "Eenheid": "post",
+        "Eenheidsprijs": "ONBEKEND",
+        "Aantal": "ONBEKEND"
+      },
+      {
+        "Omschrijving": "STEIGER/SCHAARHOOGWERKER",
+        "Beschrijving": "De huur van een schaarhoogwerker per week verrekenbaar.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "168.71",
+        "Eenheid": "ONBEKEND",
+        "Eenheidsprijs": "168.71",
+        "Aantal": "1.00"
+      },
+      {
+        "Omschrijving": "Regie-uurloon",
+        "Beschrijving": "Regie uurloon bedraagt € 57,50 per uur.",
+        "Categorie": "ONBEKEND",
+        "Totaalbedrag": "57.50",
+        "Eenheid": "ONBEKEND",
+        "Eenheidsprijs": "57.50",
+        "Aantal": "1"
+      }
+    ]
+  }
+}

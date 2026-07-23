@@ -19,6 +19,7 @@ if str(APP_DIR) not in sys.path:
 
 from domain.money import UNKNOWN, calculate_total, parse_decimal
 from domain.units import normalize_unit
+from matching.comparison_prompt import MATCH_RESPONSE_SCHEMA
 
 
 DEFAULT_OFFER_ROOT = APP_DIR / 'storage' / 'test' / '22.31_baksteen'
@@ -435,6 +436,87 @@ def build_candidate_result(case: dict[str, Any], offer_results: list[dict[str, A
     return {'CandidateMatches': rows}
 
 
+def candidate_prompt_post(candidate: dict[str, Any]) -> dict[str, Any]:
+    return {
+        'Omschrijving': candidate.get('Omschrijving', ''),
+        'Beschrijving': candidate.get('Beschrijving', ''),
+        'Categorie': candidate.get('Categorie', ''),
+        'Eenheid': candidate.get('Eenheid', ''),
+        'Eenheidsprijs': candidate.get('Eenheidsprijs', ''),
+        'Totaalbedrag': candidate.get('Totaalbedrag', ''),
+        'CalculatedTotal': candidate.get('CalculatedTotal', ''),
+        'PostType': candidate.get('PostType', ''),
+        'Werksoort': candidate.get('Werksoort', ''),
+        'Prijsbasis': candidate.get('Prijsbasis', ''),
+        'MatchHints': candidate.get('MatchHints', []),
+        'CandidateScore': candidate.get('Score', 0),
+    }
+
+
+def build_llm_match_prompt(candidate_result: dict[str, Any]) -> str:
+    rows = []
+    for row in candidate_result.get('CandidateMatches', []):
+        offers = []
+        for offer in row.get('Offertes', []):
+            offers.append({
+                'Bestand': offer.get('Bestand', ''),
+                'Kandidaten': [
+                    candidate_prompt_post(candidate)
+                    for candidate in offer.get('Candidates', [])
+                ],
+            })
+
+        rows.append({
+            'Omschrijving': row.get('Omschrijving', ''),
+            'Aantal': row.get('Aantal', ''),
+            'Eenheid': row.get('Eenheid', ''),
+            'Offertes': offers,
+        })
+
+    return '\n'.join([
+        'Je koppelt begrotings-/vergelijkingsregels aan offerteposten.',
+        'Je krijgt per vergelijkingsregel per offertebestand alleen voorgeselecteerde kandidaatposten.',
+        'Kies per offertebestand de beste inhoudelijke match uit de kandidaten.',
+        'Gebruik "single" als één kandidaat past en "group" als meerdere kandidaten samen nodig zijn.',
+        'Gebruik "ONBEKEND" en een lege "Gematchte posten" lijst als geen kandidaat inhoudelijk goed past.',
+        'Match nooit alleen op prijs, hoeveelheid of eenheid; de werkzaamheden moeten inhoudelijk overeenkomen.',
+        'Bij PostType "unit_rate" mag je de hoeveelheid uit de vergelijkingsregel combineren met de eenheidsprijs van de offertepost als de eenheid inhoudelijk overeenkomt.',
+        'Kopieer gematchte omschrijvingen letterlijk uit kandidaatveld "Omschrijving".',
+        'Reageer ALLEEN met geldige JSON in dit formaat:',
+        json.dumps({
+            'MatchedPosten': [
+                {
+                    'Omschrijving': '...',
+                    'Offertes': [
+                        {
+                            'Bestand': 'offerte-bestandsnaam.pdf',
+                            'Match type': 'single',
+                            'Gematchte omschrijving': '...',
+                            'Gematchte posten': ['...'],
+                            'Overeenkomst': '1-3',
+                        },
+                    ],
+                },
+            ],
+        }, ensure_ascii=False, indent=2),
+        'INPUT:',
+        json.dumps(rows, ensure_ascii=False, indent=2),
+    ])
+
+
+def run_llm_match(candidate_result: dict[str, Any], *, model: str) -> tuple[dict[str, Any], str]:
+    from services.extract_offer import ask_llm, parse_json_response
+
+    prompt = build_llm_match_prompt(candidate_result)
+    answer = ask_llm(
+        prompt,
+        response_schema=MATCH_RESPONSE_SCHEMA,
+        model=model,
+        label='matching_eval_final',
+    )
+    return parse_json_response(answer), answer
+
+
 def candidate_to_json(candidate: Candidate) -> dict[str, Any]:
     return {
         'Score': round(candidate.score, 4),
@@ -522,20 +604,91 @@ def score_candidate_result(result: dict[str, Any], expected: dict[str, Any]) -> 
     }
 
 
+def result_offer_matches(result: dict[str, Any]) -> dict[tuple[str, str], set[str]]:
+    matches = {}
+    for row in result.get('MatchedPosten', []):
+        comparison_description = str(row.get('Omschrijving') or '')
+        offers = row.get('Offertes') or []
+        if isinstance(offers, dict):
+            offers = [
+                {'Bestand': offer_name, **offer_data}
+                for offer_name, offer_data in offers.items()
+                if isinstance(offer_data, dict)
+            ]
+
+        for offer in offers:
+            offer_name = str(offer.get('Bestand') or '')
+            matches[(comparison_description, offer_name)] = {
+                normalize_text(post)
+                for post in known_match_posts(offer)
+            }
+    return matches
+
+
+def score_llm_result(result: dict[str, Any], expected: dict[str, Any]) -> dict[str, Any]:
+    expected_by_key = expected_matches(expected)
+    if not expected_by_key:
+        return {
+            'has_expected': False,
+            'llm_match_accuracy': None,
+            'checked_cells': 0,
+            'correct_cells': 0,
+            'misses': [],
+        }
+
+    actual_by_key = result_offer_matches(result)
+    checked = 0
+    correct = 0
+    misses = []
+    for key, expected_posts in expected_by_key.items():
+        if not expected_posts:
+            continue
+
+        checked += 1
+        actual_posts = actual_by_key.get(key, set())
+        if expected_posts & actual_posts:
+            correct += 1
+        else:
+            misses.append({
+                'Omschrijving': key[0],
+                'Bestand': key[1],
+                'Expected': sorted(expected_posts),
+                'Actual': sorted(actual_posts),
+            })
+
+    return {
+        'has_expected': True,
+        'llm_match_accuracy': correct / checked if checked else None,
+        'checked_cells': checked,
+        'correct_cells': correct,
+        'misses': misses,
+    }
+
+
 def write_report(path: Path, all_scores: dict[str, Any], result_paths: dict[str, Path]) -> None:
     lines = ['# Matching Eval Report', '']
     total_checked = sum(score.get('checked_cells', 0) for score in all_scores.values() if score.get('has_expected'))
     total_found = sum(score.get('found_cells', 0) for score in all_scores.values() if score.get('has_expected'))
+    llm_scores = [score.get('llm') for score in all_scores.values() if isinstance(score.get('llm'), dict)]
+    llm_checked = sum(score.get('checked_cells', 0) for score in llm_scores if score.get('has_expected'))
+    llm_correct = sum(score.get('correct_cells', 0) for score in llm_scores if score.get('has_expected'))
     if total_checked:
         lines.extend([
             '## Overall',
             f'- Candidate recall@8: {total_found / total_checked:.2%}',
             f'- Found cells: {total_found}/{total_checked}',
+            f'- LLM match accuracy: {llm_correct / llm_checked:.2%}' if llm_checked else '- LLM match accuracy: not run',
+            f'- LLM correct cells: {llm_correct}/{llm_checked}' if llm_checked else '- LLM correct cells: not run',
             '',
         ])
 
     for case_name, score in all_scores.items():
         lines.append(f'## {case_name}')
+        if score.get('error'):
+            lines.append(f'- Error: {score["error"]}')
+            lines.append('')
+            continue
+
         lines.append(f'- Candidates: `{result_paths[case_name].name}`')
         if not score.get('has_expected'):
             lines.append('- No expected matches found; candidate recall was not scored.')
@@ -545,6 +698,13 @@ def write_report(path: Path, all_scores: dict[str, Any], result_paths: dict[str,
             lines.append(f'- Candidate recall@8: {recall_text}')
             lines.append(f'- Found cells: {score["found_cells"]}/{score["checked_cells"]}')
             lines.append(f'- Misses: {len(score["misses"])}')
+            llm_score = score.get('llm')
+            if isinstance(llm_score, dict):
+                accuracy = llm_score.get('llm_match_accuracy')
+                accuracy_text = 'n/a' if accuracy is None else f'{accuracy:.2%}'
+                lines.append(f'- LLM match accuracy: {accuracy_text}')
+                lines.append(f'- LLM correct cells: {llm_score["correct_cells"]}/{llm_score["checked_cells"]}')
+                lines.append(f'- LLM misses: {len(llm_score["misses"])}')
         lines.append('')
     path.write_text('\n'.join(lines), encoding='utf-8')
 
@@ -565,6 +725,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument('--limit', type=int, default=8, help='Number of candidates per comparison row per offer.')
     parser.add_argument('--run-name', default=None, help='Name for the run directory.')
+    parser.add_argument('--with-llm', action='store_true', help='Ask the LLM to choose final matches from candidates.')
+    parser.add_argument('--llm-model', default='gemini-2.5-flash', help='Model to use with --with-llm.')
     parser.add_argument(
         '--generate-from-comparison',
         action='append',
@@ -593,17 +755,38 @@ def main() -> None:
     result_paths = {}
 
     for case_name, case, expected in load_testcases(case_paths):
-        offer_results = load_offer_results(case_offer_root(case, args.offers))
-        result = build_candidate_result(case, offer_results, limit=args.limit)
-        score = score_candidate_result(result, expected)
-
-        result_path = run_dir / f'{case_name}.candidates.json'
         score_path = run_dir / f'{case_name}.score.json'
-        result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
-        score_path.write_text(json.dumps(score, ensure_ascii=False, indent=2), encoding='utf-8')
+        try:
+            offer_results = load_offer_results(case_offer_root(case, args.offers))
+            result = build_candidate_result(case, offer_results, limit=args.limit)
+            score = score_candidate_result(result, expected)
+
+            result_path = run_dir / f'{case_name}.candidates.json'
+            result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+            result_paths[case_name] = result_path
+
+            if args.with_llm:
+                llm_result, llm_answer = run_llm_match(result, model=args.llm_model)
+                llm_result_path = run_dir / f'{case_name}.llm_matches.json'
+                llm_answer_path = run_dir / f'{case_name}.llm_response.txt'
+                llm_score_path = run_dir / f'{case_name}.llm_score.json'
+                llm_result_path.write_text(json.dumps(llm_result, ensure_ascii=False, indent=2), encoding='utf-8')
+                llm_answer_path.write_text(llm_answer, encoding='utf-8')
+                llm_score = score_llm_result(llm_result, expected)
+                llm_score_path.write_text(json.dumps(llm_score, ensure_ascii=False, indent=2), encoding='utf-8')
+                score['llm'] = llm_score
+        except Exception as error:
+            score = {
+                'error': str(error),
+                'has_expected': False,
+                'candidate_recall_at_8': None,
+                'checked_cells': 0,
+                'found_cells': 0,
+                'misses': [],
+            }
 
         scores[case_name] = score
-        result_paths[case_name] = result_path
+        score_path.write_text(json.dumps(score, ensure_ascii=False, indent=2), encoding='utf-8')
 
     write_report(run_dir / 'report.md', scores, result_paths)
     print(f'Wrote matching eval run to {run_dir}')
