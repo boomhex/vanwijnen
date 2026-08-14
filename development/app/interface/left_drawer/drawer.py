@@ -50,7 +50,6 @@ class LeftDrawer:
 
     def render(self) -> None:
         self._cancel_polling_timer()
-        ui.upload(on_upload=self.handle_upload, auto_upload=True).classes('w-full')
         self.file_list_container = ui.column().classes('w-full')
         with self.file_list_container:
             self.file_list()
@@ -112,6 +111,18 @@ class LeftDrawer:
         self.last_extraction_snapshot = snapshot
         self.refresh_safe()
 
+        # Only nudge the right side when the open offer is the one extracting,
+        # so unrelated background jobs don't interrupt an in-progress edit
+        # elsewhere with a full re-render.
+        if self._opened_offer_is_extracting():
+            self.schedule_right_side_refresh()
+
+    def _opened_offer_is_extracting(self) -> bool:
+        offer = self.state.opened_offer
+        if offer is None:
+            return False
+        return self.actions.offer_item_status(offer).extract_requested
+
     def extraction_status_snapshot(self) -> tuple[tuple[str, bool, str | None, str | None, str | None, bool], ...]:
         snapshot = []
         for project in self.project_service.list_projects():
@@ -133,6 +144,7 @@ class LeftDrawer:
 
     def file_list(self) -> None:
         self.drawer_header().render()
+        ui.upload(on_upload=self.handle_upload, auto_upload=True).classes('w-full')
         self.drawer_toolbar().render()
         projects = self.project_service.list_projects()
         self.drawer_tree().render(projects)
@@ -160,6 +172,10 @@ class LeftDrawer:
             move_offer=self.move_button,
             delete_offer=self.delete_file,
             delete_project=self.delete_project,
+            toggle_selection_mode=self.toggle_selection_mode,
+            bulk_extract=self.bulk_extract,
+            bulk_move=self.bulk_move,
+            bulk_delete=self.bulk_delete,
         )
 
     def drawer_tree(self) -> DrawerTree:
@@ -169,7 +185,65 @@ class LeftDrawer:
             project_service=self.project_service,
             open_offer=self.open_file,
             select_project=self.set_project_expanded,
+            search_changed=self.set_tree_search,
+            toggle_offer_selected=self.set_offer_selected,
+            cancel_extraction=self.cancel_extraction,
         )
+
+    def toggle_selection_mode(self) -> None:
+        self.state.selection_mode = not self.state.selection_mode
+        if not self.state.selection_mode:
+            self.state.selected_offers.clear()
+        self.refresh_safe()
+
+    def set_offer_selected(self, offer: Offer, selected: bool) -> None:
+        if selected:
+            self.state.selected_offers.add(offer)
+        else:
+            self.state.selected_offers.discard(offer)
+        self.refresh_safe()
+
+    def bulk_extract(self) -> None:
+        offers = list(self.state.selected_offers)
+        if not offers:
+            return
+        self.handle_action_result(self.actions.bulk_extract_offers(offers))
+        self.state.selected_offers.clear()
+
+    def bulk_delete(self) -> None:
+        offers = list(self.state.selected_offers)
+        if not offers:
+            return
+        dialogs.bulk_delete_dialog(offers, on_confirm=lambda offers=offers: self._confirm_bulk_delete(offers))
+
+    def _confirm_bulk_delete(self, offers: list[Offer]) -> None:
+        self.handle_action_result(self.actions.bulk_delete_offers(offers))
+        self.state.selected_offers.clear()
+
+    def bulk_move(self) -> None:
+        offers = list(self.state.selected_offers)
+        if not offers:
+            return
+
+        project_options = [project.name for project in self.project_service.list_projects()]
+        if UNASSIGNED_PROJECT not in project_options:
+            project_options.insert(0, UNASSIGNED_PROJECT)
+
+        dialogs.bulk_move_dialog(
+            offers,
+            project_options=project_options,
+            on_save=lambda target_project, offers=offers: self._confirm_bulk_move(offers, target_project),
+        )
+
+    def _confirm_bulk_move(self, offers: list[Offer], target_project: str | None) -> bool:
+        result = self.actions.bulk_move_offers(offers, target_project)
+        self.handle_action_result(result)
+        self.state.selected_offers.clear()
+        return result.success
+
+    def set_tree_search(self, value: str) -> None:
+        self.state.tree_search = value
+        self.refresh_safe()
 
     def set_project_expanded(self, project: Project, expanded: bool) -> None:
         self.handle_action_result(self.actions.select_project(project))
@@ -244,3 +318,10 @@ class LeftDrawer:
 
     def request_extract(self, offer: Offer) -> None:
         self.handle_action_result(self.actions.request_extract(offer))
+
+    def cancel_extraction(self, offer: Offer) -> None:
+        self.handle_action_result(self.actions.cancel_extraction(offer))
+
+    def delete_selected(self) -> None:
+        """Trigger the toolbar's delete action for the current selection (used by the Delete key shortcut)."""
+        self.drawer_toolbar().delete_selected()

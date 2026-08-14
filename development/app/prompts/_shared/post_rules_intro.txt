@@ -1,0 +1,3 @@
+- Is een veld onbekend, vul "ONBEKEND" in.
+- Reageer ALLEEN met geldige JSON.
+- Gebruik geen markdown codeblok.

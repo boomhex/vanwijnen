@@ -224,6 +224,41 @@ def test_merge_post_chunks_keeps_similar_rows_with_different_totals():
     assert merge_post_chunks(chunks) == chunks[0]
 
 
+def test_merge_post_chunks_uses_code_field_over_guessed_description_prefix():
+    # Different wording, no leading digits in the description, but the same
+    # explicit Code field the model filled in — should still be recognized
+    # as the same post across a chunk boundary.
+    chunks = [
+        [
+            {
+                'Omschrijving': 'Vermetselen spouwblad',
+                'Categorie': 'Metselwerk',
+                'Code': '44.31.10-a',
+                'Totaalbedrag': 'ONBEKEND',
+                'Eenheid': 'm2',
+                'Eenheidsprijs': 'ONBEKEND',
+                'Aantal': 'ONBEKEND',
+            },
+        ],
+        [
+            {
+                'Omschrijving': 'Muren metselen buitenspouwblad',
+                'Categorie': 'Metselwerk',
+                'Code': '44.31.10-a',
+                'Totaalbedrag': '1.200,00',
+                'Eenheid': 'm2',
+                'Eenheidsprijs': '60,00',
+                'Aantal': '20,00',
+            },
+        ],
+    ]
+
+    merged = merge_post_chunks(chunks)
+
+    assert len(merged) == 1
+    assert merged[0]['Totaalbedrag'] == '1.200,00'
+
+
 def test_merge_post_chunks_keeps_rows_with_only_same_total():
     chunks = [
         [

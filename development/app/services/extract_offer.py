@@ -6,7 +6,7 @@ from difflib import SequenceMatcher
 from json import JSONDecodeError
 from pathlib import Path
 import re
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal
 import time
 
 import os
@@ -14,7 +14,8 @@ from google import genai
 from google.genai import types
 import pdfplumber
 
-from domain.money import UNKNOWN
+from domain.money import UNKNOWN, parse_decimal, parse_money_value
+from domain.units import CANONICAL_UNITS, canonicalize_unit
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,32 @@ EXTRACTION_MODE = os.environ.get('EXTRACT_MODE', 'auto').strip().casefold()
 EXTRACTION_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_MAX_OUTPUT_TOKENS', '65536'))
 POST_CHUNK_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_POST_CHUNK_MAX_OUTPUT_TOKENS', '16384'))
 SUMMARY_MAX_OUTPUT_TOKENS = int(os.environ.get('EXTRACT_SUMMARY_MAX_OUTPUT_TOKENS', '4096'))
+
+# Local, editable settings file (not an env var) — copy config.json to other
+# machines running this app to carry the same settings along. Missing file
+# or missing keys fall back to the defaults below, so the app still runs
+# out of the box on a fresh checkout.
+CONFIG_FILE = Path(__file__).resolve().parents[1] / 'config.json'
+
+
+def load_config() -> dict:
+    if not CONFIG_FILE.exists():
+        return {}
+    try:
+        return json.loads(CONFIG_FILE.read_text())
+    except (OSError, JSONDecodeError) as error:
+        logger.warning('Could not read config file %s: %s', CONFIG_FILE, error)
+        return {}
+
+
+_config = load_config()
+
+# The google-genai SDK passes an explicit `timeout=None` to httpx when no
+# HttpOptions.timeout is configured, which disables httpx's timeout entirely
+# rather than falling back to a default — a stalled request can then hang
+# indefinitely. Set an explicit per-attempt ceiling so a single call can
+# never block longer than this, no matter how busy the API is.
+LLM_REQUEST_TIMEOUT_SECONDS = int(_config.get('llm_request_timeout_seconds', 120))
 
 
 POST_FIELD_PROPERTIES = {
@@ -83,6 +110,7 @@ OFFER_RESPONSE_SCHEMA = {
         'Naam aannemer': {'type': 'string'},
         'Totaalprijs inc. BTW': {'type': 'string'},
         'Totaalprijs exc. BTW': {'type': 'string'},
+        'BTW verlegd': {'type': 'string'},
         'Posten': {
             'type': 'array',
             'items': {
@@ -96,6 +124,7 @@ OFFER_RESPONSE_SCHEMA = {
         'Naam aannemer',
         'Totaalprijs inc. BTW',
         'Totaalprijs exc. BTW',
+        'BTW verlegd',
         'Posten',
     ],
 }
@@ -107,11 +136,13 @@ OFFER_SUMMARY_RESPONSE_SCHEMA = {
         'Naam aannemer': {'type': 'string'},
         'Totaalprijs inc. BTW': {'type': 'string'},
         'Totaalprijs exc. BTW': {'type': 'string'},
+        'BTW verlegd': {'type': 'string'},
     },
     'required': [
         'Naam aannemer',
         'Totaalprijs inc. BTW',
         'Totaalprijs exc. BTW',
+        'BTW verlegd',
     ],
 }
 
@@ -178,7 +209,10 @@ def get_client():
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             raise RuntimeError('GEMINI_API_KEY is not set')
-        client = genai.Client(api_key=api_key)
+        client = genai.Client(
+            api_key=api_key,
+            http_options=types.HttpOptions(timeout=LLM_REQUEST_TIMEOUT_SECONDS * 1000),
+        )
 
     return client
 
@@ -245,6 +279,11 @@ def ask_llm(
                     'API limit reached. Try again later or increase your Gemini quota.'
                 ) from error
 
+            if 'gemini_api_key is not set' in lowered:
+                # A missing API key is a configuration problem, not a transient
+                # failure — retrying it 8 times with backoff just wastes time.
+                raise
+
             if attempt >= max_attempts:
                 raise RuntimeError(f'LLM request failed after {max_attempts} attempts: {error_text}') from error
 
@@ -253,6 +292,42 @@ def ask_llm(
             time.sleep(sleep_seconds)
 
     raise RuntimeError('LLM request failed unexpectedly')
+
+
+MIN_EXTRACTABLE_TEXT_CHARS = int(os.environ.get('EXTRACT_MIN_TEXT_CHARS', '40'))
+
+
+def friendly_error_message(error: Exception) -> str:
+    """A short, understandable NL message for status.json/UI display.
+
+    The full original exception is always still available via
+    logger.exception(...) in the server logs, so nothing is lost for
+    debugging — this only affects what a non-technical user sees.
+    """
+    from pdfminer.pdfdocument import PDFPasswordIncorrect
+    from pdfminer.pdfparser import PDFSyntaxError
+
+    if isinstance(error, PDFPasswordIncorrect):
+        return 'Het PDF-bestand is met een wachtwoord beveiligd en kan niet automatisch worden gelezen.'
+    if isinstance(error, PDFSyntaxError):
+        return 'Het PDF-bestand lijkt beschadigd of onleesbaar.'
+
+    text = str(error).strip()
+    lowered = text.lower()
+
+    if 'quota' in lowered or 'resource exhausted' in lowered:
+        return 'API-limiet bereikt. Probeer het later opnieuw of verhoog je Gemini-quota.'
+    if 'timeout' in lowered or 'timed out' in lowered or 'deadline' in lowered:
+        return 'De aanvraag naar de LLM duurde te lang (timeout). Probeer het opnieuw.'
+    if 'connection' in lowered or 'network' in lowered:
+        return 'Kon geen verbinding maken met de LLM-service. Controleer de netwerkverbinding en probeer opnieuw.'
+
+    # Our own guard/parsing messages (e.g. the empty/scanned PDF check, or a
+    # malformed money amount) are already written to be user-facing.
+    if isinstance(error, ValueError) and text:
+        return text
+
+    return text or error.__class__.__name__
 
 
 def read_pdf(file) -> str:
@@ -266,10 +341,40 @@ def read_pdf(file) -> str:
     return txt
 
 
+def has_extractable_text(text: str, *, min_chars: int = MIN_EXTRACTABLE_TEXT_CHARS) -> bool:
+    """Whether a PDF text extraction produced enough real content to extract from.
+
+    Guards against scanned/image-only PDFs (no OCR text layer), which
+    pdfplumber returns as empty or near-empty text: without this check the
+    pipeline would still spend an LLM call on essentially blank input and
+    return a confusing, mostly-ONBEKEND result.
+    """
+    alphanumeric_chars = sum(1 for character in text if character.isalnum())
+    return alphanumeric_chars >= min_chars
+
+
 def read_txt(file):
     with open(file, 'r') as f:
         txt = f.read()
     return txt
+
+
+SHARED_PROMPTS_DIR = Path('./prompts/_shared')
+_SHARED_PROMPT_PLACEHOLDER = re.compile(r'\{\{SHARED:([a-zA-Z0-9_]+)\}\}')
+
+
+def load_prompt(path: Path) -> str:
+    """Read a prompt file, resolving {{SHARED:name}} includes from prompts/_shared/name.txt.
+
+    Keeps the one-shot and chunked post-extraction prompts (which share
+    ~90% of their rules) editable from a single place instead of two
+    independently-drifting copies.
+    """
+    text = read_txt(path)
+    return _SHARED_PROMPT_PLACEHOLDER.sub(
+        lambda match: read_txt(SHARED_PROMPTS_DIR / f'{match.group(1)}.txt').rstrip('\n'),
+        text,
+    )
 
 
 def split_text_chunks(
@@ -408,6 +513,14 @@ def post_completeness_score(post: dict) -> int:
 
 
 def post_code(post: dict) -> str | None:
+    """Identifying code for a post, preferring the model's own Code/Regelnummer
+    fields over a guessed leading number in the description (kept as a
+    fallback for data extracted before those fields existed)."""
+    for field in ('Code', 'Regelnummer'):
+        value = str(post.get(field) or '').strip()
+        if value and value.upper() != UNKNOWN:
+            return value.casefold()
+
     match = re.match(r'\s*(\d{4,6})\b', str(post.get('Omschrijving', '') or ''))
     return match.group(1) if match else None
 
@@ -459,7 +572,7 @@ def exact_known_match(first: dict, second: dict, field: str) -> bool:
 
 
 def normalize_field_value(value) -> str:
-    parsed_value = parse_money_value_safely(value)
+    parsed_value = parse_decimal(value)
     if parsed_value is not None:
         return str(parsed_value)
 
@@ -535,16 +648,9 @@ def should_exclude_post(post: dict) -> bool:
 
 def has_concrete_price_data(post: dict) -> bool:
     return any(
-        parse_money_value_safely(post.get(field)) is not None
+        parse_decimal(post.get(field)) is not None
         for field in ('Totaalbedrag', 'Eenheidsprijs', 'Aantal')
     )
-
-
-def parse_money_value_safely(value) -> Decimal | None:
-    try:
-        return parse_money_value(value)
-    except ValueError:
-        return None
 
 
 def normalize_filter_text(value) -> str:
@@ -604,6 +710,7 @@ def parse_offer_response(answer: str) -> tuple[dict, bool]:
             'Naam aannemer': recover_json_string_field(answer, 'Naam aannemer') or UNKNOWN,
             'Totaalprijs inc. BTW': recover_json_string_field(answer, 'Totaalprijs inc. BTW') or UNKNOWN,
             'Totaalprijs exc. BTW': recover_json_string_field(answer, 'Totaalprijs exc. BTW') or UNKNOWN,
+            'BTW verlegd': recover_json_string_field(answer, 'BTW verlegd') or UNKNOWN,
             'Posten': recovered_posts,
             'Extractie waarschuwingen': [
                 'De one-shot LLM response had ongeldige of afgekorte JSON; complete posten zijn behouden en de incomplete staart is overgeslagen.',
@@ -660,89 +767,12 @@ def find_posts_array_start(answer: str) -> int | None:
     return match.end()
 
 
-def parse_money_value(value: str) -> Decimal | None:
-    """Parse a money value string into a Decimal.
-
-    Supports many formats such as:
-      - "1.234,56" (European)
-      - "1,234.56" (US)
-      - "12.000,-" (Dutch for 12000.00)
-      - "€ 1.234,56", "EUR 1,234.56"
-      - "(1.234,56)", "-1.234,56"
-      - "1234", "1234.5", "1,5"
-
-    Heuristics:
-      - If both '.' and ',' are present the rightmost of the two is the
-        decimal separator.
-      - If only one separator is present and the fractional part length is 3
-        then treat it as a thousands separator, otherwise as decimal.
-      - Handles trailing ',-' by converting to ',00' first.
-    """
-    if value is None:
-        return None
-
-    text = str(value).strip()
-    if not text or text.upper() == UNKNOWN:
-        return None
-
-    s = text
-
-    # Normalize unicode minus
-    s = s.replace('\u2212', '-')
-
-    # Parentheses mean negative: (1.234,56)
-    negative = False
-    if s.startswith('(') and s.endswith(')'):
-        negative = True
-        s = s[1:-1].strip()
-
-    # Remove currency symbols and letters, keep digits, separators and sign
-    s = re.sub(r'[A-Za-z€£$¥¢\s]', '', s)
-
-    # Dutch-style trailing ',-' means zero cents
-    if s.endswith(',-'):
-        s = s[:-2] + ',00'
-
-    has_dot = '.' in s
-    has_comma = ',' in s
-
-    decimal_sep = None
-    if has_dot and has_comma:
-        # the rightmost separator is the decimal separator
-        decimal_sep = '.' if s.rfind('.') > s.rfind(',') else ','
-    elif has_dot:
-        after = s.split('.')[-1]
-        decimal_sep = '.' if len(after) != 3 else None
-    elif has_comma:
-        after = s.split(',')[-1]
-        decimal_sep = ',' if len(after) != 3 else None
-
-    # Remove thousands separators and normalize decimal separator to dot
-    if decimal_sep is None:
-        normalized = s.replace('.', '').replace(',', '')
-    else:
-        thousands = ',' if decimal_sep == '.' else '.'
-        normalized = s.replace(thousands, '')
-        normalized = normalized.replace(decimal_sep, '.')
-
-    if normalized in ('', '-', '+'):
-        raise ValueError(f'Invalid money amount: {value}')
-
-    if negative and not normalized.startswith('-'):
-        normalized = '-' + normalized
-
-    # Only allow digits, optional leading -, and optional decimal point
-    if not re.fullmatch(r'-?\d+(?:\.\d+)?', normalized):
-        raise ValueError(f'Invalid money amount: {value} (normalized: {normalized})')
-
-    try:
-        return Decimal(normalized)
-    except InvalidOperation as error:
-        raise ValueError(f'Invalid money amount: {value}') from error
-
 
 def validate_offer_json(offer_json: dict) -> list[str]:
     warnings = []
+    # 'BTW verlegd' isn't in this list on purpose: it's a newer field, and
+    # extract.json files saved before it existed shouldn't suddenly show a
+    # "missing field" warning for something that was never there.
     required_keys = ['Naam aannemer', 'Totaalprijs inc. BTW', 'Totaalprijs exc. BTW', 'Posten']
 
     for key in required_keys:
@@ -767,6 +797,14 @@ def validate_offer_json(offer_json: dict) -> list[str]:
             parse_money_value(value)
         except ValueError:
             warnings.append(f'{label} Heeft een ongeldig formaat: {value}')
+
+    for index, post in enumerate(posten, start=1):
+        unit_value = post.get('Eenheid')
+        _, unit_recognized = canonicalize_unit(unit_value)
+        if not unit_recognized:
+            warnings.append(
+                f'Post {index} Eenheid "{unit_value}" is geen herkende eenheid ({", ".join(CANONICAL_UNITS)})'
+            )
 
     known_post_totals = []
     for post in posten:
@@ -837,6 +875,25 @@ def normalize_amounts(offer_json: dict) -> dict:
     return offer_json
 
 
+def normalize_units(offer_json: dict) -> dict:
+    """Map free-text Eenheid values to the canonical extraction vocabulary.
+
+    Relying on the prompt alone to produce {m2, m1, st, dzd, post} is
+    unreliable, so this deterministically maps known synonyms/spelling
+    variants. Unrecognized (but non-empty) units are left as-is;
+    validate_offer_json() flags those so they surface as a review warning
+    instead of silently causing a unit mismatch later during matching.
+    """
+    posten = offer_json.get('Posten', [])
+    if isinstance(posten, list):
+        for post in posten:
+            if 'Eenheid' in post and post['Eenheid'] is not None:
+                canonical_value, _recognized = canonicalize_unit(post['Eenheid'])
+                post['Eenheid'] = canonical_value
+
+    return offer_json
+
+
 def should_use_chunked_extraction(offer_text: str) -> bool:
     if EXTRACTION_MODE not in VALID_EXTRACTION_MODES:
         raise ValueError(f'Invalid EXTRACT_MODE "{EXTRACTION_MODE}". Use one of: {", ".join(sorted(VALID_EXTRACTION_MODES))}')
@@ -900,13 +957,83 @@ def extract_offer_one_shot(
     return offer_json, answer
 
 
+def fetch_posts_chunk(
+    posts_prompt: str,
+    chunk: str,
+    *,
+    index: int,
+    total_chunks: int,
+    previous_post: dict | None,
+    response_callback: ResponseCallback | None = None,
+) -> tuple[list[dict], str, bool]:
+    """Ask the LLM for one posts chunk.
+
+    If the response is truncated (recovered=True from parse_posts_response),
+    retry once with a higher output-token budget instead of silently
+    accepting whatever partial result JSON-recovery could salvage. Keeps the
+    better of the two attempts (fewer/no dropped posts).
+    """
+    prompt = build_posts_chunk_prompt(
+        posts_prompt,
+        chunk,
+        index=index,
+        total_chunks=total_chunks,
+        previous_post=previous_post,
+    )
+    label = f'offer_posts_chunk_{index}_of_{total_chunks}'
+    answer = ask_llm(
+        prompt,
+        response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
+        max_output_tokens=POST_CHUNK_MAX_OUTPUT_TOKENS,
+        model=EXTRACTION_MODEL_ID,
+        label=label,
+    )
+    posts, recovered = parse_posts_response(answer)
+
+    if recovered:
+        logger.warning('Chunk %s/%s was truncated; retrying with a higher token budget', index, total_chunks)
+        retry_max_tokens = min(POST_CHUNK_MAX_OUTPUT_TOKENS * 2, EXTRACTION_MAX_OUTPUT_TOKENS)
+        retry_answer = ask_llm(
+            prompt,
+            response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
+            max_output_tokens=retry_max_tokens,
+            model=EXTRACTION_MODEL_ID,
+            label=f'{label}_retry',
+        )
+        if response_callback is not None:
+            response_callback(f'llm_posts_chunk_{index}_retry_response.txt', retry_answer)
+
+        try:
+            retry_posts, retry_recovered = parse_posts_response(retry_answer)
+        except ValueError:
+            logger.warning(
+                'Retry for chunk %s/%s could not be parsed at all; keeping the original result',
+                index,
+                total_chunks,
+            )
+        else:
+            if not retry_recovered or len(retry_posts) > len(posts):
+                logger.info(
+                    'Retry for chunk %s/%s kept: recovered=%s posts=%s (was recovered=%s posts=%s)',
+                    index,
+                    total_chunks,
+                    retry_recovered,
+                    len(retry_posts),
+                    recovered,
+                    len(posts),
+                )
+                answer, posts, recovered = retry_answer, retry_posts, retry_recovered
+
+    return posts, answer, recovered
+
+
 def extract_offer_chunked(
     offer_text: str,
     status_callback: StatusCallback | None = None,
     response_callback: ResponseCallback | None = None,
 ) -> tuple[dict, str]:
-    summary_prompt = read_txt(Path('./prompts/extract_summary_prompt.txt'))
-    posts_prompt = read_txt(Path('./prompts/extract_posts_chunk_prompt.txt'))
+    summary_prompt = load_prompt(Path('./prompts/extract_summary_prompt.txt'))
+    posts_prompt = load_prompt(Path('./prompts/extract_posts_chunk_prompt.txt'))
 
     if status_callback is not None:
         status_callback('extracting_summary', 'Extracting offer summary')
@@ -949,29 +1076,22 @@ def extract_offer_chunked(
             len(chunk),
             len(chunk.splitlines()),
         )
-        chunk_answer = ask_llm(
-            build_posts_chunk_prompt(
-                posts_prompt,
-                chunk,
-                index=index,
-                total_chunks=len(chunks),
-                previous_post=previous_post,
-            ),
-            response_schema=OFFER_POSTS_RESPONSE_SCHEMA,
-            max_output_tokens=POST_CHUNK_MAX_OUTPUT_TOKENS,
-            model=EXTRACTION_MODEL_ID,
-            label=f'offer_posts_chunk_{index}_of_{len(chunks)}',
+        posts, chunk_answer, recovered = fetch_posts_chunk(
+            posts_prompt,
+            chunk,
+            index=index,
+            total_chunks=len(chunks),
+            previous_post=previous_post,
+            response_callback=response_callback,
         )
         post_answers.append(chunk_answer)
         if response_callback is not None:
             response_callback(f'llm_posts_chunk_{index}_response.txt', chunk_answer)
             response_callback('llm_response.txt', format_chunked_llm_response(summary_answer, post_answers))
-        logger.info('Parsing posts chunk response: chunk=%s/%s', index, len(chunks))
-        posts, recovered = parse_posts_response(chunk_answer)
         if recovered:
             recovered_chunks.append(index)
             logger.warning(
-                'Recovered %s complete posts from truncated chunk %s',
+                'Recovered %s complete posts from truncated chunk %s (retry did not fully resolve it)',
                 len(posts),
                 index,
             )
@@ -990,6 +1110,7 @@ def extract_offer_chunked(
         'Naam aannemer': summary_json.get('Naam aannemer', UNKNOWN),
         'Totaalprijs inc. BTW': summary_json.get('Totaalprijs inc. BTW', UNKNOWN),
         'Totaalprijs exc. BTW': summary_json.get('Totaalprijs exc. BTW', UNKNOWN),
+        'BTW verlegd': summary_json.get('BTW verlegd', UNKNOWN),
         'Posten': merge_post_chunks(post_chunks),
     }
     if recovered_chunks:
@@ -1037,13 +1158,19 @@ def extract_offer(file: Path, folder_handler):
 
     try:
         set_status('reading_pdf', 'Reading PDF text')
-        prompt = read_txt(Path("./prompts/extract_prompt.txt"))
+        prompt = load_prompt(Path("./prompts/extract_prompt.txt"))
         offer = read_pdf(file)
         logger.info('PDF text read: file=%s chars=%s lines=%s', file, len(offer), len(offer.splitlines()))
 
         set_status('saving_raw_text', 'Saving raw PDF text')
         folder_handler.save_raw_pdf_text(file, offer)
         logger.info('Raw PDF text saved: file=%s', file)
+
+        if not has_extractable_text(offer):
+            raise ValueError(
+                'Er is nauwelijks tekst uit deze PDF gehaald. Dit bestand lijkt een scan zonder '
+                'OCR-laag; automatische extractie ondersteunt dat nu niet.'
+            )
 
         use_chunked = should_use_chunked_extraction(offer)
         if use_chunked:
@@ -1075,13 +1202,14 @@ def extract_offer(file: Path, folder_handler):
         if isinstance(offer_json.get('Posten'), list):
             offer_json['Posten'] = filter_non_price_posts(offer_json['Posten'])
 
+        set_status('normalizing_amounts', 'Normalizing amounts')
+        offer_json = normalize_amounts(offer_json)
+        offer_json = normalize_units(offer_json)
+
         validation_warnings = validate_offer_json(offer_json)
         logger.info('Offer JSON validated: file=%s warnings=%s', file, len(validation_warnings))
         for warning in validation_warnings:
             logger.warning('Offer validation warning: file=%s warning=%s', file, warning)
-
-        set_status('normalizing_amounts', 'Normalizing amounts')
-        offer_json = normalize_amounts(offer_json)
 
         set_status('saving_extract', 'Saving extract.json')
         folder_handler.save_result(file, offer_json)
@@ -1105,7 +1233,7 @@ def extract_offer(file: Path, folder_handler):
             status='failed',
             step='failed',
             message='Extraction failed',
-            error=str(error),
+            error=friendly_error_message(error),
             started_at=started_at,
         )
         raise

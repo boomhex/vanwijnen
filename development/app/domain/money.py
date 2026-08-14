@@ -1,9 +1,32 @@
+import re
 from decimal import Decimal, InvalidOperation
 
 UNKNOWN = 'ONBEKEND'
 
 
-def parse_decimal(value: str | int | float | Decimal | None) -> Decimal | None:
+def parse_money_value(value: str | int | float | Decimal | None) -> Decimal | None:
+    """Parse a money value string into a Decimal.
+
+    Supports many formats such as:
+      - "1.234,56" (European)
+      - "1,234.56" (US)
+      - "12.000,-" (Dutch for 12000.00)
+      - "€ 1.234,56", "EUR 1,234.56"
+      - "(1.234,56)", "-1.234,56"
+      - "1234", "1234.5", "1,5"
+
+    Heuristics:
+      - If both '.' and ',' are present the rightmost of the two is the
+        decimal separator.
+      - If only one separator is present and the fractional part length is 3
+        then treat it as a thousands separator, otherwise as decimal.
+      - Handles trailing ',-' by converting to ',00' first.
+
+    Returns None for empty/unknown input. Raises ValueError for a non-empty
+    value that cannot be parsed as a number, so callers that need to
+    distinguish "unknown" from "malformed" (e.g. validation warnings) can do
+    so; use parse_decimal() when you just want a best-effort Decimal or None.
+    """
     if value is None:
         return None
 
@@ -11,23 +34,67 @@ def parse_decimal(value: str | int | float | Decimal | None) -> Decimal | None:
     if not text or text.upper() == UNKNOWN:
         return None
 
-    # Only include digits or decimal helpers.
-    cleaned = ''.join(character for character in text if character.isdigit() or character in ',.-')
-    if not cleaned:
-        return None
+    s = text
 
-    if ',' in cleaned and '.' in cleaned:
-        cleaned = cleaned.replace('.', '').replace(',', '.')
-    elif ',' in cleaned:
-        cleaned = cleaned.replace(',', '.')
-    elif cleaned.count('.') > 0:
-        parts = cleaned.split('.')
-        cleaned = ''.join(parts[:-1]) + f"{'.' if len(parts[-1]) <= 2 else ''}"
-        cleaned += parts[-1]
+    # Normalize unicode minus
+    s = s.replace('−', '-')
+
+    # Parentheses mean negative: (1.234,56)
+    negative = False
+    if s.startswith('(') and s.endswith(')'):
+        negative = True
+        s = s[1:-1].strip()
+
+    # Remove currency symbols and letters, keep digits, separators and sign
+    s = re.sub(r'[A-Za-z€£$¥¢\s]', '', s)
+
+    # Dutch-style trailing ',-' means zero cents
+    if s.endswith(',-'):
+        s = s[:-2] + ',00'
+
+    has_dot = '.' in s
+    has_comma = ',' in s
+
+    decimal_sep = None
+    if has_dot and has_comma:
+        # the rightmost separator is the decimal separator
+        decimal_sep = '.' if s.rfind('.') > s.rfind(',') else ','
+    elif has_dot:
+        after = s.split('.')[-1]
+        decimal_sep = '.' if len(after) != 3 else None
+    elif has_comma:
+        after = s.split(',')[-1]
+        decimal_sep = ',' if len(after) != 3 else None
+
+    # Remove thousands separators and normalize decimal separator to dot
+    if decimal_sep is None:
+        normalized = s.replace('.', '').replace(',', '')
+    else:
+        thousands = ',' if decimal_sep == '.' else '.'
+        normalized = s.replace(thousands, '')
+        normalized = normalized.replace(decimal_sep, '.')
+
+    if normalized in ('', '-', '+'):
+        raise ValueError(f'Invalid money amount: {value}')
+
+    if negative and not normalized.startswith('-'):
+        normalized = '-' + normalized
+
+    # Only allow digits, optional leading -, and optional decimal point
+    if not re.fullmatch(r'-?\d+(?:\.\d+)?', normalized):
+        raise ValueError(f'Invalid money amount: {value} (normalized: {normalized})')
 
     try:
-        return Decimal(cleaned)
-    except InvalidOperation:
+        return Decimal(normalized)
+    except InvalidOperation as error:
+        raise ValueError(f'Invalid money amount: {value}') from error
+
+
+def parse_decimal(value: str | int | float | Decimal | None) -> Decimal | None:
+    """Best-effort money parsing: returns None instead of raising on malformed input."""
+    try:
+        return parse_money_value(value)
+    except ValueError:
         return None
 
 

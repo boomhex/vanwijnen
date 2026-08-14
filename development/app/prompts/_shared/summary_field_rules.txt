@@ -1,0 +1,3 @@
+- Voor Naam aannemer gebruik je de bedrijfsnaam van de aannemer/aanbieder. Staat er geen bedrijfsnaam maar wel een naam van degene die de offerte namens de aannemer ondertekent of aanbiedt (bijvoorbeeld onder "Met vriendelijke groet"), gebruik dan die naam.
+- Voor BTW verlegd gebruik je "ja" als de offerte vermeldt dat de BTW verlegd wordt (verleggingsregeling/BTW verlegd), "nee" als er een normaal BTW-bedrag of -percentage wordt genoemd, anders "ONBEKEND".
+- Als BTW verlegd "ja" is en er geen expliciet bedrag inclusief BTW in de offerte staat, vul je Totaalprijs inc. BTW in als "ONBEKEND". Stel dit bedrag nooit gelijk aan Totaalprijs exc. BTW en verzin het niet.

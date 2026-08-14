@@ -1,17 +1,18 @@
 Je moet alleen de samenvatting uit deze offerte tekst halen:
 - Naam van de aannemer/aanbieder die de offerte uitbrengt.
 - Totaalprijs van de offerte inclusief en exclusief BTW.
+- Of de BTW verlegd is.
 Regels:
 - Verzin geen getallen.
-- Is een veld onbekend, vul "ONBEKEND" in.
-- Reageer ALLEEN met geldige JSON.
-- Gebruik geen markdown codeblok.
+{{SHARED:post_rules_intro}}
 - Neem bedragen over ZONDER euroteken.
+{{SHARED:summary_field_rules}}
 - Gebruik het volgende formaat:
 {
     "Naam aannemer": "...",
     "Totaalprijs inc. BTW": "...",
-    "Totaalprijs exc. BTW": "..."
+    "Totaalprijs exc. BTW": "...",
+    "BTW verlegd": "..."
 }
 
 TEXT:

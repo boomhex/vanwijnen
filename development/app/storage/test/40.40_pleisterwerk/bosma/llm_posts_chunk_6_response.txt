@@ -1,0 +1,30 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Regie-uurloon",
+      "Beschrijving": "Regie uurloon bedraagt € 57,50 per uur.",
+      "Categorie": "Algemene voorwaarden",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "57,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "regie",
+      "Status": "unknown",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "regiewerk",
+      "Prijsbasis": "per uur",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "regie",
+        "uurloon",
+        "uurtarief"
+      ],
+      "Brontekst": "Regie\u0009uurloon :\nRegie uurloon bedraagt \u2010 57,50 per uur."
+    }
+  ]
+}

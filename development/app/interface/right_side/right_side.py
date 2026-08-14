@@ -64,6 +64,8 @@ class RightSide(SubPage):
         return not getattr(client, '_deleted', False)
 
     def show(self) -> None:
+        self.render_undo_banner()
+
         if self.state.current_view == View.COMPARISON:
             self.comparison_page.render()
             return
@@ -71,3 +73,39 @@ class RightSide(SubPage):
         if self.state.current_view == View.OFFER:
             self.offer_page.render()
             return
+
+    def render_undo_banner(self) -> None:
+        pending = self.state.pending_undo
+        if pending is None:
+            return
+
+        with ui.row().classes(
+            'items-center gap-2 w-full bg-gray-100 border border-gray-300 rounded px-3 py-2 mt-2'
+        ):
+            ui.icon('info').classes('text-gray-600')
+            ui.label(pending.label).classes('text-sm grow')
+            ui.button('Undo', on_click=self.undo_pending).props('flat dense no-caps size=sm color=primary')
+
+        ui.timer(8.0, self.expire_pending_undo, once=True)
+
+    def undo_pending(self) -> None:
+        pending = self.state.pending_undo
+        if pending is None:
+            return
+
+        self.state.pending_undo = None
+        pending.restore()
+        self.refresh()
+
+    def expire_pending_undo(self) -> None:
+        if self.state.pending_undo is None:
+            return
+
+        self.state.pending_undo = None
+        self.refresh_safe()
+
+    def refresh_safe(self) -> None:
+        try:
+            self.refresh()
+        except RuntimeError:
+            pass

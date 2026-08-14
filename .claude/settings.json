@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./venv/bin/python -c ' *)",
+      "Bash(../../venv/bin/python -c ' *)",
+      "Bash(env PYTHONPATH=development/app ./venv/bin/pytest development/app/tests -q)"
+    ]
+  }
+}

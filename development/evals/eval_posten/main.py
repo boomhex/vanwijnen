@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import re
 import sys
@@ -302,6 +303,33 @@ def testcase_name_from_extract(path: Path) -> str:
     return re.sub(r'[^A-Za-z0-9_.-]+', '_', f'{project}__{offer}')
 
 
+def regenerate_extract(case: dict[str, Any]) -> None:
+    """Re-run live extraction (real Gemini calls) for one testcase's document.pdf.
+
+    Overwrites the testcase's ExtractPath with a fresh extract.json using the
+    current prompts/model, so a prompt change can be scored against a live
+    re-extraction instead of the stale snapshot already on disk. Requires
+    GEMINI_API_KEY; costs real API calls, so this is opt-in via --regenerate.
+    """
+    extract_path = resolve_path(case.get('ExtractPath'))
+    if extract_path is None:
+        raise ValueError('Case is missing ExtractPath')
+
+    offer_dir = extract_path.parent
+    document = offer_dir / 'document.pdf'
+    if not document.exists():
+        raise FileNotFoundError(f'No document.pdf next to {extract_path} (expected at {document})')
+
+    # extract_offer() reads prompt files with paths relative to development/app/.
+    with contextlib.chdir(APP_DIR):
+        from services.extract_offer import extract_offer
+        from services.folder_handler import FolderHandler
+
+        workspace_root = offer_dir.parent.parent
+        folder_handler = FolderHandler(workspace_root)
+        extract_offer(document, folder_handler)
+
+
 def generate_cases(extract_paths: list[Path], *, overwrite: bool) -> None:
     TESTCASES_DIR.mkdir(parents=True, exist_ok=True)
     for extract_path in extract_paths:
@@ -368,6 +396,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--threshold', type=float, default=0.72, help='Fuzzy threshold for matching expected to actual posts.')
     parser.add_argument('--generate-from-extract', action='append', type=Path, help='Create golden testcase from extract.json.')
     parser.add_argument('--overwrite', action='store_true', help='Overwrite generated testcase files.')
+    parser.add_argument(
+        '--regenerate',
+        action='store_true',
+        help='Re-run live extraction (real Gemini API calls) for the selected testcases before scoring.',
+    )
     return parser.parse_args()
 
 
@@ -380,6 +413,12 @@ def main() -> None:
     case_paths = args.case or sorted(TESTCASES_DIR.glob('*.json'))
     if not case_paths:
         raise SystemExit(f'No extraction testcases found in {TESTCASES_DIR}')
+
+    if args.regenerate:
+        for path in case_paths:
+            case = load_json(path)
+            print(f'Regenerating extraction for {path.stem}...')
+            regenerate_extract(case)
 
     run_name = args.run_name or datetime.now().strftime('%Y%m%d_%H%M%S')
     run_dir = RUNS_DIR / run_name

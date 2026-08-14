@@ -3,3 +3,4 @@ __pycache__/
 .storage_secret
 logs/
 users.json
+config.json

@@ -25,6 +25,7 @@ class DrawerHeader:
 
         with ui.row().classes('items-end gap-2 w-full no-wrap'):
             project_input = ui.input('New project').classes('grow')
+            project_input.on('keydown.enter', lambda: self.create_project(project_input.value))
             ui.button(icon='eva-folder-add-outline', on_click=lambda: self.create_project(project_input.value))
 
         ui.select(

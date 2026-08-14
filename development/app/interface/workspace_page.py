@@ -39,9 +39,8 @@ def workspace_page() -> RedirectResponse | None:
 
             if not workspaces:
                 ui.label('No workspaces assigned to you yet.').classes('text-sm')
-                ui.label('Ask the admin to run on the host:').classes('text-xs text-gray-500')
-                ui.label(f'python -m services.auth grant {username} <workspace>') \
-                    .classes('text-xs font-mono text-gray-500')
+                ui.label('Please contact your administrator to request access.') \
+                    .classes('text-xs text-gray-500')
 
             for workspace in workspaces:
                 button = ui.button(

@@ -300,6 +300,54 @@ class DrawerActions:
         )
 
     @logged_action
+    def bulk_delete_offers(self, offers: list[Offer]) -> DrawerActionResult:
+        deleted = 0
+        failed = []
+        for offer in offers:
+            if self.delete_offer(offer).success:
+                deleted += 1
+            else:
+                failed.append(offer.name)
+
+        message = f'Deleted {deleted} offer(s)'
+        if failed:
+            message += f"; failed: {', '.join(failed)}"
+
+        return DrawerActionResult(deleted > 0, message, refresh_drawer=True, refresh_right_side=True)
+
+    @logged_action
+    def bulk_extract_offers(self, offers: list[Offer]) -> DrawerActionResult:
+        started = 0
+        skipped = 0
+        for offer in offers:
+            if self.request_extract(offer).success:
+                started += 1
+            else:
+                skipped += 1
+
+        message = f'Started extraction for {started} offer(s)'
+        if skipped:
+            message += f'; {skipped} already running or requested'
+
+        return DrawerActionResult(started > 0, message, refresh_drawer=True)
+
+    @logged_action
+    def bulk_move_offers(self, offers: list[Offer], target_project: str | None) -> DrawerActionResult:
+        moved = 0
+        failed = []
+        for offer in offers:
+            if self.move_offer(offer, target_project).success:
+                moved += 1
+            else:
+                failed.append(offer.name)
+
+        message = f'Moved {moved} offer(s)'
+        if failed:
+            message += f"; failed: {', '.join(failed)}"
+
+        return DrawerActionResult(moved > 0, message, refresh_drawer=True, refresh_right_side=True)
+
+    @logged_action
     def request_extract(self, offer: Offer) -> DrawerActionResult:
         if self.extraction_job_service.is_running(offer):
             return DrawerActionResult(False, f'Extraction already running for {offer.name}')
@@ -314,6 +362,14 @@ class DrawerActions:
             f'Extraction started for {offer.name}',
             refresh_drawer=True,
         )
+
+    @logged_action
+    def cancel_extraction(self, offer: Offer) -> DrawerActionResult:
+        if not self.extraction_job_service.cancel(offer):
+            return DrawerActionResult(False, f'No running extraction to cancel for {offer.name}')
+
+        self.state.extract_requested_offers.discard(offer)
+        return DrawerActionResult(True, f'Cancelled extraction for {offer.name}', refresh_drawer=True)
 
     @staticmethod
     def failure(error: Exception) -> DrawerActionResult:

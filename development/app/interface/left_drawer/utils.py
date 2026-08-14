@@ -1,4 +1,21 @@
+from datetime import datetime, timezone
+
 from nicegui import ui
+
+from domain.status import parse_status_time
+
+
+def format_elapsed_seconds(started_at: str | None) -> str | None:
+    """Human-readable elapsed time since ``started_at`` (an ISO timestamp), e.g. '1m 12s'."""
+    started = parse_status_time(started_at)
+    if started is None:
+        return None
+
+    elapsed_seconds = max(0, int((datetime.now(timezone.utc) - started).total_seconds()))
+    minutes, seconds = divmod(elapsed_seconds, 60)
+    if minutes:
+        return f'{minutes}m {seconds}s'
+    return f'{seconds}s'
 
 
 def compact_name(name: str, max_length: int = 32, *, mode: str = 'middle') -> str:

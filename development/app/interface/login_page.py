@@ -47,6 +47,6 @@ def login_page() -> RedirectResponse | None:
             password_input.on('keydown.enter', try_login)
             ui.button('Log in', on_click=try_login).props('no-caps')
             if not auth.has_users():
-                ui.label('No users yet. Create one on the host:').classes('text-xs text-gray-500')
-                ui.label('python -m services.auth add <username>').classes('text-xs font-mono text-gray-500')
+                ui.label('No accounts have been set up yet. Please contact your administrator.') \
+                    .classes('text-xs text-gray-500')
     return None

@@ -1,0 +1,80 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "MS 205 ECO DGS/2.75*75.2.AA Scheidingswand",
+      "Beschrijving": "De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 171: Brandwerendheid: 60 minuten (indien volledig afgesmeerd). Geluidsisolatie Rw: 62 dB (bij gevoegde randaansluitingen). Geluidsisolatie DnT,A,k: 55 dB (bij gevoegde randaansluitingen). Maximale wandhoogte: 6000 mm, stijlen h.o.h. 600 mm, gesteund. Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund, PE-Foamband 3x30 mm rol á 20m1, Glaswol 16kg/m3 dikte 60 mm - 2-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.",
+      "Categorie": "METAL STUD-WANDEN",
+      "Totaalbedrag": "1.404,20",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "100,30",
+      "Aantal": "14,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "43",
+      "Subcategorie": "Scheidingswanden",
+      "Werksoort": "metal stud wand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Horizontaal transport en bevestigingsmateriaal",
+        "Montage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk",
+        "Montage isolatie (zacht) tussen de profielen h.o.h. 600mm",
+        "Montage gipsbeplating 12,5mm (eerste laag)",
+        "Montage Duragyp 12,5mm (eindlaag)",
+        "Montage toeslag wanden bouwkundige hoogte"
+      ],
+      "Exclusief": [
+        "Het afwerken van de wand, prijzen staan verderop vermeld",
+        "Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "MS 205 ECO DGS/2.75*75.2.AA",
+        "Scheidingswand",
+        "Gyproc wandnummer 171",
+        "DuraGyp"
+      ],
+      "Brontekst": "43.) MS 205 ECO DGS/2.75*75.2.AA Scheidingswand\nDe door u opgegeven bruto hoeveelheden.\n# Prestaties Gyproc wandnummer 171:\nBrandwerendheid: 60 minuten (indien volledig afgesmeerd)\nGeluidsisolatie Rw: 62 dB (bij gevoegde randaansluitingen)\nGeluidsisolatie DnT,A,k: 55 dB (bij gevoegde randaansluitingen)\nMaximale wandhoogte: 6000 mm, stijlen h.o.h. 600 mm, gesteund\nStootvastheidsklasse: 5 van 7\n# Opbouw:\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\n- als onder- en bovenregel, dubbel regelwerk\nMS 75 C-profiel L= 2000-6000 mm\n- stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund\nPE-Foamband 3x30 mm rol á 20m1\nGlaswol 16kg/m3 dikte 60 mm\n- 2-laags tussen de profielen\nGyproc AK (A) 1200x12,5 mm\n- 2-zijdig, 1-laags als binnenste beplating\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\n- 2-zijdig, 1-laags als buitenste beplating\n# Inclusief:\nHorizontaal transport en bevestigingsmateriaal\nMontage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\nMontage gipsbeplating 12,5mm (eerste laag)\nMontage Duragyp 12,5mm (eindlaag)\nMontage toeslag wanden bouwkundige hoogte\n# Exclusief:\nHet afwerken van de wand, prijzen staan verderop vermeld\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\n14,00 m2 100,30 € 1.404,20"
+    },
+    {
+      "Omschrijving": "MS 100 ECO DGS V/75.2.A Voorzetwand",
+      "Beschrijving": "De door u opgegeven bruto hoeveelheden. Prestaties Gyproc voorzetwand: Brandwerendheid: geen. Geluidsisolatie Rw: afhankelijk van bestaande constructie. Maximale wandhoogte: 4200 mm, stijlen h.o.h. 600 mm, ruggelings gekoppeld. Thermische isolatie Rc: 0,87 m2.K/W (excl. achterconstructie). Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, ruggelings gekoppeld, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 1-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 1-zijdig, 1-laags als buitenste beplating.",
+      "Categorie": "METAL STUD-WANDEN",
+      "Totaalbedrag": "37.757,32",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "57,91",
+      "Aantal": "652,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "51",
+      "Subcategorie": "Voorzetwanden",
+      "Werksoort": "voorzetwand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Horizontaal transport",
+        "Bevestigingsmateriaal",
+        "Montage MS-profielen wanden h.o.h. 600mm, ruggelings gekoppeld",
+        "Montage isolatie (zacht) tussen de profielen h.o.h. 600mm",
+        "Montage gipsbeplating 12,5mm (eerste laag)",
+        "Montage Duragyp 12,5mm (eindlaag)",
+        "Montage toeslag wanden bouwkundige hoogte"
+      ],
+      "Exclusief": [
+        "Dampremmende- of vochtregulerende klimaat-folie in de wand, prijzen staan verderop vermeld",
+        "Het afwerken van de wand, prijzen staan verderop vermeld",
+        "Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "MS 100 ECO DGS V/75.2.A",
+        "Voorzetwand",
+        "Gyproc",
+        "DuraGyp"
+      ],
+      "Brontekst": "51.) MS 100 ECO DGS V/75.2.A Voorzetwand\nDe door u opgegeven bruto hoeveelheden.\n# Prestaties Gyproc voorzetwand:\nBrandwerendheid: geen\nGeluidsisolatie Rw: afhankelijk van bestaande constructie\nMaximale wandhoogte: 4200 mm, stijlen h.o.h. 600 mm, ruggelings gekoppeld\nThermische isolatie Rc: 0,87 m2.K/W (excl. achterconstructie)\nStootvastheidsklasse: 5 van 7\n# Opbouw:\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\n- als onder- en bovenregel\nMS 75 C-profiel L= 2000-6000 mm\n- stijlen h.o.h. 600 mm, ruggelings gekoppeld\nGlaswol 16kg/m3 dikte 60 mm\n- 1-laags tussen de profielen\nGyproc AK (A) 1200x12,5 mm\n- 1-zijdig, 1-laags als binnenste beplating\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\n- 1-zijdig, 1-laags als buitenste beplating\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage MS-profielen wanden h.o.h. 600mm, ruggelings gekoppeld\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\nMontage gipsbeplating 12,5mm (eerste laag)\nMontage Duragyp 12,5mm (eindlaag)\nMontage toeslag wanden bouwkundige hoogte\n# Exclusief:\nDampremmende- of vochtregulerende klimaat-folie in de wand, prijzen staan verderop vermeld\nHet afwerken van de wand, prijzen staan verderop vermeld\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\n652,00 m2 57,91 € 37.757,32"
+    }
+  ]
+}

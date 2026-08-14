@@ -1,3 +1,4 @@
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from enum import Enum
 
@@ -11,6 +12,12 @@ class View(str, Enum):
 
 
 @dataclass
+class PendingUndo:
+    label: str
+    restore: Callable[[], None]
+
+
+@dataclass
 class MainPageState:
     opened_offer: Offer | None = None
     current_view: View = View.OFFER
@@ -20,3 +27,7 @@ class MainPageState:
     upload_project: str | None = None
     extract_requested_offers: set[Offer] = field(default_factory=set)
     expanded_project_names: set[str] = field(default_factory=set)
+    tree_search: str = ''
+    selected_offers: set[Offer] = field(default_factory=set)
+    selection_mode: bool = False
+    pending_undo: PendingUndo | None = None

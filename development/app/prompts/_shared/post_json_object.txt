@@ -1,0 +1,22 @@
+        {
+            "Omschrijving": "...",
+            "Beschrijving": "...",
+            "Categorie": "...",
+            "Totaalbedrag": "...",
+            "Eenheid": "...",
+            "Eenheidsprijs": "...",
+            "Aantal": "...",
+            "PostType": "...",
+            "Status": "...",
+            "Code": "...",
+            "Regelnummer": "...",
+            "Subcategorie": "...",
+            "Werksoort": "...",
+            "Prijsbasis": "...",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [],
+            "Brontekst": "..."
+        }

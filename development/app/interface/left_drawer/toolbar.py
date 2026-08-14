@@ -25,6 +25,10 @@ class DrawerToolbar:
         move_offer: Callable[[Offer], None],
         delete_offer: Callable[[Offer], None],
         delete_project: Callable[[Project], bool],
+        toggle_selection_mode: Callable[[], None],
+        bulk_extract: Callable[[], None],
+        bulk_move: Callable[[], None],
+        bulk_delete: Callable[[], None],
     ) -> None:
         self.state = state
         self.actions = actions
@@ -37,6 +41,10 @@ class DrawerToolbar:
         self.move_offer = move_offer
         self.delete_offer = delete_offer
         self.delete_project = delete_project
+        self.toggle_selection_mode = toggle_selection_mode
+        self.bulk_extract = bulk_extract
+        self.bulk_move = bulk_move
+        self.bulk_delete = bulk_delete
 
     def render(self) -> None:
         selected_offer = self.selected_offer()
@@ -51,6 +59,12 @@ class DrawerToolbar:
                 if selected_label != 'No selection':
                     selected_text.tooltip(selected_label)
                 with ui.row().classes('items-center gap-1 no-wrap shrink-0'):
+                    self.toolbar_button(
+                        icon='close' if self.state.selection_mode else 'checklist',
+                        tooltip='Exit selection mode' if self.state.selection_mode else 'Select multiple offers',
+                        on_click=self.toggle_selection_mode,
+                        enabled=True,
+                    )
                     self.toolbar_button(
                         icon='visibility' if selected_offer is not None else 'compare_arrows',
                         tooltip='Open offer' if selected_offer is not None else 'Compare project',
@@ -89,6 +103,33 @@ class DrawerToolbar:
                         enabled=selected_offer is not None or selected_project is not None,
                         color='negative',
                     )
+
+            if self.state.selection_mode:
+                self.render_bulk_row()
+
+    def render_bulk_row(self) -> None:
+        count = len(self.state.selected_offers)
+        with ui.row().classes('items-center gap-2 w-full no-wrap text-xs text-gray-700'):
+            ui.label(f'{count} selected')
+            self.toolbar_button(
+                icon='text_snippet',
+                tooltip='Extract selected offers',
+                on_click=self.bulk_extract,
+                enabled=count > 0,
+            )
+            self.toolbar_button(
+                icon='drive_file_move',
+                tooltip='Move selected offers',
+                on_click=self.bulk_move,
+                enabled=count > 0,
+            )
+            self.toolbar_button(
+                icon='delete',
+                tooltip='Delete selected offers',
+                on_click=self.bulk_delete,
+                enabled=count > 0,
+                color='negative',
+            )
 
     @staticmethod
     def toolbar_button(

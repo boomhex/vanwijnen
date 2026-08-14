@@ -1,6 +1,8 @@
 from decimal import Decimal
 
+from domain.fields import OFFER_FIELDS
 from domain.money import format_money as _format_money
+from domain.offer import Posten
 
 
 class TabulatorTable:
@@ -67,3 +69,39 @@ class TabulatorTable:
     @staticmethod
     def format_money(value: Decimal | None) -> str:
         return _format_money(value)
+
+
+class PostenTable(TabulatorTable):
+    fields = OFFER_FIELDS
+
+    def __init__(self, posten: list[Posten]) -> None:
+        self.posten = posten
+        super().__init__(
+            rows=self.rows_from_posten(),
+            columns=[
+                self.text_column('Omschrijving', 'Omschrijving', editable=True, width=220, multiline=True),
+                self.text_column('Beschrijving', 'Beschrijving', editable=True, width=280, multiline=True),
+                self.text_column('Categorie', 'Categorie', editable=True, width=140),
+                self.text_column('Aantal', 'Aantal', editable=True, width=90),
+                self.text_column('Eenheid', 'Eenheid', editable=True, width=90),
+                self.text_column('Eenheidsprijs', 'Eenheidsprijs', editable=True, width=110),
+                self.text_column('Totaalbedrag', 'Totaalbedrag', editable=True, width=120),
+                {
+                    'title': '',
+                    'field': '__delete__',
+                    'width': 52,
+                    'headerSort': False,
+                    'hozAlign': 'center',
+                    ':formatter': "function(){ return 'x'; }",
+                },
+            ],
+            layout='fitDataStretch',
+            reactive=False,
+            height='60vh',
+        )
+
+    def rows_from_posten(self) -> list[dict]:
+        return [
+            {'id': index, **post.to_dict()}
+            for index, post in enumerate(self.posten)
+        ]

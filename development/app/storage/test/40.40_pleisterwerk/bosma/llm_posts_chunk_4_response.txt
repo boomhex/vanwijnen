@@ -1,40 +1,294 @@
 {
   "Posten": [
     {
-      "Omschrijving": "KADERDEUR",
-      "Beschrijving": "Deur en kozijn Vulling: aluminium omkaderd met 33.2SI glas Uitvoering: Standaard, incl. valdorpel Kozijn: Aluminium in witte kleur Afmeting: 930mm x 2400 mm Hang en sluitwerk Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot Cilinder: Exclusief. Kruk/rozet: L-model, RVS",
+      "Omschrijving": "SPARINGEN MS WANDEN",
+      "Beschrijving": "Stelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden",
       "Categorie": "ONBEKEND",
-      "Totaalbedrag": "7.345,29",
+      "Totaalbedrag": "6671,07",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,95",
+      "Aantal": "2265,00",
+      "PostType": "stelpost",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "sparingen",
+        "achterhout"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "sparingen",
+        "achterhout",
+        "metalstudwanden"
+      ],
+      "Brontekst": "2.265,00 m2 SPARINGEN MS WANDEN € 2,95 per m2 € 6.671,07\nStelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden"
+    },
+    {
+      "Omschrijving": "AFWERKEN WANDEN",
+      "Beschrijving": "Het fwerken van de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "57213,95",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "13,84",
+      "Aantal": "4133,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "afwerking",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "afwerking"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "Afwerkingsniveau A (volgens TBA-richtlijnen)"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afwerken",
+        "metal stud wanden",
+        "Afwerkingsniveau A",
+        "TBA-richtlijnen"
+      ],
+      "Brontekst": "4.13 3,00 m2 AFWERKEN WANDEN € 13,84 per m2 € 57.213,95\nHet fwerken van de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA\u0009richtlijnen)"
+    },
+    {
+      "Omschrijving": "AFWERKEN HOEKEN",
+      "Beschrijving": "Het afwerken van de hoeken t.p.v. de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1495,07",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "13,84",
+      "Aantal": "108,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "afwerking",
+      "Prijsbasis": "per m1",
+      "Inclusief": [
+        "afwerken hoeken"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "Afwerkingsniveau A (volgens TBA-richtlijnen)"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afwerken hoeken",
+        "metal stud wanden",
+        "Afwerkingsniveau A",
+        "TBA-richtlijnen"
+      ],
+      "Brontekst": "108,00 m1 AFWERKEN HOEKEN € 13,84 per m1 € 1.495,07\nHet afwerken van de hoeken t.p.v. de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA\u0009richtlijnen)"
+    },
+    {
+      "Omschrijving": "ENKELE VOLGLASWAND",
+      "Beschrijving": "Leveren en monteren van een volglaswand onder hangwanden volgens onderstaande omschrijving. Enkele volglaswand (hoogte 3 meter). Enkel glas gelaagd helder 66.2SI. Profielen in witte kleur. De glaswanden, type volglaswand, bestaande uit een enkele beglazing van blank gelaagd glas welke wordt geplaatst in een kader van aluminium U-profielen v.z.v. zwart rubberprofiel. De verticale aansluiting van de glasruiten onderling word gerealiseerd door middel van een doorzichtige polycarbonaatstrip.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "9466,80",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "215,15",
+      "Aantal": "44,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "glaswand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "leveren",
+        "monteren",
+        "enkel glas gelaagd helder 66.2SI",
+        "aluminium U-profielen",
+        "zwart rubberprofiel",
+        "polycarbonaatstrip"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "volglaswand",
+        "enkel glas",
+        "gelaagd helder",
+        "66.2SI",
+        "aluminium U-profiel",
+        "polycarbonaatstrip"
+      ],
+      "Brontekst": "44,00 m2 ENKELE VOLGLASWAND € 215,15 per m2 € 9.466,80\nLeveren en monteren van een volglaswand onder hangwanden volgens\nonderstaande omschrijving.\nEnkele volglaswand (hoogte 3 meter)\nEnkel glas gelaagd helder 66.2SI\nProfielen in witte kleur\nDe glaswanden, type volglaswand, bestaande uit een enkele beglazing\nvan blank gelaagd glas welke wordt geplaatst in een kader van\naluminium U\u200Bprofielen v.z.v. zwart rubberprofiel. De verticale aansluiting\nvan de glasruiten onderling word gerealiseerd door middel van een\ndoorzichtige polycarbonaatstrip."
+    },
+    {
+      "Omschrijving": "DUBBELE VOLGLASWAND",
+      "Beschrijving": "Leveren en monteren van een dubbele volglaswand onder hangwanden volgens onderstaande omschrijving. Dubbele volglaswand (hoogte 3 meter). Gelaagd glas 6.6.2 en 6.6.A2. Profielen in witte kleur. De glaswanden, type dubbele volglaswand, bestaande uit een dubbele beglazing van blank gelaagd glas welke wordt geplaatst in een kader van aluminium U-profielen v.z.v. zwart rubberprofiel. De verticale aansluiting van de glasruiten onderling word gerealiseerd door middel van een doorzichtige polycarbonaatstrip.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "1802,85",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "450,71",
+      "Aantal": "4,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "glaswand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "leveren",
+        "monteren",
+        "gelaagd glas 6.6.2",
+        "gelaagd glas 6.6.A2",
+        "aluminium U-profielen",
+        "zwart rubberprofiel",
+        "polycarbonaatstrip"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "dubbele volglaswand",
+        "gelaagd glas",
+        "6.6.2",
+        "6.6.A2",
+        "aluminium U-profiel",
+        "polycarbonaatstrip"
+      ],
+      "Brontekst": "4,00 m2 DUBBELE VOLGLASWAND € 450,71 per m2 € 1.802,85\nLeveren en monteren van een dubbele volglaswand onder\nhangwanden volgens onderstaande omschrijving.\nDubbele volglaswand (hoogte 3 meter)\nGelaagd glas 6.6.2 en 6.6.A2\nProfielen in witte kleur\nDe glaswanden, type dubbele volglaswand, bestaande uit een dubbele\nbeglazing van blank gelaagd glas welke wordt geplaatst in een kader\nvan aluminium U\u200B\u0009profielen v.z.v. zwart rubberprofiel. De verticale\naansluiting van de glasruiten onderling word gerealiseerd door middel\nvan een doorzichtige polycarbonaatstrip."
+    },
+    {
+      "Omschrijving": "KADERDEUR",
+      "Beschrijving": "Deur en kozijn. Vulling: aluminium omkaderd met 33.2SI glas. Uitvoering: Standaard, incl. valdorpel. Kozijn: Aluminium in witte kleur. Afmeting: 930mm x 2400 mm. Hang- en sluitwerk. Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot. Cilinder: Exclusief. Kruk/rozet: L-model, RVS.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "7345,29",
       "Eenheid": "st",
-      "Eenheidsprijs": "1.224,22",
-      "Aantal": "6,00"
+      "Eenheidsprijs": "1224,22",
+      "Aantal": "6,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "deuren",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [
+        "valdorpel",
+        "aluminium kozijn",
+        "paumelles",
+        "loopslot",
+        "kruk/rozet RVS"
+      ],
+      "Exclusief": [
+        "Cilinder"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "kaderdeur",
+        "valdorpel",
+        "aluminium kozijn",
+        "paumelles",
+        "loopslot",
+        "RVS kruk"
+      ],
+      "Brontekst": "6,00 stuk KADERDEUR € 1.224,22 per stuk € 7.345,29\nDeur en kozijn\nVulling: aluminium omkaderd met 33.2SI glas\nUitvoering: Standaard, incl. valdorpel\nKozijn: Aluminium in witte kleur\nAfmeting: 930mm x 2400 mm\nHang\u200B en sluitwerk\nPaumelles: Standaard, 4 stuks per deur, ral 9004 mat fs.\nSloten: Loopslot\nCilinder: Exclusief.\nKruk/rozet: L\u200B\u200B\u0009model, RVS"
     },
     {
       "Omschrijving": "HORIZONTAAL TRANSPORT",
       "Beschrijving": "Horizontaal transport van het nieuwe materiaal. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend. Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend.",
       "Categorie": "ONBEKEND",
-      "Totaalbedrag": "9.112,75",
+      "Totaalbedrag": "9112,75",
       "Eenheid": "post",
-      "Eenheidsprijs": "ONBEKEND",
-      "Aantal": "ONBEKEND"
+      "Eenheidsprijs": "9112,75",
+      "Aantal": "1,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "transport",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "horizontaal transport"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
+        "Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend."
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "horizontaal transport",
+        "aanvoer materiaal"
+      ],
+      "Brontekst": "HORIZONTAAL TRANSPORT € 9.112,75\nHorizontaal transport van het nieuwe materiaal.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend.\nBetreft alleen tijdens aanvoer materiaal, indien wij materiaal\nmoeten verplaatsen i.v.m. werkzaamheden andere partijen\nworden deze kosten verrekend."
     },
     {
       "Omschrijving": "VERTICAAL TRANSPORT",
       "Beschrijving": "Verticaal transport d.m.v. verreiker. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
       "Categorie": "ONBEKEND",
-      "Totaalbedrag": "4.337,54",
+      "Totaalbedrag": "4337,54",
       "Eenheid": "post",
-      "Eenheidsprijs": "ONBEKEND",
-      "Aantal": "ONBEKEND"
+      "Eenheidsprijs": "4337,54",
+      "Aantal": "1,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "transport",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "verticaal transport d.m.v. verreiker"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend."
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "verticaal transport",
+        "verreiker"
+      ],
+      "Brontekst": "VERTICAAL TRANSPORT € 4.337,54\nVerticaal transport d.m.v. verreiker.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend."
     },
     {
       "Omschrijving": "STEIGER/SCHAARHOOGWERKER",
       "Beschrijving": "De huur van een schaarhoogwerker per week verrekenbaar.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "168,71",
-      "Eenheid": "ONBEKEND",
+      "Eenheid": "post",
       "Eenheidsprijs": "168,71",
-      "Aantal": "1,00"
+      "Aantal": "1,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "materieel",
+      "Prijsbasis": "per week",
+      "Inclusief": [
+        "huur schaarhoogwerker"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "verrekenbaar"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "schaarhoogwerker",
+        "steiger",
+        "huur"
+      ],
+      "Brontekst": "1,00 week STEIGER/SCHAARHOOGWERKER € 168,71\nDe huur van een schaarhoogwerker per week verrekenbaar."
     }
   ]
 }

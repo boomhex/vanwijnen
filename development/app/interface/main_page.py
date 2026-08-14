@@ -7,6 +7,7 @@ from application.extraction_job_service import ExtractionJobService
 from services import auth
 from services.folder_handler import FolderHandler
 from interface.left_drawer import LeftDrawer
+from interface.left_drawer.tree import SEARCH_INPUT_HTML_ID
 from interface.page_state import MainPageState
 from interface.right_side.right_side import RightSide
 from interface.session_panel import render_session_panel
@@ -64,8 +65,24 @@ def main_page():
     eva_html()
     ui.colors(primary=PRIMARY_RED)
 
-    with ui.left_drawer().style(f'background-color: {SECONDARY_RED}'):
+    with ui.left_drawer().style(f'background-color: {SECONDARY_RED}') as drawer:
         left_drawer_component.render()
         render_session_panel()
 
+    # A header with a menu toggle so the drawer (which auto-collapses below
+    # 1024px) can still be reached on narrow/mobile viewports.
+    with ui.header().classes('items-center gap-2').style(f'background-color: {PRIMARY_RED}'):
+        ui.button(icon='menu', on_click=drawer.toggle).props('flat dense round color=white')
+        ui.label('AI Offerte Vergelijking').classes('text-white text-base font-medium')
+
     right_side_component.render()
+
+    def handle_shortcut(event, drawer=left_drawer_component) -> None:
+        if not event.action.keydown:
+            return
+        if event.key == '/':
+            ui.run_javascript(f"document.getElementById('{SEARCH_INPUT_HTML_ID}')?.focus()")
+        elif event.key == 'Delete':
+            drawer.delete_selected()
+
+    ui.keyboard(on_key=handle_shortcut)

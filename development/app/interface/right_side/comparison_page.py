@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 from pathlib import Path
 from collections.abc import Callable
 from decimal import Decimal
@@ -13,6 +14,8 @@ from domain.comparison_checks import warnings_for_offer
 from domain.fields import COMPARISON_FIELDS
 from domain.money import parse_decimal, UNKNOWN
 from domain.status import is_active_running, is_stale_running
+from interface.left_drawer.dialogs import render_status_fields
+from interface.left_drawer.utils import format_elapsed_seconds
 from matching.match_fields import matched_categories, matched_post_descriptions
 from .subpage import SubPage
 
@@ -20,7 +23,8 @@ from services.comparison_matcher import ComparisonMatcher
 from services.folder_handler import FolderHandler
 from services.project import Project
 from .tabulator_table import TabulatorTable
-from interface.page_state import MainPageState
+from interface.page_state import MainPageState, PendingUndo
+from interface.theme import WARNING_BG, WARNING_TEXT
 from utils.app_logging import log_action
 
 
@@ -84,8 +88,10 @@ class MatchedPostenTable(TabulatorTable):
         )
 
     def columns_from_offers(self) -> list[dict]:
+        omschrijving_column = self.text_column('Omschrijving', 'Omschrijving', width=220, multiline=True)
+        omschrijving_column['frozen'] = True
         columns = [
-            self.text_column('Omschrijving', 'Omschrijving', width=220, multiline=True),
+            omschrijving_column,
             self.text_column('Aantal', 'Aantal', editable=True, width=100),
             self.text_column('Eenheid', 'Eenheid', editable=True, width=100),
         ]
@@ -158,8 +164,8 @@ class MatchedPostenTable(TabulatorTable):
                 const tooltip = data[{json.dumps(tooltip_field)}] || warning || '';
                 const element = cell.getElement();
 
-                element.style.backgroundColor = warning ? '#FEF3C7' : '';
-                element.style.color = warning ? '#92400E' : '';
+                element.style.backgroundColor = warning ? {json.dumps(WARNING_BG)} : '';
+                element.style.color = warning ? {json.dumps(WARNING_TEXT)} : '';
                 element.style.fontWeight = warning ? '600' : '';
                 element.removeAttribute('title');
 
@@ -551,6 +557,12 @@ class ComparisonPage(SubPage):
                     match_button.tooltip(status_message or status_step)
                     recalculate_button.tooltip(status_message or status_step)
 
+                status_text = status_message or status_step or 'Running'
+                elapsed = format_elapsed_seconds(status.get('started_at') if status else None)
+                if elapsed:
+                    status_text += f' ({elapsed})'
+                ui.label(status_text).classes('text-xs text-gray-600')
+
             if failed:
                 warning_icon = ui.icon('warning').classes('text-red-700')
                 warning_icon.tooltip(status_error or status_message or 'Comparison failed')
@@ -558,11 +570,26 @@ class ComparisonPage(SubPage):
                 warning_icon = ui.icon('warning').classes('text-orange-700')
                 warning_icon.tooltip('Comparison status is stale. You can retry matching or recalculating.')
 
+            if status is not None:
+                ui.button(icon='info', on_click=lambda data=status: self.show_status_dialog(project, data)) \
+                    .props('flat dense round size=sm').tooltip('View matching status')
+
             async def request_match(_event, selected_project=project, data=comparison, button=match_button):
                 await self.match_project_posts(selected_project, data, button)
 
             if not is_running:
                 match_button.on('click', request_match)
+
+    @staticmethod
+    def show_status_dialog(project: Project, status: dict | None) -> None:
+        with ui.dialog() as dialog, ui.card().classes('gap-2 min-w-[20rem]'):
+            ui.label(f'Matching status for {project.name}').classes('font-medium')
+            render_status_fields(status)
+
+            with ui.row().classes('justify-end w-full'):
+                ui.button('Close', on_click=dialog.close).props('flat dense no-caps size=sm')
+
+        dialog.open()
 
     def input_table(self, project: Project, comparison: dict) -> None:
         comparison_table = ComparisonRowsTable(comparison)
@@ -575,15 +602,22 @@ class ComparisonPage(SubPage):
                 on_click=lambda: self.add_comparison_row(project, comparison),
             ).props('dense no-caps size=sm')
 
-        comparison_tabulator = tabulator(comparison_table.options(), row_key='id').classes('w-full')
+        with ui.element('div').classes('w-full overflow-x-auto'):
+            comparison_tabulator = tabulator(comparison_table.options(), row_key='id').classes('w-full')
 
         def update_cell(event) -> None:
             cell = event.args.get('cell', {})
             row = cell.get('row', {})
             column = cell.get('column', {})
-            self.comparison_service.update_comparison_row(
-                project, comparison, row.get('id'), column.get('field'), cell.get('value', '')
-            )
+            try:
+                self.comparison_service.update_comparison_row(
+                    project, comparison, row.get('id'), column.get('field'), cell.get('value', '')
+                )
+            except Exception as error:  # noqa: BLE001 - surface any save failure to the user
+                ui.notify(f'Could not save: {error}', type='negative')
+                return
+
+            ui.notify('Saved', type='positive')
 
         def delete_row(event) -> None:
             cell = event.args.get('cell', {})
@@ -591,10 +625,7 @@ class ComparisonPage(SubPage):
             if column.get('field') != '__delete__':
                 return
             row = cell.get('row', {})
-            if not self.comparison_service.delete_comparison_row(project, comparison, row.get('id')):
-                return
-            comparison_table.rows = comparison_table.rows_from_comparison()
-            comparison_tabulator.set_data(comparison_table.rows)
+            self.delete_comparison_row(project, comparison, row.get('id'))
 
         comparison_tabulator.on_event('cellEdited', update_cell)
         comparison_tabulator.on_event('cellClick', delete_row)
@@ -603,12 +634,41 @@ class ComparisonPage(SubPage):
         self.comparison_service.add_comparison_row(project, comparison)
         self.refresh()
 
-    def delete_comparison_row(self, project: Project, comparison: dict, row_index: int) -> None:
-        if not self.comparison_service.delete_comparison_row(project, comparison, row_index):
-            ui.notify('Row no longer exists')
+    def delete_comparison_row(self, project: Project, comparison: dict, row_index: int | None) -> None:
+        posten = comparison.get('Posten', [])
+        if row_index is None or row_index < 0 or row_index >= len(posten):
+            ui.notify('Row no longer exists', type='negative')
             self.refresh()
             return
 
+        removed_row = copy.deepcopy(posten[row_index])
+        removed_matched = copy.deepcopy(comparison.get('MatchedPosten'))
+        removed_matches = copy.deepcopy(comparison.get('Matches'))
+
+        if not self.comparison_service.delete_comparison_row(project, comparison, row_index):
+            ui.notify('Row no longer exists', type='negative')
+            self.refresh()
+            return
+
+        label = str(removed_row.get('Omschrijving') or '').strip() or f'row {row_index + 1}'
+
+        def restore(
+            project=project,
+            row_index=row_index,
+            removed_row=removed_row,
+            removed_matched=removed_matched,
+            removed_matches=removed_matches,
+        ) -> None:
+            fresh_comparison = self.comparison_service.load_comparison(project)
+            fresh_posten = fresh_comparison.setdefault('Posten', [])
+            fresh_posten.insert(min(row_index, len(fresh_posten)), removed_row)
+            if removed_matched is not None:
+                fresh_comparison['MatchedPosten'] = removed_matched
+            if removed_matches is not None:
+                fresh_comparison['Matches'] = removed_matches
+            self.comparison_service.save_comparison(project, fresh_comparison)
+
+        self.state.pending_undo = PendingUndo(label=f'Deleted "{label}"', restore=restore)
         self.refresh()
 
     def render_side_by_side_match_table(self, project: Project, comparison: dict, match_rows: list[dict]) -> None:
@@ -652,7 +712,8 @@ class ComparisonPage(SubPage):
                 on_click=lambda table=matched_table: self.copy_match_table_to_clipboard(table),
             ).props('dense no-caps')
 
-        matched_tab = tabulator(matched_table.options(), row_key='id').classes('w-full')
+        with ui.element('div').classes('w-full overflow-x-auto'):
+            matched_tab = tabulator(matched_table.options(), row_key='id').classes('w-full')
         self.render_warning_checklist(project, comparison, match_rows, offer_names)
 
         def matched_update_cell(event) -> None:
@@ -666,17 +727,24 @@ class ComparisonPage(SubPage):
             if row_id is None:
                 return
 
-            if not self.comparison_service.update_matched_cell(
-                project,
-                comparison,
-                match_rows,
-                row_id,
-                field,
-                value,
-                offer_names,
-            ):
+            try:
+                updated = self.comparison_service.update_matched_cell(
+                    project,
+                    comparison,
+                    match_rows,
+                    row_id,
+                    field,
+                    value,
+                    offer_names,
+                )
+            except Exception as error:  # noqa: BLE001 - surface any save failure to the user
+                ui.notify(f'Could not save: {error}', type='negative')
                 return
 
+            if not updated:
+                return
+
+            ui.notify('Saved', type='positive')
             if self.is_offer_description_field(field):
                 return
 
@@ -696,12 +764,7 @@ class ComparisonPage(SubPage):
                 return
 
             row = cell.get('row', {})
-            row_id = row.get('id')
-            if not self.comparison_service.delete_matched_post_row(project, comparison, match_rows, row_id):
-                return
-
-            matched_table.rows = matched_table.rows_from_matches(match_rows)
-            matched_tab.set_data(matched_table.rows)
+            self.delete_matched_post_row(project, comparison, match_rows, row.get('id'))
 
         matched_tab.on_event('cellClick', matched_delete_row)
 
@@ -735,7 +798,11 @@ class ComparisonPage(SubPage):
         if not warning_items:
             return
 
-        with ui.expansion('Warnings checklist', icon='fact_check').classes('w-full mt-2'):
+        open_count = sum(1 for item in warning_items if not item['checked'])
+        with ui.expansion(
+            f'Warnings checklist ({open_count}/{len(warning_items)} open)',
+            icon='fact_check',
+        ).classes('w-full mt-2'):
             with ui.column().classes('gap-1 w-full'):
                 for item in warning_items:
                     checkbox = ui.checkbox(
@@ -842,4 +909,33 @@ class ComparisonPage(SubPage):
     def add_matched_post_row(self, project: Project, comparison: dict, offer_names: list[str]) -> None:
         self.comparison_service.add_matched_post_row(project, comparison, offer_names)
         self.notify_safe('Added matched row')
+        self.refresh()
+
+    def delete_matched_post_row(
+        self,
+        project: Project,
+        comparison: dict,
+        match_rows: list[dict],
+        row_id: int | None,
+    ) -> None:
+        if row_id is None or row_id < 0 or row_id >= len(match_rows):
+            return
+
+        removed_row = copy.deepcopy(match_rows[row_id])
+
+        if not self.comparison_service.delete_matched_post_row(project, comparison, match_rows, row_id):
+            return
+
+        label = str(removed_row.get('Omschrijving') or '').strip() or f'row {row_id + 1}'
+
+        def restore(project=project, row_id=row_id, removed_row=removed_row) -> None:
+            fresh_comparison = self.comparison_service.load_comparison(project)
+            matched = fresh_comparison.get('MatchedPosten')
+            if not isinstance(matched, list):
+                return
+            matched.insert(min(row_id, len(matched)), removed_row)
+            fresh_comparison['MatchedPosten'] = matched
+            self.comparison_service.save_comparison(project, fresh_comparison)
+
+        self.state.pending_undo = PendingUndo(label=f'Deleted "{label}"', restore=restore)
         self.refresh()
