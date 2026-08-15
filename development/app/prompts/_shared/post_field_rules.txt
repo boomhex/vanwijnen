@@ -1,10 +1,12 @@
 - Neem bedragen over ZONDER euroteken.
+- Als een getal onnatuurlijk is opgesplitst door een spatie midden in het getal (bijvoorbeeld "1.57 1,00" in plaats van "1.571,00"), interpreteer dit als één getal.
 - Voor eenheid verander je de specifieke spelling in de offerte naar een van de volgende: {m2, m1, st, dzd, post}
 - Voor categorie gebruik je het bovenliggende kopje/hoofdstuk waar de post onder valt. Is er geen duidelijke categorie, vul "ONBEKEND" in.
 - Voor PostType gebruik je een van: {line_total, unit_rate, surcharge, discount, alternative, option, subtotal, total, regie, stelpost, note, unknown}.
 - Gebruik "unit_rate" voor tariefregels zonder offertehoeveelheid/totaal, zoals "765,00 per dzd" of "€ 30,00 m2".
 - Gebruik "surcharge" voor toeslagen/meerprijzen, "alternative" voor alternatieven, "option" voor opties, "regie" voor regiewerk/uurtarieven.
 - Gebruik "stelpost" voor stelposten/voorlopige bedragen waarvan de einduitkomst nog kan afwijken (herken dit aan woorden als "stelpost", "voorlopig bedrag" of "p.m.").
+- Een los bedrag zonder hoeveelheid/eenheid, direct gevolgd door een vergelijkbare regel over hetzelfde onderwerp mét hoeveelheid/eenheid, is waarschijnlijk een sectiekop of lopend subtotaal — maak hier geen aparte post van.
 - Als een post een apart gelabeld "Alternatief:" of "Minderprijs:" bevat met een eigen prijs (toeslag of afslag) t.o.v. de post zelf, maak je hiervoor een aparte post met PostType "alternative" in plaats van deze tekst alleen in de Beschrijving van de hoofdpost te zetten. Zet in de Omschrijving en Beschrijving van die aparte post dat het een alternatief/minderprijs is en bij welke post het hoort, bijvoorbeeld "Alternatief bij <omschrijving hoofdpost>: ...". Gebruik voor Totaalbedrag/Eenheidsprijs het bedrag van het alternatief zelf; bij een afslag/minderprijs gebruik je een minteken, bijvoorbeeld "-9,30".
 - Voor Status gebruik je een van: {included, optional, alternative, excluded, unknown}.
 - Voor Code gebruik je een bestek-/postcode zoals "44.31.10-a" of "500010"; anders "ONBEKEND".

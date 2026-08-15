@@ -601,6 +601,11 @@ class ComparisonPage(SubPage):
                 icon='add',
                 on_click=lambda: self.add_comparison_row(project, comparison),
             ).props('dense no-caps size=sm')
+            ui.button(
+                'Vul vanuit offerte',
+                icon='playlist_add',
+                on_click=lambda: self.open_seed_from_offer_dialog(project, comparison),
+            ).props('dense no-caps size=sm outline')
 
         with ui.element('div').classes('w-full overflow-x-auto'):
             comparison_tabulator = tabulator(comparison_table.options(), row_key='id').classes('w-full')
@@ -632,6 +637,39 @@ class ComparisonPage(SubPage):
 
     def add_comparison_row(self, project: Project, comparison: dict) -> None:
         self.comparison_service.add_comparison_row(project, comparison)
+        self.refresh()
+
+    def open_seed_from_offer_dialog(self, project: Project, comparison: dict) -> None:
+        offer_names = self.comparison_service.offer_names(project)
+        if not offer_names:
+            ui.notify('Geen offertes met extractieresultaat gevonden.', type='warning')
+            return
+
+        with ui.dialog() as dialog, ui.card().classes('gap-2 min-w-[20rem]'):
+            ui.label('Vergelijkingsregels vullen vanuit offerte').classes('font-medium')
+            ui.label(
+                'Voegt de posten van de gekozen offerte toe als nieuwe vergelijkingsregels, '
+                'met de omschrijving zoals die uit die offerte is gehaald.'
+            ).classes('text-xs text-gray-600')
+            offer_select = ui.select(offer_names, value=offer_names[0], label='Offerte') \
+                .classes('w-full').props('dense outlined')
+
+            with ui.row().classes('justify-end w-full gap-2'):
+                ui.button('Cancel', on_click=dialog.close).props('flat dense no-caps size=sm')
+                ui.button(
+                    'Vul in',
+                    on_click=lambda: self.seed_from_offer(project, comparison, offer_select.value, dialog),
+                ).props('dense no-caps size=sm')
+
+        dialog.open()
+
+    def seed_from_offer(self, project: Project, comparison: dict, offer_name: str, dialog) -> None:
+        added = self.comparison_service.seed_comparison_from_offer(project, comparison, offer_name)
+        dialog.close()
+        if added:
+            ui.notify(f'{added} regel(s) toegevoegd vanuit {offer_name}.', type='positive')
+        else:
+            ui.notify(f'Geen bruikbare posten gevonden in {offer_name}.', type='warning')
         self.refresh()
 
     def delete_comparison_row(self, project: Project, comparison: dict, row_index: int | None) -> None:

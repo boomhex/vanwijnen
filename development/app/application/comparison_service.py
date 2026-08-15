@@ -111,6 +111,56 @@ class ComparisonService:
         self.clear_matches(comparison)
         self.save_comparison(project, comparison)
 
+    # Structural rows that aren't individually comparable line items —
+    # seeding from an offer should skip these, not turn them into
+    # vergelijkingsregels of their own.
+    seed_excluded_post_types = {'subtotal', 'total', 'note'}
+
+    @logged_action
+    def seed_comparison_from_offer(self, project: Project, comparison: dict[str, Any], offer_name: str) -> int:
+        """Prefill comparison Posten from one offer's extracted posts.
+
+        Lets the user start from real, LLM-extracted phrasing instead of
+        typing every row by hand — which also means those rows match that
+        offer exactly, and give the LLM concrete wording to match the other
+        offers against instead of the user's own free-form rewording.
+        Appends to any existing rows rather than replacing them. Returns
+        the number of rows added (0 if the offer has nothing to seed from).
+        """
+        offer_result = find_offer_result(self.matcher.project_offer_results(project), offer_name)
+        posts = offer_result.get('Posten', [])
+        if not isinstance(posts, list):
+            return 0
+
+        seeded_rows = []
+        for post in posts:
+            if not isinstance(post, dict):
+                continue
+            if str(post.get('PostType') or '').strip().casefold() in self.seed_excluded_post_types:
+                continue
+
+            description = str(post.get('Omschrijving') or '').strip()
+            if not description or description.upper() == UNKNOWN:
+                continue
+
+            def clean(value: Any) -> str:
+                text = str(value or '').strip()
+                return '' if text.upper() == UNKNOWN else text
+
+            seeded_rows.append({
+                'Omschrijving': description,
+                'Aantal': clean(post.get('Aantal')),
+                'Eenheid': clean(post.get('Eenheid')),
+            })
+
+        if not seeded_rows:
+            return 0
+
+        comparison.setdefault('Posten', []).extend(seeded_rows)
+        self.clear_matches(comparison)
+        self.save_comparison(project, comparison)
+        return len(seeded_rows)
+
     @logged_action
     def update_comparison_row(
         self,
@@ -237,7 +287,11 @@ class ComparisonService:
             find_extracted_post_by_description(offer_result, clean_description)
             for clean_description in clean_descriptions
         ]
-        if any(extracted_post is None for extracted_post in extracted_posts):
+        # find_extracted_post_by_description() returns {} (not None) on a
+        # miss, so this must check falsiness, not identity — an `is None`
+        # check here would never trigger, letting an empty {} silently reach
+        # offer_info_from_extracted_posts() below and corrupt the total.
+        if any(not extracted_post for extracted_post in extracted_posts):
             offer_entry['Match type'] = 'group' if len(clean_descriptions) > 1 else 'single'
             offer_entry['Gematchte omschrijving'] = (
                 f'{len(clean_descriptions)} posten'

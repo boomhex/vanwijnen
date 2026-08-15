@@ -119,6 +119,7 @@ def offer_info_from_extracted_posts(extracted_posts: list[dict], offer_match: di
             'Eenheidsprijs': unit_price,
             'Totaalbedrag': extracted_post.get('Totaalbedrag', UNKNOWN),
             'Overeenkomst': offer_match.get('Overeenkomst', ''),
+            'Ongekoppeld': False,
         }
 
     total = sum_extracted_totals(extracted_posts)
@@ -141,6 +142,7 @@ def offer_info_from_extracted_posts(extracted_posts: list[dict], offer_match: di
         'Eenheidsprijs': UNKNOWN,
         'Totaalbedrag': total,
         'Overeenkomst': offer_match.get('Overeenkomst', ''),
+        'Ongekoppeld': False,
     }
 
 

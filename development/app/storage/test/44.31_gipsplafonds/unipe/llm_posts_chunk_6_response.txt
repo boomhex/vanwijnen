@@ -1,0 +1,34 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Beschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "25,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "7",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "akoestische band",
+      "Prijsbasis": "per m1",
+      "Inclusief": [
+        "Leveren",
+        "aanbrengen",
+        "akoestische band Nevima IVI dik 5mm onder de U-75"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Nevima IVI",
+        "akoestisch ontkoppel band",
+        "U-75"
+      ],
+      "Brontekst": "Nevima IVI akoestisch ontkoppel band 42x5mm\nLeveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.\nPrijsstelling € 25,00 * gerekend met 7 m¹ I € 3,85 p/m¹"
+    }
+  ]
+}

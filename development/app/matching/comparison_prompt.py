@@ -1,7 +1,23 @@
 import json
 
+from domain.money import UNKNOWN
 from matching.prompt_loader import load_prompt
 
+# Fields forwarded to the matching LLM as extra content signals, on top of
+# Omschrijving/Beschrijving/Categorie/Aantal/Eenheid (see match_prompt_post).
+# Kept deliberately narrower than the full post schema: Inclusief/Exclusief/
+# Voorwaarden/DoorOpdrachtgever/Brontekst are verbose (arrays or raw text)
+# and would multiply prompt size across every post of every offer for
+# comparatively little extra matching signal.
+MATCH_CONTEXT_FIELDS = (
+    'Code',
+    'Regelnummer',
+    'PostType',
+    'Status',
+    'Subcategorie',
+    'Werksoort',
+    'Prijsbasis',
+)
 
 MATCH_RESPONSE_SCHEMA = {
     'type': 'object',
@@ -24,6 +40,7 @@ MATCH_RESPONSE_SCHEMA = {
                                     'type': 'array',
                                     'items': {'type': 'string'},
                                 },
+                                'Gematchte code': {'type': 'string'},
                                 'Overeenkomst': {'type': 'string'},
                             },
                             'required': [
@@ -31,6 +48,7 @@ MATCH_RESPONSE_SCHEMA = {
                                 'Match type',
                                 'Gematchte omschrijving',
                                 'Gematchte posten',
+                                'Gematchte code',
                                 'Overeenkomst',
                             ],
                         },
@@ -72,10 +90,23 @@ def match_prompt_offer_results(offer_results: list[dict]) -> list[dict]:
 
 
 def match_prompt_post(post: dict) -> dict:
-    return {
+    prompt_post = {
         'Omschrijving': post.get('Omschrijving', ''),
         'Beschrijving': post.get('Beschrijving', ''),
         'Categorie': post.get('Categorie', ''),
         'Aantal': post.get('Aantal', ''),
         'Eenheid': post.get('Eenheid', ''),
     }
+
+    for field in MATCH_CONTEXT_FIELDS:
+        value = str(post.get(field) or '').strip()
+        if value and value.upper() != UNKNOWN:
+            prompt_post[field] = value
+
+    match_hints = post.get('MatchHints')
+    if isinstance(match_hints, list):
+        clean_hints = [str(hint).strip() for hint in match_hints if str(hint or '').strip()]
+        if clean_hints:
+            prompt_post['MatchHints'] = clean_hints
+
+    return prompt_post

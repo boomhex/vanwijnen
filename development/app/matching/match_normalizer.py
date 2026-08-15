@@ -1,6 +1,6 @@
 from matching.match_calculation import calculate_offer_total
 from matching.match_deduplicator import deduplicate_offer_matches
-from matching.match_fields import offer_info_from_extracted_posts, offer_info_from_match
+from matching.match_fields import matched_post_descriptions, offer_info_from_extracted_posts, offer_info_from_match
 from matching.match_lookup import (
     find_extracted_posts_for_match,
     find_flat_match,
@@ -71,7 +71,13 @@ def complete_offer_info(offer_result: dict, offer_match: dict) -> dict:
     if extracted_posts:
         return offer_info_from_extracted_posts(extracted_posts, offer_match)
 
-    return offer_info_from_match(offer_match)
+    info = offer_info_from_match(offer_match)
+    # The LLM claimed a match (a description/code) but it couldn't be
+    # resolved to a real extracted post — these values are the raw,
+    # unverified LLM output rather than data read from the offer itself.
+    # Distinct from "no match claimed at all", which isn't a problem.
+    info['Ongekoppeld'] = bool(matched_post_descriptions(offer_match))
+    return info
 
 
 def normalize_matched_posts(comparison: dict, match_result: dict, offer_results: list[dict]) -> list[dict]:

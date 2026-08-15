@@ -3,7 +3,7 @@
     {
       "Omschrijving": "Regie-uurloon",
       "Beschrijving": "Regie uurloon bedraagt € 57,50 per uur.",
-      "Categorie": "Algemene voorwaarden",
+      "Categorie": "ONBEKEND",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "ONBEKEND",
       "Eenheidsprijs": "57,50",
@@ -20,11 +20,11 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "regie",
-        "uurloon",
-        "uurtarief"
+        "regie-uurloon",
+        "uurtarief",
+        "regiewerk"
       ],
-      "Brontekst": "Regie\u0009uurloon :\nRegie uurloon bedraagt \u2010 57,50 per uur."
+      "Brontekst": "Regie\u00ADuurloon :\nRegie uurloon bedraagt € 57,50 per uur."
     }
   ]
 }

@@ -1,0 +1,236 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Plafond Shiluvit American yellow pine I eikenlook",
+      "Beschrijving": "Leveren en aanbrengen van een Shiluvit 7-501 Akoestisch plafond. Dit houten: American yellow pine/ eiken look (WN 2592) lamellen paneel semi verdekt zelfdragend en wordt in moduulmaat aangeleverd voor toepassing in een standaard T-24 systeem (bij voorkeur zwart). Inclusief akoestische isolatie Nofisol black, dik 20mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "10.870,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "210,25",
+      "Aantal": "51,7",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "plafond",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "akoestische isolatie Nofisol black, dik 20mm"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Shiluvit",
+        "American yellow pine",
+        "eikenlook",
+        "Akoestisch plafond",
+        "lamellen",
+        "T-24",
+        "Nofisol"
+      ],
+      "Brontekst": "Plafond Shiluvit American yellow pine I eikenlook\nLeveren en aanbrengen van een Shiluvit 7-501 Akoestisch plafond. Dit houten: American\nyellow pine/ eiken look (WN 2592) lamellen paneel semi verdekt zelfdragend en wordt in\nmoduulmaat aangeleverd voor toepassing in een standaard T-24 systeem (bij voorkeur zwart).\nInclusief akoestische isolatie Nofisol black, dik 20mm.\nPrijsstelling € 10.870,00 * gerekend met 51,7 m² I € 210,25 p/m²"
+    },
+    {
+      "Omschrijving": "Plagyp-D met Rigitone 12-20-35 beplating",
+      "Beschrijving": "Leveren en aanbrengen van een Plagyp-D plafondconstructie bestaande uit Metal Stud PU 27/27- en PC 60/27 profielen h.o.h. 400 mm en h.o.h. 800 mm. Het frame werk wordt d.m.v. nonius hangers aan bovenliggende constructie gemonteerd. Tegen dit framewerk word een laag Gyproc Rigitone 12-20-35 Activ Air beplating dik 12,5mm geschroefd. Inclusief SLS frame werk.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "18.000,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "102,75",
+      "Aantal": "175,3",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "plafond",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "SLS frame werk"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Plagyp-D",
+        "Rigitone",
+        "Metal Stud",
+        "Gyproc",
+        "Activ Air"
+      ],
+      "Brontekst": "Plagyp-D met Rigitone 12-20-35 beplating\nLeveren en aanbrengen van een Plagyp-D plafondconstructie bestaande uit Metal Stud PU\n27/27- en PC 60/27 profielen h.o.h. 400 mm en h.o.h. 800 mm. Het frame werk wordt d.m.v.\nnonius hangers aan bovenliggende constructie gemonteerd. Tegen dit framewerk word een\nlaag Gyproc Rigitone 12-20-35 Activ Air beplating dik 12,5mm geschroefd.\nInclusief SLS frame werk.\nPrijsstelling € 18.000,00 * gerekend met 175,3 m² I € 102,75 p/m²"
+    },
+    {
+      "Omschrijving": "Afwerken Rigitone plafond",
+      "Beschrijving": "Afwerking akoestisch plafond.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3.060,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "175",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "afwerking",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Afwerken",
+        "Rigitone",
+        "akoestisch plafond"
+      ],
+      "Brontekst": "Afwerken Rigitone plafond\nAfwerking akoestisch plafond.\nPrijsstelling € 3.060,00 * gerekend met 175 m² I € 17,50 p/m²"
+    },
+    {
+      "Omschrijving": "MSV 100 / 75.2.A",
+      "Beschrijving": "Leveren en aanbrengen van een MSVoorzetwand, dik 100 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan één zijde van het frame m.b.v. schroeven wordt één laag Standaard AK gipskarton dik 12,5 mm en één laag LaDura/ Duragyp gipsvezelbeplating dik 12,5mm aangebracht. In de spouw Rockwool Rock Sono base dik 60mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "39.100,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "60,10",
+      "Aantal": "651,2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "voorzetwand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Rockwool Rock Sono base dik 60mm"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gerekend met een wandhoogte van 2700mm"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "MSVoorzetwand",
+        "C-75",
+        "U-75",
+        "gipskarton",
+        "LaDura",
+        "Duragyp",
+        "Rockwool"
+      ],
+      "Brontekst": "MSV 100 / 75.2.A\nLeveren en aanbrengen van een MSVoorzetwand, dik 100 mm, opgebouwd uit een verzinkt\nstalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan één zijde van het\nframe m.b.v. schroeven wordt één laag Standaard AK gipskarton dik 12,5 mm en één laag\nLaDura/ Duragyp gipsvezelbeplating dik 12,5mm aangebracht. In de spouw Rockwool Rock\nSono base dik 60mm. Er is gerekend met een wandhoogte van 2700mm.\nPrijsstelling € 39.100,00 * gerekend met 651,2 m² I € 60,10 p/m²"
+    },
+    {
+      "Omschrijving": "Toeslag ronding",
+      "Beschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "775,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125,00",
+      "Aantal": "6,2",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wandafwerking",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag",
+        "ronding",
+        "MS 75"
+      ],
+      "Brontekst": "Toeslag ronding\nToeslag voor het aanbrengen van een ronding in de MS 75 wand.\nPrijsstelling € 775,00 * gerekend met 6,2 m² I € 125,00 p/m²"
+    },
+    {
+      "Omschrijving": "Toeslag inbouw brandslanghaspel in MS Wand",
+      "Beschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "85,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85,00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "brandslanghaspel",
+        "sparing",
+        "brandhaspelkast"
+      ],
+      "Brontekst": "Toeslag inbouw brandslanghaspel in MS Wand\nSparing aanbrengen in MS wand t.b.v. brandhaspelkast.\nPrijsstelling € 85,00 * gerekend met 1st."
+    },
+    {
+      "Omschrijving": "Logistiek MSV",
+      "Beschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.560,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "1280",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "transport",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "profielen",
+        "isolatie"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Logistiek",
+        "transport",
+        "gipsplaten"
+      ],
+      "Brontekst": "Logistiek MSV\nVoor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m²\ngipsplaat inclusief profielen en isolatie.\nPrijsstelling € 2.560,00 * gerekend met 1.280 m² I € 2,00 p/m²"
+    },
+    {
+      "Omschrijving": "afkoop Sparingen & achterhout in MS wanden",
+      "Beschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.800,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "640",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "OSB achterhout: 400x598x18mm"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afkoop",
+        "Sparingen",
+        "achterhout",
+        "OSB"
+      ],
+      "Brontekst": "afkoop Sparingen & achterhout in MS wanden\nAanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de\nMS wand.\nPrijsstelling € 4.800,00 * gerekend met 640 m² I € 7,50 p/m²"
+    }
+  ]
+}

@@ -10,6 +10,12 @@ QUANTITY_DIFFERENCE_ABSOLUTE = Decimal('0.01')
 def warnings_for_offer(match_row: dict, offer: dict) -> list[str]:
     warnings = []
 
+    if offer.get('Ongekoppeld'):
+        warnings.append(
+            'Gematchte offertepost kon niet worden teruggevonden in de extractie; '
+            'deze waarden zijn niet geverifieerd tegen de offerte zelf.'
+        )
+
     # Get the unit matched by LLM
     comparison_unit = match_row.get('Eenheid', '')
     matched_unit = (

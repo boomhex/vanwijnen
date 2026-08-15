@@ -1,13 +1,14 @@
 from decimal import Decimal
 
-from domain.comparison_checks import warning_for_offer
+from domain.comparison_checks import warning_for_offer, warnings_for_offer
 from domain.money import calculate_total, calculate_unit_price, parse_decimal
 from domain.units import units_mismatch
 from application.comparison_service import ComparisonService
 from interface.right_side.comparison_page import MatchedPostenTable
 from matching.comparison_prompt import match_prompt_offer_results
 from matching.match_calculation import calculate_offer_total
-from matching.match_normalizer import complete_response, normalize_matched_posts
+from matching.match_lookup import find_extracted_post_by_description, find_extracted_posts_for_match
+from matching.match_normalizer import complete_offer_info, complete_response, normalize_matched_posts
 from services.comparison_matcher import ComparisonMatcher
 
 
@@ -63,6 +64,119 @@ def test_match_prompt_offer_results_keeps_only_matching_context_fields():
             ],
         },
     ]
+
+
+def test_match_prompt_offer_results_includes_rich_fields_when_known():
+    assert match_prompt_offer_results([
+        {
+            'Bestand': 'offer.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'Post A',
+                    'Beschrijving': 'Uitgebreide toelichting',
+                    'Categorie': 'Cat',
+                    'Aantal': '10',
+                    'Eenheid': 'm2',
+                    'Eenheidsprijs': '20',
+                    'Totaalbedrag': '200',
+                    'Code': '44.31.10-a',
+                    'Regelnummer': 'ONBEKEND',
+                    'PostType': 'unit_rate',
+                    'Status': 'included',
+                    'Subcategorie': 'ONBEKEND',
+                    'Werksoort': 'metselwerk',
+                    'Prijsbasis': 'per m2',
+                    'MatchHints': ['baksteen', 'wildverband', ''],
+                    'Inclusief': ['iets'],
+                },
+            ],
+        },
+    ]) == [
+        {
+            'Bestand': 'offer.pdf',
+            'Posten': [
+                {
+                    'Omschrijving': 'Post A',
+                    'Beschrijving': 'Uitgebreide toelichting',
+                    'Categorie': 'Cat',
+                    'Aantal': '10',
+                    'Eenheid': 'm2',
+                    'Code': '44.31.10-a',
+                    'PostType': 'unit_rate',
+                    'Status': 'included',
+                    'Werksoort': 'metselwerk',
+                    'Prijsbasis': 'per m2',
+                    'MatchHints': ['baksteen', 'wildverband'],
+                },
+            ],
+        },
+    ]
+
+
+def test_find_extracted_post_by_description_falls_back_to_fuzzy_match():
+    offer_result = {
+        'Bestand': 'offer.pdf',
+        'Posten': [
+            {'Omschrijving': 'Vermetselen gevelsteen halfsteens verband rood', 'Totaalbedrag': '500'},
+        ],
+    }
+
+    # A slightly reworded/truncated copy instead of a literal one still resolves.
+    post = find_extracted_post_by_description(offer_result, 'Vermetselen gevelsteen halfsteens verband')
+
+    assert post.get('Totaalbedrag') == '500'
+
+
+def test_find_extracted_posts_for_match_prefers_code_over_mismatched_description():
+    offer_result = {
+        'Bestand': 'offer.pdf',
+        'Posten': [
+            {'Omschrijving': 'Metselwerk gevel', 'Code': '44.31.10-a', 'Totaalbedrag': '1000'},
+            {'Omschrijving': 'Voegwerk gevel', 'Code': '44.31.20-b', 'Totaalbedrag': '400'},
+        ],
+    }
+    # The LLM's copied description doesn't match anything verbatim or fuzzily,
+    # but the code it echoed back should still resolve the right post.
+    offer_match = {
+        'Match type': 'single',
+        'Gematchte omschrijving': 'Iets heel anders',
+        'Gematchte code': '44.31.10-A',
+    }
+
+    extracted_posts = find_extracted_posts_for_match(offer_result, offer_match)
+
+    assert len(extracted_posts) == 1
+    assert extracted_posts[0]['Totaalbedrag'] == '1000'
+
+
+def test_complete_offer_info_flags_unlinked_claimed_match():
+    offer_result = {
+        'Bestand': 'offer.pdf',
+        'Posten': [
+            {'Omschrijving': 'Metselwerk gevel', 'Totaalbedrag': '1000'},
+        ],
+    }
+    # LLM claims a match but the description is unresolvable and no code was given.
+    offer_match = {
+        'Match type': 'single',
+        'Gematchte omschrijving': 'Volledig ongerelateerde post die niet bestaat',
+        'Totaalbedrag': '9999',
+    }
+
+    info = complete_offer_info(offer_result, offer_match)
+
+    assert info['Ongekoppeld'] is True
+    assert 'niet worden teruggevonden' in ' '.join(warnings_for_offer({}, info))
+
+
+def test_complete_offer_info_does_not_flag_no_match_claimed():
+    offer_result = {'Bestand': 'offer.pdf', 'Posten': []}
+    offer_match = {'Match type': 'single', 'Gematchte omschrijving': 'ONBEKEND'}
+
+    info = complete_offer_info(offer_result, offer_match)
+
+    assert info.get('Ongekoppeld') is not True
+    assert warnings_for_offer({}, info) == []
 
 
 def test_recalculate_matched_posts():
@@ -565,3 +679,48 @@ def test_update_matched_cell_selects_multiple_extracted_offer_posts_as_group():
 
 def test_selected_descriptions_accepts_json_array_string():
     assert ComparisonService.selected_descriptions('["Post A", "Post B"]') == ['Post A', 'Post B']
+
+
+def test_seed_comparison_from_offer_prefills_rows_and_skips_structural_posts():
+    class FakeMatcher:
+        def project_offer_results(self, _project):
+            return [
+                {
+                    'Bestand': 'offer.pdf',
+                    'Posten': [
+                        {'Omschrijving': 'Metselwerk gevel', 'Aantal': '10', 'Eenheid': 'm2'},
+                        {'Omschrijving': 'Subtotaal', 'PostType': 'subtotal', 'Aantal': 'ONBEKEND', 'Eenheid': 'ONBEKEND'},
+                        {'Omschrijving': 'ONBEKEND'},
+                        {'Omschrijving': 'Voegwerk gevel', 'Aantal': 'ONBEKEND', 'Eenheid': 'ONBEKEND'},
+                    ],
+                },
+            ]
+
+    class FakeProject:
+        def save_comparison(self, comparison):
+            self.saved_comparison = comparison
+
+    service = ComparisonService(folder_handler=None, matcher=FakeMatcher())
+    project = FakeProject()
+    comparison = {'Posten': [{'Omschrijving': 'Bestaande regel', 'Aantal': '', 'Eenheid': ''}]}
+
+    added = service.seed_comparison_from_offer(project, comparison, 'offer.pdf')
+
+    assert added == 2
+    assert comparison['Posten'] == [
+        {'Omschrijving': 'Bestaande regel', 'Aantal': '', 'Eenheid': ''},
+        {'Omschrijving': 'Metselwerk gevel', 'Aantal': '10', 'Eenheid': 'm2'},
+        {'Omschrijving': 'Voegwerk gevel', 'Aantal': '', 'Eenheid': ''},
+    ]
+
+
+def test_seed_comparison_from_offer_returns_zero_for_unknown_offer():
+    class FakeMatcher:
+        def project_offer_results(self, _project):
+            return []
+
+    service = ComparisonService(folder_handler=None, matcher=FakeMatcher())
+    comparison = {}
+
+    assert service.seed_comparison_from_offer(object(), comparison, 'missing.pdf') == 0
+    assert comparison == {}
