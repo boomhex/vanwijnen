@@ -2,6 +2,7 @@
   "Naam aannemer": "Zuidema Metselwerken BV",
   "Totaalprijs inc. BTW": "ONBEKEND",
   "Totaalprijs exc. BTW": "ONBEKEND",
+  "BTW verlegd": "ONBEKEND",
   "Posten": [
     {
       "Omschrijving": "Vermetselen WF handvorm halfsteens verband",
@@ -23,9 +24,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "WF",
-        "handvorm",
-        "halfsteens"
+        "WF handvorm",
+        "halfsteens verband",
+        "metselwerk"
       ],
       "Brontekst": "Vermetselen WF handvorm halfsteens verband € 800.00 dznd"
     },
@@ -125,12 +126,12 @@
         "mal door VW geleverd"
       ],
       "DoorOpdrachtgever": [
-        "mal leveren"
+        "mal"
       ],
       "MatchHints": [
         "rond metselwerk",
-        "mal",
-        "toeslag"
+        "toeslag",
+        "mal"
       ],
       "Brontekst": "Toeslag rond metselwerk, mal door VW geleverd € 30.00 m2"
     },
@@ -147,7 +148,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "wapening",
+      "Werksoort": "metselwerk",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [],
@@ -223,7 +224,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "lateien",
+      "Werksoort": "metselwerk",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [
@@ -233,6 +234,7 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "stalen lateien",
+        "latei",
         "handzaam"
       ],
       "Brontekst": "Aanbrengen stalen lateien handzaam exclusief aan elkaar bouten van de delen € 13.00 m1"
@@ -250,13 +252,11 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "kantplanken",
+      "Werksoort": "metselwerk",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [],
-      "Voorwaarden": [
-        "max 30 cm hoog"
-      ],
+      "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "kantplanken",
@@ -292,7 +292,7 @@
       "Brontekst": "Zaagwerk kantplanken € 12.50 m1"
     },
     {
-      "Omschrijving": "Toeslag metselen spiegelklamp",
+      "Omschrijving": "Toeslag metselen speigelklamp",
       "Beschrijving": "Toeslag metselen speigelklamp",
       "Categorie": "Metselwerk",
       "Totaalbedrag": "ONBEKEND",
@@ -311,6 +311,7 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
+        "speigelklamp",
         "spiegelklamp",
         "toeslag"
       ],
@@ -342,7 +343,7 @@
       "Brontekst": "Leveren kruiwagens/kuipen € 300.00 post"
     },
     {
-      "Omschrijving": "Verhangen steiger consoles",
+      "Omschrijving": "Verhangen steiger console's",
       "Beschrijving": "Verhangen steiger console’s",
       "Categorie": "Metselwerk",
       "Totaalbedrag": "ONBEKEND",
@@ -362,7 +363,8 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "steiger",
-        "consoles"
+        "consoles",
+        "verhangen"
       ],
       "Brontekst": "Verhangen steiger console’s € 5.00 m1"
     },
@@ -390,9 +392,10 @@
       "MatchHints": [
         "tussenslagen",
         "opperwerk",
-        "gevelsteen"
+        "gevelsteen",
+        "steigerslagen"
       ],
-      "Brontekst": "Bouwen tussenslagen t.b.v. opperwerk gevelsteen indien er steigerslagen van 2,5 of € 15.00 m1 3.0 meter worden toegepast"
+      "Brontekst": "Bouwen tussenslagen t.b.v. opperwerk gevelsteen indien er steigerslagen van 2,5 of 3.0 meter worden toegepast € 15.00 m1"
     },
     {
       "Omschrijving": "Inmetselen Vloerventilatiekokers",
@@ -457,7 +460,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "verankering",
+      "Werksoort": "metselwerk",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],

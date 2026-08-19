@@ -46,5 +46,5 @@ class AuthMiddleware(BaseHTTPMiddleware):
         elif path.startswith('/storage'):
             granted = auth.user_workspaces(app.storage.user.get('username'))
             if not storage_request_allowed(path, granted):
-                return PlainTextResponse('Forbidden', status_code=403)
+                return PlainTextResponse('Verboden', status_code=403)
         return await call_next(request)

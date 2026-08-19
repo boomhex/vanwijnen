@@ -16,10 +16,14 @@
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Kitwerk"
+        "Kitwerk",
+        "Steenwol 100mm",
+        "gipskartonplaat Ak 12,5mm",
+        "gipsvezelplaat Ak 12,5mm"
       ],
       "Exclusief": [
-        "Sparingen, voorzieningen installaties en/ of achterhout",
+        "Sparingen",
+        "voorzieningen installaties en/ of achterhout",
         "Brand en geluidwerende sparingen afdichtingen",
         "Plinten en/ of aftimmerlatten"
       ],
@@ -27,15 +31,16 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "MS 200/2.150.2.A",
-        "steenwol",
+        "C/U 150 mm",
+        "Steenwol",
         "gipskartonplaat",
         "gipsvezelplaat"
       ],
       "Brontekst": "8,00 m2 METALSTUD SCHEIDINGSWAND 200MM € 83,37 per m2 € 666,92"
     },
     {
-      "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 200MM: Toepassen van glaswol i.p.v. steenwol",
-      "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD SCHEIDINGSWAND 200MM.",
+      "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 200MM: Glaswol i.p.v. steenwol",
+      "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud scheidingswand 200mm.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "m2",
@@ -48,14 +53,18 @@
       "Subcategorie": "ONBEKEND",
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
+      "Inclusief": [
+        "glaswol"
+      ],
+      "Exclusief": [
+        "steenwol"
+      ],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
+        "minderprijs",
         "glaswol",
-        "steenwol",
-        "minderprijs"
+        "steenwol"
       ],
       "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 6,20 per m2"
     },
@@ -75,10 +84,14 @@
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Kitwerk"
+        "Kitwerk",
+        "Steenwol 60mm",
+        "gipskartonplaat Ak 12,5mm",
+        "gipsvezelplaat Ak 12,5mm"
       ],
       "Exclusief": [
-        "Sparingen, voorzieningen installaties en/ of achterhout",
+        "Sparingen",
+        "voorzieningen installaties en/ of achterhout",
         "Brand en geluidwerende sparingen afdichtingen",
         "Plinten en/ of aftimmerlatten"
       ],
@@ -86,37 +99,12 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "MS 100V/75.2.A",
-        "steenwol",
+        "C/U 75 mm",
+        "Steenwol",
         "gipskartonplaat",
         "gipsvezelplaat"
       ],
       "Brontekst": "15 3,00 m2 METALSTUD VOORZETWAND 100MM € 54,99 per m2 € 8.413,49"
-    },
-    {
-      "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 100MM: Toepassen van glaswol i.p.v. steenwol",
-      "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD VOORZETWAND 100MM.",
-      "Categorie": "ONBEKEND",
-      "Totaalbedrag": "ONBEKEND",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "-4,80",
-      "Aantal": "ONBEKEND",
-      "PostType": "alternative",
-      "Status": "alternative",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "metalstud wand",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "glaswol",
-        "steenwol",
-        "minderprijs"
-      ],
-      "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2"
     },
     {
       "Omschrijving": "METALSTUD VOORZETWAND 30 MIN. BRANDWEREND",
@@ -134,10 +122,13 @@
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Kitwerk"
+        "Kitwerk",
+        "Steenwol 60mm",
+        "gipsvezelplaat Ak 12,5mm"
       ],
       "Exclusief": [
-        "Sparingen, voorzieningen installaties en/ of achterhout",
+        "Sparingen",
+        "voorzieningen installaties en/ of achterhout",
         "Brand en geluidwerende sparingen afdichtingen",
         "Plinten en/ of aftimmerlatten"
       ],
@@ -145,15 +136,16 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "MS 100V/75.2.A",
-        "steenwol",
+        "C/U 75 mm",
+        "Steenwol",
         "gipsvezelplaat",
-        "brandwerend"
+        "30 min. brandwerend"
       ],
       "Brontekst": "56,00 m2 METALSTUD VOORZETWAND 30 MIN. BRANDWEREND € 61,25 per m2 € 3.430,03"
     },
     {
-      "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND: Toepassen van glaswol i.p.v. steenwol",
-      "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND.",
+      "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND: Glaswol i.p.v. steenwol",
+      "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud voorzetwand 30 min. brandwerend.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "m2",
@@ -166,14 +158,18 @@
       "Subcategorie": "ONBEKEND",
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
+      "Inclusief": [
+        "glaswol"
+      ],
+      "Exclusief": [
+        "steenwol"
+      ],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
+        "minderprijs",
         "glaswol",
-        "steenwol",
-        "minderprijs"
+        "steenwol"
       ],
       "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2"
     },
@@ -194,10 +190,14 @@
       "Prijsbasis": "per m1",
       "Inclusief": [
         "Kitwerk",
-        "Kopsezijde voorzien van 1 strook zetwerk"
+        "Steenwol 60mm",
+        "gipskartonplaat Ak 12,5mm",
+        "gipsvezelplaat Ak 12,5mm",
+        "zetwerk"
       ],
       "Exclusief": [
-        "Sparingen, voorzieningen installaties en/ of achterhout",
+        "Sparingen",
+        "voorzieningen installaties en/ of achterhout",
         "Brand en geluidwerende sparingen afdichtingen",
         "Plinten en/ of aftimmerlatten"
       ],
@@ -205,10 +205,11 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "MS 125/2.75.2.A",
-        "steenwol",
+        "C/U 75 mm",
+        "Steenwol",
         "gipskartonplaat",
         "gipsvezelplaat",
-        "hangwand"
+        "zetwerk"
       ],
       "Brontekst": "3 5,00 m1 METALSTUD HANGWAND 125MM € 196,63 per m1 € 6.882,12"
     },
@@ -230,7 +231,7 @@
       "Inclusief": [],
       "Exclusief": [
         "Toepassen verzwaarde stijlen t.b.v. kozijnen",
-        "Horizontaal of verticaal transport kozijnen."
+        "Horizontaal of verticaal transport kozijnen"
       ],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
@@ -256,19 +257,22 @@
       "Subcategorie": "ONBEKEND",
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m1",
-      "Inclusief": [],
+      "Inclusief": [
+        "verzwaarde stijlen 2mm"
+      ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "verzwaarde stijlen",
+        "2mm dik",
         "kozijnen"
       ],
       "Brontekst": "438,00 m1 TOESLAG VERZWAARDE STIJLEN € 8,59 per m1 € 3.760,74"
     },
     {
       "Omschrijving": "SANITAIRE VOORZETWAND",
-      "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties:\nType: MS 100V/75.2\nProfielen: 1x C/U 75 mm\nIsolatie: N.v.t.\nBeplating 1-zijdig: 1x Gipskartonlaat Ak 12,5mm, 1x Gipsvezelplaat AK 12,5mm\nKitwerk: N.v.t.",
+      "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties:\nType: MS 100V/75.2\nProfielen: 1x C/U 75 mm\nIsolatie: N.v.t.\nBeplating 1-zijdig:\n1x Gipskartonlaat Ak 12,5mm\n1x Gipsvezelplaat AK 12,5mm\nKitwerk: N.v.t.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "3.579,53",
       "Eenheid": "m2",
@@ -281,9 +285,13 @@
       "Subcategorie": "ONBEKEND",
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
-      "Inclusief": [],
+      "Inclusief": [
+        "Gipskartonlaat Ak 12,5mm",
+        "Gipsvezelplaat AK 12,5mm"
+      ],
       "Exclusief": [
-        "Sparingen, voorzieningen installaties en/ of achterhout",
+        "Sparingen",
+        "voorzieningen installaties en/ of achterhout",
         "Brand en geluidwerende sparingen afdichtingen",
         "Plinten en/ of aftimmerlatten"
       ],
@@ -292,8 +300,8 @@
       "MatchHints": [
         "MS 100V/75.2",
         "natte ruimtes",
-        "gipskartonplaat",
-        "gipsvezelplaat"
+        "Gipskartonlaat",
+        "Gipsvezelplaat"
       ],
       "Brontekst": "100,00 m2 SANITAIRE VOORZETWAND € 35,80 per m2 € 3.579,53"
     },
@@ -310,7 +318,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "toiletoorzieningen",
+      "Werksoort": "timmerwerk",
       "Prijsbasis": "per stuk",
       "Inclusief": [
         "Sparingen",
@@ -339,7 +347,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "toiletoorzieningen",
+      "Werksoort": "timmerwerk",
       "Prijsbasis": "totaal",
       "Inclusief": [
         "Verstevigingen",
@@ -371,14 +379,16 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "achterhout",
+      "Werksoort": "timmerwerk",
       "Prijsbasis": "per stuk",
-      "Inclusief": [],
+      "Inclusief": [
+        "achterhout"
+      ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "urinoir",
+        "urinior",
         "achterhout"
       ],
       "Brontekst": "13,00 stuk ACHTERHOUT URINOIR € 16,13 per stuk € 209,74"
@@ -396,7 +406,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "montagewerk",
+      "Werksoort": "montage",
       "Prijsbasis": "per stuk",
       "Inclusief": [],
       "Exclusief": [],
@@ -423,7 +433,10 @@
       "Subcategorie": "ONBEKEND",
       "Werksoort": "metalstud wand",
       "Prijsbasis": "per m2",
-      "Inclusief": [],
+      "Inclusief": [
+        "buigbare profielen",
+        "buiggips 6mm"
+      ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
@@ -457,7 +470,8 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "open wandeinde",
-        "gipsstrook"
+        "gipsstrook",
+        "afwerken"
       ],
       "Brontekst": "20,00 m1 OPEN WANDEINDE € 38,86 per m1 € 777,27"
     }

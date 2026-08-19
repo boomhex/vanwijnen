@@ -401,7 +401,7 @@ class ComparisonService:
             project,
             status='running',
             step='matching_posts',
-            message='Matching comparison posts',
+            message='Vergelijkingsposten matchen',
             started_at=started_at,
         )
 
@@ -411,7 +411,7 @@ class ComparisonService:
                 project,
                 status='running',
                 step='normalizing_matches',
-                message='Normalizing matched posts',
+                message='Gematchte posten normaliseren',
                 started_at=started_at,
             )
             comparison['MatchedPosten'] = self.matcher.normalize_matched_posts(project, comparison, match_result)
@@ -421,7 +421,7 @@ class ComparisonService:
                 project,
                 status='done',
                 step='done',
-                message='Matching completed',
+                message='Matchen voltooid',
                 started_at=started_at,
             )
             return comparison
@@ -430,7 +430,7 @@ class ComparisonService:
                 project,
                 status='failed',
                 step='failed',
-                message='Matching failed',
+                message='Matchen mislukt',
                 error=str(error),
                 started_at=started_at,
             )
@@ -442,7 +442,7 @@ class ComparisonService:
             project,
             status='running',
             step='recalculating_posts',
-            message='Recalculating matched posts',
+            message='Gematchte posten herberekenen',
             started_at=started_at,
         )
 
@@ -454,7 +454,7 @@ class ComparisonService:
                 project,
                 status='done',
                 step='done',
-                message='Recalculation completed',
+                message='Herberekening voltooid',
                 started_at=started_at,
             )
             return comparison
@@ -463,7 +463,7 @@ class ComparisonService:
                 project,
                 status='failed',
                 step='failed',
-                message='Recalculation failed',
+                message='Herberekening mislukt',
                 error=str(error),
                 started_at=started_at,
             )

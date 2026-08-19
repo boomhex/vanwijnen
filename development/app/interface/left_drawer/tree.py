@@ -39,17 +39,17 @@ class DrawerTree:
         self.cancel_extraction = cancel_extraction
 
     def render(self, projects: list[Project]) -> None:
-        ui.label('Projects').classes('text-lg font-bold mb-2')
+        ui.label('Projecten').classes('text-lg font-bold mb-2')
         self.search_box()
 
         if not projects:
-            ui.label('No projects or PDFs yet').classes('text-gray-500')
+            ui.label('Nog geen projecten of PDF\'s').classes('text-gray-500')
             return
 
         query = self.state.tree_search.strip().lower()
         visible_projects = [project for project in projects if self.project_matches(project, query)] if query else projects
         if query and not visible_projects:
-            ui.label('No matches found').classes('text-gray-500')
+            ui.label('Geen resultaten gevonden').classes('text-gray-500')
             return
 
         for project in visible_projects:
@@ -57,7 +57,7 @@ class DrawerTree:
 
     def search_box(self) -> None:
         ui.input(
-            placeholder='Search projects or offers…',
+            placeholder='Zoek projecten of offertes…',
             value=self.state.tree_search,
             on_change=lambda event: self.search_changed(event.value or ''),
         ).props(
@@ -91,7 +91,7 @@ class DrawerTree:
             if query and query not in project.name.lower():
                 offers = [offer for offer in offers if query in offer.name.lower()]
             if not offers:
-                ui.label('No offers in this project').classes('text-gray-500 pl-8')
+                ui.label('Geen offertes in dit project').classes('text-gray-500 pl-8')
                 return
 
             for offer in offers:
@@ -111,9 +111,9 @@ class DrawerTree:
             icon.tooltip(
                 comparison_status.get('message')
                 or comparison_status.get('step')
-                or 'Comparison status is stale. You can retry matching.'
+                or 'Vergelijkingsstatus is verouderd. U kunt het matchen opnieuw proberen.'
             )
-            ui.label('Matching' if comparison_running else 'Comparison status is stale')
+            ui.label('Bezig met matchen' if comparison_running else 'Vergelijkingsstatus is verouderd')
 
     def project_item_classes(self, project: Project) -> str:
         classes = 'w-full max-w-full rounded text-sm'
@@ -167,7 +167,7 @@ class DrawerTree:
                 icon='cancel',
                 on_click=lambda offer=offer: self.cancel_extraction(offer),
             ).props('flat dense round size=xs color=negative')
-            cancel_button.tooltip('Cancel extraction')
+            cancel_button.tooltip('Extractie annuleren')
             cancel_button.on('click.stop', lambda: None)
 
     def offer_status_icon(self, offer: Offer, status) -> None:
@@ -186,13 +186,13 @@ class DrawerTree:
     @staticmethod
     def status_icon_spec(status) -> tuple[str | None, str, str | None]:
         if status.result_exists:
-            return 'check_circle', 'text-green-700', 'View extraction status'
+            return 'check_circle', 'text-green-700', 'Extractiestatus bekijken'
         if status.extract_requested:
-            return 'hourglass_empty', 'text-orange-700', status.status_message or status.status_step or 'View extraction status'
+            return 'hourglass_empty', 'text-orange-700', status.status_message or status.status_step or 'Extractiestatus bekijken'
         if status.extraction_failed:
-            return 'warning', 'text-red-700', status.status_error or status.status_message or 'Extraction failed — view status'
+            return 'warning', 'text-red-700', status.status_error or status.status_message or 'Extractie mislukt — status bekijken'
         if status.status_stale:
-            return 'warning', 'text-orange-700', 'Extraction status is stale — view status'
+            return 'warning', 'text-orange-700', 'Extractiestatus is verouderd — status bekijken'
         if status.extraction_status and status.extraction_status.get('status') == 'cancelled':
-            return 'block', 'text-gray-500', 'Extraction cancelled — view status'
+            return 'block', 'text-gray-500', 'Extractie geannuleerd — status bekijken'
         return None, '', None

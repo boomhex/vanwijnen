@@ -56,49 +56,49 @@ class DrawerToolbar:
                 selected_text = ui.label(selected_label).classes(
                     'text-xs text-gray-700 min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap'
                 )
-                if selected_label != 'No selection':
+                if selected_label != 'Geen selectie':
                     selected_text.tooltip(selected_label)
                 with ui.row().classes('items-center gap-1 no-wrap shrink-0'):
                     self.toolbar_button(
                         icon='close' if self.state.selection_mode else 'checklist',
-                        tooltip='Exit selection mode' if self.state.selection_mode else 'Select multiple offers',
+                        tooltip='Selectiemodus verlaten' if self.state.selection_mode else 'Meerdere offertes selecteren',
                         on_click=self.toggle_selection_mode,
                         enabled=True,
                     )
                     self.toolbar_button(
                         icon='visibility' if selected_offer is not None else 'compare_arrows',
-                        tooltip='Open offer' if selected_offer is not None else 'Compare project',
+                        tooltip='Offerte openen' if selected_offer is not None else 'Project vergelijken',
                         on_click=self.open_selected,
                         enabled=selected_offer is not None or selected_project is not None,
                     )
                     self.toolbar_button(
                         icon='text_snippet',
-                        tooltip='Extract offer',
+                        tooltip='Offerte extraheren',
                         on_click=self.extract_selected,
                         enabled=self.can_extract_selected(selected_offer),
                     )
                     self.toolbar_button(
                         icon='restart_alt',
-                        tooltip='Reset extraction',
+                        tooltip='Extractie resetten',
                         on_click=self.reset_selected,
                         enabled=self.can_reset_selected(selected_offer),
                         color='warning',
                     )
                     self.toolbar_button(
                         icon='edit',
-                        tooltip='Rename',
+                        tooltip='Hernoemen',
                         on_click=self.rename_selected,
                         enabled=selected_offer is not None or selected_project is not None,
                     )
                     self.toolbar_button(
                         icon='drive_file_move',
-                        tooltip='Move offer',
+                        tooltip='Offerte verplaatsen',
                         on_click=self.move_selected,
                         enabled=selected_offer is not None,
                     )
                     self.toolbar_button(
                         icon='delete',
-                        tooltip='Delete',
+                        tooltip='Verwijderen',
                         on_click=self.delete_selected,
                         enabled=selected_offer is not None or selected_project is not None,
                         color='negative',
@@ -110,22 +110,22 @@ class DrawerToolbar:
     def render_bulk_row(self) -> None:
         count = len(self.state.selected_offers)
         with ui.row().classes('items-center gap-2 w-full no-wrap text-xs text-gray-700'):
-            ui.label(f'{count} selected')
+            ui.label(f'{count} geselecteerd')
             self.toolbar_button(
                 icon='text_snippet',
-                tooltip='Extract selected offers',
+                tooltip='Geselecteerde offertes extraheren',
                 on_click=self.bulk_extract,
                 enabled=count > 0,
             )
             self.toolbar_button(
                 icon='drive_file_move',
-                tooltip='Move selected offers',
+                tooltip='Geselecteerde offertes verplaatsen',
                 on_click=self.bulk_move,
                 enabled=count > 0,
             )
             self.toolbar_button(
                 icon='delete',
-                tooltip='Delete selected offers',
+                tooltip='Geselecteerde offertes verwijderen',
                 on_click=self.bulk_delete,
                 enabled=count > 0,
                 color='negative',
@@ -153,7 +153,7 @@ class DrawerToolbar:
             return offer.name
         if project is not None:
             return project.name
-        return 'No selection'
+        return 'Geen selectie'
 
     def selected_offer(self) -> Offer | None:
         offer = self.state.selected_offer

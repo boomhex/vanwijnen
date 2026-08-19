@@ -330,15 +330,21 @@ def friendly_error_message(error: Exception) -> str:
     return text or error.__class__.__name__
 
 
-def read_pdf(file) -> str:
+def read_pdf_with_pages(file) -> tuple[str, list[str]]:
+    """Read a PDF's text, plus a per-page breakdown for page-of-origin lookups.
+
+    `pages` keeps one entry per PDF page (blank pages as '') so indices stay
+    aligned with real page numbers; the joined text drops blanks, same as
+    read_pdf() did before this was split out.
+    """
     with pdfplumber.open(file) as pdf:
-        pages = []
-        for page in pdf.pages:
-            page_text = page.extract_text()
-            if page_text:
-                pages.append(page_text)
-    txt = '\n'.join(pages)
-    return txt
+        pages = [page.extract_text() or '' for page in pdf.pages]
+    joined = '\n'.join(page for page in pages if page)
+    return joined, pages
+
+
+def read_pdf(file) -> str:
+    return read_pdf_with_pages(file)[0]
 
 
 def has_extractable_text(text: str, *, min_chars: int = MIN_EXTRACTABLE_TEXT_CHARS) -> bool:
@@ -433,6 +439,22 @@ def post_identity(post: dict) -> tuple[str, str, str, str, str, str]:
 
 
 def merge_post_chunks(post_chunks: list[list[dict]]) -> list[dict]:
+    # Some documents reuse a Code/Regelnummer as a repeating section-header
+    # label spanning several distinct posts (e.g. "V01" for every line item
+    # under a "V01" heading), rather than as a unique per-post identifier.
+    # A code shared by more than two posts across the whole offer is almost
+    # certainly one of those labels, not a chunk-boundary duplicate — trust
+    # code-equality as identity only below that count.
+    code_counts: dict[str, int] = {}
+    for posts in post_chunks:
+        for post in posts:
+            if not isinstance(post, dict):
+                continue
+            code = post_code(post)
+            if code:
+                code_counts[code] = code_counts.get(code, 0) + 1
+    reliable_codes = {code for code, count in code_counts.items() if count <= 2}
+
     merged = []
 
     for posts in post_chunks:
@@ -440,7 +462,7 @@ def merge_post_chunks(post_chunks: list[list[dict]]) -> list[dict]:
             if not isinstance(post, dict):
                 continue
 
-            duplicate_index = find_duplicate_post_index(merged, post)
+            duplicate_index = find_duplicate_post_index(merged, post, reliable_codes)
             if duplicate_index is not None:
                 merged[duplicate_index] = merge_duplicate_posts(merged[duplicate_index], post)
                 continue
@@ -450,21 +472,21 @@ def merge_post_chunks(post_chunks: list[list[dict]]) -> list[dict]:
     return merged
 
 
-def find_duplicate_post_index(posts: list[dict], candidate: dict) -> int | None:
+def find_duplicate_post_index(posts: list[dict], candidate: dict, reliable_codes: set[str]) -> int | None:
     for index, post in enumerate(posts):
-        if are_duplicate_posts(post, candidate):
+        if are_duplicate_posts(post, candidate, reliable_codes):
             return index
 
     return None
 
 
-def are_duplicate_posts(first: dict, second: dict) -> bool:
+def are_duplicate_posts(first: dict, second: dict, reliable_codes: set[str] | None = None) -> bool:
     if post_identity(first) == post_identity(second):
         return True
 
     first_code = post_code(first)
     second_code = post_code(second)
-    if first_code and first_code == second_code:
+    if first_code and first_code == second_code and (reliable_codes is None or first_code in reliable_codes):
         return True
 
     if not descriptions_similar(first.get('Omschrijving'), second.get('Omschrijving')):
@@ -553,6 +575,37 @@ def normalized_post_text(value) -> str:
     text = re.sub(r'^\s*\d{4,6}\s+', '', text)
     text = re.sub(r'[^0-9a-z]+', ' ', text)
     return ' '.join(text.split())
+
+
+def find_post_page(source_text, pages: list[str], *, min_score: float = 0.35) -> str:
+    """Find which 1-indexed PDF page a post's source text most likely came from.
+
+    Deterministic, not LLM-based: scores each page by what fraction of the
+    source text's words appear on that page (a containment ratio, the same
+    shape as the candidate scoring in development/evals/eval_matching but
+    reimplemented locally rather than importing from evals into the app).
+    Ties go to the earliest page. Returns ONBEKEND rather than guessing when
+    no page clears min_score.
+    """
+    source_tokens = set(normalized_post_text(source_text).split())
+    if not source_tokens:
+        return UNKNOWN
+
+    best_page = None
+    best_score = 0.0
+    for index, page_text in enumerate(pages, start=1):
+        page_tokens = set(normalized_post_text(page_text).split())
+        if not page_tokens:
+            continue
+        score = len(source_tokens & page_tokens) / len(source_tokens)
+        if score > best_score:
+            best_score = score
+            best_page = index
+
+    if best_page is None or best_score < min_score:
+        return UNKNOWN
+
+    return str(best_page)
 
 
 def compatible_text_values(first, second) -> bool:
@@ -675,7 +728,9 @@ def parse_json_response(answer: str) -> dict:
     except JSONDecodeError as error:
         raise ValueError(
             f'LLM response was not valid JSON at line {error.lineno}, column {error.colno}. '
-            'The raw response was saved as llm_response.txt.'
+            'The raw response was saved in the offer folder for debugging '
+            '(llm_response.txt, llm_summary_response.txt, or llm_posts_chunk_N_response.txt, '
+            'depending on which step failed).'
         ) from error
 
 
@@ -988,6 +1043,12 @@ def fetch_posts_chunk(
         model=EXTRACTION_MODEL_ID,
         label=label,
     )
+    # Save before parsing, not after: extract_offer_chunked() only saves the
+    # chunk response once fetch_posts_chunk() returns, so a hard parse
+    # failure here (raised below) would otherwise leave nothing on disk for
+    # the exact response the error message claims was saved.
+    if response_callback is not None:
+        response_callback(f'llm_posts_chunk_{index}_response.txt', answer)
     posts, recovered = parse_posts_response(answer)
 
     if recovered:
@@ -1157,12 +1218,12 @@ def extract_offer(file: Path, folder_handler):
         folder_handler.save_named_llm_response(file, name, answer)
 
     try:
-        set_status('reading_pdf', 'Reading PDF text')
+        set_status('reading_pdf', 'PDF-tekst lezen')
         prompt = load_prompt(Path("./prompts/extract_prompt.txt"))
-        offer = read_pdf(file)
+        offer, page_texts = read_pdf_with_pages(file)
         logger.info('PDF text read: file=%s chars=%s lines=%s', file, len(offer), len(offer.splitlines()))
 
-        set_status('saving_raw_text', 'Saving raw PDF text')
+        set_status('saving_raw_text', 'Ruwe PDF-tekst opslaan')
         folder_handler.save_raw_pdf_text(file, offer)
         logger.info('Raw PDF text saved: file=%s', file)
 
@@ -1174,7 +1235,7 @@ def extract_offer(file: Path, folder_handler):
 
         use_chunked = should_use_chunked_extraction(offer)
         if use_chunked:
-            set_status('extracting_chunked', 'Extracting long PDF in chunks')
+            set_status('extracting_chunked', 'Lange PDF in delen extraheren')
             logger.info(
                 'Extraction mode selected: file=%s mode=chunked configured_mode=%s model=%s threshold_chars=%s',
                 file,
@@ -1184,7 +1245,7 @@ def extract_offer(file: Path, folder_handler):
             )
             offer_json, answer = extract_offer_chunked(offer, set_status, save_response)
         else:
-            set_status('calling_llm', 'Calling LLM')
+            set_status('calling_llm', 'LLM aanroepen')
             logger.info(
                 'Extraction mode selected: file=%s mode=one_shot configured_mode=%s model=%s threshold_chars=%s',
                 file,
@@ -1194,24 +1255,30 @@ def extract_offer(file: Path, folder_handler):
             )
             offer_json, answer = extract_offer_one_shot(prompt, offer, save_response)
 
-        set_status('saving_llm_response', 'Saving raw LLM response')
+        set_status('saving_llm_response', 'Ruw LLM-antwoord opslaan')
         save_response('llm_response.txt', answer)
         logger.info('Combined LLM response saved: file=%s response_chars=%s', file, len(answer))
 
-        set_status('validating_json', 'Validating extracted JSON')
+        set_status('validating_json', 'Geëxtraheerde JSON valideren')
         if isinstance(offer_json.get('Posten'), list):
             offer_json['Posten'] = filter_non_price_posts(offer_json['Posten'])
 
-        set_status('normalizing_amounts', 'Normalizing amounts')
+        set_status('normalizing_amounts', 'Bedragen normaliseren')
         offer_json = normalize_amounts(offer_json)
         offer_json = normalize_units(offer_json)
+
+        if isinstance(offer_json.get('Posten'), list):
+            for post in offer_json['Posten']:
+                brontekst = post.get('Brontekst')
+                source_text = brontekst if has_known_value(brontekst) else post.get('Omschrijving')
+                post['Pagina'] = find_post_page(source_text, page_texts)
 
         validation_warnings = validate_offer_json(offer_json)
         logger.info('Offer JSON validated: file=%s warnings=%s', file, len(validation_warnings))
         for warning in validation_warnings:
             logger.warning('Offer validation warning: file=%s warning=%s', file, warning)
 
-        set_status('saving_extract', 'Saving extract.json')
+        set_status('saving_extract', 'extract.json opslaan')
         folder_handler.save_result(file, offer_json)
         logger.info('Extract saved: file=%s posts=%s', file, len(offer_json.get('Posten', [])))
 
@@ -1220,7 +1287,7 @@ def extract_offer(file: Path, folder_handler):
             file,
             status='done',
             step='done',
-            message='Extraction completed',
+            message='Extractie voltooid',
             started_at=started_at,
         )
 
@@ -1232,7 +1299,7 @@ def extract_offer(file: Path, folder_handler):
             file,
             status='failed',
             step='failed',
-            message='Extraction failed',
+            message='Extractie mislukt',
             error=friendly_error_message(error),
             started_at=started_at,
         )

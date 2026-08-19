@@ -6,7 +6,7 @@
     "Posten": [
         {
             "Omschrijving": "SYSTEEMPLAFONDS ALGEMEEN",
-            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Blanka inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit, afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur wit, kanthout 18x38mm kleur zwart.",
+            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Blanka inleg, Afmeting: 600 x 600 x 20 mm, Plafondraster: 24mm breed, kleur wit, Afgehangen d.m.v. snelhangers, Randafwerking: Hoeklijn 24x24mm, kleur wit, Kanthout 18x38mm kleur zwart",
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "61127.51",
             "Eenheid": "m2",
@@ -16,10 +16,16 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Systeemplafonds",
             "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Rockfon Blanka inleg",
+                "Plafondraster 24mm breed wit",
+                "Snelhangers",
+                "Hoeklijn 24x24mm wit",
+                "Kanthout 18x38mm zwart"
+            ],
             "Exclusief": [
                 "Sparingen en/ of voorzieningen installaties",
                 "Achterhout, koven e.d.",
@@ -29,19 +35,17 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "Rockfon Blanka",
-                "inleg",
                 "600x600x20",
-                "snelhangers",
-                "hoeklijn",
-                "kanthout"
+                "systeemplafond"
             ],
-            "Brontekst": "1.57 1,00 m2 SYSTEEMPLAFONDS ALGEMEEN € 38,91 per m2 € 61.127,51\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Blanka inleg\nAfmeting: 600 x 600 x 20 mm\nPlafondraster:\n24mm breed, kleur wit\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur wit\nKanthout 18x38mm kleur zwart"
+            "Brontekst": "1.57 1,00 m2 SYSTEEMPLAFONDS ALGEMEEN € 38,91 per m2 € 61.127,51\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Blanka inleg\nAfmeting: 600 x 600 x 20 mm\nPlafondraster:\n24mm breed, kleur wit\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur wit\nKanthout 18x38mm kleur zwart",
+            "Pagina": "1"
         },
         {
-            "Omschrijving": "Alternatief bij SYSTEEMPLAFONDS ALGEMEEN: Rockfon Pallas i.p.v. Rockfon Blanka",
+            "Omschrijving": "Alternatief bij SYSTEEMPLAFONDS ALGEMEEN: Rockfon Pallas",
             "Beschrijving": "Toepassen van de Rockfon Pallas i.p.v. Rockfon Blanka levert een minderprijs op van € 9,30 per m2.",
             "Categorie": "NIEUWB. IKC",
-            "Totaalbedrag": "ONBEKEND",
+            "Totaalbedrag": "-14610.30",
             "Eenheid": "m2",
             "Eenheidsprijs": "-9.30",
             "Aantal": "1571.00",
@@ -49,10 +53,12 @@
             "Status": "alternative",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Systeemplafonds",
             "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Rockfon Pallas"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
@@ -60,11 +66,12 @@
                 "Rockfon Pallas",
                 "minderprijs"
             ],
-            "Brontekst": "Alternatief:\nToepassen van de Rockfon Pallas i.p.v. Rockfon Blanka levert\neen minderprijs op van € 9,30 per m2."
+            "Brontekst": "Alternatief:\nToepassen van de Rockfon Pallas i.p.v. Rockfon Blanka levert\neen minderprijs op van € 9,30 per m2.",
+            "Pagina": "1"
         },
         {
             "Omschrijving": "SYSTEEMPLAFONDS SANITAIR",
-            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Cleanspace Pro inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit, afgehangen d.m.v. snelhangers. Clips: HDC clips. Randafwerking: Hoeklijn 24x24mm, kleur wit, kanthout 18x38mm kleur zwart.",
+            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Cleanspace Pro inleg, Afmeting: 600 x 600 x 20 mm, Plafondraster: 24mm breed, kleur wit, Afgehangen d.m.v. snelhangers, Clips: HDC clips, Randafwerking: Hoeklijn 24x24mm, kleur wit, Kanthout 18x38mm kleur zwart",
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "5983.47",
             "Eenheid": "m2",
@@ -74,10 +81,17 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Systeemplafonds",
             "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Rockfon Cleanspace Pro inleg",
+                "Plafondraster 24mm breed wit",
+                "Snelhangers",
+                "HDC clips",
+                "Hoeklijn 24x24mm wit",
+                "Kanthout 18x38mm zwart"
+            ],
             "Exclusief": [
                 "Sparingen en/ of voorzieningen installaties",
                 "Achterhout, koven e.d.",
@@ -87,18 +101,15 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "Rockfon Cleanspace Pro",
-                "inleg",
                 "600x600x20",
-                "snelhangers",
-                "HDC clips",
-                "hoeklijn",
-                "kanthout"
+                "sanitair"
             ],
-            "Brontekst": "89,00 m2 SYSTEEMPLAFONDS SANITAIR € 67,23 per m2 € 5.983,47\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Cleanspace Pro inleg\nAfmeting: 600 x 600 x 20 mm\nPlafondraster:\n24mm breed, kleur wit\nAfgehangen d.m.v. snelhangers\nClips: HDC clips\nRandafwerking:\nHoeklijn 24x24mm, kleur wit\nKanthout 18x38mm kleur zwart"
+            "Brontekst": "89,00 m2 SYSTEEMPLAFONDS SANITAIR € 67,23 per m2 € 5.983,47\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Cleanspace Pro inleg\nAfmeting: 600 x 600 x 20 mm\nPlafondraster:\n24mm breed, kleur wit\nAfgehangen d.m.v. snelhangers\nClips: HDC clips\nRandafwerking:\nHoeklijn 24x24mm, kleur wit\nKanthout 18x38mm kleur zwart",
+            "Pagina": "1"
         },
         {
             "Omschrijving": "HOUTEN LATTENPLAFOND",
-            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Shiluvit 7-555. Houtsoort: American Yellow Pine 3-zijdig Eikenlook. Afmeting: 20x55-55 mm. Plafondraster: 24mm breed met crosslock, afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur zwart, kanthout 18x38mm kleur zwart.",
+            "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Shiluvit 7-555, Houtsoort: American Yellow Pine 3-zijdig Eikenlook, Afmeting: 20x55-55 mm, Plafondraster: 24mm breed met crosslock, Afgehangen d.m.v. snelhangers, Randafwerking: Hoeklijn 24x24mm, kleur zwart, Kanthout 18x38mm kleur zwart",
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "49187.73",
             "Eenheid": "m2",
@@ -108,10 +119,17 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
-            "Werksoort": "houten lattenplafond",
+            "Subcategorie": "Houten lattenplafond",
+            "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Shiluvit 7-555",
+                "American Yellow Pine 3-zijdig Eikenlook",
+                "Plafondraster 24mm breed met crosslock",
+                "Snelhangers",
+                "Hoeklijn 24x24mm zwart",
+                "Kanthout 18x38mm zwart"
+            ],
             "Exclusief": [
                 "Sparingen en/ of voorzieningen installaties",
                 "Achterhout, koven e.d.",
@@ -123,18 +141,16 @@
                 "Shiluvit 7-555",
                 "American Yellow Pine",
                 "Eikenlook",
-                "crosslock",
-                "snelhangers",
-                "hoeklijn",
-                "kanthout"
+                "lattenplafond"
             ],
-            "Brontekst": "217,00 m2 HOUTEN LATTENPLAFOND € 226,67 per m2 € 49.187,73\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Shiluvit 7­555\nHoutsoort: American Yellow Pine 3­zijdig Eikenlook\nAfmeting: 20x55­55 mm\nPlafondraster:\n24mm breed met crosslock\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur zwart\nKanthout 18x38mm kleur zwart"
+            "Brontekst": "217,00 m2 HOUTEN LATTENPLAFOND € 226,67 per m2 € 49.187,73\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Shiluvit 7-555\nHoutsoort: American Yellow Pine 3-zijdig Eikenlook\nAfmeting: 20x55-55 mm\nPlafondraster:\n24mm breed met crosslock\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur zwart\nKanthout 18x38mm kleur zwart",
+            "Pagina": "2"
         },
         {
-            "Omschrijving": "Meerprijs bij HOUTEN LATTENPLAFOND: Toepassen van een steenwolpaneel",
+            "Omschrijving": "Meerprijs bij HOUTEN LATTENPLAFOND: steenwolpaneel",
             "Beschrijving": "Toepassen van een steenwolpaneel op deze plafonds, levert een meerprijs op van € 15,60 per m2",
             "Categorie": "NIEUWB. IKC",
-            "Totaalbedrag": "ONBEKEND",
+            "Totaalbedrag": "3385.20",
             "Eenheid": "m2",
             "Eenheidsprijs": "15.60",
             "Aantal": "217.00",
@@ -142,10 +158,12 @@
             "Status": "optional",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
-            "Werksoort": "houten lattenplafond",
+            "Subcategorie": "Houten lattenplafond",
+            "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "steenwolpaneel"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
@@ -153,11 +171,12 @@
                 "steenwolpaneel",
                 "meerprijs"
             ],
-            "Brontekst": "Meerprijs:\nToepassen van een steenwolpaneel op deze plafonds, levert\neen meerprijs op van € 15,60 per m2"
+            "Brontekst": "Meerprijs:\nToepassen van een steenwolpaneel op deze plafonds, levert\neen meerprijs op van € 15,60 per m2",
+            "Pagina": "2"
         },
         {
             "Omschrijving": "SPORTPLAFOND",
-            "Beschrijving": "Het leveren en monteren van een nieuw sportplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Olympia sportplafond. Afmeting: 1166 x 1166 x 40 mm. Plafondraster: 50mm breed, kleur wit, afgehangen d.m.v. noniushangers. Randafwerking: Hoeklijn 30x30mm, kleur wit, kanthout 18x38mm kleur zwart.",
+            "Beschrijving": "Het leveren en monteren van een nieuw sportplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Olympia sportplafond, Afmeting: 1166 x 1166 x 40 mm, Plafondraster: 50mm breed, kleur wit, Afgehangen d.m.v. noniushangers, Randafwerking: Hoeklijn 30x30mm, kleur wit, Kanthout 18x38mm kleur zwart",
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "9722.19",
             "Eenheid": "m2",
@@ -167,10 +186,16 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
-            "Werksoort": "sportplafond",
+            "Subcategorie": "Sportplafond",
+            "Werksoort": "systeemplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Rockfon Olympia sportplafond",
+                "Plafondraster 50mm breed wit",
+                "Noniushangers",
+                "Hoeklijn 30x30mm wit",
+                "Kanthout 18x38mm zwart"
+            ],
             "Exclusief": [
                 "Sparingen en/ of voorzieningen installaties",
                 "Achterhout, koven e.d.",
@@ -180,13 +205,10 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "Rockfon Olympia",
-                "sportplafond",
-                "1166x1166x40",
-                "noniushangers",
-                "hoeklijn",
-                "kanthout"
+                "sportplafond"
             ],
-            "Brontekst": "7 9,00 m2 SPORTPLAFOND € 123,07 per m2 € 9.722,19\nHet leveren en monteren van een nieuw sportplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Olympia sportplafond\nAfmeting: 1166 x 1166 x 40 mm\nPlafondraster:\n50mm breed, kleur wit\nAfgehangen d.m.v. noniushangers\nRandafwerking:\nHoeklijn 30x30mm, kleur wit\nKanthout 18x38mm kleur zwart"
+            "Brontekst": "7 9,00 m2 SPORTPLAFOND € 123,07 per m2 € 9.722,19\nHet leveren en monteren van een nieuw sportplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Olympia sportplafond\nAfmeting: 1166 x 1166 x 40 mm\nPlafondraster:\n50mm breed, kleur wit\nAfgehangen d.m.v. noniushangers\nRandafwerking:\nHoeklijn 30x30mm, kleur wit\nKanthout 18x38mm kleur zwart",
+            "Pagina": "2"
         },
         {
             "Omschrijving": "SYSTEEMPLAFOND AANSLUITING RONDE WAND",
@@ -196,15 +218,22 @@
             "Eenheid": "m1",
             "Eenheidsprijs": "11.15",
             "Aantal": "35.00",
-            "PostType": "line_total",
+            "PostType": "surcharge",
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Aansluitingen",
             "Werksoort": "systeemplafond",
             "Prijsbasis": "per m1",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "buigbaar kanthout",
+                "buigbaar hoeklijn"
+            ],
+            "Exclusief": [
+                "Sparingen en/ of voorzieningen installaties",
+                "Achterhout, koven e.d.",
+                "Kit en/of pur werkzaamheden"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
@@ -212,11 +241,12 @@
                 "buigbaar kanthout",
                 "buigbaar hoeklijn"
             ],
-            "Brontekst": "35,00 m1 SYSTEEMPLAFOND AANSLUITING RONDE WAND € 11,15 per m1 € 390,32\nToeslag voor het aansluiten van het systeemplafond op een ronde\nwand d.m.v. buigbaar kanthout en buigbaar hoeklijn."
+            "Brontekst": "35,00 m1 SYSTEEMPLAFOND AANSLUITING RONDE WAND € 11,15 per m1 € 390,32\nToeslag voor het aansluiten van het systeemplafond op een ronde\nwand d.m.v. buigbaar kanthout en buigbaar hoeklijn.",
+            "Pagina": "2"
         },
         {
             "Omschrijving": "AKOESTISCH GIPSPLAFOND",
-            "Beschrijving": "Het leveren en monteren van een nieuw geperforeerd gipsplafond volgens onderstaande specificaties: Type: PD 68P/55.1. Profielen: 2x C 60/27. Isolatie: N.v.t. Beplating 1-laags: 1x geperforeerd gips 12-20-35. Kitwerk: N.v.t.",
+            "Beschrijving": "Het leveren en monteren van een nieuw geperforeerd gipsplafond volgens onderstaande specificaties: Type: PD 68P/55.1, Profielen: 2x C 60/27, Isolatie: N.v.t., Beplating 1-laags: 1x geperforeerd gips 12-20-35, Kitwerk: N.v.t.",
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "11187.18",
             "Eenheid": "m2",
@@ -226,10 +256,14 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Gipsplafond",
             "Werksoort": "gipsplafond",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "PD 68P/55.1",
+                "Profielen 2x C 60/27",
+                "geperforeerd gips 12-20-35"
+            ],
             "Exclusief": [
                 "Sparingen, voorzieningen installaties en/ of achterhout",
                 "Brand en geluidwerende sparingen afdichtingen",
@@ -239,10 +273,11 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "PD 68P/55.1",
-                "C 60/27",
-                "geperforeerd gips"
+                "geperforeerd gips",
+                "akoestisch gipsplafond"
             ],
-            "Brontekst": "217,00 m2 AKOESTISCH GIPSPLAFOND € 51,55 per m2 € 11.187,18\nHet leveren en monteren van een nieuw geperforeerd gipsplafond\nvolgens onderstaande specificaties:\nType: PD 68P/55.1\nProfielen: 2x C 60/27\nIsolatie: N.v.t.\nBeplating 1­ laags:\n1x geperforeerd gips 12­20­35\nKitwerk: N.v.t."
+            "Brontekst": "217,00 m2 AKOESTISCH GIPSPLAFOND € 51,55 per m2 € 11.187,18\nHet leveren en monteren van een nieuw geperforeerd gipsplafond\nvolgens onderstaande specificaties:\nType: PD 68P/55.1\nProfielen: 2x C 60/27\nIsolatie: N.v.t.\nBeplating 1­ laags:\n1x geperforeerd gips 12­20­35\nKitwerk: N.v.t.",
+            "Pagina": "2"
         },
         {
             "Omschrijving": "AFWERKEN GIPSPLAFOND",
@@ -256,7 +291,7 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Gipsplafond",
             "Werksoort": "gipsplafond",
             "Prijsbasis": "per m2",
             "Inclusief": [],
@@ -265,9 +300,10 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "afwerken",
-                "geperforeerde gipsplafonds"
+                "gipsplafond"
             ],
-            "Brontekst": "21 7,00 m2 AFWERKEN GIPSPLAFOND € 16,15 per m2 € 3.504,64\nAfwerken van de geperforeerde gipsplafonds."
+            "Brontekst": "21 7,00 m2 AFWERKEN GIPSPLAFOND € 16,15 per m2 € 3.504,64\nAfwerken of de geperforeerde gipsplafonds.",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "TOESLAG LICHTKOEPELS IN GIPSPLAFOND",
@@ -281,7 +317,7 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
+            "Subcategorie": "Gipsplafond",
             "Werksoort": "gipsplafond",
             "Prijsbasis": "per stuk",
             "Inclusief": [],
@@ -290,9 +326,11 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "lichtkoepels",
-                "ronde lichtkoepels"
+                "gipsplafond",
+                "toeslag"
             ],
-            "Brontekst": "5,00 stuk TOESLAG LICHTKOEPELS IN GIPSPLAFOND € 103,10 per stuk € 515,52\nToeslag voor het aansluiten van het geperforeerde gipsplafond tegen\nde ronde lichtkoepels."
+            "Brontekst": "5,00 stuk TOESLAG LICHTKOEPELS IN GIPSPLAFOND € 103,10 per stuk € 515,52\nToeslag voor het aansluiten van het geperforeerde gipsplafond tegen\nde ronde lichtkoepels.",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "GIPSKOOF",
@@ -306,20 +344,24 @@
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
-            "Subcategorie": "ONBEKEND",
-            "Werksoort": "gipskoof",
+            "Subcategorie": "Gipsplafond",
+            "Werksoort": "gipsplafond",
             "Prijsbasis": "per m1",
-            "Inclusief": [],
+            "Inclusief": [
+                "detail 25",
+                "klasse A afwerking",
+                "flexcorner"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "gipskoof",
                 "detail 25",
-                "klasse A",
                 "flexcorner"
             ],
-            "Brontekst": "16,00 m1 GIPSKOOF € 127,23 per m1 € 2.035,72\nLeveren en monteren van een gipskoof, e.e.a. volgens detail 25. Gips is\nafgewerkt klasse A en de hoeken afgewerkt met flexcorner."
+            "Brontekst": "16,00 m1 GIPSKOOF € 127,23 per m1 € 2.035,72\nLeveren en monteren van een gipskoof, e.e.a. volgens detail 25. Gips is\nafgewerkt klasse A en de hoeken afgewerkt met flexcorner.",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "SPARINGEN/ACHTERHOUT",
@@ -327,14 +369,14 @@
             "Categorie": "NIEUWB. IKC",
             "Totaalbedrag": "117.56",
             "Eenheid": "post",
-            "Eenheidsprijs": "ONBEKEND",
-            "Aantal": "ONBEKEND",
+            "Eenheidsprijs": "117.56",
+            "Aantal": "1",
             "PostType": "line_total",
             "Status": "included",
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "sparingen",
+            "Werksoort": "timmerwerk",
             "Prijsbasis": "totaal",
             "Inclusief": [],
             "Exclusief": [],
@@ -344,7 +386,8 @@
                 "sparingen",
                 "achterhout"
             ],
-            "Brontekst": "SPARINGEN/ACHTERHOUT € 117,56"
+            "Brontekst": "SPARINGEN/ACHTERHOUT € 117,56",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "SPARINGEN/ACHTERHOUT PLAFONDS",
@@ -359,7 +402,7 @@
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "sparingen",
+            "Werksoort": "timmerwerk",
             "Prijsbasis": "per m2",
             "Inclusief": [],
             "Exclusief": [],
@@ -368,13 +411,15 @@
             "MatchHints": [
                 "sparingen",
                 "achterhout",
-                "plafonds"
+                "plafonds",
+                "stelpost"
             ],
-            "Brontekst": "2.094,00 m2 SPARINGEN/ACHTERHOUT PLAFONDS € 1,49 per m2 € 3.116,17\nStelpost sparingen en achterhout in de nieuwe plafonds."
+            "Brontekst": "2.094,00 m2 SPARINGEN/ACHTERHOUT PLAFONDS € 1,49 per m2 € 3.116,17\nStelpost sparingen en achterhout in de nieuwe plafonds.",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "METALSTUD SCHEIDINGSWAND 125MM",
-            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 125/2.75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 2-zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 125/2.75.2.A\nProfielen: 1x C/U 75 mm stijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm, 1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "127783.39",
             "Eenheid": "m2",
@@ -388,7 +433,12 @@
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "Kitwerk"
+                "leveren",
+                "monteren",
+                "steenwol 60mm",
+                "gipskartonplaat Ak 12,5mm",
+                "gipsvezelplaat Ak 12,5mm",
+                "kitwerk"
             ],
             "Exclusief": [
                 "Sparingen, voorzieningen installaties en/ of achterhout",
@@ -405,11 +455,12 @@
                 "gipskartonplaat",
                 "gipsvezelplaat"
             ],
-            "Brontekst": "1.634,00 m2 METALSTUD SCHEIDINGSWAND 125MM € 78,20 per m2 € 127.783,39\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 125/2.75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl."
+            "Brontekst": "1.634,00 m2 METALSTUD SCHEIDINGSWAND 125MM € 78,20 per m2 € 127.783,39\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 125/2.75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Pagina": "3"
         },
         {
-            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 125MM: Toepassen van glaswol i.p.v. steenwol",
-            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD SCHEIDINGSWAND 125MM.",
+            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 125MM: Glaswol i.p.v. steenwol",
+            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud scheidingswand 125mm.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
@@ -422,20 +473,25 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "glaswol"
+            ],
+            "Exclusief": [
+                "steenwol"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
+                "minderprijs",
                 "glaswol",
-                "steenwol",
-                "minderprijs"
+                "steenwol"
             ],
-            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2"
+            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "METALSTUD SCHEIDINGSWAND 145MM",
-            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 145/2.45*45.2.A\nProfielen: 2x C/U 45 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 40mm, min. 50kg/m3\nBeplating 2-zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 145/2.45*45.2.A\nProfielen: 2x C/U 45 mm stijlen hoh 600mm\nIsolatie: Steenwol 40mm, min. 50kg/m3\nBeplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm, 1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "35522.88",
             "Eenheid": "m2",
@@ -449,7 +505,12 @@
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "Kitwerk"
+                "leveren",
+                "monteren",
+                "steenwol 40mm",
+                "gipskartonplaat Ak 12,5mm",
+                "gipsvezelplaat Ak 12,5mm",
+                "kitwerk"
             ],
             "Exclusief": [
                 "Sparingen, voorzieningen installaties en/ of achterhout",
@@ -466,11 +527,12 @@
                 "gipskartonplaat",
                 "gipsvezelplaat"
             ],
-            "Brontekst": "370,00 m2 METALSTUD SCHEIDINGSWAND 145MM € 96,01 per m2 € 35.522,88\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 145/2.45*45.2.A\nProfielen: 2x C/U 45 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 40mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl."
+            "Brontekst": "370,00 m2 METALSTUD SCHEIDINGSWAND 145MM € 96,01 per m2 € 35.522,88\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 145/2.45*45.2.A\nProfielen: 2x C/U 45 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 40mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Pagina": "3"
         },
         {
-            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 145MM: Toepassen van glaswol i.p.v. steenwol",
-            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD SCHEIDINGSWAND 145MM.",
+            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 145MM: Glaswol i.p.v. steenwol",
+            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud scheidingswand 145mm.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
@@ -483,20 +545,25 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "glaswol"
+            ],
+            "Exclusief": [
+                "steenwol"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
+                "minderprijs",
                 "glaswol",
-                "steenwol",
-                "minderprijs"
+                "steenwol"
             ],
-            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 2,40 per m2"
+            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 2,40 per m2",
+            "Pagina": "4"
         },
         {
             "Omschrijving": "METALSTUD SCHEIDINGSWAND 200MM",
-            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 200/2.150.2.A\nProfielen: 1x C/U 150 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 100mm, min. 50kg/m3\nBeplating 2-zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 200/2.150.2.A\nProfielen: 1x C/U 150 mm stijlen hoh 600mm\nIsolatie: Steenwol 100mm, min. 50kg/m3\nBeplating 2-zijdig: 1x gipskartonplaat Ak 12,5mm, 1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "666.92",
             "Eenheid": "m2",
@@ -510,7 +577,12 @@
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "Kitwerk"
+                "leveren",
+                "monteren",
+                "steenwol 100mm",
+                "gipskartonplaat Ak 12,5mm",
+                "gipsvezelplaat Ak 12,5mm",
+                "kitwerk"
             ],
             "Exclusief": [
                 "Sparingen, voorzieningen installaties en/ of achterhout",
@@ -527,11 +599,12 @@
                 "gipskartonplaat",
                 "gipsvezelplaat"
             ],
-            "Brontekst": "8,00 m2 METALSTUD SCHEIDINGSWAND 200MM € 83,37 per m2 € 666,92\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 200/2.150.2.A\nProfielen: 1x C/U 150 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 100mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl."
+            "Brontekst": "8,00 m2 METALSTUD SCHEIDINGSWAND 200MM € 83,37 per m2 € 666,92\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 200/2.150.2.A\nProfielen: 1x C/U 150 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 100mm, min. 50kg/m3\nBeplating 2\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Pagina": "4"
         },
         {
-            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 200MM: Toepassen van glaswol i.p.v. steenwol",
-            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD SCHEIDINGSWAND 200MM.",
+            "Omschrijving": "Alternatief bij METALSTUD SCHEIDINGSWAND 200MM: Glaswol i.p.v. steenwol",
+            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud scheidingswand 200mm.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
@@ -544,20 +617,25 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "glaswol"
+            ],
+            "Exclusief": [
+                "steenwol"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
+                "minderprijs",
                 "glaswol",
-                "steenwol",
-                "minderprijs"
+                "steenwol"
             ],
-            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 6,20 per m2"
+            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 6,20 per m2",
+            "Pagina": "4"
         },
         {
             "Omschrijving": "METALSTUD VOORZETWAND 100MM",
-            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 100V/75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 1-zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand volgens onderstaande specificaties:\nType: MS 100V/75.2.A\nProfielen: 1x C/U 75 mm stijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 1-zijdig: 1x gipskartonplaat Ak 12,5mm, 1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "8413.49",
             "Eenheid": "m2",
@@ -571,7 +649,12 @@
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "Kitwerk"
+                "leveren",
+                "monteren",
+                "steenwol 60mm",
+                "gipskartonplaat Ak 12,5mm",
+                "gipsvezelplaat Ak 12,5mm",
+                "kitwerk"
             ],
             "Exclusief": [
                 "Sparingen, voorzieningen installaties en/ of achterhout",
@@ -588,11 +671,12 @@
                 "gipskartonplaat",
                 "gipsvezelplaat"
             ],
-            "Brontekst": "15 3,00 m2 METALSTUD VOORZETWAND 100MM € 54,99 per m2 € 8.413,49\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 100V/75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 1\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl."
+            "Brontekst": "15 3,00 m2 METALSTUD VOORZETWAND 100MM € 54,99 per m2 € 8.413,49\nHet leveren en monteren van een nieuwe metalstud voorzetwand\nvolgens onderstaande specificaties:\nType: MS 100V/75.2.A\nProfielen: 1x C/U 75 mm\nstijlen hoh 600mm\nIsolatie: Steenwol 60mm, min. 50kg/m3\nBeplating 1\u0000zijdig:\n1x gipskartonplaat Ak 12,5mm\n1x gipsvezelplaat Ak 12,5mm\nKitwerk: incl.",
+            "Pagina": "4"
         },
         {
-            "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 100MM: Toepassen van glaswol i.p.v. steenwol",
-            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD VOORZETWAND 100MM.",
+            "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 100MM: Glaswol i.p.v. steenwol",
+            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud voorzetwand 100mm.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
@@ -605,16 +689,21 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "glaswol"
+            ],
+            "Exclusief": [
+                "steenwol"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
+                "minderprijs",
                 "glaswol",
-                "steenwol",
-                "minderprijs"
+                "steenwol"
             ],
-            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2"
+            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "METALSTUD VOORZETWAND 30 MIN. BRANDWEREND",
@@ -632,10 +721,13 @@
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "Kitwerk"
+                "Kitwerk",
+                "Steenwol 60mm",
+                "gipsvezelplaat Ak 12,5mm"
             ],
             "Exclusief": [
-                "Sparingen, voorzieningen installaties en/ of achterhout",
+                "Sparingen",
+                "voorzieningen installaties en/ of achterhout",
                 "Brand en geluidwerende sparingen afdichtingen",
                 "Plinten en/ of aftimmerlatten"
             ],
@@ -643,15 +735,17 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "MS 100V/75.2.A",
-                "steenwol",
+                "C/U 75 mm",
+                "Steenwol",
                 "gipsvezelplaat",
-                "brandwerend"
+                "30 min. brandwerend"
             ],
-            "Brontekst": "56,00 m2 METALSTUD VOORZETWAND 30 MIN. BRANDWEREND € 61,25 per m2 € 3.430,03"
+            "Brontekst": "56,00 m2 METALSTUD VOORZETWAND 30 MIN. BRANDWEREND € 61,25 per m2 € 3.430,03",
+            "Pagina": "4"
         },
         {
-            "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND: Toepassen van glaswol i.p.v. steenwol",
-            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND.",
+            "Omschrijving": "Alternatief bij METALSTUD VOORZETWAND 30 MIN. BRANDWEREND: Glaswol i.p.v. steenwol",
+            "Beschrijving": "Minderprijs voor het toepassen van glaswol i.p.v. steenwol bij de metalstud voorzetwand 30 min. brandwerend.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "m2",
@@ -664,16 +758,21 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
-            "Exclusief": [],
+            "Inclusief": [
+                "glaswol"
+            ],
+            "Exclusief": [
+                "steenwol"
+            ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
+                "minderprijs",
                 "glaswol",
-                "steenwol",
-                "minderprijs"
+                "steenwol"
             ],
-            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2"
+            "Brontekst": "Minderprijs:\nToepassen van glaswol i.p.v. steenwol € 4,80 per m2",
+            "Pagina": "3"
         },
         {
             "Omschrijving": "METALSTUD HANGWAND 125MM",
@@ -692,10 +791,14 @@
             "Prijsbasis": "per m1",
             "Inclusief": [
                 "Kitwerk",
-                "Kopsezijde voorzien van 1 strook zetwerk"
+                "Steenwol 60mm",
+                "gipskartonplaat Ak 12,5mm",
+                "gipsvezelplaat Ak 12,5mm",
+                "zetwerk"
             ],
             "Exclusief": [
-                "Sparingen, voorzieningen installaties en/ of achterhout",
+                "Sparingen",
+                "voorzieningen installaties en/ of achterhout",
                 "Brand en geluidwerende sparingen afdichtingen",
                 "Plinten en/ of aftimmerlatten"
             ],
@@ -703,12 +806,14 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "MS 125/2.75.2.A",
-                "steenwol",
+                "C/U 75 mm",
+                "Steenwol",
                 "gipskartonplaat",
                 "gipsvezelplaat",
-                "hangwand"
+                "zetwerk"
             ],
-            "Brontekst": "3 5,00 m1 METALSTUD HANGWAND 125MM € 196,63 per m1 € 6.882,12"
+            "Brontekst": "3 5,00 m1 METALSTUD HANGWAND 125MM € 196,63 per m1 € 6.882,12",
+            "Pagina": "5"
         },
         {
             "Omschrijving": "STELLEN EN MONTEREN DEURKOZIJNEN",
@@ -728,7 +833,7 @@
             "Inclusief": [],
             "Exclusief": [
                 "Toepassen verzwaarde stijlen t.b.v. kozijnen",
-                "Horizontaal of verticaal transport kozijnen."
+                "Horizontaal of verticaal transport kozijnen"
             ],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
@@ -737,7 +842,8 @@
                 "stellen",
                 "monteren"
             ],
-            "Brontekst": "30 1,00 m2 STELLEN EN MONTEREN DEURKOZIJNEN € 30,98 per m2 € 9.326,30"
+            "Brontekst": "30 1,00 m2 STELLEN EN MONTEREN DEURKOZIJNEN € 30,98 per m2 € 9.326,30",
+            "Pagina": "5"
         },
         {
             "Omschrijving": "TOESLAG VERZWAARDE STIJLEN",
@@ -754,19 +860,23 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m1",
-            "Inclusief": [],
+            "Inclusief": [
+                "verzwaarde stijlen 2mm"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "verzwaarde stijlen",
+                "2mm dik",
                 "kozijnen"
             ],
-            "Brontekst": "438,00 m1 TOESLAG VERZWAARDE STIJLEN € 8,59 per m1 € 3.760,74"
+            "Brontekst": "438,00 m1 TOESLAG VERZWAARDE STIJLEN € 8,59 per m1 € 3.760,74",
+            "Pagina": "5"
         },
         {
             "Omschrijving": "SANITAIRE VOORZETWAND",
-            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties:\nType: MS 100V/75.2\nProfielen: 1x C/U 75 mm\nIsolatie: N.v.t.\nBeplating 1-zijdig: 1x Gipskartonlaat Ak 12,5mm, 1x Gipsvezelplaat AK 12,5mm\nKitwerk: N.v.t.",
+            "Beschrijving": "Het leveren en monteren van een nieuwe metalstud voorzetwand in natte ruimtes volgens onderstaande specificaties:\nType: MS 100V/75.2\nProfielen: 1x C/U 75 mm\nIsolatie: N.v.t.\nBeplating 1-zijdig:\n1x Gipskartonlaat Ak 12,5mm\n1x Gipsvezelplaat AK 12,5mm\nKitwerk: N.v.t.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "3579.53",
             "Eenheid": "m2",
@@ -779,9 +889,13 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "Gipskartonlaat Ak 12,5mm",
+                "Gipsvezelplaat AK 12,5mm"
+            ],
             "Exclusief": [
-                "Sparingen, voorzieningen installaties en/ of achterhout",
+                "Sparingen",
+                "voorzieningen installaties en/ of achterhout",
                 "Brand en geluidwerende sparingen afdichtingen",
                 "Plinten en/ of aftimmerlatten"
             ],
@@ -790,10 +904,11 @@
             "MatchHints": [
                 "MS 100V/75.2",
                 "natte ruimtes",
-                "gipskartonplaat",
-                "gipsvezelplaat"
+                "Gipskartonlaat",
+                "Gipsvezelplaat"
             ],
-            "Brontekst": "100,00 m2 SANITAIRE VOORZETWAND € 35,80 per m2 € 3.579,53"
+            "Brontekst": "100,00 m2 SANITAIRE VOORZETWAND € 35,80 per m2 € 3.579,53",
+            "Pagina": "5"
         },
         {
             "Omschrijving": "TOESLAG HANGTOILET",
@@ -808,7 +923,7 @@
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "toiletoorzieningen",
+            "Werksoort": "timmerwerk",
             "Prijsbasis": "per stuk",
             "Inclusief": [
                 "Sparingen",
@@ -822,7 +937,8 @@
                 "sparingen",
                 "achterhout"
             ],
-            "Brontekst": "11,00 stuk TOESLAG HANGTOILET € 107,65 per stuk € 1.184,20"
+            "Brontekst": "11,00 stuk TOESLAG HANGTOILET € 107,65 per stuk € 1.184,20",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "TOESLAG MIVA TOILET",
@@ -837,7 +953,7 @@
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "toiletoorzieningen",
+            "Werksoort": "timmerwerk",
             "Prijsbasis": "totaal",
             "Inclusief": [
                 "Verstevigingen",
@@ -854,7 +970,8 @@
                 "sparingen",
                 "achterhout"
             ],
-            "Brontekst": "1,00 stuk TOESLAG MIVA TOILET € 195,68"
+            "Brontekst": "1,00 stuk TOESLAG MIVA TOILET € 195,68",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "ACHTERHOUT URINOIR",
@@ -869,17 +986,20 @@
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "achterhout",
+            "Werksoort": "timmerwerk",
             "Prijsbasis": "per stuk",
-            "Inclusief": [],
+            "Inclusief": [
+                "achterhout"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
-                "urinoir",
+                "urinior",
                 "achterhout"
             ],
-            "Brontekst": "13,00 stuk ACHTERHOUT URINOIR € 16,13 per stuk € 209,74"
+            "Brontekst": "13,00 stuk ACHTERHOUT URINOIR € 16,13 per stuk € 209,74",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "INBOUWEN BRANDSLANGHASPELKAST",
@@ -894,7 +1014,7 @@
             "Code": "ONBEKEND",
             "Regelnummer": "ONBEKEND",
             "Subcategorie": "ONBEKEND",
-            "Werksoort": "montagewerk",
+            "Werksoort": "montage",
             "Prijsbasis": "per stuk",
             "Inclusief": [],
             "Exclusief": [],
@@ -904,7 +1024,8 @@
                 "brandslanghaspelkast",
                 "inbouwen"
             ],
-            "Brontekst": "6,00 stuk INBOUWEN BRANDSLANGHASPELKAST € 77,51 per stuk € 465,05"
+            "Brontekst": "6,00 stuk INBOUWEN BRANDSLANGHASPELKAST € 77,51 per stuk € 465,05",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "RONDE METSTUDWANDEN",
@@ -921,7 +1042,10 @@
             "Subcategorie": "ONBEKEND",
             "Werksoort": "metalstud wand",
             "Prijsbasis": "per m2",
-            "Inclusief": [],
+            "Inclusief": [
+                "buigbare profielen",
+                "buiggips 6mm"
+            ],
             "Exclusief": [],
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
@@ -930,7 +1054,8 @@
                 "buigbare profielen",
                 "buiggips"
             ],
-            "Brontekst": "30,00 m2 RONDE METSTUDWANDEN € 90,88 per m2 € 2.726,37"
+            "Brontekst": "30,00 m2 RONDE METSTUDWANDEN € 90,88 per m2 € 2.726,37",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "OPEN WANDEINDE",
@@ -955,9 +1080,11 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "open wandeinde",
-                "gipsstrook"
+                "gipsstrook",
+                "afwerken"
             ],
-            "Brontekst": "20,00 m1 OPEN WANDEINDE € 38,86 per m1 € 777,27"
+            "Brontekst": "20,00 m1 OPEN WANDEINDE € 38,86 per m1 € 777,27",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "SPARINGEN MS WANDEN",
@@ -986,11 +1113,12 @@
                 "achterhout",
                 "metalstudwanden"
             ],
-            "Brontekst": "2.265,00 m2 SPARINGEN MS WANDEN € 2,95 per m2 € 6.671,07\nStelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden"
+            "Brontekst": "2.265,00 m2 SPARINGEN MS WANDEN € 2,95 per m2 € 6.671,07\nStelpost sparingen en achterhout t.p.v. nieuwe metalstudwanden",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "AFWERKEN WANDEN",
-            "Beschrijving": "Het fwerken van de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
+            "Beschrijving": "Het afwerken van de nieuwe metal stud wanden. Afwerkingsniveau A (volgens TBA-richtlijnen)",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "57213.95",
             "Eenheid": "m2",
@@ -1004,21 +1132,20 @@
             "Werksoort": "afwerking",
             "Prijsbasis": "per m2",
             "Inclusief": [
-                "afwerking",
-                "Afwerkingsniveau A"
+                "afwerking"
             ],
             "Exclusief": [],
             "Voorwaarden": [
-                "volgens TBA-richtlijnen"
+                "Afwerkingsniveau A (volgens TBA-richtlijnen)"
             ],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "afwerken wanden",
-                "metal stud wanden",
-                "Afwerkingsniveau A",
-                "TBA-richtlijnen"
+                "metal stud",
+                "afwerkingsniveau A"
             ],
-            "Brontekst": "4.13 3,00 m2 AFWERKEN WANDEN € 13,84 per m2 € 57.213,95\nHet fwerken van de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA-richtlijnen)"
+            "Brontekst": "4.13 3,00 m2 AFWERKEN WANDEN € 13,84 per m2 € 57.213,95\nHet fwerken van de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA-richtlijnen)",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "AFWERKEN HOEKEN",
@@ -1036,21 +1163,20 @@
             "Werksoort": "afwerking",
             "Prijsbasis": "per m1",
             "Inclusief": [
-                "afwerking hoeken",
-                "Afwerkingsniveau A"
+                "afwerking hoeken"
             ],
             "Exclusief": [],
             "Voorwaarden": [
-                "volgens TBA-richtlijnen"
+                "Afwerkingsniveau A (volgens TBA-richtlijnen)"
             ],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "afwerken hoeken",
-                "metal stud wanden",
-                "Afwerkingsniveau A",
-                "TBA-richtlijnen"
+                "metal stud",
+                "afwerkingsniveau A"
             ],
-            "Brontekst": "108,00 m1 AFWERKEN HOEKEN € 13,84 per m1 € 1.495,07\nHet afwerken van de hoeken t.p.v. de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA-richtlijnen)"
+            "Brontekst": "108,00 m1 AFWERKEN HOEKEN € 13,84 per m1 € 1.495,07\nHet afwerken van de hoeken t.p.v. de nieuwe metal stud wanden.\nAfwerkingsniveau A (volgens TBA-richtlijnen)",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "ENKELE VOLGLASWAND",
@@ -1082,11 +1208,11 @@
             "MatchHints": [
                 "volglaswand",
                 "gelaagd glas",
-                "66.2SI",
-                "aluminium U-profiel",
+                "aluminium",
                 "polycarbonaatstrip"
             ],
-            "Brontekst": "44,00 m2 ENKELE VOLGLASWAND € 215,15 per m2 € 9.466,80\nLeveren en monteren van een volglaswand onder hangwanden volgens\nonderstaande omschrijving.\nEnkele volglaswand (hoogte 3 meter)\nEnkel glas gelaagd helder 66.2SI\nProfielen in witte kleur\nDe glaswanden, type volglaswand, bestaande uit een enkele beglazing\nvan blank gelaagd glas welke wordt geplaatst in een kader van\naluminium U-profielen v.z.v. zwart rubberprofiel. De verticale aansluiting\nvan de glasruiten onderling word gerealiseerd door middel van een\ndoorzichtige polycarbonaatstrip."
+            "Brontekst": "44,00 m2 ENKELE VOLGLASWAND € 215,15 per m2 € 9.466,80\nLeveren en monteren van een volglaswand onder hangwanden volgens\nonderstaande omschrijving.\nEnkele volglaswand (hoogte 3 meter)\nEnkel glas gelaagd helder 66.2SI\nProfielen in witte kleur\nDe glaswanden, type volglaswand, bestaande uit een enkele beglazing\nvan blank gelaagd glas welke wordt geplaatst in een kader van\naluminium U-profielen v.z.v. zwart rubberprofiel. De verticale aansluiting\nvan de glasruiten onderling word gerealiseerd door middel van een\ndoorzichtige polycarbonaatstrip.",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "DUBBELE VOLGLASWAND",
@@ -1118,16 +1244,15 @@
             "MatchHints": [
                 "dubbele volglaswand",
                 "gelaagd glas",
-                "6.6.2",
-                "6.6.A2",
-                "aluminium U-profiel",
+                "aluminium",
                 "polycarbonaatstrip"
             ],
-            "Brontekst": "4,00 m2 DUBBELE VOLGLASWAND € 450,71 per m2 € 1.802,85\nLeveren en monteren van een dubbele volglaswand onder\nhangwanden volgens onderstaande omschrijving.\nDubbele volglaswand (hoogte 3 meter)\nGelaagd glas 6.6.2 en 6.6.A2\nProfielen in witte kleur\nDe glaswanden, type dubbele volglaswand, bestaande uit een dubbele\nbeglazing van blank gelaagd glas welke wordt geplaatst in een kader\nvan aluminium U-profielen v.z.v. zwart rubberprofiel. De verticale\naansluiting van de glasruiten onderling word gerealiseerd door middel\nvan een doorzichtige polycarbonaatstrip."
+            "Brontekst": "4,00 m2 DUBBELE VOLGLASWAND € 450,71 per m2 € 1.802,85\nLeveren en monteren van een dubbele volglaswand onder\nhangwanden volgens onderstaande omschrijving.\nDubbele volglaswand (hoogte 3 meter)\nGelaagd glas 6.6.2 en 6.6.A2\nProfielen in witte kleur\nDe glaswanden, type dubbele volglaswand, bestaande uit een dubbele\nbeglazing van blank gelaagd glas welke wordt geplaatst in een kader\nvan aluminium U-profielen v.z.v. zwart rubberprofiel. De verticale\naansluiting van de glasruiten onderling word gerealiseerd door middel\nvan een doorzichtige polycarbonaatstrip.",
+            "Pagina": "6"
         },
         {
             "Omschrijving": "KADERDEUR",
-            "Beschrijving": "Deur en kozijn. Vulling: aluminium omkaderd met 33.2SI glas. Uitvoering: Standaard, incl. valdorpel. Kozijn: Aluminium in witte kleur. Afmeting: 930mm x 2400 mm. Hang- en sluitwerk. Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot. Cilinder: Exclusief. Kruk/rozet: L-model, RVS.",
+            "Beschrijving": "Deur en kozijn. Vulling: aluminium omkaderd met 33.2SI glas. Uitvoering: Standaard, incl. valdorpel. Kozijn: Aluminium in witte kleur. Afmeting: 930mm x 2400 mm. Hang- en sluitwerk. Paumelles: Standaard, 4 stuks per deur, ral 9004 mat fs. Sloten: Loopslot. Cilinder: Exclusief. Kruk/rozet: L-model, RVS",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "7345.29",
             "Eenheid": "st",
@@ -1143,6 +1268,7 @@
             "Inclusief": [
                 "deur en kozijn",
                 "valdorpel",
+                "hang- en sluitwerk",
                 "paumelles",
                 "loopslot",
                 "kruk/rozet"
@@ -1154,18 +1280,19 @@
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "kaderdeur",
-                "33.2SI glas",
+                "kozijn",
                 "valdorpel",
                 "paumelles",
                 "loopslot",
                 "kruk",
                 "rozet"
             ],
-            "Brontekst": "6,00 stuk KADERDEUR € 1.224,22 per stuk € 7.345,29\nDeur en kozijn\nVulling: aluminium omkaderd met 33.2SI glas\nUitvoering: Standaard, incl. valdorpel\nKozijn: Aluminium in witte kleur\nAfmeting: 930mm x 2400 mm\nHang- en sluitwerk\nPaumelles: Standaard, 4 stuks per deur, ral 9004 mat fs.\nSloten: Loopslot\nCilinder: Exclusief.\nKruk/rozet: L-model, RVS"
+            "Brontekst": "6,00 stuk KADERDEUR € 1.224,22 per stuk € 7.345,29\nDeur en kozijn\nVulling: aluminium omkaderd met 33.2SI glas\nUitvoering: Standaard, incl. valdorpel\nKozijn: Aluminium in witte kleur\nAfmeting: 930mm x 2400 mm\nHang- en sluitwerk\nPaumelles: Standaard, 4 stuks per deur, ral 9004 mat fs.\nSloten: Loopslot\nCilinder: Exclusief.\nKruk/rozet: L-model, RVS",
+            "Pagina": "7"
         },
         {
             "Omschrijving": "HORIZONTAAL TRANSPORT",
-            "Beschrijving": "Horizontaal transport van het nieuwe materiaal. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend. Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend.",
+            "Beschrijving": "Horizontaal transport van het nieuwe materiaal. Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend. Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "9112.75",
             "Eenheid": "post",
@@ -1179,26 +1306,24 @@
             "Werksoort": "transport",
             "Prijsbasis": "totaal",
             "Inclusief": [
-                "horizontaal transport",
-                "4 keer transport"
+                "horizontaal transport"
             ],
-            "Exclusief": [
-                "verplaatsen i.v.m. werkzaamheden andere partijen"
-            ],
+            "Exclusief": [],
             "Voorwaarden": [
-                "indien 4 keer transport niet mogelijk is worden kosten verrekend",
-                "betreft alleen tijdens aanvoer materiaal"
+                "Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
+                "Betreft alleen tijdens aanvoer materiaal, indien wij materiaal moeten verplaatsen i.v.m. werkzaamheden andere partijen worden deze kosten verrekend."
             ],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "horizontaal transport",
-                "aanvoer materiaal"
+                "materiaal"
             ],
-            "Brontekst": "HORIZONTAAL TRANSPORT € 9.112,75\nHorizontaal transport van het nieuwe materiaal.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend.\nBetreft alleen tijdens aanvoer materiaal, indien wij materiaal\nmoeten verplaatsen i.v.m. werkzaamheden andere partijen\nworden deze kosten verrekend."
+            "Brontekst": "HORIZONTAAL TRANSPORT € 9.112,75\nHorizontaal transport van het nieuwe materiaal.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend.\nBetreft alleen tijdens aanvoer materiaal, indien wij materiaal\nmoeten verplaatsen i.v.m. werkzaamheden andere partijen\nworden deze kosten verrekend.",
+            "Pagina": "7"
         },
         {
             "Omschrijving": "VERTICAAL TRANSPORT",
-            "Beschrijving": "Verticaal transport d.m.v. verreiker. Opmerking: Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
+            "Beschrijving": "Verticaal transport d.m.v. verreiker. Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend.",
             "Categorie": "ONBEKEND",
             "Totaalbedrag": "4337.54",
             "Eenheid": "post",
@@ -1213,19 +1338,19 @@
             "Prijsbasis": "totaal",
             "Inclusief": [
                 "verticaal transport",
-                "verreiker",
-                "4 keer transport"
+                "verreiker"
             ],
             "Exclusief": [],
             "Voorwaarden": [
-                "indien 4 keer transport niet mogelijk is worden kosten verrekend"
+                "Uitgangspunt is 4 keer transport, indien dit door uitvoering niet mogelijk is worden deze kosten verrekend."
             ],
             "DoorOpdrachtgever": [],
             "MatchHints": [
                 "verticaal transport",
                 "verreiker"
             ],
-            "Brontekst": "VERTICAAL TRANSPORT € 4.337,54\nVerticaal transport d.m.v. verreiker.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend."
+            "Brontekst": "VERTICAAL TRANSPORT € 4.337,54\nVerticaal transport d.m.v. verreiker.\nOpmerking:\nUitgangspunt is 4 keer transport, indien dit door uitvoering niet\nmogelijk is worden deze kosten verrekend.",
+            "Pagina": "7"
         },
         {
             "Omschrijving": "STEIGER/SCHAARHOOGWERKER",
@@ -1251,16 +1376,17 @@
             ],
             "DoorOpdrachtgever": [],
             "MatchHints": [
-                "schaarhoogwerker",
                 "steiger",
+                "schaarhoogwerker",
                 "huur"
             ],
-            "Brontekst": "1,00 week STEIGER/SCHAARHOOGWERKER € 168,71\nDe huur van een schaarhoogwerker per week verrekenbaar."
+            "Brontekst": "1,00 week STEIGER/SCHAARHOOGWERKER € 168,71\nDe huur van een schaarhoogwerker per week verrekenbaar.",
+            "Pagina": "7"
         },
         {
             "Omschrijving": "Regie-uurloon",
             "Beschrijving": "Regie uurloon bedraagt € 57,50 per uur.",
-            "Categorie": "ONBEKEND",
+            "Categorie": "Algemene voorwaarden",
             "Totaalbedrag": "ONBEKEND",
             "Eenheid": "ONBEKEND",
             "Eenheidsprijs": "57.50",
@@ -1277,11 +1403,12 @@
             "Voorwaarden": [],
             "DoorOpdrachtgever": [],
             "MatchHints": [
-                "regie-uurloon",
-                "uurtarief",
-                "regiewerk"
+                "regie",
+                "uurloon",
+                "tarief"
             ],
-            "Brontekst": "Regie­uurloon :\nRegie uurloon bedraagt € 57,50 per uur."
+            "Brontekst": "Regie-uurloon : Regie uurloon bedraagt € 57,50 per uur.",
+            "Pagina": "9"
         }
     ]
 }

@@ -78,7 +78,7 @@ def render_editable_rows(
     with ui.column().classes('w-full gap-2'):
         if on_add is not None:
             ui.button(
-                'Add row',
+                'Regel toevoegen',
                 icon='add',
                 on_click=on_add,
             ).props('dense no-caps size=sm').classes('self-start')
@@ -112,10 +112,10 @@ def render_editable_rows(
 
 def _render_add_summary_field(on_add: SummaryAddHandler) -> None:
     with ui.row().classes('items-end w-full gap-2 no-wrap mt-2'):
-        field_input = ui.input('New field').props('dense outlined').classes('w-40')
-        value_input = ui.input('Value').props('dense outlined').classes('grow')
+        field_input = ui.input('Nieuw veld').props('dense outlined').classes('w-40')
+        value_input = ui.input('Waarde').props('dense outlined').classes('grow')
         ui.button(
-            'Add field',
+            'Veld toevoegen',
             icon='add',
             on_click=lambda: on_add(field_input.value, value_input.value),
         ).props('dense no-caps size=sm')

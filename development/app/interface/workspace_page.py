@@ -24,7 +24,7 @@ def workspace_page() -> RedirectResponse | None:
 
     def open_workspace(workspace: str) -> None:
         if not auth.workspace_authorized(username, workspace):
-            ui.notify('You no longer have access to this workspace', color='negative')
+            ui.notify('U heeft geen toegang meer tot deze werkruimte', color='negative')
             return
         app.storage.user['workspace'] = workspace
         log_action('workspace_selected', workspace=workspace)
@@ -34,12 +34,12 @@ def workspace_page() -> RedirectResponse | None:
         if LOGO.exists():
             ui.image(LOGO).classes('w-24')
         with ui.card().classes('items-stretch gap-3 p-6 w-80'):
-            ui.label('Choose a workspace').classes('text-xl font-bold self-center')
-            ui.label(f'Logged in as {username}').classes('text-sm text-gray-500 self-center')
+            ui.label('Kies een werkruimte').classes('text-xl font-bold self-center')
+            ui.label(f'Ingelogd als {username}').classes('text-sm text-gray-500 self-center')
 
             if not workspaces:
-                ui.label('No workspaces assigned to you yet.').classes('text-sm')
-                ui.label('Please contact your administrator to request access.') \
+                ui.label('Er zijn nog geen werkruimtes aan u toegewezen.').classes('text-sm')
+                ui.label('Neem contact op met de beheerder om toegang aan te vragen.') \
                     .classes('text-xs text-gray-500')
 
             for workspace in workspaces:
@@ -49,7 +49,7 @@ def workspace_page() -> RedirectResponse | None:
                     on_click=lambda workspace=workspace: open_workspace(workspace),
                 ).props('no-caps')
                 if workspace == current:
-                    button.props('outline').tooltip('Current workspace')
+                    button.props('outline').tooltip('Huidige werkruimte')
 
-            ui.button('Log out', icon='logout', on_click=logout).props('flat no-caps size=sm')
+            ui.button('Uitloggen', icon='logout', on_click=logout).props('flat no-caps size=sm')
     return None

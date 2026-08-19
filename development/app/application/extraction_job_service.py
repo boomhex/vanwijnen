@@ -94,7 +94,7 @@ class ExtractionJobService:
                 offer_path / 'document.pdf',
                 status='cancelled',
                 step='cancelled',
-                message='Extraction cancelled by user',
+                message='Extractie geannuleerd door gebruiker',
             )
         except Exception:
             logger.exception('Failed to record cancellation status for %s', offer_path)

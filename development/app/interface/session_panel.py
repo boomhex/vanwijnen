@@ -12,24 +12,24 @@ def render_session_panel() -> None:
             workspace = app.storage.user.get('workspace', '?')
             ui.label(f'{username} · {workspace}').classes('grow')
             ui.button(icon='swap_horiz', on_click=lambda: ui.navigate.to('/workspaces')) \
-                .props('flat dense round').tooltip('Switch workspace')
-            ui.button(icon='logout', on_click=logout).props('flat dense round').tooltip('Log out')
+                .props('flat dense round').tooltip('Wissel werkruimte')
+            ui.button(icon='logout', on_click=logout).props('flat dense round').tooltip('Uitloggen')
 
-        with ui.expansion('Report a problem', icon='bug_report').classes('w-full'):
+        with ui.expansion('Probleem melden', icon='bug_report').classes('w-full'):
             message = ui.textarea(
-                placeholder='What happened? What did you click just before?'
+                placeholder='Wat gebeurde er? Waar had u net op geklikt?'
             ).classes('w-full').props('outlined dense')
 
             def send() -> None:
                 text = (message.value or '').strip()
                 if not text:
-                    ui.notify('Describe the problem first', color='warning')
+                    ui.notify('Beschrijf eerst het probleem', color='warning')
                     return
                 log_feedback(text)
                 message.set_value('')
-                ui.notify('Thanks, your report was logged', color='positive')
+                ui.notify('Bedankt, uw melding is geregistreerd', color='positive')
 
-            ui.button('Send report', icon='send', on_click=send).props('no-caps dense')
+            ui.button('Melding versturen', icon='send', on_click=send).props('no-caps dense')
 
 
 def logout() -> None:

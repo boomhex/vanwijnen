@@ -32,7 +32,7 @@ class FolderHandler:
 
     def project_path(self, project_name: str | None) -> Path:
         """Get the path for a project by name."""
-        clean_name = self.clean_name(project_name, kind='project')
+        clean_name = self.clean_name(project_name, kind='projectnaam')
         return self.storage_dir / clean_name
 
     def project_offer_paths(self, project: Path | 'Project') -> list[Path]:
@@ -74,14 +74,14 @@ class FolderHandler:
         # For any file in an offer folder, return the parent (offer folder)
         relative = file.relative_to(self.storage_dir)
         if len(relative.parts) < 2:
-            raise ValueError(f'Cannot resolve offer for file: {file}')
+            raise ValueError(f'Kan geen offerte herleiden voor bestand: {file}')
         return self.storage_dir / relative.parts[0] / relative.parts[1]
 
     def project_dir_for_file(self, file: Path) -> Path:
         """Get the project folder containing a file."""
         relative = file.relative_to(self.storage_dir)
         if not relative.parts:
-            raise ValueError(f'Cannot resolve project for file outside storage: {file}')
+            raise ValueError(f'Kan geen project herleiden voor bestand buiten storage: {file}')
         return self.storage_dir / relative.parts[0]
 
     def project_name_for_file(self, file: Path) -> str:
@@ -145,7 +145,7 @@ class FolderHandler:
 
     def named_llm_response_path_for_file(self, file: Path, name: str) -> Path:
         """Get a named LLM response path for a file."""
-        safe_name = self.clean_name(name, kind='response name')
+        safe_name = self.clean_name(name, kind='antwoordnaam')
         if not safe_name.endswith('.txt'):
             safe_name = f'{safe_name}.txt'
         offer = self.offer_dir_for_file(file)
@@ -175,7 +175,7 @@ class FolderHandler:
         destination = offer_dir / 'document.pdf'
         # If a file with that name already exists, we might need to handle it
         if destination.exists():
-            raise FileExistsError(f'Offer "{offer_name}" already exists in {project_name or "Unassigned"}')
+            raise FileExistsError(f'Offerte "{offer_name}" bestaat al in {project_name or "Unassigned"}')
         
         await event.file.save(destination)
         return destination
@@ -191,15 +191,15 @@ class FolderHandler:
         """Rename a project folder."""
         project_path = self._project_path(project)
         if not project_path.exists():
-            raise FileNotFoundError(f'Project "{project_path.name}" does not exist')
+            raise FileNotFoundError(f'Project "{project_path.name}" bestaat niet')
 
-        clean_name = self.clean_name(new_name, kind='project')
+        clean_name = self.clean_name(new_name, kind='projectnaam')
         new_project_path = self.storage_dir / clean_name
 
         if new_project_path == project_path:
-            raise ValueError('Project name is unchanged')
+            raise ValueError('Projectnaam is ongewijzigd')
         if new_project_path.exists():
-            raise FileExistsError(f'Project "{clean_name}" already exists')
+            raise FileExistsError(f'Project "{clean_name}" bestaat al')
 
         project_path.rename(new_project_path)
         from services.project import Project
@@ -209,9 +209,9 @@ class FolderHandler:
         """Delete a project folder and all offers inside it."""
         project_path = self._project_path(project)
         if not project_path.exists():
-            raise FileNotFoundError(f'Project "{project_path.name}" does not exist')
+            raise FileNotFoundError(f'Project "{project_path.name}" bestaat niet')
         if project_path.parent != self.storage_dir:
-            raise ValueError('Can only delete project folders inside storage')
+            raise ValueError('Kan alleen projectmappen binnen storage verwijderen')
 
         import shutil
         shutil.rmtree(project_path)
@@ -219,20 +219,20 @@ class FolderHandler:
     def rename_file(self, file: Path, new_name: str | None) -> Path:
         """Rename a PDF file and its associated data."""
         if not file.exists():
-            raise FileNotFoundError(f'{file.name} does not exist')
+            raise FileNotFoundError(f'{file.name} bestaat niet')
 
         if file.name != 'document.pdf':
-            raise ValueError('Can only rename files in offer folders')
+            raise ValueError('Kan alleen bestanden in offertemappen hernoemen')
 
         offer_dir = file.parent
-        clean_name = self.clean_name(new_name, kind='filename')
+        clean_name = self.clean_name(new_name, kind='bestandsnaam')
         new_offer_name = clean_name
         new_offer_dir = offer_dir.parent / new_offer_name
 
         if new_offer_dir == offer_dir:
-            raise ValueError('Offer name is unchanged')
+            raise ValueError('Offertenaam is ongewijzigd')
         if new_offer_dir.exists():
-            raise FileExistsError(f'Offer "{new_offer_name}" already exists')
+            raise FileExistsError(f'Offerte "{new_offer_name}" bestaat al')
 
         # Rename the entire offer folder
         offer_dir.rename(new_offer_dir)
@@ -241,10 +241,10 @@ class FolderHandler:
     def move_file(self, file: Path, target_project: str | None) -> Path:
         """Move a file to a different project."""
         if not file.exists():
-            raise FileNotFoundError(f'{file.name} does not exist')
+            raise FileNotFoundError(f'{file.name} bestaat niet')
 
         if file.name != 'document.pdf':
-            raise ValueError('Can only move files in offer folders')
+            raise ValueError('Kan alleen bestanden in offertemappen verplaatsen')
 
         offer_dir = file.parent
         offer_name = offer_dir.name
@@ -252,9 +252,9 @@ class FolderHandler:
         new_offer_dir = target_project_dir / offer_name
 
         if new_offer_dir == offer_dir:
-            raise ValueError('File is already in this location')
+            raise ValueError('Bestand staat al op deze locatie')
         if new_offer_dir.exists():
-            raise FileExistsError(f'Offer "{offer_name}" already exists in {target_project or "Unassigned"}')
+            raise FileExistsError(f'Offerte "{offer_name}" bestaat al in {target_project or "Unassigned"}')
 
         # Move the entire offer folder
         import shutil
@@ -264,10 +264,10 @@ class FolderHandler:
     def delete_file(self, file: Path) -> None:
         """Delete a file and its entire offer folder."""
         if not file.exists():
-            raise FileNotFoundError(f'{file.name} does not exist')
+            raise FileNotFoundError(f'{file.name} bestaat niet')
 
         if file.name != 'document.pdf':
-            raise ValueError('Can only delete files in offer folders')
+            raise ValueError('Kan alleen bestanden in offertemappen verwijderen')
 
         offer_dir = file.parent
         import shutil
@@ -276,9 +276,9 @@ class FolderHandler:
     def clear_extraction_artifacts(self, file: Path, *, include_raw_text: bool = False) -> int:
         """Remove saved extraction output for an offer while keeping the PDF."""
         if not file.exists():
-            raise FileNotFoundError(f'{file.name} does not exist')
+            raise FileNotFoundError(f'{file.name} bestaat niet')
         if file.name != 'document.pdf':
-            raise ValueError('Can only clear extraction artifacts for files in offer folders')
+            raise ValueError('Kan alleen extractiegegevens wissen voor bestanden in offertemappen')
 
         artifact_paths = [
             self.result_path_for_file(file),
@@ -399,11 +399,11 @@ class FolderHandler:
     def clean_name(name: str | None, *, kind: str) -> str:
         """Clean and validate a name (project, file, etc)."""
         if not name:
-            raise ValueError(f'Enter a {kind}')
+            raise ValueError(f'Voer een {kind} in')
 
         clean_name = name.strip()
         if not clean_name or '/' in clean_name or '\\' in clean_name or clean_name in {'.', '..'}:
-            raise ValueError(f'Invalid {kind}')
+            raise ValueError(f'Ongeldige {kind}')
 
         return clean_name
 

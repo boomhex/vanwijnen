@@ -502,11 +502,11 @@ class ComparisonPage(SubPage):
         # Check if project is selected
         project = self.state.comparison_project
         if project is None:
-            ui.label('No project selected').classes('text-gray-500')
+            ui.label('Geen project geselecteerd').classes('text-gray-500')
             return
 
         # Show title
-        ui.label(f'Comparison: {project.name}').classes('text-xl font-bold')
+        ui.label(f'Vergelijking: {project.name}').classes('text-xl font-bold')
 
         # Show invoer
         comparison = self.comparison_service.load_comparison(project)
@@ -535,11 +535,11 @@ class ComparisonPage(SubPage):
             status_error = status.get('error') if status else None
 
             match_button = ui.button(
-                'Matching' if is_running else 'Match Posten',
+                'Bezig met matchen' if is_running else 'Posten matchen',
                 icon='eva-bulb-outline',
             ).props('dense no-caps')
             recalculate_button = ui.button(
-                'Recalculating' if is_running and status_step == 'recalculating_posts' else 'Recalculate',
+                'Bezig met herberekenen' if is_running and status_step == 'recalculating_posts' else 'Herberekenen',
                 icon='calculate',
                 on_click=lambda selected_project=project, data=comparison: self.recalculate_project_posts(
                     selected_project,
@@ -557,7 +557,7 @@ class ComparisonPage(SubPage):
                     match_button.tooltip(status_message or status_step)
                     recalculate_button.tooltip(status_message or status_step)
 
-                status_text = status_message or status_step or 'Running'
+                status_text = status_message or status_step or 'Bezig'
                 elapsed = format_elapsed_seconds(status.get('started_at') if status else None)
                 if elapsed:
                     status_text += f' ({elapsed})'
@@ -565,14 +565,14 @@ class ComparisonPage(SubPage):
 
             if failed:
                 warning_icon = ui.icon('warning').classes('text-red-700')
-                warning_icon.tooltip(status_error or status_message or 'Comparison failed')
+                warning_icon.tooltip(status_error or status_message or 'Vergelijking mislukt')
             elif is_stale:
                 warning_icon = ui.icon('warning').classes('text-orange-700')
-                warning_icon.tooltip('Comparison status is stale. You can retry matching or recalculating.')
+                warning_icon.tooltip('Vergelijkingsstatus is verouderd. U kunt opnieuw matchen of herberekenen.')
 
             if status is not None:
                 ui.button(icon='info', on_click=lambda data=status: self.show_status_dialog(project, data)) \
-                    .props('flat dense round size=sm').tooltip('View matching status')
+                    .props('flat dense round size=sm').tooltip('Matchstatus bekijken')
 
             async def request_match(_event, selected_project=project, data=comparison, button=match_button):
                 await self.match_project_posts(selected_project, data, button)
@@ -583,11 +583,11 @@ class ComparisonPage(SubPage):
     @staticmethod
     def show_status_dialog(project: Project, status: dict | None) -> None:
         with ui.dialog() as dialog, ui.card().classes('gap-2 min-w-[20rem]'):
-            ui.label(f'Matching status for {project.name}').classes('font-medium')
+            ui.label(f'Matchstatus voor {project.name}').classes('font-medium')
             render_status_fields(status)
 
             with ui.row().classes('justify-end w-full'):
-                ui.button('Close', on_click=dialog.close).props('flat dense no-caps size=sm')
+                ui.button('Sluiten', on_click=dialog.close).props('flat dense no-caps size=sm')
 
         dialog.open()
 
@@ -597,7 +597,7 @@ class ComparisonPage(SubPage):
         with ui.row().classes('items-center gap-2 mt-4'):
             ui.label('Posten voor Vergelijking').classes('text-lg font-bold')
             ui.button(
-                'Add row',
+                'Regel toevoegen',
                 icon='add',
                 on_click=lambda: self.add_comparison_row(project, comparison),
             ).props('dense no-caps size=sm')
@@ -619,10 +619,10 @@ class ComparisonPage(SubPage):
                     project, comparison, row.get('id'), column.get('field'), cell.get('value', '')
                 )
             except Exception as error:  # noqa: BLE001 - surface any save failure to the user
-                ui.notify(f'Could not save: {error}', type='negative')
+                ui.notify(f'Kon niet opslaan: {error}', type='negative')
                 return
 
-            ui.notify('Saved', type='positive')
+            ui.notify('Opgeslagen', type='positive')
 
         def delete_row(event) -> None:
             cell = event.args.get('cell', {})
@@ -655,7 +655,7 @@ class ComparisonPage(SubPage):
                 .classes('w-full').props('dense outlined')
 
             with ui.row().classes('justify-end w-full gap-2'):
-                ui.button('Cancel', on_click=dialog.close).props('flat dense no-caps size=sm')
+                ui.button('Annuleren', on_click=dialog.close).props('flat dense no-caps size=sm')
                 ui.button(
                     'Vul in',
                     on_click=lambda: self.seed_from_offer(project, comparison, offer_select.value, dialog),
@@ -675,7 +675,7 @@ class ComparisonPage(SubPage):
     def delete_comparison_row(self, project: Project, comparison: dict, row_index: int | None) -> None:
         posten = comparison.get('Posten', [])
         if row_index is None or row_index < 0 or row_index >= len(posten):
-            ui.notify('Row no longer exists', type='negative')
+            ui.notify('Regel bestaat niet meer', type='negative')
             self.refresh()
             return
 
@@ -684,7 +684,7 @@ class ComparisonPage(SubPage):
         removed_matches = copy.deepcopy(comparison.get('Matches'))
 
         if not self.comparison_service.delete_comparison_row(project, comparison, row_index):
-            ui.notify('Row no longer exists', type='negative')
+            ui.notify('Regel bestaat niet meer', type='negative')
             self.refresh()
             return
 
@@ -706,7 +706,7 @@ class ComparisonPage(SubPage):
                 fresh_comparison['Matches'] = removed_matches
             self.comparison_service.save_comparison(project, fresh_comparison)
 
-        self.state.pending_undo = PendingUndo(label=f'Deleted "{label}"', restore=restore)
+        self.state.pending_undo = PendingUndo(label=f'"{label}" verwijderd', restore=restore)
         self.refresh()
 
     def render_side_by_side_match_table(self, project: Project, comparison: dict, match_rows: list[dict]) -> None:
@@ -736,7 +736,7 @@ class ComparisonPage(SubPage):
 
         with ui.row().classes('items-center gap-2 mt-2'):
             ui.button(
-                'Add row',
+                'Regel toevoegen',
                 icon='add',
                 on_click=lambda selected_project=project, data=comparison, names=offer_names: self.add_matched_post_row(
                     selected_project,
@@ -745,7 +745,7 @@ class ComparisonPage(SubPage):
                 ),
             ).props('dense no-caps')
             ui.button(
-                'Copy for Excel',
+                'Kopiëren voor Excel',
                 icon='content_copy',
                 on_click=lambda table=matched_table: self.copy_match_table_to_clipboard(table),
             ).props('dense no-caps')
@@ -776,13 +776,13 @@ class ComparisonPage(SubPage):
                     offer_names,
                 )
             except Exception as error:  # noqa: BLE001 - surface any save failure to the user
-                ui.notify(f'Could not save: {error}', type='negative')
+                ui.notify(f'Kon niet opslaan: {error}', type='negative')
                 return
 
             if not updated:
                 return
 
-            ui.notify('Saved', type='positive')
+            ui.notify('Opgeslagen', type='positive')
             if self.is_offer_description_field(field):
                 return
 
@@ -816,7 +816,7 @@ class ComparisonPage(SubPage):
 
             if mismatched:
                 ui.label(
-                    'Warning: the summed subtotals do not match the comparison total for '
+                    'Waarschuwing: de opgetelde subtotalen komen niet overeen met het vergelijkingstotaal voor '
                     + ', '.join(mismatched)
                 ).classes('text-xs text-red-700 font-semibold mt-2')
 
@@ -838,7 +838,7 @@ class ComparisonPage(SubPage):
 
         open_count = sum(1 for item in warning_items if not item['checked'])
         with ui.expansion(
-            f'Warnings checklist ({open_count}/{len(warning_items)} open)',
+            f'Waarschuwingenchecklist ({open_count}/{len(warning_items)} open)',
             icon='fact_check',
         ).classes('w-full mt-2'):
             with ui.column().classes('gap-1 w-full'):
@@ -906,18 +906,18 @@ class ComparisonPage(SubPage):
                     document.body.removeChild(textarea);
                 }});
         ''')
-        ui.notify('Copied table for Excel')
+        ui.notify('Tabel gekopieerd voor Excel')
 
     async def match_project_posts(self, project: Project, comparison: dict, button) -> None:
         if not comparison.get('Posten'):
-            ui.notify('Add comparison rows before matching')
+            ui.notify('Voeg vergelijkingsregels toe voordat u matcht')
             return
 
         if not self.comparison_service.has_offer_results(project):
-            ui.notify('No extracted offer results available for this project')
+            ui.notify('Geen geëxtraheerde offerteresultaten beschikbaar voor dit project')
             return
 
-        button.set_text('Matching')
+        button.set_text('Bezig met matchen')
         button.props('loading disable')
         button.update()
 
@@ -926,27 +926,27 @@ class ComparisonPage(SubPage):
             await run.io_bound(self.comparison_service.match_project_posts, project, comparison)
         except Exception as error:
             log_action('match_posts_failed', project=project.name, error=str(error))
-            self.notify_safe(f'Could not match posts: {error}')
+            self.notify_safe(f'Kon posten niet matchen: {error}')
             self.refresh()
             return
 
         log_action('match_posts_finished', project=project.name)
-        self.notify_safe('Matched posts')
+        self.notify_safe('Posten gematcht')
         self.refresh()
 
     def recalculate_project_posts(self, project: Project, comparison: dict) -> None:
         if not comparison.get('MatchedPosten'):
-            ui.notify('Match posts before recalculating')
+            ui.notify('Match eerst de posten voordat u herberekent')
             return
 
         log_action('recalculate_posts', project=project.name)
         self.comparison_service.recalculate_project_posts(project, comparison)
-        self.notify_safe('Recalculated posts')
+        self.notify_safe('Posten herberekend')
         self.refresh()
 
     def add_matched_post_row(self, project: Project, comparison: dict, offer_names: list[str]) -> None:
         self.comparison_service.add_matched_post_row(project, comparison, offer_names)
-        self.notify_safe('Added matched row')
+        self.notify_safe('Gematchte regel toegevoegd')
         self.refresh()
 
     def delete_matched_post_row(
@@ -975,5 +975,5 @@ class ComparisonPage(SubPage):
             fresh_comparison['MatchedPosten'] = matched
             self.comparison_service.save_comparison(project, fresh_comparison)
 
-        self.state.pending_undo = PendingUndo(label=f'Deleted "{label}"', restore=restore)
+        self.state.pending_undo = PendingUndo(label=f'"{label}" verwijderd', restore=restore)
         self.refresh()

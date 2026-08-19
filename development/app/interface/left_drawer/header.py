@@ -24,13 +24,13 @@ class DrawerHeader:
         upload_options = project_names if project_names else [UNASSIGNED_PROJECT]
 
         with ui.row().classes('items-end gap-2 w-full no-wrap'):
-            project_input = ui.input('New project').classes('grow')
+            project_input = ui.input('Nieuw project').classes('grow')
             project_input.on('keydown.enter', lambda: self.create_project(project_input.value))
             ui.button(icon='eva-folder-add-outline', on_click=lambda: self.create_project(project_input.value))
 
         ui.select(
             upload_options,
-            label='Upload to project',
+            label='Uploaden naar project',
             value=self.state.upload_project,
             on_change=lambda event: setattr(self.state, 'upload_project', event.value),
         ).classes('w-full')

@@ -149,6 +149,33 @@ def test_find_extracted_posts_for_match_prefers_code_over_mismatched_description
     assert extracted_posts[0]['Totaalbedrag'] == '1000'
 
 
+def test_find_extracted_posts_for_match_falls_back_to_description_when_code_is_ambiguous():
+    # "V01" is a section-header Regelnummer shared by three distinct posts
+    # (as real documents do) — not a unique per-post code. Resolving it via
+    # the code index would arbitrarily pick one of the three for every
+    # match that echoes "V01" back, so it must fall back to the (correct,
+    # per-post) description instead.
+    offer_result = {
+        'Bestand': 'offer.pdf',
+        'Posten': [
+            {'Omschrijving': 'Schuren en stofzuigen van de ondervloer', 'Regelnummer': 'V01', 'Totaalbedrag': '147,50'},
+            {'Omschrijving': 'Leveren en leggen van schoonloopmat', 'Regelnummer': 'V01', 'Totaalbedrag': '3997,50'},
+            {'Omschrijving': 'Leveren en aanbrengen van L-profiel', 'Regelnummer': 'V01', 'Totaalbedrag': '770,00'},
+        ],
+    }
+    offer_match = {
+        'Match type': 'single',
+        'Gematchte omschrijving': 'Leveren en leggen van schoonloopmat',
+        'Gematchte code': 'V01',
+    }
+
+    extracted_posts = find_extracted_posts_for_match(offer_result, offer_match)
+
+    assert len(extracted_posts) == 1
+    assert extracted_posts[0]['Omschrijving'] == 'Leveren en leggen van schoonloopmat'
+    assert extracted_posts[0]['Totaalbedrag'] == '3997,50'
+
+
 def test_complete_offer_info_flags_unlinked_claimed_match():
     offer_result = {
         'Bestand': 'offer.pdf',

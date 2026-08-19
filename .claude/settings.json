@@ -3,7 +3,8 @@
     "allow": [
       "Bash(./venv/bin/python -c ' *)",
       "Bash(../../venv/bin/python -c ' *)",
-      "Bash(env PYTHONPATH=development/app ./venv/bin/pytest development/app/tests -q)"
+      "Bash(env PYTHONPATH=development/app ./venv/bin/pytest development/app/tests -q)",
+      "Bash(env PYTHONPATH=development/app ./venv/bin/python -c \"import ast; ast.parse\\(open\\('development/app/interface/right_side/tabulator_table.py'\\).read\\(\\)\\)\")"
     ]
   }
 }

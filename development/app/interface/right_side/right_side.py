@@ -84,7 +84,7 @@ class RightSide(SubPage):
         ):
             ui.icon('info').classes('text-gray-600')
             ui.label(pending.label).classes('text-sm grow')
-            ui.button('Undo', on_click=self.undo_pending).props('flat dense no-caps size=sm color=primary')
+            ui.button('Ongedaan maken', on_click=self.undo_pending).props('flat dense no-caps size=sm color=primary')
 
         ui.timer(8.0, self.expire_pending_undo, once=True)
 

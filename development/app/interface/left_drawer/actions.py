@@ -94,7 +94,7 @@ class DrawerActions:
         self.select_offer(offer)
         self.state.opened_offer = offer
         self.state.current_view = View.OFFER
-        return DrawerActionResult(True, f'Opened {offer.name}', refresh_drawer=True, refresh_right_side=True)
+        return DrawerActionResult(True, f'{offer.name} geopend', refresh_drawer=True, refresh_right_side=True)
 
     @logged_action
     def open_project_comparison(self, project: Project) -> DrawerActionResult:
@@ -132,7 +132,7 @@ class DrawerActions:
             self.state.selected_offer = None
         return DrawerActionResult(
             True,
-            f'Deleted {offer.name}',
+            f'{offer.name} verwijderd',
             refresh_drawer=True,
             refresh_right_side=refresh_right_side,
         )
@@ -140,7 +140,7 @@ class DrawerActions:
     @logged_action
     def clear_extraction(self, offer: Offer) -> DrawerActionResult:
         if self.extraction_job_service.is_running(offer):
-            return DrawerActionResult(False, f'Extraction is still running for {offer.name}')
+            return DrawerActionResult(False, f'Extractie loopt nog voor {offer.name}')
 
         try:
             removed = self.offer_service.clear_extraction(offer)
@@ -149,7 +149,7 @@ class DrawerActions:
 
         return DrawerActionResult(
             True,
-            f'Reset extraction for {offer.name}: removed {removed} files',
+            f'Extractie gereset voor {offer.name}: {removed} bestanden verwijderd',
             refresh_drawer=True,
             refresh_right_side=self.state.opened_offer == offer,
         )
@@ -175,7 +175,7 @@ class DrawerActions:
 
         return DrawerActionResult(
             True,
-            f'Renamed to {new_offer.name}',
+            f'Hernoemd naar {new_offer.name}',
             refresh_drawer=True,
             refresh_right_side=refresh_right_side,
         )
@@ -222,7 +222,7 @@ class DrawerActions:
 
         return DrawerActionResult(
             True,
-            f'Renamed {old_name} to {new_project.name}',
+            f'{old_name} hernoemd naar {new_project.name}',
             refresh_drawer=True,
             refresh_right_side=refresh_right_side,
         )
@@ -268,7 +268,7 @@ class DrawerActions:
 
         return DrawerActionResult(
             True,
-            f'Deleted {project_name}',
+            f'{project_name} verwijderd',
             refresh_drawer=True,
             refresh_right_side=refresh_right_side,
         )
@@ -294,7 +294,7 @@ class DrawerActions:
 
         return DrawerActionResult(
             True,
-            f'Moved {new_offer.name}',
+            f'{new_offer.name} verplaatst',
             refresh_drawer=True,
             refresh_right_side=refresh_right_side,
         )
@@ -309,9 +309,9 @@ class DrawerActions:
             else:
                 failed.append(offer.name)
 
-        message = f'Deleted {deleted} offer(s)'
+        message = f'{deleted} offerte(s) verwijderd'
         if failed:
-            message += f"; failed: {', '.join(failed)}"
+            message += f"; mislukt: {', '.join(failed)}"
 
         return DrawerActionResult(deleted > 0, message, refresh_drawer=True, refresh_right_side=True)
 
@@ -325,9 +325,9 @@ class DrawerActions:
             else:
                 skipped += 1
 
-        message = f'Started extraction for {started} offer(s)'
+        message = f'Extractie gestart voor {started} offerte(s)'
         if skipped:
-            message += f'; {skipped} already running or requested'
+            message += f'; {skipped} al actief of al aangevraagd'
 
         return DrawerActionResult(started > 0, message, refresh_drawer=True)
 
@@ -341,35 +341,35 @@ class DrawerActions:
             else:
                 failed.append(offer.name)
 
-        message = f'Moved {moved} offer(s)'
+        message = f'{moved} offerte(s) verplaatst'
         if failed:
-            message += f"; failed: {', '.join(failed)}"
+            message += f"; mislukt: {', '.join(failed)}"
 
         return DrawerActionResult(moved > 0, message, refresh_drawer=True, refresh_right_side=True)
 
     @logged_action
     def request_extract(self, offer: Offer) -> DrawerActionResult:
         if self.extraction_job_service.is_running(offer):
-            return DrawerActionResult(False, f'Extraction already running for {offer.name}')
+            return DrawerActionResult(False, f'Extractie loopt al voor {offer.name}')
 
         started = self.extraction_job_service.start(offer)
         if not started:
-            return DrawerActionResult(False, f'Extraction already running for {offer.name}')
+            return DrawerActionResult(False, f'Extractie loopt al voor {offer.name}')
 
         self.state.extract_requested_offers.add(offer)
         return DrawerActionResult(
             True,
-            f'Extraction started for {offer.name}',
+            f'Extractie gestart voor {offer.name}',
             refresh_drawer=True,
         )
 
     @logged_action
     def cancel_extraction(self, offer: Offer) -> DrawerActionResult:
         if not self.extraction_job_service.cancel(offer):
-            return DrawerActionResult(False, f'No running extraction to cancel for {offer.name}')
+            return DrawerActionResult(False, f'Geen actieve extractie om te annuleren voor {offer.name}')
 
         self.state.extract_requested_offers.discard(offer)
-        return DrawerActionResult(True, f'Cancelled extraction for {offer.name}', refresh_drawer=True)
+        return DrawerActionResult(True, f'Extractie geannuleerd voor {offer.name}', refresh_drawer=True)
 
     @staticmethod
     def failure(error: Exception) -> DrawerActionResult:

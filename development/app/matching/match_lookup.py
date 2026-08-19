@@ -28,14 +28,31 @@ def build_post_code_index(offer_result: dict) -> dict[str, dict]:
     Uses the same post_code() identity as chunk-merge deduplication in
     extract_offer.py, so a code the matching LLM echoes back resolves the
     same post regardless of how its description was worded.
+
+    Some documents reuse a Code/Regelnummer as a repeating section-header
+    label spanning several distinct posts (e.g. "V01" for every line item
+    under a "V01" heading) rather than as a unique per-post identifier. A
+    code shared by more than one post in this offer isn't a safe lookup
+    key — indexing it would resolve to an arbitrary one of those posts — so
+    such codes are dropped from the index entirely; callers fall back to
+    description matching for them instead.
     """
     from services.extract_offer import post_code
 
     index: dict[str, dict] = {}
+    ambiguous: set[str] = set()
     for post in offer_result.get('Posten', []):
         code = post_code(post)
-        if code and code not in index:
-            index[code] = post
+        if not code:
+            continue
+        if code in index:
+            ambiguous.add(code)
+            continue
+        index[code] = post
+
+    for code in ambiguous:
+        index.pop(code, None)
+
     return index
 
 

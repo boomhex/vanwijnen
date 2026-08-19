@@ -259,6 +259,48 @@ def test_merge_post_chunks_uses_code_field_over_guessed_description_prefix():
     assert merged[0]['Totaalbedrag'] == '1.200,00'
 
 
+def test_merge_post_chunks_does_not_collapse_repeated_section_header_codes():
+    # "V01" here is a section-header Regelnummer shared by several distinct
+    # line items (as real documents do), not a unique per-post code — it
+    # must not cause them to be merged into a single post.
+    chunks = [
+        [
+            {
+                'Omschrijving': 'Schuren en stofzuigen van de ondervloer',
+                'Categorie': 'Vloeren begane grond',
+                'Regelnummer': 'V01',
+                'Totaalbedrag': '147,50',
+                'Eenheid': 'm2',
+                'Eenheidsprijs': '2,95',
+                'Aantal': '50,00',
+            },
+            {
+                'Omschrijving': 'Leveren en leggen van schoonloopmat',
+                'Categorie': 'Vloeren begane grond',
+                'Regelnummer': 'V01',
+                'Totaalbedrag': '3.997,50',
+                'Eenheid': 'm2',
+                'Eenheidsprijs': '79,95',
+                'Aantal': '50,00',
+            },
+            {
+                'Omschrijving': 'Leveren en aanbrengen van L-profiel',
+                'Categorie': 'Vloeren begane grond',
+                'Regelnummer': 'V01',
+                'Totaalbedrag': '770,00',
+                'Eenheid': 'm1',
+                'Eenheidsprijs': '17,50',
+                'Aantal': '44,00',
+            },
+        ],
+    ]
+
+    merged = merge_post_chunks(chunks)
+
+    assert len(merged) == 3
+    assert [post['Omschrijving'] for post in merged] == [post['Omschrijving'] for post in chunks[0]]
+
+
 def test_merge_post_chunks_keeps_rows_with_only_same_total():
     chunks = [
         [

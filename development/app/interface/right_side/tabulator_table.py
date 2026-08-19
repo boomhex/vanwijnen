@@ -2,7 +2,7 @@ from decimal import Decimal
 
 from domain.fields import OFFER_FIELDS
 from domain.money import format_money as _format_money
-from domain.offer import Posten
+from domain.offer import Posten, grouping_fields
 
 
 class TabulatorTable:
@@ -14,12 +14,14 @@ class TabulatorTable:
         layout: str = 'fitColumns',
         reactive: bool = True,
         height: str | None = None,
+        group_by: list[str] | None = None,
     ) -> None:
         self.rows = rows
         self.columns = columns
         self.layout = layout
         self.reactive = reactive
         self.height = height
+        self.group_by = group_by
 
     def options(self) -> dict:
         options = {
@@ -30,6 +32,8 @@ class TabulatorTable:
         }
         if self.height is not None:
             options['height'] = self.height
+        if self.group_by:
+            options['groupBy'] = self.group_by
 
         return options
 
@@ -74,8 +78,9 @@ class TabulatorTable:
 class PostenTable(TabulatorTable):
     fields = OFFER_FIELDS
 
-    def __init__(self, posten: list[Posten]) -> None:
+    def __init__(self, posten: list[Posten], pdf_url: str | None = None) -> None:
         self.posten = posten
+        self.pdf_url = pdf_url
         super().__init__(
             rows=self.rows_from_posten(),
             columns=[
@@ -88,6 +93,21 @@ class PostenTable(TabulatorTable):
                 self.text_column('Totaalbedrag', 'Totaalbedrag', editable=True, width=120),
                 {
                     'title': '',
+                    'field': '__open_pdf__',
+                    'width': 56,
+                    'headerSort': False,
+                    'hozAlign': 'center',
+                    'tooltip': 'Open bij deze pagina in de PDF',
+                    ':formatter': """
+                        function(cell) {
+                            const value = cell.getRow().getData().Pagina;
+                            if (!value || value === 'ONBEKEND') { return ''; }
+                            return 'p.' + value;
+                        }
+                    """,
+                },
+                {
+                    'title': '',
                     'field': '__delete__',
                     'width': 52,
                     'headerSort': False,
@@ -98,6 +118,7 @@ class PostenTable(TabulatorTable):
             layout='fitDataStretch',
             reactive=False,
             height='60vh',
+            group_by=grouping_fields(posten),
         )
 
     def rows_from_posten(self) -> list[dict]:

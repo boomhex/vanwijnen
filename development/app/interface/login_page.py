@@ -34,19 +34,19 @@ def login_page() -> RedirectResponse | None:
 
         log_action('login_failed', username=username)
         await asyncio.sleep(1)  # slow down password guessing
-        ui.notify('Wrong username or password', color='negative')
+        ui.notify('Onjuiste gebruikersnaam of wachtwoord', color='negative')
 
     with ui.column().classes('absolute-center items-center gap-4'):
         if LOGO.exists():
             ui.image(LOGO).classes('w-24')
         with ui.card().classes('items-stretch gap-3 p-6 w-80'):
             ui.label('AI Offerte Vergelijking').classes('text-xl font-bold self-center')
-            username_input = ui.input('Username').props('outlined dense autofocus')
+            username_input = ui.input('Gebruikersnaam').props('outlined dense autofocus')
             username_input.on('keydown.enter', try_login)
-            password_input = ui.input('Password', password=True, password_toggle_button=True).props('outlined dense')
+            password_input = ui.input('Wachtwoord', password=True, password_toggle_button=True).props('outlined dense')
             password_input.on('keydown.enter', try_login)
-            ui.button('Log in', on_click=try_login).props('no-caps')
+            ui.button('Inloggen', on_click=try_login).props('no-caps')
             if not auth.has_users():
-                ui.label('No accounts have been set up yet. Please contact your administrator.') \
+                ui.label('Er zijn nog geen accounts aangemaakt. Neem contact op met de beheerder.') \
                     .classes('text-xs text-gray-500')
     return None

@@ -1,105 +1,119 @@
 {
-    "Naam opdrachtgever": "Van Wijnen Gorredijk",
-    "Totaalprijs inc. BTW": "130516.42",
-    "Totaalprijs exc. BTW": "130516.42",
-    "Posten": [
-        {
-            "Omschrijving": "Beglazing inclusief plaatsing",
-            "Totaalbedrag": "17220.59",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "330.72",
-            "Aantal": "52.07"
-        },
-        {
-            "Omschrijving": "Basiskleur",
-            "Totaalbedrag": "63107.76",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "18.50",
-            "Aantal": "3411.23"
-        },
-        {
-            "Omschrijving": "Accent wand directie (stelpost)",
-            "Totaalbedrag": "208.59",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "8.50",
-            "Aantal": "24.54"
-        },
-        {
-            "Omschrijving": "Accentwand personeelsruimte (stelpost)",
-            "Totaalbedrag": "275.06",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "8.50",
-            "Aantal": "32.36"
-        },
-        {
-            "Omschrijving": "Accentwand spreek/ ib/ ex (stelpost)",
-            "Totaalbedrag": "612.94",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "8.50",
-            "Aantal": "72.11"
-        },
-        {
-            "Omschrijving": "Toiletten - vinyl",
-            "Totaalbedrag": "5744.94",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "26.50",
-            "Aantal": "216.79"
-        },
-        {
-            "Omschrijving": "Toiletten - vinyl Palm Kaki",
-            "Totaalbedrag": "3304.02",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "26.50",
-            "Aantal": "124.68"
-        },
-        {
-            "Omschrijving": "Fotobehang type paars / roze",
-            "Totaalbedrag": "1499.03",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "27.50",
-            "Aantal": "54.51"
-        },
-        {
-            "Omschrijving": "Accent bieb wallcovering - materiaal",
-            "Totaalbedrag": "5602.60",
-            "Eenheid": "m2",
-            "Eenheidsprijs": "138.37",
-            "Aantal": "40.49"
-        },
-        {
-            "Omschrijving": "Binnenkozijnen",
-            "Totaalbedrag": "10995.66",
-            "Eenheid": "m1",
-            "Eenheidsprijs": "9.25",
-            "Aantal": "1188.72"
-        },
-        {
-            "Omschrijving": "Dagkanten binnenzijde buitenkozijnen",
-            "Totaalbedrag": "4401.90",
-            "Eenheid": "m1",
-            "Eenheidsprijs": "8.65",
-            "Aantal": "508.89"
-        },
-        {
-            "Omschrijving": "Plinten",
-            "Totaalbedrag": "9577.54",
-            "Eenheid": "m1",
-            "Eenheidsprijs": "8.55",
-            "Aantal": "1120.18"
-        },
-        {
-            "Omschrijving": "AK",
-            "Totaalbedrag": "4289.27",
-            "Eenheid": "ONBEKEND",
-            "Eenheidsprijs": "ONBEKEND",
-            "Aantal": "ONBEKEND"
-        },
-        {
-            "Omschrijving": "W&R",
-            "Totaalbedrag": "3676.52",
-            "Eenheid": "ONBEKEND",
-            "Eenheidsprijs": "ONBEKEND",
-            "Aantal": "ONBEKEND"
-        }
-    ]
+  "Naam opdrachtgever": "Van Wijnen Gorredijk",
+  "Totaalprijs inc. BTW": "130516.42",
+  "Totaalprijs exc. BTW": "130516.42",
+  "Posten": [
+    {
+      "Omschrijving": "Beglazing inclusief plaatsing",
+      "Totaalbedrag": "17220.59",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "330.72",
+      "Aantal": "52.07",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Basiskleur",
+      "Totaalbedrag": "63107.76",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "18.50",
+      "Aantal": "3411.23",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Accent wand directie (stelpost)",
+      "Totaalbedrag": "208.59",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "8.50",
+      "Aantal": "24.54",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Accentwand personeelsruimte (stelpost)",
+      "Totaalbedrag": "275.06",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "8.50",
+      "Aantal": "32.36",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Accentwand spreek/ ib/ ex (stelpost)",
+      "Totaalbedrag": "612.94",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "8.50",
+      "Aantal": "72.11",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Toiletten - vinyl",
+      "Totaalbedrag": "5744.94",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "26.50",
+      "Aantal": "216.79",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Toiletten - vinyl Palm Kaki",
+      "Totaalbedrag": "3304.02",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "26.50",
+      "Aantal": "124.68",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Fotobehang type paars / roze",
+      "Totaalbedrag": "1499.03",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "27.50",
+      "Aantal": "54.51",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Accent bieb wallcovering - materiaal",
+      "Totaalbedrag": "5602.60",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "138.37",
+      "Aantal": "40.49",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Binnenkozijnen",
+      "Totaalbedrag": "10995.66",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "9.25",
+      "Aantal": "1188.72",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Dagkanten binnenzijde buitenkozijnen",
+      "Totaalbedrag": "4401.90",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.65",
+      "Aantal": "508.89",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "Plinten",
+      "Totaalbedrag": "9577.54",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.55",
+      "Aantal": "1120.18",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "AK",
+      "Totaalbedrag": "4289.27",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND",
+      "Pagina": "3"
+    },
+    {
+      "Omschrijving": "W&R",
+      "Totaalbedrag": "3676.52",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "ONBEKEND",
+      "Pagina": "3"
+    }
+  ]
 }

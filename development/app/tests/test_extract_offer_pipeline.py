@@ -6,11 +6,14 @@ from services.extract_offer import (
     OFFER_RESPONSE_SCHEMA,
     OFFER_SUMMARY_RESPONSE_SCHEMA,
     fetch_posts_chunk,
+    find_post_page,
     friendly_error_message,
     has_extractable_text,
     load_prompt,
     normalize_amounts,
     normalize_units,
+    read_pdf,
+    read_pdf_with_pages,
     should_use_chunked_extraction,
     validate_offer_json,
 )
@@ -145,6 +148,30 @@ def test_fetch_posts_chunk_keeps_first_attempt_when_retry_fails_to_parse_at_all(
     assert recovered is True
     assert answer == truncated
     assert [post['Omschrijving'] for post in posts] == ['A']
+
+
+def test_fetch_posts_chunk_saves_raw_response_before_a_hard_parse_failure(monkeypatch):
+    # Not truncated-and-recoverable — genuinely invalid JSON, which
+    # parse_posts_response cannot salvage at all and must raise for.
+    unparseable = 'not even json'
+    monkeypatch.setattr(extract_offer_module, 'ask_llm', lambda prompt, **kwargs: unparseable)
+
+    saved = {}
+
+    def response_callback(filename, content):
+        saved[filename] = content
+
+    try:
+        fetch_posts_chunk(
+            'RULES', 'chunk text', index=1, total_chunks=1, previous_post=None,
+            response_callback=response_callback,
+        )
+        raised = False
+    except ValueError:
+        raised = True
+
+    assert raised, 'expected parse_posts_response to raise on unparseable JSON'
+    assert saved.get('llm_posts_chunk_1_response.txt') == unparseable
 
 
 def test_fetch_posts_chunk_no_retry_when_response_is_complete(monkeypatch):
@@ -323,7 +350,8 @@ def test_extract_offer_one_shot_end_to_end(tmp_path, monkeypatch):
     document, folder_handler = _make_offer_document(tmp_path)
 
     monkeypatch.setattr(extract_offer_module, 'EXTRACTION_MODE', 'one_shot')
-    monkeypatch.setattr(extract_offer_module, 'read_pdf', lambda file: 'Genoeg tekst voor een geldige offerte extractie test.')
+    page_text = 'Genoeg tekst voor een geldige offerte extractie test. Werk A Alternatief bij Werk A goedkoper materiaal'
+    monkeypatch.setattr(extract_offer_module, 'read_pdf_with_pages', lambda file: (page_text, [page_text]))
     monkeypatch.setattr(extract_offer_module, 'load_prompt', lambda path: 'PROMPT')
 
     canned_answer = json.dumps({
@@ -361,6 +389,8 @@ def test_extract_offer_one_shot_end_to_end(tmp_path, monkeypatch):
     assert result['Posten'][0]['Totaalbedrag'] == '100.00'
     assert result['Posten'][1]['PostType'] == 'alternative'
     assert result['Posten'][1]['Totaalbedrag'] == '-9.30'
+    assert result['Posten'][0]['Pagina'] == '1'
+    assert result['Posten'][1]['Pagina'] == '1'
 
     status = folder_handler.load_extraction_status(document)
     assert status['status'] == 'done'
@@ -371,7 +401,13 @@ def test_extract_offer_chunked_end_to_end(tmp_path, monkeypatch):
     document, folder_handler = _make_offer_document(tmp_path)
 
     monkeypatch.setattr(extract_offer_module, 'EXTRACTION_MODE', 'chunked')
-    monkeypatch.setattr(extract_offer_module, 'read_pdf', lambda file: 'Genoeg tekst voor een geldige offerte extractie test.')
+    page_one = 'Genoeg tekst voor een geldige offerte extractie test, verder niets relevants hier.'
+    page_two = 'Post 1 tekst met bijpassende woorden voor de paginamatch.'
+    monkeypatch.setattr(
+        extract_offer_module,
+        'read_pdf_with_pages',
+        lambda file: (f'{page_one}\n{page_two}', [page_one, page_two]),
+    )
     monkeypatch.setattr(extract_offer_module, 'load_prompt', lambda path: 'PROMPT')
 
     def fake_ask_llm(prompt, **kwargs):
@@ -402,6 +438,7 @@ def test_extract_offer_chunked_end_to_end(tmp_path, monkeypatch):
     assert result['Naam aannemer'] == 'Chunked BV'
     assert result['Posten'][0]['Eenheid'] == 'm2'
     assert result['Posten'][0]['Totaalbedrag'] == '50.00'
+    assert result['Posten'][0]['Pagina'] == '2'
 
     status = folder_handler.load_extraction_status(document)
     assert status['status'] == 'done'
@@ -410,7 +447,7 @@ def test_extract_offer_chunked_end_to_end(tmp_path, monkeypatch):
 def test_extract_offer_fails_fast_on_empty_pdf_text(tmp_path, monkeypatch):
     document, folder_handler = _make_offer_document(tmp_path)
 
-    monkeypatch.setattr(extract_offer_module, 'read_pdf', lambda file: '')
+    monkeypatch.setattr(extract_offer_module, 'read_pdf_with_pages', lambda file: ('', []))
     monkeypatch.setattr(extract_offer_module, 'load_prompt', lambda path: 'PROMPT')
 
     def fail_if_called(prompt, **kwargs):
@@ -450,3 +487,57 @@ def test_ask_llm_fails_fast_on_missing_api_key(monkeypatch):
         assert 'GEMINI_API_KEY is not set' in str(error)
 
     assert call_count == 1
+
+
+def test_read_pdf_with_pages_matches_pdfplumber_page_count_and_joined_text():
+    import pdfplumber
+
+    document = Path(__file__).resolve().parents[1] / 'storage' / 'test' / '22.31_baksteen' / 'postma' / 'document.pdf'
+
+    joined, pages = read_pdf_with_pages(document)
+
+    with pdfplumber.open(document) as pdf:
+        assert len(pages) == len(pdf.pages)
+
+    assert read_pdf(document) == joined
+    assert any(pages), 'expected at least one page to contain extractable text'
+
+
+def test_find_post_page_matches_exact_text():
+    pages = [
+        'Introductiepagina zonder relevante inhoud.',
+        'Vermetselen gevelsteen halfsteens verband 765,00 per dzd',
+    ]
+
+    assert find_post_page('Vermetselen gevelsteen halfsteens verband', pages) == '2'
+
+
+def test_find_post_page_matches_reworded_text():
+    pages = [
+        'Toeslag rond werk uitgevoerd in strekken 15,00 per M2',
+        'Iets volledig anders op deze pagina.',
+    ]
+
+    # Not a literal copy, but shares most of the same words.
+    assert find_post_page('Toeslag voor rond werk, uitgevoerd in strekken', pages) == '1'
+
+
+def test_find_post_page_returns_onbekend_below_threshold():
+    pages = ['Deze pagina heeft nauwelijks overlappende woorden.']
+
+    assert find_post_page('Compleet andere post omschrijving hier', pages) == 'ONBEKEND'
+
+
+def test_find_post_page_ties_go_to_the_earliest_page():
+    pages = [
+        'Regiewerk metselaar per uur',
+        'Regiewerk metselaar per uur',
+    ]
+
+    assert find_post_page('Regiewerk metselaar per uur', pages) == '1'
+
+
+def test_find_post_page_handles_empty_input():
+    assert find_post_page('', ['Some page text']) == 'ONBEKEND'
+    assert find_post_page('Some text', []) == 'ONBEKEND'
+    assert find_post_page('ONBEKEND', ['Some page text']) == 'ONBEKEND'
