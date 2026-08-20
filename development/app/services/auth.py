@@ -110,6 +110,12 @@ def workspace_authorized(username: str | None, workspace: str | None) -> bool:
     return is_valid_workspace_name(workspace) and workspace in user_workspaces(username)
 
 
+def workspace_claimed(workspace: str | None) -> bool:
+    """Whether any user already has this workspace granted."""
+    workspace = normalize_workspace(workspace)
+    return any(workspace in entry.get('workspaces', []) for entry in load_users().values())
+
+
 def grant_workspace(username: str | None, workspace: str | None) -> str:
     username = normalize_username(username)
     workspace = normalize_workspace(workspace)
