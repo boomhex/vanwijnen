@@ -90,6 +90,29 @@ journalctl -u vanwijnen-offerapp -f                                     # servic
 tail -f /opt/vanwijnen/development/app/logs/app.log                     # app-level action log
 ```
 
+## 8. Surviving reboots and power loss
+
+`Restart=always` plus `enable` covers the systemd side - once Linux boots,
+the service starts itself, no manual step needed. Two things outside
+systemd's control can still stop that from being fully unattended:
+
+- **BIOS/UEFI power-on behavior.** Getting the machine to boot again after
+  a power cut is a firmware setting, not an OS one. Check for "Restore on
+  AC/Power Loss" (sometimes "AC Back" or "Power Loss Recovery") and set it
+  to On/Last State - many desktops ship with this set to stay off, meaning
+  the box just sits there dark after an outage until someone presses the
+  power button.
+- **Full-disk encryption.** If the disk uses LUKS, the machine needs a
+  passphrase typed at boot before Linux (and systemd) even starts. An
+  unattended reboot then hangs at that prompt forever. Don't use FDE on
+  this box if it needs to recover with zero physical intervention.
+
+Also worth doing: reserve this machine's IP. If it gets its address via
+DHCP, a reboot can hand it a different IP and break the URL your team
+already has bookmarked - set a DHCP reservation for its MAC address on the
+router (or a static IP on the box) so the address stays fixed across
+restarts.
+
 ## Updating the app later
 
 `git pull` inside `/opt/vanwijnen` is picked up automatically within a few
