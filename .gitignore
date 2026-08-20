@@ -2,3 +2,4 @@
 env.py
 development/llm.py
 /development/app/.env
+/development/app/storage/*
