@@ -18,11 +18,20 @@ def login_page() -> RedirectResponse | None:
 
     ui.colors(primary=PRIMARY_RED)
 
+    async def field_value(field: ui.input) -> str:
+        # Reads the live DOM input directly instead of trusting field.value, which is
+        # synced to the server via a reactive binding that can silently miss keystrokes
+        # typed during a brief reconnect (seen over real network latency, not localhost).
+        # The DOM is what the user actually sees, so it's the one source that can't lie.
+        value = await ui.run_javascript(f"return getHtmlElement({field.id}).querySelector('input').value")
+        return value or ''
+
     async def try_login() -> None:
-        username = auth.normalize_username(username_input.value)
+        username = auth.normalize_username(await field_value(username_input))
+        password = await field_value(password_input)
         # scrypt is deliberately CPU-expensive; run off the shared event loop
         # so one login attempt doesn't stall every other connected client.
-        if await run.io_bound(auth.verify_user, username, password_input.value):
+        if await run.io_bound(auth.verify_user, username, password):
             app.storage.user.update({'authenticated': True, 'username': username})
             log_action('login')
             workspaces = auth.user_workspaces(username)
