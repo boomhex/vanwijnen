@@ -1,8 +1,7 @@
 {
-    "status": "failed",
-    "step": "failed",
-    "updated_at": "2026-08-20T08:02:24.573083+00:00",
-    "started_at": "2026-08-20T07:59:22.027356+00:00",
-    "message": "Matchen mislukt",
-    "error": "LLM request failed after 8 attempts: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    "status": "done",
+    "step": "done",
+    "updated_at": "2026-08-20T09:26:01.829355+00:00",
+    "started_at": "2026-08-20T09:25:39.112361+00:00",
+    "message": "Matchen voltooid"
 }

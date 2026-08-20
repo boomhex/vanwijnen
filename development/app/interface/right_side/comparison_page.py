@@ -450,24 +450,16 @@ class MatchedPostenTable(TabulatorTable):
             offer_name: self.format_money(total) if offer_name in totals else UNKNOWN
             for offer_name, total in ((name, totals.get(name)) for name in self.offer_names)
         }
+        
 
     def to_excel_clipboard_text(self) -> str:
-        export_columns = [
-            column
-            for column in self.columns
-            if column.get('field') and not str(column.get('field')).startswith('__')
-        ]
-        lines = [
-            '\t'.join(self.clean_clipboard_cell(column.get('title', '')) for column in export_columns)
-        ]
-
+        lines = []
         for row in self.rows:
-            lines.append(
-                '\t'.join(
-                    self.clean_clipboard_cell(row.get(column['field'], ''))
-                    for column in export_columns
-                )
-            )
+            cells = ['', row.get('Omschrijving', ''), row.get('Aantal', ''), row.get('Eenheid', '')]
+            for offer_name in self.offer_names:
+                field_prefix = self.offer_field_prefix(offer_name)
+                cells += ['', row.get(f'{field_prefix}_prijs', ''), row.get(f'{field_prefix}_totaal', '')]
+            lines.append('\t\t'.join(self.clean_clipboard_cell(cell) for cell in cells))
 
         return '\n'.join(lines)
 
@@ -476,6 +468,16 @@ class MatchedPostenTable(TabulatorTable):
         if isinstance(value, list):
             return ', '.join(' '.join(str(item or '').split()) for item in value)
         return ' '.join(str(value or '').split())
+
+    @staticmethod
+    def spiegel_line(values) -> str:
+        CELL_SEP = '\t'
+        result = CELL_SEP * 2 + values[0] + CELL_SEP * 2 + \
+        values[1]
+        
+
+        return result
+        
 
 
 
@@ -606,6 +608,11 @@ class ComparisonPage(SubPage):
                 icon='playlist_add',
                 on_click=lambda: self.open_seed_from_offer_dialog(project, comparison),
             ).props('dense no-caps size=sm outline')
+            ui.button(
+                'Plakken vanuit Excel',
+                icon='content_paste',
+                on_click=lambda: self.open_paste_rows_dialog(project, comparison),
+            ).props('dense no-caps size=sm outline')
 
         with ui.element('div').classes('w-full overflow-x-auto'):
             comparison_tabulator = tabulator(comparison_table.options(), row_key='id').classes('w-full')
@@ -670,6 +677,34 @@ class ComparisonPage(SubPage):
             ui.notify(f'{added} regel(s) toegevoegd vanuit {offer_name}.', type='positive')
         else:
             ui.notify(f'Geen bruikbare posten gevonden in {offer_name}.', type='warning')
+        self.refresh()
+
+    def open_paste_rows_dialog(self, project: Project, comparison: dict) -> None:
+        with ui.dialog() as dialog, ui.card().classes('gap-2 min-w-[28rem]'):
+            ui.label('Vergelijkingsregels plakken').classes('font-medium')
+            ui.label(
+                'Plak rijen vanuit Excel: Omschrijving, Aantal en Eenheid per kolom, '
+                'zonder kopregel. Een regel zonder tabs wordt als omschrijving gebruikt.'
+            ).classes('text-xs text-gray-600')
+            paste_area = ui.textarea(placeholder='Omschrijving\tAantal\tEenheid') \
+                .classes('w-full font-mono text-xs').props('outlined rows=10')
+
+            with ui.row().classes('justify-end w-full gap-2'):
+                ui.button('Annuleren', on_click=dialog.close).props('flat dense no-caps size=sm')
+                ui.button(
+                    'Toevoegen',
+                    on_click=lambda: self.paste_comparison_rows(project, comparison, paste_area.value, dialog),
+                ).props('dense no-caps size=sm')
+
+        dialog.open()
+
+    def paste_comparison_rows(self, project: Project, comparison: dict, text: str, dialog) -> None:
+        added = self.comparison_service.add_comparison_rows_from_text(project, comparison, text or '')
+        dialog.close()
+        if added:
+            ui.notify(f'{added} regel(s) toegevoegd.', type='positive')
+        else:
+            ui.notify('Geen bruikbare rijen gevonden om te plakken.', type='warning')
         self.refresh()
 
     def delete_comparison_row(self, project: Project, comparison: dict, row_index: int | None) -> None:
@@ -747,8 +782,11 @@ class ComparisonPage(SubPage):
             ui.button(
                 'Kopiëren voor Excel',
                 icon='content_copy',
-                on_click=lambda table=matched_table: self.copy_match_table_to_clipboard(table),
-            ).props('dense no-caps')
+                on_click=lambda: ui.notify('Tabel gekopieerd voor Excel'),
+            ).props('dense no-caps').on(
+                'click',
+                js_handler=self.copy_match_table_js_handler(matched_table),
+            )
 
         with ui.element('div').classes('w-full overflow-x-auto'):
             matched_tab = tabulator(matched_table.options(), row_key='id').classes('w-full')
@@ -890,9 +928,12 @@ class ComparisonPage(SubPage):
         self.comparison_service.toggle_warning(project, comparison, warning_id, checked)
         self.refresh()
 
-    def copy_match_table_to_clipboard(self, matched_table) -> None:
+    def copy_match_table_js_handler(self, matched_table) -> str:
+        # Must run entirely client-side (no server round-trip) so the clipboard write stays
+        # inside the same synchronous user gesture as the click — Safari refuses clipboard
+        # access otherwise, even though Chrome/Firefox/Edge tolerate the round-trip delay.
         clipboard_text = matched_table.to_excel_clipboard_text()
-        ui.run_javascript(f'''
+        return f'''() => {{
             function copyWithTextarea() {{
                 const textarea = document.createElement('textarea');
                 textarea.value = {json.dumps(clipboard_text)};
@@ -909,8 +950,7 @@ class ComparisonPage(SubPage):
             }} else {{
                 copyWithTextarea();
             }}
-        ''')
-        ui.notify('Tabel gekopieerd voor Excel')
+        }}'''
 
     async def match_project_posts(self, project: Project, comparison: dict, button) -> None:
         if not comparison.get('Posten'):

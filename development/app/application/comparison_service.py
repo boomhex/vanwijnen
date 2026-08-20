@@ -162,6 +162,37 @@ class ComparisonService:
         return len(seeded_rows)
 
     @logged_action
+    def add_comparison_rows_from_text(self, project: Project, comparison: dict[str, Any], text: str) -> int:
+        """Parse pasted, tab-separated rows (e.g. copied straight from Excel) into new Posten.
+
+        Each line is expected as Omschrijving<TAB><blank><TAB><blank><TAB>Aantal<TAB>Eenheid — the
+        second column is a spacer in the source sheet and is ignored. A line with fewer
+        columns is padded, so a bare Omschrijving-only line still works. Blank lines are
+        skipped. Appends to any existing rows rather than replacing them. Returns the
+        number of rows added.
+        """
+        added_rows = []
+        for line in text.splitlines():
+            cells = [cell.strip() for cell in line.split('\t')]
+            if not any(cells):
+                continue
+
+            omschrijving, _spacer, _spacer1, aantal, eenheid = (cells + [''] * 5)[:5]
+            added_rows.append({
+                'Omschrijving': omschrijving,
+                'Aantal': aantal,
+                'Eenheid': eenheid,
+            })
+
+        if not added_rows:
+            return 0
+
+        comparison.setdefault('Posten', []).extend(added_rows)
+        self.clear_matches(comparison)
+        self.save_comparison(project, comparison)
+        return len(added_rows)
+
+    @logged_action
     def update_comparison_row(
         self,
         project: Project,

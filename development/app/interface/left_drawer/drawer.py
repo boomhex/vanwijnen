@@ -102,6 +102,12 @@ class LeftDrawer:
         if not self.file_list_container_is_live():
             return
 
+        if self._any_dialog_open():
+            # Don't blow away an in-progress dialog (e.g. a rename) just because an
+            # unrelated offer's status changed elsewhere. Snapshot stays stale, so
+            # this retries on the next tick once the dialog is closed.
+            return
+
         snapshot = self.extraction_status_snapshot()
         if snapshot == self.last_extraction_snapshot:
             return
@@ -116,6 +122,13 @@ class LeftDrawer:
         # elsewhere with a full re-render.
         if self._opened_offer_is_extracting():
             self.schedule_right_side_refresh()
+
+    def _any_dialog_open(self) -> bool:
+        layout = self.file_list_container.client.layout
+        return any(
+            isinstance(element, ui.dialog) and element.value
+            for element in layout.descendants()
+        )
 
     def _opened_offer_is_extracting(self) -> bool:
         offer = self.state.opened_offer

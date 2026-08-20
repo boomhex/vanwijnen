@@ -1,125 +1,48 @@
 {
     "Posten": [
         {
-            "Omschrijving": "",
-            "Aantal": "",
-            "Eenheid": ""
-        },
-        {
-            "Omschrijving": "Gevelsteen B3 WF",
-            "Aantal": "1",
+            "Omschrijving": "vermetselen gevelsteen wildverband",
+            "Aantal": "86,95",
             "Eenheid": "dzd"
         },
         {
-            "Omschrijving": "Alternatief bij Gevelsteen B3 WF: inzet verreiker JCB 13.5m1",
-            "Aantal": "1",
+            "Omschrijving": "toeslag wilverband",
+            "Aantal": "86,95",
             "Eenheid": "dzd"
         },
         {
-            "Omschrijving": "Voegwerk direct doorgestreken",
-            "Aantal": "1",
+            "Omschrijving": "toeslag strooisteen",
+            "Aantal": "1.112,00",
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "Toeslag rond werk",
-            "Aantal": "1",
+            "Omschrijving": "inzet verreiker JCB 13.5m1 star t.b.v. vooropperen steen/mortel op de steiger, incl. aan-afvoer.",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
+        },
+        {
+            "Omschrijving": "toeslag gebogen metselwerk",
+            "Aantal": "178",
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "Toeslag rollagen",
-            "Aantal": "1",
-            "Eenheid": "m1"
+            "Omschrijving": "vermetselen accentsteen 20mm verdiept",
+            "Aantal": "3.716,00",
+            "Eenheid": "incl."
         },
         {
-            "Omschrijving": "Toeslag omzetten negges",
-            "Aantal": "1",
-            "Eenheid": "m1"
+            "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
+            "Aantal": "86,95",
+            "Eenheid": "dzd"
         },
         {
-            "Omschrijving": "Murfor inmetselen",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Dilatatie / knipvoeg",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Staallateien handzaam",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Ankers boren hsb",
-            "Aantal": "1",
-            "Eenheid": "st"
-        },
-        {
-            "Omschrijving": "Kantplank en/of betondorpels",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Betonlateien niet handzaam",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Ytong koudebrug",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Zaagwerk y-tong blokken",
-            "Aantal": "1",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Zaagwerk stenen",
-            "Aantal": "1",
-            "Eenheid": "st"
-        },
-        {
-            "Omschrijving": "Ventilatierooster inmetselen",
-            "Aantal": "1",
-            "Eenheid": "st"
-        },
-        {
-            "Omschrijving": "Steigerwerk systeemsteiger",
-            "Aantal": "11",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "Huur systeemsteiger per week",
-            "Aantal": "1",
-            "Eenheid": ""
-        },
-        {
-            "Omschrijving": "Consoles verplaatsen",
-            "Aantal": "6201",
-            "Eenheid": "m1"
-        },
-        {
-            "Omschrijving": "Tekening en berekening steigerwerk",
-            "Aantal": "11",
-            "Eenheid": "post"
-        },
-        {
-            "Omschrijving": "2-weekse keuring steiger",
-            "Aantal": "1",
-            "Eenheid": ""
-        },
-        {
-            "Omschrijving": "Regiewerk metselaar",
-            "Aantal": "1",
-            "Eenheid": ""
-        },
-        {
-            "Omschrijving": "",
-            "Aantal": "",
-            "Eenheid": ""
+            "Omschrijving": "voegwerk doorstrijken",
+            "Aantal": "1.112,00",
+            "Eenheid": "m2"
         }
     ],
-    "AfgevinkteWaarschuwingen": []
+    "AfgevinkteWaarschuwingen": [
+        "0|postma.pdf|Lage overeenkomstscore (2). Controleer de match.",
+        "1|postma.pdf|Lage overeenkomstscore (1). Controleer de match."
+    ]
 }
