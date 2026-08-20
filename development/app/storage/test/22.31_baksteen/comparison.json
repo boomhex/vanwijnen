@@ -1,279 +1,125 @@
 {
     "Posten": [
         {
-            "Omschrijving": "Vermetselen gevelsteen halfsteens verband",
-            "Aantal": "86,95",
+            "Omschrijving": "",
+            "Aantal": "",
+            "Eenheid": ""
+        },
+        {
+            "Omschrijving": "Gevelsteen B3 WF",
+            "Aantal": "1",
             "Eenheid": "dzd"
         },
         {
-            "Omschrijving": "toeslag wilverband",
-            "Aantal": "86,95",
+            "Omschrijving": "Alternatief bij Gevelsteen B3 WF: inzet verreiker JCB 13.5m1",
+            "Aantal": "1",
             "Eenheid": "dzd"
         },
         {
-            "Omschrijving": "toeslag strooisteen",
-            "Aantal": "1112,00",
+            "Omschrijving": "Voegwerk direct doorgestreken",
+            "Aantal": "1",
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "inzet verreiker",
-            "Aantal": "86,95",
-            "Eenheid": "dzd"
-        },
-        {
-            "Omschrijving": "toeslag gebogen metselwerk",
-            "Aantal": "178",
+            "Omschrijving": "Toeslag rond werk",
+            "Aantal": "1",
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "vermetselen accentsteen 20mm verdiept",
-            "Aantal": "3716,00",
-            "Eenheid": "dzd"
+            "Omschrijving": "Toeslag rollagen",
+            "Aantal": "1",
+            "Eenheid": "m1"
         },
         {
-            "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
-            "Aantal": "86,95",
-            "Eenheid": "dzd"
+            "Omschrijving": "Toeslag omzetten negges",
+            "Aantal": "1",
+            "Eenheid": "m1"
         },
         {
-            "Omschrijving": "voegwerk doorstrijken",
-            "Aantal": "1112,00",
-            "Eenheid": "m2"
+            "Omschrijving": "Murfor inmetselen",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Dilatatie / knipvoeg",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Staallateien handzaam",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Ankers boren hsb",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Kantplank en/of betondorpels",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Betonlateien niet handzaam",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Ytong koudebrug",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Zaagwerk y-tong blokken",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Zaagwerk stenen",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Ventilatierooster inmetselen",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Steigerwerk systeemsteiger",
+            "Aantal": "11",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "Huur systeemsteiger per week",
+            "Aantal": "1",
+            "Eenheid": ""
+        },
+        {
+            "Omschrijving": "Consoles verplaatsen",
+            "Aantal": "6201",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Tekening en berekening steigerwerk",
+            "Aantal": "11",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "2-weekse keuring steiger",
+            "Aantal": "1",
+            "Eenheid": ""
+        },
+        {
+            "Omschrijving": "Regiewerk metselaar",
+            "Aantal": "1",
+            "Eenheid": ""
+        },
+        {
+            "Omschrijving": "",
+            "Aantal": "",
+            "Eenheid": ""
         }
     ],
-    "AfgevinkteWaarschuwingen": [],
-    "MatchedPosten": [
-        {
-            "Omschrijving": "Vermetselen gevelsteen halfsteens verband",
-            "Aantal": "86,95",
-            "Eenheid": "dzd",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Gevelsteen B3 WF",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "dzd",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "765.00",
-                    "Totaalbedrag": "66516.75",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Vermetselen WF handvorm halfsteens verband",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "dzd",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "800.00",
-                    "Totaalbedrag": "69560.00",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "toeslag wilverband",
-            "Aantal": "86,95",
-            "Eenheid": "dzd",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Toeslag wildverband",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "dzd",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "45.00",
-                    "Totaalbedrag": "3912.75",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "toeslag strooisteen",
-            "Aantal": "1112,00",
-            "Eenheid": "m2",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Toeslag strooisteen",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "7.00",
-                    "Totaalbedrag": "7784.00",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "inzet verreiker",
-            "Aantal": "86,95",
-            "Eenheid": "dzd",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Alternatief bij Gevelsteen B3 WF: inzet verreiker JCB 13.5m1",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "dzd",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "70.00",
-                    "Totaalbedrag": "6086.50",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Verreiker op bouwplaats",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "post",
-                    "Aantal": "1",
-                    "Eenheidsprijs": "6000.00",
-                    "Totaalbedrag": "6000.00",
-                    "Overeenkomst": "2",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "toeslag gebogen metselwerk",
-            "Aantal": "178",
-            "Eenheid": "m2",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Toeslag rond werk",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "15.00",
-                    "Totaalbedrag": "2670.00",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Toeslag rond metselwerk",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "30.00",
-                    "Totaalbedrag": "5340.00",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "vermetselen accentsteen 20mm verdiept",
-            "Aantal": "3716,00",
-            "Eenheid": "dzd",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
-            "Aantal": "86,95",
-            "Eenheid": "dzd",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "ONBEKEND",
-                    "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "1",
-                    "Ongekoppeld": false
-                }
-            }
-        },
-        {
-            "Omschrijving": "voegwerk doorstrijken",
-            "Aantal": "1112,00",
-            "Eenheid": "m2",
-            "Offertes": {
-                "postma.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Voegwerk direct doorgestreken",
-                    "Gematchte categorie": "Voegwerk",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "14.00",
-                    "Totaalbedrag": "15568.00",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false
-                },
-                "zuidema.pdf": {
-                    "Match type": "single",
-                    "Gematchte omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "15.00",
-                    "Totaalbedrag": "16680.00",
-                    "Overeenkomst": "2",
-                    "Ongekoppeld": false
-                }
-            }
-        }
-    ]
+    "AfgevinkteWaarschuwingen": []
 }

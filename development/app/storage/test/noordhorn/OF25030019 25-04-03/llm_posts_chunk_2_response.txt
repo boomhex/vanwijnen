@@ -1,0 +1,237 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Binnenkozijn Merk m. 8",
+      "Beschrijving": "Merk: m. 8. Aantal: 2 Stuks. Afmeting: 1034 x 2600. Type: FSC Binnenkozijn (niet brandwerend). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 6699, zwart, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m. 8",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 6699, zwart"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 6699"
+      ],
+      "Brontekst": "Merk: m. 8\nMerk : m. 8\nAantal : 2 Stuks\nAfmeting : 1034 x 2600\nType : FSC Binnenkozijn (niet brandwerend)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; Deventer S 6699, zwart\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m. 9",
+      "Beschrijving": "Merk: m. 9. Aantal: 1 Stuks. Afmeting: 1034 x 2600. Type: FSC Binnenkozijn (niet brandwerend). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen sluitplaatinkrozing, geen scharnierinkrozingen. Tochtwering: Deventer S 6699, zwart, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m. 9",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 6699, zwart"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Sluitplaatinkrozing",
+        "Scharnierinkrozingen"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 6699"
+      ],
+      "Brontekst": "Merk: m. 9\nMerk : m. 9\nAantal : 1 Stuks\nAfmeting : 1034 x 2600\nType : FSC Binnenkozijn (niet brandwerend)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen sluitplaatinkrozing\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; Deventer S 6699, zwart\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.10",
+      "Beschrijving": "Merk: m.10. Aantal: 4 Stuks. Afmeting: 1034 x 2600. Type: FSC Binnenkozijn (niet brandwerend). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 6699, zwart, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "4",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.10",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 6699, zwart"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 6699"
+      ],
+      "Brontekst": "Merk: m.10\nMerk : m.10\nAantal : 4 Stuks\nAfmeting : 1034 x 2600\nType : FSC Binnenkozijn (niet brandwerend)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; Deventer S 6699, zwart\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.11",
+      "Beschrijving": "Merk: m.11. Aantal: 1 Stuks. Afmeting: 1934 x 2180. Type: FSC Binnenkozijn (niet brandwerend). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen. Tochtwering: Deventer S 6699, zwart, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.11",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 6699, zwart"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 6699"
+      ],
+      "Brontekst": "Merk: m.11\nMerk : m.11\nAantal : 1 Stuks\nAfmeting : 1934 x 2180\nType : FSC Binnenkozijn (niet brandwerend)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)\ntochtwering; Deventer S 6699, zwart"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.12",
+      "Beschrijving": "Merk: m.12. Aantal: 2 Stuks. Afmeting: 1934 x 2600. Type: FSC Binnenkozijn (niet brandwerend). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen. Tochtwering: Deventer S 6699, zwart, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.12",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 6699, zwart"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 6699"
+      ],
+      "Brontekst": "Merk: m.12\nMerk : m.12\nAantal : 2 Stuks\nAfmeting : 1934 x 2600\nType : FSC Binnenkozijn (niet brandwerend)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm Meranti FSC Gel./Gev. Non Komo\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; Deventer S 6699, zwart\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B1",
+      "Beschrijving": "Merk: m.B1. Aantal: 1 Stuks. Afmeting: 834 x 2180. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B1",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B1\nMerk : m.B1\nAantal : 1 Stuks\nAfmeting : 834 x 2180\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend"
+    }
+  ]
+}

@@ -13,7 +13,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "kitwerk",
+      "Werksoort": "afkitten",
       "Prijsbasis": "per m1",
       "Inclusief": [
         "brandwerende kit"
@@ -41,7 +41,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "akoestische band",
+      "Werksoort": "akoestisch ontkoppel band",
       "Prijsbasis": "per m1",
       "Inclusief": [
         "akoestische band Nevima IVI dik 5mm"
@@ -73,7 +73,8 @@
       "Werksoort": "stijlverzwaring",
       "Prijsbasis": "per deurpost",
       "Inclusief": [
-        "vuren 50x70 in C-75 stijlen"
+        "vuren 50x70",
+        "C-75 stijlen"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
@@ -99,7 +100,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "afwerking",
+      "Werksoort": "flexcorner",
       "Prijsbasis": "per m1",
       "Inclusief": [
         "flexcorner"
@@ -128,10 +129,10 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "systeembouw",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "verzinkt stalen stijl- en regelwerk",
+        "verzinkt stalen stijl -en regelwerk",
         "gipskarton",
         "gipsvezelbeplating 12,5 mm",
         "Rockwool Sono base isolatie 60 mm"
@@ -140,17 +141,17 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "MS Hangwand",
+        "MS 125",
+        "Hangwand",
+        "glazen systeemwand",
         "C-75",
         "U-75",
-        "gipskarton",
-        "gipsvezelbeplating",
         "Rockwool"
       ],
-      "Brontekst": "MS 125 / 2.75.2.A ~ Hangwand boven glazen systeemwand\nLeveren en aanbrengen van een MS Hangwand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono base isolatie dik 60 mm. Gerekend met een wandhoogte van 1200mm.\nPrijsstelling € 4.450,00 * gerekend met 43,6 m² I € 102,50 p/m²"
+      "Brontekst": "MS 125 / 2.75.2.A ~ Hangwand boven glazen systeemwand\nLeveren en aanbrengen van een MS Hangwand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag gipskarton en een laag gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono base isolatie dik 60 mm.\nGerekend met een wandhoogte van 1200mm.\nPrijsstelling € 4.450,00 * gerekend met 43,6 m² I € 102,50 p/m²"
     },
     {
-      "Omschrijving": "Logistiek MS (Hangwand)",
+      "Omschrijving": "Logistiek MS",
       "Beschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "348,00",
@@ -192,7 +193,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "kitwerk",
+      "Werksoort": "afkitten",
       "Prijsbasis": "per m1",
       "Inclusief": [
         "Acrylkit kleur wit"
@@ -220,7 +221,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparingen",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "OSB achterhout: 400x598x18mm"
@@ -229,7 +230,7 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Afkoop",
+        "afkoop",
         "sparingen",
         "achterhout",
         "OSB"
@@ -249,14 +250,13 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "systeembouw",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "dubbel verspringend verzinkt stalen stijl- en regelwerk",
-        "C-45 en U-45 profielen",
-        "standaard AK gipskarton",
-        "Ladura/Duragyp gipsvezelbeplating 12,5 mm",
-        "2x Rockwool Sono base isolatie 40mm"
+        "dubbel verspringend verzinkt stalen stijl -en regelwerk",
+        "gipskarton",
+        "Ladura/Duragyp gipsvezelbeplating dik 12,5 mm",
+        "2x Rockwool Sono base isolatie dik 40mm"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
@@ -265,7 +265,6 @@
         "MS 160",
         "C-45",
         "U-45",
-        "gipskarton",
         "Ladura",
         "Duragyp",
         "Rockwool"
@@ -273,7 +272,7 @@
       "Brontekst": "MS 160 / 2.45*45.2.AA\nLeveren en aanbrengen van een MS wand, dik 145mm, opgebouwd uit een dubbel verspringend verzinkt stalen stijl -en regelwerk (C-45 en U-45 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven worden er één laag standaard AK gipskarton en één laag Ladura/Duragyp gipsvezelbeplating dik 12,5 mm aangebracht. In de spouw 2x Rockwool Sono base isolatie dik 40mm. Er is gerekend met een wandhoogte van 2700mm.\nPrijsstelling € 18.675,00 * gerekend met 178,3 m² I € 104,75 p/m²"
     },
     {
-      "Omschrijving": "Logistiek MS (MS 160)",
+      "Omschrijving": "Logistiek MS",
       "Beschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "1.400,00",

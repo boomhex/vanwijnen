@@ -1,0 +1,29 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Stagnatiekosten",
+      "Beschrijving": "Stagnatiekosten zijn € 650,-/uur.",
+      "Categorie": "Aansprakelijkheid / stagnaties",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "650,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "regie",
+      "Status": "unknown",
+      "Code": "ONBEKEND",
+      "Regelnummer": "4.4",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "regiewerk",
+      "Prijsbasis": "per uur",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "stagnatiekosten",
+        "stagnatie"
+      ],
+      "Brontekst": "Stagnatiekosten zijn € 650,-/uur."
+    }
+  ]
+}

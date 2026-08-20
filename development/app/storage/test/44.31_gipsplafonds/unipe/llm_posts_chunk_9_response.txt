@@ -1,8 +1,8 @@
 {
   "Posten": [
     {
-      "Omschrijving": "Sparing Wandcontactdozen",
-      "Beschrijving": "Sparingen in MS wanden: Sparing Wandcontactdozen. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing Wandcontactdozen (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing Wandcontactdozen. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -23,15 +23,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "Wandcontactdozen",
-        "gipskarton"
+        "sparing",
+        "wandcontactdoos",
+        "enkele beplating"
       ],
       "Brontekst": "1) Sparing Wandcontactdozen € 3,75 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 000 t/m 100 mm",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 000 t/m 100 mm. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 000 t/m 100 mm (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 000 t/m 100 mm. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -52,14 +52,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton"
+        "sparing",
+        "enkele beplating"
       ],
       "Brontekst": "2) Sparing 000 t/m 100 mm € 6,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 101 t/m 200 mm",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 101 t/m 200 mm. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 101 t/m 200 mm (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 101 t/m 200 mm. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -80,14 +80,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton"
+        "sparing",
+        "enkele beplating"
       ],
       "Brontekst": "3) Sparing 101 t/m 200 mm € 7,50 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 201 t/m 400 mm",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 201 t/m 400 mm. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 201 t/m 400 mm (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 201 t/m 400 mm. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -108,14 +108,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton"
+        "sparing",
+        "enkele beplating"
       ],
       "Brontekst": "4) Sparing 201 t/m 400 mm € 10,50 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 401 t/m 600 mm",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 401 t/m 600 mm. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 401 t/m 600 mm (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 401 t/m 600 mm. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -136,14 +136,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton"
+        "sparing",
+        "enkele beplating"
       ],
       "Brontekst": "5) Sparing 401 t/m 600 mm € 13,50 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 601 t/m 1200 mm",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 601 t/m 1200 mm. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 601 t/m 1200 mm (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 601 t/m 1200 mm. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -164,14 +164,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton"
+        "sparing",
+        "enkele beplating"
       ],
       "Brontekst": "6) Sparing 601 t/m 1200 mm € 16,50 p/stuk"
     },
     {
-      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken",
-      "Beschrijving": "Sparingen in MS wanden: Raveling maken indien leidingen de stijlen onderbreken. Sparingen in enkele gipskarton beplating per wandzijde. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken (enkele beplating)",
+      "Beschrijving": "Sparingen in MS wanden: Raveling maken indien leidingen de stijlen onderbreken. Sparingen in enkele gipskarton beplating per wandzijde.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -182,7 +182,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "7",
       "Subcategorie": "Sparingen in enkele gipskarton beplating per wandzijde",
-      "Werksoort": "sparingen",
+      "Werksoort": "raveling",
       "Prijsbasis": "per stijl",
       "Inclusief": [],
       "Exclusief": [
@@ -192,15 +192,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Raveling",
-        "leidingen",
-        "stijlen"
+        "raveling",
+        "stijlen",
+        "leidingen"
       ],
       "Brontekst": "7) Raveling maken indien leidingen de stijlen onderbreken € 12,50 p/stijl"
     },
     {
-      "Omschrijving": "Sparing Wandcontactdozen (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing Wandcontactdozen. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing Wandcontactdozen (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing Wandcontactdozen. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -221,16 +221,16 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "Wandcontactdozen",
-        "gipskarton",
+        "sparing",
+        "wandcontactdoos",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "1) Sparing Wandcontactdozen € 3,75 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 000 t/m 100 mm (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 000 t/m 100 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 000 t/m 100 mm (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 000 t/m 100 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -251,15 +251,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton",
+        "sparing",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "2) Sparing 000 t/m 100 mm € 7,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 101 t/m 200 mm (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 101 t/m 200 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 101 t/m 200 mm (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 101 t/m 200 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -280,15 +280,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton",
+        "sparing",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "3) Sparing 101 t/m 200 mm € 9,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 201 t/m 400 mm (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 201 t/m 400 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 201 t/m 400 mm (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 201 t/m 400 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -309,15 +309,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton",
+        "sparing",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "4) Sparing 201 t/m 400 mm € 13,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 401 t/m 600 mm (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 401 t/m 600 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 401 t/m 600 mm (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 401 t/m 600 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -338,15 +338,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton",
+        "sparing",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "5) Sparing 401 t/m 600 mm € 17,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 601 t/m 1200 mm (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Sparing 601 t/m 1200 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Sparing 601 t/m 1200 mm (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Sparing 601 t/m 1200 mm. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -367,15 +367,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipskarton",
+        "sparing",
+        "dubbele beplating",
         "Type B"
       ],
       "Brontekst": "6) Sparing 601 t/m 1200 mm € 21,00 p/stuk"
     },
     {
-      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken (Type B)",
-      "Beschrijving": "Sparingen in MS wanden: Raveling maken indien leidingen de stijlen onderbreken. Sparingen in dubbele gipskarton beplating per wandzijde Type B. Exclusief afdichten en exclusief maatvoering.",
+      "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken (dubbele beplating Type B)",
+      "Beschrijving": "Sparingen in MS wanden: Raveling maken indien leidingen de stijlen onderbreken. Sparingen in dubbele gipskarton beplating per wandzijde Type B.",
       "Categorie": "Sparingen in MS wanden",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -386,7 +386,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "7",
       "Subcategorie": "Sparingen in dubbele gipskarton beplating per wandzijde Type B",
-      "Werksoort": "sparingen",
+      "Werksoort": "raveling",
       "Prijsbasis": "per stijl",
       "Inclusief": [],
       "Exclusief": [
@@ -396,16 +396,15 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Raveling",
-        "leidingen",
+        "raveling",
         "stijlen",
-        "Type B"
+        "leidingen"
       ],
       "Brontekst": "7) Raveling maken indien leidingen de stijlen onderbreken € 12,50 p/stijl"
     },
     {
-      "Omschrijving": "Sparing 00 t/m 50 mm",
-      "Beschrijving": "Sparingen in gipsplafonds: Sparing 00 t/m 50 mm. Exclusief afdichten en maatvoering.",
+      "Omschrijving": "Sparing 00 t/m 50 mm (gipsplafonds)",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Sparing 00 t/m 50 mm.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -426,14 +425,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipsplafonds"
+        "sparing",
+        "gipsplafond"
       ],
       "Brontekst": "1) Sparing 00 t/m 50 mm € 5,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 51 t/m 100 mm",
-      "Beschrijving": "Sparingen in gipsplafonds: Sparing 51 t/m 100 mm. Exclusief afdichten en maatvoering.",
+      "Omschrijving": "Sparing 51 t/m 100 mm (gipsplafonds)",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Sparing 51 t/m 100 mm.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -454,14 +453,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipsplafonds"
+        "sparing",
+        "gipsplafond"
       ],
       "Brontekst": "2) Sparing 51 t/m 100 mm € 10,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 101 t/m 300 mm",
-      "Beschrijving": "Sparingen in gipsplafonds: Sparing 101 t/m 300 mm. Exclusief afdichten en maatvoering.",
+      "Omschrijving": "Sparing 101 t/m 300 mm (gipsplafonds)",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Sparing 101 t/m 300 mm.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -482,14 +481,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipsplafonds"
+        "sparing",
+        "gipsplafond"
       ],
       "Brontekst": "3) Sparing 101 t/m 300 mm € 14,00 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 301 t/m 600 mm",
-      "Beschrijving": "Sparingen in gipsplafonds: Sparing 301 t/m 600 mm. Exclusief afdichten en maatvoering.",
+      "Omschrijving": "Sparing 301 t/m 600 mm (gipsplafonds)",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Sparing 301 t/m 600 mm.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -510,14 +509,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipsplafonds"
+        "sparing",
+        "gipsplafond"
       ],
       "Brontekst": "4) Sparing 301 t/m 600 mm € 20,50 p/stuk"
     },
     {
-      "Omschrijving": "Sparing 601 t/m 800 mm",
-      "Beschrijving": "Sparingen in gipsplafonds: Sparing 601 t/m 800 mm. Exclusief afdichten en maatvoering.",
+      "Omschrijving": "Sparing 601 t/m 800 mm (gipsplafonds)",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Sparing 601 t/m 800 mm.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -538,14 +537,14 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparing",
-        "gipsplafonds"
+        "sparing",
+        "gipsplafond"
       ],
       "Brontekst": "5) Sparing 601 t/m 800 mm € 27,50 p/stuk"
     },
     {
       "Omschrijving": "Raveling maken indien leidingen de stijlen onderbreken (gipsplafonds)",
-      "Beschrijving": "Sparingen in gipsplafonds: Raveling maken indien leidingen de stijlen onderbreken. Exclusief afdichten en maatvoering.",
+      "Beschrijving": "Sparingen in gipsplafonds exclusief afdichten en maatvoering: Raveling maken indien leidingen de stijlen onderbreken.",
       "Categorie": "Sparingen in gipsplafonds",
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "st",
@@ -556,7 +555,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "6",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparingen",
+      "Werksoort": "raveling",
       "Prijsbasis": "per stijl",
       "Inclusief": [],
       "Exclusief": [
@@ -566,9 +565,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Raveling",
-        "leidingen",
-        "stijlen"
+        "raveling",
+        "stijlen",
+        "leidingen"
       ],
       "Brontekst": "6) Raveling maken indien leidingen de stijlen onderbreken € 12,50 p/stijl"
     },
@@ -592,8 +591,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "1) Achterhout (OSB) 200 x 595/395/295 x 18mm € 8,50 p/stuk"
     },
@@ -617,8 +617,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "2) Achterhout (OSB) 300 x 595/395/295 x 18mm € 10,50 p/stuk"
     },
@@ -642,8 +643,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "3) Achterhout (OSB) 400 x 595/395/295 x 18mm € 12,50 p/stuk"
     },
@@ -667,8 +669,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "4) Achterhout (OSB) 600 x 595/395/295 x 18mm € 18,50 p/stuk"
     },
@@ -692,8 +695,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "5) Achterhout (OSB) 1200 x 595/395/295 x 18mm € 21,50 p/stuk"
     },
@@ -717,8 +721,9 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Achterhout",
-        "OSB"
+        "achterhout",
+        "OSB",
+        "18mm"
       ],
       "Brontekst": "6) Achterhout (OSB) 2400 x 595/395/295 x 18mm € 32,50 p/stuk"
     },
@@ -744,7 +749,7 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparingen",
+        "sparing",
         "spotjes",
         "brandmelders",
         "achterhout"
@@ -771,7 +776,7 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparingen",
+        "sparing",
         "spotjes",
         "brandmelders"
       ],

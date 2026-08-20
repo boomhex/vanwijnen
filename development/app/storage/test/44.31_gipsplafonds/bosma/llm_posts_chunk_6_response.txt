@@ -22,7 +22,7 @@
       "MatchHints": [
         "regie",
         "uurloon",
-        "uurtarief"
+        "tarief"
       ],
       "Brontekst": "Regie uurloon bedraagt € 57,50 per uur."
     }

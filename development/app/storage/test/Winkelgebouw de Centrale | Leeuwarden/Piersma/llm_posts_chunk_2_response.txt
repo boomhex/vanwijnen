@@ -1,0 +1,54 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Egaliseren per kg met reparatiemortel",
+      "Beschrijving": "Egaliseren per kg met reparatiemortel",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "egaliseren",
+      "Prijsbasis": "per kg",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Egaliseren",
+        "reparatiemortel"
+      ],
+      "Brontekst": "Egaliserenperkgmetreparatiemortel € 5,00 (perkg)"
+    },
+    {
+      "Omschrijving": "Extra fases",
+      "Beschrijving": "Extra fases",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "850,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "fases",
+      "Prijsbasis": "per fase",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Extra fases",
+        "fase"
+      ],
+      "Brontekst": "Extrafases € 850,00 (perfase)"
+    }
+  ]
+}

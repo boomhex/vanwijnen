@@ -1,0 +1,146 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B7",
+      "Beschrijving": "Merk: m.B7. Aantal: 1 Stuks. Afmeting: 1034 x 2600. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken). Opmerking: Kozijnmerk m.B7 gerekend in hout ondanks afwerkkodering K.3 (zie tekening kozijnstaat TO 0.R.3).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B7",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B7\nMerk : m.B7\nAantal : 1 Stuks\nAfmeting : 1034 x 2600\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B8",
+      "Beschrijving": "Merk: m.B8. Aantal: 2 Stuks. Afmeting: 1034 x 2600. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen sluitplaatinkrozing, geen scharnierinkrozingen. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B8",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B8\nMerk : m.B8\nAantal : 2 Stuks\nAfmeting : 1034 x 2600\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen sluitplaatinkrozing\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "RVS hoekbeschermingsprofielen",
+      "Beschrijving": "RVS hoekbeschermingsprofielen, 1.5x15x15, lengte 900 mm, 3 stuks per kozijn, meerprijs € 87.00 excl. btw",
+      "Categorie": "Opties",
+      "Totaalbedrag": "87.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "87.00",
+      "Aantal": "1",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "1",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "hoekbescherming",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "3 stuks per kozijn"
+      ],
+      "Exclusief": [
+        "btw"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "RVS",
+        "hoekbeschermingsprofielen",
+        "1.5x15x15",
+        "900 mm"
+      ],
+      "Brontekst": "1. RVS hoekbeschermingsprofielen, 1.5x15x15, lengte 900 mm, 3 stuks per kozijn, meerprijs € 87.00 excl. btw"
+    },
+    {
+      "Omschrijving": "Aluminium hoekbeschermingsprofielen",
+      "Beschrijving": "Aluminium hoekbeschermingsprofielen, 1.5x15x15, lengte 900 mm, 3 stuks per kozijn, meerprijs € 45.00 excl. btw",
+      "Categorie": "Opties",
+      "Totaalbedrag": "45.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "45.00",
+      "Aantal": "1",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "2",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "hoekbescherming",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "3 stuks per kozijn"
+      ],
+      "Exclusief": [
+        "btw"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Aluminium",
+        "hoekbeschermingsprofielen",
+        "1.5x15x15",
+        "900 mm"
+      ],
+      "Brontekst": "2. Aluminium hoekbeschermingsprofielen, 1.5x15x15, lengte 900 mm, 3 stuks per kozijn, meerprijs € 45.00 excl. btw"
+    }
+  ]
+}

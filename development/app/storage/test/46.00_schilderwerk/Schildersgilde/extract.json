@@ -1,119 +1,400 @@
 {
-  "Naam opdrachtgever": "Van Wijnen Gorredijk",
-  "Totaalprijs inc. BTW": "130516.42",
-  "Totaalprijs exc. BTW": "130516.42",
-  "Posten": [
-    {
-      "Omschrijving": "Beglazing inclusief plaatsing",
-      "Totaalbedrag": "17220.59",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "330.72",
-      "Aantal": "52.07",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Basiskleur",
-      "Totaalbedrag": "63107.76",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "18.50",
-      "Aantal": "3411.23",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Accent wand directie (stelpost)",
-      "Totaalbedrag": "208.59",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "8.50",
-      "Aantal": "24.54",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Accentwand personeelsruimte (stelpost)",
-      "Totaalbedrag": "275.06",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "8.50",
-      "Aantal": "32.36",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Accentwand spreek/ ib/ ex (stelpost)",
-      "Totaalbedrag": "612.94",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "8.50",
-      "Aantal": "72.11",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Toiletten - vinyl",
-      "Totaalbedrag": "5744.94",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "26.50",
-      "Aantal": "216.79",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Toiletten - vinyl Palm Kaki",
-      "Totaalbedrag": "3304.02",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "26.50",
-      "Aantal": "124.68",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Fotobehang type paars / roze",
-      "Totaalbedrag": "1499.03",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "27.50",
-      "Aantal": "54.51",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Accent bieb wallcovering - materiaal",
-      "Totaalbedrag": "5602.60",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "138.37",
-      "Aantal": "40.49",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Binnenkozijnen",
-      "Totaalbedrag": "10995.66",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "9.25",
-      "Aantal": "1188.72",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Dagkanten binnenzijde buitenkozijnen",
-      "Totaalbedrag": "4401.90",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "8.65",
-      "Aantal": "508.89",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "Plinten",
-      "Totaalbedrag": "9577.54",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "8.55",
-      "Aantal": "1120.18",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "AK",
-      "Totaalbedrag": "4289.27",
-      "Eenheid": "ONBEKEND",
-      "Eenheidsprijs": "ONBEKEND",
-      "Aantal": "ONBEKEND",
-      "Pagina": "3"
-    },
-    {
-      "Omschrijving": "W&R",
-      "Totaalbedrag": "3676.52",
-      "Eenheid": "ONBEKEND",
-      "Eenheidsprijs": "ONBEKEND",
-      "Aantal": "ONBEKEND",
-      "Pagina": "3"
-    }
-  ]
+    "Naam aannemer": "Schildersgilde Friesland B.V.",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "130516.42",
+    "BTW verlegd": "ja",
+    "Posten": [
+        {
+            "Omschrijving": "Beglazing inclusief plaatsing",
+            "Beschrijving": "Beglazing inclusief plaatsing. 30 minuten brandwerende beglazing Contra am EI30",
+            "Categorie": "Binnenbeglazing",
+            "Totaalbedrag": "17220.59",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "330.72",
+            "Aantal": "52.07",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "glaszetten",
+            "Prijsbasis": "per m2",
+            "Inclusief": [
+                "plaatsing",
+                "30 minuten brandwerende beglazing Contra am EI30"
+            ],
+            "Exclusief": [
+                "schilderwerk"
+            ],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "brandwerend",
+                "Contra am",
+                "EI30",
+                "beglazing"
+            ],
+            "Brontekst": "Beglazing inclusief plaatsing 52.07 m² € 330,72 € 17.220,59 Verlegd 21% 30 minuten brandwerende beglazing Contra am EI30",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Basiskleur",
+            "Beschrijving": "Scannen- en sauzen basiskleur",
+            "Categorie": "Scannen- en sauzen",
+            "Totaalbedrag": "63107.76",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "18.50",
+            "Aantal": "3411.23",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "sauswerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "basiskleur",
+                "scannen",
+                "sauzen"
+            ],
+            "Brontekst": "Basiskleur 3411.23 m² € 18,50 € 63.107,76",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Accentwand directie (stelpost)",
+            "Beschrijving": "Accentwand directie (stelpost)",
+            "Categorie": "Scannen- en sauzen",
+            "Totaalbedrag": "208.59",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "8.50",
+            "Aantal": "24.54",
+            "PostType": "stelpost",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "sauswerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "accentwand",
+                "directie",
+                "stelpost"
+            ],
+            "Brontekst": "Accentwand directie (stelpost) 24.54 m² € 8,50 € 208,59",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Accentwand personeelsruimte (stelpost)",
+            "Beschrijving": "Accentwand personeelsruimte (stelpost)",
+            "Categorie": "Scannen- en sauzen",
+            "Totaalbedrag": "275.06",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "8.50",
+            "Aantal": "32.36",
+            "PostType": "stelpost",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "sauswerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "accentwand",
+                "personeelsruimte",
+                "stelpost"
+            ],
+            "Brontekst": "Accentwand personeelsruimte (stelpost) 32.36 m² € 8,50 € 275,06",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Accentwand spreek/ ib/ ex (stelpost)",
+            "Beschrijving": "Accentwand spreek/ ib/ ex (stelpost)",
+            "Categorie": "Scannen- en sauzen",
+            "Totaalbedrag": "612.94",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "8.50",
+            "Aantal": "72.11",
+            "PostType": "stelpost",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "sauswerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "accentwand",
+                "spreek",
+                "ib",
+                "ex",
+                "stelpost"
+            ],
+            "Brontekst": "Accentwand spreek/ ib/ ex (stelpost) 72.11 m² € 8,50 € 612,94",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Toiletten - vinyl",
+            "Beschrijving": "Behangwerk toiletten - vinyl",
+            "Categorie": "Behangwerk",
+            "Totaalbedrag": "5744.94",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "26.50",
+            "Aantal": "216.79",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "behangwerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "toiletten",
+                "vinyl",
+                "behangwerk"
+            ],
+            "Brontekst": "Toiletten - vinyl 216.79 m² € 26,50 € 5.744,94",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Toiletten - vinyl Palm Kaki",
+            "Beschrijving": "Behangwerk toiletten - vinyl Palm Kaki",
+            "Categorie": "Behangwerk",
+            "Totaalbedrag": "3304.02",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "26.50",
+            "Aantal": "124.68",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "behangwerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "toiletten",
+                "vinyl",
+                "Palm Kaki",
+                "behangwerk"
+            ],
+            "Brontekst": "Toiletten - vinyl Palm Kaki 124.68 m² € 26,50 € 3.304,02",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Fotobehang type paars / roze",
+            "Beschrijving": "Fotobehang type paars / roze",
+            "Categorie": "Behangwerk",
+            "Totaalbedrag": "1499.03",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "27.50",
+            "Aantal": "54.51",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "behangwerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "fotobehang",
+                "paars",
+                "roze"
+            ],
+            "Brontekst": "Fotobehang type paars / roze 54.51 m² € 27,50 € 1.499,03",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Accent bieb wallcovering - materiaal",
+            "Beschrijving": "Accent bieb wallcovering - materiaal inclusief wallcoverings LINEN 2547.10 volgens bestek",
+            "Categorie": "Behangwerk",
+            "Totaalbedrag": "5602.60",
+            "Eenheid": "m2",
+            "Eenheidsprijs": "138.37",
+            "Aantal": "40.49",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "behangwerk",
+            "Prijsbasis": "per m2",
+            "Inclusief": [
+                "wallcoverings LINEN 2547.10"
+            ],
+            "Exclusief": [],
+            "Voorwaarden": [
+                "volgens bestek"
+            ],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "wallcovering",
+                "LINEN 2547.10",
+                "bieb"
+            ],
+            "Brontekst": "Accent bieb wallcovering - materiaal 40.49 m² € 138,37 € 5.602,60 Verlegd 21% inclusief wallcoverings LINEN 2547.10 volgens bestek",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Binnenkozijnen",
+            "Beschrijving": "Binnenschilderwerk binnenkozijnen",
+            "Categorie": "Binnenschilderwerk",
+            "Totaalbedrag": "10995.66",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "9.25",
+            "Aantal": "1188.72",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "schilderwerk",
+            "Prijsbasis": "per m1",
+            "Inclusief": [],
+            "Exclusief": [
+                "deuren"
+            ],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "binnenkozijnen",
+                "schilderwerk"
+            ],
+            "Brontekst": "Binnenkozijnen 1188.72 m¹ € 9,25 € 10.995,66",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Dagkanten binnenzijde buitenkozijnen",
+            "Beschrijving": "Dagkanten binnenzijde buitenkozijnen volgens kozijnstaten",
+            "Categorie": "Binnenschilderwerk",
+            "Totaalbedrag": "4401.90",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "8.65",
+            "Aantal": "508.89",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "schilderwerk",
+            "Prijsbasis": "per m1",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [
+                "volgens kozijnstaten"
+            ],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "dagkanten",
+                "buitenkozijnen",
+                "kozijnstaten"
+            ],
+            "Brontekst": "Dagkanten binnenzijde buitenkozijnen 508.89 m¹ € 8,65 € 4.401,90 Volgens kozijnstaten",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "Plinten",
+            "Beschrijving": "Binnenschilderwerk plinten",
+            "Categorie": "Binnenschilderwerk",
+            "Totaalbedrag": "9577.54",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "8.55",
+            "Aantal": "1120.18",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "schilderwerk",
+            "Prijsbasis": "per m1",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "plinten",
+                "schilderwerk"
+            ],
+            "Brontekst": "Plinten 1120.18 m¹ € 8,55 € 9.577,54",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "AK",
+            "Beschrijving": "Algemene Kosten",
+            "Categorie": "ONBEKEND",
+            "Totaalbedrag": "4289.27",
+            "Eenheid": "post",
+            "Eenheidsprijs": "4289.27",
+            "Aantal": "1",
+            "PostType": "surcharge",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "algemene kosten",
+            "Prijsbasis": "totaal",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "AK",
+                "algemene kosten"
+            ],
+            "Brontekst": "AK € 4.289,27",
+            "Pagina": "3"
+        },
+        {
+            "Omschrijving": "W&R",
+            "Beschrijving": "Winst & Risico",
+            "Categorie": "ONBEKEND",
+            "Totaalbedrag": "3676.52",
+            "Eenheid": "post",
+            "Eenheidsprijs": "3676.52",
+            "Aantal": "1",
+            "PostType": "surcharge",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "winst en risico",
+            "Prijsbasis": "totaal",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "W&R",
+                "winst",
+                "risico"
+            ],
+            "Brontekst": "W&R € 3.676,52",
+            "Pagina": "3"
+        }
+    ]
 }

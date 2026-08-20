@@ -1,0 +1,86 @@
+{
+    "Naam aannemer": "Van Wijnen Smart Frames",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "10495.00",
+    "BTW verlegd": "ONBEKEND",
+    "Posten": [
+        {
+            "Omschrijving": "Binnenkozijnen",
+            "Beschrijving": "Het leveren van machinaal timmerwerk ten behoeve van verbouw gemeentehuis Smallingerland. Aantal binnenkozijnen: 48 stuks, ca. 128 m2. Kozijnhout: Hardhout FSC NON KOMO GV GL 570 kg/m3 en 770 kg/m3 (voor MB 60 min). Kozijnprofilering: 67x114. Inclusief tochtprofielen Deventer SV715 en S 5767. Schilderwerk: Concept 1, twee maal aplex aqua basecoat (Anker Stuy) in maximaal 2 kleuren.",
+            "Categorie": "Binnenkozijnen",
+            "Totaalbedrag": "10495.00",
+            "Eenheid": "post",
+            "Eenheidsprijs": "10495.00",
+            "Aantal": "1",
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "timmerwerk",
+            "Prijsbasis": "totaal",
+            "Inclusief": [
+                "BIM-engineering (1 sessie tekenwerk & 1 sessie aanpassingen)",
+                "2D-engineering",
+                "Tochtprofielen (Deventer SV715 en S 5767)",
+                "Schilderwerk Concept 1 (twee maal aplex aqua basecoat)",
+                "Transport (max. 1 vracht)"
+            ],
+            "Exclusief": [
+                "Deuren & H&S",
+                "Schuifdeur",
+                "Laagreliëf dorpels (hardstenen onderdorpels)",
+                "Hoekbeschermers",
+                "Lossen van de vrachtwagen"
+            ],
+            "Voorwaarden": [
+                "Loonkosten (38%) zijn vast t/m 31-12-2025",
+                "Materiaalkosten (62%) zijn kwartaalprijzen",
+                "Engineeringstijd minimaal 6 werkweken",
+                "Productietijd minimaal 8 werkweken",
+                "Maximale gebruikstijd van een bok op de bouwplaats is 1 week, daarna € 875,- bij schade/verlies"
+            ],
+            "DoorOpdrachtgever": [
+                "Zorgdragen voor het lossen (hijskraan o.i.d.)"
+            ],
+            "MatchHints": [
+                "binnenkozijnen",
+                "hardhout",
+                "FSC",
+                "Deventer",
+                "Anker Stuy",
+                "timmerwerk"
+            ],
+            "Brontekst": "Binnenkozijnen € 10.495,-\nZegge: tienduizend vierhonderd vijfennegentig euro.\n...\nAantal binnenkozijnen : 48 stuks\nAantal m2 : Ca 128 m2",
+            "Pagina": "2"
+        },
+        {
+            "Omschrijving": "Optie: RVS hoekbeschermers",
+            "Beschrijving": "Indien de binnenkozijnen voorzien moeten worden van RVS hoekbeschermers 20x20x900 - 3 stuks per deurvak geeft dit een meerprijs van € 63,00 per deurvak.",
+            "Categorie": "Optie's",
+            "Totaalbedrag": "ONBEKEND",
+            "Eenheid": "st",
+            "Eenheidsprijs": "63.00",
+            "Aantal": "ONBEKEND",
+            "PostType": "option",
+            "Status": "optional",
+            "Code": "ONBEKEND",
+            "Regelnummer": "1",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "timmerwerk",
+            "Prijsbasis": "per deurvak",
+            "Inclusief": [
+                "RVS hoekbeschermers 20x20x900 (3 stuks per deurvak)"
+            ],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "RVS hoekbeschermers",
+                "deurvak"
+            ],
+            "Brontekst": "1) Indien de binnenkozijnen voorzien moeten worden van RVS hoekbeschermers 20x20x900 - 3 stuks per deurvak geeft dit een meerprijs van € 63,00 per deurvak",
+            "Pagina": "2"
+        }
+    ]
+}

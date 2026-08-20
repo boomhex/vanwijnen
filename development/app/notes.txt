@@ -51,3 +51,5 @@ vd Ploeg
 Prioriteit aan eenheidsprijs
 Grote verschillen hoeveelheden (Waarschuwing bij grote hoeveelheidverschil)
 
+Naam veranderen
+Kopieren naar Excel

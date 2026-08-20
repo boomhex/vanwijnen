@@ -2,12 +2,12 @@
   "Posten": [
     {
       "Omschrijving": "SYSTEEMPLAFONDS ALGEMEEN",
-      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Blanka inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit, afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur wit, kanthout 18x38mm kleur zwart.",
+      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Blanka inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit. Afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur wit. Kanthout 18x38mm kleur zwart.",
       "Categorie": "NIEUWB. IKC",
       "Totaalbedrag": "61.127,51",
       "Eenheid": "m2",
       "Eenheidsprijs": "38,91",
-      "Aantal": "1.571,00",
+      "Aantal": "1571,00",
       "PostType": "line_total",
       "Status": "included",
       "Code": "ONBEKEND",
@@ -25,7 +25,6 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Rockfon Blanka",
-        "inleg",
         "600x600x20",
         "snelhangers",
         "hoeklijn",
@@ -40,7 +39,7 @@
       "Totaalbedrag": "ONBEKEND",
       "Eenheid": "m2",
       "Eenheidsprijs": "-9,30",
-      "Aantal": "1.571,00",
+      "Aantal": "1571,00",
       "PostType": "alternative",
       "Status": "alternative",
       "Code": "ONBEKEND",
@@ -60,7 +59,7 @@
     },
     {
       "Omschrijving": "SYSTEEMPLAFONDS SANITAIR",
-      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Cleanspace Pro inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit, afgehangen d.m.v. snelhangers. Clips: HDC clips. Randafwerking: Hoeklijn 24x24mm, kleur wit, kanthout 18x38mm kleur zwart.",
+      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Cleanspace Pro inleg. Afmeting: 600 x 600 x 20 mm. Plafondraster: 24mm breed, kleur wit. Afgehangen d.m.v. snelhangers. Clips: HDC clips. Randafwerking: Hoeklijn 24x24mm, kleur wit. Kanthout 18x38mm kleur zwart.",
       "Categorie": "NIEUWB. IKC",
       "Totaalbedrag": "5.983,47",
       "Eenheid": "m2",
@@ -83,18 +82,13 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Rockfon Cleanspace Pro",
-        "inleg",
-        "600x600x20",
-        "snelhangers",
-        "HDC clips",
-        "hoeklijn",
-        "kanthout"
+        "HDC clips"
       ],
       "Brontekst": "89,00 m2 SYSTEEMPLAFONDS SANITAIR € 67,23 per m2 € 5.983,47\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Cleanspace Pro inleg\nAfmeting: 600 x 600 x 20 mm\nPlafondraster:\n24mm breed, kleur wit\nAfgehangen d.m.v. snelhangers\nClips: HDC clips\nRandafwerking:\nHoeklijn 24x24mm, kleur wit\nKanthout 18x38mm kleur zwart"
     },
     {
       "Omschrijving": "HOUTEN LATTENPLAFOND",
-      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Shiluvit 7-555. Houtsoort: American Yellow Pine 3-zijdig Eikenlook. Afmeting: 20x55-55 mm. Plafondraster: 24mm breed met crosslock, afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur zwart, kanthout 18x38mm kleur zwart.",
+      "Beschrijving": "Het leveren en monteren van een nieuw systeemplafond e.e.a. volgens onderstaand specificaties. Type: Shiluvit 7-555. Houtsoort: American Yellow Pine 3-zijdig Eikenlook. Afmeting: 20x55-55 mm. Plafondraster: 24mm breed met crosslock. Afgehangen d.m.v. snelhangers. Randafwerking: Hoeklijn 24x24mm, kleur zwart. Kanthout 18x38mm kleur zwart.",
       "Categorie": "NIEUWB. IKC",
       "Totaalbedrag": "49.187,73",
       "Eenheid": "m2",
@@ -105,7 +99,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "houten lattenplafond",
+      "Werksoort": "systeemplafond",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [
@@ -119,12 +113,9 @@
         "Shiluvit 7-555",
         "American Yellow Pine",
         "Eikenlook",
-        "crosslock",
-        "snelhangers",
-        "hoeklijn",
-        "kanthout"
+        "crosslock"
       ],
-      "Brontekst": "217,00 m2 HOUTEN LATTENPLAFOND € 226,67 per m2 € 49.187,73\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Shiluvit 7­555\nHoutsoort: American Yellow Pine 3­zijdig Eikenlook\nAfmeting: 20x55­55 mm\nPlafondraster:\n24mm breed met crosslock\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur zwart\nKanthout 18x38mm kleur zwart"
+      "Brontekst": "217,00 m2 HOUTEN LATTENPLAFOND € 226,67 per m2 € 49.187,73\nHet leveren en monteren van een nieuw systeemplafond e.e.a. volgens\nonderstaand specificaties.\nType: Shiluvit 7\u0005555\nHoutsoort: American Yellow Pine 3\u0005zijdig Eikenlook\nAfmeting: 20x55\u000555 mm\nPlafondraster:\n24mm breed met crosslock\nAfgehangen d.m.v. snelhangers\nRandafwerking:\nHoeklijn 24x24mm, kleur zwart\nKanthout 18x38mm kleur zwart"
     },
     {
       "Omschrijving": "Meerprijs bij HOUTEN LATTENPLAFOND: Toepassen van een steenwolpaneel",
@@ -139,7 +130,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "houten lattenplafond",
+      "Werksoort": "systeemplafond",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
@@ -153,7 +144,7 @@
     },
     {
       "Omschrijving": "SPORTPLAFOND",
-      "Beschrijving": "Het leveren en monteren van een nieuw sportplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Olympia sportplafond. Afmeting: 1166 x 1166 x 40 mm. Plafondraster: 50mm breed, kleur wit, afgehangen d.m.v. noniushangers. Randafwerking: Hoeklijn 30x30mm, kleur wit, kanthout 18x38mm kleur zwart.",
+      "Beschrijving": "Het leveren en monteren van een nieuw sportplafond e.e.a. volgens onderstaand specificaties. Type: Rockfon Olympia sportplafond. Afmeting: 1166 x 1166 x 40 mm. Plafondraster: 50mm breed, kleur wit. Afgehangen d.m.v. noniushangers. Randafwerking: Hoeklijn 30x30mm, kleur wit. Kanthout 18x38mm kleur zwart.",
       "Categorie": "NIEUWB. IKC",
       "Totaalbedrag": "9.722,19",
       "Eenheid": "m2",
@@ -164,7 +155,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sportplafond",
+      "Werksoort": "systeemplafond",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [
@@ -177,10 +168,7 @@
       "MatchHints": [
         "Rockfon Olympia",
         "sportplafond",
-        "1166x1166x40",
-        "noniushangers",
-        "hoeklijn",
-        "kanthout"
+        "noniushangers"
       ],
       "Brontekst": "7 9,00 m2 SPORTPLAFOND € 123,07 per m2 € 9.722,19\nHet leveren en monteren van een nieuw sportplafond e.e.a. volgens\nonderstaand specificaties.\nType: Rockfon Olympia sportplafond\nAfmeting: 1166 x 1166 x 40 mm\nPlafondraster:\n50mm breed, kleur wit\nAfgehangen d.m.v. noniushangers\nRandafwerking:\nHoeklijn 30x30mm, kleur wit\nKanthout 18x38mm kleur zwart"
     },
@@ -235,10 +223,10 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "PD 68P/55.1",
-        "C 60/27",
-        "geperforeerd gips"
+        "geperforeerd gips",
+        "C 60/27"
       ],
-      "Brontekst": "217,00 m2 AKOESTISCH GIPSPLAFOND € 51,55 per m2 € 11.187,18\nHet leveren en monteren van een nieuw geperforeerd gipsplafond\nvolgens onderstaande specificaties:\nType: PD 68P/55.1\nProfielen: 2x C 60/27\nIsolatie: N.v.t.\nBeplating 1­ laags:\n1x geperforeerd gips 12­20­35\nKitwerk: N.v.t."
+      "Brontekst": "217,00 m2 AKOESTISCH GIPSPLAFOND € 51,55 per m2 € 11.187,18\nHet leveren en monteren van een nieuw geperforeerd gipsplafond\nvolgens onderstaande specificaties:\nType: PD 68P/55.1\nProfielen: 2x C 60/27\nIsolatie: N.v.t.\nBeplating 1\u0005 laags:\n1x geperforeerd gips 12\u000520\u000535\nKitwerk: N.v.t."
     },
     {
       "Omschrijving": "AFWERKEN GIPSPLAFOND",
@@ -261,7 +249,7 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "afwerken",
-        "geperforeerde gipsplafonds"
+        "gipsplafond"
       ],
       "Brontekst": "21 7,00 m2 AFWERKEN GIPSPLAFOND € 16,15 per m2 € 3.504,64\nAfwerken van de geperforeerde gipsplafonds."
     },
@@ -273,7 +261,7 @@
       "Eenheid": "st",
       "Eenheidsprijs": "103,10",
       "Aantal": "5,00",
-      "PostType": "surcharge",
+      "PostType": "line_total",
       "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
@@ -286,7 +274,8 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "lichtkoepels",
-        "ronde lichtkoepels"
+        "gipsplafond",
+        "aansluiten"
       ],
       "Brontekst": "5,00 stuk TOESLAG LICHTKOEPELS IN GIPSPLAFOND € 103,10 per stuk € 515,52\nToeslag voor het aansluiten van het geperforeerde gipsplafond tegen\nde ronde lichtkoepels."
     },
@@ -303,7 +292,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "gipskoof",
+      "Werksoort": "gipsplafond",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [],
@@ -330,7 +319,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparingen",
+      "Werksoort": "timmerwerk",
       "Prijsbasis": "totaal",
       "Inclusief": [],
       "Exclusief": [],
@@ -343,4 +332,4 @@
       "Brontekst": "SPARINGEN/ACHTERHOUT € 117,56"
     }
   ]
-  }
+}

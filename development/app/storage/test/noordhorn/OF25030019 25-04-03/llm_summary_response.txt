@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "De Verbinding",
+  "Totaalprijs inc. BTW": "11.823,41",
+  "Totaalprijs exc. BTW": "9.771,41",
+  "BTW verlegd": "nee"
+}

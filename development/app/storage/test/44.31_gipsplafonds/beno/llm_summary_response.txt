@@ -1,5 +1,6 @@
 {
   "Naam aannemer": "BENO Projectafbouw BV",
   "Totaalprijs inc. BTW": "ONBEKEND",
-  "Totaalprijs exc. BTW": "341.051,01"
+  "Totaalprijs exc. BTW": "341.051,01",
+  "BTW verlegd": "ONBEKEND"
 }

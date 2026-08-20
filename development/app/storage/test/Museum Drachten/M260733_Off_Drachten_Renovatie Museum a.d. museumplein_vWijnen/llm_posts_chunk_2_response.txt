@@ -1,0 +1,84 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Meerprijs leveren en gebruiken van draglineschotten",
+      "Beschrijving": "Meerprijs leveren en gebruiken van draglineschotten is € 4.000,-.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.000,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "4.000,00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "draglineschotten",
+        "leveren",
+        "gebruiken"
+      ],
+      "Brontekst": "Meerprijs leveren en gebruiken van draglineschotten is € 4.000,-."
+    },
+    {
+      "Omschrijving": "Meerprijs wapeningsberekening",
+      "Beschrijving": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "750,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "750,00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "constructieberekening",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "wapeningsberekening",
+        "paalwapening",
+        "draagkracht"
+      ],
+      "Brontekst": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-)"
+    },
+    {
+      "Omschrijving": "Meerprijs aardingsstaaf ø16",
+      "Beschrijving": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 is € 3,00 per meter (maximale lengte 6,00 m1).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "aardingsvoorziening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "maximale lengte 6,00 m1"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "aardingsstaaf",
+        "ø16",
+        "FeB220"
+      ],
+      "Brontekst": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 is € 3,00 per meter (maximale lengte 6,00 m1)."
+    }
+  ]
+}

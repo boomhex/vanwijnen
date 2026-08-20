@@ -1,0 +1,220 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Toiletten - vinyl",
+      "Beschrijving": "Toiletten - vinyl",
+      "Categorie": "Behangwerk",
+      "Totaalbedrag": "5.744,94",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "26,50",
+      "Aantal": "216.79",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "behangwerk",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "vinyl",
+        "toiletten",
+        "behangwerk"
+      ],
+      "Brontekst": "Toiletten - vinyl 216.79 m² € 26,50 € 5.744,94 Verlegd 21%"
+    },
+    {
+      "Omschrijving": "Toiletten - vinyl Palm Kaki",
+      "Beschrijving": "Toiletten - vinyl Palm Kaki",
+      "Categorie": "Behangwerk",
+      "Totaalbedrag": "3.304,02",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "26,50",
+      "Aantal": "124.68",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "behangwerk",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "vinyl",
+        "Palm Kaki",
+        "toiletten",
+        "behangwerk"
+      ],
+      "Brontekst": "Toiletten - vinyl Palm Kaki 124.68 m² € 26,50 € 3.304,02 Verlegd 21%"
+    },
+    {
+      "Omschrijving": "Fotobehang type paars / roze",
+      "Beschrijving": "Fotobehang type paars / roze",
+      "Categorie": "Behangwerk",
+      "Totaalbedrag": "1.499,03",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "54.51",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "behangwerk",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "fotobehang",
+        "paars",
+        "roze",
+        "behangwerk"
+      ],
+      "Brontekst": "Fotobehang type paars / roze 54.51 m² € 27,50 € 1.499,03 Verlegd 21%"
+    },
+    {
+      "Omschrijving": "Accent bieb wallcovering - materiaal",
+      "Beschrijving": "Accent bieb wallcovering - materiaal. Inclusief wallcoverings LINEN 2547.10 volgens bestek.",
+      "Categorie": "Behangwerk",
+      "Totaalbedrag": "5.602,60",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "138,37",
+      "Aantal": "40.49",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "behangwerk",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "wallcoverings LINEN 2547.10"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "volgens bestek"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "wallcovering",
+        "materiaal",
+        "LINEN 2547.10",
+        "bieb",
+        "accent"
+      ],
+      "Brontekst": "Accent bieb wallcovering - materiaal 40.49 m² € 138,37 € 5.602,60 Verlegd 21%\ninclusief wallcoverings LINEN 2547.10 volgens\nbestek"
+    },
+    {
+      "Omschrijving": "Binnenkozijnen",
+      "Beschrijving": "Binnenkozijnen",
+      "Categorie": "Binnenschilderwerk",
+      "Totaalbedrag": "10.995,66",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "9,25",
+      "Aantal": "1188.72",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "binnenschilderwerk",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "binnenkozijnen",
+        "schilderwerk"
+      ],
+      "Brontekst": "Binnenkozijnen 1188.72 m¹ € 9,25 € 10.995,66 Verlegd 21%"
+    },
+    {
+      "Omschrijving": "Dagkanten binnenzijde buitenkozijnen",
+      "Beschrijving": "Dagkanten binnenzijde buitenkozijnen. Volgens kozijnstaten.",
+      "Categorie": "Binnenschilderwerk",
+      "Totaalbedrag": "4.401,90",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,65",
+      "Aantal": "508.89",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "binnenschilderwerk",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "volgens kozijnstaten"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "dagkanten",
+        "binnenzijde",
+        "buitenkozijnen",
+        "kozijnstaten"
+      ],
+      "Brontekst": "Dagkanten binnenzijde buitenkozijnen 508.89 m¹ € 8,65 € 4.401,90 Verlegd 21%\nVolgens kozijnstaten"
+    },
+    {
+      "Omschrijving": "Plinten",
+      "Beschrijving": "Plinten",
+      "Categorie": "Binnenschilderwerk",
+      "Totaalbedrag": "9.577,54",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,55",
+      "Aantal": "1120.18",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "binnenschilderwerk",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "plinten",
+        "schilderwerk"
+      ],
+      "Brontekst": "Plinten 1120.18 m¹ € 8,55 € 9.577,54 Verlegd 21%"
+    },
+    {
+      "Omschrijving": "AK",
+      "Beschrijving": "Algemene Kosten",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.289,27",
+      "Eenheid": "post",
+      "Eenheidsprijs": "4.289,27",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "algemene kosten",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "AK",
+        "algemene kosten"
+      ],
+      "Brontekst": "AK € 4.289,27"
+    }
+  ]
+}

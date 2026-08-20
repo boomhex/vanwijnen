@@ -1,162 +1,170 @@
 {
   "Posten": [
     {
-      "Omschrijving": "Bandraster 100mm, standaard wit",
-      "Beschrijving": "Bandraster 100mm, standaard wit",
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
+      "Beschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
       "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "18,75",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "18,75",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Bandraster",
-        "systeemplafond",
-        "wit"
-      ],
-      "Brontekst": "V Bandraster 100mm, standaard wit 1,00 m1 18,75 €"
-    },
-    {
-      "Omschrijving": "Gebogen wandaansluiting systeemplafond",
-      "Beschrijving": "Gebogen wandaansluiting systeemplafond",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "19,50",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "19,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Gebogen wandaansluiting",
-        "systeemplafond"
-      ],
-      "Brontekst": "V Gebogen wandaansluiting systeemplafond 1,00 m1 19,50 €"
-    },
-    {
-      "Omschrijving": "Kolomringen max. Ø 350mm, standaard wit",
-      "Beschrijving": "Kolomringen max. Ø 350mm, standaard wit",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "75,00",
+      "Totaalbedrag": "110,00",
       "Eenheid": "st",
-      "Eenheidsprijs": "75,00",
+      "Eenheidsprijs": "110,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per stuk",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Kolomringen",
-        "systeemplafond",
-        "wit"
+        "Sparing",
+        "Brandslanghaspel",
+        "Brandwerend"
       ],
-      "Brontekst": "V Kolomringen max. Ø 350mm, standaard wit 1,00 st 75,00 €"
+      "Brontekst": "V Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand 1,00 st 110,00 €"
     },
     {
-      "Omschrijving": "Brug maken",
-      "Beschrijving": "Brug maken indien installaties of andere obstakels de afhangpunten van het systeem en/of bandraster onderbreken",
+      "Omschrijving": "Raveling maken, per stijl onderbreking",
+      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen)",
       "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "32,50",
+      "Totaalbedrag": "14,50",
       "Eenheid": "st",
-      "Eenheidsprijs": "32,50",
+      "Eenheidsprijs": "14,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per stuk",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
       "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
+      "Exclusief": [
+        "brandkleppen"
+      ],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Brug maken",
-        "afhangpunten",
-        "bandraster"
+        "Raveling",
+        "Stijl onderbreking"
       ],
-      "Brontekst": "V Brug maken indien installaties of andere obstakels de afhangpunten van het\nsysteem en/of bandraster onderbreken 1,00 st 32,50 €"
+      "Brontekst": "V Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen) 1,00 st 14,50 €"
     },
     {
-      "Omschrijving": "Clips t.b.v. afklemmen, plaatafmeting 600x600mm",
-      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 75mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen)",
       "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "8,50",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "8,50",
+      "Totaalbedrag": "3,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
       "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
+      "Exclusief": [
+        "sparingen electradozen"
+      ],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Clips",
-        "afklemmen",
-        "opwaaien panelen",
-        "600x600"
+        "Sparingen",
+        "Ø 75mm"
       ],
-      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm 1,00 m2 8,50 €"
+      "Brontekst": "V Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen) 1,00 st 3,00 €"
     },
     {
-      "Omschrijving": "Clips t.b.v. afklemmen, plaatafmeting 600x1200mm",
-      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
       "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "6,25",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "6,25",
+      "Totaalbedrag": "4,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
-      "Voorwaarden": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Clips",
-        "afklemmen",
-        "opwaaien panelen",
-        "600x1200"
+        "Sparingen",
+        "Ø 300mm"
       ],
-      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm 1,00 m2 6,25 €"
+      "Brontekst": "V Sparingen (per laag), afmeting max. Ø 300mm 1,00 st 4,00 €"
     },
     {
-      "Omschrijving": "Tekenwerk plafondraster",
-      "Beschrijving":
+      "Omschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "300x300mm"
+      ],
+      "Brontekst": "V Sparingen (per laag), afmeting groter dan 300x300mm 1,00 st 5,50 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen",
+      "Beschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit",
+        "indien deze zijn geplaatst alvorens de gips beplating"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Wandcontactdozen"
+      ],
+      "Brontekst": "V Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating) 1,00 st 5,00 €"
+    }
+  ]
+}

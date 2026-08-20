@@ -54,12 +54,10 @@
         "Aanbrengen van desgewenste sparingen"
       ],
       "Exclusief": [],
-      "Voorwaarden": [
-        "Op de door de installateur aangewezen plek"
-      ],
+      "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Sparingen",
+        "sparingen",
         "plafonds"
       ],
       "Brontekst": "Sparingen in plafonds\nAanbrengen van desgewenste sparingen op de door de installateur aangewezen plek.\nPrijsstelling € 1.995,00 * gerekend met 420 m² I € 4,75 p/m²"
@@ -77,17 +75,16 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "transport",
+      "Werksoort": "logistiek",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Transport van plafondplaten naar werkplek",
-        "Additieven"
+        "Transport van plafondplaten naar werkplek"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Logistiek",
+        "logistiek",
         "transport",
         "plafondplaten",
         "Blanka"
@@ -116,11 +113,10 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Koofconstructie",
+        "koofconstructie",
         "HSB",
-        "Multiplex",
-        "18 mm",
-        "wit gegrond"
+        "multiplex",
+        "18 mm"
       ],
       "Brontekst": "Koofconstructie HSB (38x89)\nMultiplex koof dikte 18 mm wit gegrond.\nPrijsstelling € 315,00 * gerekend met 3 m¹ I € 105,00 p/m¹"
     },
@@ -158,9 +154,7 @@
         "Rockfon Boxer",
         "systeemplafond",
         "600x1200x40mm",
-        "HoldDown clips",
-        "achterhout",
-        "sparingen"
+        "HoldDown clips"
       ],
       "Brontekst": "Rockfon Boxer systeemplafond\nLeveren en aanbrengen van een Rockfon Boxer type inleg systeemplafond, afmeting 600x1200x40mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.\nAan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.\nInclusief HoldDown clips en een post achterhout + sparingen.\nPrijsstelling € 6.060,60 * gerekend met 78,69 m² I € 77,05 p/m²"
     },
@@ -169,7 +163,7 @@
       "Beschrijving": "Huren van één elektrische hoogwerker. Inclusief transport",
       "Categorie": "ONBEKEND",
       "Totaalbedrag": "ONBEKEND",
-      "Eenheid": "st",
+      "Eenheid": "ONBEKEND",
       "Eenheidsprijs": "300,00",
       "Aantal": "ONBEKEND",
       "PostType": "unit_rate",
@@ -180,14 +174,16 @@
       "Werksoort": "materieel",
       "Prijsbasis": "per week",
       "Inclusief": [
+        "Huren van één elektrische hoogwerker",
         "Transport"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Huur",
-        "elektrische hoogwerker",
+        "hoogwerker",
+        "elektrisch",
+        "huur",
         "transport"
       ],
       "Brontekst": "Huur elektrische hoogwerker\nHuren van één elektrische hoogwerker. Inclusief transport\nPrijsstelling € 300,00 per week"
@@ -205,17 +201,16 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "transport",
+      "Werksoort": "logistiek",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Transport van plafondplaten naar werkplek",
-        "Additieven"
+        "Transport van plafondplaten naar werkplek"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Logistiek",
+        "logistiek",
         "transport",
         "plafondplaten",
         "Boxer"
@@ -252,12 +247,10 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Rockfon color-all",
-        "LINEN",
+        "Rockfon Color All",
+        "Linen 22",
         "systeemplafond",
-        "600x600x25mm",
-        "sparingen",
-        "achterhout"
+        "600x600x25mm"
       ],
       "Brontekst": "Rockfon Color All Linen 22 systeemplafond\nLeveren en aanbrengen van een Rockfon color-all 22 LINEN type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat. inclusief sparingen & achterhout.\nPrijsstelling € 9.000,00 * gerekend met 168,5 m² I € 53,45 p/m²"
     },
@@ -274,17 +267,16 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "transport",
+      "Werksoort": "logistiek",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Transport van plafondplaten naar werkplek",
-        "Additieven"
+        "Transport van plafondplaten naar werkplek"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Logistiek",
+        "logistiek",
         "transport",
         "plafondplaten",
         "Color-All"
@@ -321,11 +313,10 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Rockfon Cleanspace Pro",
+        "Rockfon Cleanspace",
         "systeemplafond",
         "600x600x25mm",
-        "sparingen",
-        "achterhout"
+        "Cleanspace Pro"
       ],
       "Brontekst": "Rockfon Cleanspace systeemplafond\nLeveren en aanbrengen van een Rockfon Cleanspace Pro type inleg systeemplafond, afmeting 600x600x25mm, gemonteerd in een zichtbaar wit T-24 mm ophangsysteem. Het ophangsysteem wordt m.b.v. snel hangers aan bovenliggende constructie gemonteerd. Aan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.\nAan de randen een wit hoekprofiel gemonteerd op een zwarte kantlat.\nInclusief sparingen & achterhout.\nPrijsstelling € 6.000,00 * gerekend met 87,9 m² I € 68,75 p/m²"
     },
@@ -342,17 +333,16 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "transport",
+      "Werksoort": "logistiek",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Transport van plafondplaten naar werkplek",
-        "Additieven"
+        "Transport van plafondplaten naar werkplek"
       ],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Logistiek",
+        "logistiek",
         "transport",
         "plafondplaten",
         "Cleanspace"

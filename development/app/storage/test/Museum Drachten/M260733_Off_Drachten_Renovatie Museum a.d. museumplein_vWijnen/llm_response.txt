@@ -1,0 +1,357 @@
+=== summary ===
+
+{
+  "Naam aannemer": "Kuipers Funderingstechnieken BV",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "35.200,-",
+  "BTW verlegd": "ONBEKEND"
+}
+
+=== posts chunk 1 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Aanbrengen mortelschroefpalen",
+      "Beschrijving": "Het aanbrengen van mortelschroefpalen volgens opgave: 8 st ø 400 (6,51m), 32 st ø 400 (6,76m), 24 st ø 400 (12,01m), 15 st ø 400 (6,51m), 22 st ø 400 (6,76m), 3 st ø 400 (6,51m). Inclusief wapening 5ø12 (3,50m).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "35.200,-",
+      "Eenheid": "post",
+      "Eenheidsprijs": "35.200,-",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "Beton C20/25, milieuklasse XC2, consistentiegebied S3",
+        "Wapening zoals gespecificeerd met een kwaliteit B500B en beugels ø8-750 mm B500A",
+        "Eenmalig aan- en afvoer",
+        "Akoestische paalcontrole"
+      ],
+      "Exclusief": [
+        "Levering en gebruik draglineschotten",
+        "Opstellingskeuring en trillingsmetingen",
+        "Snellen van paalkoppen beneden werkniveau",
+        "Opstorten van palen boven werkniveau",
+        "Berekeningen van paalwapeningen en/of draagkracht",
+        "Uitzetten en maatvoering van de palen",
+        "Voorgraven van paalposities i.v.m. kabels en leidingen",
+        "Grond-, straat-, sloop-, kabel- en leidingwerk, e.d.",
+        "Afvoer geboorde grond en de zich daarin bevindende betonresten",
+        "Beschermen van wanden en vloeren, e.d.",
+        "Aanvullend grondonderzoek indien vereist",
+        "Toekomstige extreme prijsstijgingen van leveranties",
+        "Betongranulaat in de betonmortel"
+      ],
+      "Voorwaarden": [
+        "Paallengte wordt verrekend tussen paalpuntniveau en werkniveau",
+        "Verrekenprijzen zijn exclusief wapening",
+        "Prijs is vast tot 1 maand na offertedatum",
+        "Offerte is een richtprijs, e.e.a. nog afhankelijk van definitief palenplan, sonderingen en situatie",
+        "Offerte is onder voorbehoud bereikbaarheid bouwlocatie voor ons materieel"
+      ],
+      "DoorOpdrachtgever": [
+        "De opdrachtgever dient te allen tijde de datum van doormeting te overleggen"
+      ],
+      "MatchHints": [
+        "mortelschroefpalen",
+        "beton",
+        "wapening",
+        "paalcontrole"
+      ],
+      "Brontekst": "Hierbij offreren wij u het aanbrengen van de volgende mortelschroefpalen: ... Deze werkzaamheden kunnen wij voor u uitvoeren voor de prijs van: € 35.200,- excl. B.T.W."
+    },
+    {
+      "Omschrijving": "Meerprijs leveren en gebruiken draglineschotten",
+      "Beschrijving": "Meerprijs leveren en gebruiken van draglineschotten",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.000,-",
+      "Eenheid": "post",
+      "Eenheidsprijs": "4.000,-",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "materieel",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "draglineschotten",
+        "meerprijs"
+      ],
+      "Brontekst": "Meerprijs leveren en gebruiken van draglineschotten is € 4.000,-."
+    },
+    {
+      "Omschrijving": "Meerprijs wapeningsberekening",
+      "Beschrijving": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "750,-",
+      "Eenheid": "post",
+      "Eenheidsprijs": "750,-",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "engineering",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "wapeningsberekening",
+        "berekening",
+        "paalwapening"
+      ],
+      "Brontekst": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-);"
+    },
+    {
+      "Omschrijving": "Meerprijs aardingsstaaf ø16",
+      "Beschrijving": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 (maximale lengte 6,00 m1)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "aardingsvoorziening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "maximale lengte 6,00 m1"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "aardingsstaaf",
+        "FeB220",
+        "ø16"
+      ],
+      "Brontekst": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 is € 3,00 per meter (maximale lengte 6,00 m1)."
+    },
+    {
+      "Omschrijving": "Verrekenprijs meerlengte ø 400",
+      "Beschrijving": "Verrekenprijs per meter meerlengte voor mortelschroefpalen ø 400",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "38,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [
+        "wapening"
+      ],
+      "Voorwaarden": [
+        "Verrekenprijzen zijn exclusief wapening"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "verrekenprijs",
+        "meerlengte",
+        "ø 400"
+      ],
+      "Brontekst": "meer 38,00"
+    },
+    {
+      "Omschrijving": "Verrekenprijs minderlengte ø 400",
+      "Beschrijving": "Verrekenprijs per meter minderlengte voor mortelschroefpalen ø 400",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "15,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [
+        "wapening"
+      ],
+      "Voorwaarden": [
+        "Verrekenprijzen zijn exclusief wapening"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "verrekenprijs",
+        "minderlengte",
+        "ø 400"
+      ],
+      "Brontekst": "minder 15,00"
+    }
+  ]
+}
+
+=== posts chunk 2 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Meerprijs leveren en gebruiken van draglineschotten",
+      "Beschrijving": "Meerprijs leveren en gebruiken van draglineschotten is € 4.000,-.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.000,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "4.000,00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "draglineschotten",
+        "leveren",
+        "gebruiken"
+      ],
+      "Brontekst": "Meerprijs leveren en gebruiken van draglineschotten is € 4.000,-."
+    },
+    {
+      "Omschrijving": "Meerprijs wapeningsberekening",
+      "Beschrijving": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "750,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "750,00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "constructieberekening",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "wapeningsberekening",
+        "paalwapening",
+        "draagkracht"
+      ],
+      "Brontekst": "Berekeningen van paalwapeningen en/of draagkracht (meerprijs wapeningsberekening is € 750,-)"
+    },
+    {
+      "Omschrijving": "Meerprijs aardingsstaaf ø16",
+      "Beschrijving": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 is € 3,00 per meter (maximale lengte 6,00 m1).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "aardingsvoorziening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "maximale lengte 6,00 m1"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "aardingsstaaf",
+        "ø16",
+        "FeB220"
+      ],
+      "Brontekst": "Meerprijs aardingsstaaf ø16 kwaliteit FeB220 is € 3,00 per meter (maximale lengte 6,00 m1)."
+    }
+  ]
+}
+
+=== posts chunk 3 ===
+
+{
+  "Posten": []
+}
+
+=== posts chunk 4 ===
+
+{
+  "Posten": []
+}
+
+=== posts chunk 5 ===
+
+{
+  "Posten": []
+}
+
+=== posts chunk 6 ===
+
+{
+  "Posten": []
+}
+
+=== posts chunk 7 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Stagnatiekosten",
+      "Beschrijving": "Stagnatiekosten zijn € 650,-/uur.",
+      "Categorie": "Aansprakelijkheid / stagnaties",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "650,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "regie",
+      "Status": "unknown",
+      "Code": "ONBEKEND",
+      "Regelnummer": "4.4",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "regiewerk",
+      "Prijsbasis": "per uur",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "stagnatiekosten",
+        "stagnatie"
+      ],
+      "Brontekst": "Stagnatiekosten zijn € 650,-/uur."
+    }
+  ]
+}
+
+=== posts chunk 8 ===
+
+{
+  "Posten": []
+}

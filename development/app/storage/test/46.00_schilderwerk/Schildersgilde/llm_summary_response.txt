@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "Schildersgilde Friesland B.V.",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "130.516,42",
+  "BTW verlegd": "ja"
+}

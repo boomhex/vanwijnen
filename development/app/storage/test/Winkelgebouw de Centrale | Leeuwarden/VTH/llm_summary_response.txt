@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "Vloertechniek Hoogeveen B.V.",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "4.480",
+  "BTW verlegd": "nee"
+}

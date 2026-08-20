@@ -893,18 +893,22 @@ class ComparisonPage(SubPage):
     def copy_match_table_to_clipboard(self, matched_table) -> None:
         clipboard_text = matched_table.to_excel_clipboard_text()
         ui.run_javascript(f'''
-            navigator.clipboard.writeText({json.dumps(clipboard_text)})
-                .catch(() => {{
-                    const textarea = document.createElement('textarea');
-                    textarea.value = {json.dumps(clipboard_text)};
-                    textarea.style.position = 'fixed';
-                    textarea.style.opacity = '0';
-                    document.body.appendChild(textarea);
-                    textarea.focus();
-                    textarea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textarea);
-                }});
+            function copyWithTextarea() {{
+                const textarea = document.createElement('textarea');
+                textarea.value = {json.dumps(clipboard_text)};
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }}
+            if (navigator.clipboard && window.isSecureContext) {{
+                navigator.clipboard.writeText({json.dumps(clipboard_text)}).catch(copyWithTextarea);
+            }} else {{
+                copyWithTextarea();
+            }}
         ''')
         ui.notify('Tabel gekopieerd voor Excel')
 

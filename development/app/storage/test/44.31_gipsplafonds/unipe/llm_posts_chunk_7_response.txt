@@ -1,54 +1,64 @@
 {
   "Posten": [
     {
+      "Omschrijving": "Aanvullende werkzaamheden in regie",
+      "Beschrijving": "Aanvullende werkzaamheden welke niet door ons zijn omschreven in de offerte, worden in overleg op een later tijdstip in regie uitgevoerd.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "70,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "regie",
+      "Status": "unknown",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "regiewerk",
+      "Prijsbasis": "per uur",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "regie",
+        "uurtarief",
+        "aanvullende werkzaamheden"
+      ],
+      "Brontekst": "Aanvullende werkzaamheden welke niet door ons zijn omschreven in de offerte, worden in overleg op een later tijdstip in regie uitgevoerd á € 70,00 per uur."
+    },
+    {
       "Omschrijving": "Omega Systeemwand IM 1000 TC ~ H:2600mm (Intermontage)",
       "Beschrijving": "Leveren en aanbrengen van een Systeemwand IM 1000 TC 1.75.1a (Rw 44dB). Gerekend met een bruto m² wandoppervlakte. Wandhoogte: ca. 2600 mm I Wanddikte: 100 mm I Moduulmaat: 1200 mm of aangepast t.p.v. pasmodules, cassettes en deurunits. Geluidisolatie: Steenwol, dik 40 mm. I Bovenaansluiting: Aluminium profiel, geschikt voor schilderijhaakjes. I Onderaansluiting: Aluminium profiel, terugliggend. Zijaansluiting: Aluminium profiel 30 x 100 x 30 mm. I Tussenprofiel: Aluminium, vlakke clicklijst. I Kleur: In een nader te bepalen standaard Ral kleur. Wandbekleding: Beide zijden gipspanelen (dikte 12,5 mm) bekleed met vinyl 2013.W24. I Kleur wit of glascassettes en deurunits zoals hieronder beschreven. Op basis van doorgemeten m² worden deurunits en cassettes gesteld in de wand. Wand hoog deurmoduul, dichte deur: Moduulmaat: ca. 1000 mm I Kozijn: 986 x 2575 mm I Kleur: RAL N.T.B. I Deur: 40 mm dik, kanaalspaanvulling. Afmeting: 925 x 2535 mm I Kleur: Hardkunststof afwerklaag naar keuze uit Formica 1 collectie. I Zijkanten: Arm geschaafd en blank gelakt. Scharnieren: Paumelle RVS. I Slot: IM dag- en nacht profiel cilinderslot met RVS voorplaat, exclusief cilinder. I Deurbeslag: Deurkruk/rozet Artitec Permafix serie, kleur RVS. Valdorpel: Zonder valdorpel I Deurbuffer IM collectie, kleur RVS. Moduulmaten: 900 / 850 / 800 / 700 & 600 mm. Volglas Type glas: Gelaagd glas 3.3.1/ Gelaagd glas 33.1. Raamkozijn: De aluminium profielen worden gecoat in een nader te bepalen standaard Ral kleur.",
       "Categorie": "ONBEKEND",
-      "Totaalbedrag": "22.300,00",
+      "Totaalbedrag": "22300,00",
       "Eenheid": "m2",
       "Eenheidsprijs": "235,00",
       "Aantal": "94,99",
       "PostType": "line_total",
       "Status": "included",
-      "Code": "1.75.1a",
+      "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
       "Werksoort": "systeemwand",
       "Prijsbasis": "per m2",
       "Inclusief": [
-        "Leveren en aanbrengen van een Systeemwand IM 1000 TC 1.75.1a (Rw 44dB)",
-        "Steenwol, dik 40 mm",
-        "Aluminium profiel",
-        "Gipspanelen bekleed met vinyl 2013.W24",
-        "Deurunits en cassettes",
-        "Deurbeslag",
-        "Verticaal transport middels verreiker"
+        "Verticaal transport middels verreiker",
+        "Aanvoerweg naar de plaats waar het horizontale en verticale transport plaatsvindt berijdbaar en bereikbaar voor vrachtwagens en mobiele kranen/verreiker",
+        "Gebouw voorzien van raam- of deuropeningen van voldoende grootte om de plafond- en wandmaterialen door naar binnen te halen"
       ],
       "Exclusief": [
-        "demontage glas, puien, hekwerken e.d.",
-        "Aanbrengen van brandvertragend kitwerk en/of brandwerende afdichtingen",
-        "Aanbrengen van plinten",
-        "Schilderen van zijkanten plafondtegels bij doorzak plafondtegels",
-        "Maken van wand –en plafondtekeningen",
-        "Parkeerkosten",
-        "BTW"
+        "Demontage glas, puien, hekwerken e.d."
       ],
-      "Voorwaarden": [
-        "De aanvoerweg naar de plaats waar het horizontale en verticale transport plaatsvindt, dient berijdbaar en bereikbaar te zijn voor vrachtwagens en mobiele kranen/verreiker",
-        "Het gebouw dient voorzien te zijn van raam- of deuropeningen van voldoende grootte om de plafond- en wandmaterialen door naar binnen te halen"
-      ],
-      "DoorOpdrachtgever": [
-        "Afval die ontstaat uit de afbouw werkzaamheden kunnen in de door de aannemer beschikbaar gestelde container gestort worden"
-      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
       "MatchHints": [
         "Omega Systeemwand",
         "IM 1000 TC",
         "Intermontage",
-        "Rw 44dB",
-        "Steenwol",
-        "vinyl 2013.W24",
-        "Formica 1",
-        "Artitec Permafix"
+        "gipspanelen",
+        "vinyl",
+        "deurmoduul",
+        "gelaagd glas"
       ],
       "Brontekst": "O.G. => Omega Systeemwand IM 1000 TC ~ H:2600mm (Intermontage)\nLeveren en aanbrengen van een Systeemwand IM 1000 TC 1.75.1a (Rw 44dB). Gerekend met een bruto m² wandoppervlakte.\nWandhoogte: ca. 2600 mm I Wanddikte: 100 mm I Moduulmaat: 1200 mm of aangepast t.p.v. pasmodules, cassettes en deurunits\nGeluidisolatie: Steenwol, dik 40 mm. I Bovenaansluiting: Aluminium profiel, geschikt voor schilderijhaakjes. I Onderaansluiting: Aluminium profiel, terugliggend\nZijaansluiting: Aluminium profiel 30 x 100 x 30 mm. I Tussenprofiel: Aluminium, vlakke clicklijst. I Kleur: In een nader te bepalen standaard Ral kleur\nWandbekleding: Beide zijden gipspanelen (dikte 12,5 mm) bekleed met vinyl 2013.W24. I Kleur wit of glascassettes en deurunits zoals hieronder beschreven.\nOp basis van doorgemeten m² worden deurunits en cassettes gesteld in de wand.\nWand hoog deurmoduul, dichte deur: Moduulmaat: ca. 1000 mm I Kozijn: 986 x 2575 mm I Kleur: RAL N.T.B. I Deur: 40 mm dik, kanaalspaanvulling\nAfmeting: 925 x 2535 mm I Kleur: Hardkunststof afwerklaag naar keuze uit Formica 1 collectie. I Zijkanten: Arm geschaafd en blank gelakt.\nScharnieren: Paumelle RVS. I Slot: IM dag- en nacht profiel cilinderslot met RVS voorplaat, exclusief cilinder. I Deurbeslag: Deurkruk/rozet Artitec Permafix serie, kleur RVS\nValdorpel: Zonder valdorpel I Deurbuffer IM collectie, kleur RVS.\nModuulmaten: 900 / 850 / 800 / 700 & 600 mm. Volglas Type glas: Gelaagd glas 3.3.1/ Gelaagd glas 33.1\nRaamkozijn: De aluminium profielen worden gecoat in een nader te bepalen standaard Ral kleur.\nInclusief Verticaal transport middels verreiker, de aanvoerweg naar de plaats waar het horizontale en verticale transport plaatsvindt, dient berijdbaar en bereikbaar te zijn voor vrachtwagens en mobiele kranen/verreiker. Tevens dient het gebouw voorzien te zijn van raam- of deuropeningen van voldoende grootte om de plafond- en wandmaterialen door naar binnen te halen. Exclusief demontage glas, puien, hekwerken e.d.\nPrijsstelling € 22.300,00 * gerekend met 94,99 m² I € 235,00 p/m²"
     }

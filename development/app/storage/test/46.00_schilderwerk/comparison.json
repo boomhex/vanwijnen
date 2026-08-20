@@ -16,9 +16,9 @@
             "Eenheid": "m2"
         },
         {
-            "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
-            "Aantal": "3.195,92",
-            "Eenheid": "m2"
+            "Omschrijving": "",
+            "Aantal": "",
+            "Eenheid": ""
         }
     ],
     "MatchedPosten": [
@@ -29,16 +29,14 @@
             "Offertes": {
                 "Coenen.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "34.--.-- Leveren en plaatsen glas binnenkozijnen",
+                    "Gematchte omschrijving": "Schilderwerk binnenkozijnen",
                     "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "24159",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "8762",
+                    "Totaalbedrag": "8762",
                     "Overeenkomst": "3",
-                    "Gematchte posten": [
-                        "34.--.-- Leveren en plaatsen glas binnenkozijnen"
-                    ]
+                    "Ongekoppeld": false
                 },
                 "Schildersgilde.pdf": {
                     "Match type": "single",
@@ -48,7 +46,8 @@
                     "Aantal": "1188.72",
                     "Eenheidsprijs": "9.25",
                     "Totaalbedrag": "2676.21",
-                    "Overeenkomst": "3"
+                    "Overeenkomst": "2",
+                    "Ongekoppeld": false
                 }
             }
         },
@@ -61,11 +60,12 @@
                     "Match type": "single",
                     "Gematchte omschrijving": "Schilderwerk vloerplinten",
                     "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "5871",
                     "Totaalbedrag": "5871",
-                    "Overeenkomst": "3"
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
                 },
                 "Schildersgilde.pdf": {
                     "Match type": "single",
@@ -75,7 +75,8 @@
                     "Aantal": "1120.18",
                     "Eenheidsprijs": "8.55",
                     "Totaalbedrag": "8692.53",
-                    "Overeenkomst": "3"
+                    "Overeenkomst": "2",
+                    "Ongekoppeld": false
                 }
             }
         },
@@ -86,16 +87,14 @@
             "Offertes": {
                 "Coenen.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Schilderwerk aftimmeringen",
+                    "Gematchte omschrijving": "Schilderwerk aftimmeringen buitenkozijnen",
                     "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "ONBEKEND",
-                    "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "1082",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "3918",
+                    "Totaalbedrag": "3918",
                     "Overeenkomst": "2",
-                    "Gematchte posten": [
-                        "Schilderwerk aftimmeringen"
-                    ]
+                    "Ongekoppeld": false
                 },
                 "Schildersgilde.pdf": {
                     "Match type": "single",
@@ -105,34 +104,37 @@
                     "Aantal": "508.89",
                     "Eenheidsprijs": "8.65",
                     "Totaalbedrag": "1314.11",
-                    "Overeenkomst": "3"
+                    "Overeenkomst": "2",
+                    "Ongekoppeld": false
                 }
             }
         },
         {
-            "Omschrijving": "glasweefsel/sauswerk (2 lagen dekverf), in ruimten volgens interieur tekeningen. (netto)",
-            "Aantal": "3.195,92",
-            "Eenheid": "m2",
+            "Omschrijving": "",
+            "Aantal": "",
+            "Eenheid": "",
             "Offertes": {
                 "Coenen.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "46.38.59-e Scan en sauswerk wanden",
+                    "Gematchte omschrijving": "ONBEKEND",
                     "Gematchte categorie": "ONBEKEND",
                     "Gematchte eenheid": "ONBEKEND",
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
-                    "Totaalbedrag": "48934",
-                    "Overeenkomst": "3"
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
                 },
                 "Schildersgilde.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Basiskleur",
+                    "Gematchte omschrijving": "ONBEKEND",
                     "Gematchte categorie": "ONBEKEND",
-                    "Gematchte eenheid": "m2",
-                    "Aantal": "3411.23",
-                    "Eenheidsprijs": "18.50",
-                    "Totaalbedrag": "59124.52",
-                    "Overeenkomst": "2"
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
                 }
             }
         }

@@ -1,0 +1,204 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B2",
+      "Beschrijving": "Merk: m.B2. Aantal: 2 Stuks. Afmeting: 870 x 2180. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B2",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B2\nMerk : m.B2\nAantal : 2 Stuks\nAfmeting : 870 x 2180\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B3",
+      "Beschrijving": "Merk: m.B3. Aantal: 2 Stuks. Afmeting: 1034 x 2180. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B3",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B3\nMerk : m.B3\nAantal : 2 Stuks\nAfmeting : 1034 x 2180\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen sluitplaatinkrozing\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B4",
+      "Beschrijving": "Merk: m.B4. Aantal: 1 Stuks. Afmeting: 1109 x 2180. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B4",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B4\nMerk : m.B4\nAantal : 1 Stuks\nAfmeting : 1109 x 2180\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B5",
+      "Beschrijving": "Merk: m.B5. Aantal: 3 Stuks. Afmeting: 934 x 2400. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen scharnierinkrozingen, geen sluitplaatinkrozing. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "3",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B5",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B5\nMerk : m.B5\nAantal : 3 Stuks\nAfmeting : 934 x 2400\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen scharnierinkrozingen\nH&S; geen sluitplaatinkrozing\ntochtwering\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)"
+    },
+    {
+      "Omschrijving": "Binnenkozijn Merk m.B6",
+      "Beschrijving": "Merk: m.B6. Aantal: 2 Stuks. Afmeting: 984 x 2180. Type: FSC Binnenkozijn, 60 min. WBDBO (indicatief). Kleur Kozijn: RAL 9001 (Crèmewit). Profielen: Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³, Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw). Deuren: excl. leveren/monteren. Hang- en sluitwerk: geen sluitplaatinkrozing, geen scharnierinkrozingen. Tochtwering: Deventer S 5767 [BS], zwart, brandvertragend, kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken).",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "ONBEKEND",
+      "Aantal": "2",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "m.B6",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "kozijnen",
+      "Prijsbasis": "ONBEKEND",
+      "Inclusief": [
+        "Kozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³",
+        "Stellat 22x39 mm (geëgaliseerd) Vuren C (ruw)",
+        "Tochtwering Deventer S 5767 [BS], zwart, brandvertragend"
+      ],
+      "Exclusief": [
+        "Leveren deuren",
+        "Monteren deuren",
+        "Scharnierinkrozingen",
+        "Sluitplaatinkrozing"
+      ],
+      "Voorwaarden": [
+        "Kaderprofielen worden LOS OP ROL geleverd",
+        "Groef in kozijnsponning in de hoeken NIET doorgestoken"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "FSC Binnenkozijn",
+        "60 min. WBDBO",
+        "Meranti",
+        "RAL 9001",
+        "Deventer S 5767"
+      ],
+      "Brontekst": "Merk: m.B6\nMerk : m.B6\nAantal : 2 Stuks\nAfmeting : 984 x 2180\n: FSC Binnenkozijn, 60 min. WBDBO\nType\n(indicatief)\nKleur Kozijn: : RAL 9001 (Crèmewit)\nProfielen\nKozijnhout 67x139 mm, ZWAAR Meranti FSC Gel./Gev. Non Komo \"zwaar\" > 550 kg/m³\nStellat 22x39 mm (geëgaliseerd) Vuren C (ruw)\ndeuren\ndeuren; excl. leveren/monteren\nhang- en sluitwerk\nH&S; geen sluitplaatinkrozing\nH&S; geen scharnierinkrozingen\ntochtwering\ntochtwering; kaderprofielen worden LOS OP ROL geleverd (groef in kozijnsponning in de hoeken NIET doorgestoken)\ntochtwering; Deventer S 5767 [BS], zwart, brandvertragend"
+    }
+  ]
+}

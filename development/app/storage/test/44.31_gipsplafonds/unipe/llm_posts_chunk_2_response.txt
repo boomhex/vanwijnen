@@ -25,7 +25,7 @@
         "Shiluvit",
         "American yellow pine",
         "eikenlook",
-        "Akoestisch plafond",
+        "akoestisch plafond",
         "lamellen",
         "T-24",
         "Nofisol"
@@ -101,20 +101,17 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "voorzetwand",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "Rockwool Rock Sono base dik 60mm"
       ],
       "Exclusief": [],
-      "Voorwaarden": [
-        "gerekend met een wandhoogte van 2700mm"
-      ],
+      "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "MSVoorzetwand",
-        "C-75",
-        "U-75",
+        "MSV",
+        "voorzetwand",
         "gipskarton",
         "LaDura",
         "Duragyp",
@@ -135,7 +132,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "wandafwerking",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
@@ -161,7 +158,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparingen",
+      "Werksoort": "wand",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -181,13 +178,13 @@
       "Totaalbedrag": "2.560,00",
       "Eenheid": "m2",
       "Eenheidsprijs": "2,00",
-      "Aantal": "1280",
+      "Aantal": "1.280",
       "PostType": "line_total",
       "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "transport",
+      "Werksoort": "logistiek",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "profielen",
@@ -199,7 +196,8 @@
       "MatchHints": [
         "Logistiek",
         "transport",
-        "gipsplaten"
+        "gipsplaten",
+        "MSV"
       ],
       "Brontekst": "Logistiek MSV\nVoor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m²\ngipsplaat inclusief profielen en isolatie.\nPrijsstelling € 2.560,00 * gerekend met 1.280 m² I € 2,00 p/m²"
     },
@@ -216,7 +214,7 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparingen",
+      "Werksoort": "wand",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "OSB achterhout: 400x598x18mm"
@@ -226,9 +224,10 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "afkoop",
-        "Sparingen",
+        "sparingen",
         "achterhout",
-        "OSB"
+        "OSB",
+        "MS wanden"
       ],
       "Brontekst": "afkoop Sparingen & achterhout in MS wanden\nAanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de\nMS wand.\nPrijsstelling € 4.800,00 * gerekend met 640 m² I € 7,50 p/m²"
     }

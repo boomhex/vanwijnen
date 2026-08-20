@@ -1,0 +1,821 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "leveren en aan brengen avegaarpalen",
+            "Aantal": "1",
+            "Eenheid": "off"
+        },
+        {
+            "Omschrijving": "overlengte mortelschroefpalen",
+            "Aantal": "1",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "wapeningsberekening",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "monotubes",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "boren vanaf dragline schotten",
+            "Aantal": "1",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Boren van mortelschroefpalen Drachten",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "Meerprijs dragline schotten en/of stalenrijplaten",
+            "Aantal": "1",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 25",
+            "Aantal": "",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 32",
+            "Aantal": "",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 40",
+            "Aantal": "",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Meerprijs koppeling centraalstaaf",
+            "Aantal": "",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Meerprijs aardingsstaaf Ø16",
+            "Aantal": "",
+            "Eenheid": "m1"
+        },
+        {
+            "Omschrijving": "Meerprijs afstandhouder t.b.v. korfwapening",
+            "Aantal": "",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Meerprijs pilesafe-emmer",
+            "Aantal": "",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten",
+            "Aantal": "",
+            "Eenheid": "post"
+        },
+        {
+            "Omschrijving": "Meerprijs akoestisch doormeten per paal",
+            "Aantal": "",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Meerprijs koppeling centraalstaaf > 14m1",
+            "Aantal": "",
+            "Eenheid": "st"
+        },
+        {
+            "Omschrijving": "Stagnatiekosten",
+            "Aantal": "",
+            "Eenheid": ""
+        }
+    ],
+    "MatchedPosten": [
+        {
+            "Omschrijving": "leveren en aan brengen avegaarpalen",
+            "Aantal": "1",
+            "Eenheid": "off",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Boren van mortelschroefpalen Drachten",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "34000.00",
+                    "Totaalbedrag": "34000.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Aanbrengen mortelschroefpalen",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "35200.00",
+                    "Totaalbedrag": "35200.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Boren mortelschroefpalen en levering wapening en beton",
+                    "Gematchte categorie": "Funderingswerkzaamheden",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "41150.00",
+                    "Totaalbedrag": "41150.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "overlengte mortelschroefpalen",
+            "Aantal": "1",
+            "Eenheid": "m1",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Verrekenprijs meerlengte ø 400",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "38.00",
+                    "Totaalbedrag": "38.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerlengte mortelschroefpaal  400 mm",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "34.00",
+                    "Totaalbedrag": "34.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "wapeningsberekening",
+            "Aantal": "1",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs wapeningsberekening",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "750.00",
+                    "Totaalbedrag": "750.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Opstellen tekening en berekening",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "400.00",
+                    "Totaalbedrag": "400.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "monotubes",
+            "Aantal": "1",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "group",
+                    "Gematchte omschrijving": "2 posten",
+                    "Gematchte posten": [
+                        "Vaste kosten monotubes",
+                        "Leveren en aanbrengen van monotubes"
+                    ],
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte categorieen": [
+                        "Verrekenprijzen"
+                    ],
+                    "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Gematchte hoeveelheid eenheid": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "boren vanaf dragline schotten",
+            "Aantal": "1",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Boren vanaf draglineschotten",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "4100.00",
+                    "Totaalbedrag": "4100.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Boren van mortelschroefpalen Drachten",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": ""
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": ""
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": ""
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs dragline schotten en/of stalenrijplaten",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs dragline schotten en/of stalenrijplaten",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "2250.00",
+                    "Totaalbedrag": "2250.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs leveren en gebruiken van draglineschotten",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "1",
+                    "Eenheidsprijs": "4000.00",
+                    "Totaalbedrag": "4000.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 25",
+            "Aantal": "",
+            "Eenheid": "m1",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs centraalstaaf Ø 25",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "8.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 32",
+            "Aantal": "",
+            "Eenheid": "m1",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs centraalstaaf Ø 32",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "11.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs centraalstaaf Ø 40",
+            "Aantal": "",
+            "Eenheid": "m1",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs centraalstaaf Ø 40",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "14.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs koppeling centraalstaaf",
+            "Aantal": "",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs koppeling centraalstaaf",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "75.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs aardingsstaaf Ø16",
+            "Aantal": "",
+            "Eenheid": "m1",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs aardingsstaaf Ø16",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "4.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs aardingsstaaf ø16",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "3.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Leveren/aanbrengen aardingsstaaf 16",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "5.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs afstandhouder t.b.v. korfwapening",
+            "Aantal": "",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs afstandhouder t.b.v. korfwapening",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "2.50",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs pilesafe-emmer",
+            "Aantal": "",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs pilesafe-emmer",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "17.50",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten",
+            "Aantal": "",
+            "Eenheid": "post",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "post",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "225.00",
+                    "Totaalbedrag": "225.00",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Vaste kosten akoestisch doormeten",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "300.00",
+                    "Totaalbedrag": "300.00",
+                    "Overeenkomst": "2",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs akoestisch doormeten per paal",
+            "Aantal": "",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs akoestisch doormeten per paal",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "7.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Akoestisch doormeten per paal",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "8.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Meerprijs koppeling centraalstaaf > 14m1",
+            "Aantal": "",
+            "Eenheid": "st",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Meerprijs koppeling centraalstaaf > 14m1",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "st",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "75.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "Stagnatiekosten",
+            "Aantal": "",
+            "Eenheid": "",
+            "Offertes": {
+                "BHP Funderingstechnieken Offerte Museum Drachten.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Stagnatiekosten",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "550.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "M260733_Off_Drachten_Renovatie Museum a.d. museumplein_vWijnen.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Stagnatiekosten",
+                    "Gematchte categorie": "Aansprakelijkheid / stagnaties",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "650.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                },
+                "Offerte-81260270-Drachten__Uitbreiding_Museum-20260625.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Stagnatie boorstelling",
+                    "Gematchte categorie": "Verrekenprijzen",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "750.00",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "3",
+                    "Ongekoppeld": false
+                }
+            }
+        }
+    ]
+}

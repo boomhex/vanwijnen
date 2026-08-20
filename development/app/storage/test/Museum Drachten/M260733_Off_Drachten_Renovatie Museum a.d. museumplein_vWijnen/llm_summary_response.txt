@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "Kuipers Funderingstechnieken BV",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "35.200,-",
+  "BTW verlegd": "ONBEKEND"
+}

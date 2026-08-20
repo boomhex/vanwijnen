@@ -1,0 +1,624 @@
+=== summary ===
+
+{
+  "Naam aannemer": "BHP Funderingstechnieken B.V.",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "34.000,00",
+  "BTW verlegd": "ja"
+}
+
+=== posts chunk 1 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Boren van mortelschroefpalen Drachten",
+      "Beschrijving": "Het boren van mortelschroefpalen op hoogte afgestort met beton. Aantal: 102 stuks, diameter ø400, totaal aantal meters: 808m1. Lengte conform opgave. Referenties: T-724094-TO-001_Stippenplan. Sondering: niet verstrekt. Boor/werk niveau: -690 peil. Let op, dit betreft een indicatieve offerte ivm het ontbreken van sonderingen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "34000.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "34000.00",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "mortelschroefpalen",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "aan- en afvoer werkmaterieel (1 FASE )",
+        "paalwapening berekening",
+        "akoestisch doormeten (100% 1 FASE)",
+        "monotubes (20cm)",
+        "paal afdekken met folie",
+        "korfwapening 5ø12x2,8m1",
+        "beton C20/25 XC4 - 325 kg cement / m3"
+      ],
+      "Exclusief": [
+        "centraalstaaf",
+        "grondwerkzaamheden en/of afvoer boorgrond/betonresten",
+        "koppensnellen"
+      ],
+      "Voorwaarden": [
+        "bouwplaats/bouwput voorzien van voldoende stabiliteit t.b.v. boormachine 12 - 35 - 65 ton",
+        "De bouwput dient voorzien te worden van van een drainage in zand met afwatering, de grondwaterstand moet minimaal 0,5m onder het werkniveau liggen",
+        "palen worden op hoogte gemaakt/afgewerkt op peil hoogtes B.K. paal conform definitief palenplan, het snellen van de palen is nadien niet nodig mits afwerkhoogte is conform het bovenstaande",
+        "akoestisch doormeten vanaf 5 dagen na oplevering i.v.m. uitharden v/d palen. Tijdens deze periode mogen er geen werkzaamheden plaatsvinden. Indien deze wel worden uitgevoerd vervalt de garantie per direct",
+        "voor aanvang van de akoestische doormeting dient de put droog te zijn en de paalkoppen vrij van grond/water",
+        "eventuele kosten voor aanvullend onderzoek en/of beproevingen zijn voor rekening opdrachtgever",
+        "bij eventuele (gevolg) schade aan recent aangebrachte palen door obstakels, waterstromingen of grondgesteldheid zijn deze kosten te alle tijde voor de opdrachtgever",
+        "maatvoering B.K. paal dient voor aanvang van de werkzaamheden duidelijk te zijn aangegeven middels een piket op basis van het 0-Peil. Maatvoering is te alle tijde de verantwoordelijkheid van de opdrachtgever",
+        "kosten die voortkomen uit paalstand afwijkingen zijn niet verrekenbaar",
+        "voor aanvang dienen alle piketten te zijn uitgezet, pikketen moeten vierkant zijn, 20cm in de grond en 5 cm boven de grondslag",
+        "voldoende ruimte voor werkmaterieel dient beschikbaar te zijn",
+        "er dient een elektrische aansluiting, water aansluiting, sanitairevoorzieningen en schaftruimte op de bouwplaats aanwezig te zijn",
+        "de minimale afstand tussen belending en hart paal is 0,75 m",
+        "indien dit voor de doorloop van de werkzaamheden noodzakelijk is stelt de opdrachtgever kosteloos een grondwerker ter beschikking met mens en materieel t.b.v. overdraaien/afvoerenr boorgrond/betonresten etc."
+      ],
+      "DoorOpdrachtgever": [
+        "KLIC-melding",
+        "duidelijk en gedetailleerd uitzetten, markeren of aanwijzen op de werkplek van de precieze locatie van bestaande of ondergrondse of bovengrondse obstakels, kabels en leidingen",
+        "faciliteren van geschikte toegangswegen voor zwaar materieel, inclusief het nemen van maatregelen zoals het regelen van verkeersvoorzieningen, het beschermen van straatwerk, en het verwijderen van borden"
+      ],
+      "MatchHints": [
+        "mortelschroefpalen",
+        "ø400",
+        "beton C20/25 XC4",
+        "korfwapening",
+        "monotubes",
+        "akoestisch doormeten"
+      ],
+      "Brontekst": "Het werk betreft: Drachten ... Totaal excl. BTW EUR 34.000,00"
+    }
+  ]
+}
+
+=== posts chunk 2 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Meerprijs dragline schotten en/of stalenrijplaten",
+      "Beschrijving": "Meerprijs indien noodzakelijk meerprijs dragline schotten en/of stalenrijplaten projectprijs: €2250,- ex btw",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2250.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "2250.00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "rijplaten",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "dragline schotten",
+        "stalenrijplaten"
+      ],
+      "Brontekst": "Meerprijs indien noodzakelijk meerprijs dragline schotten en/of stalenrijplaten projectprijs: €2250,- ex btw"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf Ø 25",
+      "Beschrijving": "Meerprijs centraalstaaf Ø 25 - €8,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "Ø 25"
+      ],
+      "Brontekst": "Meerprijs centraalstaaf Ø 25 - €8,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf Ø 32",
+      "Beschrijving": "Meerprijs centraalstaaf Ø 32 €11,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "11.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "Ø 32"
+      ],
+      "Brontekst": "Ø 32 €11,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf ø40",
+      "Beschrijving": "Meerprijs centraalstaaf ø40 €14,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "14.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "ø40"
+      ],
+      "Brontekst": "ø40 €14,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs koppeling centraalstaaf",
+      "Beschrijving": "Meerprijs koppeling centraalstaaf indien langer dan 14m1 + €75,- ex btw per stuk i.v.m. koppeling",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "75.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "koppeling",
+        "centraalstaaf",
+        "langer dan 14m1"
+      ],
+      "Brontekst": "indien langer dan 14m1 + €75,- ex btw per stuk i.v.m. koppeling"
+    },
+    {
+      "Omschrijving": "Meerprijs aardingsstaaf Ø16",
+      "Beschrijving": "Meerprijs aardingsstaaf Ø16 - €4,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "4.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "aardingsstaaf",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "aardingsstaaf",
+        "Ø16"
+      ],
+      "Brontekst": "Meerprijs aardingsstaaf Ø16 - €4,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs afstandhouder t.b.v. korfwapening",
+      "Beschrijving": "Meerprijs afstandhouder t.b.v. korfwapening €2,50 p/s",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "2.50",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afstandhouder",
+        "korfwapening"
+      ],
+      "Brontekst": "Meerprijs afstandhouder t.b.v. korfwapening €2,50 p/s"
+    },
+    {
+      "Omschrijving": "Meerprijs pilesafe-emmer",
+      "Beschrijving": "Meerprijs pilesafe-emmer (emmer met stalenplaat) per stuk €17,5,- ex btw",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "17.50",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingswerk",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "pilesafe-emmer",
+        "stalenplaat"
+      ],
+      "Brontekst": "Meerprijs pilesafe-emmer (emmer met stalenplaat) per stuk €17,5,- ex btw"
+    },
+    {
+      "Omschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten",
+      "Beschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten €225,- per fase",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "post",
+      "Eenheidsprijs": "225.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "akoestisch doormeten",
+      "Prijsbasis": "per fase",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "extra fase",
+        "aanvoer",
+        "akoestisch doormeten"
+      ],
+      "Brontekst": "Meerprijs extra fase / aanvoer akoestisch doormeten €225,- per fase"
+    },
+    {
+      "Omschrijving": "Meerprijs akoestisch doormeten per paal",
+      "Beschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten €7,- per paal",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "akoestisch doormeten",
+      "Prijsbasis": "per paal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "akoestisch doormeten",
+        "per paal"
+      ],
+      "Brontekst": "en €7,- per paal"
+    }
+  ]
+}
+
+=== posts chunk 3 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Meerprijs dragline schotten en/of stalenrijplaten",
+      "Beschrijving": "Meerprijs indien noodzakelijk meerprijs dragline schotten en/of stalenrijplaten projectprijs: €2250,- ex btw",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2250.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "2250.00",
+      "Aantal": "1",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "dragline schotten",
+      "Prijsbasis": "projectprijs",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "indien noodzakelijk"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "dragline schotten",
+        "stalenrijplaten"
+      ],
+      "Brontekst": "Meerprijs indien noodzakelijk meerprijs dragline schotten en/of stalenrijplaten projectprijs: €2250,- ex btw"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf Ø 25",
+      "Beschrijving": "Meerprijs centraalstaaf Ø 25 - €8,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "Ø 25"
+      ],
+      "Brontekst": "Meerprijs centraalstaaf Ø 25 - €8,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf Ø 32",
+      "Beschrijving": "Meerprijs centraalstaaf Ø 32 €11,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "11.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "Ø 32"
+      ],
+      "Brontekst": "Ø 32 €11,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs centraalstaaf Ø 40",
+      "Beschrijving": "Meerprijs centraalstaaf ø40 €14,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "14.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "centraalstaaf",
+        "Ø 40"
+      ],
+      "Brontekst": "ø40 €14,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs koppeling centraalstaaf > 14m1",
+      "Beschrijving": "Meerprijs indien langer dan 14m1 + €75,- ex btw per stuk i.v.m. koppeling",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "75.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "indien langer dan 14m1"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "koppeling",
+        "centraalstaaf",
+        "langer dan 14m1"
+      ],
+      "Brontekst": "indien langer dan 14m1 + €75,- ex btw per stuk i.v.m. koppeling"
+    },
+    {
+      "Omschrijving": "Meerprijs aardingsstaaf Ø16",
+      "Beschrijving": "Meerprijs aardingsstaaf Ø16 - €4,- p/m",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "4.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "aardingsstaaf",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "aardingsstaaf",
+        "Ø16"
+      ],
+      "Brontekst": "Meerprijs aardingsstaaf Ø16 - €4,- p/m"
+    },
+    {
+      "Omschrijving": "Meerprijs afstandhouder t.b.v. korfwapening",
+      "Beschrijving": "Meerprijs afstandhouder t.b.v. korfwapening €2,50 p/s",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "2.50",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wapening",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afstandhouder",
+        "korfwapening"
+      ],
+      "Brontekst": "Meerprijs afstandhouder t.b.v. korfwapening €2,50 p/s"
+    },
+    {
+      "Omschrijving": "Meerprijs pilesafe-emmer",
+      "Beschrijving": "Meerprijs pilesafe-emmer (emmer met stalenplaat) per stuk €17,5,- ex btw",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "17.50",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "pilesafe-emmer",
+      "Prijsbasis": "per stuk",
+      "Inclusief": [
+        "stalenplaat"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "pilesafe-emmer",
+        "stalenplaat"
+      ],
+      "Brontekst": "Meerprijs pilesafe-emmer (emmer met stalenplaat) per stuk €17,5,- ex btw"
+    },
+    {
+      "Omschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten",
+      "Beschrijving": "Meerprijs extra fase / aanvoer akoestisch doormeten €225,- per fase",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "post",
+      "Eenheidsprijs": "225.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "surcharge",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "akoestisch doormeten",
+      "Prijsbasis": "per fase",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "akoestisch doormeten",
+        "extra fase",
+        "aanvoer"
+      ],
+      "Brontekst": "Meerprijs extra fase / aanvoer akoestisch doormeten €225,- per fase"
+    },
+    {
+      "Omschrijving": "Stagnatiekosten",
+      "Beschrijving": "Stagnatie kosten €550,- ex BTW / per uur",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "550.00",
+      "Aantal": "ONBEKEND",
+      "PostType": "regie",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "stagnatie",
+      "Prijsbasis": "per uur",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "stagnatie",
+        "wachturen"
+      ],
+      "Brontekst": "Stagnatie kosten €550,- ex BTW / per uur"
+    },
+    {
+      "Omschrijving": "Totaal exclusief BTW",
+      "Beschrijving": "Prijs exclusief BTW 34.000,00",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "34000.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "34000.00",
+      "Aantal": "1",
+      "PostType": "total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "funderingstechnieken",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "totaal",
+        "exclusief btw"
+      ],
+      "Brontekst": "Prijs exclusief BTW 34.000,00"
+    }
+  ]
+}

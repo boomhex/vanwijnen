@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "BHP Funderingstechnieken B.V.",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "34.000,00",
+  "BTW verlegd": "ja"
+}

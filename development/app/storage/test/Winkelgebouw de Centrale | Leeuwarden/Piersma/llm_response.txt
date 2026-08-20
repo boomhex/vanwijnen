@@ -1,0 +1,430 @@
+=== summary ===
+
+{
+  "Naam aannemer": "PiersmaVloeren",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "6.270,00",
+  "BTW verlegd": "ONBEKEND"
+}
+
+=== posts chunk 1 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Voorbehandeling betonvloeren (Optie 1)",
+      "Beschrijving": "Voorbehandeling betonvloeren. Het opschuren van de ondergrond met diamant of stofarm stralen. Het opruwen van de randen met de flex. Het inslijpen met diamant slijptol (indien nodig). Het stofzuigen van de ondervloer.",
+      "Categorie": "Optie 1)",
+      "Totaalbedrag": "1.925,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "110,00",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "2",
+      "Subcategorie": "Voorbehandeling betonvloeren",
+      "Werksoort": "vloerbehandeling",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Het opschuren van de ondergrond met diamant of stofarm stralen",
+        "Het opruwen van de randen met de flex",
+        "Het inslijpen met diamant slijptol (indien nodig)",
+        "Het stofzuigen van de ondervloer"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [
+        "De opdrachtgever (u) zorgt zelf voor een schone, vetvrije ondergrond en dient deze zo droog mogelijk aan te leveren"
+      ],
+      "MatchHints": [
+        "Voorbehandeling",
+        "betonvloer",
+        "opschuren",
+        "diamant",
+        "stofarm stralen",
+        "opruwen",
+        "stofzuigen"
+      ],
+      "Brontekst": "110,00 m2 Voorbehandelingbetonvloeren2 € 17,50 € 1.925,00"
+    },
+    {
+      "Omschrijving": "PV 115 Epoxy Coatingvloer",
+      "Beschrijving": "PV 115 Epoxy Coatingvloer. Het primeren van de vloer met epoxy primer Remmers BS 2000. Het zetten van een rollaag met Remmers BS 3000. Het afrollen van de vloer met Remmers BS 3000.",
+      "Categorie": "Optie 1)",
+      "Totaalbedrag": "4.345,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "39,50",
+      "Aantal": "110,00",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "9",
+      "Subcategorie": "PV 115 Epoxy Coatingvloer",
+      "Werksoort": "kunststofvloer",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Het primeren van de vloer met epoxy primer Remmers BS 2000",
+        "Het zetten van een rollaag met Remmers BS 3000",
+        "Het afrollen van de vloer met Remmers BS 3000"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "PV 115",
+        "Epoxy Coatingvloer",
+        "Remmers BS 2000",
+        "Remmers BS 3000",
+        "primer",
+        "rollaag"
+      ],
+      "Brontekst": "110,00 m2 PV115EpoxyCoatingvloer9 € 39,50 € 4.345,00"
+    },
+    {
+      "Omschrijving": "PV Holplint (60mm hoog) (Optie 1)",
+      "Beschrijving": "PV Holplint (60mm hoog)",
+      "Categorie": "Optie 1)",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "14",
+      "Subcategorie": "PV Holplint",
+      "Werksoort": "plintafwerking",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "PV Holplint",
+        "60mm hoog",
+        "plint"
+      ],
+      "Brontekst": "n.t.b. m1 PVHolplint(60mmhoog)14 € 27,50 € n.t.b."
+    },
+    {
+      "Omschrijving": "Eindstopprofiel (Optie 1)",
+      "Beschrijving": "Eindstopprofiel",
+      "Categorie": "Optie 1)",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "18",
+      "Subcategorie": "Eindstopprofiel",
+      "Werksoort": "profiel",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Eindstopprofiel",
+        "profiel"
+      ],
+      "Brontekst": "n.t.b. m1 Eindstopprofiel18 € 17,50 € n.t.b."
+    },
+    {
+      "Omschrijving": "Voorbehandeling betonvloeren (Optie 2)",
+      "Beschrijving": "Voorbehandeling betonvloeren. Het opschuren van de ondergrond met diamant of stofarm stralen. Het opruwen van de randen met de flex. Het inslijpen met diamant slijptol (indien nodig). Het stofzuigen van de ondervloer.",
+      "Categorie": "Optie 2) Alternatief",
+      "Totaalbedrag": "1.925,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "110,00",
+      "PostType": "alternative",
+      "Status": "alternative",
+      "Code": "ONBEKEND",
+      "Regelnummer": "23",
+      "Subcategorie": "Voorbehandeling betonvloeren",
+      "Werksoort": "vloerbehandeling",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Het opschuren van de ondergrond met diamant of stofarm stralen",
+        "Het opruwen van de randen met de flex",
+        "Het inslijpen met diamant slijptol (indien nodig)",
+        "Het stofzuigen van de ondervloer"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [
+        "De opdrachtgever (u) zorgt zelf voor een schone, vetvrije ondergrond en dient deze zo droog mogelijk aan te leveren"
+      ],
+      "MatchHints": [
+        "Voorbehandeling",
+        "betonvloer",
+        "opschuren",
+        "diamant",
+        "stofarm stralen",
+        "opruwen",
+        "stofzuigen"
+      ],
+      "Brontekst": "110,00 m2 Voorbehandelingbetonvloeren23 € 17,50 € 1.925,00"
+    },
+    {
+      "Omschrijving": "PV 660 PU Gietvloer",
+      "Beschrijving": "PV 660 PU Gietvloer. Het primeren van de ondergrond met PV 110 Epoxy Primer. Het aanbrengen van een schraaplaag met PV 10 schraapmassa. Het aanbrengen van een gietlaag met PV PU 66 Gietvloer. Het afrollen van de vloer met PV Topcoat Transparant.",
+      "Categorie": "Optie 2) Alternatief",
+      "Totaalbedrag": "7.535,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "68,50",
+      "Aantal": "110,00",
+      "PostType": "alternative",
+      "Status": "alternative",
+      "Code": "ONBEKEND",
+      "Regelnummer": "30",
+      "Subcategorie": "PV 660 PU Gietvloer",
+      "Werksoort": "kunststofvloer",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Het primeren van de ondergrond met PV 110 Epoxy Primer",
+        "Het aanbrengen van een schraaplaag met PV 10 schraapmassa",
+        "Het aanbrengen van een gietlaag met PV PU 66 Gietvloer",
+        "Het afrollen van de vloer met PV Topcoat Transparant"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "PV 660",
+        "PU Gietvloer",
+        "PV 110 Epoxy Primer",
+        "PV 10 schraapmassa",
+        "PV PU 66 Gietvloer",
+        "PV Topcoat Transparant"
+      ],
+      "Brontekst": "110,00 m2 PV660PUGietvloer30 € 68,50 € 7.535,00"
+    },
+    {
+      "Omschrijving": "PV Holplint (60mm hoog) (Optie 2)",
+      "Beschrijving": "PV Holplint (60mm hoog)",
+      "Categorie": "Optie 2) Alternatief",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "alternative",
+      "Status": "alternative",
+      "Code": "ONBEKEND",
+      "Regelnummer": "36",
+      "Subcategorie": "PV Holplint",
+      "Werksoort": "plintafwerking",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "PV Holplint",
+        "60mm hoog",
+        "plint"
+      ],
+      "Brontekst": "n.t.b. m1 PVHolplint(60mmhoog)36 € 27,50 € n.t.b."
+    },
+    {
+      "Omschrijving": "Eindstopprofiel (Optie 2)",
+      "Beschrijving": "Eindstopprofiel",
+      "Categorie": "Optie 2) Alternatief",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "alternative",
+      "Status": "alternative",
+      "Code": "ONBEKEND",
+      "Regelnummer": "40",
+      "Subcategorie": "Eindstopprofiel",
+      "Werksoort": "profiel",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Eindstopprofiel",
+        "profiel"
+      ],
+      "Brontekst": "n.t.b. m1 Eindstopprofiel40 € 17,50 € n.t.b."
+    },
+    {
+      "Omschrijving": "Het leveren en plaatsen van profielen",
+      "Beschrijving": "Het leveren en plaatsen van profielen",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "17,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "profiel",
+      "Prijsbasis": "per meter",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "profielen",
+        "leveren",
+        "plaatsen"
+      ],
+      "Brontekst": "Hetleverenenplaatsenvanprofielen € 17,50 (permeter)"
+    },
+    {
+      "Omschrijving": "Holplint aansluitend aan tegelwerk (60mm hoog)",
+      "Beschrijving": "Holplint aansluitend aan tegelwerk (60mm hoog)",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "27,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "plintafwerking",
+      "Prijsbasis": "per m¹",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Holplint",
+        "tegelwerk",
+        "60mm hoog"
+      ],
+      "Brontekst": "Holplintaansluitendaantegelwerk(60mmhoog) € 27,50 (perm¹)"
+    },
+    {
+      "Omschrijving": "Holplint inclusief eindprofiel (60mm hoog)",
+      "Beschrijving": "Holplint inclusief eindprofiel (60mm hoog)",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "45,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "plintafwerking",
+      "Prijsbasis": "per m¹",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Holplint",
+        "eindprofiel",
+        "60mm hoog"
+      ],
+      "Brontekst": "Holplintinclusiefeindprofiel(60mmhoog) € 45,00 (perm¹)"
+    },
+    {
+      "Omschrijving": "Vloeistofdrempel epoxy",
+      "Beschrijving": "Vloeistofdrempel epoxy",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "37,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "drempel",
+      "Prijsbasis": "per meter",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Vloeistofdrempel",
+        "epoxy"
+      ],
+      "Brontekst": "Vloeistofdrempelepoxy € 37,50 (permeter)"
+    }
+  ]
+}
+
+=== posts chunk 2 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Egaliseren per kg met reparatiemortel",
+      "Beschrijving": "Egaliseren per kg met reparatiemortel",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "ONBEKEND",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "egaliseren",
+      "Prijsbasis": "per kg",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Egaliseren",
+        "reparatiemortel"
+      ],
+      "Brontekst": "Egaliserenperkgmetreparatiemortel € 5,00 (perkg)"
+    },
+    {
+      "Omschrijving": "Extra fases",
+      "Beschrijving": "Extra fases",
+      "Categorie": "EVENTUELE OPTIES/WENSEN:",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "850,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "option",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "fases",
+      "Prijsbasis": "per fase",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Extra fases",
+        "fase"
+      ],
+      "Brontekst": "Extrafases € 850,00 (perfase)"
+    }
+  ]
+}
+
+=== posts chunk 3 ===
+
+{
+  "Posten": []
+}
+
+=== posts chunk 4 ===
+
+{
+  "Posten": []
+}

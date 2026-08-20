@@ -9,10 +9,10 @@
       "Eenheidsprijs": "5,75",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "folie",
       "Prijsbasis": "per m2",
       "Inclusief": [],
@@ -20,8 +20,7 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Dampremmende folie",
-        "folie"
+        "Dampremmende folie"
       ],
       "Brontekst": "V Dampremmende folie 1,00 m2 5,75 €"
     },
@@ -34,10 +33,10 @@
       "Eenheidsprijs": "10,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "folie",
       "Prijsbasis": "per m2",
       "Inclusief": [],
@@ -59,11 +58,11 @@
       "Eenheidsprijs": "7,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "wanden",
+      "Subcategorie": "Wanden",
+      "Werksoort": "inkepen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -77,7 +76,7 @@
       "Brontekst": "V Wanden inkepen i.v.m. montage tussen houten balklaag, per gips laag 1,00 st 7,50 €"
     },
     {
-      "Omschrijving": "Cannelurevulling incl. strook multiplex",
+      "Omschrijving": "Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex",
       "Beschrijving": "Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex, wit gegrond, excl. afschilderen (excl. brandwerend)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "45,00",
@@ -85,10 +84,10 @@
       "Eenheidsprijs": "45,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "cannelurevulling",
       "Prijsbasis": "per m1",
       "Inclusief": [
@@ -116,11 +115,11 @@
       "Eenheidsprijs": "97,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -133,7 +132,7 @@
       "Brontekst": "V Sparing t.b.v. brandslanghaspel 1,00 st 97,50 €"
     },
     {
-      "Omschrijving": "Sparing t.b.v. brandslanghaspel in brandwerende wand",
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
       "Beschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "110,00",
@@ -141,11 +140,11 @@
       "Eenheidsprijs": "110,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -154,24 +153,23 @@
       "MatchHints": [
         "Sparing",
         "brandslanghaspel",
-        "brandwerende wand",
-        "30/60 min"
+        "brandwerende wand"
       ],
       "Brontekst": "V Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand 1,00 st 110,00 €"
     },
     {
-      "Omschrijving": "Raveling maken",
-      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen). Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Raveling maken, per stijl onderbreking",
+      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "14,50",
       "Eenheid": "st",
       "Eenheidsprijs": "14,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "raveling",
       "Prijsbasis": "per st",
       "Inclusief": [],
@@ -179,37 +177,37 @@
         "t.b.v. brandkleppen"
       ],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit",
+        "maximale breedte raveling 1200mm"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Raveling",
-        "stijl onderbreking",
-        "1200mm"
+        "stijl onderbreking"
       ],
       "Brontekst": "V Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen) 1,00 st 14,50 €"
     },
     {
-      "Omschrijving": "Sparingen max. Ø 75mm",
-      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen). Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 75mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "3,00",
       "Eenheid": "st",
       "Eenheidsprijs": "3,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [
         "sparingen electradozen"
       ],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -219,24 +217,24 @@
       "Brontekst": "V Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen) 1,00 st 3,00 €"
     },
     {
-      "Omschrijving": "Sparingen max. Ø 300mm",
-      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm. Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "4,00",
       "Eenheid": "st",
       "Eenheidsprijs": "4,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -246,24 +244,24 @@
       "Brontekst": "V Sparingen (per laag), afmeting max. Ø 300mm 1,00 st 4,00 €"
     },
     {
-      "Omschrijving": "Sparingen groter dan 300x300mm",
-      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm. Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "5,50",
       "Eenheid": "st",
       "Eenheidsprijs": "5,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -271,35 +269,6 @@
         "300x300mm"
       ],
       "Brontekst": "V Sparingen (per laag), afmeting groter dan 300x300mm 1,00 st 5,50 €"
-    },
-    {
-      "Omschrijving": "Sparingen t.b.v. wandcontactdozen",
-      "Beschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating). Uitvoering vóór de installaties uit.",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "5,00",
-      "Eenheid": "st",
-      "Eenheidsprijs": "5,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [
-        "Uitvoering vóór de installaties uit",
-        "indien deze zijn geplaatst alvorens de gips beplating"
-      ],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "wandcontactdozen",
-        "gips beplating"
-      ],
-      "Brontekst": "V Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating) 1,00 st 5,00 €"
     }
   ]
 }

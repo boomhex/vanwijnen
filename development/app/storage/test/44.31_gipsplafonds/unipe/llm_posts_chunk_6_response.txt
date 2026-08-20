@@ -13,12 +13,10 @@
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "ONBEKEND",
-      "Werksoort": "akoestische band",
+      "Werksoort": "akoestisch ontkoppel band",
       "Prijsbasis": "per m1",
       "Inclusief": [
-        "Leveren",
-        "aanbrengen",
-        "akoestische band Nevima IVI dik 5mm onder de U-75"
+        "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75"
       ],
       "Exclusief": [],
       "Voorwaarden": [],

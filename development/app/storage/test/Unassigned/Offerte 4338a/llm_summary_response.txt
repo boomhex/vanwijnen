@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "Noppert Beton BV",
+  "Totaalprijs inc. BTW": "115.240,40",
+  "Totaalprijs exc. BTW": "95.240,00",
+  "BTW verlegd": "nee"
+}

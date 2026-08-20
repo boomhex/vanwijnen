@@ -1,0 +1,74 @@
+{
+    "Posten": [
+        {
+            "Omschrijving": "PU gietvloer fabricaat Remmers Type BS2000 / BS3000 Kleur ral 7035",
+            "Aantal": "110",
+            "Eenheid": "m2"
+        },
+        {
+            "Omschrijving": "\nOvergangsprofiel",
+            "Aantal": "33",
+            "Eenheid": "m1"
+        }
+    ],
+    "MatchedPosten": [
+        {
+            "Omschrijving": "PU gietvloer fabricaat Remmers Type BS2000 / BS3000 Kleur ral 7035",
+            "Aantal": "110",
+            "Eenheid": "m2",
+            "Offertes": {
+                "Piersma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "PV 660 PU Gietvloer",
+                    "Gematchte categorie": "Optie 2) Alternatief",
+                    "Gematchte eenheid": "m2",
+                    "Aantal": "110.00",
+                    "Eenheidsprijs": "68.50",
+                    "Totaalbedrag": "7535.00",
+                    "Overeenkomst": "2",
+                    "Ongekoppeld": false
+                },
+                "VTH.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        },
+        {
+            "Omschrijving": "\nOvergangsprofiel",
+            "Aantal": "33",
+            "Eenheid": "m1",
+            "Offertes": {
+                "Piersma.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Eindstopprofiel (Optie 1)",
+                    "Gematchte categorie": "Optie 1)",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "17.50",
+                    "Totaalbedrag": "577.50",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                },
+                "VTH.pdf": {
+                    "Match type": "single",
+                    "Gematchte omschrijving": "Aluminium strippen/eindprofiel A20 (recht)",
+                    "Gematchte categorie": "Door Vloertechniek Hoogeveen uit te voeren werkzaamheden",
+                    "Gematchte eenheid": "m1",
+                    "Aantal": "ONBEKEND",
+                    "Eenheidsprijs": "9.50",
+                    "Totaalbedrag": "313.50",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
+                }
+            }
+        }
+    ]
+}

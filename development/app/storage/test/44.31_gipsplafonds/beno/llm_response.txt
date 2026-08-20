@@ -3,7 +3,8 @@
 {
   "Naam aannemer": "BENO Projectafbouw BV",
   "Totaalprijs inc. BTW": "ONBEKEND",
-  "Totaalprijs exc. BTW": "341.051,01"
+  "Totaalprijs exc. BTW": "341.051,01",
+  "BTW verlegd": "ONBEKEND"
 }
 
 === posts chunk 1 ===
@@ -12,7 +13,7 @@
   "Posten": [
     {
       "Omschrijving": "Rockfon Blanka A24 600x600x20mm voor inlegmontage",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Rockfon Blanka A15/A24 600x600x20 mm.",
+      "Beschrijving": "De door u opgegeven hoeveelheden. De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Rockfon Blanka A15/A24 600x600x20 mm.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "69.287,48",
       "Eenheid": "m2",
@@ -39,13 +40,14 @@
         "A24",
         "600x600x20mm",
         "inlegmontage",
-        "systeemplafond"
+        "snelhangers",
+        "Chicago Metallic"
       ],
-      "Brontekst": "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\nDit alles wordt omsloten door een kantlat.\nSnelhanger 315-715 (bereik 700-990 mm)\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit\nRockfon Blanka A15/A24 600x600x20 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage 24mm systeem en inlegplaten 600x600mm\nMontage toeslag plafonds bouwkundige hoogte\n1.574,00 m2 44,02 € 69.287,48"
+      "Brontekst": "01.) 44.31.10-a Rockfon Blanka A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n...\n1.574,00 m2 44,02 \u2010 69.287,48"
     },
     {
       "Omschrijving": "Rockfon Boxer 1200x1200x40mm balvast plafond Klasse 1A met Olympia Plus systeem",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Let op! In dit plafond kunnen geen armaturen geplaatst worden i.v.m. de balvastheid. Verlichting kan worden gecreëerd door middel van opbouwarmaturen of lichtlijnen. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel voor Bandraster 50, Nonius borgpen / splitpen 100st/ds, Chicago Metallic L-muurprofiel versterkt 1470 H L=3050 30x30 001-wit, CM Bandraster 3050 50mm Hoofdprofiel L=3600 gesleufd 001-wit, CM Bandraster 3050 50mm Dwarsprofiel L=1150 ongesleufd 001-wit, CM Bandraster 3050 50mm Lengtekoppeling, CM Bandraster 3050 50mm Kruiskoppeling, CM Bandraster 3050 50mm Muurbevestiging, Rockfon Boxer 1A AEX vlak inleg 1166x1166x40mm, CM Hold-down Verankeringsprofiel 18x45x18mm L=1168,6 mm, CM Hold-down Verankeringsprofiel 18x45x18mm L=555 mm, Gebogen verbindingsstuk Olympia Plus 1A, Recht verbindingsstuk Olympia Plus 1A.",
+      "Beschrijving": "De door u opgegeven hoeveelheden. Let op! In dit plafond kunnen geen armaturen geplaatst worden i.v.m. de balvastheid. Verlichting kan worden gecre\u0000erd door middel van opbouwarmaturen of lichtlijnen. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel voor Bandraster 50, Nonius borgpen / splitpen 100st/ds, Chicago Metallic L-muurprofiel versterkt 1470 H L=3050 30x30 001-wit, CM Bandraster 3050 50mm Hoofdprofiel L=3600 gesleufd 001-wit, CM Bandraster 3050 50mm Dwarsprofiel L=1150 ongesleufd 001-wit, CM Bandraster 3050 50mm Lengtekoppeling, CM Bandraster 3050 50mm Kruiskoppeling, CM Bandraster 3050 50mm Muurbevestiging, Rockfon Boxer 1A AEX vlak inleg 1166x1166x40mm, CM Hold-down Verankeringsprofiel 18x45x18mm L=1168,6 mm, CM Hold-down Verankeringsprofiel 18x45x18mm L=555 mm, Gebogen verbindingsstuk Olympia Plus 1A, Recht verbindingsstuk Olympia Plus 1A.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "8.618,90",
       "Eenheid": "m2",
@@ -65,20 +67,22 @@
         "Montage toeslag plafonds bouwkundige hoogte"
       ],
       "Exclusief": [],
-      "Voorwaarden": [],
+      "Voorwaarden": [
+        "In dit plafond kunnen geen armaturen geplaatst worden i.v.m. de balvastheid. Verlichting kan worden gecre\u0000erd door middel van opbouwarmaturen of lichtlijnen."
+      ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Rockfon Boxer",
         "balvast",
         "Klasse 1A",
         "Olympia Plus",
-        "1200x1200x40mm"
+        "Bandraster"
       ],
-      "Brontekst": "02.) 44.31.10-b Rockfon Boxer 1200x1200x40mm balvast plafond Klasse 1A met Olympia Plus systeem\nDe door u opgegeven hoeveelheden.\n# Opmerkingen:\nLet op! In dit plafond kunnen geen armaturen geplaatst worden i.v.m. de balvastheid.\nVerlichting kan worden gecreëerd door middel van opbouwarmaturen of lichtlijnen.\n# Opbouw:\nNonius bovendeel 540 mm\nNonius onderdeel voor Bandraster 50\nNonius borgpen / splitpen 100st/ds\nChicago Metallic L-muurprofiel versterkt 1470 H L=3050 30x30 001-wit\nCM Bandraster 3050 50mm Hoofdprofiel L=3600 gesleufd 001-wit\nCM Bandraster 3050 50mm Dwarsprofiel L=1150 ongesleufd 001-wit\nCM Bandraster 3050 50mm Lengtekoppeling\nCM Bandraster 3050 50mm Kruiskoppeling\nCM Bandraster 3050 50mm Muurbevestiging\nRockfon Boxer 1A AEX vlak inleg 1166x1166x40mm\nCM Hold-down Verankeringsprofiel 18x45x18mm L=1168,6 mm\nCM Hold-down Verankeringsprofiel 18x45x18mm L=555 mm\nGebogen verbindingsstuk Olympia Plus 1A\nRecht verbindingsstuk Olympia Plus 1A\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage balvast systeem (dubbel) klasse 1A 1200x1200mm\nMontage toeslag plafonds bouwkundige hoogte\n79,00 m2 109,10 € 8.618,90"
+      "Brontekst": "02.) 44.31.10-b Rockfon Boxer 1200x1200x40mm balvast plafond Klasse 1A met Olympia Plus systeem\nDe door u opgegeven hoeveelheden.\n...\n79,00 m2 109,10 \u2010 8.618,90"
     },
     {
       "Omschrijving": "Rockfon Color-All Linen A24 600x600x20mm voor inlegmontage",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 Linen, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 Linen, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 Linen, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 Linen, Rockfon Color-all Linen A15/24 vlak inleg 600x600x25mm.",
+      "Beschrijving": "De door u opgegeven hoeveelheden. De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 Linen, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 Linen, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 Linen, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 Linen, Rockfon Color-all Linen A15/24 vlak inleg 600x600x25mm.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "9.479,21",
       "Eenheid": "m2",
@@ -107,11 +111,11 @@
         "600x600x20mm",
         "inlegmontage"
       ],
-      "Brontekst": "03.) 44.31.10-c Rockfon Color-All Linen A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\nDit alles wordt omsloten door een kantlat.\nSnelhanger 315-715 (bereik 700-990 mm)\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 Linen\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 Linen\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 Linen\nChicago Metallic T24 850 Dwarsprofiel L=600 38x24 Linen\nRockfon Color-all Linen A15/24 vlak inleg 600x600x25mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage 24mm systeem en inlegplaten 600x600mm\nMontage toeslag plafonds bouwkundige hoogte\n169,00 m2 56,09 € 9.479,21"
+      "Brontekst": "03.) 44.31.10-c Rockfon Color-All Linen A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n...\n169,00 m2 56,09 \u2010 9.479,21"
     },
     {
       "Omschrijving": "Rockfon Cleanspace PRO A24 600x600x20mm voor inlegmontage",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Rockfon Cleanspace Pro A24 vlak inleg 600x600x20mm.",
+      "Beschrijving": "De door u opgegeven hoeveelheden. De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Rockfon Cleanspace Pro A24 vlak inleg 600x600x20mm.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "6.475,04",
       "Eenheid": "m2",
@@ -140,85 +144,14 @@
         "600x600x20mm",
         "inlegmontage"
       ],
-      "Brontekst": "04.) 44.31.20-a Rockfon Cleanspace PRO A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\nDit alles wordt omsloten door een kantlat.\nSnelhanger 315-715 (bereik 700-990 mm)\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit\nRockfon Cleanspace Pro A24 vlak inleg 600x600x20mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage 24mm systeem en inlegplaten 600x600mm\nMontage toeslag systeemplafonds sanitaire ruimte\nMontage toeslag plafonds bouwkundige hoogte\n88,00 m2 73,58 € 6.475,04"
+      "Brontekst": "04.) 44.31.20-a Rockfon Cleanspace PRO A24 600x600x20mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n...\n88,00 m2 73,58 \u2010 6.475,04"
     }
   ]
 }
 
 === posts chunk 2 ===
 
-{
-  "Posten": [
-    {
-      "Omschrijving": "Pladur Gipsvinyl A24 600x600x10mm voor inlegmontage",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Pladur Vinyl alu back 595x595x10 mm.",
-      "Categorie": "PLAFONDS",
-      "Totaalbedrag": "ONBEKEND",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "42,45",
-      "Aantal": "88,00",
-      "PostType": "alternative",
-      "Status": "alternative",
-      "Code": "ONBEKEND",
-      "Regelnummer": "04a",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
-      "Inclusief": [
-        "Horizontaal transport",
-        "Bevestigingsmateriaal",
-        "Montage 24mm systeem en inlegplaten 600x600mm",
-        "Montage toeslag systeemplafonds sanitaire ruimte",
-        "Montage toeslag plafonds bouwkundige hoogte"
-      ],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Pladur Gipsvinyl",
-        "A24",
-        "600x600x10mm",
-        "inlegmontage",
-        "Pladur Vinyl alu back"
-      ],
-      "Brontekst": "Alternatief: 04a.) Pladur Gipsvinyl A24 600x600x10mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\nDit alles wordt omsloten door een kantlat.\nSnelhanger 315-715 (bereik 700-990 mm)\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit\nPladur Vinyl alu back 595x595x10 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage 24mm systeem en inlegplaten 600x600mm\nMontage toeslag systeemplafonds sanitaire ruimte\nMontage toeslag plafonds bouwkundige hoogte\nalternatief (niet in totalen meeberekend): 88,00 m2 42,45 €"
-    },
-    {
-      "Omschrijving": "Pladur Gipsvinyl A24 1200x600x10mm voor inlegmontage",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 415-415 (bereik 400-790 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Pladur Vinyl alu back 1195x595x10 mm.",
-      "Categorie": "PLAFONDS",
-      "Totaalbedrag": "ONBEKEND",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "39,19",
-      "Aantal": "88,00",
-      "PostType": "alternative",
-      "Status": "alternative",
-      "Code": "ONBEKEND",
-      "Regelnummer": "04b",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
-      "Inclusief": [
-        "Horizontaal transport",
-        "Bevestigingsmateriaal",
-        "Montage 24mm systeem en inlegplaten 1200x600mm",
-        "Montage toeslag systeemplafonds sanitaire ruimte",
-        "Montage toeslag plafonds bouwkundige hoogte"
-      ],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Pladur Gipsvinyl",
-        "A24",
-        "1200x600x10mm",
-        "inlegmontage",
-        "Pladur Vinyl alu back"
-      ],
-      "Brontekst": "Alternatief: 04b.) Pladur Gipsvinyl A24 1200x600x10mm voor inlegmontage\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\nDit alles wordt omsloten door een kantlat.\nSnelhanger 415-415 (bereik 400-790 mm)\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\nPladur Vinyl alu back 1195x595x10 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage 24mm systeem en inlegplaten 1200x600mm\nMontage toeslag systeemplafonds sanitaire ruimte\nMontage toeslag plafonds bouwkundige hoogte\nalternatief (niet in totalen meeberekend): 88,00 m2 39,19 €"
-    }
-  ]
-}
+{"Posten":[{"Omschrijving":"Alternatief bij Rockfon Cleanspace PRO A24: Pladur Gipsvinyl A24 600x600x10mm voor inlegmontage","Beschrijving":"Alternatief bij Rockfon Cleanspace PRO A24: Pladur Gipsvinyl A24 600x600x10mm voor inlegmontage. De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 315-715 (bereik 700-990 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit, Pladur Vinyl alu back 595x595x10 mm.","Categorie":"PLAFONDS","Totaalbedrag":"ONBEKEND","Eenheid":"m2","Eenheidsprijs":"42,45","Aantal":"88,00","PostType":"alternative","Status":"alternative","Code":"ONBEKEND","Regelnummer":"04a","Subcategorie":"Systeemplafonds","Werksoort":"systeemplafond","Prijsbasis":"per m2","Inclusief":["Horizontaal transport","Bevestigingsmateriaal","Montage 24mm systeem en inlegplaten 600x600mm","Montage toeslag systeemplafonds sanitaire ruimte","Montage toeslag plafonds bouwkundige hoogte"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Pladur Gipsvinyl","A24","600x600x10mm","inlegmontage","Pladur Vinyl alu back"],"Brontekst":"Alternatief: 04a.) Pladur Gipsvinyl A24 600x600x10mm voor inlegmontage\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\\nDit alles wordt omsloten door een kantlat.\\nSnelhanger 315-715 (bereik 700-990 mm)\\nVuren kanthout zwart 34x18x3000 mm\\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\\nChicago Metallic T24 850 Dwarsprofiel L=600 38x24 11-mat wit\\nPladur Vinyl alu back 595x595x10 mm\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage 24mm systeem en inlegplaten 600x600mm\\nMontage toeslag systeemplafonds sanitaire ruimte\\nMontage toeslag plafonds bouwkundige hoogte\\nalternatief (niet in totalen meeberekend): 88,00 m2 42,45 €"},{"Omschrijving":"Alternatief bij Rockfon Cleanspace PRO A24: Pladur Gipsvinyl A24 1200x600x10mm voor inlegmontage","Beschrijving":"Alternatief bij Rockfon Cleanspace PRO A24: Pladur Gipsvinyl A24 1200x600x10mm voor inlegmontage. De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Snelhanger 415-415 (bereik 400-790 mm), Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit, Pladur Vinyl alu back 1195x595x10 mm.","Categorie":"PLAFONDS","Totaalbedrag":"ONBEKEND","Eenheid":"m2","Eenheidsprijs":"39,19","Aantal":"88,00","PostType":"alternative","Status":"alternative","Code":"ONBEKEND","Regelnummer":"04b","Subcategorie":"Systeemplafonds","Werksoort":"systeemplafond","Prijsbasis":"per m2","Inclusief":["Horizontaal transport","Bevestigingsmateriaal","Montage 24mm systeem en inlegplaten 1200x600mm","Montage toeslag systeemplafonds sanitaire ruimte","Montage toeslag plafonds bouwkundige hoogte"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Pladur Gipsvinyl","A24","1200x600x10mm","inlegmontage","Pladur Vinyl alu back"],"Brontekst":"Alternatief: 04b.) Pladur Gipsvinyl A24 1200x600x10mm voor inlegmontage\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nDe plafonds worden afgehangen met behulp van snelhangers en opliggend op de hoeklijn gemonteerd.\\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\\nDit alles wordt omsloten door een kantlat.\\nSnelhanger 415-415 (bereik 400-790 mm)\\nVuren kanthout zwart 34x18x3000 mm\\nChicago Metallic L-muurprofiel 1420 L=3050 24x24 11-mat wit\\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 11-mat wit\\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 11-mat wit\\nPladur Vinyl alu back 1195x595x10 mm\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage 24mm systeem en inlegplaten 1200x600mm\\nMontage toeslag systeemplafonds sanitaire ruimte\\nMontage toeslag plafonds bouwkundige hoogte\\nalternatief (niet in totalen meeberekend): 88,00 m2 39,19 €"}]}
 
 === posts chunk 3 ===
 
@@ -226,7 +159,7 @@
   "Posten": [
     {
       "Omschrijving": "Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel voor T-profielen (nr 228), Nonius borgpen / splitpen 100st/ds, Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart. Uitvoering panelen: Shiluvit module: Type 7-545, Afmetingen lat: 20x45 mm met 55mm tussenruimte, Houtsoort en kleur: American Yellow Pine, WN2592 Eikenlook, Brandklasse: B, s2, d0, Afmeting panelen: 1200x600 mm, Toepassing: Binnen afwerking.",
+      "Beschrijving": "Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine. De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van noniushangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Nonius bovendeel 540 mm, Nonius onderdeel voor T-profielen (nr 228), Nonius borgpen / splitpen 100st/ds, Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart. Uitvoering panelen: Shiluvit module: Type 7-545, Afmetingen lat: 20x45 mm met 55mm tussenruimte, Houtsoort en kleur: American Yellow Pine, WN2592 Eikenlook, Brandklasse: B, s2, d0, Afmeting panelen: 1200x600 mm, Toepassing: Binnen afwerking.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "12.204,40",
       "Eenheid": "m2",
@@ -237,7 +170,7 @@
       "Code": "44.31.40-a",
       "Regelnummer": "11",
       "Subcategorie": "Houten plafonds",
-      "Werksoort": "systeemplafond",
+      "Werksoort": "houten plafond",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "Horizontaal transport",
@@ -256,13 +189,14 @@
         "7-545",
         "American Yellow Pine",
         "Eikenlook",
-        "houten inlegpanelen"
+        "B, s2, d0",
+        "1200x600 mm"
       ],
-      "Brontekst": "11.) 44.31.40-a Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nNonius bovendeel 540 mm\nNonius onderdeel voor T-profielen (nr 228)\nNonius borgpen / splitpen 100st/ds\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart\n# Uitvoering panelen:\nShiluvit module: Type 7-545\nAfmetingen lat: 20x45 mm met 55mm tussenruimte\nHoutsoort en kleur: American Yellow Pine, WN2592 Eikenlook\nBrandklasse: B, s2, d0\nAfmeting panelen: 1200x600 mm\nToepassing: Binnen afwerking\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nTransport en instelkosten\nMontage 24mm systeem en houten inlegpanelen 1200x600mm\nMontage toeslag plafonds bouwkundige hoogte\n# Exclusief:\nIsolatie op het plafond\n52,00 m2 234,70 € 12.204,40"
+      "Brontekst": "11.) 44.31.40-a Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nDe plafonds worden afgehangen met behulp van noniushangers en opliggend op de hoeklijn gemonteerd.\\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\\nDit alles wordt omsloten door een kantlat.\\nNonius bovendeel 540 mm\\nNonius onderdeel voor T-profielen (nr 228)\\nNonius borgpen / splitpen 100st/ds\\nVuren kanthout zwart 34x18x3000 mm\\nChicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart\\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart\\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart\\n# Uitvoering panelen:\\nShiluvit module: Type 7-545\\nAfmetingen lat: 20x45 mm met 55mm tussenruimte\\nHoutsoort en kleur: American Yellow Pine, WN2592 Eikenlook\\nBrandklasse: B, s2, d0\\nAfmeting panelen: 1200x600 mm\\nToepassing: Binnen afwerking\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nTransport en instelkosten\\nMontage 24mm systeem en houten inlegpanelen 1200x600mm\\nMontage toeslag plafonds bouwkundige hoogte\\n# Exclusief:\\nIsolatie op het plafond\\n52,00 m2 234,70 \u2011 12.204,40"
     },
     {
       "Omschrijving": "PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opmerkingen: H.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, MS U-27/50 plafondprofiel L= 4000 mm, MS C-60/27 plafondprofiel L= 4000 mm, Kruisverbinders 60/27, Lengteverbinders 60/27, Glaswol 16kg/m3 dikte 40 mm - 1-laags over de profielen, Gyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air - zwart vezeldoek op achterzijde panelen - 1-laags tegen de profielen.",
+      "Beschrijving": "PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating. De door u opgegeven hoeveelheden. Opmerkingen: H.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, MS U-27/50 plafondprofiel L= 4000 mm, MS C-60/27 plafondprofiel L= 4000 mm, Kruisverbinders 60/27, Lengteverbinders 60/27, Glaswol 16kg/m3 dikte 40 mm - 1-laags over de profielen, Gyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air - zwart vezeldoek op achterzijde panelen - 1-laags tegen de profielen.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "24.240,48",
       "Eenheid": "m2",
@@ -295,13 +229,13 @@
         "Gyproc Rigitone",
         "12-20-35",
         "Activ Air",
-        "geperforeerd"
+        "Glaswol"
       ],
-      "Brontekst": "21.) 44.37.11-a PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating\nDe door u opgegeven hoeveelheden.\n# Opmerkingen:\nH.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm\n# Opbouw:\nNonius bovendeel 540 mm\nNonius onderdeel 60/27\nNonius borgpen / splitpen 100st/ds\nMS U-27/50 plafondprofiel L= 4000 mm\nMS C-60/27 plafondprofiel L= 4000 mm\nKruisverbinders 60/27\nLengteverbinders 60/27\nGlaswol 16kg/m3 dikte 40 mm\n- 1-laags over de profielen\nGyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air\n- zwart vezeldoek op achterzijde panelen\n- 1-laags tegen de profielen\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage PlaGyp profielen Dubbel / ophanging plafonds\nMontage isolatie (zacht) plafonds tot 100mm\nMontage Rigitone geperforeerde plafondpanelen\nMontage toeslag plafonds bouwkundige hoogte\n# Exclusief:\nAfwerken blinde rand rondom, prijzen staan verderop vermeld\nHet afwerken van het plafond, prijzen staan verderop vermeld\nRonde koven, vooraf door aannemer te verzorgen\n176,00 m2 137,73 € 24.240,48"
+      "Brontekst": "21.) 44.37.11-a PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating\\nDe door u opgegeven hoeveelheden.\\n# Opmerkingen:\\nH.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm\\n# Opbouw:\\nNonius bovendeel 540 mm\\nNonius onderdeel 60/27\\nNonius borgpen / splitpen 100st/ds\\nMS U-27/50 plafondprofiel L= 4000 mm\\nMS C-60/27 plafondprofiel L= 4000 mm\\nKruisverbinders 60/27\\nLengteverbinders 60/27\\nGlaswol 16kg/m3 dikte 40 mm\\n- 1-laags over de profielen\\nGyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air\\n- zwart vezeldoek op achterzijde panelen\\n- 1-laags tegen de profielen\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage PlaGyp profielen Dubbel / ophanging plafonds\\nMontage isolatie (zacht) plafonds tot 100mm\\nMontage Rigitone geperforeerde plafondpanelen\\nMontage toeslag plafonds bouwkundige hoogte\\n# Exclusief:\\nAfwerken blinde rand rondom, prijzen staan verderop vermeld\\nHet afwerken van het plafond, prijzen staan verderop vermeld\\nRonde koven, vooraf door aannemer te verzorgen\\n176,00 m2 137,73 \u2011 24.240,48"
     },
     {
       "Omschrijving": "Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: Vuren 50x75 mm geschaafd klasse C. L= 3600 mm, Nonius bovendeel 840 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, Gyproc AK (A) 1200x12,5 mm.",
+      "Beschrijving": "Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm. De door u opgegeven hoeveelheden. Opbouw: Vuren 50x75 mm geschaafd klasse C. L= 3600 mm, Nonius bovendeel 840 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, Gyproc AK (A) 1200x12,5 mm.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "127,20",
       "Eenheid": "m1",
@@ -328,14 +262,14 @@
         "Gips",
         "Gyproc AK"
       ],
-      "Brontekst": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nVuren 50x75 mm geschaafd klasse C. L= 3600 mm\nNonius bovendeel 840 mm\nNonius onderdeel 60/27\nNonius borgpen / splitpen 100st/ds\nGyproc AK (A) 1200x12,5 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage koof met gips hoogte 600mm\nMontage toeslag plafonds bouwkundige hoogte\n3,00 m1 42,40 € 127,20"
+      "Brontekst": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nVuren 50x75 mm geschaafd klasse C. L= 3600 mm\\nNonius bovendeel 840 mm\\nNonius onderdeel 60/27\\nNonius borgpen / splitpen 100st/ds\\nGyproc AK (A) 1200x12,5 mm\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage koof met gips hoogte 600mm\\nMontage toeslag plafonds bouwkundige hoogte\\n3,00 m1 42,40 \u2011 127,20"
     }
   ]
 }
 
 === posts chunk 4 ===
 
-{"Posten":[{"Omschrijving":"Ronde koven, vooraf door aannemer te verzorgen","Beschrijving":"Ronde koven, vooraf door aannemer te verzorgen","Categorie":"PLAFONDS","Totaalbedrag":"24.240,48","Eenheid":"m2","Eenheidsprijs":"137,73","Aantal":"176,00","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"Gipsplafonds","Werksoort":"koof","Prijsbasis":"per m2","Inclusief":[],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":["vooraf door aannemer te verzorgen"],"MatchHints":["Ronde koven"],"Brontekst":"Ronde koven, vooraf door aannemer te verzorgen 176,00 m2 137,73 € 24.240,48"},{"Omschrijving":"MS 125 ECO DGS/2.75.2.A Scheidingswand","Beschrijving":"De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 107: Brandwerendheid: 60 minuten (indien volledig afgesmeerd). Geluidsisolatie Rw: 53 dB (bij gevoegde randaansluitingen). Geluidsisolatie DnT,A,k: 46 dB (bij gevoegde randaansluitingen). Maximale wandhoogte: 5500 mm, stijlen h.o.h. 600 mm. Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"143.027,29","Eenheid":"m2","Eenheidsprijs":"77,69","Aantal":"1.841,00","PostType":"line_total","Status":"included","Code":"44.41.31-a","Regelnummer":"41","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per m2","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-profielen h.o.h. 600mm","Montage isolatie (zacht) tussen de profielen h.o.h. 600mm","Montage gipsbeplating 12,5mm (eerste laag)","Montage Duragyp 12,5mm (eindlaag)","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["MS 125 ECO DGS/2.75.2.A","Scheidingswand","Gyproc wandnummer 107","DuraGyp"],"Brontekst":"41.) 44.41.31-a MS 125 ECO DGS/2.75.2.A Scheidingswand De door u opgegeven bruto hoeveelheden. # Prestaties Gyproc wandnummer 107: Brandwerendheid: 60 minuten (indien volledig afgesmeerd) Geluidsisolatie Rw: 53 dB (bij gevoegde randaansluitingen) Geluidsisolatie DnT,A,k: 46 dB (bij gevoegde randaansluitingen) Maximale wandhoogte: 5500 mm, stijlen h.o.h. 600 mm Stootvastheidsklasse: 5 van 7 # Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating # Inclusief: Horizontaal transport en bevestigingsmateriaal Montage MS-profielen h.o.h. 600mm Montage isolatie (zacht) tussen de profielen h.o.h. 600mm Montage gipsbeplating 12,5mm (eerste laag) Montage Duragyp 12,5mm (eindlaag) Montage toeslag wanden bouwkundige hoogte # Exclusief: Het afwerken van de wand, prijzen staan verderop vermeld Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie 1.841,00 m2 77,69 € 143.027,29"},{"Omschrijving":"Ronde hoeken Gyprex straal binnenhoek 500mm","Beschrijving":"De door u opgegeven hoeveelheden. Opmerkingen: Van toepassing voor de wanden met een kromtestraal van 500 - 1000 mm, Bevochtigde plaatkern van gipsplaat, buigen op de constructie. Opbouw: MS 75 C-profiel L= 2000-6000 mm - één stijl per, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyrex gebogen binnenhoek, radius 500mm, lengte 3000mm - 1-laags aan de binnenzijde, Gyrex gebogen buitenhoek, radius 600mm, lengte 3000mm - 1-laags aan de buitenzijde.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"9.755,44","Eenheid":"st","Eenheidsprijs":"1.219,43","Aantal":"8,00","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"41a","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per st","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-stijlen","Montage isolatie (zacht) ronde hoek","Montage gebogen binnenhoek","Montage gebogen buitenhoek","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":["Van toepassing voor de wanden met een kromtestraal van 500 - 1000 mm","Bevochtigde plaatkern van gipsplaat, buigen op de constructie"],"DoorOpdrachtgever":[],"MatchHints":["Ronde hoeken","Gyprex","binnenhoek 500mm","Gyrex gebogen binnenhoek"],"Brontekst":"41a.) Ronde hoeken Gyprex straal binnenhoek 500mm De door u opgegeven hoeveelheden. # Opmerkingen: Van toepassing voor de wanden met een kromtestraal van 500 - 1000 mm Bevochtigde plaatkern van gipsplaat, buigen op de constructie # Opbouw: MS 75 C-profiel L= 2000-6000 mm - één stijl per Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen Gyrex gebogen binnenhoek, radius 500mm, lengte 3000mm - 1-laags aan de binnenzijde Gyrex gebogen buitenhoek, radius 600mm, lengte 3000mm - 1-laags aan de buitenzijde # Inclusief: Horizontaal transport en bevestigingsmateriaal Montage MS-stijlen Montage isolatie (zacht) ronde hoek Montage gebogen binnenhoek Montage gebogen buitenhoek Montage toeslag wanden bouwkundige hoogte 6 / 16 # Exclusief: Het afwerken van de wand, prijzen staan verderop vermeld Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie 8,00 st 1.219,43 € 9.755,44"},{"Omschrijving":"MS 145 ECO DGS/2.45*45.2.AA Scheidingswand","Beschrijving":"De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 159: Brandwerendheid: 60 minuten (indien volledig afgesmeerd). Geluidsisolatie Rw: 60 dB (bij gevoegde randaansluitingen). Geluidsisolatie DnT,A,k: 53 dB (bij gevoegde randaansluitingen). Maximale wandhoogte: 4500 mm, stijlen h.o.h. 600 mm, gesteund. Stootvastheidsklasse: 5 van 7. Opbouw: MS 45F U-profiel met foamband 1x20 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk, MS 45 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund, PE-Foamband 3x30 mm rol á 20m1, Glaswol 16kg/m3 dikte 40 mm - 2-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"17.354,05","Eenheid":"m2","Eenheidsprijs":"96,95","Aantal":"179,00","PostType":"line_total","Status":"included","Code":"44.41.31-a","Regelnummer":"42","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per m2","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk","Montage isolatie (zacht) tussen de profielen h.o.h. 600mm","Montage gipsbeplating 12,5mm (eerste laag)","Montage Duragyp 12,5mm (eindlaag)","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["MS 145 ECO DGS/2.45*45.2.AA","Scheidingswand","Gyproc wandnummer 159","DuraGyp"],"Brontekst":"42.) 44.41.31-a MS 145 ECO DGS/2.45*45.2.AA Scheidingswand De door u opgegeven bruto hoeveelheden. # Prestaties Gyproc wandnummer 159: Brandwerendheid: 60 minuten (indien volledig afgesmeerd) Geluidsisolatie Rw: 60 dB (bij gevoegde randaansluitingen) Geluidsisolatie DnT,A,k: 53 dB (bij gevoegde randaansluitingen) Maximale wandhoogte: 4500 mm, stijlen h.o.h. 600 mm, gesteund Stootvastheidsklasse: 5 van 7 # Opbouw: MS 45F U-profiel met foamband 1x20 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk MS 45 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund PE-Foamband 3x30 mm rol á 20m1 Glaswol 16kg/m3 dikte 40 mm - 2-laags tussen de profielen Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating # Inclusief: Horizontaal transport en bevestigingsmateriaal Montage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk Montage isolatie (zacht) tussen de profielen h.o.h. 600mm Montage gipsbeplating 12,5mm (eerste laag) Montage Duragyp 12,5mm (eindlaag) Montage toeslag wanden bouwkundige hoogte # Exclusief: Het afwerken van de wand, prijzen staan verderop vermeld Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie 179,00 m2 96,95 € 17.354,05"}]}
+{"Posten":[{"Omschrijving":"Ronde koven, vooraf door aannemer te verzorgen","Beschrijving":"Ronde koven, vooraf door aannemer te verzorgen","Categorie":"PLAFONDS","Totaalbedrag":"24.240,48","Eenheid":"m2","Eenheidsprijs":"137,73","Aantal":"176,00","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"Gipsplafonds","Werksoort":"plafond","Prijsbasis":"per m2","Inclusief":[],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":["vooraf door aannemer te verzorgen"],"MatchHints":["Ronde koven","Gipsplafonds"],"Brontekst":"Ronde koven, vooraf door aannemer te verzorgen\\n176,00 m2 137,73 € 24.240,48"},{"Omschrijving":"MS 125 ECO DGS/2.75.2.A Scheidingswand","Beschrijving":"MS 125 ECO DGS/2.75.2.A Scheidingswand. De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 107: Brandwerendheid: 60 minuten (indien volledig afgesmeerd), Geluidsisolatie Rw: 53 dB (bij gevoegde randaansluitingen), Geluidsisolatie DnT,A,k: 46 dB (bij gevoegde randaansluitingen), Maximale wandhoogte: 5500 mm, stijlen h.o.h. 600 mm, Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"143.027,29","Eenheid":"m2","Eenheidsprijs":"77,69","Aantal":"1.841,00","PostType":"line_total","Status":"included","Code":"44.41.31-a","Regelnummer":"41","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per m2","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-profielen h.o.h. 600mm","Montage isolatie (zacht) tussen de profielen h.o.h. 600mm","Montage gipsbeplating 12,5mm (eerste laag)","Montage Duragyp 12,5mm (eindlaag)","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["MS 125 ECO","Scheidingswand","Gyproc","DuraGyp","Glaswol"],"Brontekst":"41.) 44.41.31-a MS 125 ECO DGS/2.75.2.A Scheidingswand\\nDe door u opgegeven bruto hoeveelheden.\\n# Prestaties Gyproc wandnummer 107:\\nBrandwerendheid: 60 minuten (indien volledig afgesmeerd)\\nGeluidsisolatie Rw: 53 dB (bij gevoegde randaansluitingen)\\nGeluidsisolatie DnT,A,k: 46 dB (bij gevoegde randaansluitingen)\\nMaximale wandhoogte: 5500 mm, stijlen h.o.h. 600 mm\\nStootvastheidsklasse: 5 van 7\\n# Opbouw:\\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\\n- als onder- en bovenregel\\nMS 75 C-profiel L= 2000-6000 mm\\n- stijlen h.o.h. 600 mm\\nGlaswol 16kg/m3 dikte 60 mm\\n- 1-laags tussen de profielen\\nGyproc AK (A) 1200x12,5 mm\\n- 2-zijdig, 1-laags als binnenste beplating\\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\\n- 2-zijdig, 1-laags als buitenste beplating\\n# Inclusief:\\nHorizontaal transport en bevestigingsmateriaal\\nMontage MS-profielen h.o.h. 600mm\\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\\nMontage gipsbeplating 12,5mm (eerste laag)\\nMontage Duragyp 12,5mm (eindlaag)\\nMontage toeslag wanden bouwkundige hoogte\\n# Exclusief:\\nHet afwerken van de wand, prijzen staan verderop vermeld\\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\\n1.841,00 m2 77,69 € 143.027,29"},{"Omschrijving":"Ronde hoeken Gyprex straal binnenhoek 500mm","Beschrijving":"Ronde hoeken Gyprex straal binnenhoek 500mm. De door u opgegeven hoeveelheden. Opmerkingen: Van toepassing voor de wanden met een kromtestraal van 500 - 1000 mm. Bevochtigde plaatkern van gipsplaat, buigen op de constructie. Opbouw: MS 75 C-profiel L= 2000-6000 mm - één stijl per, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyrex gebogen binnenhoek, radius 500mm, lengte 3000mm - 1-laags aan de binnenzijde, Gyrex gebogen buitenhoek, radius 600mm, lengte 3000mm - 1-laags aan de buitenzijde.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"9.755,44","Eenheid":"st","Eenheidsprijs":"1.219,43","Aantal":"8,00","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"41a","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per st","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-stijlen","Montage isolatie (zacht) ronde hoek","Montage gebogen binnenhoek","Montage gebogen buitenhoek","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Ronde hoeken","Gyprex","Gyrex","gebogen binnenhoek"],"Brontekst":"41a.) Ronde hoeken Gyprex straal binnenhoek 500mm\\nDe door u opgegeven hoeveelheden.\\n# Opmerkingen:\\nVan toepassing voor de wanden met een kromtestraal van 500 - 1000 mm\\nBevochtigde plaatkern van gipsplaat, buigen op de constructie\\n# Opbouw:\\nMS 75 C-profiel L= 2000-6000 mm\\n- één stijl per\\nGlaswol 16kg/m3 dikte 60 mm\\n- 1-laags tussen de profielen\\nGyrex gebogen binnenhoek, radius 500mm, lengte 3000mm\\n- 1-laags aan de binnenzijde\\nGyrex gebogen buitenhoek, radius 600mm, lengte 3000mm\\n- 1-laags aan de buitenzijde\\n# Inclusief:\\nHorizontaal transport en bevestigingsmateriaal\\nMontage MS-stijlen\\nMontage isolatie (zacht) ronde hoek\\nMontage gebogen binnenhoek\\nMontage gebogen buitenhoek\\nMontage toeslag wanden bouwkundige hoogte\\n6 / 16\\n# Exclusief:\\nHet afwerken van de wand, prijzen staan verderop vermeld\\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\\n8,00 st 1.219,43 € 9.755,44"},{"Omschrijving":"MS 145 ECO DGS/2.45*45.2.AA Scheidingswand","Beschrijving":"MS 145 ECO DGS/2.45*45.2.AA Scheidingswand. De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 159: Brandwerendheid: 60 minuten (indien volledig afgesmeerd), Geluidsisolatie Rw: 60 dB (bij gevoegde randaansluitingen), Geluidsisolatie DnT,A,k: 53 dB (bij gevoegde randaansluitingen), Maximale wandhoogte: 4500 mm, stijlen h.o.h. 600 mm, gesteund, Stootvastheidsklasse: 5 van 7. Opbouw: MS 45F U-profiel met foamband 1x20 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk, MS 45 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund, PE-Foamband 3x30 mm rol á 20m1, Glaswol 16kg/m3 dikte 40 mm - 2-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.","Categorie":"METAL STUD-WANDEN","Totaalbedrag":"17.354,05","Eenheid":"m2","Eenheidsprijs":"96,95","Aantal":"179,00","PostType":"line_total","Status":"included","Code":"44.41.31-a","Regelnummer":"42","Subcategorie":"Scheidingswanden","Werksoort":"metal stud wand","Prijsbasis":"per m2","Inclusief":["Horizontaal transport en bevestigingsmateriaal","Montage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk","Montage isolatie (zacht) tussen de profielen h.o.h. 600mm","Montage gipsbeplating 12,5mm (eerste laag)","Montage Duragyp 12,5mm (eindlaag)","Montage toeslag wanden bouwkundige hoogte"],"Exclusief":["Het afwerken van de wand, prijzen staan verderop vermeld","Steelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie"],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["MS 145 ECO","Scheidingswand","Gyproc","DuraGyp","Glaswol"],"Brontekst":"42.) 44.41.31-a MS 145 ECO DGS/2.45*45.2.AA Scheidingswand\\nDe door u opgegeven bruto hoeveelheden.\\n# Prestaties Gyproc wandnummer 159:\\nBrandwerendheid: 60 minuten (indien volledig afgesmeerd)\\nGeluidsisolatie Rw: 60 dB (bij gevoegde randaansluitingen)\\nGeluidsisolatie DnT,A,k: 53 dB (bij gevoegde randaansluitingen)\\nMaximale wandhoogte: 4500 mm, stijlen h.o.h. 600 mm, gesteund\\nStootvastheidsklasse: 5 van 7\\n# Opbouw:\\nMS 45F U-profiel met foamband 1x20 mm L= 4000 mm\\n- als onder- en bovenregel, dubbel regelwerk\\nMS 45 C-profiel L= 2000-6000 mm\\n- stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund\\nPE-Foamband 3x30 mm rol á 20m1\\nGlaswol 16kg/m3 dikte 40 mm\\n- 2-laags tussen de profielen\\nGyproc AK (A) 1200x12,5 mm\\n- 2-zijdig, 1-laags als binnenste beplating\\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\\n- 2-zijdig, 1-laags als buitenste beplating\\n# Inclusief:\\nHorizontaal transport en bevestigingsmateriaal\\nMontage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk\\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\\nMontage gipsbeplating 12,5mm (eerste laag)\\nMontage Duragyp 12,5mm (eindlaag)\\nMontage toeslag wanden bouwkundige hoogte\\n# Exclusief:\\nHet afwerken van de wand, prijzen staan verderop vermeld\\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\\n179,00 m2 96,95 € 17.354,05"}]}
 
 === posts chunk 5 ===
 
@@ -343,7 +277,7 @@
   "Posten": [
     {
       "Omschrijving": "MS 205 ECO DGS/2.75*75.2.AA Scheidingswand",
-      "Beschrijving": "De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 171: Brandwerendheid: 60 minuten (indien volledig afgesmeerd). Geluidsisolatie Rw: 62 dB (bij gevoegde randaansluitingen). Geluidsisolatie DnT,A,k: 55 dB (bij gevoegde randaansluitingen). Maximale wandhoogte: 6000 mm, stijlen h.o.h. 600 mm, gesteund. Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund, PE-Foamband 3x30 mm rol á 20m1, Glaswol 16kg/m3 dikte 60 mm - 2-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.",
+      "Beschrijving": "MS 205 ECO DGS/2.75*75.2.AA Scheidingswand. De door u opgegeven bruto hoeveelheden. Prestaties Gyproc wandnummer 171: Brandwerendheid: 60 minuten (indien volledig afgesmeerd), Geluidsisolatie Rw: 62 dB (bij gevoegde randaansluitingen), Geluidsisolatie DnT,A,k: 55 dB (bij gevoegde randaansluitingen), Maximale wandhoogte: 6000 mm, stijlen h.o.h. 600 mm, gesteund, Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, dubbel regelwerk, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund, PE-Foamband 3x30 mm rol á 20m1, Glaswol 16kg/m3 dikte 60 mm - 2-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 2-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 2-zijdig, 1-laags als buitenste beplating.",
       "Categorie": "METAL STUD-WANDEN",
       "Totaalbedrag": "1.404,20",
       "Eenheid": "m2",
@@ -371,16 +305,17 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "MS 205 ECO DGS/2.75*75.2.AA",
+        "MS 205 ECO",
         "Scheidingswand",
-        "Gyproc wandnummer 171",
-        "DuraGyp"
+        "Gyproc",
+        "DuraGyp",
+        "Glaswol"
       ],
       "Brontekst": "43.) MS 205 ECO DGS/2.75*75.2.AA Scheidingswand\nDe door u opgegeven bruto hoeveelheden.\n# Prestaties Gyproc wandnummer 171:\nBrandwerendheid: 60 minuten (indien volledig afgesmeerd)\nGeluidsisolatie Rw: 62 dB (bij gevoegde randaansluitingen)\nGeluidsisolatie DnT,A,k: 55 dB (bij gevoegde randaansluitingen)\nMaximale wandhoogte: 6000 mm, stijlen h.o.h. 600 mm, gesteund\nStootvastheidsklasse: 5 van 7\n# Opbouw:\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\n- als onder- en bovenregel, dubbel regelwerk\nMS 75 C-profiel L= 2000-6000 mm\n- stijlen h.o.h. 600 mm, dubbel regelwerk, gesteund\nPE-Foamband 3x30 mm rol á 20m1\nGlaswol 16kg/m3 dikte 60 mm\n- 2-laags tussen de profielen\nGyproc AK (A) 1200x12,5 mm\n- 2-zijdig, 1-laags als binnenste beplating\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\n- 2-zijdig, 1-laags als buitenste beplating\n# Inclusief:\nHorizontaal transport en bevestigingsmateriaal\nMontage MS-profielen h.o.h. 600mm gesteund dubbel regelwerk\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\nMontage gipsbeplating 12,5mm (eerste laag)\nMontage Duragyp 12,5mm (eindlaag)\nMontage toeslag wanden bouwkundige hoogte\n# Exclusief:\nHet afwerken van de wand, prijzen staan verderop vermeld\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\n14,00 m2 100,30 € 1.404,20"
     },
     {
       "Omschrijving": "MS 100 ECO DGS V/75.2.A Voorzetwand",
-      "Beschrijving": "De door u opgegeven bruto hoeveelheden. Prestaties Gyproc voorzetwand: Brandwerendheid: geen. Geluidsisolatie Rw: afhankelijk van bestaande constructie. Maximale wandhoogte: 4200 mm, stijlen h.o.h. 600 mm, ruggelings gekoppeld. Thermische isolatie Rc: 0,87 m2.K/W (excl. achterconstructie). Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, ruggelings gekoppeld, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 1-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 1-zijdig, 1-laags als buitenste beplating.",
+      "Beschrijving": "MS 100 ECO DGS V/75.2.A Voorzetwand. De door u opgegeven bruto hoeveelheden. Prestaties Gyproc voorzetwand: Brandwerendheid: geen, Geluidsisolatie Rw: afhankelijk van bestaande constructie, Maximale wandhoogte: 4200 mm, stijlen h.o.h. 600 mm, ruggelings gekoppeld, Thermische isolatie Rc: 0,87 m2.K/W (excl. achterconstructie), Stootvastheidsklasse: 5 van 7. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm - als onder- en bovenregel, MS 75 C-profiel L= 2000-6000 mm - stijlen h.o.h. 600 mm, ruggelings gekoppeld, Glaswol 16kg/m3 dikte 60 mm - 1-laags tussen de profielen, Gyproc AK (A) 1200x12,5 mm - 1-zijdig, 1-laags als binnenste beplating, Gyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm - 1-zijdig, 1-laags als buitenste beplating.",
       "Categorie": "METAL STUD-WANDEN",
       "Totaalbedrag": "37.757,32",
       "Eenheid": "m2",
@@ -410,10 +345,11 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "MS 100 ECO DGS V/75.2.A",
+        "MS 100 ECO",
         "Voorzetwand",
         "Gyproc",
-        "DuraGyp"
+        "DuraGyp",
+        "Glaswol"
       ],
       "Brontekst": "51.) MS 100 ECO DGS V/75.2.A Voorzetwand\nDe door u opgegeven bruto hoeveelheden.\n# Prestaties Gyproc voorzetwand:\nBrandwerendheid: geen\nGeluidsisolatie Rw: afhankelijk van bestaande constructie\nMaximale wandhoogte: 4200 mm, stijlen h.o.h. 600 mm, ruggelings gekoppeld\nThermische isolatie Rc: 0,87 m2.K/W (excl. achterconstructie)\nStootvastheidsklasse: 5 van 7\n# Opbouw:\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\n- als onder- en bovenregel\nMS 75 C-profiel L= 2000-6000 mm\n- stijlen h.o.h. 600 mm, ruggelings gekoppeld\nGlaswol 16kg/m3 dikte 60 mm\n- 1-laags tussen de profielen\nGyproc AK (A) 1200x12,5 mm\n- 1-zijdig, 1-laags als binnenste beplating\nGyproc DuraGyp Standaard AK (DFH2IR) 1200x12,5 mm\n- 1-zijdig, 1-laags als buitenste beplating\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage MS-profielen wanden h.o.h. 600mm, ruggelings gekoppeld\nMontage isolatie (zacht) tussen de profielen h.o.h. 600mm\nMontage gipsbeplating 12,5mm (eerste laag)\nMontage Duragyp 12,5mm (eindlaag)\nMontage toeslag wanden bouwkundige hoogte\n# Exclusief:\nDampremmende- of vochtregulerende klimaat-folie in de wand, prijzen staan verderop vermeld\nHet afwerken van de wand, prijzen staan verderop vermeld\nSteelwol isolatie in de wand, de genoemde prestaties zijn gebaseerd op glaswol isolatie\n652,00 m2 57,91 € 37.757,32"
     }
@@ -426,7 +362,7 @@
   "Posten": [
     {
       "Omschrijving": "MS 100 V/75.2 Voorzetwand t.b.v. inbouwtoiletreservoir tot 3000mm hoog",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm, MS 75 C-profiel L= 2000-6000 mm, Achterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet, Gyproc AK (A) 1200x12,5 mm.",
+      "Beschrijving": "MS 100 V/75.2 Voorzetwand t.b.v. inbouwtoiletreservoir tot 3000mm hoog. Opbouw: MS 75F U-profiel met foamband 2x10 mm L= 4000 mm, MS 75 C-profiel L= 2000-6000 mm, Achterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet, Gyproc AK (A) 1200x12,5 mm.",
       "Categorie": "METAL STUD-WANDEN",
       "Totaalbedrag": "234,94",
       "Eenheid": "st",
@@ -451,16 +387,17 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "MS 100 V/75.2",
+        "MS 100",
         "Voorzetwand",
-        "inbouwtoiletreservoir",
-        "Geberit"
+        "Inbouwtoiletreservoir",
+        "Geberit",
+        "Gyproc"
       ],
       "Brontekst": "Optie: 52.) MS 100 V/75.2 Voorzetwand t.b.v. inbouwtoiletreservoir tot 3000mm hoog\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nMS 75F U-profiel met foamband 2x10 mm L= 4000 mm\nMS 75 C-profiel L= 2000-6000 mm\nAchterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet\nGyproc AK (A) 1200x12,5 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage voorzetwand toilet (hoog 3000mm)\n# Exclusief:\nVersteviging in de achterwand (benodigd indien dit een metal-stud wand is), prijzen staan verderop vermeld\nHet afwerken van de wand, prijzen staan verderop vermeld\noptie (niet in totalen meeberekend): 1,00 st 234,94 €"
     },
     {
       "Omschrijving": "Standaard toiletplaat inclusief sparingen",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: Achterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet.",
+      "Beschrijving": "Standaard toiletplaat inclusief sparingen. Opbouw: Achterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet.",
       "Categorie": "METAL STUD-WANDEN",
       "Totaalbedrag": "57,21",
       "Eenheid": "st",
@@ -482,23 +419,23 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Standaard toiletplaat",
-        "sparingen",
-        "Achterhout multiplex",
+        "Toiletplaat",
+        "Sparingen",
+        "Achterhout",
         "Geberit"
       ],
       "Brontekst": "Optie: 53.) Standaard toiletplaat inclusief sparingen\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nAchterhout multiplex 1220x1220x12 mm t.b.v. Geberit toilet\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage sparingsplaat t.b.v. vrijhangende toilet\noptie (niet in totalen meeberekend): 1,00 st 57,21 €"
     },
     {
       "Omschrijving": "Afwerken geperforeerde gipsplafonds",
-      "Beschrijving": "Afwerken geperforeerde gipsplafonds conform TBA Afwerkingsniveaus",
+      "Beschrijving": "Afwerken geperforeerde gipsplafonds conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "27,50",
       "Eenheid": "m2",
       "Eenheidsprijs": "27,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken gipsplafonds conform TBA Afwerkingsniveaus",
@@ -510,21 +447,21 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Afwerken",
-        "geperforeerde gipsplafonds",
+        "Geperforeerde gipsplafonds",
         "TBA"
       ],
       "Brontekst": "V Afwerken geperforeerde gipsplafonds 1,00 m2 27,50 €"
     },
     {
       "Omschrijving": "Blinde rand, breedte maximaal 200mm",
-      "Beschrijving": "Blinde rand, breedte maximaal 200mm",
+      "Beschrijving": "Blinde rand, breedte maximaal 200mm conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "33,25",
       "Eenheid": "m1",
       "Eenheidsprijs": "33,25",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken gipsplafonds conform TBA Afwerkingsniveaus",
@@ -536,124 +473,128 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Blinde rand",
-        "breedte maximaal 200mm"
+        "TBA"
       ],
       "Brontekst": "V Blinde rand, breedte maximaal 200mm 1,00 m1 33,25 €"
     },
     {
       "Omschrijving": "Afwerken niveau A, plaatbreedte 1200mm",
-      "Beschrijving": "Afwerken niveau A, plaatbreedte 1200mm",
+      "Beschrijving": "Afwerken niveau A, plaatbreedte 1200mm conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "17,00",
       "Eenheid": "m2",
       "Eenheidsprijs": "17,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken wanden per zijde conform TBA Afwerkingsniveaus",
-      "Werksoort": "afwerken wand",
+      "Werksoort": "afwerken wanden",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Afwerken niveau A",
-        "plaatbreedte 1200mm"
+        "Afwerken",
+        "Niveau A",
+        "Plaatbreedte"
       ],
       "Brontekst": "V Afwerken niveau A, plaatbreedte 1200mm 1,00 m2 17,00 €"
     },
     {
       "Omschrijving": "Afwerken niveau B, plaatbreedte 1200mm",
-      "Beschrijving": "Afwerken niveau B, plaatbreedte 1200mm",
+      "Beschrijving": "Afwerken niveau B, plaatbreedte 1200mm conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "7,25",
       "Eenheid": "m2",
       "Eenheidsprijs": "7,25",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken wanden per zijde conform TBA Afwerkingsniveaus",
-      "Werksoort": "afwerken wand",
+      "Werksoort": "afwerken wanden",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Afwerken niveau B",
-        "plaatbreedte 1200mm"
+        "Afwerken",
+        "Niveau B",
+        "Plaatbreedte"
       ],
       "Brontekst": "V Afwerken niveau B, plaatbreedte 1200mm 1,00 m2 7,25 €"
     },
     {
       "Omschrijving": "Afwerken niveau C, plaatbreedte 1200mm",
-      "Beschrijving": "Afwerken niveau C, plaatbreedte 1200mm",
+      "Beschrijving": "Afwerken niveau C, plaatbreedte 1200mm conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "6,75",
       "Eenheid": "m2",
       "Eenheidsprijs": "6,75",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken wanden per zijde conform TBA Afwerkingsniveaus",
-      "Werksoort": "afwerken wand",
+      "Werksoort": "afwerken wanden",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Afwerken niveau C",
-        "plaatbreedte 1200mm"
+        "Afwerken",
+        "Niveau C",
+        "Plaatbreedte"
       ],
       "Brontekst": "V Afwerken niveau C, plaatbreedte 1200mm 1,00 m2 6,75 €"
     },
     {
       "Omschrijving": "Afwerken niveau D, plaatbreedte 1200mm",
-      "Beschrijving": "Afwerken niveau D, plaatbreedte 1200mm",
+      "Beschrijving": "Afwerken niveau D, plaatbreedte 1200mm conform TBA Afwerkingsniveaus.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "3,75",
       "Eenheid": "m2",
       "Eenheidsprijs": "3,75",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken wanden per zijde conform TBA Afwerkingsniveaus",
-      "Werksoort": "afwerken wand",
+      "Werksoort": "afwerken wanden",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Afwerken niveau D",
-        "plaatbreedte 1200mm"
+        "Afwerken",
+        "Niveau D",
+        "Plaatbreedte"
       ],
       "Brontekst": "V Afwerken niveau D, plaatbreedte 1200mm 1,00 m2 3,75 €"
     },
     {
       "Omschrijving": "Toeslag afwerken wanden/plafonds met hoogte 3500mm+vl. of hoger",
-      "Beschrijving": "Toeslag afwerken wanden/plafonds met hoogte 3500mm+vl. of hoger (excl. hoge steiger)",
+      "Beschrijving": "Toeslag afwerken wanden/plafonds met hoogte 3500mm+vl. of hoger (excl. hoge steiger).",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "1,25",
       "Eenheid": "m2",
       "Eenheidsprijs": "1,25",
       "Aantal": "1,00",
       "PostType": "surcharge",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken algemeen",
-      "Werksoort": "afwerken wand",
+      "Werksoort": "afwerken wanden/plafonds",
       "Prijsbasis": "per m2",
       "Inclusief": [],
       "Exclusief": [
@@ -662,74 +603,73 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Toeslag afwerken",
-        "hoogte 3500mm"
+        "Toeslag",
+        "Afwerken",
+        "Hoogte"
       ],
-      "Brontekst": "V Toeslag afwerken wanden/plafonds met hoogte 3500mm+vl. of hoger (excl. hoge steiger) 1,00 m2 1,25 €"
+      "Brontekst": "V Toeslag afwerken wanden/plafonds met hoogte 3500mm+vl. of hoger (excl.\nhoge steiger) 1,00 m2 1,25 €"
     },
     {
       "Omschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner",
-      "Beschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner",
+      "Beschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner.",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "9,50",
       "Eenheid": "m1",
       "Eenheidsprijs": "9,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken algemeen",
-      "Werksoort": "hoekbeschermer",
+      "Werksoort": "hoekbescherming",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Verstevigde hoekbeschermer",
-        "90 graden hoeken",
-        "flexcorner"
+        "Hoekbeschermer",
+        "Flexcorner"
       ],
       "Brontekst": "V Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner 1,00 m1 9,50 €"
     },
     {
       "Omschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner (horizontaal)",
-      "Beschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner (horizontaal)",
+      "Beschrijving": "Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner (horizontaal).",
       "Categorie": "AFWERKEN",
       "Totaalbedrag": "9,50",
       "Eenheid": "m1",
       "Eenheidsprijs": "9,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Afwerken algemeen",
-      "Werksoort": "hoekbeschermer",
+      "Werksoort": "hoekbescherming",
       "Prijsbasis": "per m1",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Verstevigde hoekbeschermer",
-        "horizontaal",
-        "90 graden hoeken",
-        "flexcorner"
+        "Hoekbeschermer",
+        "Flexcorner",
+        "Horizontaal"
       ],
-      "Brontekst": "V Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner (horizontaal) 1,00 m1 9,50 €"
+      "Brontekst": "V Verstevigde hoekbeschermer tbv 90° hoeken, overige hoeken met flexcorner\n(horizontaal) 1,00 m1 9,50 €"
     },
     {
       "Omschrijving": "Uren in regie (geen timmerwerkzaamheden)",
-      "Beschrijving": "Uren in regie (geen timmerwerkzaamheden)",
+      "Beschrijving": "Uren in regie (geen timmerwerkzaamheden).",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "65,00",
       "Eenheid": "ONBEKEND",
       "Eenheidsprijs": "65,00",
       "Aantal": "1,00",
       "PostType": "regie",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Algemeen",
@@ -743,21 +683,21 @@
       "Voorwaarden": [],
       "DoorOpdrachtgever": [],
       "MatchHints": [
-        "Uren in regie",
-        "regiewerk"
+        "Uren",
+        "Regie"
       ],
       "Brontekst": "V Uren in regie (geen timmerwerkzaamheden) 1,00 uur 65,00 €\nExclusief parkeerkosten (uitgaande dat gratis parkeergelegenheid ter beschikking wordt gesteld op bouwterrein)\nExclusief logistiek en transport, dit is nader overeen te komen met de opdrachtgever"
     },
     {
       "Omschrijving": "Sparingen (per laag)",
-      "Beschrijving": "Sparingen (per laag) (bij afwijking ±5% verrekenbaar)",
+      "Beschrijving": "Sparingen (per laag) (bij afwijking ±5% verrekenbaar).",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "3,25",
       "Eenheid": "st",
       "Eenheidsprijs": "3,25",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Gipsplafonds",
@@ -771,20 +711,20 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Sparingen",
-        "per laag"
+        "Gipsplafonds"
       ],
       "Brontekst": "V Sparingen (per laag) (bij afwijking ±5% verrekenbaar) 1,00 st 3,25 €"
     },
     {
       "Omschrijving": "Achterhout, afmeting 400x600x12mm",
-      "Beschrijving": "Achterhout, afmeting 400x600x12mm (bij afwijking ±5% verrekenbaar)",
+      "Beschrijving": "Achterhout, afmeting 400x600x12mm (bij afwijking ±5% verrekenbaar).",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "9,75",
       "Eenheid": "st",
       "Eenheidsprijs": "9,75",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
       "Subcategorie": "Gipsplafonds",
@@ -798,9 +738,1052 @@
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Achterhout",
-        "afmeting 400x600x12mm"
+        "Multiplex"
       ],
       "Brontekst": "V Achterhout, afmeting 400x600x12mm (bij afwijking ±5% verrekenbaar) 1,00 st 9,75 €"
+    },
+    {
+      "Omschrijving": "Dampremmende folie",
+      "Beschrijving": "Dampremmende folie.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,75",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Gipsplafonds",
+      "Werksoort": "folie",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dampremmende folie",
+        "Gipsplafonds"
+      ],
+      "Brontekst": "V Dampremmende folie 1,00 m2 5,75 €"
+    },
+    {
+      "Omschrijving": "Vochtregulerende klimaatfolie",
+      "Beschrijving": "Vochtregulerende klimaatfolie.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "11,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "11,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Gipsplafonds",
+      "Werksoort": "folie",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Klimaatfolie",
+        "Vochtregulerende"
+      ],
+      "Brontekst": "V Vochtregulerende klimaatfolie 1,00 m2 11,00 €"
+    },
+    {
+      "Omschrijving": "Dilataties, niet brandwerend plafond",
+      "Beschrijving": "Dilataties, niet brandwerend plafond.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "39,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "39,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Gipsplafonds",
+      "Werksoort": "dilatatie",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dilataties",
+        "Niet brandwerend"
+      ],
+      "Brontekst": "V Dilataties, niet brandwerend plafond 1,00 m1 39,50 €"
+    },
+    {
+      "Omschrijving": "Dilataties, brandwerend plafond",
+      "Beschrijving": "Dilataties, brandwerend plafond.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "59,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "59,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Gipsplafonds",
+      "Werksoort": "dilatatie",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dilataties",
+        "Brandwerend"
+      ],
+      "Brontekst": "V Dilataties, brandwerend plafond 1,00 m1 59,50 €"
+    },
+    {
+      "Omschrijving": "Sparingen of uitkepingen, dikte paneel tot 100mm",
+      "Beschrijving": "Sparingen of uitkepingen, dikte paneel tot 100mm.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "6,25",
+      "Eenheid": "st",
+      "Eenheidsprijs": "6,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Houtwolcement",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Uitkepingen",
+        "Houtwolcement"
+      ],
+      "Brontekst": "V Sparingen of uitkepingen, dikte paneel tot 100mm 1,00 st 6,25 €"
+    },
+    {
+      "Omschrijving": "Sparingen of uitkepingen, dikte paneel vanaf 100mm",
+      "Beschrijving": "Sparingen of uitkepingen, dikte paneel vanaf 100mm.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "9,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Houtwolcement",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Uitkepingen",
+        "Houtwolcement"
+      ],
+      "Brontekst": "V Sparingen of uitkepingen, dikte paneel vanaf 100mm 1,00 st 9,50 €"
+    },
+    {
+      "Omschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk",
+      "Beschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "7,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Houtwolcement",
+      "Werksoort": "inkrozen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Inkrozen",
+        "Leidingwerk",
+        "Houtwolcement"
+      ],
+      "Brontekst": "V Plaat inkrozen t.b.v. bijv. leidingwerk 1,00 st 7,50 €"
+    },
+    {
+      "Omschrijving": "Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd",
+      "Beschrijving": "Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "10,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "1,00",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Houtwolcement",
+      "Werksoort": "plafondmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag",
+        "Hwc-plafonds",
+        "Gemonteerd"
+      ],
+      "Brontekst": "V Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd 1,00 m2 10,00 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 50mm",
+      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 50mm.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "7,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Estrich vloeren",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Vloerplaat",
+        "Estrich"
+      ],
+      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. Ø 50mm 1,00 st 7,50 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 200mm",
+      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 200mm.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "10,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Estrich vloeren",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Vloerplaat",
+        "Estrich"
+      ],
+      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. Ø 200mm 1,00 st 10,00 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. 300x300mm",
+      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. 300x300mm.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "12,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "12,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Estrich vloeren",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Vloerplaat",
+        "Estrich"
+      ],
+      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. 300x300mm 1,00 st 12,00 €"
+    },
+    {
+      "Omschrijving": "Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd",
+      "Beschrijving": "Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd.",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "10,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,00",
+      "Aantal": "1,00",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Estrich vloeren",
+      "Werksoort": "vloermontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag",
+        "Wanden",
+        "Vloerplaten",
+        "Estrich"
+      ],
+      "Brontekst": "V Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd 1,00 m2 10,00 €"
+    }
+  ]
+}
+
+=== posts chunk 7 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Sparingen",
+      "Beschrijving": "Sparingen (bij afwijking ±5% verrekenbaar)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "3,25",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Systeemplafonds"
+      ],
+      "Brontekst": "V Sparingen (bij afwijking ±5% verrekenbaar) 1,00 st 3,25 €"
+    },
+    {
+      "Omschrijving": "Sparing in houten betimmering",
+      "Beschrijving": "Sparing in houten betimmering (bij afwijking ±5% verrekenbaar)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "9,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparing",
+        "Houten betimmering"
+      ],
+      "Brontekst": "V Sparing in houten betimmering (bij afwijking ±5% verrekenbaar) 1,00 st 9,50 €"
+    },
+    {
+      "Omschrijving": "Achterhout 400x595x9mm",
+      "Beschrijving": "Achterhout, afmeting 400x595x9mm (bij afwijking ±5% verrekenbaar)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "9,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Achterhout",
+        "Afmeting"
+      ],
+      "Brontekst": "V Achterhout, afmeting 400x595x9mm (bij afwijking ±5% verrekenbaar) 1,00 st 9,75 €"
+    },
+    {
+      "Omschrijving": "Licht- en luchtlijnen",
+      "Beschrijving": "Licht- en luchtlijnen",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "9,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "9,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Lichtlijnen",
+        "Luchtlijnen"
+      ],
+      "Brontekst": "V Licht- en luchtlijnen 1,00 m1 9,75 €"
+    },
+    {
+      "Omschrijving": "Bandraster 100mm",
+      "Beschrijving": "Bandraster 100mm, standaard wit",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "18,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "18,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Bandraster",
+        "Wit"
+      ],
+      "Brontekst": "V Bandraster 100mm, standaard wit 1,00 m1 18,75 €"
+    },
+    {
+      "Omschrijving": "Gebogen wandaansluiting systeemplafond",
+      "Beschrijving": "Gebogen wandaansluiting systeemplafond",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "19,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "19,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Gebogen",
+        "Wandaansluiting",
+        "Systeemplafond"
+      ],
+      "Brontekst": "V Gebogen wandaansluiting systeemplafond 1,00 m1 19,50 €"
+    },
+    {
+      "Omschrijving": "Kolomringen max. Ø 350mm",
+      "Beschrijving": "Kolomringen max. Ø 350mm, standaard wit",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "75,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "75,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Kolomringen",
+        "Wit"
+      ],
+      "Brontekst": "V Kolomringen max. Ø 350mm, standaard wit 1,00 st 75,00 €"
+    },
+    {
+      "Omschrijving": "Brug maken",
+      "Beschrijving": "Brug maken indien installaties of andere obstakels de afhangpunten van het systeem en/of bandraster onderbreken",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "32,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "32,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Brug maken",
+        "Installaties",
+        "Obstakels",
+        "Afhangpunten"
+      ],
+      "Brontekst": "V Brug maken indien installaties of andere obstakels de afhangpunten van het\nsysteem en/of bandraster onderbreken 1,00 st 32,50 €"
+    },
+    {
+      "Omschrijving": "Clips t.b.v. afklemmen (600x600mm)",
+      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "8,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "8,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Clips",
+        "Afklemmen",
+        "Opwaaien",
+        "600x600"
+      ],
+      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm 1,00 m2 8,50 €"
+    },
+    {
+      "Omschrijving": "Clips t.b.v. afklemmen (600x1200mm)",
+      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "6,25",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "6,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "systeemplafond",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Clips",
+        "Afklemmen",
+        "Opwaaien",
+        "600x1200"
+      ],
+      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm 1,00 m2 6,25 €"
+    },
+    {
+      "Omschrijving": "Tekenwerk plafondraster",
+      "Beschrijving": "Tekenwerk plafondraster (max. 2 tekenrondes, digitaal aangeleverd in dwg/AutoCAD)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "1320,00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "1320,00",
+      "Aantal": "1,00",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Systeemplafonds",
+      "Werksoort": "tekenwerk",
+      "Prijsbasis": "totaal",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Tekenwerk",
+        "Plafondraster",
+        "dwg",
+        "AutoCAD"
+      ],
+      "Brontekst": "Tekenwerk plafondraster (max. 2 tekenrondes, digitaal aangeleverd in\ndwg/AutoCAD) 1,00 pst 1.320,00 € 1.320,00"
+    },
+    {
+      "Omschrijving": "Stellen van houten binnen kozijnen",
+      "Beschrijving": "Stellen van houten binnen kozijnen, maximale afmetingen 2500x3000mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "22,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "22,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Stellen",
+        "Houten binnen kozijnen"
+      ],
+      "Brontekst": "V Stellen van houten binnen kozijnen, maximale afmetingen 2500x3000mm 1,00 m2 22,50 €"
+    },
+    {
+      "Omschrijving": "Sparing maken t.b.v. kozijn/wandopening",
+      "Beschrijving": "Sparing maken t.b.v. kozijn/wandopening",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparing",
+        "Kozijn",
+        "Wandopening"
+      ],
+      "Brontekst": "V Sparing maken t.b.v. kozijn/wandopening 1,00 m2 12,50 €"
+    },
+    {
+      "Omschrijving": "Achterhout 595x400x18mm",
+      "Beschrijving": "Achterhout, afmeting 595x400x18mm (bij afwijking ±5% verrekenbaar)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "9,75",
+      "Eenheid": "st",
+      "Eenheidsprijs": "9,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Achterhout",
+        "Afmeting"
+      ],
+      "Brontekst": "V Achterhout, afmeting 595x400x18mm (bij afwijking ±5% verrekenbaar) 1,00 st 9,75 €"
+    },
+    {
+      "Omschrijving": "Achterhout 595x2440x18mm",
+      "Beschrijving": "Achterhout, afmeting 595x2440x18mm (bij afwijking ±5% verrekenbaar)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "45,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "45,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Achterhout",
+        "Afmeting"
+      ],
+      "Brontekst": "V Achterhout, afmeting 595x2440x18mm (bij afwijking ±5% verrekenbaar) 1,00 st 45,00 €"
+    },
+    {
+      "Omschrijving": "Verstevigingen in de achterwand t.b.v. toiletframe",
+      "Beschrijving": "Verstevigingen in de achterwand t.b.v. toiletframe",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "67,25",
+      "Eenheid": "st",
+      "Eenheidsprijs": "67,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Verstevigingen",
+        "Achterwand",
+        "Toiletframe"
+      ],
+      "Brontekst": "V Verstevigingen in de achterwand t.b.v. toiletframe 1,00 st 67,25 €"
+    },
+    {
+      "Omschrijving": "Verstevigingen in de achterwand t.b.v. MIVA-beugels",
+      "Beschrijving": "Verstevigingen in de achterwand t.b.v. MIVA-beugels (prijs per 2 beugels)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "67,25",
+      "Eenheid": "st",
+      "Eenheidsprijs": "67,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Verstevigingen",
+        "Achterwand",
+        "MIVA-beugels"
+      ],
+      "Brontekst": "V Verstevigingen in de achterwand t.b.v. MIVA-beugels (prijs per 2 beugels) 1,00 st 67,25 €"
+    },
+    {
+      "Omschrijving": "WR-gips (excl. toiletruimtes)",
+      "Beschrijving": "WR-gips (excl. toiletruimtes) (toeslag per laag) (n.v.t. bij DuraGyp beplating)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,75",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "1,00",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [
+        "toiletruimtes"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "WR-gips",
+        "Toeslag",
+        "DuraGyp"
+      ],
+      "Brontekst": "V WR-gips (excl. toiletruimtes) (toeslag per laag) (n.v.t. bij DuraGyp beplating) 1,00 m2 5,75 €"
+    },
+    {
+      "Omschrijving": "Neggekanten gips",
+      "Beschrijving": "Neggekanten gips, breedte max. 300mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "13,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "13,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Neggekanten",
+        "Gips"
+      ],
+      "Brontekst": "V Neggekanten gips, breedte max. 300mm 1,00 m1 13,50 €"
+    },
+    {
+      "Omschrijving": "Stucstopprofiel Protektor type 1131",
+      "Beschrijving": "Stucstopprofiel Protektor type 1131",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "7,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Stucstopprofiel",
+        "Protektor",
+        "1131"
+      ],
+      "Brontekst": "V Stucstopprofiel Protektor type 1131 1,00 m1 7,75 €"
+    },
+    {
+      "Omschrijving": "Verzwaarde C50-stijlen",
+      "Beschrijving": "Verzwaarde C50-stijlen t.b.v. deuren >25kg",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "11,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "11,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Verzwaarde",
+        "C50-stijlen",
+        "Deuren"
+      ],
+      "Brontekst": "V Verzwaarde C50-stijlen t.b.v. deuren >25kg 1,00 m1 11,50 €"
+    },
+    {
+      "Omschrijving": "Verzwaarde C75-stijlen",
+      "Beschrijving": "Verzwaarde C75-stijlen t.b.v. deuren >25kg",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "12,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "12,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Verzwaarde",
+        "C75-stijlen",
+        "Deuren"
+      ],
+      "Brontekst": "V Verzwaarde C75-stijlen t.b.v. deuren >25kg 1,00 m1 12,50 €"
+    },
+    {
+      "Omschrijving": "Verzwaarde C100-stijlen",
+      "Beschrijving": "Verzwaarde C100-stijlen t.b.v. deuren >25kg",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "14,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "14,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Verzwaarde",
+        "C100-stijlen",
+        "Deuren"
+      ],
+      "Brontekst": "V Verzwaarde C100-stijlen t.b.v. deuren >25kg 1,00 m1 14,75 €"
+    },
+    {
+      "Omschrijving": "Houten versteviging in metalstud wand",
+      "Beschrijving": "Houten versteviging in metalstud wand t.b.v. aansluiting gibo wanden",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "8,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Houten versteviging",
+        "Metalstud",
+        "Gibo"
+      ],
+      "Brontekst": "V Houten versteviging in metalstud wand t.b.v. aansluiting gibo wanden 1,00 m1 8,00 €"
+    },
+    {
+      "Omschrijving": "Houten knellat t.b.v. nastelkozijnen",
+      "Beschrijving": "Houten knellat t.b.v. nastelkozijnen tot max. afm. 22x100mm, excl. gronden en afschilderen",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "7,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "7,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [
+        "gronden",
+        "afschilderen"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Houten knellat",
+        "Nastelkozijnen"
+      ],
+      "Brontekst": "V Houten knellat t.b.v. nastelkozijnen tot max. afm. 22x100mm, excl. gronden en\nafschilderen 1,00 m1 7,75 €"
+    },
+    {
+      "Omschrijving": "Dilataties, niet brandwerende wand",
+      "Beschrijving": "Dilataties, niet brandwerende wand, per zijde",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "33,75",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "33,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dilataties",
+        "Niet brandwerend",
+        "Wand"
+      ],
+      "Brontekst": "V Dilataties, niet brandwerende wand, per zijde 1,00 m1 33,75 €"
+    },
+    {
+      "Omschrijving": "Dilataties, brandwerende wand",
+      "Beschrijving": "Dilataties, brandwerende wand, per zijde",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "43,25",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "43,25",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dilataties",
+        "Brandwerend",
+        "Wand"
+      ],
+      "Brontekst": "V Dilataties, brandwerende wand, per zijde 1,00 m1 43,25 €"
+    },
+    {
+      "Omschrijving": "U-profiel lijmen",
+      "Beschrijving": "U-profiel lijmen op vloer en/of tegen plafond",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "4,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "4,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "U-profiel",
+        "Lijmen",
+        "Vloer",
+        "Plafond"
+      ],
+      "Brontekst": "V U-profiel lijmen op vloer en/of tegen plafond 1,00 m1 4,50 €"
     },
     {
       "Omschrijving": "Dampremmende folie",
@@ -811,10 +1794,319 @@
       "Eenheidsprijs": "5,75",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "included",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Gipsplafonds",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Dampremmende folie"
+      ],
+      "Brontekst": "V Dampremmende folie 1,00 m2 5,75 €"
+    },
+    {
+      "Omschrijving": "Vochtregulerende klimaatfolie",
+      "Beschrijving": "Vochtregulerende klimaatfolie",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "10,50",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "10,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Vochtregulerende",
+        "Klimaatfolie"
+      ],
+      "Brontekst": "V Vochtregulerende klimaatfolie 1,00 m2 10,50 €"
+    },
+    {
+      "Omschrijving": "Wanden inkepen",
+      "Beschrijving": "Wanden inkepen i.v.m. montage tussen houten balklaag, per gips laag",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "7,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Wanden inkepen",
+        "Houten balklaag",
+        "Gips laag"
+      ],
+      "Brontekst": "V Wanden inkepen i.v.m. montage tussen houten balklaag, per gips laag 1,00 st 7,50 €"
+    },
+    {
+      "Omschrijving": "Cannelurevulling",
+      "Beschrijving": "Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex, wit gegrond, excl. afschilderen (excl. brandwerend)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "45,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "45,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [
+        "afschilderen",
+        "brandwerend"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Cannelurevulling",
+        "Multiplex",
+        "Wit gegrond"
+      ],
+      "Brontekst": "V Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex, wit gegrond,\nexcl. afschilderen (excl. brandwerend) 1,00 m1 45,00 €"
+    },
+    {
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel",
+      "Beschrijving": "Sparing t.b.v. brandslanghaspel",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "97,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "97,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparing",
+        "Brandslanghaspel"
+      ],
+      "Brontekst": "V Sparing t.b.v. brandslanghaspel 1,00 st 97,50 €"
+    }
+  ]
+}
+
+=== posts chunk 8 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
+      "Beschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "110,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "110,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparing",
+        "Brandslanghaspel",
+        "Brandwerend"
+      ],
+      "Brontekst": "V Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand 1,00 st 110,00 €"
+    },
+    {
+      "Omschrijving": "Raveling maken, per stijl onderbreking",
+      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "14,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "14,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "wandmontage",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [
+        "brandkleppen"
+      ],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Raveling",
+        "Stijl onderbreking"
+      ],
+      "Brontekst": "V Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen) 1,00 st 14,50 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 75mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "3,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "3,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [
+        "sparingen electradozen"
+      ],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Ø 75mm"
+      ],
+      "Brontekst": "V Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen) 1,00 st 3,00 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "4,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "4,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Ø 300mm"
+      ],
+      "Brontekst": "V Sparingen (per laag), afmeting max. Ø 300mm 1,00 st 4,00 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,50",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,50",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "300x300mm"
+      ],
+      "Brontekst": "V Sparingen (per laag), afmeting groter dan 300x300mm 1,00 st 5,50 €"
+    },
+    {
+      "Omschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen",
+      "Beschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating)",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "5,00",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [
+        "gebaseerd op uitvoering vóór de installaties uit",
+        "indien deze zijn geplaatst alvorens de gips beplating"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Sparingen",
+        "Wandcontactdozen"
+      ],
+      "Brontekst": "V Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating) 1,00 st 5,00 €"
+    }
+  ]
+}
+
+=== posts chunk 9 ===
+
+{
+  "Posten": [
+    {
+      "Omschrijving": "Dampremmende folie",
+      "Beschrijving": "Dampremmende folie",
+      "Categorie": "VERREKENPRIJZEN",
+      "Totaalbedrag": "5,75",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "1,00",
+      "PostType": "unit_rate",
+      "Status": "optional",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "folie",
       "Prijsbasis": "per m2",
       "Inclusief": [],
@@ -830,619 +2122,15 @@
       "Omschrijving": "Vochtregulerende klimaatfolie",
       "Beschrijving": "Vochtregulerende klimaatfolie",
       "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "11,00",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "11,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Gipsplafonds",
-      "Werksoort": "folie",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Vochtregulerende klimaatfolie"
-      ],
-      "Brontekst": "V Vochtregulerende klimaatfolie 1,00 m2 11,00 €"
-    },
-    {
-      "Omschrijving": "Dilataties, niet brandwerend plafond",
-      "Beschrijving": "Dilataties, niet brandwerend plafond",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "39,50",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "39,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Gipsplafonds",
-      "Werksoort": "dilatatie",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Dilataties",
-        "niet brandwerend"
-      ],
-      "Brontekst": "V Dilataties, niet brandwerend plafond 1,00 m1 39,50 €"
-    },
-    {
-      "Omschrijving": "Dilataties, brandwerend plafond",
-      "Beschrijving": "Dilataties, brandwerend plafond",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "59,50",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "59,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Gipsplafonds",
-      "Werksoort": "dilatatie",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Dilataties",
-        "brandwerend"
-      ],
-      "Brontekst": "V Dilataties, brandwerend plafond 1,00 m1 59,50 €"
-    },
-    {
-      "Omschrijving": "Sparingen of uitkepingen, dikte paneel tot 100mm",
-      "Beschrijving": "Sparingen of uitkepingen, dikte paneel tot 100mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "6,25",
-      "Eenheid": "st",
-      "Eenheidsprijs": "6,25",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Houtwolcement",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "uitkepingen",
-        "dikte paneel tot 100mm"
-      ],
-      "Brontekst": "V Sparingen of uitkepingen, dikte paneel tot 100mm 1,00 st 6,25 €"
-    },
-    {
-      "Omschrijving": "Sparingen of uitkepingen, dikte paneel vanaf 100mm",
-      "Beschrijving": "Sparingen of uitkepingen, dikte paneel vanaf 100mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "9,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "9,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Houtwolcement",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "uitkepingen",
-        "dikte paneel vanaf 100mm"
-      ],
-      "Brontekst": "V Sparingen of uitkepingen, dikte paneel vanaf 100mm 1,00 st 9,50 €"
-    },
-    {
-      "Omschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk",
-      "Beschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "7,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "7,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      
-
-=== posts chunk 7 ===
-
-{
-  "Posten": [
-    {
-      "Omschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk",
-      "Beschrijving": "Plaat inkrozen t.b.v. bijv. leidingwerk",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "7,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "7,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Houtwolcement",
-      "Werksoort": "inkrozen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Plaat inkrozen",
-        "leidingwerk",
-        "houtwolcement"
-      ],
-      "Brontekst": "V Plaat inkrozen t.b.v. bijv. leidingwerk 1,00 st 7,50 €"
-    },
-    {
-      "Omschrijving": "Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd",
-      "Beschrijving": "Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "10,00",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "10,00",
-      "Aantal": "1,00",
-      "PostType": "surcharge",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Houtwolcement",
-      "Werksoort": "plafondmontage",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Toeslag",
-        "wanden vooraf gemonteerd",
-        "kozijnen vooraf gemonteerd",
-        "hwc-plafonds"
-      ],
-      "Brontekst": "V Toeslag indien wanden/kozijnen vooraf aan hwc-plafonds zijn gemonteerd 1,00 m2 10,00 €"
-    },
-    {
-      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 50mm",
-      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 50mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "7,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "7,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Estrich vloeren",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "vloerplaat",
-        "Ø 50mm",
-        "Estrich"
-      ],
-      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. Ø 50mm 1,00 st 7,50 €"
-    },
-    {
-      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 200mm",
-      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. Ø 200mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "10,00",
-      "Eenheid": "st",
-      "Eenheidsprijs": "10,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Estrich vloeren",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "vloerplaat",
-        "Ø 200mm",
-        "Estrich"
-      ],
-      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. Ø 200mm 1,00 st 10,00 €"
-    },
-    {
-      "Omschrijving": "Sparingen (per vloerplaat), afmeting max. 300x300mm",
-      "Beschrijving": "Sparingen (per vloerplaat), afmeting max. 300x300mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "12,00",
-      "Eenheid": "st",
-      "Eenheidsprijs": "12,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Estrich vloeren",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "vloerplaat",
-        "300x300mm",
-        "Estrich"
-      ],
-      "Brontekst": "V Sparingen (per vloerplaat), afmeting max. 300x300mm 1,00 st 12,00 €"
-    },
-    {
-      "Omschrijving": "Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd",
-      "Beschrijving": "Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "10,00",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "10,00",
-      "Aantal": "1,00",
-      "PostType": "surcharge",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Estrich vloeren",
-      "Werksoort": "vloerenmontage",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Toeslag",
-        "wanden vooraf gemonteerd",
-        "vloerplaten",
-        "Estrich"
-      ],
-      "Brontekst": "V Toeslag indien wanden vooraf aan vloerplaten zijn gemonteerd 1,00 m2 10,00 €"
-    },
-    {
-      "Omschrijving": "Sparingen (bij afwijking ±5% verrekenbaar)",
-      "Beschrijving": "Sparingen (bij afwijking ±5% verrekenbaar)",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "3,25",
-      "Eenheid": "st",
-      "Eenheidsprijs": "3,25",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "systeemplafonds"
-      ],
-      "Brontekst": "V Sparingen (bij afwijking ±5% verrekenbaar) 1,00 st 3,25 €"
-    },
-    {
-      "Omschrijving": "Sparing in houten betimmering (bij afwijking ±5% verrekenbaar)",
-      "Beschrijving": "Sparing in houten betimmering (bij afwijking ±5% verrekenbaar)",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "9,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "9,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "sparingen",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparing",
-        "houten betimmering",
-        "systeemplafonds"
-      ],
-      "Brontekst": "V Sparing in houten betimmering (bij afwijking ±5% verrekenbaar) 1,00 st 9,50 €"
-    },
-    {
-      "Omschrijving": "Achterhout, afmeting 400x595x9mm (bij afwijking ±5% verrekenbaar)",
-      "Beschrijving": "Achterhout, afmeting 400x595x9mm (bij afwijking ±5% verrekenbaar)",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "9,75",
-      "Eenheid": "st",
-      "Eenheidsprijs": "9,75",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "achterhout",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Achterhout",
-        "400x595x9mm",
-        "systeemplafonds"
-      ],
-      "Brontekst": "V Achterhout, afmeting 400x595x9mm (bij afwijking ±5% verrekenbaar) 1,00 st 9,75 €"
-    },
-    {
-      "Omschrijving": "Licht- en luchtlijnen",
-      "Beschrijving": "Licht- en luchtlijnen",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "9,75",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "9,75",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "lichtlijnen",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Lichtlijnen",
-        "luchtlijnen",
-        "systeemplafonds"
-      ],
-      "Brontekst": "V Licht- en luchtlijnen 1,00 m1 9,75 €"
-    },
-    {
-      "Omschrijving": "Bandraster 100mm, standaard wit",
-      "Beschrijving": "Bandraster
-
-=== posts chunk 8 ===
-
-{
-  "Posten": [
-    {
-      "Omschrijving": "Bandraster 100mm, standaard wit",
-      "Beschrijving": "Bandraster 100mm, standaard wit",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "18,75",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "18,75",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Bandraster",
-        "systeemplafond",
-        "wit"
-      ],
-      "Brontekst": "V Bandraster 100mm, standaard wit 1,00 m1 18,75 €"
-    },
-    {
-      "Omschrijving": "Gebogen wandaansluiting systeemplafond",
-      "Beschrijving": "Gebogen wandaansluiting systeemplafond",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "19,50",
-      "Eenheid": "m1",
-      "Eenheidsprijs": "19,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m1",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Gebogen wandaansluiting",
-        "systeemplafond"
-      ],
-      "Brontekst": "V Gebogen wandaansluiting systeemplafond 1,00 m1 19,50 €"
-    },
-    {
-      "Omschrijving": "Kolomringen max. Ø 350mm, standaard wit",
-      "Beschrijving": "Kolomringen max. Ø 350mm, standaard wit",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "75,00",
-      "Eenheid": "st",
-      "Eenheidsprijs": "75,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per stuk",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Kolomringen",
-        "systeemplafond",
-        "wit"
-      ],
-      "Brontekst": "V Kolomringen max. Ø 350mm, standaard wit 1,00 st 75,00 €"
-    },
-    {
-      "Omschrijving": "Brug maken",
-      "Beschrijving": "Brug maken indien installaties of andere obstakels de afhangpunten van het systeem en/of bandraster onderbreken",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "32,50",
-      "Eenheid": "st",
-      "Eenheidsprijs": "32,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per stuk",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Brug maken",
-        "afhangpunten",
-        "bandraster"
-      ],
-      "Brontekst": "V Brug maken indien installaties of andere obstakels de afhangpunten van het\nsysteem en/of bandraster onderbreken 1,00 st 32,50 €"
-    },
-    {
-      "Omschrijving": "Clips t.b.v. afklemmen, plaatafmeting 600x600mm",
-      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "8,50",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "8,50",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Clips",
-        "afklemmen",
-        "opwaaien panelen",
-        "600x600"
-      ],
-      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x600mm 1,00 m2 8,50 €"
-    },
-    {
-      "Omschrijving": "Clips t.b.v. afklemmen, plaatafmeting 600x1200mm",
-      "Beschrijving": "Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "6,25",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "6,25",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "Systeemplafonds",
-      "Werksoort": "systeemplafond",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Clips",
-        "afklemmen",
-        "opwaaien panelen",
-        "600x1200"
-      ],
-      "Brontekst": "V Clips t.b.v. afklemmen, tegen opwaaien panelen, plaatafmeting 600x1200mm 1,00 m2 6,25 €"
-    },
-    {
-      "Omschrijving": "Tekenwerk plafondraster",
-      "Beschrijving":
-
-=== posts chunk 9 ===
-
-{
-  "Posten": [
-    {
-      "Omschrijving": "Dampremmende folie",
-      "Beschrijving": "Dampremmende folie",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "5,75",
-      "Eenheid": "m2",
-      "Eenheidsprijs": "5,75",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "folie",
-      "Prijsbasis": "per m2",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Dampremmende folie",
-        "folie"
-      ],
-      "Brontekst": "V Dampremmende folie 1,00 m2 5,75 €"
-    },
-    {
-      "Omschrijving": "Vochtregulerende klimaatfolie",
-      "Beschrijving": "Vochtregulerende klimaatfolie",
-      "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "10,50",
       "Eenheid": "m2",
       "Eenheidsprijs": "10,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "folie",
       "Prijsbasis": "per m2",
       "Inclusief": [],
@@ -1464,11 +2152,11 @@
       "Eenheidsprijs": "7,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "wanden",
+      "Subcategorie": "Wanden",
+      "Werksoort": "inkepen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -1482,7 +2170,7 @@
       "Brontekst": "V Wanden inkepen i.v.m. montage tussen houten balklaag, per gips laag 1,00 st 7,50 €"
     },
     {
-      "Omschrijving": "Cannelurevulling incl. strook multiplex",
+      "Omschrijving": "Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex",
       "Beschrijving": "Cannelurevulling (dikte max. 120mm) incl. strook 18mm multiplex, wit gegrond, excl. afschilderen (excl. brandwerend)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "45,00",
@@ -1490,10 +2178,10 @@
       "Eenheidsprijs": "45,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "cannelurevulling",
       "Prijsbasis": "per m1",
       "Inclusief": [
@@ -1521,11 +2209,11 @@
       "Eenheidsprijs": "97,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -1538,7 +2226,7 @@
       "Brontekst": "V Sparing t.b.v. brandslanghaspel 1,00 st 97,50 €"
     },
     {
-      "Omschrijving": "Sparing t.b.v. brandslanghaspel in brandwerende wand",
+      "Omschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
       "Beschrijving": "Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "110,00",
@@ -1546,11 +2234,11 @@
       "Eenheidsprijs": "110,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
@@ -1559,24 +2247,23 @@
       "MatchHints": [
         "Sparing",
         "brandslanghaspel",
-        "brandwerende wand",
-        "30/60 min"
+        "brandwerende wand"
       ],
       "Brontekst": "V Sparing t.b.v. brandslanghaspel in 30/60 min brandwerende wand 1,00 st 110,00 €"
     },
     {
-      "Omschrijving": "Raveling maken",
-      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen). Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Raveling maken, per stijl onderbreking",
+      "Beschrijving": "Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "14,50",
       "Eenheid": "st",
       "Eenheidsprijs": "14,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
+      "Subcategorie": "Wanden",
       "Werksoort": "raveling",
       "Prijsbasis": "per st",
       "Inclusief": [],
@@ -1584,37 +2271,37 @@
         "t.b.v. brandkleppen"
       ],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit",
+        "maximale breedte raveling 1200mm"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
         "Raveling",
-        "stijl onderbreking",
-        "1200mm"
+        "stijl onderbreking"
       ],
       "Brontekst": "V Raveling maken, per stijl onderbreking, maximale breedte raveling 1200mm (excl. t.b.v. brandkleppen) 1,00 st 14,50 €"
     },
     {
-      "Omschrijving": "Sparingen max. Ø 75mm",
-      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen). Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 75mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen)",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "3,00",
       "Eenheid": "st",
       "Eenheidsprijs": "3,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [
         "sparingen electradozen"
       ],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -1624,24 +2311,24 @@
       "Brontekst": "V Sparingen (per laag), afmeting max. Ø 75mm (excl. sparingen electradozen) 1,00 st 3,00 €"
     },
     {
-      "Omschrijving": "Sparingen max. Ø 300mm",
-      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm. Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting max. Ø 300mm",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "4,00",
       "Eenheid": "st",
       "Eenheidsprijs": "4,00",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -1651,24 +2338,24 @@
       "Brontekst": "V Sparingen (per laag), afmeting max. Ø 300mm 1,00 st 4,00 €"
     },
     {
-      "Omschrijving": "Sparingen groter dan 300x300mm",
-      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm. Uitvoering vóór de installaties uit.",
+      "Omschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
+      "Beschrijving": "Sparingen (per laag), afmeting groter dan 300x300mm",
       "Categorie": "VERREKENPRIJZEN",
       "Totaalbedrag": "5,50",
       "Eenheid": "st",
       "Eenheidsprijs": "5,50",
       "Aantal": "1,00",
       "PostType": "unit_rate",
-      "Status": "unknown",
+      "Status": "optional",
       "Code": "ONBEKEND",
       "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
+      "Subcategorie": "Wanden",
+      "Werksoort": "sparingen",
       "Prijsbasis": "per st",
       "Inclusief": [],
       "Exclusief": [],
       "Voorwaarden": [
-        "Uitvoering vóór de installaties uit"
+        "gebaseerd op uitvoering vóór de installaties uit"
       ],
       "DoorOpdrachtgever": [],
       "MatchHints": [
@@ -1676,35 +2363,6 @@
         "300x300mm"
       ],
       "Brontekst": "V Sparingen (per laag), afmeting groter dan 300x300mm 1,00 st 5,50 €"
-    },
-    {
-      "Omschrijving": "Sparingen t.b.v. wandcontactdozen",
-      "Beschrijving": "Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating). Uitvoering vóór de installaties uit.",
-      "Categorie": "VERREKENPRIJZEN",
-      "Totaalbedrag": "5,00",
-      "Eenheid": "st",
-      "Eenheidsprijs": "5,00",
-      "Aantal": "1,00",
-      "PostType": "unit_rate",
-      "Status": "unknown",
-      "Code": "ONBEKEND",
-      "Regelnummer": "ONBEKEND",
-      "Subcategorie": "ONBEKEND",
-      "Werksoort": "sparing",
-      "Prijsbasis": "per st",
-      "Inclusief": [],
-      "Exclusief": [],
-      "Voorwaarden": [
-        "Uitvoering vóór de installaties uit",
-        "indien deze zijn geplaatst alvorens de gips beplating"
-      ],
-      "DoorOpdrachtgever": [],
-      "MatchHints": [
-        "Sparingen",
-        "wandcontactdozen",
-        "gips beplating"
-      ],
-      "Brontekst": "V Sparingen (per laag) t.b.v. wandcontactdozen (indien deze zijn geplaatst alvorens de gips beplating) 1,00 st 5,00 €"
     }
   ]
 }
@@ -1729,7 +2387,9 @@
 
 === posts chunk 13 ===
 
-{"Posten":[]}
+{
+  "Posten": []
+}
 
 === posts chunk 14 ===
 

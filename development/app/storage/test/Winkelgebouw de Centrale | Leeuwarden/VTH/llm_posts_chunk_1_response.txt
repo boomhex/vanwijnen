@@ -1,0 +1,80 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Rolcoating EP3900/3910",
+      "Beschrijving": "Rolcoating EP3900 als alternatief op het gevraagde; Het zo stofarm mogelijk (niet stofvrij) schuren van de vloer, om ervoor te zorgen dat er een gezond hechtoppervlak ontstaat voor vervolgbewerkingen. Het stofvrij maken van de geschuurde vloeren. Aanbrengen epoxy hechtlaag als grondering over bestaande vloeren. Na droging het licht naschuren van het geprimerde oppervlak en de ondergrond plamuren m.b.v. kunsthars waar nodig. Na droging het leveren en aanbrengen van een 2-laagse vloercoating EP3900/EP3910 (antislip) in een n.t.b. ca. Ral kleur, met een gemiddeld verbruik van ca. 250 gram p/m². Rolcoatingen zijn handmatig aangebrachte toplagen, daarom is het niet te voorkomen dat kleine oneffenheden, rollerbanen en/of spaanslagen in het vloeroppervlak zichtbaar blijven. De ondergrondstructuren die nu zichtbaar zijn zullen na het aanbrengen van de coating zichtbaar blijven. Bij antislipcoatingen blijven de rollerbanen zichtbaar.",
+      "Categorie": "Door Vloertechniek Hoogeveen uit te voeren werkzaamheden",
+      "Totaalbedrag": "4480,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "35,00",
+      "Aantal": "128",
+      "PostType": "alternative",
+      "Status": "alternative",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "vloerafwerking",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "schuren van de vloer",
+        "stofvrij maken van de geschuurde vloeren",
+        "epoxy hechtlaag als grondering",
+        "licht naschuren",
+        "ondergrond plamuren",
+        "leveren en aanbrengen van een 2-laagse vloercoating EP3900/EP3910"
+      ],
+      "Exclusief": [
+        "21% B.T.W.",
+        "2% milieutoeslag"
+      ],
+      "Voorwaarden": [
+        "Rolcoatingen zijn handmatig aangebrachte toplagen, daarom is het niet te voorkomen dat kleine oneffenheden, rollerbanen en/of spaanslagen in het vloeroppervlak zichtbaar blijven",
+        "De ondergrondstructuren die nu zichtbaar zijn zullen na het aanbrengen van de coating zichtbaar blijven",
+        "Bij antislipcoatingen blijven de rollerbanen zichtbaar"
+      ],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Rolcoating",
+        "EP3900",
+        "EP3910",
+        "antislip",
+        "epoxy",
+        "hechtlaag",
+        "grondering"
+      ],
+      "Brontekst": "Rolcoating EP3900/3910: ca. 128 m² x € 35,= € 4.480,="
+    },
+    {
+      "Omschrijving": "Aluminium strippen/eindprofiel A20 (recht)",
+      "Beschrijving": "Aluminium strippen/eindprofiel A20 (recht) leveren en aanbrengen, verrekenprijs per m¹ € 9,50.",
+      "Categorie": "Door Vloertechniek Hoogeveen uit te voeren werkzaamheden",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "9,50",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "vloerafwerking",
+      "Prijsbasis": "per m1",
+      "Inclusief": [
+        "leveren en aanbrengen"
+      ],
+      "Exclusief": [
+        "21% B.T.W.",
+        "2% milieutoeslag"
+      ],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Aluminium strippen",
+        "eindprofiel",
+        "A20",
+        "recht"
+      ],
+      "Brontekst": "Aluminium strippen/eindprofiel A20 (recht) leveren en aanbrengen, verrekenprijs per m¹ € 9,50."
+    }
+  ]
+}

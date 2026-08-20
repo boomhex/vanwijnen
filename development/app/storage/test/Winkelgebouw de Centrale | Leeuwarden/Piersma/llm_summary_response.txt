@@ -1,0 +1,6 @@
+{
+  "Naam aannemer": "PiersmaVloeren",
+  "Totaalprijs inc. BTW": "ONBEKEND",
+  "Totaalprijs exc. BTW": "6.270,00",
+  "BTW verlegd": "ONBEKEND"
+}

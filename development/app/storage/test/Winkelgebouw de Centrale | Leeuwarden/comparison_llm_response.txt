@@ -1,0 +1,46 @@
+{
+  "MatchedPosten": [
+    {
+      "Omschrijving": "PU gietvloer fabricaat Remmers Type BS2000 / BS3000 Kleur ral 7035",
+      "Offertes": [
+        {
+          "Bestand": "Piersma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "PV 660 PU Gietvloer",
+          "Gematchte posten": ["PV 660 PU Gietvloer"],
+          "Gematchte code": "30",
+          "Overeenkomst": "2"
+        },
+        {
+          "Bestand": "VTH.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "1"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Overgangsprofiel",
+      "Offertes": [
+        {
+          "Bestand": "Piersma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Eindstopprofiel (Optie 1)",
+          "Gematchte posten": ["Eindstopprofiel (Optie 1)"],
+          "Gematchte code": "18",
+          "Overeenkomst": "1"
+        },
+        {
+          "Bestand": "VTH.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Aluminium strippen/eindprofiel A20 (recht)",
+          "Gematchte posten": ["Aluminium strippen/eindprofiel A20 (recht)"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "1"
+        }
+      ]
+    }
+  ]
+}

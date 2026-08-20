@@ -1,0 +1,64 @@
+{
+  "Posten": [
+    {
+      "Omschrijving": "Boren van mortelschroefpalen Drachten",
+      "Beschrijving": "Het boren van mortelschroefpalen op hoogte afgestort met beton. Aantal: 102 stuks, diameter ø400, totaal aantal meters: 808m1. Lengte conform opgave. Referenties: T-724094-TO-001_Stippenplan. Sondering: niet verstrekt. Boor/werk niveau: -690 peil. Let op, dit betreft een indicatieve offerte ivm het ontbreken van sonderingen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "34000.00",
+      "Eenheid": "post",
+      "Eenheidsprijs": "34000.00",
+      "Aantal": "1",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "mortelschroefpalen",
+      "Prijsbasis": "totaal",
+      "Inclusief": [
+        "aan- en afvoer werkmaterieel (1 FASE )",
+        "paalwapening berekening",
+        "akoestisch doormeten (100% 1 FASE)",
+        "monotubes (20cm)",
+        "paal afdekken met folie",
+        "korfwapening 5ø12x2,8m1",
+        "beton C20/25 XC4 - 325 kg cement / m3"
+      ],
+      "Exclusief": [
+        "centraalstaaf",
+        "grondwerkzaamheden en/of afvoer boorgrond/betonresten",
+        "koppensnellen"
+      ],
+      "Voorwaarden": [
+        "bouwplaats/bouwput voorzien van voldoende stabiliteit t.b.v. boormachine 12 - 35 - 65 ton",
+        "De bouwput dient voorzien te worden van van een drainage in zand met afwatering, de grondwaterstand moet minimaal 0,5m onder het werkniveau liggen",
+        "palen worden op hoogte gemaakt/afgewerkt op peil hoogtes B.K. paal conform definitief palenplan, het snellen van de palen is nadien niet nodig mits afwerkhoogte is conform het bovenstaande",
+        "akoestisch doormeten vanaf 5 dagen na oplevering i.v.m. uitharden v/d palen. Tijdens deze periode mogen er geen werkzaamheden plaatsvinden. Indien deze wel worden uitgevoerd vervalt de garantie per direct",
+        "voor aanvang van de akoestische doormeting dient de put droog te zijn en de paalkoppen vrij van grond/water",
+        "eventuele kosten voor aanvullend onderzoek en/of beproevingen zijn voor rekening opdrachtgever",
+        "bij eventuele (gevolg) schade aan recent aangebrachte palen door obstakels, waterstromingen of grondgesteldheid zijn deze kosten te alle tijde voor de opdrachtgever",
+        "maatvoering B.K. paal dient voor aanvang van de werkzaamheden duidelijk te zijn aangegeven middels een piket op basis van het 0-Peil. Maatvoering is te alle tijde de verantwoordelijkheid van de opdrachtgever",
+        "kosten die voortkomen uit paalstand afwijkingen zijn niet verrekenbaar",
+        "voor aanvang dienen alle piketten te zijn uitgezet, pikketen moeten vierkant zijn, 20cm in de grond en 5 cm boven de grondslag",
+        "voldoende ruimte voor werkmaterieel dient beschikbaar te zijn",
+        "er dient een elektrische aansluiting, water aansluiting, sanitairevoorzieningen en schaftruimte op de bouwplaats aanwezig te zijn",
+        "de minimale afstand tussen belending en hart paal is 0,75 m",
+        "indien dit voor de doorloop van de werkzaamheden noodzakelijk is stelt de opdrachtgever kosteloos een grondwerker ter beschikking met mens en materieel t.b.v. overdraaien/afvoerenr boorgrond/betonresten etc."
+      ],
+      "DoorOpdrachtgever": [
+        "KLIC-melding",
+        "duidelijk en gedetailleerd uitzetten, markeren of aanwijzen op de werkplek van de precieze locatie van bestaande of ondergrondse of bovengrondse obstakels, kabels en leidingen",
+        "faciliteren van geschikte toegangswegen voor zwaar materieel, inclusief het nemen van maatregelen zoals het regelen van verkeersvoorzieningen, het beschermen van straatwerk, en het verwijderen van borden"
+      ],
+      "MatchHints": [
+        "mortelschroefpalen",
+        "ø400",
+        "beton C20/25 XC4",
+        "korfwapening",
+        "monotubes",
+        "akoestisch doormeten"
+      ],
+      "Brontekst": "Het werk betreft: Drachten ... Totaal excl. BTW EUR 34.000,00"
+    }
+  ]
+}

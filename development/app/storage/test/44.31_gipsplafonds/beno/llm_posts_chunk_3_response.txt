@@ -2,7 +2,7 @@
   "Posten": [
     {
       "Omschrijving": "Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel voor T-profielen (nr 228), Nonius borgpen / splitpen 100st/ds, Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart. Uitvoering panelen: Shiluvit module: Type 7-545, Afmetingen lat: 20x45 mm met 55mm tussenruimte, Houtsoort en kleur: American Yellow Pine, WN2592 Eikenlook, Brandklasse: B, s2, d0, Afmeting panelen: 1200x600 mm, Toepassing: Binnen afwerking.",
+      "Beschrijving": "Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine. De door u opgegeven hoeveelheden. Opbouw: De plafonds worden afgehangen met behulp van noniushangers en opliggend op de hoeklijn gemonteerd. De buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd. Dit alles wordt omsloten door een kantlat. Nonius bovendeel 540 mm, Nonius onderdeel voor T-profielen (nr 228), Nonius borgpen / splitpen 100st/ds, Vuren kanthout zwart 34x18x3000 mm, Chicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart, Chicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart, Chicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart. Uitvoering panelen: Shiluvit module: Type 7-545, Afmetingen lat: 20x45 mm met 55mm tussenruimte, Houtsoort en kleur: American Yellow Pine, WN2592 Eikenlook, Brandklasse: B, s2, d0, Afmeting panelen: 1200x600 mm, Toepassing: Binnen afwerking.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "12.204,40",
       "Eenheid": "m2",
@@ -13,7 +13,7 @@
       "Code": "44.31.40-a",
       "Regelnummer": "11",
       "Subcategorie": "Houten plafonds",
-      "Werksoort": "systeemplafond",
+      "Werksoort": "houten plafond",
       "Prijsbasis": "per m2",
       "Inclusief": [
         "Horizontaal transport",
@@ -32,13 +32,14 @@
         "7-545",
         "American Yellow Pine",
         "Eikenlook",
-        "houten inlegpanelen"
+        "B, s2, d0",
+        "1200x600 mm"
       ],
-      "Brontekst": "11.) 44.31.40-a Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nNonius bovendeel 540 mm\nNonius onderdeel voor T-profielen (nr 228)\nNonius borgpen / splitpen 100st/ds\nVuren kanthout zwart 34x18x3000 mm\nChicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart\n# Uitvoering panelen:\nShiluvit module: Type 7-545\nAfmetingen lat: 20x45 mm met 55mm tussenruimte\nHoutsoort en kleur: American Yellow Pine, WN2592 Eikenlook\nBrandklasse: B, s2, d0\nAfmeting panelen: 1200x600 mm\nToepassing: Binnen afwerking\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nTransport en instelkosten\nMontage 24mm systeem en houten inlegpanelen 1200x600mm\nMontage toeslag plafonds bouwkundige hoogte\n# Exclusief:\nIsolatie op het plafond\n52,00 m2 234,70 € 12.204,40"
+      "Brontekst": "11.) 44.31.40-a Shiluvit plafondsysteem type 7-545 20x45-55 mm American Yellow Pine\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nDe plafonds worden afgehangen met behulp van noniushangers en opliggend op de hoeklijn gemonteerd.\\nDe buitenhoeken worden in verstek opliggend gelegd en de binnenhoeken worden opgelegd.\\nDit alles wordt omsloten door een kantlat.\\nNonius bovendeel 540 mm\\nNonius onderdeel voor T-profielen (nr 228)\\nNonius borgpen / splitpen 100st/ds\\nVuren kanthout zwart 34x18x3000 mm\\nChicago Metallic L-muurprofiel 1439 L=3050 19x24 88-mat zwart\\nChicago Metallic T24 850 Hoofdprofiel L=3600 38x24 88-mat zwart\\nChicago Metallic T24 850 Dwarsprofiel L=1200 38x24 88-mat zwart\\n# Uitvoering panelen:\\nShiluvit module: Type 7-545\\nAfmetingen lat: 20x45 mm met 55mm tussenruimte\\nHoutsoort en kleur: American Yellow Pine, WN2592 Eikenlook\\nBrandklasse: B, s2, d0\\nAfmeting panelen: 1200x600 mm\\nToepassing: Binnen afwerking\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nTransport en instelkosten\\nMontage 24mm systeem en houten inlegpanelen 1200x600mm\\nMontage toeslag plafonds bouwkundige hoogte\\n# Exclusief:\\nIsolatie op het plafond\\n52,00 m2 234,70 \u2011 12.204,40"
     },
     {
       "Omschrijving": "PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opmerkingen: H.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, MS U-27/50 plafondprofiel L= 4000 mm, MS C-60/27 plafondprofiel L= 4000 mm, Kruisverbinders 60/27, Lengteverbinders 60/27, Glaswol 16kg/m3 dikte 40 mm - 1-laags over de profielen, Gyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air - zwart vezeldoek op achterzijde panelen - 1-laags tegen de profielen.",
+      "Beschrijving": "PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating. De door u opgegeven hoeveelheden. Opmerkingen: H.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm. Opbouw: Nonius bovendeel 540 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, MS U-27/50 plafondprofiel L= 4000 mm, MS C-60/27 plafondprofiel L= 4000 mm, Kruisverbinders 60/27, Lengteverbinders 60/27, Glaswol 16kg/m3 dikte 40 mm - 1-laags over de profielen, Gyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air - zwart vezeldoek op achterzijde panelen - 1-laags tegen de profielen.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "24.240,48",
       "Eenheid": "m2",
@@ -71,13 +72,13 @@
         "Gyproc Rigitone",
         "12-20-35",
         "Activ Air",
-        "geperforeerd"
+        "Glaswol"
       ],
-      "Brontekst": "21.) 44.37.11-a PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating\nDe door u opgegeven hoeveelheden.\n# Opmerkingen:\nH.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm\n# Opbouw:\nNonius bovendeel 540 mm\nNonius onderdeel 60/27\nNonius borgpen / splitpen 100st/ds\nMS U-27/50 plafondprofiel L= 4000 mm\nMS C-60/27 plafondprofiel L= 4000 mm\nKruisverbinders 60/27\nLengteverbinders 60/27\nGlaswol 16kg/m3 dikte 40 mm\n- 1-laags over de profielen\nGyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air\n- zwart vezeldoek op achterzijde panelen\n- 1-laags tegen de profielen\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage PlaGyp profielen Dubbel / ophanging plafonds\nMontage isolatie (zacht) plafonds tot 100mm\nMontage Rigitone geperforeerde plafondpanelen\nMontage toeslag plafonds bouwkundige hoogte\n# Exclusief:\nAfwerken blinde rand rondom, prijzen staan verderop vermeld\nHet afwerken van het plafond, prijzen staan verderop vermeld\nRonde koven, vooraf door aannemer te verzorgen\n176,00 m2 137,73 € 24.240,48"
+      "Brontekst": "21.) 44.37.11-a PD 68 P/55.1.A PlaGyp plafond met Gyproc Rigitone 12-20-35 beplating\\nDe door u opgegeven hoeveelheden.\\n# Opmerkingen:\\nH.o.h. plaatdragende profielen 400mm, primaire profielen 850mm en hangers 850mm\\n# Opbouw:\\nNonius bovendeel 540 mm\\nNonius onderdeel 60/27\\nNonius borgpen / splitpen 100st/ds\\nMS U-27/50 plafondprofiel L= 4000 mm\\nMS C-60/27 plafondprofiel L= 4000 mm\\nKruisverbinders 60/27\\nLengteverbinders 60/27\\nGlaswol 16kg/m3 dikte 40 mm\\n- 1-laags over de profielen\\nGyproc Rigitone 12-20-35 4-SK 2000x1200x12,5 mm Activ Air\\n- zwart vezeldoek op achterzijde panelen\\n- 1-laags tegen de profielen\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage PlaGyp profielen Dubbel / ophanging plafonds\\nMontage isolatie (zacht) plafonds tot 100mm\\nMontage Rigitone geperforeerde plafondpanelen\\nMontage toeslag plafonds bouwkundige hoogte\\n# Exclusief:\\nAfwerken blinde rand rondom, prijzen staan verderop vermeld\\nHet afwerken van het plafond, prijzen staan verderop vermeld\\nRonde koven, vooraf door aannemer te verzorgen\\n176,00 m2 137,73 \u2011 24.240,48"
     },
     {
       "Omschrijving": "Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm",
-      "Beschrijving": "De door u opgegeven hoeveelheden. Opbouw: Vuren 50x75 mm geschaafd klasse C. L= 3600 mm, Nonius bovendeel 840 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, Gyproc AK (A) 1200x12,5 mm.",
+      "Beschrijving": "Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm. De door u opgegeven hoeveelheden. Opbouw: Vuren 50x75 mm geschaafd klasse C. L= 3600 mm, Nonius bovendeel 840 mm, Nonius onderdeel 60/27, Nonius borgpen / splitpen 100st/ds, Gyproc AK (A) 1200x12,5 mm.",
       "Categorie": "PLAFONDS",
       "Totaalbedrag": "127,20",
       "Eenheid": "m1",
@@ -104,7 +105,7 @@
         "Gips",
         "Gyproc AK"
       ],
-      "Brontekst": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm\nDe door u opgegeven hoeveelheden.\n# Opbouw:\nVuren 50x75 mm geschaafd klasse C. L= 3600 mm\nNonius bovendeel 840 mm\nNonius onderdeel 60/27\nNonius borgpen / splitpen 100st/ds\nGyproc AK (A) 1200x12,5 mm\n# Inclusief:\nHorizontaal transport\nBevestigingsmateriaal\nMontage koof met gips hoogte 600mm\nMontage toeslag plafonds bouwkundige hoogte\n3,00 m1 42,40 € 127,20"
+      "Brontekst": "31.) Betimmering koof met 1x12,5mm Gips, hoogte maximaal 600mm\\nDe door u opgegeven hoeveelheden.\\n# Opbouw:\\nVuren 50x75 mm geschaafd klasse C. L= 3600 mm\\nNonius bovendeel 840 mm\\nNonius onderdeel 60/27\\nNonius borgpen / splitpen 100st/ds\\nGyproc AK (A) 1200x12,5 mm\\n# Inclusief:\\nHorizontaal transport\\nBevestigingsmateriaal\\nMontage koof met gips hoogte 600mm\\nMontage toeslag plafonds bouwkundige hoogte\\n3,00 m1 42,40 \u2011 127,20"
     }
   ]
 }

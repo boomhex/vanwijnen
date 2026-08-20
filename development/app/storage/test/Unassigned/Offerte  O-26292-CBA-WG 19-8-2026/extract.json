@@ -1,0 +1,150 @@
+{
+    "Naam aannemer": "Knol Beton-, Waterbouw & Heiwerken",
+    "Totaalprijs inc. BTW": "ONBEKEND",
+    "Totaalprijs exc. BTW": "149000.00",
+    "BTW verlegd": "ONBEKEND",
+    "Posten": [
+        {
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "heiwerk",
+            "Prijsbasis": "post",
+            "Inclusief": [
+                "standaard voorspanwapening"
+            ],
+            "Exclusief": [],
+            "Voorwaarden": [
+                "Het terrein is goed bereik- en berijdbaar voor ons (zwaar)materieel",
+                "Een vlakke droge bouwput voldoende draagkrachtig voor ons materieel",
+                "De palen kunnen worden gelost onder het draaibereik van de kraan"
+            ],
+            "DoorOpdrachtgever": [
+                "Opdrachtgever geeft in het werk de NAP hoogte aan"
+            ],
+            "MatchHints": [
+                "prefab palen",
+                "heien",
+                "voorspanwapening",
+                "250mm",
+                "290mm"
+            ],
+            "Brontekst": "Leveren en heien van prefab palen 1 post 141.750,00 141.750,00\nPaal specificatie:\n189 stuks #250mm lang 14,00m1\n19 stuks #290mm lang 12,50m1\n163 stuks #290mm lang 13,00m1\n371\nAlle palen voorzien van standaard voorspanwapening.",
+            "Pagina": "3",
+            "Omschrijving": "Leveren en heien van prefab palen",
+            "Beschrijving": "Leveren en heien van prefab palen. Paal specificatie: 189 stuks #250mm lang 14,00m1, 19 stuks #290mm lang 12,50m1, 163 stuks #290mm lang 13,00m1. Totaal 371 stuks. Alle palen voorzien van standaard voorspanwapening.",
+            "Categorie": "ONBEKEND",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Eenheidsprijs": "141750.00",
+            "Totaalbedrag": "141750.00"
+        },
+        {
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "kalenderen",
+            "Prijsbasis": "post",
+            "Inclusief": [
+                "korte rapportage t.b.v. WKB"
+            ],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "kalenderen",
+                "rapportage",
+                "WKB"
+            ],
+            "Brontekst": "Kalenderen incl. korte rapportage t.b.v. WKB. 1 post 3.500,00 3.500,00",
+            "Pagina": "3",
+            "Omschrijving": "Kalenderen",
+            "Beschrijving": "Kalenderen incl. korte rapportage t.b.v. WKB.",
+            "Categorie": "ONBEKEND",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Eenheidsprijs": "3500.00",
+            "Totaalbedrag": "3500.00"
+        },
+        {
+            "PostType": "line_total",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "koppensnellen",
+            "Prijsbasis": "post",
+            "Inclusief": [
+                "mechanisch kraken (0-50cm)"
+            ],
+            "Exclusief": [
+                "opruimen van koppen bij handmatig snellen"
+            ],
+            "Voorwaarden": [
+                "Indien met de hand gesneld moet worden gelden meerprijzen"
+            ],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "koppensnellen",
+                "mechanisch kraken",
+                "snellen"
+            ],
+            "Brontekst": "Koppensnellen middels mechanisch kraken (0-50cm) 1 post 3.750,00 3.750,00",
+            "Pagina": "3",
+            "Omschrijving": "Koppensnellen",
+            "Beschrijving": "Koppensnellen middels mechanisch kraken (0-50cm). Indien met de hand gesneld moet worden gelden meerprijzen. In geval van handmatig snellen is het opruimen van koppen exclusief.",
+            "Categorie": "ONBEKEND",
+            "Aantal": "1",
+            "Eenheid": "post",
+            "Eenheidsprijs": "3750.00",
+            "Totaalbedrag": "3750.00"
+        },
+        {
+            "PostType": "unit_rate",
+            "Status": "included",
+            "Code": "ONBEKEND",
+            "Regelnummer": "ONBEKEND",
+            "Subcategorie": "ONBEKEND",
+            "Werksoort": "heiwerk",
+            "Prijsbasis": "per m1",
+            "Inclusief": [],
+            "Exclusief": [],
+            "Voorwaarden": [],
+            "DoorOpdrachtgever": [],
+            "MatchHints": [
+                "overlengte"
+            ],
+            "Brontekst": "Overlengte per m1 m1 9,50",
+            "Pagina": "3",
+            "Omschrijving": "Overlengte",
+            "Beschrijving": "Overlengte per m1",
+            "Categorie": "ONBEKEND",
+            "Aantal": "ONBEKEND",
+            "Eenheid": "m1",
+            "Eenheidsprijs": "9.50",
+            "Totaalbedrag": "ONBEKEND"
+        },
+        {
+            "Omschrijving": "",
+            "Beschrijving": "",
+            "Categorie": "",
+            "Aantal": "",
+            "Eenheid": "",
+            "Eenheidsprijs": "",
+            "Totaalbedrag": ""
+        },
+        {
+            "Omschrijving": "",
+            "Beschrijving": "",
+            "Categorie": "",
+            "Aantal": "",
+            "Eenheid": "",
+            "Eenheidsprijs": "",
+            "Totaalbedrag": ""
+        }
+    ]
+}

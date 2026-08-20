@@ -1,1 +1,337 @@
-{"Posten":[{"Omschrijving":"Wanden afkitten","Beschrijving":"MS wanden afkitten met Acrylkit kleur wit.","Categorie":"ONBEKEND","Totaalbedrag":"3.450,00","Eenheid":"m1","Eenheidsprijs":"5,75","Aantal":"600","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"afkitten","Prijsbasis":"per m1","Inclusief":["Acrylkit kleur wit"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["afkitten","Acrylkit","wit"],"Brontekst":"Wanden afkitten\\nMS wanden afkitten met Acrylkit kleur wit.\\nPrijsstelling € 3.450,00 * gerekend met 600 m¹ I € 5,75 p/m¹"},{"Omschrijving":"Nevima IVI akoestisch ontkoppel band 42x5mm","Beschrijving":"Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.","Categorie":"ONBEKEND","Totaalbedrag":"535,00","Eenheid":"m1","Eenheidsprijs":"3,85","Aantal":"139","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"akoestische band","Prijsbasis":"per m1","Inclusief":["akoestische band Nevima IVI dik 5mm"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Nevima IVI","akoestisch","ontkoppel band","U-75"],"Brontekst":"Nevima IVI akoestisch ontkoppel band 42x5mm\\nLeveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.\\nPrijsstelling € 535,00 * gerekend met 139 m¹ I € 3,85 p/m¹"},{"Omschrijving":"Stijlverzwaring deurkozijn","Beschrijving":"Leveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.","Categorie":"ONBEKEND","Totaalbedrag":"ONBEKEND","Eenheid":"st","Eenheidsprijs":"55,00","Aantal":"ONBEKEND","PostType":"unit_rate","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"stijlverzwaring","Prijsbasis":"per deurpost","Inclusief":["vuren 50x50/70"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Stijlverzwaring","deurkozijn","vuren","C-75"],"Brontekst":"Stijlverzwaring deurkozijn\\nLeveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.\\nPrijsstelling € 55,00 per deurpost"},{"Omschrijving":"Gyproc No-coat ultra flexcorner 325","Beschrijving":"Aanbrengen van flexcorner op de 90° MS hoeken","Categorie":"ONBEKEND","Totaalbedrag":"447,50","Eenheid":"m1","Eenheidsprijs":"8,95","Aantal":"50","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"flexcorner","Prijsbasis":"per m1","Inclusief":["flexcorner"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Gyproc","No-coat","ultra flexcorner","MS hoeken"],"Brontekst":"Gyproc No-coat ultra flexcorner 325\\nAanbrengen van flexcorner op de 90° MS hoeken\\nPrijsstelling € 447,50 * gerekend met 50 m¹ I € 8,95 p/m¹"},{"Omschrijving":"MS wanden afwerken","Beschrijving":"Wandafwerking op beide zijdes in niveau B (behang klaar)","Categorie":"ONBEKEND","Totaalbedrag":"5.900,00","Eenheid":"m2","Eenheidsprijs":"9,25","Aantal":"639","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"wandafwerking","Prijsbasis":"per m2","Inclusief":["niveau B (behang klaar)"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["afwerken","niveau B","behang klaar"],"Brontekst":"MS wanden afwerken\\nWandafwerking op beide zijdes in niveau B (behang klaar)\\nPrijsstelling € 5.900,00 * gerekend met 639 m² I € 9,25 p/m²"},{"Omschrijving":"Stellen deurkozijn in MS Wand","Beschrijving":"Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.","Categorie":"ONBEKEND","Totaalbedrag":"ONBEKEND","Eenheid":"st","Eenheidsprijs":"65,00","Aantal":"ONBEKEND","PostType":"unit_rate","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"stellen kozijnen","Prijsbasis":"per st.","Inclusief":[],"Exclusief":[],"Voorwaarden":["kozijnen direct op de vloer worden gesteld"],"DoorOpdrachtgever":[],"MatchHints":["Stellen","deurkozijn","MS Wand","stud wanden"],"Brontekst":"Stellen deurkozijn in MS Wand\\nDeurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.\\nPrijsstelling € 65,00 p/st."},{"Omschrijving":"MS 125 / 2.75.2.A","Beschrijving":"Leveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.","Categorie":"ONBEKEND","Totaalbedrag":"155.950,00","Eenheid":"m2","Eenheidsprijs":"84,75","Aantal":"1.840,3","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"systeemwand","Prijsbasis":"per m2","Inclusief":["C-75 en U-75 profielen","standaard AK gipskarton","Duragyp/LaDura gipsvezelbeplating 12,5 mm","Rockwool Sono Base isolatie dik 60 mm"],"Exclusief":[],"Voorwaarden":["wandhoogte van 2700mm"],"DoorOpdrachtgever":[],"MatchHints":["MS 125","stijl -en regelwerk","gipskarton","Duragyp","LaDura","Rockwool Sono Base"],"Brontekst":"MS 125 / 2.75.2.A\\nLeveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.\\nPrijsstelling € 155.950,00 * gerekend met 1.840,3 m² I € 84,75 p/m²"},{"Omschrijving":"Toeslag WR (Hydro) beplating","Beschrijving":"Meerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.","Categorie":"ONBEKEND","Totaalbedrag":"190,00","Eenheid":"m2","Eenheidsprijs":"4,35","Aantal":"43,3","PostType":"surcharge","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"wandbeplating","Prijsbasis":"per m2","Inclusief":["Hydro (WR) wandbeplating"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Toeslag","WR","Hydro","wandbeplating"],"Brontekst":"Toeslag WR (Hydro) beplating\\nMeerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.\\nPrijsstelling € 190,00 * gerekend met 43,3 m² I € 4,35 p/m²"},{"Omschrijving":"Toeslag ronding","Beschrijving":"Toeslag voor het aanbrengen van een ronding in de MS 75 wand.","Categorie":"ONBEKEND","Totaalbedrag":"2.665,00","Eenheid":"m2","Eenheidsprijs":"125,00","Aantal":"21,3","PostType":"surcharge","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"wandronding","Prijsbasis":"per m2","Inclusief":[],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Toeslag","ronding","MS 75"],"Brontekst":"Toeslag ronding\\nToeslag voor het aanbrengen van een ronding in de MS 75 wand.\\nPrijsstelling € 2.665,00 * gerekend met 21,3m² I € 125,00 p/m²"},{"Omschrijving":"Toeslag inbouw brandslanghaspel in MS Wand","Beschrijving":"Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.","Categorie":"ONBEKEND","Totaalbedrag":"510,00","Eenheid":"st","Eenheidsprijs":"85,00","Aantal":"6","PostType":"surcharge","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"sparingen","Prijsbasis":"per st.","Inclusief":[],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Toeslag","brandslanghaspel","brandhaspelkast","sparing"],"Brontekst":"Toeslag inbouw brandslanghaspel in MS Wand\\nSparing aanbrengen in MS wand t.b.v. brandhaspelkast.\\nPrijsstelling € 510,00 * gerekend met 6 st. I € 85,00 p/st."},{"Omschrijving":"Logistiek MS","Beschrijving":"Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.","Categorie":"ONBEKEND","Totaalbedrag":"12.300,00","Eenheid":"m2","Eenheidsprijs":"2,00","Aantal":"6.197","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"logistiek","Prijsbasis":"per m2","Inclusief":["transport van gipsplaten","profielen","isolatie"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["Logistiek","transport","gipsplaten"],"Brontekst":"Logistiek MS\\nVoor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.\\nPrijsstelling € 12.300,00 * gerekend met 6.197 m² I € 2,00 p/m²"},{"Omschrijving":"afkoop Sparingen & achterhout in MS wanden","Beschrijving":"Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.","Categorie":"ONBEKEND","Totaalbedrag":"4.875,00","Eenheid":"m2","Eenheidsprijs":"7,50","Aantal":"650","PostType":"line_total","Status":"included","Code":"ONBEKEND","Regelnummer":"ONBEKEND","Subcategorie":"ONBEKEND","Werksoort":"sparingen","Prijsbasis":"per m2","Inclusief":["OSB achterhout: 400x598x18mm"],"Exclusief":[],"Voorwaarden":[],"DoorOpdrachtgever":[],"MatchHints":["afkoop","Sparingen","achterhout","OSB"],"Brontekst":"afkoop Sparingen & achterhout in MS wanden\\nAanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.\\nPrijsstelling € 4.875,00 * gerekend met 650 m² I € 7,50 p/m²"}]}
+{
+  "Posten": [
+    {
+      "Omschrijving": "Wanden afkitten",
+      "Beschrijving": "MS wanden afkitten met Acrylkit kleur wit.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "3.450,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "5,75",
+      "Aantal": "600",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "afkitten",
+      "Prijsbasis": "per m1",
+      "Inclusief": [
+        "Acrylkit kleur wit"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "wanden afkitten",
+        "acrylkit",
+        "wit"
+      ],
+      "Brontekst": "Wanden afkitten\nMS wanden afkitten met Acrylkit kleur wit.\nPrijsstelling € 3.450,00 * gerekend met 600 m¹ I € 5,75 p/m¹"
+    },
+    {
+      "Omschrijving": "Nevima IVI akoestisch ontkoppel band 42x5mm",
+      "Beschrijving": "Leveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "535,00",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "3,85",
+      "Aantal": "139",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "akoestische band",
+      "Prijsbasis": "per m1",
+      "Inclusief": [
+        "akoestische band Nevima IVI dik 5mm"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Nevima IVI",
+        "akoestisch ontkoppel band",
+        "U-75"
+      ],
+      "Brontekst": "Nevima IVI akoestisch ontkoppel band 42x5mm\nLeveren en aanbrengen van een akoestische band Nevima IVI dik 5mm onder de U-75.\nPrijsstelling € 535,00 * gerekend met 139 m¹ I € 3,85 p/m¹"
+    },
+    {
+      "Omschrijving": "Stijlverzwaring deurkozijn",
+      "Beschrijving": "Leveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "55,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "stijlverzwaring",
+      "Prijsbasis": "per deurpost",
+      "Inclusief": [
+        "vuren 50x50/70"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "stijlverzwaring",
+        "deurkozijn",
+        "vuren",
+        "C-75"
+      ],
+      "Brontekst": "Stijlverzwaring deurkozijn\nLeveren en aanbrengen van verzwaring door een vuren 50x50/70 toe te passen in de C-75 stijlen bij de deurkozijnen.\nPrijsstelling € 55,00 per deurpost"
+    },
+    {
+      "Omschrijving": "Gyproc No-coat ultra flexcorner 325",
+      "Beschrijving": "Aanbrengen van flexcorner op de 90° MS hoeken",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "447,50",
+      "Eenheid": "m1",
+      "Eenheidsprijs": "8,95",
+      "Aantal": "50",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "hoekbescherming",
+      "Prijsbasis": "per m1",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Gyproc No-coat",
+        "flexcorner",
+        "MS hoeken"
+      ],
+      "Brontekst": "Gyproc No-coat ultra flexcorner 325\nAanbrengen van flexcorner op de 90° MS hoeken\nPrijsstelling € 447,50 * gerekend met 50 m¹ I € 8,95 p/m¹"
+    },
+    {
+      "Omschrijving": "MS wanden afwerken",
+      "Beschrijving": "Wandafwerking op beide zijdes in niveau B (behang klaar)",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "5.900,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "9,25",
+      "Aantal": "639",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wandafwerking",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "MS wanden afwerken",
+        "niveau B",
+        "behangklaar"
+      ],
+      "Brontekst": "MS wanden afwerken\nWandafwerking op beide zijdes in niveau B (behang klaar)\nPrijsstelling € 5.900,00 * gerekend met 639 m² I € 9,25 p/m²"
+    },
+    {
+      "Omschrijving": "Stellen deurkozijn in MS Wand",
+      "Beschrijving": "Deurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "ONBEKEND",
+      "Eenheid": "st",
+      "Eenheidsprijs": "65,00",
+      "Aantal": "ONBEKEND",
+      "PostType": "unit_rate",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "stellen kozijn",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "stellen deurkozijn",
+        "MS Wand",
+        "stud wanden"
+      ],
+      "Brontekst": "Stellen deurkozijn in MS Wand\nDeurkozijnen aanbrengen in de MS stud wanden. Bij onze calculatie zijn wij ervan uitgegaan dat de kozijnen direct op de vloer worden gesteld.\nPrijsstelling € 65,00 p/st."
+    },
+    {
+      "Omschrijving": "MS 125 / 2.75.2.A",
+      "Beschrijving": "Leveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "155.950,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "84,75",
+      "Aantal": "1.840,3",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "systeemwand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Rockwool Sono Base isolatie dik 60 mm",
+        "Duragyp/LaDura gipsvezelbeplating 12,5 mm",
+        "standaard AK gipskarton"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "MS 125",
+        "MS wand",
+        "C-75",
+        "U-75",
+        "Duragyp",
+        "LaDura",
+        "Rockwool Sono Base"
+      ],
+      "Brontekst": "MS 125 / 2.75.2.A\nLeveren en aanbrengen van een MS wand, dik 125 mm, opgebouwd uit een verzinkt stalen stijl -en regelwerk (resp. C-75 en U-75 profielen) h.o.h. 600 mm. Aan beide zijden van het frame m.b.v. schroeven wordt er een laag standaard AK gipskarton en een laag Duragyp/LaDura gipsvezelbeplating 12,5 mm dik aangebracht. In de spouw Rockwool Sono Base isolatie dik 60 mm. Er is gerekend met een wandhoogte van 2700mm.\nPrijsstelling € 155.950,00 * gerekend met 1.840,3 m² I € 84,75 p/m²"
+    },
+    {
+      "Omschrijving": "Toeslag WR (Hydro) beplating",
+      "Beschrijving": "Meerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "190,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "4,35",
+      "Aantal": "43,3",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wandbeplating",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "Hydro (WR) wandbeplating"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag WR",
+        "Hydro",
+        "wandbeplating",
+        "standaard AK"
+      ],
+      "Brontekst": "Toeslag WR (Hydro) beplating\nMeerprijs voor het toepassen van Hydro (WR) wandbeplating t.o.v. standaard AK.\nPrijsstelling € 190,00 * gerekend met 43,3 m² I € 4,35 p/m²"
+    },
+    {
+      "Omschrijving": "Toeslag ronding",
+      "Beschrijving": "Toeslag voor het aanbrengen van een ronding in de MS 75 wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "2.665,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "125,00",
+      "Aantal": "21,3",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag ronding",
+        "MS 75 wand"
+      ],
+      "Brontekst": "Toeslag ronding\nToeslag voor het aanbrengen van een ronding in de MS 75 wand.\nPrijsstelling € 2.665,00 * gerekend met 21,3m² I € 125,00 p/m²"
+    },
+    {
+      "Omschrijving": "Toeslag inbouw brandslanghaspel in MS Wand",
+      "Beschrijving": "Sparing aanbrengen in MS wand t.b.v. brandhaspelkast.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "510,00",
+      "Eenheid": "st",
+      "Eenheidsprijs": "85,00",
+      "Aantal": "6",
+      "PostType": "surcharge",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wand",
+      "Prijsbasis": "per st",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Toeslag inbouw brandslanghaspel",
+        "MS Wand",
+        "brandhaspelkast"
+      ],
+      "Brontekst": "Toeslag inbouw brandslanghaspel in MS Wand\nSparing aanbrengen in MS wand t.b.v. brandhaspelkast.\nPrijsstelling € 510,00 * gerekend met 6 st. I € 85,00 p/st."
+    },
+    {
+      "Omschrijving": "Logistiek MS",
+      "Beschrijving": "Voor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "12.300,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "2,00",
+      "Aantal": "6.197",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "logistiek",
+      "Prijsbasis": "per m2",
+      "Inclusief": [],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "Logistiek MS",
+        "transport",
+        "gipsplaten"
+      ],
+      "Brontekst": "Logistiek MS\nVoor transport van gipsplaten naar de werkplek hanteren wij onderstaande prijs per m² gipsplaat inclusief profielen en isolatie.\nPrijsstelling € 12.300,00 * gerekend met 6.197 m² I € 2,00 p/m²"
+    },
+    {
+      "Omschrijving": "afkoop Sparingen & achterhout in MS wanden",
+      "Beschrijving": "Aanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.",
+      "Categorie": "ONBEKEND",
+      "Totaalbedrag": "4.875,00",
+      "Eenheid": "m2",
+      "Eenheidsprijs": "7,50",
+      "Aantal": "650",
+      "PostType": "line_total",
+      "Status": "included",
+      "Code": "ONBEKEND",
+      "Regelnummer": "ONBEKEND",
+      "Subcategorie": "ONBEKEND",
+      "Werksoort": "wand",
+      "Prijsbasis": "per m2",
+      "Inclusief": [
+        "OSB achterhout: 400x598x18mm"
+      ],
+      "Exclusief": [],
+      "Voorwaarden": [],
+      "DoorOpdrachtgever": [],
+      "MatchHints": [
+        "afkoop",
+        "Sparingen",
+        "achterhout",
+        "MS wanden",
+        "OSB"
+      ],
+      "Brontekst": "afkoop Sparingen & achterhout in MS wanden\nAanbrengen van Sparingen en OSB achterhout: 400x598x18mm op desgewenste posities in de MS wand.\nPrijsstelling € 4.875,00 * gerekend met 650 m² I € 7,50 p/m²"
+    }
+  ]
+}

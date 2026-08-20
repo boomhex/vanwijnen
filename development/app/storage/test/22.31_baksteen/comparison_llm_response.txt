@@ -1,7 +1,7 @@
 {
   "MatchedPosten": [
     {
-      "Omschrijving": "Vermetselen gevelsteen halfsteens verband",
+      "Omschrijving": "Gevelsteen B3 WF",
       "Offertes": [
         {
           "Bestand": "postma.pdf",
@@ -10,61 +10,11 @@
           "Gematchte posten": ["Gevelsteen B3 WF"],
           "Gematchte code": "ONBEKEND",
           "Overeenkomst": "3"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Vermetselen WF handvorm halfsteens verband",
-          "Gematchte posten": ["Vermetselen WF handvorm halfsteens verband"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "3"
         }
       ]
     },
     {
-      "Omschrijving": "toeslag wilverband",
-      "Offertes": [
-        {
-          "Bestand": "postma.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Toeslag wildverband",
-          "Gematchte posten": ["Toeslag wildverband"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "3"
-        }
-      ]
-    },
-    {
-      "Omschrijving": "toeslag strooisteen",
-      "Offertes": [
-        {
-          "Bestand": "postma.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Toeslag strooisteen",
-          "Gematchte posten": ["Toeslag strooisteen"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "3"
-        }
-      ]
-    },
-    {
-      "Omschrijving": "inzet verreiker",
+      "Omschrijving": "Alternatief bij Gevelsteen B3 WF: inzet verreiker JCB 13.5m1",
       "Offertes": [
         {
           "Bestand": "postma.pdf",
@@ -73,82 +23,11 @@
           "Gematchte posten": ["Alternatief bij Gevelsteen B3 WF: inzet verreiker JCB 13.5m1"],
           "Gematchte code": "ONBEKEND",
           "Overeenkomst": "3"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Verreiker op bouwplaats",
-          "Gematchte posten": ["Verreiker op bouwplaats"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "2"
         }
       ]
     },
     {
-      "Omschrijving": "toeslag gebogen metselwerk",
-      "Offertes": [
-        {
-          "Bestand": "postma.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Toeslag rond werk",
-          "Gematchte posten": ["Toeslag rond werk"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "3"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "Toeslag rond metselwerk",
-          "Gematchte posten": ["Toeslag rond metselwerk"],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "3"
-        }
-      ]
-    },
-    {
-      "Omschrijving": "vermetselen accentsteen 20mm verdiept",
-      "Offertes": [
-        {
-          "Bestand": "postma.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        }
-      ]
-    },
-    {
-      "Omschrijving": "steen zagen, wildverband,  0,5 mu/dzd",
-      "Offertes": [
-        {
-          "Bestand": "postma.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        },
-        {
-          "Bestand": "zuidema.pdf",
-          "Match type": "single",
-          "Gematchte omschrijving": "ONBEKEND",
-          "Gematchte posten": [],
-          "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "1"
-        }
-      ]
-    },
-    {
-      "Omschrijving": "voegwerk doorstrijken",
+      "Omschrijving": "Voegwerk direct doorgestreken",
       "Offertes": [
         {
           "Bestand": "postma.pdf",
@@ -157,14 +36,279 @@
           "Gematchte posten": ["Voegwerk direct doorgestreken"],
           "Gematchte code": "ONBEKEND",
           "Overeenkomst": "3"
-        },
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Toeslag rond werk",
+      "Offertes": [
         {
-          "Bestand": "zuidema.pdf",
+          "Bestand": "postma.pdf",
           "Match type": "single",
-          "Gematchte omschrijving": "Toeslag doorstrijk metselwerk 6-8 mm verdiept",
-          "Gematchte posten": ["Toeslag doorstrijk metselwerk 6-8 mm verdiept"],
+          "Gematchte omschrijving": "Toeslag rond werk",
+          "Gematchte posten": ["Toeslag rond werk"],
           "Gematchte code": "ONBEKEND",
-          "Overeenkomst": "2"
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Toeslag rollagen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag rollagen",
+          "Gematchte posten": ["Toeslag rollagen"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Toeslag omzetten negges",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Toeslag omzetten negges",
+          "Gematchte posten": ["Toeslag omzetten negges"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Murfor inmetselen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Murfor inmetselen",
+          "Gematchte posten": ["Murfor inmetselen"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Dilatatie / knipvoeg",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Dilatatie / knipvoeg",
+          "Gematchte posten": ["Dilatatie / knipvoeg"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Staallateien handzaam",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Staallateien handzaam",
+          "Gematchte posten": ["Staallateien handzaam"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Ankers boren hsb",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Ankers boren hsb",
+          "Gematchte posten": ["Ankers boren hsb"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Kantplank en/of betondorpels",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Kantplank en/of betondorpels",
+          "Gematchte posten": ["Kantplank en/of betondorpels"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Betonlateien niet handzaam",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Betonlateien niet handzaam",
+          "Gematchte posten": ["Betonlateien niet handzaam"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Ytong koudebrug",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Ytong koudebrug",
+          "Gematchte posten": ["Ytong koudebrug"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Zaagwerk y-tong blokken",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Zaagwerk y-tong blokken",
+          "Gematchte posten": ["Zaagwerk y-tong blokken"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Zaagwerk stenen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Zaagwerk stenen",
+          "Gematchte posten": ["Zaagwerk stenen"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Ventilatierooster inmetselen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Ventilatierooster inmetselen",
+          "Gematchte posten": ["Ventilatierooster inmetselen"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Steigerwerk systeemsteiger",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Steigerwerk systeemsteiger",
+          "Gematchte posten": ["Steigerwerk systeemsteiger"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Huur systeemsteiger per week",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Huur systeemsteiger per week",
+          "Gematchte posten": ["Huur systeemsteiger per week"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Consoles verplaatsen",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Consoles verplaatsen",
+          "Gematchte posten": ["Consoles verplaatsen"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Tekening en berekening steigerwerk",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Tekening en berekening steigerwerk",
+          "Gematchte posten": ["Tekening en berekening steigerwerk"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "2-weekse keuring steiger",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "2-weekse keuring steiger",
+          "Gematchte posten": ["2-weekse keuring steiger"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "Regiewerk metselaar",
+      "Offertes": [
+        {
+          "Bestand": "postma.pdf",
+          "Match type": "single",
+          "Gematchte omschrijving": "Regiewerk metselaar",
+          "Gematchte posten": ["Regiewerk metselaar"],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "3"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "",
+      "Offertes": [
+        {
+          "Bestand": "ONBEKEND",
+          "Match type": "ONBEKEND",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "1"
+        }
+      ]
+    },
+    {
+      "Omschrijving": "",
+      "Offertes": [
+        {
+          "Bestand": "ONBEKEND",
+          "Match type": "ONBEKEND",
+          "Gematchte omschrijving": "ONBEKEND",
+          "Gematchte posten": [],
+          "Gematchte code": "ONBEKEND",
+          "Overeenkomst": "1"
         }
       ]
     }
