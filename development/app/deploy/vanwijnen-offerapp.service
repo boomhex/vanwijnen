@@ -1,0 +1,36 @@
+# systemd unit for the AI Offerte Vergelijking app (NiceGUI, development/app).
+#
+# Install (see DEPLOYMENT.md for the full walkthrough):
+#   1. Adjust INSTALL_DIR below to match where the repo actually lives, and
+#      the User/Group to the service account you created.
+#   2. sudo cp vanwijnen-offerapp.service /etc/systemd/system/
+#   3. sudo systemctl daemon-reload
+#   4. sudo systemctl enable --now vanwijnen-offerapp
+#
+# NiceGUI's own uvicorn_reload_dirs (see main.py) still hot-reloads on code
+# changes without a restart. A full `systemctl restart vanwijnen-offerapp`
+# is only needed after dependency changes or edits to the ui.run(...) call
+# itself (its config is fixed at process start and survives hot-reload).
+
+[Unit]
+Description=AI Offerte Vergelijking (vanWijnen offer comparison app)
+After=network.target
+
+[Service]
+Type=simple
+User=vanwijnen
+Group=vanwijnen
+WorkingDirectory=/opt/vanwijnen/development/app
+Environment=PYTHONPATH=/opt/vanwijnen/development/app
+EnvironmentFile=/opt/vanwijnen/development/app/.env
+ExecStart=/opt/vanwijnen/venv/bin/python main.py
+Restart=always
+RestartSec=5
+
+# Hardening: readable/writable state stays inside the app's own folders.
+NoNewPrivileges=true
+ProtectSystem=full
+ReadWritePaths=/opt/vanwijnen/development/app
+
+[Install]
+WantedBy=multi-user.target
