@@ -85,7 +85,7 @@
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "ONBEKEND",
+                    "Overeenkomst": "1",
                     "Ongekoppeld": false
                 },
                 "zuidema.pdf": {
@@ -114,7 +114,7 @@
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "ONBEKEND",
+                    "Overeenkomst": "1",
                     "Ongekoppeld": false
                 },
                 "zuidema.pdf": {
@@ -201,7 +201,7 @@
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "ONBEKEND",
+                    "Overeenkomst": "1",
                     "Ongekoppeld": false
                 },
                 "zuidema.pdf": {
@@ -212,7 +212,7 @@
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "ONBEKEND",
                     "Totaalbedrag": "ONBEKEND",
-                    "Overeenkomst": "ONBEKEND",
+                    "Overeenkomst": "1",
                     "Ongekoppeld": false
                 }
             }
@@ -224,27 +224,24 @@
             "Offertes": {
                 "postma.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Zaagwerk stenen",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "st",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
                     "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "1.00",
-                    "Totaalbedrag": "86.95",
-                    "Overeenkomst": "3",
-                    "Ongekoppeld": false,
-                    "Gematchte posten": [
-                        "Zaagwerk stenen"
-                    ]
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
+                    "Ongekoppeld": false
                 },
                 "zuidema.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Zaagwerk gevelsteen",
-                    "Gematchte categorie": "Metselwerk",
-                    "Gematchte eenheid": "st",
+                    "Gematchte omschrijving": "ONBEKEND",
+                    "Gematchte categorie": "ONBEKEND",
+                    "Gematchte eenheid": "ONBEKEND",
                     "Aantal": "ONBEKEND",
-                    "Eenheidsprijs": "1.10",
-                    "Totaalbedrag": "95.64",
-                    "Overeenkomst": "2",
+                    "Eenheidsprijs": "ONBEKEND",
+                    "Totaalbedrag": "ONBEKEND",
+                    "Overeenkomst": "1",
                     "Ongekoppeld": false
                 }
             }
@@ -256,17 +253,14 @@
             "Offertes": {
                 "postma.pdf": {
                     "Match type": "single",
-                    "Gematchte omschrijving": "Voegwerk",
-                    "Gematchte categorie": "Metselwerk",
+                    "Gematchte omschrijving": "Voegwerk direct doorgestreken",
+                    "Gematchte categorie": "Voegwerk",
                     "Gematchte eenheid": "m2",
                     "Aantal": "ONBEKEND",
                     "Eenheidsprijs": "14.00",
                     "Totaalbedrag": "15568.00",
                     "Overeenkomst": "3",
-                    "Ongekoppeld": false,
-                    "Gematchte posten": [
-                        "Voegwerk"
-                    ]
+                    "Ongekoppeld": false
                 },
                 "zuidema.pdf": {
                     "Match type": "single",
