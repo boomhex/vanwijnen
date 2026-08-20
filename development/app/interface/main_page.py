@@ -30,7 +30,7 @@ extraction_job_service = ExtractionJobService(FolderHandler(PROJECTS_DIR))
 
 
 @ui.page('/')
-def main_page():
+async def main_page():
     # Users work inside a selected workspace at storage/<workspace>/;
     # AuthMiddleware blocks /storage requests outside granted workspaces.
     username = app.storage.user.get('username')
@@ -66,7 +66,7 @@ def main_page():
     ui.colors(primary=PRIMARY_RED)
 
     with ui.left_drawer().style(f'background-color: {SECONDARY_RED}') as drawer:
-        left_drawer_component.render()
+        await left_drawer_component.render()
         render_session_panel()
 
     # A header with a menu toggle so the drawer (which auto-collapses below

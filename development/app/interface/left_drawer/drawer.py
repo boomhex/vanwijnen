@@ -2,7 +2,7 @@ import asyncio
 from pathlib import Path
 from typing import Callable
 
-from nicegui import events, ui
+from nicegui import events, run, ui
 
 from application.offer_service import OfferService
 from application.project_service import ProjectService
@@ -48,12 +48,15 @@ class LeftDrawer:
         self.last_extraction_snapshot = None
         self._polling_timer = None
 
-    def render(self) -> None:
+    async def render(self) -> None:
         self._cancel_polling_timer()
         self.file_list_container = ui.column().classes('w-full')
         with self.file_list_container:
             self.file_list()
-        self.last_extraction_snapshot = self.extraction_status_snapshot()
+        # Off the event loop: the tree above already read every offer's status once
+        # to draw its icons, so re-scanning here synchronously would just duplicate
+        # that disk work on the critical page-load path for no benefit.
+        self.last_extraction_snapshot = await run.io_bound(self.extraction_status_snapshot)
         self._polling_timer = ui.timer(2.0, self.poll_extraction_statuses)
 
     def _cancel_polling_timer(self) -> None:
@@ -98,7 +101,7 @@ class LeftDrawer:
         except RuntimeError:
             pass
 
-    def poll_extraction_statuses(self) -> None:
+    async def poll_extraction_statuses(self) -> None:
         if not self.file_list_container_is_live():
             return
 
@@ -108,7 +111,9 @@ class LeftDrawer:
             # this retries on the next tick once the dialog is closed.
             return
 
-        snapshot = self.extraction_status_snapshot()
+        # Reads a status file per offer across every project - run off the shared
+        # event loop so this client's poll doesn't stall every other client's UI.
+        snapshot = await run.io_bound(self.extraction_status_snapshot)
         if snapshot == self.last_extraction_snapshot:
             return
 

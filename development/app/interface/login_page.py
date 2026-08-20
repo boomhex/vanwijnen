@@ -2,7 +2,7 @@ import asyncio
 from pathlib import Path
 
 from fastapi.responses import RedirectResponse
-from nicegui import app, ui
+from nicegui import app, run, ui
 
 from services import auth
 from interface.theme import PRIMARY_RED
@@ -20,7 +20,9 @@ def login_page() -> RedirectResponse | None:
 
     async def try_login() -> None:
         username = auth.normalize_username(username_input.value)
-        if auth.verify_user(username, password_input.value):
+        # scrypt is deliberately CPU-expensive; run off the shared event loop
+        # so one login attempt doesn't stall every other connected client.
+        if await run.io_bound(auth.verify_user, username, password_input.value):
             app.storage.user.update({'authenticated': True, 'username': username})
             log_action('login')
             workspaces = auth.user_workspaces(username)
